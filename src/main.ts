@@ -181,7 +181,7 @@ function note(school: string) {
   const info = schoolInfo[school];
   $('#school-label').textContent = school.toUpperCase();
   $('#example-name').textContent = info?.name ?? (school === 'All' ? 'The collected schools' : 'Your own incantation');
-  $('#example-description').textContent = info?.description ?? (school === 'All' ? 'Seven schools, nine spells, one language of proof.' : 'Keep the text and its key together when you save your work.');
+  $('#example-description').textContent = info?.description ?? (school === 'All' ? 'Seven schools, one language of proof.' : 'Keep the text and its key together when you save your work.');
 }
 function load(leanText: string, spellText: string, data: Key) {
   updating = true;

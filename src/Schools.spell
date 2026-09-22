@@ -1,0 +1,58 @@
+sanctum Abjuration
+
+spell Shield ⟪ash elm ⟡ Tally⟫ ⟪ward ⟡ ash ≢ elm⟫ ⟡ ash ⋖ elm ⩔ elm ⋖ ash ⇰
+  Tally.Parting ward
+
+seal Abjuration
+
+sanctum Conjuration
+
+spell Plane Shift ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪loom ⟡ vesper ↝ dusk⟫ ⟡
+    loom ⊚ ⟪weft ⊚ warp⟫ ≣ ⟪loom ⊚ weft⟫ ⊚ warp ⇰ mirror
+
+seal Conjuration
+
+sanctum Divination
+
+spell Augury ⟡ 7 ∣ 343 ⇰ cast divine
+
+spell Detect Thoughts ⟪ember ⟡ Tally⟫ ⟡ ember % 2 ≣ ⊘ ⩔ ember % 2 ≣ ☉ ⇰ cast oracle
+
+seal Divination
+
+sanctum Enchantment
+
+spell Command ⟪ash elm ⟡ Tally⟫ ⟪innerward ⟡ ash ⋜ elm⟫ ⟪outerward ⟡ elm ⋜ ash⟫ ⟡ ash ≣ elm ⇰
+  Tally.Stalemate innerward outerward
+
+seal Enchantment
+
+sanctum Evocation
+
+spell Scorching Ray ⟪ember ⟡ Tally⟫ ⟡ ember ⧾ ☉ ⋜ 2 ⌃ ember ⇰ cast
+  unravel ember whence
+  ⫽ void ⇉ divine
+  ⫽ childe cinder echo ⇉ transmute ⟮Tally.Flare⟯ ⁂ oracle
+
+seal Evocation
+
+sanctum Necromancy
+
+ineffable ritual Speak with Dead ⟪ward ⟡ ⟒ ember ⟡ Tally ᛫ ⊘ ⋖ ember⟫ ⟡ Tally ⇰
+  Elder.Raise ward
+
+spell The Dead Answer ⟪ward ⟡ ⟒ ember ⟡ Tally ᛫ ⊘ ⋖ ember⟫ ⟡ ⊘ ⋖ Speak with Dead ward ⇰
+  Elder.Bidding ward
+
+seal Necromancy
+
+sanctum Transmutation
+
+ritual Turning ⟡ aether ⨯ aether ⨯ aether ↝ aether ⨯ aether ⨯ aether
+  ⫽ ⟪ash ᛫ elm ᛫ yew⟫ ⇉ ⟪elm ᛫ yew ᛫ ash⟫
+
+spell Alter Self ⟪token ⟡ aether ⨯ aether ⨯ aether⟫ ⟡ Turning ⟪Turning ⟪Turning token⟫⟫ ≣ token ⇰
+  augur token whence
+  ⫽ ⟪▢ ᛫ ▢ ᛫ ▢⟫ ⇉ mirror
+
+seal Transmutation

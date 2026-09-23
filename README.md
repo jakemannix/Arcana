@@ -29,7 +29,7 @@ npm ci
 npm run dev
 ```
 
-Open Vite's printed URL. `npm run build` creates static assets in `dist/`; `npm run preview` serves the result. No backend or API key is needed. Google Fonts have local font fallbacks.
+Open Vite's printed URL. `npm run build` creates static assets in `dist/`; `npm run preview` serves the result. Every push to `main` runs the tests, builds, and publishes the site to GitHub Pages (`.github/workflows/deploy.yml`). No backend or API key is needed. Google Fonts have local font fallbacks.
 
 ## Reproduce the mathematics
 

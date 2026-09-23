@@ -1,6 +1,6 @@
 # Enchantment · The graduate grimoire
 
-Eight lessons in group theory, with shared cantrips. All 50 declarations compile against Lean/mathlib v4.33.1. Every Arcane source decodes exactly and is compiled again. Browser edits are not checked by Lean.
+9 lessons in group theory, with shared cantrips. All 55 declarations compile against Lean/mathlib v4.33.1. Every Arcane source decodes exactly and is compiled again. Browser edits are not checked by Lean.
 
 ## Threads & mirrors
 
@@ -305,7 +305,7 @@ seal Arcanum☿Enchantment
 
 Forget exactly what a pact cannot distinguish. What remains is the image, with its whole group structure preserved.
 
-**Mathematical meaning.** G/ker(f) ≅ im(f). The canonical isomorphism sends [x] to f(x), viewed as an element of the image subgroup. If f is surjective, the quotient is isomorphic to the entire codomain H.
+**Mathematical meaning.** G/ker(f) ≅ im(f). The canonical isomorphism sends [x] to f(x), viewed as an element of the image subgroup. If f is surjective, the quotient is isomorphic to the entire codomain H. Emmy Noether gave the isomorphism theorems their modern, general form in the 1920s.
 
 **Hypotheses.** G and H are arbitrary groups. Surjectivity is required only for the final isomorphism to H; the isomorphism to im(f) needs no such assumption.
 
@@ -353,19 +353,19 @@ spell ✨Reaching✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Reach
   litany ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ ✨Image✨of✨the✨Sigil✨ warp mark
     ▢ ≣ quarry ⇰ sigilward
 
-ineffable ritual ✨Unveil✨the✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
+ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
   ✨Pact✨Portal✨☿✨from✨perfection✨ ⟪✨Image✨Pact✨ warp⟫ ⦉✨Faithful✨Image✨ warp᛫ ✨Reaching✨Image✨ warp⦊
 
 spell ✨Reveal✨the✨Sigil✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    ⟪✨Unveil✨the✨Image✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
+    ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
 
 spell ✨Perfect✨Unveiling✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite☿Perfect ⟪✨Unveil✨the✨Image✨ warp⟫ ⇰
+    Rite☿Perfect ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ warp⟫ ⇰
   ⦉✨Faithful✨Image✨ warp᛫ ✨Reaching✨Image✨ warp⦊
 
-ineffable ritual ✨Unveil✨the✨Realm✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
+ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Realm✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
     coven ⧸ warp☿silence ≃⊛ circle ⇰
-  ⟪✨Unveil✨the✨Image✨ warp⟫☿chain
+  ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ warp⟫☿chain
     ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain Cabal☿✨whole✨cabal✨portal✨⟫
 
 seal Arcanum☿Enchantment
@@ -381,7 +381,7 @@ seal Arcanum☿Enchantment
 
 A finite group partitions into equally sized cosets. The size of every subgroup, and every element's period, divides the size of the whole.
 
-**Mathematical meaning.** |G| = |G/H|·|H|, hence |H| divides |G|. Also ord(x) divides |G|, and x raised to |G| is the identity.
+**Mathematical meaning.** |G| = |G/H|·|H|, hence |H| divides |G|. Also ord(x) divides |G|, and x raised to |G| is the identity. Joseph-Louis Lagrange found the counting idea in 1771, in work on polynomial equations. The general form for subgroups came later. When G is the group of nonzero remainders modulo a prime p, the last statement is Fermat's little theorem, which Pierre de Fermat stated in 1640.
 
 **Hypotheses.** G is a group and H any subgroup; normality is not needed to count cosets. These are finite-group counting statements. The Lean statements use Nat.card, which is defined to be 0 for infinite types, so their formal versions also extend to infinite groups with that convention.
 
@@ -402,18 +402,18 @@ spell ✨Count✨the✨Veils✨ ⟪circle ⟡ Cabal coven⟫ ⟡
         Tally☿✨Census✨through✨Portal✨ Cabal☿✨Coven✨Splits✨into✨Veils✨
     ▢ ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪coven ⧸ circle⟫ circle
 
-spell ✨Measure✨of✨the✨Coven✨ ⟪circle ⟡ Cabal coven⟫ ⟡
+spell ✨Lagrange's✨Measure✨of✨the✨Coven✨ ⟪circle ⟡ Cabal coven⟫ ⟡
     Tally☿census circle ∣ Tally☿census coven ⇰ cast
   hone ⦉Tally☿census ⟪coven ⧸ circle⟫᛫ ?▢⦊
   litany Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ ✨Count✨the✨Veils✨ circle
     ▢ ≣ Tally☿census circle ⊛ Tally☿census ⟪coven ⧸ circle⟫ ⇰ Tally☿✨Bindings✨Commute✨ ⟪Tally☿census ⟪coven ⧸ circle⟫⟫ ⟪Tally☿census circle⟫
 
-spell ✨Measure✨of✨the✨Cycle✨ ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰
+spell ✨Lagrange's✨Measure✨of✨the✨Cycle✨ ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰
   litany period mark ≣ Tally☿census ⟪Cabal☿✨cycle✨circle✨ mark⟫ ⇰ ⟪Tally☿✨Cycle✨Census✨ mark⟫☿reflect
-    ▢ ∣ Tally☿census coven ⇰ ✨Measure✨of✨the✨Coven✨ ⟪Cabal☿✨cycle✨circle✨ mark⟫
+    ▢ ∣ Tally☿census coven ⇰ ✨Lagrange's✨Measure✨of✨the✨Coven✨ ⟪Cabal☿✨cycle✨circle✨ mark⟫
 
-spell ✨The✨Great✨Return✨ ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰ cast
-  wrest ⦉cinder᛫ measureward⦊ ⇰ ✨Measure✨of✨the✨Cycle✨ mark
+spell ✨Fermat's✨Great✨Return✨ ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰ cast
+  wrest ⦉cinder᛫ measureward⦊ ⇰ ✨Lagrange's✨Measure✨of✨the✨Cycle✨ mark
   litany mark ⌃ Tally☿census coven ≣ mark ⌃ ⟪period mark ⊛ cinder⟫ ⇰ sympathy ⟪conjure ember ⇉ mark ⌃ ember⟫ measureward
     ▢ ≣ ⟪mark ⌃ period mark⟫ ⌃ cinder ⇰ ✨Nested✨Ascent✨ mark ⟪period mark⟫ cinder
     ▢ ≣ ☉ ⌃ cinder ⇰ sympathy ⟪conjure token ⇉ token ⌃ cinder⟫ ⟪✨Period✨Returns✨ mark⟫
@@ -425,6 +425,82 @@ seal Arcanum☿Enchantment
 [Lean source](../math/Arcane/Enchantment/Lagrange.lean) · [Arcane source](../public/grimoire/lagrange.spell)
 
 [Subgroup.groupEquivQuotientProdSubgroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Basic.lean#L334) · [Subgroup.card_eq_card_quotient_mul_card_subgroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Card.lean#L53) · [Subgroup.card_subgroup_dvd_card](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Card.lean#L69) · [orderOf_dvd_natCard](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/OrderOfElement.lean#L1164) · [pow_card_eq_one'](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/OrderOfElement.lean#L1186)
+
+## The unbreakable coven
+
+*Groups of prime order are simple*
+
+A coven whose census is indivisible has no hidden circles. Nothing inside it can be broken away, so it is unbreakable.
+
+**Mathematical meaning.** A group is simple when it has more than one element and its only normal subgroups are the trivial one and the whole group. If |G| = p is prime, every subgroup is trivial or all of G, so G is simple. The Arcane definition agrees exactly with mathlib's IsSimpleGroup.
+
+**Hypotheses.** p is prime and Nat.card G = p. Because p is not zero, G is finite. Normality is never used: the theorem about hidden circles holds for every subgroup, normal or not.
+
+**Proof idea.** By Lagrange, the size of a subgroup H divides p. A prime has only two divisors. If |H| = 1, then H is trivial. If |H| = p = |G|, then H fills the whole group, because G is finite. A group of prime size has at least two elements, so it is nontrivial, and both conditions of an unbreakable coven hold.
+
+```text
+beckon Arcanum☿Enchantment☿Lagrange
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Indices
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Cabal☿Unbreakable
+beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Bounded
+
+sanctum Arcanum☿Enchantment
+
+familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
+
+ritual ✨Unbreakable✨Coven✨ ⟪coven ⟡ Essence⊛⟫ ⟮Coven coven⟯ ⟡ Verity ⇰
+  Plural coven ⩓ ⟁ veil ⟡ Cabal coven᛫ veil☿Hallowed ↝ veil ≣ ⊥ ⩔ veil ≣ ⊤
+
+spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Coven✨ coven ↭ ✨Simple✨Coven✨ coven ⇰ cast
+  fabricate
+  ❖ summon unbroken
+    wrest ⦉plural᛫ sealed⦊ ⇰ unbroken
+    missile ⧼ ✨to✨plural✨ ⇰ plural᛫ ✨nothing✨or✨all✨ ⇰ sealed ⧽
+  ❖ summon simplicity
+    missile ⦉simplicity☿✨to✨plural✨᛫ simplicity☿✨nothing✨or✨all✨⦊
+
+spell ✨No✨Hidden✨Circles✨ ⧼wisp ⟡ Tallies⧽ ⟪primalward ⟡ wisp☿Indivisible⟫ ⟪censusward ⟡ Tally☿census coven ≣ wisp⟫
+    ⟪circle ⟡ Cabal coven⟫ ⟡ circle ≣ ⊥ ⩔ circle ≣ ⊤ ⇰ cast
+  bind counted ⟡ Tally☿census coven ≢ ⊘ ⇰
+    litany Tally☿census coven ≣ wisp ⇰ censusward
+      ▢ ≢ ⊘ ⇰ primalward☿✨never✨void✨
+  bind bounded ⟡ Bounded coven ⇰ Tally☿✨Bounded✨by✨Census✨ counted
+  bind measured ⟡ Tally☿census circle ∣ wisp ⇰
+    litany Tally☿census circle ∣ Tally☿census coven ⇰ ✨Lagrange's✨Measure✨of✨the✨Coven✨ circle
+      ▢ ≣ wisp ⇰ censusward
+  rend primalward☿✨Only✨One✨or✨All✨ ⟪Tally☿census circle⟫ measured whence lonely ⫽ whole
+  ❖ sinister
+    missile Cabal☿✨Census✨of✨One✨☿onward lonely
+  ❖ dexter
+    bind filled ⟡ Tally☿census circle ≣ Tally☿census coven ⇰
+      litany Tally☿census circle ≣ wisp ⇰ whole
+        ▢ ≣ Tally☿census coven ⇰ censusward☿reflect
+    missile ⟪Cabal☿✨Full✨Census✨ circle⟫☿onward filled
+
+spell ✨Indivisible✨Covens✨Cannot✨Break✨ ⧼wisp ⟡ Tallies⧽ ⟪primalward ⟡ wisp☿Indivisible⟫ ⟪censusward ⟡ Tally☿census coven ≣ wisp⟫ ⟡
+    ✨Unbreakable✨Coven✨ coven ⇰ cast
+  bind counted ⟡ Tally☿census coven ≢ ⊘ ⇰
+    litany Tally☿census coven ≣ wisp ⇰ censusward
+      ▢ ≢ ⊘ ⇰ primalward☿✨never✨void✨
+  bind bounded ⟡ Bounded coven ⇰ Tally☿✨Bounded✨by✨Census✨ counted
+  bind many ⟡ ☉ ⋖ Tally☿census coven ⇰
+    litany ☉ ⋖ wisp ⇰ primalward☿✨beyond✨one✨
+      ▢ ≣ Tally☿census coven ⇰ censusward☿reflect
+  bind plural ⟡ Plural coven ⇰ Bounded☿✨Many✨Means✨Plural✨☿onward many
+  hone ⦉plural᛫ ?▢⦊
+  summon veil veilward
+  missile ✨No✨Hidden✨Circles✨ primalward censusward veil
+
+spell ✨Indivisible✨Covens✨are✨Simple✨ ⧼wisp ⟡ Tallies⧽ ⟪primalward ⟡ wisp☿Indivisible⟫ ⟪censusward ⟡ Tally☿census coven ≣ wisp⟫ ⟡
+    ✨Simple✨Coven✨ coven ⇰
+  ✨Unbreakable✨Means✨Simple✨☿onward ⟪✨Indivisible✨Covens✨Cannot✨Break✨ primalward censusward⟫
+
+seal Arcanum☿Enchantment
+```
+
+[Lean source](../math/Arcane/Enchantment/Unbreakable.lean) · [Arcane source](../public/grimoire/unbreakable.spell)
+
+[IsSimpleGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Subgroup/Simple.lean) · [Nat.Prime.eq_one_or_self_of_dvd](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Nat/Prime/Defs.lean) · [Subgroup.card_eq_iff_eq_top](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Finite.lean#L130) · [Subgroup.card_eq_one](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Index.lean#L473)
 
 ## Orbit of command
 

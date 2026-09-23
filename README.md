@@ -1,12 +1,12 @@
 # ArcaneLean · The Enchantment Grimoire
 
-A browser grimoire of **real group theory**, presented in Arcane Lean. Eight Enchantment lessons share a foundational cantrip folio. The 50 definitions and theorems are compiled against a pinned mathlib release; their translated `.spell` sources are decoded and compiled again.
+A browser grimoire of **real group theory**, presented in Arcane Lean. Nine Enchantment lessons share a foundational cantrip folio. The 55 definitions and theorems are compiled against a pinned mathlib release; their translated `.spell` sources are decoded and compiled again.
 
 [Read the complete grimoire](grimoire/README.md) · [Proof dependency audit](public/grimoire/axioms.txt)
 
 ## Read and experiment
 
-The browser opens on the first isomorphism theorem. Use the contents to explore generated subgroups, homomorphisms, kernels and normality, quotient descent and uniqueness, Lagrange's theorem, orbit–stabilizer, and the concrete permutation group S₃.
+The browser opens on the first isomorphism theorem. Use the contents to explore generated subgroups, homomorphisms, kernels and normality, quotient descent and uniqueness, Lagrange's theorem, simple groups of prime order, orbit–stabilizer, and the concrete permutation group S₃.
 
 Each folio includes its mathematical meaning, hypotheses, proof idea, prerequisites, vocabulary, and upstream mathlib references pinned to the exact commit. Arcane source and ordinary Lean are editable side by side. Spell bodies start folded: click **reveal enchantment**, the gutter, or **Reveal** to open them with a brief glimmer. **Veil** folds them again. Reduced-motion preferences disable the effects.
 
@@ -15,6 +15,8 @@ Original folios show **Lean checked** only while their source exactly matches a 
 Arcane namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Older spells using dots still import. Decimal points and literal text retain their original punctuation.
 
 Multi-word Arcane names are joined with sparkles: `✨Preserve✨the✨Binding✨` translates to `pact_preserves_product`. A group inverse is a dagger, so `mark†` means `x⁻¹`. Literal ✨ and † characters in Lean source are escaped, so translation stays exact.
+
+To type glyphs, use a backslash and a short name, then a space or Tab, as in Lean's own editors. In the spell pane, `\sp` gives ✨ and `\dag` gives †; a backslash before any Lean symbol gives its spell glyph, so `\:` gives ⟡ and `\(` gives ⟪. The Lean pane uses Lean's shortcuts, such as `\to` and `\-1`. The "How to read this" panel lists the common ones.
 
 Drafts survive switching folios within a tab. Download a grimoire JSON bundle to retain both texts and the name key; reloads lose unsaved drafts. **Open file** accepts those bundles, `.lean`, or `.spell` (using the current key). Original source downloads are provided per folio. CodeMirror's search, undo, redo, indentation, and folding shortcuts are available. Escape followed by Tab leaves an editor.
 
@@ -43,14 +45,14 @@ npm test
 npm run build
 ```
 
-Lean is pinned by `math/lean-toolchain` to **v4.33.1**. Mathlib is locked to **0df444a360eaa60ab8c11dca51a86af692955474** in `math/lake-manifest.json`. The verifier checks the dependency checkout, compiles the original project, translates every folio using one curated lexicon, reloads the serialized key, checks byte-for-byte decoding, and independently compiles the decoded modules with their own import path. It then inspects all 50 declarations with `#print axioms` and allows only the three standard axioms listed above.
+Lean is pinned by `math/lean-toolchain` to **v4.33.1**. Mathlib is locked to **0df444a360eaa60ab8c11dca51a86af692955474** in `math/lake-manifest.json`. The verifier checks the dependency checkout, compiles the original project, translates every folio using one curated lexicon, reloads the serialized key, checks byte-for-byte decoding, and independently compiles the decoded modules with their own import path. It then inspects all 55 declarations with `#print axioms` and allows only the three standard axioms listed above.
 
-Only after all checks pass does it generate the browser catalog, `.lean`/`.spell` downloads, bundles, key, audit, and readable book. `npm test` detects stale source, vocabulary, and metadata; validates all translations and prerequisite links; and tests folding boundaries and the edited-proof status. The 34 tests include the prototype's compatibility regressions, namespace glyph handling, and sparkle names.
+Only after all checks pass does it generate the browser catalog, `.lean`/`.spell` downloads, bundles, key, audit, and readable book. `npm test` detects stale source, vocabulary, and metadata; validates all translations and prerequisite links; and tests folding boundaries and the edited-proof status. The 39 tests include the prototype's compatibility regressions, namespace glyph handling, and sparkle names.
 
 ## Structure
 
 - `math/Arcane/Cantrips.lean`: reusable function composition, injectivity, surjectivity, and equivalence lemmas. The Pacts module actually imports and uses these.
-- `math/Arcane/Enchantment/*.lean`: eight substantive group-theory folios.
+- `math/Arcane/Enchantment/*.lean`: nine substantive group-theory folios.
 - `grimoire/chapters.json`: explanations, prerequisite graph, and mathlib source references.
 - `grimoire/lexicon.json`: curated Arcane names for mathematical constructs and library lemmas.
 - `scripts/verify-grimoire.ts`: reproducible build, translation, and proof audit.

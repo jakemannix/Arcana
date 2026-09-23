@@ -5,6 +5,7 @@ import { dirname, join, resolve, delimiter } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Key, CARRIER_RUNES, toSpell, fromSpell, tokenize } from '../src/translator';
 import chapters from '../grimoire/chapters.json';
+import schools from '../grimoire/schools.json';
 import lexicon from '../grimoire/lexicon.json';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -19,6 +20,17 @@ const dependencies = {
   mathlib: { repository: 'leanprover-community/mathlib4', source: 'Mathlib' },
   P3Group: { repository: 'lixiang90/p3group', source: 'P3Group' },
 };
+const folioIds = new Set(chapters.map(chapter => chapter.id));
+if (folioIds.size !== chapters.length) throw new Error('Duplicate folio ID.');
+for (const chapter of chapters) {
+  if (chapter.school !== 'Cantrips' && !schools.some(school => school.name === chapter.school &&
+      school.subschools.some(subschool => subschool.id === chapter.subschool))) {
+    throw new Error(`Unknown school or subschool: ${chapter.id}`);
+  }
+  for (const prerequisite of chapter.prerequisites) {
+    if (!folioIds.has(prerequisite)) throw new Error(`Missing prerequisite: ${chapter.id} → ${prerequisite}`);
+  }
+}
 const manifest = JSON.parse(read(join(math, 'lake-manifest.json')));
 const dependencyRevisions = Object.fromEntries(Object.entries(dependencies).map(([name, dependency]) => {
   const pin = manifest.packages.find((p: { name: string }) => p.name === name)?.rev as string | undefined;
@@ -80,9 +92,15 @@ const entries = translated.map(chapter => {
     if (!dependency) throw new Error(`Unknown reference package: ${packageName}`);
     const path = join(math, '.lake/packages', packageName, ref.path);
     if (!existsSync(path)) throw new Error(`Missing reference: ${ref.path}`);
-    const name = ref.symbol.split('.').at(-1)!;
     const lines = read(path).split('\n');
-    const line = lines.findIndex(text => new RegExp(`(?:def|theorem|lemma|structure|abbrev) ${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:[\\s:{(]|$)`).test(text)) + 1;
+    const candidates = lines.flatMap((text, index) => {
+      const declared = text.match(/(?:def|theorem|lemma|structure|abbrev) ([\w.']+)(?:[\s:{(]|$)/)?.[1]?.replace(/^_root_\./, '');
+      return declared && (declared === ref.symbol || ref.symbol.endsWith('.' + declared))
+        ? [{ name: declared, line: index + 1 }] : [];
+    });
+    const qualified = candidates.filter(candidate => candidate.name === ref.symbol);
+    // A pinned file is more helpful than a confident link to the wrong namespaced theorem.
+    const line = qualified.length === 1 ? qualified[0].line : candidates.length === 1 ? candidates[0].line : 0;
     return { ...ref, url: `https://github.com/${dependency.repository}/blob/${dependencyRevisions[packageName]}/${ref.path}${line ? '#L' + line : ''}` };
   });
   const identifiers = tokenize(chapter.lean).filter(t => t.kind === 'ident').map(t => t.text);
@@ -108,7 +126,7 @@ const entries = translated.map(chapter => {
   write(join(output, `${stem}.json`), JSON.stringify({ format: 'arcana/v1', lean: chapter.lean, spell: chapter.spell, key: key.data() }, null, 2) + '\n');
   return { ...chapter, references, glossary, sourceHash: sha(chapter.lean), spellHash: sha(chapter.spell), declarations: declarationsOf(chapter.lean) };
 });
-const catalog = { format: 'arcana-grimoire/v1', mathlibRevision: pin, dependencyRevisions,
+const catalog = { format: 'arcana-grimoire/v1', schools, schoolsHash: sha(read(join(root, 'grimoire/schools.json'))), mathlibRevision: pin, dependencyRevisions,
   manifestHash: sha(read(join(math, 'lake-manifest.json'))), lakefileHash: sha(read(join(math, 'lakefile.toml'))),
   verifierHash: sha(read(join(root, 'scripts/verify-grimoire.ts'))), leanToolchain: read(join(math, 'lean-toolchain')).trim(),
   translatorHash: sha(read(join(root, 'src/translator.ts'))), tablesHash: sha(read(join(root, 'src/tables.json'))),
@@ -120,6 +138,6 @@ const tutorialMarkdown = (tutorial: { motivation: string; steps: { title: string
   `**A guided reading.** ${tutorial.motivation}\n\n` +
   tutorial.steps.map((step, index) => `${index + 1}. **${step.title}** ${step.body}`).join('\n\n') +
   `\n\n**Try it yourself.** ${tutorial.experiment.prompt}\n\n<details><summary>A hint</summary>\n\n${tutorial.experiment.hint}\n\n</details>\n\n`;
-const book = '# Arcana · The grimoire\n\n' + (entries.length - 1) + ' lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All ' + declarations.length + ' declarations compile against Lean/mathlib v4.33.1, with the pinned P3Group classification library for the Eightfold Way. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.\n\n' + entries.map(entry => `## ${entry.title}\n\n*${entry.subtitle}*\n\n${entry.summary}\n\n**Mathematical meaning.** ${entry.meaning}\n\n**Hypotheses.** ${entry.hypotheses}\n\n**Proof idea.** ${entry.proofIdea}\n\n` + tutorialMarkdown(entry.tutorial) + '```text\n' + entry.spell + '```\n\n' + `[Lean source](../math/${entry.file}) · [Arcana source](../public/grimoire/${entry.id}.spell)\n\n` + entry.references.map(ref => `[${ref.symbol}](${ref.url})`).join(' · ') + '\n').join('\n');
+const book = '# Arcana · The grimoire\n\n' + (entries.length - 1) + ' lessons across ' + schools.map(school => school.name + ' (' + school.subject.toLowerCase() + ')').join(', ') + ', with shared cantrips. All ' + declarations.length + ' declarations compile against Lean/mathlib v4.33.1, with the pinned P3Group classification library for the Eightfold Way. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.\n\n' + entries.map(entry => `## ${entry.title}\n\n*${entry.subtitle}*\n\n${entry.summary}\n\n**Mathematical meaning.** ${entry.meaning}\n\n**Hypotheses.** ${entry.hypotheses}\n\n**Proof idea.** ${entry.proofIdea}\n\n` + tutorialMarkdown(entry.tutorial) + '```text\n' + entry.spell + '```\n\n' + `[Lean source](../math/${entry.file}) · [Arcana source](../public/grimoire/${entry.id}.spell)\n\n` + entry.references.map(ref => `[${ref.symbol}](${ref.url})`).join(' · ') + '\n').join('\n');
 write(join(root, 'grimoire/README.md'), book);
 console.log(`Verified ${entries.length} folios and ${declarations.length} declarations against mathlib ${pin}.`);

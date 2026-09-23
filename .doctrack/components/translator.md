@@ -1,7 +1,7 @@
 ---
 type: component
 files: [src/translator.ts, src/tables.json, grimoire/lexicon.json, tests/translator.test.ts]
-last_updated: 2026-09-23
+last_updated: 2026-09-24
 tags: [doctrack/type/component, doctrack/status/active, doctrack/audience/claude]
 ---
 # Translator
@@ -26,3 +26,6 @@ Tests cover quoted forms of every built-in keyword and curated name, key seriali
 
 
 Adversarial key review rejects declaration-keyword remapping, local aliases for a declaration's own name, nested namespace aliases that capture a shorter namespace plus a renamed suffix, and spell names beginning with literal operators (such as Σ/Π) that tokenization would split. Compatible nested namespace mappings still work. These are current-key validation requirements, not backward compatibility paths; `tests/adversarial.test.ts` records the counterexamples.
+
+## Numeric projections
+The shared `numericPattern` used by translation and editor highlighting distinguishes a numeric field projection after `.`/`☿` from a decimal literal. Thus `x.val.2.2` becomes a chain with Mercury at both projections, while `2.2` remains a decimal. A targeted regression covers chained projections, parentheses, decimal/scientific literals, saved-key inversion, and rejection of raw field dots in Arcana. This was exposed by the homology coordinate computations.

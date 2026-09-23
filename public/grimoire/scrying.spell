@@ -1,0 +1,87 @@
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Ranks☿✨Chorus✨Rites✨☿✨Balance✨Readings✨
+beckon ✨Grand✨Archive✨☿Gestures
+
+sanctum Arcana☿Divination☿Scrying
+
+unveil attuned ✨Chorus✨Rites✨
+
+familiar ⧼ᛁ ⟡ Essence⊛⧽ ⟮Counted ᛁ⟯ ⟮Inhabited ᛁ⟯
+
+/- An index denotes an observation, so equal observed values are still counted twice.
+The nonempty hypothesis rules out the empty dataset convention of Finset.expect. -/
+ineffable ritual ✨Center✨of✨the✨Mirror✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡ Fluxes ⇰ Band☿everywhere✨at✨once☿✨balance✨the✨readings✨ jade✨cube
+
+/- This descriptive variance divides by the number of observations, not by n - 1.
+It is the variance of the empirical distribution that weights every index equally. -/
+ineffable ritual ✨Spread✨in✨the✨Mirror✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡ Fluxes ⇰
+  ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫ ⌃ 二⟫
+
+spell ✨Move✨Every✨Reading✨Move✨the✨Center✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧾ yew⟫ ≣ ✨Center✨of✨the✨Mirror✨ jade✨cube ⧾ yew ⇰ cast
+  purify ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨balance✨joined✨readings✨⟯
+
+spell ✨Centered✨Readings✨Balance✨to✨Stillness✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡
+    ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫ ≣ 〇 ⇰ cast
+  purify ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨balance✨sundered✨readings✨⟯
+
+dismissal ⟮Inhabited ᛁ⟯ within
+spell ✨The✨Mirror's✨Spread✨Cannot✨Sink✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡ 〇 ⋜ ✨Spread✨in✨the✨Mirror✨ jade✨cube ⇰ cast
+  missile Band☿✨balance✨cannot✨sink✨ ⟪conjure opal✨dust ▢ ⇉ ✨a✨doubled✨ascent✨cannot✨sink✨ ⟪jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫⟫
+
+/- Expanding the square turns spread into mean-square minus square-mean.
+Linearity of a finite average lets each algebraic term move outside the sum. -/
+spell ✨Unfold✨the✨Mirror's✨Spread✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡
+    ✨Spread✨in✨the✨Mirror✨ jade✨cube ≣ ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⌃ 二⟫ ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube ⌃ 二 ⇰ cast
+  unseal ✨Spread✨in✨the✨Mirror✨ ✨Center✨of✨the✨Mirror✨
+  polish ⟮✨unfold✨the✨sundered✨double✨ascent✨᛫ Band☿✨balance✨joined✨readings✨᛫ Band☿✨balance✨sundered✨readings✨᛫
+    ↜ Band☿✨scale✨after✨balancing✨᛫ ↜ Band☿✨scale✨before✨balancing✨⟯
+  purify
+  circlet
+
+/- A common shift changes location, but every centered observation stays the same. -/
+spell ✨Move✨the✨Mirror✨Keep✨the✨Spread✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Spread✨in✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧾ yew⟫ ≣ ✨Spread✨in✨the✨Mirror✨ jade✨cube ⇰ cast
+  unseal ✨Spread✨in✨the✨Mirror✨
+  transmute ⟮✨Move✨Every✨Reading✨Move✨the✨Center✨⟯
+  attune 一
+  oath opal✨dust
+  attune 一
+  circlet
+
+/- The average squared distance to any proposed center splits into spread
+and a nonnegative penalty for moving away from the sample mean. -/
+spell ✨The✨Mirror's✨Center✨and✨Its✨Wandering✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ yew⟫ ⌃ 二⟫ ≣
+      ✨Spread✨in✨the✨Mirror✨ jade✨cube ⧾ ⟪✨Center✨of✨the✨Mirror✨ jade✨cube ⧿ yew⟫ ⌃ 二 ⇰ cast
+  transmute ⟮✨Unfold✨the✨Mirror's✨Spread✨⟯
+  unseal ✨Center✨of✨the✨Mirror✨
+  polish ⟮✨unfold✨the✨sundered✨double✨ascent✨᛫ Band☿✨balance✨joined✨readings✨᛫ Band☿✨balance✨sundered✨readings✨᛫
+    ↜ Band☿✨scale✨after✨balancing✨᛫ ↜ Band☿✨scale✨before✨balancing✨⟯
+  purify
+  circlet
+
+spell ✨The✨Center✨Is✨the✨Stillest✨Place✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Spread✨in✨the✨Mirror✨ jade✨cube ⋜ ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ yew⟫ ⌃ 二⟫ ⇰ cast
+  transmute ⟮✨The✨Mirror's✨Center✨and✨Its✨Wandering✨⟯
+  missile ✨adding✨a✨rising✨weight✨cannot✨lower✨ ⟪✨a✨doubled✨ascent✨cannot✨sink✨ ▢⟫
+
+/- The four observations have mean 3 and squared deviations 4, 1, 0, 9.
+The calculation is exact over the reals, not rounded floating-point arithmetic. -/
+ritual ✨Four✨Mirror✨Readings✨ ⟡ Fetter 四 ↝ Fluxes ⇰ !⟮一᛫ 二᛫ 三᛫ 六⟯
+
+spell ✨Center✨the✨Four✨Readings✨ ⟡ ✨Center✨of✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨ ≣ 三 ⇰ cast
+  numerology ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨gather✨then✨share✨the✨readings✨᛫ ✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+
+spell ✨Spread✨of✨the✨Four✨Readings✨ ⟡ ✨Spread✨in✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨ ≣ 七 ⧶ 二 ⇰ cast
+  transmute ⟮✨Spread✨in✨the✨Mirror✨᛫ ✨Center✨the✨Four✨Readings✨⟯
+  numerology ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨gather✨then✨share✨the✨readings✨᛫ ✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+
+/- Dividing the same sum of squared deviations by n - 1 gives the usual
+corrected sample variance. Calling it unbiased needs an i.i.d. sampling model
+and finite second moments; this calculation does not assume or prove that model. -/
+spell ✨Share✨the✨Spread✨One✨Way✨Fewer✨ ⟡
+    ⟪∑ opal✨dust᛫ ⟪✨Four✨Mirror✨Readings✨ opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨⟫ ⌃ 二⟫ ⧶ ⟪四 ⧿ 一⟫ ≣ ⟪一四 ⧶ 三 ⟡ Fluxes⟫ ⇰ cast
+  transmute ⟮✨Center✨the✨Four✨Readings✨⟯
+  numerology ⟮✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+
+seal Arcana☿Divination☿Scrying

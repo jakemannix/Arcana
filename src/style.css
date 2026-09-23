@@ -89,6 +89,7 @@ select { max-width: 100%; min-width: 0; background: #1c2729; color: #e5decc; bor
 
 /* Graduate grimoire: an indexed book with an editable mathematical folio. */
 .grimoire-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 40px; max-width: 1880px; padding: 0 3.5%; }
+.brand-title { margin: 0; font-size: inherit; line-height: inherit; }
 .contents { border-right: 1px solid var(--border); padding: 32px 22px 30px 0; }
 .contents nav { display: flex; flex-direction: column; gap: 5px; }
 .contents nav button { background: transparent; color: #b4bfb7; border: 1px solid transparent; border-radius: 3px; padding: 11px 10px; display: flex; gap: 12px; text-align: left; font-size: 14px; line-height: 1.4; align-items: baseline; }
@@ -98,6 +99,12 @@ select { max-width: 100%; min-width: 0; background: #1c2729; color: #e5decc; bor
 .contents nav button.active > span:first-child { color: #dbc08c; }
 .school-heading { display: flex; align-items: center; gap: 12px; margin-top: 30px; }
 .school-heading > span { font-size: 38px; color: var(--gold); }
+.school > summary { cursor: pointer; list-style: none; }
+.school > summary::-webkit-details-marker { display: none; }
+.school > summary::after { content: '+'; margin-left: auto; color: var(--gold); font-size: 20px; }
+.school[open] > summary::after { content: '−'; }
+.school > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+.subschool-heading { color: #c8ba9b; font-size: 14px; font-weight: 500; margin: 20px 0 8px; }
 .school-heading .eyebrow { margin-bottom: 5px; }
 .school-heading h1, .school-heading h2 { font-size: 30px; margin: 0; }
 .school-heading h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; letter-spacing: -.025em; line-height: 1.05; color: #efeadc; }

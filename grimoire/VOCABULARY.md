@@ -58,3 +58,18 @@ The full Disenchantment from Choirs to carriers has a left hand but no right han
 ## Numerals
 
 Spell numbers use kanji digits in place-value order: `0 1 2 3 4 5 6 7 8 9` becomes `〇 一 二 三 四 五 六 七 八 九`. For example, the six permutations of three sigils use `六` and `三`, while `24` is `二四`. We use digit substitution, not additive Japanese forms such as `二十四`, so every source character can return exactly. Type a backslash before a digit to insert it. Literal text and quoted names keep their contents.
+
+## Accords and the Yoneda mirror
+
+| Lean | Spell | Meaning |
+|---|---|---|
+| `X ⟶ Y` | `🌒 ⟿ ᛇ` | A pact (morphism) from one object to another |
+| `C ⥤ D` | `ᚳ ⤳ ᛞ` | A functor: a transmutation of a whole category |
+| `f ≫ g` | `copper✨wire ⨾ silk✨cord` | First one pact, then the other |
+| `𝟙 X` | `◎ 🌒` | An object's pact with itself |
+| `F.map f` | `ᚠ☿enchant copper✨wire` | The functor carries a pact along |
+| `NatTrans`, `η.app Y` | `Accord`, `silver✨thread☿part ᛇ` | A natural transformation and its part at one object |
+| `coyoneda.obj (op X)` | `✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫` | All pacts that leave `X` |
+| `Multiplicative ℤ` | `Unchanted Balances` | The integers, written with multiplication instead of addition |
+
+Yoneda's Mirror says an accord out of `✨pacts✨out✨of✨ 🌒` is fixed by where it sends `◎ 🌒`. So an object is known by the pacts that leave it.

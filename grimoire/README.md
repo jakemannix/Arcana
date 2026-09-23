@@ -1,6 +1,6 @@
 # Arcana · The grimoire
 
-11 lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All 72 declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
+12 lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All 84 declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
 
 ## Threads & mirrors
 
@@ -762,3 +762,97 @@ seal Arcana☿Transmutation
 [Lean source](../math/Mathematics/CategoryTheory/ForgetfulAdjoints.lean) · [Arcana source](../public/grimoire/adjoints.spell)
 
 [FreeMonoid.lift](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/FreeMonoid/Basic.lean#L315) · [MonCat.adj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/MonCat/Adjunctions.lean#L75) · [GrpCat.forget₂MonAdj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/Grp/Adjunctions.lean) · [Equiv.Perm.equivUnitsEnd](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/End.lean#L90)
+
+## Known by its pacts
+
+*The Yoneda lemma, built by hand*
+
+To know a creature, watch the pacts that leave it. A natural way of turning those pacts into tokens is fixed by one choice: where the creature's pact with itself goes.
+
+**Mathematical meaning.** For an object X of a category C and a functor F from C to types, natural transformations from Hom(X, –) to F correspond exactly to elements of F(X). A transformation α gives α_X(id_X); an element x gives the transformation sending g : X → Y to F(g)(x). So X is known completely by the functor Hom(X, –). Two examples: a monoid homomorphism from the free monoid on one generator is the same as one element of the monoid, and a group homomorphism from the integers is the same as one element of the group. Nobuo Yoneda explained the idea to Saunders Mac Lane in 1954, in a café at the Gare du Nord in Paris.
+
+**Hypotheses.** C is any category whose morphisms between two objects form a type in universe v, and F takes values in that universe. This is the covariant form, with Hom(X, –); the classical form with Hom(–, X) and presheaves is its mirror image, and mathlib proves both. Cayley's theorem is this lemma applied to a group seen as a category with a single object.
+
+**Proof idea.** Naturality is the whole proof. For g : X → Y, the identity pact id_X followed by g is g itself, so α_Y(g) = α_Y(id_X ≫ g) = F(g)(α_X(id_X)). Every value of α is therefore fixed by α_X(id_X). In the other direction, F(id_X)(x) = x because functors keep identities. The last spell checks that the hand-built correspondence is exactly mathlib's coyonedaEquiv.
+
+```text
+beckon ✨Grand✨Archive✨☿✨Lore✨of✨Forms✨☿Yoneda
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿✨Primordial✨Choir✨☿Foundations
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Tally☿Bonds
+beckon ✨Grand✨Archive✨☿Lore☿Balance☿Casting☿Charms
+
+unveil ✨Lore✨of✨Forms✨ Mirrorland
+
+plane stratum tier
+
+sanctum Arcana☿Transmutation
+
+chamber Yoneda
+
+familiar ⧼ᚳ ⟡ Essence tier⧽ ⟮Cosmology☿⧼stratum⧽ ᚳ⟯ ⧼🌒 ⟡ ᚳ⧽ ⧼ᚠ ⟡ ᚳ ⤳ Essence stratum⧽
+
+ritual ✨Where✨the✨Self✨Pact✨Goes✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ⟡ ᚠ☿form 🌒 ⇰
+  silver✨thread☿part 🌒 ⟪◎ 🌒⟫
+
+ritual ✨Carry✨the✨Token✨Everywhere✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ begets
+  part ᛇ ⇰ ↾conjure silk✨cord ⇉ ᚠ☿enchant silk✨cord jade✨cube
+  ✨keeps✨accord✨ ᛇ ᛜ copper✨wire ⇰ cast
+    extend silk✨cord
+    missile ᚠ☿✨Carry✨in✨Stages✨ silk✨cord copper✨wire jade✨cube
+
+spell ✨The✨Token✨Travels✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⧼ᛇ ⟡ ᚳ⧽ ⟪silk✨cord ⟡ 🌒 ⟿ ᛇ⟫ ⟡
+    ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫☿part ᛇ silk✨cord ≣ ᚠ☿enchant silk✨cord jade✨cube ⇰ mirror
+
+spell ✨Known✨by✨the✨Self✨Pact✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫
+    ⧼ᛇ ⟡ ᚳ⧽ ⟪silk✨cord ⟡ 🌒 ⟿ ᛇ⟫ ⟡ silver✨thread☿part ᛇ silk✨cord ≣ ᚠ☿enchant silk✨cord ⟪✨Where✨the✨Self✨Pact✨Goes✨ silver✨thread⟫ ⇰
+  litany silver✨thread☿part ᛇ silk✨cord ≣ silver✨thread☿part ᛇ ⟪◎ 🌒 ⨾ silk✨cord⟫ ⇰ sympathy ⟪silver✨thread☿part ᛇ⟫ ⟪Cosmology☿✨Self✨Pact✨First✨ silk✨cord⟫☿reflect
+    ▢ ≣ silver✨thread☿part ᛇ ⟪⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫⟫☿enchant silk✨cord ⟪◎ 🌒⟫⟫ ⇰ mirror
+    ▢ ≣ ᚠ☿enchant silk✨cord ⟪silver✨thread☿part 🌒 ⟪◎ 🌒⟫⟫ ⇰ Accord☿✨Accord✨Holds✨ silver✨thread silk✨cord ⟪◎ 🌒⟫
+
+spell ✨Rebuilt✨from✨the✨Self✨Pact✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ⟡
+    ✨Carry✨the✨Token✨Everywhere✨ ⟪✨Where✨the✨Self✨Pact✨Goes✨ silver✨thread⟫ ≣ silver✨thread ⇰ cast
+  extend ᛇ silk✨cord
+  missile ⟪✨Known✨by✨the✨Self✨Pact✨ silver✨thread silk✨cord⟫☿reflect
+
+spell ✨The✨Token✨Returns✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⟡
+    ✨Where✨the✨Self✨Pact✨Goes✨ ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫ ≣ jade✨cube ⇰
+  litany ✨Where✨the✨Self✨Pact✨Goes✨ ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫ ≣ ᚠ☿enchant ⟪◎ 🌒⟫ jade✨cube ⇰ mirror
+    ▢ ≣ jade✨cube ⇰ ᚠ☿✨Self✨Pact✨Changes✨Nothing✨ 🌒 jade✨cube
+
+ritual ✨Yoneda's✨Mirror✨ ⟡ ⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ≃ ᚠ☿form 🌒 begets
+  deed ⇰ ✨Where✨the✨Self✨Pact✨Goes✨
+  ✨reverse✨deed✨ ⇰ ✨Carry✨the✨Token✨Everywhere✨
+  ✨Return✨Path✨ ⇰ ✨Rebuilt✨from✨the✨Self✨Pact✨
+  ✨Departure✨Path✨ ⇰ ✨The✨Token✨Returns✨
+
+spell ✨The✨Archive✨Keeps✨the✨Same✨Mirror✨ ⟡
+    ⟪✨Yoneda's✨Mirror✨ ⟡ ⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ≃ ᚠ☿form 🌒⟫ ≣ ✨archive's✨mirror✨ ⇰ cast
+  extend silver✨thread
+  mirror
+
+seal Yoneda
+
+chamber Proxies
+
+familiar ⟪ᛗ ⟡ Essence⊛⟫ ⟮Choir ᛗ⟯ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯
+
+ritual ✨One✨Seed✨Holds✨Every✨Member✨ ⟡ ⟪✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ≃ ᛗ ⇰
+  ✨Primordial✨Choir✨☿descend☿reflect☿chain ⟪Portal☿✨lone✨seed✨ Mote ᛗ⟫
+
+spell ✨Where✨the✨Seed✨Goes✨ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ⟡
+    ✨One✨Seed✨Holds✨Every✨Member✨ ᛗ brass✨key ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed ⟪⟫⟫ ⇰ mirror
+
+ritual ✨The✨Integers✨Hold✨Every✨Member✨ ⟡ ⟪Unchanted Balances ↝⊛ ᛰ⟫ ≃ ᛰ ⇰
+  ⟪✨powers✨of✨one✨ ᛰ⟫☿reflect
+
+spell ✨Where✨the✨Step✨Goes✨ ⟪brass✨key ⟡ Unchanted Balances ↝⊛ ᛰ⟫ ⟡
+    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant 一⟫ ⇰ mirror
+
+seal Proxies
+
+seal Arcana☿Transmutation
+```
+
+[Lean source](../math/Mathematics/CategoryTheory/Yoneda.lean) · [Arcana source](../public/grimoire/yoneda.spell)
+
+[CategoryTheory.coyonedaEquiv](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/CategoryTheory/Yoneda.lean#L1005) · [FreeMonoid.lift](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/FreeMonoid/Basic.lean#L315) · [zpowersHom](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Int/Cast/Lemmas.lean#L283)

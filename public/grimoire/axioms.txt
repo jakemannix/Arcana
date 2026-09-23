@@ -72,3 +72,23 @@
 'Mathematics.CategoryTheory.unitsLift_unique' depends on axioms: [propext, Quot.sound]
 'Mathematics.CategoryTheory.forgetUnitsAdjunction' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Mathematics.CategoryTheory.permEquivUnitsEnd' depends on axioms: [Quot.sound]
+'Mathematics.CategoryTheory.transformationToElement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mathematics.CategoryTheory.elementToTransformation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mathematics.CategoryTheory.elementToTransformation_app' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mathematics.CategoryTheory.transformation_determined_by_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Mathematics.CategoryTheory.elementToTransformation_transformationToElement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Mathematics.CategoryTheory.transformationToElement_elementToTransformation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Mathematics.CategoryTheory.yonedaEquivByHand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mathematics.CategoryTheory.yonedaEquivByHand_eq_coyonedaEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Mathematics.CategoryTheory.freeMonoidOnOneGenerator' depends on axioms: [propext, Quot.sound]
+'Mathematics.CategoryTheory.freeMonoidOnOneGenerator_apply' depends on axioms: [propext, Quot.sound]
+'Mathematics.CategoryTheory.integersRepresentGroup' depends on axioms: [propext, Quot.sound]
+'Mathematics.CategoryTheory.integersRepresentGroup_apply' depends on axioms: [propext, Quot.sound]

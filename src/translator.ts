@@ -22,6 +22,10 @@ function numberPattern(digits: string): RegExp {
 }
 export const LEAN_NUMBER = numberPattern('0123456789');
 export const SPELL_NUMBER = numberPattern(KANJI_DIGITS);
+const LEAN_PROJECTION = /^[0-9]+/u;
+const SPELL_PROJECTION = new RegExp(`^[${KANJI_DIGITS}]+`, 'u');
+export const numericPattern = (spell: boolean, projection = false): RegExp => projection
+  ? (spell ? SPELL_PROJECTION : LEAN_PROJECTION) : (spell ? SPELL_NUMBER : LEAN_NUMBER);
 const declarations = new Set(tables.declWords);
 const component = String.raw`(?:«[^»]*»|[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)`;
 const word = String.raw`[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*`;
@@ -68,7 +72,10 @@ export function tokenize(source: string, spell = false): Token[] {
     }
     if ((match = /^'(?:[^'\\]|\\(?:u\{[\da-fA-F]+\}|.))'/u.exec(rest))) { emit('char', match[0].length); continue; }
     if (rest.startsWith(ESC)) { const next = Array.from(rest.slice(1))[0] ?? ''; emit(spell ? 'esc' : 'other', spell ? 1 + next.length : 1); continue; }
-    if ((match = (spell ? SPELL_NUMBER : LEAN_NUMBER).exec(rest))) { emit('num', match[0].length); continue; }
+    // After a field separator, 2.1 means two tuple projections, not a decimal.
+    const previous = tokens.at(-1);
+    const projection = previous?.kind === 'sym' && previous.text === (spell ? NAMESPACE_SEPARATOR : '.');
+    if ((match = numericPattern(spell, projection).exec(rest))) { emit('num', match[0].length); continue; }
     const symbol = symbols.find(s => rest.startsWith(s));
     if (symbol) { emit('sym', symbol.length); continue; }
     if ((match = (spell ? spellIdent : ident).exec(rest))) { emit('ident', match[0].length); continue; }

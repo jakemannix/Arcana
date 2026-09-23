@@ -1,6 +1,6 @@
 # Arcana · The grimoire
 
-18 lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All 174 declarations compile against Lean/mathlib v4.33.1, with the pinned P3Group classification library for the Eightfold Way. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
+28 lessons across Enchantment (algebra), Transmutation (categories & topology), Illusion (complex analysis), Phantasms (algebraic geometry), Divination (chance, data & integers), Necromancy (analysis), with shared cantrips. All 280 declarations compile against Lean/mathlib v4.33.1, with the pinned P3Group classification library for the Eightfold Way. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
 
 ## Threads & mirrors
 
@@ -720,7 +720,7 @@ seal Arcana☿Enchantment
 
 [Lean source](../math/Mathematics/GroupTheory/SimpleGroups.lean) · [Arcana source](../public/grimoire/unbreakable.spell)
 
-[IsSimpleGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Subgroup/Simple.lean) · [Nat.Prime.eq_one_or_self_of_dvd](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Nat/Prime/Defs.lean) · [Subgroup.card_eq_iff_eq_top](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Finite.lean#L130) · [Subgroup.card_eq_one](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Index.lean#L473)
+[IsSimpleGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Subgroup/Simple.lean) · [Nat.Prime.eq_one_or_self_of_dvd](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Nat/Prime/Defs.lean#L88) · [Subgroup.card_eq_iff_eq_top](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Finite.lean#L130) · [Subgroup.card_eq_one](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Index.lean#L473)
 
 ## Orbit of command
 
@@ -899,7 +899,7 @@ seal Arcana☿Enchantment
 
 [Lean source](../math/Mathematics/GroupTheory/Cayley.lean) · [Arcana source](../public/grimoire/cayley.spell)
 
-[MulAction.toEndHom](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Action/End.lean) · [Equiv.Perm.subgroupOfMulAction](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Perm/Subgroup.lean#L72) · [MonoidHom.ofInjective](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L201)
+[MulAction.toEndHom](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Action/End.lean#L151) · [Equiv.Perm.subgroupOfMulAction](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Perm/Subgroup.lean#L72) · [MonoidHom.ofInjective](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L201)
 
 ## Three dancing sigils
 
@@ -1651,7 +1651,7 @@ seal Arcana☿Enchantment
 
 [Lean source](../math/Mathematics/GroupTheory/EightfoldWay.lean) · [Arcana source](../public/grimoire/eightfold.spell)
 
-[P3Group.classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/Classification.lean#L50) · [P3Group.abelian_p3_classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/AbelianCase.lean#L99) · [P3Group.nonabelian_8_classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/NonAbelianCase.lean#L1965) · [Nat.card_congr](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/SetTheory/Cardinal/Finite.lean#L91)
+[P3Group.classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/Classification.lean#L50) · [P3Group.abelian_p3_classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/AbelianCase.lean#L99) · [P3Group.nonabelian_8_classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/NonAbelianCase.lean#L1965) · [Nat.card_congr](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/SetTheory/Cardinal/Finite.lean)
 
 ## The two hands of Disenchantment
 
@@ -1775,7 +1775,7 @@ seal Arcana☿Transmutation
 
 [Lean source](../math/Mathematics/CategoryTheory/ForgetfulAdjoints.lean) · [Arcana source](../public/grimoire/adjoints.spell)
 
-[FreeMonoid.lift](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/FreeMonoid/Basic.lean#L315) · [MonCat.adj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/MonCat/Adjunctions.lean#L75) · [GrpCat.forget₂MonAdj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/Grp/Adjunctions.lean) · [Equiv.Perm.equivUnitsEnd](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/End.lean#L90)
+[FreeMonoid.lift](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/FreeMonoid/Basic.lean#L315) · [MonCat.adj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/MonCat/Adjunctions.lean) · [GrpCat.forget₂MonAdj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/Grp/Adjunctions.lean) · [Equiv.Perm.equivUnitsEnd](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/End.lean#L90)
 
 ## Known by its pacts
 
@@ -1902,3 +1902,1104 @@ seal Arcana☿Transmutation
 [Lean source](../math/Mathematics/CategoryTheory/Yoneda.lean) · [Arcana source](../public/grimoire/yoneda.spell)
 
 [CategoryTheory.coyonedaEquiv](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/CategoryTheory/Yoneda.lean#L1005) · [FreeMonoid.lift](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/FreeMonoid/Basic.lean#L315) · [zpowersHom](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Int/Cast/Lemmas.lean#L283)
+
+## The descending rite
+
+*Chain complexes, cycles, boundaries, and chain maps*
+
+Send a trace down one stair and it may remain; send it down twice and it vanishes. Distinguish the closed traces from those arriving from above.
+
+**Mathematical meaning.** A chain complex has modules Cₙ and linear differentials dₙ : Cₙ → Cₙ₋₁ with dₙ ∘ dₙ₊₁ = 0. Cycles Zₙ are ker dₙ; boundaries Bₙ are im dₙ₊₁. Every boundary is a cycle. Chain maps preserve both. In our worked complex Cₙ = ℚ³ and d(a,b,c) = (b,0,0), so in every positive degree Zₙ = {(a,0,c)} and Bₙ = {(a,0,0)}.
+
+**Hypotheses.** The general results use a natural-number-indexed Mathlib ChainComplex in ModuleCat R for a ring R. cycleSubmodule C n and boundarySubmodule C n describe degree n+1, not degree n; this avoids the endpoint at degree zero. The worked complex uses rational vector spaces. It is an algebraic example, with no claimed construction from a topological space.
+
+**Proof idea.** To prove B ⊆ Z, unpack a boundary as d(y) and apply d² = 0. For a chain map f, its commuting square rewrites d(f(x)) as f(d(x)); this preserves cycles and transports a boundary witness. Construct the worked complex with ChainComplex.of, using an explicit linear map and its square-zero proof. Read off the cycle equation and build a preimage (0,a,0) for every proposed boundary (a,0,0).
+
+**A guided reading.** Algebraic topology turns shapes into algebra that can be computed. This first lesson isolates the algebraic machinery: in geometric examples, chains are often formal linear combinations of pieces, a differential records a boundary, and taking a boundary twice gives zero. We work with a small coordinate example before trying to build chains from spaces. A module is the setting for adding chains and multiplying them by scalars; over ℚ it is a vector space.
+
+1. **Follow degrees, not just arrows** Read C.d (n+1) n as the differential from degree n+1 down to degree n. ModuleCat packages modules and linear maps, while ChainComplex packages a whole family of them together with the square-zero law. The source uses n as an offset: cycleSubmodule C 0 means cycles in degree 1. ChainComplex is different from CochainComplex, whose arrows increase degree.
+
+2. **Why every boundary is closed** A cycle x satisfies d(x)=0. A boundary is an x for which some y one degree higher satisfies d(y)=x. Substitute the witness: d(x)=d(d(y))=0. The obtain line extracts y, and the complex's d_comp_d law proves the last equality. The reverse inclusion need not hold; the gap between cycles and boundaries is exactly what homology will measure.
+
+3. **Transport must respect the differential** A chain map supplies one linear map in each degree, with f commuting with d. That equation takes a cycle to a cycle because f(0)=0. It takes a boundary d(y) to d(f(y)), so f(y) becomes a new boundary witness. These two facts are both needed before a map can descend to homology classes.
+
+4. **Compute the three coordinates** Our differential takes (a,b,c) to (b,0,0), and applying it again gives (0,0,0). Hence a cycle must have b=0; a and c remain free. A boundary must have b=c=0, and every (a,0,0) really is the boundary of (0,a,0). Thus the first coordinate is removable by adding a boundary, while the third looks like information that can survive. The next folio proves this precisely.
+
+**Try it yourself.** Classify (3,0,7), (3,0,0), and (0,2,0): which are cycles, which are boundaries, and which are neither?
+
+<details><summary>A hint</summary>
+
+A cycle has second coordinate zero; a boundary also has third coordinate zero. The first is a cycle but not a boundary, the second is both, and the third is neither. The browser translates edits but does not check new Lean proofs.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Echoes☿✨Threefold✨Descent✨☿✨Bound✨Veyrs✨
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Echoes☿✨Threefold✨Descent✨☿✨Graded✨Descent✨
+beckon ✨Grand✨Archive✨☿Lore☿Ratio☿Casting☿Names
+
+unveil ✨Lore✨of✨Forms✨
+
+sanctum Arcana☿Transmutation☿✨Chains✨and✨Echoes✨
+
+ineffable chamber
+
+/- A chain complex is a row of modules with arrows lowering degree.
+Two consecutive differentials compose to zero. We begin in positive
+degree so that both neighboring degrees exist in a natural-number complex. -/
+ritual ✨Circle✨of✨Closed✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+    ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ ✨Inner✨Bound✨Veyr✨ ᚱ ⟪ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ ⇰
+  Bridge☿silence ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫☿essence
+
+ritual ✨Circle✨of✨Descended✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+    ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ ✨Inner✨Bound✨Veyr✨ ᚱ ⟪ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ ⇰
+  Bridge☿manifestation ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫⟫☿essence
+
+/- A boundary has a witness one degree higher. Apply the next differential
+to that witness's image, then use the defining square-zero law. -/
+spell ✨Every✨Descended✨Trace✨is✨Closed✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+    ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    ✨Circle✨of✨Descended✨Traces✨ ᚳ pinch✨of✨sulfur ⋜ ✨Circle✨of✨Closed✨Traces✨ ᚳ pinch✨of✨sulfur ⇰ cast
+  summon jade✨cube sigilward
+  wrest ⦉silver✨bell᛫ mirror⦊ ⇰ sigilward
+  shapeshift ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫ ⟪⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ silver✨bell⟫ ≣ 〇
+  bind voidmark ⇰ ᚳ☿✨Twice✨Descended✨Means✨Silence✨ ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur
+  missile sympathy ⟪conjure copper✨wire ⇉ copper✨wire silver✨bell⟫ voidmark
+
+/- Chain maps commute with differentials. A closed chain therefore stays
+closed after transport; this is the first requirement for a map on homology. -/
+spell ✨Carry✨the✨Closed✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+    ⧼ᚳ ᚦ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⧽ ⟪copper✨wire ⟡ ᚳ ⟿ ᚦ⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫
+    ⟪jade✨cube ⟡ ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ᚳ pinch✨of✨sulfur⟫ ⟡
+    copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 一⟫ jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ᚦ pinch✨of✨sulfur ⇰ cast
+  shapeshift ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫ jade✨cube ≣ 〇 upon sigilward
+  shapeshift ⟪ᚦ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫ ⟪copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 一⟫ jade✨cube⟫ ≣ 〇
+  litany
+    ▢ ≣ copper✨wire☿copper✨wire pinch✨of✨sulfur ⟪⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫ jade✨cube⟫ ⇰
+      sympathy ⟪conjure silk✨cord ⇉ silk✨cord jade✨cube⟫ ⟪copper✨wire☿accord ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫
+    ▢ ≣ copper✨wire☿copper✨wire pinch✨of✨sulfur 〇 ⇰ sympathy ⟪copper✨wire☿copper✨wire pinch✨of✨sulfur⟫ sigilward
+    ▢ ≣ 〇 ⇰ ✨Carry✨the✨Silence✨ ▢
+
+spell ✨Carry✨the✨Descended✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+    ⧼ᚳ ᚦ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⧽ ⟪copper✨wire ⟡ ᚳ ⟿ ᚦ⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫
+    ⟪jade✨cube ⟡ ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ᚳ pinch✨of✨sulfur⟫ ⟡
+    copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 一⟫ jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ᚦ pinch✨of✨sulfur ⇰ cast
+  wrest ⦉silver✨bell᛫ mirror⦊ ⇰ sigilward
+  hone ⦉copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 二⟫ silver✨bell᛫ ?▢⦊
+  missile sympathy ⟪conjure silk✨cord ⇉ silk✨cord silver✨bell⟫ ⟪copper✨wire☿accord ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫⟫
+
+/- Our worked complex has three rational coordinates in every degree.
+The differential sends (a,b,c) to (b,0,0): it erases the third coordinate
+and moves the second into the first. Its next application is zero. -/
+ritual ✨Drain✨the✨Three✨Chambers✨ ⟡ ⟪Ratios ⨯ Ratios ⨯ Ratios⟫ ↝Veyrbound⟮Ratios⟯ ⟪Ratios ⨯ Ratios ⨯ Ratios⟫ begets
+  deed jade✨cube ⇰ ⟪jade✨cube☿二☿一᛫ 〇᛫ 〇⟫
+  chantward jade✨cube silver✨bell ⇰ cast purify
+  tetherward ash jade✨cube ⇰ cast purify
+
+spell ✨Two✨Drainings✨Leave✨Silence✨ ⟪jade✨cube ⟡ Ratios ⨯ Ratios ⨯ Ratios⟫ ⟡
+    ✨Drain✨the✨Three✨Chambers✨ ⟪✨Drain✨the✨Three✨Chambers✨ jade✨cube⟫ ≣ 〇 ⇰ mirror
+
+ritual ✨The✨Three✨Chamber✨Rite✨ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ Ratios⟫ Tallies ⇰
+  ✨Descending✨Rite✨☿seed ⟪conjure ▢ ⇉ ✨Bound✨Veyrs✨☿seed Ratios ⟪Ratios ⨯ Ratios ⨯ Ratios⟫⟫
+    ⟪conjure ▢ ⇉ ✨Bound✨Veyrs✨☿✨clothe✨the✨pact✨ ✨Drain✨the✨Three✨Chambers✨⟫ ⟪cast
+      summon pinch✨of✨sulfur
+      channel ✨Bound✨Veyrs✨☿✨Pacts✨Agree✨in✨Essence✨
+      channel Bridge☿extend
+      summon jade✨cube
+      missile ✨Two✨Drainings✨Leave✨Silence✨ jade✨cube⟫
+
+spell ✨Unveil✨the✨Chamber's✨Drain✨ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur ≣ ✨Bound✨Veyrs✨☿✨clothe✨the✨pact✨ ✨Drain✨the✨Three✨Chambers✨ ⇰
+cast
+  purify ⟮✨The✨Three✨Chamber✨Rite✨᛫ ✨Descending✨Rite✨☿✨unveil✨the✨descent✨⟯
+
+/- Cycles have zero second coordinate. Boundaries have both the second
+and third coordinates zero. The surviving third coordinate is the clue
+for the next folio's homology calculation. -/
+spell ✨The✨Middle✨Chamber✨Must✨Be✨Silent✨ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟪jade✨cube ⟡ Ratios ⨯ Ratios ⨯ Ratios⟫ ⟡
+    jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ✨The✨Three✨Chamber✨Rite✨ pinch✨of✨sulfur ↭ jade✨cube☿二☿一 ≣ 〇 ⇰ cast
+  shapeshift ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur jade✨cube ≣ 〇 ↭ ▢
+  transmute ⟮✨Unveil✨the✨Chamber's✨Drain✨⟯
+  shapeshift ⟪jade✨cube☿二☿一᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ 〇 ↭ ▢
+  purify
+
+spell ✨Only✨the✨First✨Chamber✨Descends✨ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟪jade✨cube ⟡ Ratios ⨯ Ratios ⨯ Ratios⟫ ⟡
+    jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ✨The✨Three✨Chamber✨Rite✨ pinch✨of✨sulfur ↭ jade✨cube☿二☿一 ≣ 〇 ⩓ jade✨cube☿二☿二 ≣ 〇 ⇰ cast
+  shapeshift ⟪⟒ silver✨bell᛫ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫ silver✨bell ≣ jade✨cube⟫ ↭ ▢
+  transmute ⟮proclaim pinch✨of✨sulfur ⧾ 二 ≣ ⟪pinch✨of✨sulfur ⧾ 一⟫ ⧾ 一 cast oracle᛫ ✨Unveil✨the✨Chamber's✨Drain✨⟯
+  fabricate
+  ❖ unpack ⦉silver✨bell᛫ mirror⦊
+    missile ⦉mirror᛫ mirror⦊
+  ❖ summon sigilward
+    hone ⦉⟪〇᛫ jade✨cube☿一᛫ 〇⟫᛫ ?▢⦊
+    shapeshift ⟪jade✨cube☿一᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ jade✨cube
+    rend jade✨cube whence ⦉ash᛫ elm᛫ yew⦊
+    purge
+
+seal
+
+seal Arcana☿Transmutation☿✨Chains✨and✨Echoes✨
+```
+
+[Lean source](../math/Mathematics/AlgebraicTopology/ChainComplexes.lean) · [Arcana source](../public/grimoire/chain-complexes.spell)
+
+[ChainComplex.of](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Homology/HomologicalComplex.lean) · [HomologicalComplex.d_comp_d](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Homology/HomologicalComplex.lean#L72) · [HomologicalComplex.Hom.comm](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Homology/HomologicalComplex.lean#L222) · [ShortComplex.moduleCatMk](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Homology/ShortComplex/ModuleCat.lean#L37)
+
+## Echoes beyond the boundary
+
+*Homology as cycles modulo boundaries, with a complete computation*
+
+Let boundary traces dissolve behind the veil. One rational echo survives, and every surviving echo has exactly one measure.
+
+**Mathematical meaning.** Homology Hₙ = Zₙ/Bₙ identifies cycles whose difference is a boundary. For d(a,b,c)=(b,0,0), the map [(a,0,c)] ↦ c is a linear equivalence H₁ ≃ ℚ. In particular [(3,0,7)] = [(0,0,7)], while [(0,0,1)] ≠ 0. The explicit quotient is connected by an isomorphism to Mathlib's actual tripleComplex.homology 1. Chain maps induce homology maps preserving identities and composition.
+
+**Hypotheses.** The concrete computation uses the rational chain complex from The descending rite and computes degree 1. Its explicit quotient uses boundaries as a submodule of cycles, not as an unrelated submodule of the ambient chain space. The induced-map laws hold for arbitrary natural-number-indexed complexes of modules over a ring. No homotopy invariance, singular homology of spaces, or geometric realization is claimed here.
+
+**Proof idea.** Restrict the incoming differential to the outgoing kernel, then quotient its range. On cycles, project to the third coordinate. Prove by explicit witnesses that the kernel of this projection is exactly the boundaries and that every rational number occurs. Apply the linear first isomorphism theorem to obtain the equivalence and its representative formula. A three-term window and Mathlib's moduleCatHomologyIso connect this quotient to the library homology object. Finally specialize the library's homology functor laws.
+
+**A guided reading.** The previous folio found cycles that are not boundaries. Homology records precisely this difference. It is a quotient vector space here, so it remembers addition and scalar multiplication, not just how many classes exist. This lesson completes a calculation instead of merely introducing the notation Hₙ.
+
+1. **Put boundaries inside the correct space** The outgoing kernel is the space of cycles. The incoming differential lands there because d²=0, so codRestrict packages each boundary together with the proof that it is a cycle. Now its range is a submodule of the cycle space, and the quotient is well typed. A cycle represents zero in this quotient exactly when it came from the preceding degree.
+
+2. **Find an invariant of the class** For a cycle (a,0,c), use c as its invariant. Adding a boundary (b,0,0) does not change c. To prove that nothing else survives, suppose c=0: then (a,0,0) is the boundary of (0,a,0). Conversely, every boundary has c=0. This proves that the kernel of survivingCoordinate equals the boundary space, with actual witnesses in the Lean proof.
+
+3. **Finish the quotient calculation** Every rational c occurs, using the cycle (0,0,c). The linear first isomorphism theorem therefore identifies cycles modulo the kernel with all of ℚ. Because that kernel is exactly the boundaries, it gives our homology equivalence. The formula on representatives proves two classes are equal exactly when their third coordinates agree. It proves both the displayed numerical equality and the nonzero class of (0,0,1).
+
+4. **Connect the calculation to the library** Mathlib's abstract homology uses categorical kernels and cokernels. tripleWindowHomologyIso identifies its three-term homology with the explicit quotient we computed, and tripleComplexHomologyIso identifies degree 1 of the actual chain complex with ℚ. These are structure-preserving isomorphisms, not an informal resemblance. The final induced-map laws say doing nothing induces the identity and composing chain maps composes their homology maps.
+
+**Try it yourself.** Do (5,0,2) and (−1,0,2) represent the same class? Can (5,0,2) represent the zero class? Give the boundary witness for their difference.
+
+<details><summary>A hint</summary>
+
+Their third coordinates agree, so the classes agree. Their difference is (6,0,0)=d(0,6,0). Their class is nonzero because its image under the homology equivalence is 2.
+
+</details>
+
+```text
+beckon Arcana☿Transmutation☿✨Chains✨and✨Echoes✨☿✨The✨Descending✨Rites✨
+beckon ✨Grand✨Archive✨☿✨Bound✨Pact✨Lore✨☿✨Perfect✨Passages✨
+
+unveil ✨Lore✨of✨Forms✨
+
+sanctum Arcana☿Transmutation☿✨Chains✨and✨Echoes✨
+
+ineffable chamber
+
+/- Homology remembers closed chains but forgets those which are boundaries.
+First restrict the incoming differential to the kernel of the outgoing
+one. Only then is its range a submodule of the right space to quotient. -/
+byname ✨The✨Closed✨Chambers✨ ⇰ Bridge☿silence ✨Drain✨the✨Three✨Chambers✨
+
+ritual ✨Descent✨into✨the✨Closed✨Circle✨ ⟡ ⟪Ratios ⨯ Ratios ⨯ Ratios⟫ ↝Veyrbound⟮Ratios⟯ ✨The✨Closed✨Chambers✨ ⇰
+  ✨Drain✨the✨Three✨Chambers✨☿✨narrow✨the✨arrival✨ ✨The✨Closed✨Chambers✨ ✨Two✨Drainings✨Leave✨Silence✨
+
+byname ✨The✨Chambers'✨Echoes✨ ⇰ ✨The✨Closed✨Chambers✨ ⧸ Bridge☿manifestation ✨Descent✨into✨the✨Closed✨Circle✨
+
+/- A homology class is zero exactly when the cycle came from the preceding
+degree. This statement makes the meaning of the quotient explicit. -/
+spell ✨A✨Descended✨Echo✨is✨Silent✨ ⟪jade✨cube ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡
+    ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge jade✨cube ⟡ ✨The✨Chambers'✨Echoes✨⟫ ≣ 〇 ↭
+      ⟒ silver✨bell᛫ ✨Descent✨into✨the✨Closed✨Circle✨ silver✨bell ≣ jade✨cube ⇰
+  ✨Inner✨Bound✨Veyr✨☿Effigies☿✨veil✨to✨silence✨ ⟪Bridge☿manifestation ✨Descent✨into✨the✨Closed✨Circle✨⟫
+
+/- The third coordinate survives. For a cycle, the second coordinate is
+already zero; forgetting the first coordinate should remove exactly the
+boundaries, and no more. The next proof checks both directions. -/
+ritual ✨Listen✨to✨the✨Last✨Chamber✨ ⟡ ✨The✨Closed✨Chambers✨ ↝Veyrbound⟮Ratios⟯ Ratios begets
+  deed jade✨cube ⇰ jade✨cube☿core☿二☿二
+  chantward ▢ ▢ ⇰ mirror
+  tetherward ▢ ▢ ⇰ mirror
+
+spell ✨Only✨Descended✨Traces✨Fall✨Silent✨ ⟡
+    Bridge☿silence ✨Listen✨to✨the✨Last✨Chamber✨ ≣ Bridge☿manifestation ✨Descent✨into✨the✨Closed✨Circle✨ ⇰ cast
+  extend jade✨cube
+  fabricate
+  ❖ summon sigilward
+    bind middleward ⟡ jade✨cube☿core☿二☿一 ≣ 〇 ⇰
+      sympathy ⟪conjure silver✨bell ⟡ Ratios ⨯ Ratios ⨯ Ratios ⇉ silver✨bell☿一⟫ jade✨cube☿attestation
+    bind lastward ⟡ jade✨cube☿core☿二☿二 ≣ 〇 ⇰ sigilward
+    hone ⦉⟪〇᛫ jade✨cube☿core☿一᛫ 〇⟫᛫ ?▢⦊
+    channel Kin☿extend
+    shapeshift ⟪jade✨cube☿core☿一᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ jade✨cube☿core
+    rend jade✨cube whence ⦉⦉ash᛫ elm᛫ yew⦊᛫ closedward⦊
+    purge
+  ❖ unpack ⦉silver✨bell᛫ mirror⦊
+    mirror
+
+spell ✨Every✨Echo✨Can✨Be✨Heard✨ ⟡ Rite☿Reaching ✨Listen✨to✨the✨Last✨Chamber✨ ⇰ cast
+  summon yew
+  missile ⦉⦉⟪〇᛫ 〇᛫ yew⟫᛫ mirror⦊᛫ mirror⦊
+
+/- The linear first isomorphism theorem finishes the computation:
+cycles modulo boundaries are linearly equivalent to one copy of ℚ.
+Its representative formula lets us compute actual homology classes. -/
+ritual ✨Unveil✨the✨Surviving✨Echo✨ ⟡ ✨The✨Chambers'✨Echoes✨ ≃Veyrbound⟮Ratios⟯ Ratios ⇰
+  ⟪✨Inner✨Bound✨Veyr✨☿✨equal✨veils✨give✨equal✨passages✨ ▢ ▢ ✨Only✨Descended✨Traces✨Fall✨Silent✨☿reflect⟫☿chain
+    ⟪✨Listen✨to✨the✨Last✨Chamber✨☿✨unveil✨the✨reaching✨bound✨pact✨ ✨Every✨Echo✨Can✨Be✨Heard✨⟫
+
+spell ✨The✨Last✨Chamber✨Names✨the✨Echo✨ ⟪jade✨cube ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡
+    ✨Unveil✨the✨Surviving✨Echo✨ ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge jade✨cube⟫ ≣ jade✨cube☿core☿二☿二 ⇰ cast
+  missile ✨Listen✨to✨the✨Last✨Chamber✨☿✨hear✨through✨the✨bound✨veil✨
+    ✨Every✨Echo✨Can✨Be✨Heard✨ jade✨cube
+
+spell ✨Equal✨Last✨Chambers✨Give✨Equal✨Echoes✨ ⟪jade✨cube silver✨bell ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡
+    ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge jade✨cube ⟡ ✨The✨Chambers'✨Echoes✨⟫ ≣ ✨Inner✨Bound✨Veyr✨☿Effigies☿forge silver✨bell ↭
+      jade✨cube☿core☿二☿二 ≣ silver✨bell☿core☿二☿二 ⇰ cast
+  fabricate
+  ❖ summon unisonward
+    missile sympathy ✨Unveil✨the✨Surviving✨Echo✨ unisonward
+  ❖ summon unisonward
+    channel ✨Unveil✨the✨Surviving✨Echo✨☿unconfounded
+    missile unisonward
+
+/- These cycles differ by the boundary of (0,3,0), so they give the same
+class. Changing the last coordinate would instead change the class. -/
+spell ✨The✨First✨Chamber✨Leaves✨No✨Echo✨ ⟡
+    ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge ⟪⦉⟪三᛫ 〇᛫ 七⟫᛫ mirror⦊ ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡ ✨The✨Chambers'✨Echoes✨⟫ ≣
+      ✨Inner✨Bound✨Veyr✨☿Effigies☿forge ⟪⦉⟪〇᛫ 〇᛫ 七⟫᛫ mirror⦊ ⟡ ✨The✨Closed✨Chambers✨⟫ ⇰
+  ⟪✨Equal✨Last✨Chambers✨Give✨Equal✨Echoes✨ ▢ ▢⟫☿backward mirror
+
+ritual ✨The✨Unfading✨Chamber✨ ⟡ ✨The✨Closed✨Chambers✨ ⇰ ⦉⟪〇᛫ 〇᛫ 一⟫᛫ mirror⦊
+
+spell ✨One✨Echo✨Cannot✨Be✨Silenced✨ ⟡
+    ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge ✨The✨Unfading✨Chamber✨ ⟡ ✨The✨Chambers'✨Echoes✨⟫ ≢ 〇 ⇰ cast
+  summon voidmark
+  bind reflectionward ⇰ sympathy ✨Unveil✨the✨Surviving✨Echo✨ voidmark
+  transmute ⟮✨The✨Last✨Chamber✨Names✨the✨Echo✨᛫ ✨Carry✨the✨Silence✨⟯ upon reflectionward
+  missile ✨Presence✨is✨Not✨Silence✨ reflectionward
+
+/- This is the same homology that mathlib attaches to a chain complex,
+not merely a separately defined quotient. A three-term window is enough
+to compute the middle degree; the library identifies it with ker/im. -/
+ritual ✨The✨Three✨Stair✨Window✨ ⟡ ✨Threefold✨Descent✨ ⟪✨Bound✨Veyrs✨ Ratios⟫ ⇰
+  ✨Threefold✨Descent✨☿✨assemble✨a✨bound✨descent✨ ✨Drain✨the✨Three✨Chambers✨ ✨Drain✨the✨Three✨Chambers✨ ⟪cast
+    channel Bridge☿extend
+    summon jade✨cube
+    missile ✨Two✨Drainings✨Leave✨Silence✨ jade✨cube⟫
+
+ritual ✨The✨Window✨Reveals✨its✨Echoes✨ ⟡ ✨The✨Three✨Stair✨Window✨☿echoes ≅ ✨Bound✨Veyrs✨☿seed Ratios ✨The✨Chambers'✨Echoes✨ ⇰
+  ✨The✨Three✨Stair✨Window✨☿✨unveil✨the✨bound✨echoes✨
+
+ritual ✨The✨Rite✨Opens✨a✨Window✨ ⟡ ✨The✨Three✨Chamber✨Rite✨☿stairwell 二 一 〇 ≅ ✨The✨Three✨Stair✨Window✨ ⇰
+  ✨Threefold✨Descent✨☿✨forge✨a✨perfect✨passage✨ ⟪Mirrorkin☿unmoving ▢⟫ ⟪Mirrorkin☿unmoving ▢⟫ ⟪Mirrorkin☿unmoving ▢⟫
+    ⟪cast
+      channel ✨Bound✨Veyrs✨☿✨Pacts✨Agree✨in✨Essence✨
+      channel Bridge☿extend
+      summon jade✨cube
+      shapeshift ✨Drain✨the✨Three✨Chambers✨ jade✨cube ≣ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread 二 一 jade✨cube
+      transmute ⟮✨Unveil✨the✨Chamber's✨Drain✨ 一⟯
+      mirror⟫
+    ⟪cast
+      channel ✨Bound✨Veyrs✨☿✨Pacts✨Agree✨in✨Essence✨
+      channel Bridge☿extend
+      summon jade✨cube
+      shapeshift ✨Drain✨the✨Three✨Chambers✨ jade✨cube ≣ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread 一 〇 jade✨cube
+      transmute ⟮✨Unveil✨the✨Chamber's✨Drain✨ 〇⟯
+      mirror⟫
+
+ritual ✨The✨Rite's✨One✨Surviving✨Echo✨ ⟡ ✨The✨Three✨Chamber✨Rite✨☿echoes 一 ≅ ✨Bound✨Veyrs✨☿seed Ratios Ratios ⇰
+  ⟪✨The✨Three✨Chamber✨Rite✨☿✨echoes✨through✨a✨window✨ 二 一 〇 ⟪⟪✨Pattern✨of✨Descent✨☿descending Tallies⟫☿✨the✨stair✨above✨ mirror⟫ ⟪⟪✨Pattern✨of✨Descent✨☿descending Tallies⟫☿✨the✨stair✨below✨ mirror⟫⟫ ≪⨾
+    ✨Threefold✨Descent✨☿✨carry✨echoes✨through✨the✨passage✨ ✨The✨Rite✨Opens✨a✨Window✨ ≪⨾
+    ✨The✨Window✨Reveals✨its✨Echoes✨ ≪⨾ ✨Unveil✨the✨Surviving✨Echo✨☿✨clothe✨the✨bound✨passage✨
+
+/- Transport on homology respects both identity and composition.
+The preceding folio explained why: chain maps preserve closed chains
+and boundaries, so they descend consistently to equivalence classes. -/
+ritual ✨Carry✨the✨Surviving✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+    ⧼ᚳ ᚦ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⧽ ⟪copper✨wire ⟡ ᚳ ⟿ ᚦ⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    ᚳ☿echoes pinch✨of✨sulfur ⟿ ᚦ☿echoes pinch✨of✨sulfur ⇰
+  ✨Graded✨Descent✨☿✨carry✨the✨echoes✨ copper✨wire pinch✨of✨sulfur
+
+spell ✨Unmoved✨Traces✨Leave✨Unmoved✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+    ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    ✨Carry✨the✨Surviving✨Echoes✨ ⟪◎ ᚳ⟫ pinch✨of✨sulfur ≣ ◎ ⟪ᚳ☿echoes pinch✨of✨sulfur⟫ ⇰
+  ✨Graded✨Descent✨☿✨unmoved✨echoes✨ ᚳ pinch✨of✨sulfur
+
+spell ✨Chained✨Pacts✨Carry✨Chained✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+    ⧼ᚳ ᚦ ᛖ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⧽ ⟪copper✨wire ⟡ ᚳ ⟿ ᚦ⟫ ⟪silk✨cord ⟡ ᚦ ⟿ ᛖ⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    ✨Carry✨the✨Surviving✨Echoes✨ ⟪copper✨wire ⨾ silk✨cord⟫ pinch✨of✨sulfur ≣ ✨Carry✨the✨Surviving✨Echoes✨ copper✨wire pinch✨of✨sulfur ⨾ ✨Carry✨the✨Surviving✨Echoes✨ silk✨cord pinch✨of✨sulfur ⇰
+  ✨Graded✨Descent✨☿✨chain✨the✨echo✨bearers✨ copper✨wire silk✨cord pinch✨of✨sulfur
+
+seal
+
+seal Arcana☿Transmutation☿✨Chains✨and✨Echoes✨
+```
+
+[Lean source](../math/Mathematics/AlgebraicTopology/Homology.lean) · [Arcana source](../public/grimoire/homology.spell)
+
+[ShortComplex.moduleCatHomologyIso](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Homology/ShortComplex/ModuleCat.lean#L177) · [LinearMap.quotKerEquivOfSurjective](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/LinearAlgebra/Isomorphisms.lean#L47) · [HomologicalComplex.homologyIsoSc'](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Homology/ShortComplex/HomologicalComplex.lean#L907) · [HomologicalComplex.homologyMap_comp](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Homology/ShortComplex/HomologicalComplex.lean#L371)
+
+## The imaginary mirror
+
+*Complex arithmetic, conjugation, and modulus*
+
+Turn a sigil through an unseen quarter circle, reflect it in a mirror, and recover its distance from the origin.
+
+**Mathematical meaning.** The complex field contains i with i² = −1. Multiplication by i takes (a,b) to (−b,a), so four turns restore every point. Conjugation sends a+bi to a−bi; z·conj(z) = |z|². We compute (1+i)² = 2i and |3+4i| = 5 exactly.
+
+**Hypotheses.** All statements concern the complex field ℂ and its standard real-valued norm. No ordering of complex numbers is assumed. The word imaginary names a coordinate direction; these are fully defined mathematical objects.
+
+**Proof idea.** Read complex multiplication by coordinates, then regroup four factors of i into two copies of i². Conjugation is an involution. The norm-square identity reduces distance computations to real squares. ring proves polynomial rearrangements; norm_num checks numerical arithmetic; nonnegativity of a norm selects +5 rather than −5 from its square.
+
+**A guided reading.** Illusion begins with an extra direction, not with unreliable arithmetic. A complex number a+bi is a point with two real coordinates. Its field operations let geometry and algebra describe the same motion, preparing both complex analysis and the polynomial geometry of Phantasms.
+
+1. **Meet the imaginary unit** Complex.I is the particular complex number with real part 0 and imaginary part 1. Its square is −1. quarterTurn_coordinates shows how multiplication by i rotates any point: the old imaginary coordinate becomes the negative real coordinate, and the old real coordinate becomes the imaginary coordinate. Four such turns return to the start. This differs from the quaternion generators: complex multiplication is commutative.
+
+2. **Reflect across the real axis** Conjugation fixes a and negates b in a+bi. Applying it twice restores the original number. Multiplying a number by its conjugate cancels the imaginary cross terms and gives the real number a²+b². Lean explicitly casts this real result back to ℂ in conjugate_product so that both sides of the equality have the same type.
+
+3. **Distinguish a norm from its square** Complex.normSq z is |z|², not |z|. The notation ‖z‖ is the nonnegative distance from z to 0. modulus_squared_coordinates links the analytic norm to the two algebraic coordinates. This is the same Pythagorean calculation familiar from the real plane, now attached to a field element.
+
+4. **Check exact computations** For (1+i)², expand the polynomial and replace i² by −1. For |3+4i|, first obtain the squared norm 25, then use nonnegativity to choose 5. These proofs manipulate exact real and complex numbers; they do not approximate them with machine decimals. Opening the proof shows why knowing only that a square is 25 would leave two possible real values.
+
+**Try it yourself.** Predict the coordinates after two quarter turns, then use i² = −1 to explain the answer. Why is conjugation a different transformation from multiplication by i?
+
+<details><summary>A hint</summary>
+
+Two quarter turns negate both coordinates. Conjugation negates only the imaginary coordinate and fixes every real number. Browser edits are unchecked drafts until run through Lean.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿Necromantic☿Umbra☿Radiance
+beckon ✨Grand✨Archive✨☿Gestures
+
+sanctum Arcana☿Illusion
+
+unveil Umbra Mirrors
+
+/- The imaginary unit is an ordinary field element with one unusual square.
+Multiplication by it rotates the real and imaginary coordinates a quarter turn. -/
+spell ✨Conjure✨the✨Imaginary✨Ember✨ ⟡ ✨Imaginary✨Ember✨ ⌃ 二 ≣ ⟪⧿一 ⟡ Umbrae⟫ ⇰ Umbra☿✨The✨Ember's✨Shadow✨
+
+spell ✨A✨Quarter✨Turn✨through✨the✨Mirror✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
+    ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫☿sunface ≣ ⧿amber✨rod☿moonface ⩓ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫☿moonface ≣ amber✨rod☿sunface ⇰ cast
+  fabricate ⋖⁂⋗ purify
+
+spell ✨Four✨Imaginary✨Turns✨Return✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ ✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫⟫⟫ ≣ amber✨rod ⇰ cast
+  litany ✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫⟫⟫ ≣ ⟪✨Imaginary✨Ember✨ ⊛ ✨Imaginary✨Ember✨⟫ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ✨Imaginary✨Ember✨⟫ ⊛ amber✨rod ⇰ cast circlet
+    ▢ ≣ amber✨rod ⇰ cast transmute ⟮Umbra☿✨Two✨Embers✨Cast✨a✨Shadow✨⟯⁂ circlet
+
+/- Conjugation fixes the real coordinate and negates the imaginary one.
+It is an involution, so looking into this mirror twice restores the input. -/
+spell ✨Twice✨through✨the✨Imaginary✨Mirror✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ mirrorlight ⟪mirrorlight amber✨rod⟫ ≣ amber✨rod ⇰ cast purify
+
+/- The squared modulus is real and nonnegative. Multiplying a complex number
+by its conjugate gives that squared modulus, embedded back into the complex field. -/
+spell ✨The✨Mirror✨Reveals✨Radiance✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ amber✨rod ⊛ mirrorlight amber✨rod ≣ ⟪✨radiance✨squared✨ amber✨rod ⟡ Umbrae⟫ ⇰
+  Umbra☿✨bind✨the✨mirrorlight✨ amber✨rod
+
+spell ✨Radiance✨from✨Two✨Shadows✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ ‖amber✨rod‖ ⌃ 二 ≣ amber✨rod☿sunface ⌃ 二 ⧾ amber✨rod☿moonface ⌃ 二 ⇰ cast
+  transmute ⟮Umbra☿✨square✨the✨radiance✨᛫ Umbra☿✨unveil✨the✨squared✨radiance✨⟯
+  circlet
+
+/- This exact computation uses field algebra, not a floating-point approximation. -/
+spell ✨Twin✨Sparks✨Become✨Moonlight✨ ⟡ ⟪一 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 二 ≣ ⟪二 ⟡ Umbrae⟫ ⊛ ✨Imaginary✨Ember✨ ⇰ cast
+  litany ⟪一 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 二 ≣ 一 ⧾ 二 ⊛ ✨Imaginary✨Ember✨ ⧾ ✨Imaginary✨Ember✨ ⌃ 二 ⇰ cast circlet
+    ▢ ≣ 二 ⊛ ✨Imaginary✨Ember✨ ⇰ cast transmute ⟮Umbra☿✨The✨Ember's✨Shadow✨⟯⁂ circlet
+
+spell ✨The✨Fivefold✨Radiance✨ ⟡ ‖⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ≣ 五 ⇰ cast
+  bind doubleward ⟡ ‖⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ⌃ 二 ≣ 二五 ⇰ cast
+    transmute ⟮✨Radiance✨from✨Two✨Shadows✨⟯
+    numerology
+  bind lightward ⇰ ✨radiance✨cannot✨darken✨ ⟪⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨⟫
+  greatledger
+
+seal Arcana☿Illusion
+```
+
+[Lean source](../math/Mathematics/ComplexAnalysis/ComplexArithmetic.lean) · [Arcana source](../public/grimoire/complex-mirrors.spell)
+
+[Complex.I_sq](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Complex/Basic.lean#L627) · [Complex.mul_conj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Complex/Basic.lean#L586) · [Complex.sq_norm](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/Complex/Norm.lean#L150)
+
+## Whispers from every direction
+
+*Complex derivatives and entire functions*
+
+Listen to one whisper that agrees along every approach, then compose a square with an exponential incantation.
+
+**Mathematical meaning.** For complex z, the function z ↦ z² has derivative 2z. The chain rule gives (exp(z²))′ = exp(z²)·2z. Both functions are complex differentiable everywhere, hence entire. At i the latter derivative is exp(−1)·2i.
+
+**Hypotheses.** The derivative is taken over ℂ, not merely over ℝ. The polynomial and exponential are defined on the whole complex plane, so there are no domain exclusions. Entire means holomorphic everywhere; the lesson establishes this through complex differentiability at every point.
+
+**Proof idea.** Apply mathlib’s derivative-of-a-power theorem to the identity function. Extract differentiability and the derivative value from the resulting HasDerivAt certificate. For exp(z²), compose mathlib’s complex exponential derivative with the square derivative. Finally substitute i² = −1 into the proved derivative formula.
+
+**A guided reading.** Complex arithmetic becomes complex analysis when we ask how a function changes near a point. A complex derivative must describe changes from every direction in the plane using multiplication by one complex number. This is stronger than ordinary differentiability of a map between two real planes.
+
+1. **Read a derivative certificate** HasDerivAt f d z says that f has derivative d at z. It includes the existence and limiting property of that derivative. Here all inputs and outputs are complex, and Differentiable ℂ makes the scalar field explicit. Informally, f(z+h) is f(z)+d·h plus an error negligible compared with |h| as h approaches zero through arbitrary complex directions.
+
+2. **Differentiate the square** The identity function has derivative 1. The power rule with exponent 2 yields 2·z·1, which simplifies to 2z. complexSquare_hasDerivAt records this at any point. Quantifying that result over all points establishes complexSquare_differentiable, and the certificate’s .deriv projection obtains the value of deriv.
+
+3. **Compose two controlled changes** The outer function is the complex exponential, whose derivative is itself; the inner function is the square, whose derivative we just established. HasDerivAt.comp multiplies the outer derivative at z² by the inner derivative at z. The resulting formula exp(z²)·2z is valid throughout ℂ, so the composite is entire too.
+
+4. **Evaluate after proving existence** At i, the inner square is −1, leaving exp(−1)·2i. In Lean, deriv is a total function and takes a default value at points lacking a derivative; a displayed derivative value alone would therefore be a poor existence claim. These folios first prove HasDerivAt, then extract its derivative value. Entire functions here are examples, not a claim that every function built from complex coordinates is holomorphic.
+
+**Try it yourself.** Use the two derivative formulas to predict their values at 0. Why does the derivative of exp(z²) vanish there even though exp(0) = 1?
+
+<details><summary>A hint</summary>
+
+The chain rule also includes the derivative 2z of the inner square. That factor vanishes at 0. A constant output value and a rate of change answer different questions.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿Necromantic☿✨Named✨Invocations✨☿✨Breath's✨Whispercraft✨
+beckon ✨Grand✨Archive✨☿Necromantic☿Whispers☿Whispering☿Kindling
+beckon ✨Grand✨Archive✨☿Gestures
+
+ineffable chamber
+
+sanctum Arcana☿Illusion
+
+/- The scalar field in HasDerivAt matters: every variable here lies in ℂ,
+so this is a complex derivative, controlling approach from every direction. -/
+ritual ✨The✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ Umbrae ⇰ amber✨rod ⌃ 二
+
+spell ✨The✨Second✨Ascent's✨Whisper✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
+    ✨Bears✨the✨Whisper✨ ✨The✨Umbra's✨Second✨Ascent✨ ⟪二 ⊛ amber✨rod⟫ amber✨rod ⇰ cast
+  shapeshift ✨Bears✨the✨Whisper✨ ⟪conjure verse ⟡ Umbrae ⇉ verse ⌃ 二⟫ ⟪二 ⊛ amber✨rod⟫ amber✨rod
+  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ amber✨rod⟫☿✨whisper✨through✨powers✨ 二
+
+/- A complex derivative at every point makes the function entire, hence
+holomorphic on every open subset of the complex plane. -/
+spell ✨The✨Second✨Ascent✨Whispers✨Everywhere✨ ⟡ ✨Everywhere✨Whispering✨ Umbrae ✨The✨Umbra's✨Second✨Ascent✨ ⇰ cast
+  summon amber✨rod
+  missile ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫☿✨whispering✨here✨
+
+spell ✨Hear✨the✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ undertone ✨The✨Umbra's✨Second✨Ascent✨ amber✨rod ≣ 二 ⊛ amber✨rod ⇰
+  ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫☿undertone
+
+/- The derivative of the complex exponential is a library theorem. The chain
+rule combines it with the polynomial derivative proved above. -/
+ritual ✨Breathe✨upon✨the✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ Umbrae ⇰ Umbra☿breath ⟪✨The✨Umbra's✨Second✨Ascent✨ amber✨rod⟫
+
+spell ✨The✨Breath's✨Layered✨Whisper✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
+    ✨Bears✨the✨Whisper✨ ✨Breathe✨upon✨the✨Second✨Ascent✨ ⟪Umbra☿breath ⟪amber✨rod ⌃ 二⟫ ⊛ ⟪二 ⊛ amber✨rod⟫⟫ amber✨rod ⇰ cast
+  missile ⟪Umbra☿✨breath✨echoes✨itself✨ ⟪✨The✨Umbra's✨Second✨Ascent✨ amber✨rod⟫⟫☿threading amber✨rod ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫
+
+spell ✨The✨Breath✨Whispers✨Everywhere✨ ⟡ ✨Everywhere✨Whispering✨ Umbrae ✨Breathe✨upon✨the✨Second✨Ascent✨ ⇰ cast
+  summon amber✨rod
+  missile ⟪✨The✨Breath's✨Layered✨Whisper✨ amber✨rod⟫☿✨whispering✨here✨
+
+/- Evaluate a derivative only after obtaining its HasDerivAt certificate.
+At the imaginary unit, z squared is negative one, so the exponential is exp(-1). -/
+spell ✨The✨Imaginary✨Ember's✨Breath✨ ⟡
+    undertone ✨Breathe✨upon✨the✨Second✨Ascent✨ Umbra☿✨Imaginary✨Ember✨ ≣ Umbra☿breath ⟪⧿一⟫ ⊛ ⟪二 ⊛ Umbra☿✨Imaginary✨Ember✨⟫ ⇰ cast
+  transmute ⟮⟪✨The✨Breath's✨Layered✨Whisper✨ Umbra☿✨Imaginary✨Ember✨⟫☿undertone᛫ Umbra☿✨The✨Ember's✨Shadow✨⟯
+
+seal Arcana☿Illusion
+```
+
+[Lean source](../math/Mathematics/ComplexAnalysis/Holomorphic.lean) · [Arcana source](../public/grimoire/holomorphic-whispers.spell)
+
+[HasDerivAt.pow](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/Calculus/Deriv/Pow.lean#L109) · [HasDerivAt.comp](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/Calculus/Deriv/Comp.lean#L258) · [Complex.hasDerivAt_exp](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/ExpDeriv.lean)
+
+## Shapes summoned by equations
+
+*Affine complex zero loci and vanishing ideals*
+
+Let equations summon a shape, and let the shape answer with every equation that vanishes upon it. Adding constraints makes an apparition shrink.
+
+**Mathematical meaning.** For an ideal J of complex multivariate polynomials, V(J) is the set of common zeros. For a point set S, I(S) consists of every polynomial vanishing on S. J ⊆ K implies V(K) ⊆ V(J), and S ⊆ V(J) iff J ⊆ I(S). The equation xy = 0 cuts out the two complex coordinate axes. Squaring this equation gives the same point set.
+
+**Hypotheses.** Coefficients and point coordinates lie in ℂ. The general constructions allow any coordinate index type; the explicit example uses two coordinates, Fin 2. This is classical affine algebraic geometry of equations and solution sets, not a construction of schemes. Each complex axis is a copy of ℂ, not merely a real line.
+
+**Proof idea.** Unfold the common-zero and vanishing-ideal membership tests. Order reversal and the correspondence reduce to passing an equation and a point to the same evaluation equality. Identify a point’s vanishing ideal with the kernel of its evaluation homomorphism. For the ideal generated by xy, mathlib’s zeroLocus_span reduces every ideal equation to the generator; a field has no zero divisors, so xy = 0 iff x = 0 or y = 0. The same reasoning shows that squaring the generator preserves its zero set.
+
+**A guided reading.** Phantasms meets Illusion in its complex coordinates and Transmutation in its passage between two kinds of description: equations and spaces. Analysis studies limits and derivatives of functions; algebraic geometry here studies shapes defined by polynomial equations. The coordinate field is shared, while the questions differ.
+
+1. **Collect consequences in an ideal** MvPolynomial α ℂ is the ring of polynomials whose variables are indexed by α. An ideal is closed under sums and multiplication by arbitrary polynomials. Thus an ideal generated by chosen equations also contains their polynomial consequences. affineZeroLocus asks that every polynomial in the ideal evaluate to zero. A point is a function α → ℂ assigning one value to each coordinate.
+
+2. **Reverse the inclusion** Adding equations can only remove solutions. In the other direction, requiring vanishing at more points can only remove permissible polynomials. The equivalence S ⊆ V(J) iff J ⊆ I(S) is proved by exchanging the order of the two universal quantifiers. This is an order-reversing Galois connection: viewing one inclusion order oppositely turns it into an adjunction between partially ordered sets, connecting with the two hands of Transmutation. It is not a bijection between arbitrary ideals and arbitrary point sets.
+
+3. **Evaluate a point as a homomorphism** Fixing coordinate values gives a polynomial evaluation map that preserves addition, multiplication, constants, and the complex scalar action. Its kernel is precisely the ideal of equations vanishing at that point. This extends the kernel idea from Enchantment to rings and algebras. For xy, evaluation gives the product of the two coordinate values; the zero-product law splits its zero set into the two coordinate axes. The examples (i,0) and (i,1) test membership exactly.
+
+4. **Notice what the point set forgets** The equations xy = 0 and (xy)² = 0 have identical complex solutions because a complex square is zero exactly when its base is zero. Yet the squared equation records additional multiplicity. This is a first reason to retain algebraic data alongside a picture of points. The folio proves equality of these solution sets; it does not develop multiplicities, the Nullstellensatz, or schemes. Those are later routes from these foundations.
+
+**Try it yourself.** Predict the common-zero set after adding x = 0 to xy = 0. Which direction of the inclusion should hold, and why does squaring xy fail to make its solution set smaller?
+
+<details><summary>A hint</summary>
+
+Adding x = 0 leaves the axis where the first coordinate vanishes. Squaring introduces no new nonzero roots in a field, so it imposes the same condition on individual complex points.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿✨Veyrath✨Lore✨☿✨Hilbert's✨Vanishing✨Oracle✨
+beckon ✨Grand✨Archive✨☿Lore☿Umbra☿Foundations
+beckon ✨Grand✨Archive✨☿Gestures
+
+ineffable chamber
+
+sanctum Arcana☿Phantasms
+
+/- A point of affine complex space assigns a complex number to each coordinate.
+An ideal collects equations and all their polynomial consequences. -/
+ritual ✨Apparition✨of✨the✨Covenant✨ ⧼ᚨ ⟡ Essence⊛⧽ ⟪garnet✨seal ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ᚨ Umbrae⟫⟫ ⟡ Host ⟪ᚨ ↝ Umbrae⟫ ⇰
+  ✨Many✨Glyph✨Incantations✨☿apparition Umbrae garnet✨seal
+
+ritual ✨Vows✨of✨the✨Apparition✨ ⧼ᚨ ⟡ Essence⊛⧽ ⟪cloud✨of✨chalk ⟡ Host ⟪ᚨ ↝ Umbrae⟫⟫ ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ᚨ Umbrae⟫ ⇰
+  ✨Many✨Glyph✨Incantations✨☿✨vanishing✨covenant✨ Umbrae cloud✨of✨chalk
+
+/- More equations can only remove solutions. Read the inclusion backwards:
+J is contained in K, while the solution set of K is contained in that of J. -/
+spell ✨More✨Vows✨Fewer✨Apparitions✨ ⧼ᚨ ⟡ Essence⊛⧽ ⧼garnet✨seal lapis✨seal ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ᚨ Umbrae⟫⧽
+    ⟪vowward ⟡ garnet✨seal ⋜ lapis✨seal⟫ ⟡ ✨Apparition✨of✨the✨Covenant✨ lapis✨seal ⊆ ✨Apparition✨of✨the✨Covenant✨ garnet✨seal ⇰ cast
+  summon jade✨cube sigilward ruby✨shard primalward
+  missile sigilward ruby✨shard ⟪vowward primalward⟫
+
+/- The same statement can be read from either side: each point solves every
+equation, or each equation vanishes at every point. This is a Galois connection. -/
+spell ✨The✨Two✨Faces✨of✨an✨Apparition✨ ⧼ᚨ ⟡ Essence⊛⧽ ⟪garnet✨seal ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ᚨ Umbrae⟫⟫
+    ⟪cloud✨of✨chalk ⟡ Host ⟪ᚨ ↝ Umbrae⟫⟫ ⟡ cloud✨of✨chalk ⊆ ✨Apparition✨of✨the✨Covenant✨ garnet✨seal ↭ garnet✨seal ⋜ ✨Vows✨of✨the✨Apparition✨ cloud✨of✨chalk ⇰ cast
+  fabricate
+  ❖ summon apparitionward ruby✨shard primalward jade✨cube sigilward
+    missile apparitionward sigilward ruby✨shard primalward
+  ❖ summon fadeguard jade✨cube sigilward ruby✨shard primalward
+    missile fadeguard primalward jade✨cube sigilward
+
+/- Evaluation at a point preserves addition and multiplication. Its kernel
+is exactly the ideal of equations vanishing at that point. -/
+spell ✨A✨Sigil's✨Vows✨Are✨Its✨Silence✨ ⧼ᚨ ⟡ Essence⊛⧽ ⟪jade✨cube ⟡ ᚨ ↝ Umbrae⟫ ⟡
+    ✨Vows✨of✨the✨Apparition✨ ⧼jade✨cube⧽ ≣ Emissary☿silence ⟪✨Many✨Glyph✨Incantations✨☿✨conjure✨at✨the✨sigils✨ jade✨cube⟫☿✨unveil✨the✨Veyrath✨pact✨ ⇰ cast
+  extend ruby✨shard
+  purify ⟮✨Vows✨of✨the✨Apparition✨᛫ Emissary☿✨Silence✨Criterion✨⟯
+
+/- In two coordinates, the equation xy = 0 describes the union of the axes.
+Fin 2 names the coordinates; each coordinate itself can be any complex number. -/
+ritual ✨The✨Crossed✨Apparition✨ ⟡ ✨Many✨Glyph✨Incantations✨ ⟪Fetter 二⟫ Umbrae ⇰
+  ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 〇 ⊛ ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 一
+
+ritual ✨Covenant✨of✨Crossed✨Apparitions✨ ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ⟪Fetter 二⟫ Umbrae⟫ ⇰
+  Covenant☿consecrate ⧼✨The✨Crossed✨Apparition✨⧽
+
+spell ✨One✨Arm✨or✨the✨Other✨ ⟪jade✨cube ⟡ Fetter 二 ↝ Umbrae⟫ ⟡
+    jade✨cube ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ↭ jade✨cube 〇 ≣ 〇 ⩔ jade✨cube 一 ≣ 〇 ⇰ cast
+  transmute ⟮✨Apparition✨of✨the✨Covenant✨᛫ ✨Covenant✨of✨Crossed✨Apparitions✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨⟯
+  purify ⟮✨The✨Crossed✨Apparition✨᛫ ✨a✨silent✨binding✨betrays✨a✨silence✨⟯
+
+/- The point (i, 0) lies on the horizontal complex axis. The point (i, 1)
+lies on neither axis. These are exact complex-coordinate computations. -/
+spell ✨The✨Ember✨Rests✨upon✨the✨Cross✨ ⟡
+    ⟪!⟮Umbra☿✨Imaginary✨Ember✨᛫ 〇⟯ ⟡ Fetter 二 ↝ Umbrae⟫ ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
+  transmute ⟮✨One✨Arm✨or✨the✨Other✨⟯
+  missile Either☿choose✨right mirror
+
+spell ✨The✨Ember✨Escapes✨the✨Cross✨ ⟡
+    ⟪!⟮Umbra☿✨Imaginary✨Ember✨᛫ 一⟯ ⟡ Fetter 二 ↝ Umbrae⟫ ∉ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
+  transmute ⟮✨One✨Arm✨or✨the✨Other✨⟯
+  purify
+
+/- Squaring an equation changes its multiplicity, but not its zero set over
+the complex field. A bare set of solutions forgets this extra algebraic data. -/
+spell ✨A✨Deeper✨Vow✨Casts✨the✨Same✨Shape✨ ⟡
+    ✨Apparition✨of✨the✨Covenant✨ ⟪Covenant☿consecrate ⧼✨The✨Crossed✨Apparition✨ ⌃ 二⧽⟫ ≣
+      ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
+  extend jade✨cube
+  transmute ⟮✨Apparition✨of✨the✨Covenant✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨᛫ ✨One✨Arm✨or✨the✨Other✨⟯
+  purify ⟮✨The✨Crossed✨Apparition✨᛫ ✨a✨silent✨binding✨betrays✨a✨silence✨⟯
+
+seal Arcana☿Phantasms
+```
+
+[Lean source](../math/Mathematics/AlgebraicGeometry/AffineZeroLoci.lean) · [Arcana source](../public/grimoire/affine-phantasms.spell)
+
+[MvPolynomial.zeroLocus](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/RingTheory/Nullstellensatz.lean#L40) · [MvPolynomial.vanishingIdeal](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/RingTheory/Nullstellensatz.lean#L62) · [MvPolynomial.zeroLocus_span](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/RingTheory/Nullstellensatz.lean#L96) · [MvPolynomial.aeval](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/MvPolynomial/Eval.lean#L593)
+
+## The sixfold omen
+
+*Finite probability, expectation, and independent draws*
+
+Cast a fair six-faced die, weigh an event, read an average reward, and cast twice without letting the first omen alter the second.
+
+**Mathematical meaning.** A probability mass function assigns nonnegative weights totaling one. Our fair die assigns 1/6 to each of six outcomes; the event of an even face has probability 1/2 and the expected face is 7/2. Two independently drawn dice give every ordered pair probability 1/36, including double six.
+
+**Hypotheses.** The outcome carrier is Fin 6, whose indices are 0 through 5; dieFace adds one to obtain faces 1 through 6. Probabilities live in ℝ≥0∞, Mathlib's extended nonnegative reals, but normalization makes the individual masses finite. Payoffs and their expectations are real. Independence is built into the second draw using the same distribution for every first outcome.
+
+**Proof idea.** Construct the PMF by proving the six constant weights sum to one. Turn it into a probability measure to evaluate the even-face event. Mathlib's integral_eq_sum reduces the expected payoff to a weighted finite sum. The joint distribution uses bind followed by map; expanding those operations leaves just the chosen first and second outcome, yielding (1/6)(1/6).
+
+**A guided reading.** Augury starts with a model of what could happen. Its weights describe uncertainty before observing an outcome. This folio builds an actual Mathlib probability object, so event probabilities and expected values are connected to the same underlying measure.
+
+1. **Normalize the possible outcomes** Fin 6 contains six indices, beginning at zero. fairDie gives each weight 1/6 and supplies the proof required by PMF.ofFintype: the weights sum to one. Nonnegativity comes from the probability's type. fairDie_mass reads one weight, while fairDie_total checks the whole distribution.
+
+2. **An event collects outcomes** The even faces 2, 4, and 6 correspond to indices 1, 3, and 5. Applying fairDie.toMeasure to that finite set adds three disjoint singleton masses, giving 1/2. The use of toReal in the calculation transports an equality between finite probabilities to ordinary real arithmetic; it does not change the probability model.
+
+3. **An expectation is a weighted average** dieFace assigns each index its displayed face. The integral against fairDie.toMeasure is its expectation. integral_eq_sum changes that integral into six weighted terms, whose total is 7/2. No face is labeled 3.5: an expected value is a summary of a distribution, not a promise about the next throw.
+
+4. **Build independence explicitly** In independentDice, bind first samples i; the inner map samples j from fairDie and keeps the ordered pair (i,j). The distribution used for j never depends on i. Expanding the two finite sums proves every pair has mass 1/36. If the second distribution depended on i, the same multiplication rule would not follow merely from having two dice.
+
+**Try it yourself.** Which indices form the event that a face is at least five? What probability should its toMeasure calculation give, and why is that different from the expected face?
+
+<details><summary>A hint</summary>
+
+Faces five and six are indices four and five, so their two masses add to 1/3. Expectation instead sums all six face values multiplied by their probabilities. Browser edits remain unchecked drafts until Lean is run.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿✨Omen✨Lore✨☿✨Augurglass✨Craft✨☿Gatherings
+beckon ✨Grand✨Archive✨☿Gestures
+
+sanctum Arcana☿Divination☿Augury
+
+unveil attuned ✨Chorus✨Rites✨ ✨Unbounded✨Omenweight✨
+unveil ✨Measure✨Lore✨
+
+/- A probability mass function stores nonnegative weights whose total is one.
+The six indices are 0 through 5; the displayed die faces are one greater. -/
+ineffable ritual ✨Sixfold✨Omen✨ ⟡ Augurglass ⟪Fetter 六⟫ ⇰
+  Augurglass☿✨from✨counted✨weights✨ ⟪conjure ▢ ⇉ 一 ⧶ 六⟫ ⟪cast
+    numerology
+    missile ✨Unbounded✨Omenweight✨☿✨Binding✨Undone✨ ⟪cast numerology⟫ ⟪cast boundedness⟫⟫
+
+spell ✨Weight✨of✨Each✨Face✨ ⟪opal✨dust ⟡ Fetter 六⟫ ⟡ ✨Sixfold✨Omen✨ opal✨dust ≣ 一 ⧶ 六 ⇰ mirror
+
+spell ✨The✨Whole✨Omen✨ ⟡ ∑ opal✨dust᛫ ✨Sixfold✨Omen✨ opal✨dust ≣ 一 ⇰ cast
+  clarify solely ⟮✨gather✨a✨counted✨chorus✨⟯ through ✨Sixfold✨Omen✨☿✨all✨omenweights✨are✨one✨
+
+/- The outcome indices 1, 3, 5 correspond to faces 2, 4, 6.
+An event is a set of outcomes, and its probability adds their masses. -/
+spell ✨Three✨Faces✨Claim✨Half✨the✨Omen✨ ⟡
+    ✨Sixfold✨Omen✨☿✨weigh✨the✨omens✨ ⟪⧼一᛫ 三᛫ 五⧽ ⟡ Band ⟪Fetter 六⟫⟫ ≣ 一 ⧶ 二 ⇰ cast
+  transmute ⟮Augurglass☿✨weigh✨a✨band✨of✨omens✨⟯
+  shapeshift ⟪一 ⧶ 六 ⟡ Fluxes⋝〇∞⟫ ⧾ ⟪一 ⧶ 六 ⧾ ⟪一 ⧶ 六 ⧾ 〇⟫⟫ ≣ 一 ⧶ 二
+  channel ⟪✨Unbounded✨Omenweight✨☿✨finite✨weights✨agree✨when✨unveiled✨ ⟪cast boundedness⟫ ⟪cast boundedness⟫⟫☿onward
+  numerology ⟮✨Unbounded✨Omenweight✨☿✨unveil✨joined✨weights✨⟯
+
+/- A random variable assigns a real payoff to every outcome.
+Expectation weights those payoffs by their probabilities; it need not be an outcome. -/
+ritual ✨Face✨of✨the✨Omen✨ ⟪opal✨dust ⟡ Fetter 六⟫ ⟡ Fluxes ⇰ opal✨dust☿core ⧾ 一
+
+spell ✨Balance✨the✨Sixfold✨Omen✨ ⟡ ∫ opal✨dust᛫ ✨Face✨of✨the✨Omen✨ opal✨dust ∂✨Sixfold✨Omen✨☿✨weigh✨the✨omens✨ ≣ 七 ⧶ 二 ⇰ cast
+  transmute ⟮Augurglass☿✨gather✨the✨finite✨weights✨⟯
+  numerology ⟮✨Weight✨of✨Each✨Face✨᛫ ✨Face✨of✨the✨Omen✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+
+/- Resampling from the same distribution inside bind makes the two draws independent.
+Keeping both indices, rather than just their sum, records the full joint outcome. -/
+ineffable ritual ✨Twin✨Unentangled✨Omens✨ ⟡ Augurglass ⟪Fetter 六 ⨯ Fetter 六⟫ ⇰
+  ✨Sixfold✨Omen✨☿✨cast✨then✨cast✨ ⟪conjure opal✨dust ⇉ ✨Sixfold✨Omen✨☿enchant ⟪conjure quartz✨chip ⇉ ⟪opal✨dust᛫ quartz✨chip⟫⟫⟫
+
+spell ✨Weight✨of✨the✨Twin✨Faces✨ ⟪opal✨dust quartz✨chip ⟡ Fetter 六⟫ ⟡ ✨Twin✨Unentangled✨Omens✨ ⟪opal✨dust᛫ quartz✨chip⟫ ≣ 一 ⧶ 三六 ⇰ cast
+  purify ⟮✨Twin✨Unentangled✨Omens✨᛫ Augurglass☿✨unfold✨the✨second✨casting✨᛫ Augurglass☿✨unfold✨the✨carried✨omen✨᛫ ✨gather✨a✨counted✨chorus✨᛫ ✨Weight✨of✨Each✨Face✨᛫ ✨split✨the✨twin✨portent✨⟯
+  channel ⟪✨Unbounded✨Omenweight✨☿✨finite✨weights✨agree✨when✨unveiled✨ ⟪cast boundedness⟫ ⟪cast boundedness⟫⟫☿onward
+  numerology
+
+/- Singleton events expose the same mass as the probability mass function.
+Multiplication of 1/6 by 1/6 is justified by our independent joint construction. -/
+spell ✨Both✨Omens✨Show✨the✨Last✨Face✨ ⟡
+    ✨Twin✨Unentangled✨Omens✨☿✨weigh✨the✨omens✨ ⟪⧼⟪五᛫ 五⟫⧽ ⟡ Host ⟪Fetter 六 ⨯ Fetter 六⟫⟫ ≣ 一 ⧶ 三六 ⇰ cast
+  transmute ⟮Augurglass☿✨weigh✨one✨omen✨ ▢ ▢ ⟪✨one✨face✨may✨be✨weighed✨ ▢⟫⟯
+  missile ✨Weight✨of✨the✨Twin✨Faces✨ 五 五
+
+seal Arcana☿Divination☿Augury
+```
+
+[Lean source](../math/Mathematics/Probability.lean) · [Arcana source](../public/grimoire/augury.spell)
+
+[PMF.ofFintype](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Probability/ProbabilityMassFunction/Constructions.lean#L204) · [PMF.toMeasure_apply_finset](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Probability/ProbabilityMassFunction/Basic.lean#L279) · [PMF.integral_eq_sum](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Probability/ProbabilityMassFunction/Integrals.lean#L47) · [PMF.bind_apply](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Probability/ProbabilityMassFunction/Monad.lean#L113) · [PMF.map_apply](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Probability/ProbabilityMassFunction/Constructions.lean#L54)
+
+## The still center of the mirror
+
+*Sample means, empirical variance, and least squares*
+
+Gather observed readings into a mirror, locate their center, and distinguish the mirror's spread from a guess about unseen worlds.
+
+**Mathematical meaning.** For a nonempty finite dataset, the mean is the sum divided by the number of observations. The empirical variance averages squared deviations from that mean. Centered readings average to zero; adding a constant changes the mean but preserves variance. The mean minimizes average squared distance. For [1,2,3,6], the mean is 3, empirical variance is 7/2, and the corrected n−1 calculation gives 14/3.
+
+**Hypotheses.** Observations are real values indexed by an arbitrary nonempty finite type, so repeated values count separately. All general laws concern a fixed dataset. The variance divides by n and equals the variance of its uniform empirical distribution; the concrete corrected calculation divides by n−1. No i.i.d. sampling, unbiasedness theorem, confidence interval, or inference about an unknown population is asserted.
+
+**Proof idea.** Use Mathlib's Finset.expect for equal-weight finite averages. Its linearity proves shift and centering laws. Expand (x−mean)² and average term by term to get the second-moment identity. Expanding (x−c)² then yields empiricalVariance + (mean−c)², whose nonnegative final term proves least-squares minimization. Evaluate the example with exact real arithmetic.
+
+**A guided reading.** Scrying begins after readings have been observed. A probability model says how observations might arise; descriptive statistics summarize the observations we actually have. These algebraic facts need no assumptions about how the data were collected.
+
+1. **Keep observations, including repetitions** The input x : ι → ℝ is indexed data. Two indices with the same value still contribute twice; averaging the set of distinct values would change the question. sampleMean uses Finset.expect on all indices. The nonempty condition ensures this has the usual interpretation as a sum divided by a positive count.
+
+2. **Separate center from spread** Subtracting the mean makes the average deviation zero. Squaring deviations prevents positive and negative deviations from canceling. empiricalVariance averages those squares with denominator n. Expanding the square gives mean(x²)−mean(x)². This identity is exact, though direct evaluation of that subtraction in floating-point software can lose accuracy.
+
+3. **Why the mean is the least-squares center** For any proposed center c, mean_squared_distance splits its loss into empiricalVariance x plus (sampleMean x−c)². The latter term is nonnegative and vanishes at the mean. This proves an optimization property of the mean using finite sums and algebra. It does not claim the mean minimizes absolute deviations or is resistant to outliers.
+
+4. **Read the denominator before interpreting variance** The data [1,2,3,6] have mean 3 and squared deviations 4,1,0,9, totaling 14. Dividing by four gives the empirical or descriptive variance 7/2. Dividing by three gives the corrected sample variance 14/3. Calling the corrected statistic unbiased for a population variance additionally requires a sampling model with independent identically distributed observations and finite second moment; that probabilistic theorem is outside this folio.
+
+**Try it yourself.** Add ten to every observation without expanding the four values. What are the new mean, empirical variance, and average squared distance from the old mean?
+
+<details><summary>A hint</summary>
+
+The shift laws give new mean 13 and unchanged variance 7/2. The distance identity with center 3 adds the penalty (13−3)², giving 207/2. This is a statement about the transformed fixed dataset.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Ranks☿✨Chorus✨Rites✨☿✨Balance✨Readings✨
+beckon ✨Grand✨Archive✨☿Gestures
+
+sanctum Arcana☿Divination☿Scrying
+
+unveil attuned ✨Chorus✨Rites✨
+
+familiar ⧼ᛁ ⟡ Essence⊛⧽ ⟮Counted ᛁ⟯ ⟮Inhabited ᛁ⟯
+
+/- An index denotes an observation, so equal observed values are still counted twice.
+The nonempty hypothesis rules out the empty dataset convention of Finset.expect. -/
+ineffable ritual ✨Center✨of✨the✨Mirror✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡ Fluxes ⇰ Band☿everywhere✨at✨once☿✨balance✨the✨readings✨ jade✨cube
+
+/- This descriptive variance divides by the number of observations, not by n - 1.
+It is the variance of the empirical distribution that weights every index equally. -/
+ineffable ritual ✨Spread✨in✨the✨Mirror✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡ Fluxes ⇰
+  ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫ ⌃ 二⟫
+
+spell ✨Move✨Every✨Reading✨Move✨the✨Center✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧾ yew⟫ ≣ ✨Center✨of✨the✨Mirror✨ jade✨cube ⧾ yew ⇰ cast
+  purify ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨balance✨joined✨readings✨⟯
+
+spell ✨Centered✨Readings✨Balance✨to✨Stillness✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡
+    ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫ ≣ 〇 ⇰ cast
+  purify ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨balance✨sundered✨readings✨⟯
+
+dismissal ⟮Inhabited ᛁ⟯ within
+spell ✨The✨Mirror's✨Spread✨Cannot✨Sink✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡ 〇 ⋜ ✨Spread✨in✨the✨Mirror✨ jade✨cube ⇰ cast
+  missile Band☿✨balance✨cannot✨sink✨ ⟪conjure opal✨dust ▢ ⇉ ✨a✨doubled✨ascent✨cannot✨sink✨ ⟪jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫⟫
+
+/- Expanding the square turns spread into mean-square minus square-mean.
+Linearity of a finite average lets each algebraic term move outside the sum. -/
+spell ✨Unfold✨the✨Mirror's✨Spread✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡
+    ✨Spread✨in✨the✨Mirror✨ jade✨cube ≣ ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⌃ 二⟫ ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube ⌃ 二 ⇰ cast
+  unseal ✨Spread✨in✨the✨Mirror✨ ✨Center✨of✨the✨Mirror✨
+  polish ⟮✨unfold✨the✨sundered✨double✨ascent✨᛫ Band☿✨balance✨joined✨readings✨᛫ Band☿✨balance✨sundered✨readings✨᛫
+    ↜ Band☿✨scale✨after✨balancing✨᛫ ↜ Band☿✨scale✨before✨balancing✨⟯
+  purify
+  circlet
+
+/- A common shift changes location, but every centered observation stays the same. -/
+spell ✨Move✨the✨Mirror✨Keep✨the✨Spread✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Spread✨in✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧾ yew⟫ ≣ ✨Spread✨in✨the✨Mirror✨ jade✨cube ⇰ cast
+  unseal ✨Spread✨in✨the✨Mirror✨
+  transmute ⟮✨Move✨Every✨Reading✨Move✨the✨Center✨⟯
+  attune 一
+  oath opal✨dust
+  attune 一
+  circlet
+
+/- The average squared distance to any proposed center splits into spread
+and a nonnegative penalty for moving away from the sample mean. -/
+spell ✨The✨Mirror's✨Center✨and✨Its✨Wandering✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ yew⟫ ⌃ 二⟫ ≣
+      ✨Spread✨in✨the✨Mirror✨ jade✨cube ⧾ ⟪✨Center✨of✨the✨Mirror✨ jade✨cube ⧿ yew⟫ ⌃ 二 ⇰ cast
+  transmute ⟮✨Unfold✨the✨Mirror's✨Spread✨⟯
+  unseal ✨Center✨of✨the✨Mirror✨
+  polish ⟮✨unfold✨the✨sundered✨double✨ascent✨᛫ Band☿✨balance✨joined✨readings✨᛫ Band☿✨balance✨sundered✨readings✨᛫
+    ↜ Band☿✨scale✨after✨balancing✨᛫ ↜ Band☿✨scale✨before✨balancing✨⟯
+  purify
+  circlet
+
+spell ✨The✨Center✨Is✨the✨Stillest✨Place✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Spread✨in✨the✨Mirror✨ jade✨cube ⋜ ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ yew⟫ ⌃ 二⟫ ⇰ cast
+  transmute ⟮✨The✨Mirror's✨Center✨and✨Its✨Wandering✨⟯
+  missile ✨adding✨a✨rising✨weight✨cannot✨lower✨ ⟪✨a✨doubled✨ascent✨cannot✨sink✨ ▢⟫
+
+/- The four observations have mean 3 and squared deviations 4, 1, 0, 9.
+The calculation is exact over the reals, not rounded floating-point arithmetic. -/
+ritual ✨Four✨Mirror✨Readings✨ ⟡ Fetter 四 ↝ Fluxes ⇰ !⟮一᛫ 二᛫ 三᛫ 六⟯
+
+spell ✨Center✨the✨Four✨Readings✨ ⟡ ✨Center✨of✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨ ≣ 三 ⇰ cast
+  numerology ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨gather✨then✨share✨the✨readings✨᛫ ✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+
+spell ✨Spread✨of✨the✨Four✨Readings✨ ⟡ ✨Spread✨in✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨ ≣ 七 ⧶ 二 ⇰ cast
+  transmute ⟮✨Spread✨in✨the✨Mirror✨᛫ ✨Center✨the✨Four✨Readings✨⟯
+  numerology ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨gather✨then✨share✨the✨readings✨᛫ ✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+
+/- Dividing the same sum of squared deviations by n - 1 gives the usual
+corrected sample variance. Calling it unbiased needs an i.i.d. sampling model
+and finite second moments; this calculation does not assume or prove that model. -/
+spell ✨Share✨the✨Spread✨One✨Way✨Fewer✨ ⟡
+    ⟪∑ opal✨dust᛫ ⟪✨Four✨Mirror✨Readings✨ opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨⟫ ⌃ 二⟫ ⧶ ⟪四 ⧿ 一⟫ ≣ ⟪一四 ⧶ 三 ⟡ Fluxes⟫ ⇰ cast
+  transmute ⟮✨Center✨the✨Four✨Readings✨⟯
+  numerology ⟮✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+
+seal Arcana☿Divination☿Scrying
+```
+
+[Lean source](../math/Mathematics/Statistics.lean) · [Arcana source](../public/grimoire/scrying.spell)
+
+[Finset.expect](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/BigOperators/Expect.lean#L61) · [Finset.expect_eq_sum_div_card](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/BigOperators/Expect.lean#L371) · [Finset.expect_sub_distrib](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/BigOperators/Expect.lean#L313) · [Finset.expect_nonneg](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Order/BigOperators/Expect.lean#L59)
+
+## Fermat's returning embers
+
+*Congruences, primes, and modular powers*
+
+Read immense powers through the small marks they leave on a clock, and learn which returns demand an indivisible modulus.
+
+**Mathematical meaning.** Congruences preserve polynomial calculations. If a prime divides a square, it divides the base; a composite modulus can fail this rule. Fermat's little theorem gives a^(p−1) ≡ 1 modulo prime p when a is coprime to p. It reduces 2^100 modulo 7 to 2 without expanding the large power. In the field ZMod 7, the inverse of 3 is 5.
+
+**Hypotheses.** Modular congruence compares natural-number remainders. The prime factor rule assumes Nat.Prime p. Fermat additionally assumes coprimality, and the ZMod return law assumes a nonzero residue and a prime modulus. The examples include explicit counterexamples when primality or coprimality is omitted.
+
+**Proof idea.** Transport a congruence through squaring and addition, then compute only a small remainder. Reduce prime divisibility of a square to Mathlib's product rule. Apply Fermat to 2 modulo 7, raise its six-step return to the sixteenth power, and split 100 = 6·16+4. The inverse calculation proves 5·3=1 in ZMod 7 and uses the characterization of inverses.
+
+**A guided reading.** Arithmancy extracts exact structure from whole numbers. Remainders turn huge computations into small ones, while prime hypotheses explain when strong cancellation and return laws are available. Its link to Enchantment is the multiplicative group of nonzero residues in a finite field.
+
+1. **Calculate with remainders first** a ≡ b [MOD n] means a and b have the same remainder modulo n. It is not ordinary equality. Squaring both sides and adding one preserves congruence. Thus 17 can be replaced by 2 before evaluating 17²+1 modulo 5; the smaller expression already has remainder zero.
+
+2. **Ask what primality buys** A prime is a natural number greater than one with no positive divisors except one and itself. Mathlib's prime product rule says p∣ab forces p∣a or p∣b. Taking the two factors equal proves the square rule. The example 4∣2·2 but 4∤2 shows exactly why a general modulus cannot replace a prime.
+
+3. **Reduce the exponent with Fermat** Pierre de Fermat's little theorem says a^(p−1) returns to one modulo a prime p when the base is coprime to p. For p=7 and a=2, six powers form one return. Break 100 into sixteen blocks of six plus four; each block becomes one, leaving 2⁴, whose remainder is 2. The Lean proof invokes the general library theorem and shows the reduction step by step.
+
+4. **Move into the residue field** ZMod p packages residues as a mathematical carrier. A prime modulus gives a field, so every nonzero residue has an inverse and the congruence return becomes equality inside that field. In ZMod 7, 5·3=1 proves 3⁻¹=5. The final counterexample uses base 7 itself: its sixth power is zero modulo 7, illustrating the missing coprimality condition.
+
+**Try it yourself.** Use the same six-step return to predict 2^101 modulo 7. Then explain why repeating this argument with base 7 would fail before the exponent reduction even begins.
+
+<details><summary>A hint</summary>
+
+Multiply the proved remainder for 2^100 by 2, giving remainder 4. For base 7, gcd(7,7)=7, so the coprimality hypothesis needed to obtain a six-step return is unavailable.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿✨Veyrion✨Lore✨☿Bounded☿Foundations
+beckon ✨Grand✨Archive✨☿Gestures
+
+sanctum Arcana☿Divination☿Arithmancy
+
+/- Congruence records equal remainders after division by a modulus.
+Reducing first keeps calculations small while addition and multiplication survive. -/
+spell ✨The✨Clock✨Remembers✨the✨Rite✨ ⧼pinch✨of✨sulfur ash elm ⟡ Tallies⧽ ⟪ward ⟡ ash ≡ elm ⟮CLOCK pinch✨of✨sulfur⟯⟫ ⟡
+    ash ⌃ 二 ⧾ 一 ≡ elm ⌃ 二 ⧾ 一 ⟮CLOCK pinch✨of✨sulfur⟯ ⇰
+  ⟪ward☿ascend 二⟫☿✨append✨the✨same✨chime✨ 一
+
+spell ✨Reduce✨the✨Rite✨upon✨Five✨ ⟡ ⟪一七 ⌃ 二 ⧾ 一⟫ % 五 ≣ 〇 ⇰ cast
+  bind clockward ⟡ 一七 ≡ 二 ⟮CLOCK 五⟯ ⇰ cast divine
+  bind riteward ⇰ ✨The✨Clock✨Remembers✨the✨Rite✨ clockward
+  bind voidmark ⟡ 一七 ⌃ 二 ⧾ 一 ≡ 〇 ⟮CLOCK 五⟯ ⇰ riteward☿chain ⟪cast divine⟫
+  missile voidmark
+
+/- A prime dividing a product must divide a factor. Applying that fact to a square
+exposes why primality is stronger than just being a positive modulus. -/
+spell ✨Indivisible✨Finds✨the✨Root✨ ⧼ruby✨shard ash ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪ward ⟡ ruby✨shard ∣ ash ⌃ 二⟫ ⟡ ruby✨shard ∣ ash ⇰ cast
+  transmute ⟮✨Unfold✨the✨Double✨Ascent✨⟯ upon ward
+  rend primalward☿✨Indivisible✨Catches✨a✨Factor✨☿onward ward whence sunward ⫽ moonward
+  ❖ missile sunward
+  ❖ missile moonward
+
+spell ✨A✨Divisible✨Clock✨Breaks✨the✨Rule✨ ⟡
+    四 ∣ 二 ⊛ 二 ⩓ ⫬四 ∣ 二 ⇰ cast divine
+
+/- Fermat's little theorem connects arithmetic to the finite group of nonzero
+residues modulo a prime. Mathlib proves this general theorem; we apply it below. -/
+spell ✨Fermat's✨Returning✨Embers✨ ⧼ruby✨shard ash ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪unsharedward ⟡ ash☿✨No✨Shared✨Measure✨ ruby✨shard⟫ ⟡
+    ash ⌃ ⟪ruby✨shard ⧿ 一⟫ ≡ 一 ⟮CLOCK ruby✨shard⟯ ⇰
+  Tally☿✨Same✨Clockmark✨☿✨Fermat's✨Little✨Return✨ primalward unsharedward
+
+/- Since 100 = 6 * 16 + 4, Fermat reduces the exponent before the remainder is read.
+The proof never has to expand the huge integer 2^100. -/
+spell ✨A✨Hundred✨Ascents✨upon✨Seven✨ ⟡ 二 ⌃ 一〇〇 % 七 ≣ 二 ⇰ cast
+  bind fermatward ⟡ 二 ⌃ 六 ≡ 一 ⟮CLOCK 七⟯ ⇰
+    ✨Fermat's✨Returning✨Embers✨ ⟪cast divine⟫ ⟪cast divine⟫
+  bind blockward ⟡ ⟪二 ⌃ 六⟫ ⌃ 一六 ≡ 一 ⟮CLOCK 七⟯ ⇰ cast
+    clarify through fermatward☿ascend 一六
+  bind clockward ⟡ 二 ⌃ 一〇〇 ≡ 二 ⌃ 四 ⟮CLOCK 七⟯ ⇰ cast
+    litany
+      二 ⌃ 一〇〇 ≣ ⟪二 ⌃ 六⟫ ⌃ 一六 ⊛ 二 ⌃ 四 ⇰ cast transmute ⟮↜ ✨Nested✨Ascent✨᛫ ↜ ✨Join✨the✨Ascents✨⟯
+      ▢ ≡ 一 ⊛ 二 ⌃ 四 ⟮CLOCK 七⟯ ⇰ blockward☿✨bind✨the✨same✨right✨charm✨ ▢
+      ▢ ≣ 二 ⌃ 四 ⇰ ✨Silence✨Before✨the✨Binding✨ ▢
+  bind twinmark ⟡ 二 ⌃ 一〇〇 ≡ 二 ⟮CLOCK 七⟯ ⇰ clockward☿chain ⟪cast divine⟫
+  missile twinmark
+
+/- Modular arithmetic also has a carrier: ZMod p is a field when p is prime.
+Inside that field the same return law is an ordinary equality. -/
+spell ✨The✨Veyrion's✨Ember✨Returns✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟮Witnessed ruby✨shard☿Indivisible⟯ ⟪ash ⟡ Clockwork ruby✨shard⟫ ⟪ashward ⟡ ash ≢ 〇⟫ ⟡
+    ash ⌃ ⟪ruby✨shard ⧿ 一⟫ ≣ 一 ⇰
+  Clockwork☿✨Fermat's✨Little✨Return✨ ashward
+
+spell ✨Undo✨Three✨upon✨the✨Sevenfold✨Clock✨ ⟡ ⟪三 ⟡ Clockwork 七⟫† ≣ 五 ⇰ cast
+  dub ⟡ Witnessed ⟪Tally☿Indivisible 七⟫ ⇰ ⦉cast divine⦊
+  channel ✨a✨left✨undoer✨is✨the✨undoer✨
+  divine
+
+/- Removing Fermat's coprimality hypothesis is false: a multiple of the prime
+has zero residue, and positive powers keep that zero. -/
+spell ✨Shared✨Measures✨Break✨the✨Return✨ ⟡ ⫬⟪七 ⌃ 六 ≡ 一 ⟮CLOCK 七⟯⟫ ⇰ cast divine
+
+seal Arcana☿Divination☿Arithmancy
+```
+
+[Lean source](../math/Mathematics/NumberTheory.lean) · [Arcana source](../public/grimoire/arithmancy.spell)
+
+[Nat.ModEq.pow](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Nat/ModEq.lean#L157) · [Nat.Prime.dvd_mul](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Nat/Prime/Defs.lean#L422) · [Nat.ModEq.pow_card_sub_one_eq_one](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/FieldTheory/Finite/Basic.lean#L665) · [ZMod.pow_card_sub_one_eq_one](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/FieldTheory/Finite/Basic.lean)
+
+## Embers beyond the last breath
+
+*Real limits, continuity, and a first derivative*
+
+An ember can fade forever without vanishing at any finite instant. Learn to describe its approach precisely, then measure change at a single point.
+
+**Mathematical meaning.** For any real amplitude a and 0 ≤ r < 1, the sequence a·rⁿ tends to zero. Every positive tolerance eventually contains all remaining terms. If a and r are positive, each finite term is still positive. The derivative of x² is 2x, and differentiability gives continuity.
+
+**Hypotheses.** The sequence is indexed by natural numbers and takes real values. Convergence assumes 0 ≤ r < 1; positivity separately assumes a > 0 and r > 0. The square derivative holds at every real x. These are foundations of real analysis, with no differential-equation or PDE claims.
+
+**Proof idea.** Start with the recurrence from the power law. Apply Mathlib’s geometric-limit theorem and multiply its limit by a. Unpack the metric definition of convergence into an epsilon-N statement. Positivity follows from positivity of products and powers. Finally specialize the power rule for derivatives to the identity function squared.
+
+**A guided reading.** Analysis makes “getting closer” precise. Geometric fading is a familiar sequence where an exact recurrence, an infinite limiting claim, and a finite error tolerance can all be compared. The last two spells introduce local change, preparing the passage to operators.
+
+1. **Separate the rule from its limit** geometricDecay a r n is a·rⁿ. At n = 0 it is a; advancing one step multiplies the current value by r. These identities need no restriction on a or r. The restrictions enter only when we ask whether the sequence converges to zero.
+
+2. **Read the filters as a quantified promise** Tendsto u atTop (𝓝 0) says that u eventually lies in every neighborhood of zero. For a real sequence, geometricDecay_eventually_small spells this out: for each ε > 0 there is an index N after which every |u(n)| is below ε. N may depend on ε, a, and r.
+
+3. **Approach without arriving** For a = 1 and r = 1/2, the terms are 1, 1/2, 1/4, and so on. halfDecay_tendsto proves their limit is zero, while geometricDecay_positive proves every finite term remains positive. Convergence does not mean reaching the limiting value.
+
+4. **Pass from global fading to local change** HasDerivAt (fun y => y²) (2*x) x means the function near x has linear approximation x² + (2*x)·(y−x), with a smaller-order error. The proof uses Mathlib’s power rule; continuity then follows from differentiability. It does not say every continuous function is differentiable.
+
+**Try it yourself.** What fails if the fading ratio becomes 1? What happens if it becomes 0, and why does that not contradict the positivity theorem?
+
+<details><summary>A hint</summary>
+
+At r = 1 the sequence is constantly a, so the strict bound r < 1 matters. At r = 0 every term after the first is zero; the positivity theorem required r > 0.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿Necromantic☿Vanishings☿Foundations
+beckon ✨Grand✨Archive✨☿Necromantic☿Whispers☿Whispering☿Kindling
+beckon ✨Grand✨Archive✨☿Gestures☿Counting
+
+unveil Sieve
+unveil attuned Nearness
+
+sanctum Arcana☿Necromancy
+
+/- A fading sequence keeps a fixed proportion of its previous value.
+The real number a is the initial amplitude; r is the retained proportion. -/
+ritual ✨Fading✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ Fluxes ⇰ ash ⊛ amber✨disc ⌃ pinch✨of✨sulfur
+
+spell ✨Light✨the✨First✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟡ ✨Fading✨Ember✨ ash amber✨disc 〇 ≣ ash ⇰ cast
+  purify ⟮✨Fading✨Ember✨⟯
+
+spell ✨Diminish✨the✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 一⟫ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ cast
+  litany ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 一⟫ ≣ ash ⊛ ⟪amber✨disc ⌃ pinch✨of✨sulfur ⊛ amber✨disc⟫ ⇰ cast transmute ⟮✨Fading✨Ember✨᛫ Flare⟯
+    ▢ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ ⟪✨Regather✨the✨Binding✨ ash ⟪amber✨disc ⌃ pinch✨of✨sulfur⟫ amber✨disc⟫☿reflect
+
+/- atTop means arbitrarily late indices; nhds 0 means arbitrarily small
+neighborhoods of zero. Multiplication by a fixed amplitude preserves this limit. -/
+spell ✨Embers✨Approach✨Silence✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽ ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 一⟫ ⟡
+    Pilgrimage ⟪✨Fading✨Ember✨ ash amber✨disc⟫ everafter ⟪aura 〇⟫ ⇰ cast
+  bind emberward ⟡ Pilgrimage ⟪conjure pinch✨of✨sulfur ⟡ Tallies ⇉ amber✨disc ⌃ pinch✨of✨sulfur⟫ everafter ⟪aura 〇⟫ ⇰
+    ✨Fading✨Powers✨Reach✨Silence✨ unshadowed lesserward
+  shapeshift Pilgrimage ⟪conjure pinch✨of✨sulfur ⟡ Tallies ⇉ ash ⊛ amber✨disc ⌃ pinch✨of✨sulfur⟫ everafter ⟪aura 〇⟫
+  clarify solely ⟮✨Silence✨Consumes✨the✨Binding✨⟯ through emberward☿✨bind✨the✨amplitude✨ ash
+
+/- This is the same limit unpacked into the epsilon-N language of analysis.
+Every positive tolerance eventually contains all remaining terms. -/
+spell ✨Every✨Veil✨Encloses✨the✨Ember✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽
+    ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 一⟫ ⟪grain✨of✨salt ⟡ Fluxes⟫ ⟪grainward ⟡ 〇 ⋖ grain✨of✨salt⟫ ⟡
+    ⟒ ᚾ ⟡ Tallies᛫ ⟁ pinch✨of✨sulfur ⋝ ᚾ᛫ ⫽✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur⫽ ⋖ grain✨of✨salt ⇰ cast
+  bind fadingward ⇰ ✨Embers✨Approach✨Silence✨ ash unshadowed lesserward
+  clarify ⟮Flux☿✨Measure✨the✨Gap✨⟯ through ⟪Fathom☿✨Unveil✨the✨Distant✨Promise✨☿onward fadingward⟫ grain✨of✨salt grainward
+
+spell ✨Halved✨Embers✨Approach✨Silence✨ ⟡
+    Pilgrimage ⟪✨Fading✨Ember✨ 一 ⟪一 ⧶ 二⟫⟫ everafter ⟪aura 〇⟫ ⇰ cast
+  channel ✨Embers✨Approach✨Silence✨
+  ❖ numerology
+  ❖ numerology
+
+/- A limit need not be reached at a finite time: positive amplitudes and
+positive ratios give positive terms, even while those terms approach zero. -/
+spell ✨An✨Ember✨Still✨Glows✨ ⧼ash amber✨disc ⟡ Fluxes⧽ ⟪ashward ⟡ 〇 ⋖ ash⟫ ⟪coalward ⟡ 〇 ⋖ amber✨disc⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    〇 ⋖ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⇰ ✨Kindle✨Two✨Flames✨ ashward ⟪✨Repeated✨Kindling✨ coalward pinch✨of✨sulfur⟫
+
+/- Derivatives record local change as a linear approximation. The power rule
+proves the derivative of squaring at every real point, including zero. -/
+spell ✨Hear✨the✨Doubled✨Whisper✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Bears✨the✨Whisper✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 二⟫ ⟪二 ⊛ jade✨cube⟫ jade✨cube ⇰ cast
+  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ jade✨cube⟫☿✨whisper✨through✨powers✨ 二
+
+spell ✨The✨Squared✨Ember✨is✨Unbroken✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Unbroken✨Here✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 二⟫ jade✨cube ⇰
+  ⟪✨Hear✨the✨Doubled✨Whisper✨ jade✨cube⟫☿✨unbroken✨here✨
+
+seal Arcana☿Necromancy
+```
+
+[Lean source](../math/Mathematics/RealAnalysis/Limits.lean) · [Arcana source](../public/grimoire/fading-embers.spell)
+
+[tendsto_pow_atTop_nhds_zero_of_lt_one](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecificLimits/Basic.lean#L188) · [Metric.tendsto_atTop](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Topology/MetricSpace/Pseudo/Defs.lean#L911) · [HasDerivAt.pow](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/Calculus/Deriv/Pow.lean#L109)
+
+## The pact that bounds an echo
+
+*Normed spaces and bounded linear operators*
+
+Give a linear pact a measure of amplification. Its algebraic promises now control how far an echo may stray.
+
+**Mathematical meaning.** A continuous linear map between real normed spaces preserves addition and scalar multiplication. Its operator norm bounds output error: ‖f(x)−f(y)‖ ≤ ‖f‖·‖x−y‖. Composition multiplies the available bounds. Scaling by a has norm |a| on a nontrivial space; scaling by 1/2 halves every distance.
+
+**Hypotheses.** E and F are real normed vector spaces. The maps are bundled continuous linear maps, not arbitrary linear maps. No finite-dimensionality or completeness is assumed. The exact norm of a scaling operator requires E to be nontrivial; on the zero space its norm is zero. This is introductory functional analysis, not a PDE existence theorem.
+
+**Proof idea.** Build scaling as a scalar multiple of the identity operator. Use linearity to rewrite f(x)−f(y) as f(x−y), then apply the operator norm bound. Mathlib’s composition inequality gives the product bound. The identity has norm one on a nontrivial space, and norm_smul computes the norm of its scalar multiple.
+
+**A guided reading.** Enchantment studies maps that preserve algebraic operations. Necromancy adds distance, limits, and continuity. A bounded linear operator is where these meet: its algebraic structure lets one uniform estimate control all input errors.
+
+1. **Give a vector space a norm** A norm measures vector size, with ‖x‖ = 0 only for x = 0, a triangle inequality, and ‖a • x‖ = |a|·‖x‖. NormedSpace ℝ E combines this geometry with a real scalar action. The notation E →L[ℝ] F bundles linearity and continuity.
+
+2. **Build a familiar operator** scalingOperator a multiplies each vector by a. It is constructed from the identity map by scalar multiplication. The addition theorem reads the linearity stored in the resulting operator. This is the same preservation idea as group homomorphisms, now with scalars as well.
+
+3. **Control error everywhere at once** The operator norm is the least nonnegative C for which ‖f(x)‖ ≤ C·‖x‖ for all x. Rewrite an output difference using linearity, then apply that bound to x−y. Composition gives an upper bound ‖g∘f‖ ≤ ‖g‖·‖f‖; equality is not claimed.
+
+4. **Know when a bound is exact** Scalar multiplication has exact norm |a| when the space contains a nonzero vector. In the zero space every operator is zero, so that hypothesis matters. Independently of nontriviality, halfScaling_error proves that scaling by 1/2 halves every input distance. Completeness would be an additional hypothesis for Banach-space theorems.
+
+**Try it yourself.** Compare the general error inequality with halfScaling_error. Why is equality proved for scaling, while a general operator only has an inequality?
+
+<details><summary>A hint</summary>
+
+A scaling changes every vector by the same magnitude factor. A general linear map can shrink some directions more than others, and may even send a nonzero direction to zero.
+
+</details>
+
+```text
+beckon ✨Grand✨Archive✨☿Necromantic☿Measured☿Conduits☿Foundations
+beckon ✨Grand✨Archive✨☿Gestures☿Counting
+
+sanctum Arcana☿Necromancy☿✨Bound✨Echoes✨
+
+familiar ⧼ᛖ ᚠ ⟡ Essence⊛⧽ ⟮✨Measured✨Harmonic✨Chanted✨Veyr✨ ᛖ⟯ ⟮✨Measured✨Bound✨Veyr✨ Fluxes ᛖ⟯
+  ⟮✨Measured✨Harmonic✨Chanted✨Veyr✨ ᚠ⟯ ⟮✨Measured✨Bound✨Veyr✨ Fluxes ᚠ⟯
+
+/- Enchantment contributes linearity; Necromancy contributes a norm and
+continuity. A continuous linear map carries both pieces of structure. -/
+ritual ✨Amplifying✨Conduit✨ ⟪ash ⟡ Fluxes⟫ ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᛖ ⇰ ash • ✨Steady✨Bound✨Pact✨☿selfsame Fluxes ᛖ
+
+spell ✨Send✨an✨Ember✨through✨the✨Conduit✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨cube ⟡ ᛖ⟫ ⟡ ✨Amplifying✨Conduit✨ ash jade✨cube ≣ ash • jade✨cube ⇰ mirror
+
+spell ✨The✨Conduit✨Preserves✨Chanting✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
+    ✨Amplifying✨Conduit✨ ash ⟪jade✨cube ⧾ silver✨bell⟫ ≣ ✨Amplifying✨Conduit✨ ash jade✨cube ⧾ ✨Amplifying✨Conduit✨ ash silver✨bell ⇰
+  ⟪✨Amplifying✨Conduit✨ ash⟫☿✨Carry✨the✨Chant✨ jade✨cube silver✨bell
+
+/- The operator norm is a uniform amplification bound. Linearity turns an
+output difference into the image of an input difference before we apply it. -/
+spell ✨Bind✨the✨Straying✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᚠ⟫ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
+    ‖copper✨wire jade✨cube ⧿ copper✨wire silver✨bell‖ ⋜ ‖copper✨wire‖ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast
+  litany ‖copper✨wire jade✨cube ⧿ copper✨wire silver✨bell‖ ≣ ‖copper✨wire ⟪jade✨cube ⧿ silver✨bell⟫‖ ⇰ sympathy strength ⟪copper✨wire☿✨Carry✨the✨Difference✨ jade✨cube silver✨bell⟫☿reflect
+    ▢ ⋜ ‖copper✨wire‖ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ copper✨wire☿✨The✨Conduit✨Bounds✨its✨Echo✨ ⟪jade✨cube ⧿ silver✨bell⟫
+
+spell ✨Weigh✨the✨Amplified✨Ember✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨cube ⟡ ᛖ⟫ ⟡
+    ‖✨Amplifying✨Conduit✨ ash jade✨cube‖ ≣ ⫽ash⫽ ⊛ ‖jade✨cube‖ ⇰ cast
+  missile ✨Strength✨of✨a✨Binding✨ ash jade✨cube
+
+/- On a nontrivial space the identity has norm one, so the bound for scalar
+scaling is sharp. The nontriviality hypothesis rules out the zero space. -/
+spell ✨The✨Conduits✨True✨Strength✨ ⟮Plural ᛖ⟯ ⟪ash ⟡ Fluxes⟫ ⟡
+    ‖⟪✨Amplifying✨Conduit✨ ash ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᛖ⟫‖ ≣ ⫽ash⫽ ⇰ cast
+  purify ⟮✨Amplifying✨Conduit✨᛫ ✨Strength✨of✨a✨Binding✨᛫ ✨Steady✨Bound✨Pact✨☿✨The✨Mirrors✨Strength✨is✨One✨⟯
+
+/- Compose two bounded maps and their amplification bounds multiply.
+This is the analytic counterpart of composing algebraic homomorphisms. -/
+spell ✨Chained✨Conduits✨Bound✨the✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᚠ⟫ ⟪silk✨cord ⟡ ᚠ ↝Steady⟮Fluxes⟯ ᛖ⟫ ⟡
+    ‖silk✨cord☿threading copper✨wire‖ ⋜ ‖silk✨cord‖ ⊛ ‖copper✨wire‖ ⇰ silk✨cord☿✨Strength✨of✨Chained✨Conduits✨ copper✨wire
+
+spell ✨The✨Halved✨Echo✨Strays✨Half✨as✨Far✨ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
+    ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ silver✨bell‖ ≣
+      ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast
+  litany ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ silver✨bell‖ ≣
+      ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⟪jade✨cube ⧿ silver✨bell⟫‖ ⇰
+        sympathy strength ⟪⟪✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫⟫☿✨Carry✨the✨Difference✨ jade✨cube silver✨bell⟫☿reflect
+    ▢ ≣ ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast transmute ⟮✨Weigh✨the✨Amplified✨Ember✨⟯⁂ numerology
+
+seal Arcana☿Necromancy☿✨Bound✨Echoes✨
+```
+
+[Lean source](../math/Mathematics/FunctionalAnalysis/Operators.lean) · [Arcana source](../public/grimoire/bound-echoes.spell)
+
+[ContinuousLinearMap.le_opNorm](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/Normed/Operator/Basic.lean#L237) · [ContinuousLinearMap.opNorm_comp_le](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/Normed/Operator/Basic.lean#L395) · [ContinuousLinearMap.norm_id](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/Normed/Operator/Basic.lean#L323)

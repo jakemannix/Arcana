@@ -1,6 +1,6 @@
-# Arcana · The Enchantment Grimoire
+# Arcana · The Graduate Grimoire
 
-A browser grimoire of **real group theory**, presented in Arcana. Sixteen Enchantment lessons and two Transmutation lessons share a foundational cantrip folio. The 174 definitions and theorems are compiled against a pinned mathlib release; their translated `.spell` sources are decoded and compiled again.
+A browser grimoire of **real mathematics**, presented in Arcana. Twenty-nine folios span six schools and shared Cantrips: group theory, category theory and homology, complex analysis, affine algebraic geometry, probability, statistics, number theory, and real and functional analysis. Every definition and theorem is compiled against pinned proof libraries; its translated `.spell` source is decoded and compiled again.
 
 [Read the complete grimoire](grimoire/README.md) · [Proof dependency audit](public/grimoire/axioms.txt)
 
@@ -14,11 +14,11 @@ Each folio includes its mathematical meaning, hypotheses, proof idea, prerequisi
 
 The page opens in **Magic** mode. Use the top-level **Magic / Side by side / Mathematics** switch to change the whole reading view. Magic hides mathematical exposition, references, and the Lean pane. Visible characters tumble into a jumble and reform as the new view over 2.1 seconds; reduced-motion preferences make the switch immediate. Both editors retain their text, undo history, and folds.
 
-Every folio includes a guided tutorial: motivation, four steps through its argument, and an experiment with a hideable hint. Open **Read the tutorial** to expand the walkthrough. Shared teaching comments are identical in Lean and Arcana. **Hide notes** conceals them in both editors; individual **read note** buttons reveal selected comments. Magic mode hides all teaching comments, and your note preference returns when you leave it. Hiding notes never removes them from copies, saved bundles, or checked source.
+School headings expand to show their lessons and subschools. Selecting a prerequisite opens its school automatically. Every folio includes a guided tutorial: motivation, four steps through its argument, and an experiment with a hideable hint. Open **Read the tutorial** to expand the walkthrough. Shared teaching comments are identical in Lean and Arcana. **Hide notes** conceals them in both editors; individual **read note** buttons reveal selected comments. Magic mode hides all teaching comments, and your note preference returns when you leave it. Hiding notes never removes them from copies, saved bundles, or checked source.
 
 Original folios show **Lean checked** only while their source exactly matches a verified original and the translation round-trips. Editing changes that status to **draft proof unchecked**. The browser does not run Lean; a successful translation does not prove an edited theorem. Standard Lean axioms (`propext`, `Classical.choice`, and `Quot.sound`) may occur; `sorry`, custom axioms, and native evaluation shortcuts are not used.
 
-Arcana namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Spell namespaces and field access require Mercury. Decimal points and literal text retain their original punctuation.
+Arcana namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Spell namespaces and field access require Mercury. Chained tuple projections use Mercury too: `x.2.1` has two field separators, while the literal `2.1` keeps its decimal point. Decimal points and literal text retain their original punctuation.
 
 Numeric literals use digit-by-digit kanji in Arcana: `0123456789` → `〇一二三四五六七八九`. Thus `24` becomes `二四`, `007` becomes `〇〇七`, and `3.1400` becomes `三.一四〇〇`. This is a positional digit encoding rather than Japanese tens/hundreds notation. It preserves the spelling of every literal, including large integers, decimal places, scientific notation, and base prefixes (`0x10` → `〇x一〇`). The Lean pane keeps ordinary numerals. Type `\0` through `\9` to insert kanji digits; raw Arabic numeric literals in the spell pane prompt you to use these shortcuts. Strings, characters, comments, and quoted identifiers retain their contents.
 
@@ -63,7 +63,7 @@ npm test
 npm run build
 ```
 
-Lean is pinned by `math/lean-toolchain` to **v4.33.1**. Mathlib is locked to **0df444a360eaa60ab8c11dca51a86af692955474** in `math/lake-manifest.json`. The verifier checks the dependency checkout, compiles the original project, translates every folio using one curated lexicon, reloads the serialized key, checks byte-for-byte decoding, and independently compiles the decoded modules with their own import path. It then inspects all 174 declarations with `#print axioms` and allows only the three standard axioms listed above.
+Lean is pinned by `math/lean-toolchain` to **v4.33.1**. Mathlib is locked to **0df444a360eaa60ab8c11dca51a86af692955474** in `math/lake-manifest.json`. The verifier checks the dependency checkout, compiles the original project, translates every folio using one curated lexicon, reloads the serialized key, checks byte-for-byte decoding, and independently compiles the decoded modules with their own import path. It then inspects every exported declaration with `#print axioms` and allows only the three standard axioms listed above.
 
 The **Eightfold Way** proves that every group of order eight is isomorphic to C₈, C₄ × C₂, C₂³, D₄, or Q₈, and proves all ten pairwise non-isomorphism claims. Its finite computations count involutions as 1, 3, 7, 5, and 1; commutativity separates the remaining C₈/Q₈ pair. Exhaustiveness uses [lixiang90 and the P3Group contributors’ classification of groups of order p³](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/Classification.lean), pinned at **822647a71aedace398cb886eb9a6b7993096e53b**. The source files carry Apache 2.0 notices. It builds unmodified with our Lean/mathlib version. The verifier checks both library revisions and clean source trees; the transitive axiom audit covers the imported classification proof. The catalog records the dependency revisions and hashes of the manifest, Lake configuration, and verifier itself.
 
@@ -75,7 +75,8 @@ Only after all checks pass does it generate the browser catalog, `.lean`/`.spell
 - `math/Mathematics/GroupTheory/*.lean`: sixteen substantive group-theory folios.
 - `math/Mathematics/CategoryTheory/ForgetfulAdjoints.lean`: the first Transmutation folio, on the left and right adjoints of forgetful functors.
 - `math/Mathematics/CategoryTheory/Yoneda.lean`: the covariant Yoneda lemma built by hand, checked against mathlib, with two representing objects as examples.
-- `grimoire/chapters.json`: explanations, prerequisite graph, and proof-library source references.
+- `grimoire/schools.json`: school and subschool navigation, with magical and mathematical labels.
+- `grimoire/chapters.json`: explanations, four-step tutorials, prerequisite graph, subschool assignments, and proof-library source references.
 - `grimoire/lexicon.json`: curated Arcana names for mathematical constructs and library lemmas.
 - `scripts/verify-grimoire.ts`: reproducible build, translation, and proof audit.
 - `src/grimoire.generated.json`: verified browser catalog and evidence hashes; do not edit manually.
@@ -87,4 +88,14 @@ Only after all checks pass does it generate the browser catalog, `.lean`/`.spell
 
 Arcana is a reversible presentation language, not a separate proof kernel. Its tokenizer supports these verified sources, not all possible Lean syntax extensions.
 
-Further schools remain future work.
+## The new paths
+
+- **Transmutation · Chains & echoes:** build an actual Mathlib chain complex, prove boundaries are cycles, and show chain maps preserve both. Compute a rational example’s homology as ℚ, connect that quotient to Mathlib’s H₁, and check induced-map identity and composition laws.
+- **Illusion:** compute with i, conjugation, and modulus, then prove complex derivatives for z² and exp(z²). The scalar field is ℂ, so these are complex derivatives.
+- **Phantasms:** pass between polynomial equations and affine complex zero loci. Prove their order-reversing correspondence, identify a point’s vanishing ideal as an evaluation kernel, and compute the two-axis locus xy = 0. This connects Illusion’s complex coordinates with Transmutation’s structural correspondences.
+- **Divination · Augury:** a fair-die probability mass function, event probabilities, integral expectation, and an independent pair of dice.
+- **Divination · Scrying:** mean, empirical variance, translation laws, second moments, and least-squares minimization, with exact data calculations. The tutorial distinguishes descriptive variance from corrected sample variance and statistical inference.
+- **Divination · Arithmancy:** congruences, prime divisibility, Fermat’s little theorem, efficient modular powers, and field inverses, with counterexamples showing why hypotheses matter.
+- **Necromancy:** geometric convergence, its epsilon-N meaning, positivity without reaching the limit, derivatives, and continuity. **Bound echoes** joins Enchantment’s linear algebra to norms and continuous linear maps, deriving amplification and error bounds.
+
+These are introductory foundations. The chain complex is an algebraic example, not a construction of singular homology from spaces; Phantasms covers classical affine sets, not schemes. Necromancy stays with real analysis and elementary operator estimates, without PDE claims.

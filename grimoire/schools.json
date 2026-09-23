@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Enchantment",
+    "subject": "Algebra",
+    "sigil": "⟐",
+    "description": "Groups, pacts, and algebraic structure.",
+    "subschools": [
+      {
+        "id": "group-theory",
+        "title": "The Veyr houses",
+        "subject": "Group theory"
+      }
+    ]
+  },
+  {
+    "name": "Transmutation",
+    "subject": "Categories & topology",
+    "sigil": "⚗",
+    "description": "Maps between structures, and the information that survives a boundary.",
+    "subschools": [
+      {
+        "id": "category-theory",
+        "title": "The changing arts",
+        "subject": "Category theory"
+      },
+      {
+        "id": "algebraic-topology",
+        "title": "Chains & echoes",
+        "subject": "Algebraic topology · chain complexes and homology"
+      }
+    ]
+  },
+  {
+    "name": "Illusion",
+    "subject": "Complex analysis",
+    "sigil": "☽",
+    "description": "Complex numbers, reflection, and holomorphic change.",
+    "subschools": [
+      {
+        "id": "complex-analysis",
+        "title": "The imaginary arts",
+        "subject": "Complex analysis"
+      }
+    ]
+  },
+  {
+    "name": "Phantasms",
+    "subject": "Algebraic geometry",
+    "sigil": "◇",
+    "description": "Illusion meets Transmutation: equations become shapes, and shapes constrain equations.",
+    "subschools": [
+      {
+        "id": "algebraic-geometry",
+        "title": "Forms from sigils",
+        "subject": "Affine algebraic geometry"
+      }
+    ]
+  },
+  {
+    "name": "Divination",
+    "subject": "Chance, data & integers",
+    "sigil": "✶",
+    "description": "Distinguish chance models, observed data, and exact arithmetic.",
+    "subschools": [
+      {
+        "id": "augury",
+        "title": "Augury",
+        "subject": "Probability"
+      },
+      {
+        "id": "scrying",
+        "title": "Scrying",
+        "subject": "Statistics"
+      },
+      {
+        "id": "arithmancy",
+        "title": "Arithmancy",
+        "subject": "Number theory"
+      }
+    ]
+  },
+  {
+    "name": "Necromancy",
+    "subject": "Analysis",
+    "sigil": "☥",
+    "description": "Limits and local change, then linear algebra joined to analytic bounds.",
+    "subschools": [
+      {
+        "id": "real-analysis",
+        "title": "The fading arts",
+        "subject": "Real analysis"
+      },
+      {
+        "id": "functional-analysis",
+        "title": "Bound echoes",
+        "subject": "Functional analysis · with Enchantment"
+      }
+    ]
+  }
+]

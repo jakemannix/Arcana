@@ -203,6 +203,22 @@ test('kanji digits encode whole numeric literals without changing their spelling
   }
 });
 
+test('chained numeric projections use Mercury while decimal literals keep their dot', () => {
+  const key = new Key({ global: { x: 'jade✨cube', val: 'core' }, scoped: {} });
+  const source = 'x.val.2.2 x.1.2 (x).2.1 2.2 3.1400 1e-20';
+  const spell = 'jade✨cube☿core☿二☿二 jade✨cube☿一☿二 ⟪jade✨cube⟫☿二☿一 二.二 三.一四〇〇 一e-二〇';
+  assert.equal(toSpell(source, key), spell);
+  assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
+  assert.deepEqual(tokenize('x.2.1').map(token => token.text), ['x', '.', '2', '.', '1']);
+  assert.throws(() => fromSpell('jade✨cube☿二.二', key), /Use ☿/);
+  for (const source of ['☿2.1', '☿2e-3', '☿0x12', '⟄☿2.1', '☿☿2.1', '☿.2.1', '..3.1400', '...1e-20']) {
+    const spell = toSpell(source, key);
+    assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
+  }
+  assert.ok(toSpell('..3.1400 ...1e-20', key).includes('三.一四〇〇'));
+  assert.ok(toSpell('..3.1400 ...1e-20', key).includes('一e-二〇'));
+});
+
 test('kanji numerals stay distinct from identifiers, projections, and literal text', () => {
   const key = new Key(lexicon);
   const source = '#check (x, y).1\n#check x.2\n#check x.1.2\n#check 1..3\n' +

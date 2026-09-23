@@ -1,14 +1,12 @@
 ---
 type: feature
-last_updated: 2026-09-23
+last_updated: 2026-09-24
 tags: [doctrack/type/feature, doctrack/status/active, doctrack/audience/claude]
 ---
 # Graduate grimoire
 
-## User-directed intermediate deliverable
-The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: sixteen Enchantment folios, two Transmutation folios, and Cantrips, totaling 174 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
-
-The longer objective remains a graduate grimoire across all eight schools, including group theory, real analysis, combinatorics, topology, linear analysis, complex analysis, algebraic geometry, manifolds, and “PDSs” (clarification still pending, irrelevant to this first school). This broader objective is not complete.
+## User-directed scope
+The initial Enchantment chapter has grown into six schools at the user's request. Its sixteen group-theory folios, two original category-theory folios, and shared Cantrips remain intact. New foundational material covers chain complexes and homology; complex arithmetic and differentiation; affine algebraic sets; probability, descriptive statistics, and number theory; real limits and derivatives; and bounded linear operators. See [[schools]] for the curriculum and precise limitations. PDE theory is outside the current scope.
 
 ## Proof style
 The user asked for explicit, teaching-style proofs. Prefer named `have` steps and `calc` chains, with `congrArg` for each rewrite inside a product, over one-line library calls or `simp`. Reuse earlier folios' spells (for example, Kernels uses Pacts' preservation laws). Give every new identifier a curated name in `grimoire/lexicon.json`, so no automatic filler words appear. The user now requests shared teaching comments. Preserve identical comments in both panes; comment visibility is a display effect, while saved and compiled sources keep them. Keep mathematical code unchanged during tutorial-only work.

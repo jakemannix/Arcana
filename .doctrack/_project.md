@@ -2,14 +2,14 @@
 project: arcana
 type: index
 doctrack_version: "3.0.0"
-last_updated: 2026-09-23
+last_updated: 2026-09-24
 tags: [doctrack/type/index, doctrack/status/active, doctrack/audience/claude]
 ---
 # Arcana browser editor
 
 TypeScript/Vite browser project at the root of `jakemannix/Arcana`, with the GitHub repository tracked by the `origin` remote. See [[features/editor]], [[components/translator]], and [[decisions/browser-translation]]. Run and test commands are in `README.md`.
 
-`AGENTS.md` is the entry point for future agents: it records the product intent, one-school-first scope, shared cantrips, mathematical guarantees, and the user's interaction and visual preferences.
+`AGENTS.md` is the entry point for future agents: it records the product intent, school progression, shared cantrips, mathematical guarantees, and the user's interaction and visual preferences.
 
 | Source file | Responsibility |
 |---|---|
@@ -21,7 +21,7 @@ TypeScript/Vite browser project at the root of `jakemannix/Arcana`, with the Git
 | index.html | Entry point and metadata |
 
 ## Graduate grimoire (2026-09-23)
-The active product is now Enchantment/group theory, not the initial seven toy examples. See [[features/graduate-grimoire]] for every formal source module and verification flow. The broader multi-school goal remains pending user review of this intermediate chapter.
+The user has expanded the book beyond Enchantment into Transmutation/algebraic topology, Illusion, Phantasms, Divination, and Necromancy. See [[features/graduate-grimoire]] for source modules and verification guarantees, and [[features/schools]] for the expanded curriculum and navigation.
 
 | Source file | Responsibility |
 |---|---|
@@ -53,3 +53,5 @@ The finite-group expansion adds six Enchantment folios, including the fully prov
 
 
 The tutorial edition adds guided readings and identical hideable source comments across all folios. [[features/editor]] covers the three animated reading views and source-preserving notes; [[components/translator]] covers fixes discovered by the two independent adversarial reviews. Core mathematics remains unchanged.
+
+The school registry in `grimoire/schools.json` and folio `subschool` fields organize the expanded curriculum. The catalog stores both the registry and its evidence hash. See [[features/schools]].

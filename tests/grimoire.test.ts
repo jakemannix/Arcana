@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { EditorState } from '@codemirror/state';
 import { proofFoldRange } from '../src/magic';
 import { Key, toSpell, fromSpell, tokenize } from '../src/translator';
-import { folios, provenance, grimoireKey, isCheckedSource } from '../src/catalog';
+import { folios, schools, provenance, grimoireKey, isCheckedSource } from '../src/catalog';
 
 const file = (path: string) => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
 const hash = (source: string) => createHash('sha256').update(source).digest('hex');
@@ -22,16 +22,16 @@ test('verification evidence covers current source, vocabulary, and metadata', ()
   assert.equal(provenance.translatorHash, hash(file('src/translator.ts')));
   assert.equal(provenance.tablesHash, hash(file('src/tables.json')));
   assert.equal(provenance.metadataHash, hash(file('grimoire/chapters.json')));
+  assert.equal(provenance.schoolsHash, hash(file('grimoire/schools.json')));
   assert.equal(provenance.lexiconHash, hash(file('grimoire/lexicon.json')));
-  assert.equal(provenance.verification.declarationCount, 174);
-  assert.deepEqual(new Set(folios.map(f => f.school)), new Set(['Cantrips', 'Enchantment', 'Transmutation']));
-  assert.equal(folios.length, 19);
+  assert.equal(provenance.verification.declarationCount, folios.reduce((count, folio) => count + folio.declarations.length, 0));
+  assert.deepEqual(new Set(folios.map(f => f.school)), new Set(['Cantrips', 'Enchantment', 'Transmutation', 'Illusion', 'Phantasms', 'Divination', 'Necromancy']));
 });
 
 test('checked folios use mathematical Lean names and expose reversible material components', () => {
   assert.deepEqual(grimoireKey.auto, []);
   for (const folio of folios) {
-    assert.match(folio.lean, /^namespace Mathematics\.(?:Functions|GroupTheory|CategoryTheory)$/m);
+    assert.match(folio.lean, /^namespace Mathematics\.[A-Za-z]+$/m);
     assert.doesNotMatch(folio.lean, /Arcane\.|same_place_same_veil|pact_preserves|unveiledImage/);
     assert.ok(folio.declarations.every(name => name.startsWith('Mathematics.')));
     const bundle = JSON.parse(file('public/grimoire/' + folio.id + '.json'));
@@ -50,6 +50,22 @@ test('checked folios use mathematical Lean names and expose reversible material 
   assert.ok(!subgroups.glossary.some(term => term.lean === 'GroupTheory'));
   const key = new Key(JSON.parse(file('public/grimoire/arcana.key.json')));
   assert.equal(fromSpell('jade✨cube silver✨bell', key), 'x y');
+});
+
+test('every lesson belongs to a reachable subschool and prerequisites have no cycles', () => {
+  const groups = schools.flatMap(school => school.subschools.map(subschool => ({ school: school.name, ...subschool })));
+  assert.equal(new Set(groups.map(group => group.id)).size, groups.length);
+  for (const group of groups) assert.ok(folios.some(folio => folio.school === group.school && folio.subschool === group.id), group.id);
+  const visit = (id: string, ancestors: string[] = []) => {
+    assert.ok(!ancestors.includes(id), `Prerequisite cycle: ${[...ancestors, id].join(' → ')}`);
+    const folio = folios.find(folio => folio.id === id);
+    assert.ok(folio, `Missing prerequisite: ${id}`);
+    for (const prerequisite of folio.prerequisites) visit(prerequisite, [...ancestors, id]);
+  };
+  for (const folio of folios) {
+    if (folio.school !== 'Cantrips') assert.equal(groups.filter(group => group.school === folio.school && group.id === folio.subschool).length, 1, folio.id);
+    visit(folio.id);
+  }
 });
 
 for (const folio of folios) test(`${folio.id}: exact translation, current checked source, valid prerequisites, and foldable bodies`, () => {

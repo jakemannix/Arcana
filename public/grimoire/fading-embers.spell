@@ -1,0 +1,58 @@
+beckon ✨Grand✨Archive✨☿Necromantic☿Vanishings☿Foundations
+beckon ✨Grand✨Archive✨☿Necromantic☿Whispers☿Whispering☿Kindling
+beckon ✨Grand✨Archive✨☿Gestures☿Counting
+
+unveil Sieve
+unveil attuned Nearness
+
+sanctum Arcana☿Necromancy
+
+/- A fading sequence keeps a fixed proportion of its previous value.
+The real number a is the initial amplitude; r is the retained proportion. -/
+ritual ✨Fading✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ Fluxes ⇰ ash ⊛ amber✨disc ⌃ pinch✨of✨sulfur
+
+spell ✨Light✨the✨First✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟡ ✨Fading✨Ember✨ ash amber✨disc 〇 ≣ ash ⇰ cast
+  purify ⟮✨Fading✨Ember✨⟯
+
+spell ✨Diminish✨the✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 一⟫ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ cast
+  litany ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 一⟫ ≣ ash ⊛ ⟪amber✨disc ⌃ pinch✨of✨sulfur ⊛ amber✨disc⟫ ⇰ cast transmute ⟮✨Fading✨Ember✨᛫ Flare⟯
+    ▢ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ ⟪✨Regather✨the✨Binding✨ ash ⟪amber✨disc ⌃ pinch✨of✨sulfur⟫ amber✨disc⟫☿reflect
+
+/- atTop means arbitrarily late indices; nhds 0 means arbitrarily small
+neighborhoods of zero. Multiplication by a fixed amplitude preserves this limit. -/
+spell ✨Embers✨Approach✨Silence✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽ ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 一⟫ ⟡
+    Pilgrimage ⟪✨Fading✨Ember✨ ash amber✨disc⟫ everafter ⟪aura 〇⟫ ⇰ cast
+  bind emberward ⟡ Pilgrimage ⟪conjure pinch✨of✨sulfur ⟡ Tallies ⇉ amber✨disc ⌃ pinch✨of✨sulfur⟫ everafter ⟪aura 〇⟫ ⇰
+    ✨Fading✨Powers✨Reach✨Silence✨ unshadowed lesserward
+  shapeshift Pilgrimage ⟪conjure pinch✨of✨sulfur ⟡ Tallies ⇉ ash ⊛ amber✨disc ⌃ pinch✨of✨sulfur⟫ everafter ⟪aura 〇⟫
+  clarify solely ⟮✨Silence✨Consumes✨the✨Binding✨⟯ through emberward☿✨bind✨the✨amplitude✨ ash
+
+/- This is the same limit unpacked into the epsilon-N language of analysis.
+Every positive tolerance eventually contains all remaining terms. -/
+spell ✨Every✨Veil✨Encloses✨the✨Ember✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽
+    ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 一⟫ ⟪grain✨of✨salt ⟡ Fluxes⟫ ⟪grainward ⟡ 〇 ⋖ grain✨of✨salt⟫ ⟡
+    ⟒ ᚾ ⟡ Tallies᛫ ⟁ pinch✨of✨sulfur ⋝ ᚾ᛫ ⫽✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur⫽ ⋖ grain✨of✨salt ⇰ cast
+  bind fadingward ⇰ ✨Embers✨Approach✨Silence✨ ash unshadowed lesserward
+  clarify ⟮Flux☿✨Measure✨the✨Gap✨⟯ through ⟪Fathom☿✨Unveil✨the✨Distant✨Promise✨☿onward fadingward⟫ grain✨of✨salt grainward
+
+spell ✨Halved✨Embers✨Approach✨Silence✨ ⟡
+    Pilgrimage ⟪✨Fading✨Ember✨ 一 ⟪一 ⧶ 二⟫⟫ everafter ⟪aura 〇⟫ ⇰ cast
+  channel ✨Embers✨Approach✨Silence✨
+  ❖ numerology
+  ❖ numerology
+
+/- A limit need not be reached at a finite time: positive amplitudes and
+positive ratios give positive terms, even while those terms approach zero. -/
+spell ✨An✨Ember✨Still✨Glows✨ ⧼ash amber✨disc ⟡ Fluxes⧽ ⟪ashward ⟡ 〇 ⋖ ash⟫ ⟪coalward ⟡ 〇 ⋖ amber✨disc⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
+    〇 ⋖ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⇰ ✨Kindle✨Two✨Flames✨ ashward ⟪✨Repeated✨Kindling✨ coalward pinch✨of✨sulfur⟫
+
+/- Derivatives record local change as a linear approximation. The power rule
+proves the derivative of squaring at every real point, including zero. -/
+spell ✨Hear✨the✨Doubled✨Whisper✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Bears✨the✨Whisper✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 二⟫ ⟪二 ⊛ jade✨cube⟫ jade✨cube ⇰ cast
+  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ jade✨cube⟫☿✨whisper✨through✨powers✨ 二
+
+spell ✨The✨Squared✨Ember✨is✨Unbroken✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Unbroken✨Here✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 二⟫ jade✨cube ⇰
+  ⟪✨Hear✨the✨Doubled✨Whisper✨ jade✨cube⟫☿✨unbroken✨here✨
+
+seal Arcana☿Necromancy

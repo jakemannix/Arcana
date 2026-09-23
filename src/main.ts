@@ -4,8 +4,8 @@ import { EditorState, Prec } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
-import { Key, WORDS, RUNE_PATTERN, LEAN_NUMBER, SPELL_NUMBER, fromSpell, toSpell } from './translator';
-import { folios, grimoireKey, isCheckedSource, provenance, type Folio } from './catalog';
+import { Key, WORDS, RUNE_PATTERN, numericPattern, fromSpell, toSpell } from './translator';
+import { folios, schools, grimoireKey, isCheckedSource, provenance, type Folio } from './catalog';
 import { foldAll, unfoldAll } from '@codemirror/language';
 import { spellFolding, sparkleAt, shimmer } from './magic';
 import { expand, LEAN_ABBREVIATIONS, SPELL_ABBREVIATIONS } from './glyphs';
@@ -30,7 +30,7 @@ const app = document.querySelector<HTMLDivElement>('#app')!;
 app.dataset.presentation = presentationMode;
 app.innerHTML = `
   <header class="masthead">
-    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">⟐</span><span><b>ARCANA</b></span></a>
+    <h1 class="brand-title"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">⟐</span><span><b>ARCANA</b></span></a></h1>
     <span class="edition">THE GRADUATE GRIMOIRE <span>VOL. I</span></span>
     <div id="presentation-controls" class="presentation-controls" role="group" aria-label="Reading view"><button type="button" data-mode="magic" aria-pressed="true">✧ Magic</button><button type="button" data-mode="parallel" aria-pressed="false">Side by side</button><button type="button" data-mode="math" aria-pressed="false">Mathematics</button></div>
     <button id="help" class="quiet-button" aria-expanded="false" aria-controls="help-panel">How to read this <span aria-hidden="true">?</span></button>
@@ -39,12 +39,14 @@ app.innerHTML = `
     <aside class="contents" aria-label="Grimoire contents">
       <p class="eyebrow">THE COMMON ARTS</p>
       <nav id="cantrip-nav" aria-label="Shared cantrips"></nav>
-      <div class="school-heading"><span aria-hidden="true">⟐</span><div><p class="eyebrow">SCHOOL OF</p><h1><span data-magical>Enchantment</span><span data-only="math">Group theory</span></h1></div></div>
-      <p class="school-description" data-mathematical>Groups, pacts, and the structure that survives a transformation.</p>
-      <nav id="chapter-nav" aria-label="Enchantment lessons"></nav>
-      <div class="school-heading"><span aria-hidden="true">⚗</span><div><p class="eyebrow">SCHOOL OF</p><h2><span data-magical>Transmutation</span><span data-only="math">Category theory</span></h2></div></div>
-      <p class="school-description" data-mathematical>Functors and adjunctions: how one kind of structure becomes another.</p>
-      <nav id="transmutation-nav" aria-label="Transmutation lessons"></nav>
+      ${schools.map(school => `
+      <details class="school" data-school="${school.name}" ${school.name === initialFolio.school ? 'open' : ''}>
+        <summary class="school-heading"><span aria-hidden="true">${school.sigil}</span><div><p class="eyebrow">SCHOOL OF</p><h2><span data-magical>${school.name}</span><span data-only="math">${school.subject}</span></h2></div></summary>
+        <p class="school-description" data-mathematical>${school.description}</p>
+        ${school.subschools.map(subschool => `
+          ${school.subschools.length > 1 ? `<h3 class="subschool-heading"><span data-magical>${subschool.title}</span><span data-only="math">${subschool.subject}</span></h3>` : ''}
+          <nav id="${subschool.id}-nav" aria-label="${subschool.title} lessons"></nav>`).join('')}
+      </details>`).join('')}
       <button id="personal-draft" class="quiet-button personal-draft" hidden>Return to personal draft</button>
       <div class="contents-foot" data-mathematical><strong>Real mathematics. Written in Arcana.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
     </aside>
@@ -79,16 +81,18 @@ app.innerHTML = `
       <section class="reading-notes" data-mathematical data-transmute><div data-only="parallel"><p class="eyebrow">WORDS OF POWER</p><p class="section-hint">The vocabulary used in this folio.</p><div id="concepts" class="concept-pairs"></div><details class="full-glossary"><summary>Full translation key for this folio</summary><div id="glossary"></div></details></div><div><p class="eyebrow">FROM THE GRAND ARCHIVE</p><p class="section-hint" id="version"></p><ul id="references"></ul><div class="source-downloads" id="source-downloads"></div></div></section>
     </div>
   </main>
-  <footer class="page-footer"><span>PRECISE WORDS. CURIOUS MAGIC.</span><span>Two schools, a shared foundation, room to grow.</span></footer>
+  <footer class="page-footer"><span>PRECISE WORDS. CURIOUS MAGIC.</span><span>Six schools. Many paths through the grimoire.</span></footer>
   <div id="toast" class="toast" role="status" hidden></div>
 `;
 
 const $ = <T extends HTMLElement = HTMLElement>(selector: string) => document.querySelector<T>(selector)!;
 
 const runePattern = new RegExp(RUNE_PATTERN, 'u');
-const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
-  startState: () => ({ depth: 0 }),
+const language = (side: Side) => StreamLanguage.define<{ depth: number; projection: boolean }>({
+  startState: () => ({ depth: 0, projection: false }),
   token(stream, state) {
+    const projection = !stream.sol() && state.projection;
+    state.projection = false;
     if (state.depth || stream.match('/-')) {
       if (!state.depth) state.depth = 1;
       while (!stream.eol()) {
@@ -101,7 +105,9 @@ const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
     if (stream.match('--')) { stream.skipToEnd(); return 'comment'; }
     if (stream.match(/"(?:[^"\\]|\\.)*"?/)) return 'string';
     if (stream.match(/«[^»]*»/)) return 'variableName';
-    if (stream.match(side === 'spell' ? SPELL_NUMBER : LEAN_NUMBER)) return 'number';
+    if (side === 'spell' && stream.match('⟄')) { stream.next(); return 'operator'; }
+    if (stream.match(numericPattern(side === 'spell', projection))) return 'number';
+    if (stream.match('...') || stream.match('..')) return 'operator';
     if (side === 'spell' && stream.match(runePattern)) return 'variableName';
     if (stream.match(/(?:✨(?:[\p{L}_][\p{L}\p{N}\p{M}_'!?]*✨)+|[\p{L}_][\p{L}\p{N}\p{M}_'!?]*(?:✨[\p{L}_][\p{L}\p{N}\p{M}_'!?]*)+)/u)) return 'atom';
     const word = stream.match(/[\p{L}_][\p{L}\p{N}\p{M}_'!?]*/u);
@@ -110,7 +116,8 @@ const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
       if (side === 'lean' ? Object.hasOwn(WORDS, text) : Object.values(WORDS).includes(text)) return 'keyword';
       return 'variableName';
     }
-    stream.next(); return 'operator';
+    state.projection = stream.next() === (side === 'spell' ? '☿' : '.');
+    return 'operator';
   },
 });
 const highlight = HighlightStyle.define([
@@ -223,7 +230,11 @@ function renderFolio() {
   } else {
     $('.mathematical-reading').hidden = false; $('.reading-notes').hidden = false; $<HTMLButtonElement>('#restore').disabled = false;
     const entry = selected;
-    $('#folio-level').textContent = entry.school + ' / ' + entry.level;
+    const school = schools.find(school => school.name === entry.school);
+    const subschool = school?.subschools.find(subschool => subschool.id === entry.subschool);
+    $('#folio-level').textContent = [entry.school, subschool?.subject, entry.level].filter(Boolean).join(' / ');
+    const contents = document.querySelector<HTMLDetailsElement>(`[data-school="${entry.school}"]`);
+    if (contents) contents.open = true;
     $('#folio-title').textContent = entry.title; $('#folio-subtitle').textContent = entry.subtitle;
     $('#folio-summary').textContent = entry.summary; $('#meaning').textContent = entry.meaning;
     $('#hypotheses').textContent = entry.hypotheses; $('#proof-idea').textContent = entry.proofIdea;
@@ -275,7 +286,7 @@ for (const folio of folios) {
   const mathematicalTitle = document.createElement('span'); mathematicalTitle.textContent = folio.subtitle; mathematicalTitle.dataset.only = 'math';
   button.append(mathematicalTitle);
   button.prepend(number, title); button.addEventListener('click', () => selectFolio(folio.id));
-  $(({ Cantrips: '#cantrip-nav', Transmutation: '#transmutation-nav' } as Record<string, string>)[folio.school] ?? '#chapter-nav').append(button);
+  $(folio.school === 'Cantrips' ? '#cantrip-nav' : `#${folio.subschool}-nav`).append(button);
 }
 $('#personal-draft').addEventListener('click', () => {
   if (!personalDraft || !selected) return;

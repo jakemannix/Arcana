@@ -1,18 +1,18 @@
-beckon GrandArchive.CovenLore.Shuffling.Fetter
-beckon GrandArchive.CovenLore.Cycles
+beckon GrandArchive☿CovenLore☿Shuffling☿Fetter
+beckon GrandArchive☿CovenLore☿Cycles
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
-byname ThreeSigils ⇰ Portal.Shuffling ⟪Fetter 3⟫
+byname ThreeSigils ⇰ Portal☿Shuffling ⟪Fetter 3⟫
 
-ritual FirstExchange ⟡ ThreeSigils ⇰ Portal.exchangeSigils ⊘ ☉
+ritual FirstExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ⊘ ☉
 
-ritual SecondExchange ⟡ ThreeSigils ⇰ Portal.exchangeSigils ☉ 2
+ritual SecondExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ☉ 2
 
-spell SixDances ⟡ Counted.census ThreeSigils ≣ 6 ⇰ cast divine
+spell SixDances ⟡ Counted☿census ThreeSigils ≣ 6 ⇰ cast divine
 
 spell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰ cast divine
 
 spell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast divine
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment

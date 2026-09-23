@@ -5,16 +5,17 @@ export interface KeyData { global: NameMap; scoped: Record<string, NameMap>; aut
 type Kind = 'ws' | 'comment' | 'string' | 'char' | 'num' | 'ident' | 'sym' | 'other' | 'esc';
 export interface Token { kind: Kind; text: string }
 const ESC = '⟄', NBSP = '\u00a0';
+export const NAMESPACE_SEPARATOR = '☿';
 const dictionary = (table: NameMap): NameMap => Object.assign(Object.create(null), table);
 export const WORDS: NameMap = dictionary(tables.words);
-const SYMS = dictionary(tables.syms), NUMS = dictionary(tables.nums);
+const SYMS = dictionary({ ...tables.syms, '.': NAMESPACE_SEPARATOR }), NUMS = dictionary(tables.nums);
 const inverse = (table: NameMap): NameMap => dictionary(Object.fromEntries(Object.entries(table).map(([k, v]) => [v, k])));
 const INV_WORDS = inverse(WORDS), INV_SYMS = inverse(SYMS), INV_NUMS = dictionary({ ...inverse(NUMS), '▢': '_' });
 const declarations = new Set(tables.declWords);
 const component = String.raw`(?:«[^»]*»|[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)`;
 const spellComponent = component.replace("_'!?", "_\u00a0'!?");
 const ident = new RegExp(`^${component}(?:\\.${component})*`, 'u');
-const spellIdent = new RegExp(`^${spellComponent}(?:\\.${spellComponent})*`, 'u');
+const spellIdent = new RegExp(`^${spellComponent}(?:[.${NAMESPACE_SEPARATOR}]${spellComponent})*`, 'u');
 const simple = /^[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*(?: [\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)*$/u;
 const legalName = /^[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_\u00a0'!?]*$/u;
 const glue = /^[\p{L}\p{Nl}\p{N}\p{M}_'!?\u00a0]/u;
@@ -63,7 +64,9 @@ export function tokenize(source: string, spell = false): Token[] {
   return tokens;
 }
 
-function components(name: string): string[] { return name.match(/«[^»]*»|[^.]+/gu) ?? []; }
+function components(name: string, spell = false): string[] {
+  return name.match(spell ? /«[^»]*»|[^.☿]+/gu : /«[^»]*»|[^.]+/gu) ?? [];
+}
 
 export class Key {
   private global: NameMap;
@@ -131,7 +134,7 @@ export function toSpell(source: string, key: Key): string {
       const parts = components(t);
       if (declarations.has(parts[0]) && parts.length === 1) { pending = true; scope = `#${++anon}`; }
       else if (pending) { pending = false; if (!Object.hasOwn(WORDS, parts[0])) scope = parts[0]; }
-      return parts.map(c => key.word(c, scope, !glue.test(tokens[i + 1]?.text ?? ''))).join('.');
+      return parts.map(c => key.word(c, scope, !glue.test(tokens[i + 1]?.text ?? ''))).join(NAMESPACE_SEPARATOR);
     }
     if (token.kind === 'sym') return SYMS[t] ?? t;
     if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || t === ESC || t === NBSP)) return ESC + t;
@@ -144,7 +147,7 @@ export function fromSpell(source: string, key: Key): string {
   return tokenize(source, true).map(({ kind, text: t }) => {
     if (kind === 'esc') return t.slice(1);
     if (kind === 'ident') {
-      const parts = components(t);
+      const parts = components(t, true);
       if (declarations.has(INV_WORDS[parts[0]]) && parts.length === 1) { pending = true; scope = `#${++anon}`; return INV_WORDS[t]; }
       let decoded = parts.map(c => key.lean(c, scope));
       if (pending) { pending = false; if (!Object.hasOwn(WORDS, decoded[0])) { scope = decoded[0]; decoded = parts.map(c => key.lean(c, scope)); } }

@@ -1,24 +1,24 @@
-beckon GrandArchive.CovenLore.VeiledCoven.Foundations
+beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
-    ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
-  VeiledCoven.descend veil warp veilWard
+ritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
+    ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
+  VeiledCoven☿descend veil warp veilWard
 
-spell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯
-    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟪mark ⟡ coven⟫ ⟡
-    PassTheVeil veil warp veilWard ⟪VeiledCoven.forge mark⟫ ≣ warp mark ⇰ mirror
+spell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
+    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪mark ⟡ coven⟫ ⟡
+    PassTheVeil veil warp veilWard ⟪VeiledCoven☿forge mark⟫ ≣ warp mark ⇰ mirror
 
-spell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯
-    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫
-    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven.forge mark⟫ ≣ warp mark⟫ ⟡
+spell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
+    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫
+    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven☿forge mark⟫ ≣ warp mark⟫ ⟡
     weft ≣ PassTheVeil veil warp veilWard ⇰ cast
-  channel Herald.extend
+  channel Herald☿extend
   summon coset
-  unravel coset through Effigies.LiftTheVeil whence
+  unravel coset through Effigies☿LiftTheVeil whence
   ⫽ ward mark ⇉ missile echoWard mark
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment

@@ -15,10 +15,10 @@ A common language for all schools: weave functions together, preserve injectivit
 **Proof idea.** Composition uses mathlib's function lemmas. The inverse law comes from the data stored in an equivalence. Enchantment's Chain of Pacts imports and uses faithful_thread.
 
 ```text
-beckon GrandArchive.Reason.Rite.Foundations
-beckon GrandArchive.Reason.Portal.Names
+beckon GrandArchive☿Reason☿Rite☿Foundations
+beckon GrandArchive☿Reason☿Portal☿Names
 
-sanctum Arcanum.Cantrips
+sanctum Arcanum☿Cantrips
 
 familiar ⧼aether vapor vesper ⟡ Essence⊛⧽
 
@@ -28,17 +28,17 @@ spell ThreadUnfolds ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper
     Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror
 
 spell FaithfulWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
-    ⟪faith ⟡ Rite.Faithful warp⟫ ⟪echoWard ⟡ Rite.Faithful weft⟫ ⟡
-    Rite.Faithful ⟪Weave warp weft⟫ ⇰ echoWard.threading faith
+    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
+    Rite☿Faithful ⟪Weave warp weft⟫ ⇰ echoWard☿threading faith
 
 spell ReachingWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
-    ⟪faith ⟡ Rite.Reaching warp⟫ ⟪echoWard ⟡ Rite.Reaching weft⟫ ⟡
-    Rite.Reaching ⟪Weave warp weft⟫ ⇰ echoWard.threading faith
+    ⟪faith ⟡ Rite☿Reaching warp⟫ ⟪echoWard ⟡ Rite☿Reaching weft⟫ ⟡
+    Rite☿Reaching ⟪Weave warp weft⟫ ⇰ echoWard☿threading faith
 
-spell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal.reflect ⟪portal mark⟫ ≣ mark ⇰
-  portal.ReturnThroughMirror mark
+spell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal☿reflect ⟪portal mark⟫ ≣ mark ⇰
+  portal☿ReturnThroughMirror mark
 
-seal Arcanum.Cantrips
+seal Arcanum☿Cantrips
 ```
 
 [Lean source](../math/Arcane/Cantrips.lean) · [Arcane source](../public/grimoire/cantrips.spell)
@@ -58,28 +58,28 @@ Choose the seeds of an enchantment. The smallest subgroup containing them closes
 **Proof idea.** Subgroup.closure is defined as the intersection of all subgroups containing the seeds. Its universal property gives minimality. Closure under xy⁻¹ follows by composing the subgroup's inverse and multiplication laws.
 
 ```text
-beckon GrandArchive.Bindings.Coven.Cabal.Foundations
+beckon GrandArchive☿Bindings☿Coven☿Cabal☿Foundations
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
-ritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal.encircle seeds
+ritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle seeds
 
 spell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰
-  Cabal.SeedsWithinCircle
+  Cabal☿SeedsWithinCircle
 
 spell SmallestCircle ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
-    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal.LeastBinding circle
+    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal☿LeastBinding circle
 
 spell KeepTheCircle ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽
     ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰
-  circle.BindingRemains sigilWard ⟪circle.ReversalRemains runeWard⟫
+  circle☿BindingRemains sigilWard ⟪circle☿ReversalRemains runeWard⟫
 
 spell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰
-  Cabal.CircleAlreadySealed circle
+  Cabal☿CircleAlreadySealed circle
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment
 ```
 
 [Lean source](../math/Arcane/Enchantment/Circles.lean) · [Arcane source](../public/grimoire/circles.spell)
@@ -99,30 +99,30 @@ A pact transports the group operation intact. Chain two faithful pacts and no di
 **Proof idea.** The group laws travel through a MonoidHom. Composition uses MonoidHom.comp and the shared faithful-thread cantrip. The kernel-of-composition statement unfolds directly to g(f(x)) = 1.
 
 ```text
-beckon Arcanum.Cantrips
-beckon GrandArchive.Bindings.Coven.Cabal.Silences
+beckon Arcanum☿Cantrips
+beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯
 
-ritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft.threading warp
+ritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft☿threading warp
 
 spell PreserveTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡
-    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp.CarryTheBinding mark rune
+    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿CarryTheBinding mark rune
 
 spell ReverseTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ warp.CarryTheReversal mark
+    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ warp☿CarryTheReversal mark
 
 spell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫
-    ⟪faith ⟡ Rite.Faithful warp⟫ ⟪echoWard ⟡ Rite.Faithful weft⟫ ⟡
-    Rite.Faithful ⟪ChainOfPacts warp weft⟫ ⇰
-  Arcanum.Cantrips.FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard
+    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
+    Rite☿Faithful ⟪ChainOfPacts warp weft⟫ ⇰
+  Arcanum☿Cantrips☿FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard
 
 spell SilenceInTheChain ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ ⟪ChainOfPacts warp weft⟫.silence ↭ warp mark ∈ weft.silence ⇰ Pact.mirror
+    mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰ Pact☿mirror
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment
 ```
 
 [Lean source](../math/Arcane/Enchantment/Pacts.lean) · [Arcane source](../public/grimoire/pacts.spell)
@@ -142,16 +142,16 @@ The kernel is everything a pact sends to the identity. Conjugating an element ca
 **Proof idea.** Apply f to gxg⁻¹, distribute it over products and inverses, replace f(x) by 1, then cancel f(g) against its inverse. Mathlib supplies the normality instance and the kernel criterion for injectivity.
 
 ```text
-beckon GrandArchive.Bindings.Coven.Cabal.Silences
+beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp.silence
+ritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp☿silence
 
 spell NameTheSilent ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald.SilenceCriterion
+    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald☿SilenceCriterion
 
 spell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
     ⟪sigilWard ⟡ mark ∈ CircleOfSilence warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft⁻¹ ∈ CircleOfSilence warp ⇰ cast
@@ -159,14 +159,14 @@ spell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
   bind silenceWard ⟡ warp mark ≣ ☉ ⇰ sigilWard
   purify ⟮silenceWard⟯
 
-spell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫.Hallowed ⇰ cast
-  shapeshift warp.silence.Hallowed
+spell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫☿Hallowed ⇰ cast
+  shapeshift warp☿silence☿Hallowed
   initiation
 
 spell NothingLost ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite.Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp.FaithfulnessCriterion.reflect
+    Rite☿Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp☿FaithfulnessCriterion☿reflect
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment
 ```
 
 [Lean source](../math/Arcane/Enchantment/Kernels.lean) · [Arcane source](../public/grimoire/kernels.spell)
@@ -186,30 +186,30 @@ A pact descends through a quotient exactly when it silences the subgroup being f
 **Proof idea.** QuotientGroup.lift constructs the descended map. Uniqueness uses homomorphism extensionality and quotient induction: every quotient element has a representative.
 
 ```text
-beckon GrandArchive.CovenLore.VeiledCoven.Foundations
+beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
-    ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
-  VeiledCoven.descend veil warp veilWard
+ritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
+    ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
+  VeiledCoven☿descend veil warp veilWard
 
-spell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯
-    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟪mark ⟡ coven⟫ ⟡
-    PassTheVeil veil warp veilWard ⟪VeiledCoven.forge mark⟫ ≣ warp mark ⇰ mirror
+spell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
+    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪mark ⟡ coven⟫ ⟡
+    PassTheVeil veil warp veilWard ⟪VeiledCoven☿forge mark⟫ ≣ warp mark ⇰ mirror
 
-spell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯
-    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫
-    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven.forge mark⟫ ≣ warp mark⟫ ⟡
+spell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
+    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫
+    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven☿forge mark⟫ ≣ warp mark⟫ ⟡
     weft ≣ PassTheVeil veil warp veilWard ⇰ cast
-  channel Herald.extend
+  channel Herald☿extend
   summon coset
-  unravel coset through Effigies.LiftTheVeil whence
+  unravel coset through Effigies☿LiftTheVeil whence
   ⫽ ward mark ⇉ missile echoWard mark
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment
 ```
 
 [Lean source](../math/Arcane/Enchantment/Descent.lean) · [Arcane source](../public/grimoire/descent.spell)
@@ -229,25 +229,25 @@ Forget exactly what a pact cannot distinguish. What remains is the image, with i
 **Proof idea.** Mathlib constructs a bijective homomorphism from the quotient to the range and packages it as a multiplicative equivalence. Here the theorem is a definition returning an actual isomorphism, not merely a proposition asserting one exists.
 
 ```text
-beckon GrandArchive.CovenLore.VeiledCoven.Foundations
+beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp.silence ≃⊛ warp.manifestation ⇰
-  VeiledCoven.ImageRevelation warp
+ineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
+  VeiledCoven☿ImageRevelation warp
 
 spell RevealTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    ⟪UnveilTheImage warp ⟪VeiledCoven.forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
+    ⟪UnveilTheImage warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
 
 spell PerfectUnveiling ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite.Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫.perfect
+    Rite☿Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫☿perfect
 
-ineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite.Reaching warp⟫ ⟡
-    coven ⧸ warp.silence ≃⊛ circle ⇰ VeiledCoven.RealmRevelation warp faith
+ineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
+    coven ⧸ warp☿silence ≃⊛ circle ⇰ VeiledCoven☿RealmRevelation warp faith
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment
 ```
 
 [Lean source](../math/Arcane/Enchantment/FirstIsomorphism.lean) · [Arcane source](../public/grimoire/first-isomorphism.spell)
@@ -267,27 +267,27 @@ A finite group partitions into equally sized cosets. The size of every subgroup,
 **Proof idea.** Mathlib constructs an equivalence G ≃ (G/H) × H. Cardinality turns it into the product formula. Apply Lagrange to the cyclic subgroup generated by x to obtain the statement about element orders.
 
 ```text
-beckon GrandArchive.CovenLore.Veils.Census
-beckon GrandArchive.CovenLore.Cycles
+beckon GrandArchive☿CovenLore☿Veils☿Census
+beckon GrandArchive☿CovenLore☿Cycles
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
 spell CountTheVeils ⟪circle ⟡ Cabal coven⟫ ⟡
-    Tally.census coven ≣ Tally.census ⟪coven ⧸ circle⟫ ⊛ Tally.census circle ⇰
-  circle.CosetCensus
+    Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰
+  circle☿CosetCensus
 
 spell MeasureOfTheCoven ⟪circle ⟡ Cabal coven⟫ ⟡
-    Tally.census circle ∣ Tally.census coven ⇰ circle.LagrangeBinding
+    Tally☿census circle ∣ Tally☿census coven ⇰ circle☿LagrangeBinding
 
-spell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally.census coven ⇰
+spell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰
   CycleDividesCensus mark
 
-spell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally.census coven ≣ ☉ ⇰
+spell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰
   CensusReturns
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment
 ```
 
 [Lean source](../math/Arcane/Enchantment/Lagrange.lean) · [Arcane source](../public/grimoire/lagrange.spell)
@@ -307,27 +307,27 @@ An action moves a point through its orbit. The stabilizer records the commands t
 **Proof idea.** Mathlib's orbit–stabilizer equivalence identifies commands precisely when they move x to the same place. An equivalence Orb(x) × Stab(x) ≃ G supplies the counting theorem.
 
 ```text
-beckon GrandArchive.CovenLore.Commands.Effigies
-beckon GrandArchive.CovenLore.Veils.Census
+beckon GrandArchive☿CovenLore☿Commands☿Effigies
+beckon GrandArchive☿CovenLore☿Veils☿Census
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯
 
 ineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡
-    Commanding.procession coven mark ≃ coven ⧸ Commanding.stillguard coven mark ⇰
-  Commanding.OrbitCorrespondence coven mark
+    Commanding☿procession coven mark ≃ coven ⧸ Commanding☿stillguard coven mark ⇰
+  Commanding☿OrbitCorrespondence coven mark
 
 spell CommandThroughThePortal ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡
-    ⟪⟪OrbitPortal mark⟫.reflect ⟪VeiledCoven.forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror
+    ⟪⟪OrbitPortal mark⟫☿reflect ⟪VeiledCoven☿forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror
 
 spell OrbitOfCommand ⟪mark ⟡ realm⟫ ⟡
-    Tally.census ⟪Commanding.procession coven mark⟫ ⊛ Tally.census ⟪Commanding.stillguard coven mark⟫ ≣
-      Tally.census coven ⇰ cast
-  transmute ⟮↜ Tally.CensusOfPairs⟯
-  missile Tally.CensusThroughPortal ⟪Commanding.OrbitDecomposition coven mark⟫
+    Tally☿census ⟪Commanding☿procession coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫ ≣
+      Tally☿census coven ⇰ cast
+  transmute ⟮↜ Tally☿CensusOfPairs⟯
+  missile Tally☿CensusThroughPortal ⟪Commanding☿OrbitDecomposition coven mark⟫
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment
 ```
 
 [Lean source](../math/Arcane/Enchantment/Orbits.lean) · [Arcane source](../public/grimoire/orbits.spell)
@@ -347,24 +347,24 @@ Enchant three labels by permuting them. There are six symmetries. A swap undoes 
 **Proof idea.** Lean's decide tactic constructs proofs by evaluating the decidable propositions. Try changing the two swaps to the same swap: the noncommutativity claim would become false, though the browser alone will not check your edit.
 
 ```text
-beckon GrandArchive.CovenLore.Shuffling.Fetter
-beckon GrandArchive.CovenLore.Cycles
+beckon GrandArchive☿CovenLore☿Shuffling☿Fetter
+beckon GrandArchive☿CovenLore☿Cycles
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
-byname ThreeSigils ⇰ Portal.Shuffling ⟪Fetter 3⟫
+byname ThreeSigils ⇰ Portal☿Shuffling ⟪Fetter 3⟫
 
-ritual FirstExchange ⟡ ThreeSigils ⇰ Portal.exchangeSigils ⊘ ☉
+ritual FirstExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ⊘ ☉
 
-ritual SecondExchange ⟡ ThreeSigils ⇰ Portal.exchangeSigils ☉ 2
+ritual SecondExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ☉ 2
 
-spell SixDances ⟡ Counted.census ThreeSigils ≣ 6 ⇰ cast divine
+spell SixDances ⟡ Counted☿census ThreeSigils ≣ 6 ⇰ cast divine
 
 spell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰ cast divine
 
 spell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast divine
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment
 ```
 
 [Lean source](../math/Arcane/Enchantment/Permutations.lean) · [Arcane source](../public/grimoire/permutations.spell)

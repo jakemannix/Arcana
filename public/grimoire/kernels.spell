@@ -1,13 +1,13 @@
-beckon GrandArchive.Bindings.Coven.Cabal.Silences
+beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp.silence
+ritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp☿silence
 
 spell NameTheSilent ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald.SilenceCriterion
+    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald☿SilenceCriterion
 
 spell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
     ⟪sigilWard ⟡ mark ∈ CircleOfSilence warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft⁻¹ ∈ CircleOfSilence warp ⇰ cast
@@ -15,11 +15,11 @@ spell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
   bind silenceWard ⟡ warp mark ≣ ☉ ⇰ sigilWard
   purify ⟮silenceWard⟯
 
-spell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫.Hallowed ⇰ cast
-  shapeshift warp.silence.Hallowed
+spell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫☿Hallowed ⇰ cast
+  shapeshift warp☿silence☿Hallowed
   initiation
 
 spell NothingLost ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite.Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp.FaithfulnessCriterion.reflect
+    Rite☿Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp☿FaithfulnessCriterion☿reflect
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment

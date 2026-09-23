@@ -5,10 +5,29 @@ import { Key, toSpell, fromSpell, tokenize } from '../src/translator';
 import grimoire from '../src/grimoire.key.json';
 const fixture = (name: string) => readFileSync(new URL(`../src/${name}`, import.meta.url), 'utf8');
 
-test('matches the original Python-generated school spell and decodes it exactly', () => {
+test('decodes the original Python-generated school spell and re-encodes it losslessly', () => {
   const key = new Key(grimoire), source = fixture('Schools.lean'), spell = fixture('Schools.spell');
+  assert.equal(fromSpell(spell, key), source);
+  assert.equal(fromSpell(toSpell(source, key), key), source);
+});
+
+test('Mercury joins namespaces and projections, with legacy dots still accepted', () => {
+  const key = new Key({ global: { Bijective: 'Perfect', f: 'warp' }, scoped: {} });
+  const source = 'Function.Bijective (f).Bijective .Bijective';
+  const spell = 'Rite☿Perfect ⟪warp⟫☿Perfect ☿Perfect';
   assert.equal(toSpell(source, key), spell);
   assert.equal(fromSpell(spell, key), source);
+  assert.equal(fromSpell('Rite.Perfect ⟪warp⟫.Perfect .Perfect', key), source);
+  assert.equal(fromSpell('Rite☿Perfect.Perfect', key), 'Function.Bijective.Bijective');
+});
+
+test('namespace glyph leaves quoted text, decimal points and ellipses intact', () => {
+  const key = new Key({ global: { Foo: 'Astral' }, scoped: {} });
+  const source = `Foo.«some.name☿inside» 3.14 .. ... "Foo.bar☿" '☿' -- Foo.bar☿\n/- Foo.bar☿ -/`;
+  const spell = `Astral☿«some.name☿inside» 3.14 .. ... "Foo.bar☿" '☿' -- Foo.bar☿\n/- Foo.bar☿ -/`;
+  assert.equal(toSpell(source, key), spell);
+  assert.equal(fromSpell(spell, key), source);
+  assert.equal(fromSpell(toSpell('Foo☿Foo ⟄☿', key), key), 'Foo☿Foo ⟄☿');
 });
 
 test('round trip survives saving and reopening the name key', () => {

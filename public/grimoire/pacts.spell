@@ -1,24 +1,24 @@
-beckon Arcanum.Cantrips
-beckon GrandArchive.Bindings.Coven.Cabal.Silences
+beckon Arcanum☿Cantrips
+beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯
 
-ritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft.threading warp
+ritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft☿threading warp
 
 spell PreserveTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡
-    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp.CarryTheBinding mark rune
+    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿CarryTheBinding mark rune
 
 spell ReverseTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ warp.CarryTheReversal mark
+    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ warp☿CarryTheReversal mark
 
 spell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫
-    ⟪faith ⟡ Rite.Faithful warp⟫ ⟪echoWard ⟡ Rite.Faithful weft⟫ ⟡
-    Rite.Faithful ⟪ChainOfPacts warp weft⟫ ⇰
-  Arcanum.Cantrips.FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard
+    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
+    Rite☿Faithful ⟪ChainOfPacts warp weft⟫ ⇰
+  Arcanum☿Cantrips☿FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard
 
 spell SilenceInTheChain ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ ⟪ChainOfPacts warp weft⟫.silence ↭ warp mark ∈ weft.silence ⇰ Pact.mirror
+    mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰ Pact☿mirror
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment

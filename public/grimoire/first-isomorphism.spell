@@ -1,19 +1,19 @@
-beckon GrandArchive.CovenLore.VeiledCoven.Foundations
+beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp.silence ≃⊛ warp.manifestation ⇰
-  VeiledCoven.ImageRevelation warp
+ineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
+  VeiledCoven☿ImageRevelation warp
 
 spell RevealTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    ⟪UnveilTheImage warp ⟪VeiledCoven.forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
+    ⟪UnveilTheImage warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
 
 spell PerfectUnveiling ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite.Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫.perfect
+    Rite☿Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫☿perfect
 
-ineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite.Reaching warp⟫ ⟡
-    coven ⧸ warp.silence ≃⊛ circle ⇰ VeiledCoven.RealmRevelation warp faith
+ineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
+    coven ⧸ warp☿silence ≃⊛ circle ⇰ VeiledCoven☿RealmRevelation warp faith
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment

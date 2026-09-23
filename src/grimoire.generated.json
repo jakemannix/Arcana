@@ -2,7 +2,7 @@
   "format": "arcane-grimoire/v1",
   "mathlibRevision": "0df444a360eaa60ab8c11dca51a86af692955474",
   "leanToolchain": "leanprover/lean4:v4.33.1",
-  "translatorHash": "b319f1d492764b14cc8dbf031e0436e234108bd018a2519c6d37e076e68291b6",
+  "translatorHash": "f25de32ecbc7958a926217bc21b6885251afcc4e9b760130d3c56f6e16cf0a0e",
   "tablesHash": "2c37c34ad9d15f3c570ad1549fb75737daf2b2ef0f08eb325890f2a18c9a0746",
   "metadataHash": "9ae37caef9091ffa7b1fee2f6c454ae5597487c2e6d7d02089a3853892d92643",
   "lexiconHash": "24b239bf0334066c99e5cf2c4da0acf1261acf70c25b61d2b5506c113ab625b9",
@@ -226,7 +226,7 @@
         }
       ],
       "lean": "import Mathlib.Logic.Function.Basic\nimport Mathlib.Logic.Equiv.Defs\n\nnamespace Arcane.Cantrips\n\nvariable {α β γ : Type*}\n\ndef thread (f : α → β) (g : β → γ) : α → γ := g ∘ f\n\ntheorem thread_apply (f : α → β) (g : β → γ) (x : α) :\n    thread f g x = g (f x) := rfl\n\ntheorem faithful_thread {f : α → β} {g : β → γ}\n    (hf : Function.Injective f) (hg : Function.Injective g) :\n    Function.Injective (thread f g) := hg.comp hf\n\ntheorem reaching_thread {f : α → β} {g : β → γ}\n    (hf : Function.Surjective f) (hg : Function.Surjective g) :\n    Function.Surjective (thread f g) := hg.comp hf\n\ntheorem mirror_return (e : α ≃ β) (x : α) : e.symm (e x) = x :=\n  e.symm_apply_apply x\n\nend Arcane.Cantrips\n",
-      "spell": "beckon GrandArchive.Reason.Rite.Foundations\nbeckon GrandArchive.Reason.Portal.Names\n\nsanctum Arcanum.Cantrips\n\nfamiliar ⧼aether vapor vesper ⟡ Essence⊛⧽\n\nritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ weft ⊚ warp\n\nspell ThreadUnfolds ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡\n    Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror\n\nspell FaithfulWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽\n    ⟪faith ⟡ Rite.Faithful warp⟫ ⟪echoWard ⟡ Rite.Faithful weft⟫ ⟡\n    Rite.Faithful ⟪Weave warp weft⟫ ⇰ echoWard.threading faith\n\nspell ReachingWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽\n    ⟪faith ⟡ Rite.Reaching warp⟫ ⟪echoWard ⟡ Rite.Reaching weft⟫ ⟡\n    Rite.Reaching ⟪Weave warp weft⟫ ⇰ echoWard.threading faith\n\nspell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal.reflect ⟪portal mark⟫ ≣ mark ⇰\n  portal.ReturnThroughMirror mark\n\nseal Arcanum.Cantrips\n",
+      "spell": "beckon GrandArchive☿Reason☿Rite☿Foundations\nbeckon GrandArchive☿Reason☿Portal☿Names\n\nsanctum Arcanum☿Cantrips\n\nfamiliar ⧼aether vapor vesper ⟡ Essence⊛⧽\n\nritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ weft ⊚ warp\n\nspell ThreadUnfolds ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡\n    Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror\n\nspell FaithfulWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽\n    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡\n    Rite☿Faithful ⟪Weave warp weft⟫ ⇰ echoWard☿threading faith\n\nspell ReachingWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽\n    ⟪faith ⟡ Rite☿Reaching warp⟫ ⟪echoWard ⟡ Rite☿Reaching weft⟫ ⟡\n    Rite☿Reaching ⟪Weave warp weft⟫ ⇰ echoWard☿threading faith\n\nspell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal☿reflect ⟪portal mark⟫ ≣ mark ⇰\n  portal☿ReturnThroughMirror mark\n\nseal Arcanum☿Cantrips\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -342,7 +342,7 @@
         }
       ],
       "sourceHash": "8443649e9b00b902f7e047a191feaabb82f126c769c67774cd72f7d450d40553",
-      "spellHash": "64a4e99bd8cdb33d42a627e088f5cdcdf84a25067640cbf5511ea7ba0e482cba",
+      "spellHash": "b25bec93696a443871657eaed04a367467547646d84ac9ce08dcc364a918212b",
       "declarations": [
         "Arcane.Cantrips.thread",
         "Arcane.Cantrips.thread_apply",
@@ -390,7 +390,7 @@
         }
       ],
       "lean": "import Mathlib.Algebra.Group.Subgroup.Basic\n\nnamespace Arcane.Enchantment\n\nvariable {G : Type*} [Group G]\n\ndef generatedCircle (s : Set G) : Subgroup G := Subgroup.closure s\n\ntheorem circle_contains_seed (s : Set G) : s ⊆ generatedCircle s :=\n  Subgroup.subset_closure\n\ntheorem circle_is_least (s : Set G) (H : Subgroup G) :\n    generatedCircle s ≤ H ↔ s ⊆ H := Subgroup.closure_le H\n\ntheorem circle_closed_under_division (H : Subgroup G) {x y : G}\n    (hx : x ∈ H) (hy : y ∈ H) : x * y⁻¹ ∈ H :=\n  H.mul_mem hx (H.inv_mem hy)\n\ntheorem circle_of_circle (H : Subgroup G) : generatedCircle (H : Set G) = H :=\n  Subgroup.closure_eq H\n\nend Arcane.Enchantment\n",
-      "spell": "beckon GrandArchive.Bindings.Coven.Cabal.Foundations\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯\n\nritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal.encircle seeds\n\nspell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰\n  Cabal.SeedsWithinCircle\n\nspell SmallestCircle ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡\n    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal.LeastBinding circle\n\nspell KeepTheCircle ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽\n    ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰\n  circle.BindingRemains sigilWard ⟪circle.ReversalRemains runeWard⟫\n\nspell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰\n  Cabal.CircleAlreadySealed circle\n\nseal Arcanum.Enchantment\n",
+      "spell": "beckon GrandArchive☿Bindings☿Coven☿Cabal☿Foundations\n\nsanctum Arcanum☿Enchantment\n\nfamiliar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯\n\nritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle seeds\n\nspell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰\n  Cabal☿SeedsWithinCircle\n\nspell SmallestCircle ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡\n    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal☿LeastBinding circle\n\nspell KeepTheCircle ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽\n    ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰\n  circle☿BindingRemains sigilWard ⟪circle☿ReversalRemains runeWard⟫\n\nspell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰\n  Cabal☿CircleAlreadySealed circle\n\nseal Arcanum☿Enchantment\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -514,7 +514,7 @@
         }
       ],
       "sourceHash": "93fcb9837fa2038959d0a94ec2c2690e355ff31febd7e8eb8b7f26434133e51a",
-      "spellHash": "1322ca112bc4e340d9434512a284275607b58ded9160cc4236de61f801d9c414",
+      "spellHash": "866f503017559d4ad87088ba12c80b8347aed7e8c9c038308dacd683cf2d1d84",
       "declarations": [
         "Arcane.Enchantment.generatedCircle",
         "Arcane.Enchantment.circle_contains_seed",
@@ -558,7 +558,7 @@
         }
       ],
       "lean": "import Arcane.Cantrips\nimport Mathlib.Algebra.Group.Subgroup.Ker\n\nnamespace Arcane.Enchantment\n\nvariable {G H K : Type*} [Group G] [Group H] [Group K]\n\ndef chainedPact (f : G →* H) (g : H →* K) : G →* K := g.comp f\n\ntheorem pact_preserves_product (f : G →* H) (x y : G) :\n    f (x * y) = f x * f y := f.map_mul x y\n\ntheorem pact_preserves_inverse (f : G →* H) (x : G) :\n    f x⁻¹ = (f x)⁻¹ := f.map_inv x\n\ntheorem faithful_pacts_compose (f : G →* H) (g : H →* K)\n    (hf : Function.Injective f) (hg : Function.Injective g) :\n    Function.Injective (chainedPact f g) :=\n  Arcane.Cantrips.faithful_thread (f := f) (g := g) hf hg\n\ntheorem silence_of_chain (f : G →* H) (g : H →* K) (x : G) :\n    x ∈ (chainedPact f g).ker ↔ f x ∈ g.ker := Iff.rfl\n\nend Arcane.Enchantment\n",
-      "spell": "beckon Arcanum.Cantrips\nbeckon GrandArchive.Bindings.Coven.Cabal.Silences\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯\n\nritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft.threading warp\n\nspell PreserveTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡\n    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp.CarryTheBinding mark rune\n\nspell ReverseTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ warp.CarryTheReversal mark\n\nspell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫\n    ⟪faith ⟡ Rite.Faithful warp⟫ ⟪echoWard ⟡ Rite.Faithful weft⟫ ⟡\n    Rite.Faithful ⟪ChainOfPacts warp weft⟫ ⇰\n  Arcanum.Cantrips.FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard\n\nspell SilenceInTheChain ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡\n    mark ∈ ⟪ChainOfPacts warp weft⟫.silence ↭ warp mark ∈ weft.silence ⇰ Pact.mirror\n\nseal Arcanum.Enchantment\n",
+      "spell": "beckon Arcanum☿Cantrips\nbeckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences\n\nsanctum Arcanum☿Enchantment\n\nfamiliar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯\n\nritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft☿threading warp\n\nspell PreserveTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡\n    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿CarryTheBinding mark rune\n\nspell ReverseTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ warp☿CarryTheReversal mark\n\nspell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫\n    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡\n    Rite☿Faithful ⟪ChainOfPacts warp weft⟫ ⇰\n  Arcanum☿Cantrips☿FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard\n\nspell SilenceInTheChain ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡\n    mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰ Pact☿mirror\n\nseal Arcanum☿Enchantment\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -698,7 +698,7 @@
         }
       ],
       "sourceHash": "d1611b44a62e7c90ec69c125b7fb0565b557b04808f09d1cba9105b08b2844a7",
-      "spellHash": "41bcb2a160729df7202114a663fef7d6a1c0986d0465c519a2b7b5d160dc4550",
+      "spellHash": "37c2ef4f5fbe52d0cd202b68c4fcf7409eb45780b63585468c900d5647fa5a63",
       "declarations": [
         "Arcane.Enchantment.chainedPact",
         "Arcane.Enchantment.pact_preserves_product",
@@ -747,7 +747,7 @@
         }
       ],
       "lean": "import Mathlib.Algebra.Group.Subgroup.Ker\n\nnamespace Arcane.Enchantment\n\nvariable {G H : Type*} [Group G] [Group H]\n\ndef silence (f : G →* H) : Subgroup G := f.ker\n\ntheorem silence_iff (f : G →* H) (x : G) :\n    x ∈ silence f ↔ f x = 1 := MonoidHom.mem_ker\n\ntheorem silence_survives_conjugation (f : G →* H) {x : G}\n    (hx : x ∈ silence f) (g : G) : g * x * g⁻¹ ∈ silence f := by\n  change f (g * x * g⁻¹) = 1\n  have hx' : f x = 1 := hx\n  simp [hx']\n\ntheorem silence_is_normal (f : G →* H) : (silence f).Normal := by\n  change f.ker.Normal\n  infer_instance\n\ntheorem faithful_iff_silence_trivial (f : G →* H) :\n    Function.Injective f ↔ silence f = ⊥ := f.ker_eq_bot_iff.symm\n\nend Arcane.Enchantment\n",
-      "spell": "beckon GrandArchive.Bindings.Coven.Cabal.Silences\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp.silence\n\nspell NameTheSilent ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald.SilenceCriterion\n\nspell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽\n    ⟪sigilWard ⟡ mark ∈ CircleOfSilence warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft⁻¹ ∈ CircleOfSilence warp ⇰ cast\n  shapeshift warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ ☉\n  bind silenceWard ⟡ warp mark ≣ ☉ ⇰ sigilWard\n  purify ⟮silenceWard⟯\n\nspell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫.Hallowed ⇰ cast\n  shapeshift warp.silence.Hallowed\n  initiation\n\nspell NothingLost ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡\n    Rite.Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp.FaithfulnessCriterion.reflect\n\nseal Arcanum.Enchantment\n",
+      "spell": "beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences\n\nsanctum Arcanum☿Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp☿silence\n\nspell NameTheSilent ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald☿SilenceCriterion\n\nspell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽\n    ⟪sigilWard ⟡ mark ∈ CircleOfSilence warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft⁻¹ ∈ CircleOfSilence warp ⇰ cast\n  shapeshift warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ ☉\n  bind silenceWard ⟡ warp mark ≣ ☉ ⇰ sigilWard\n  purify ⟮silenceWard⟯\n\nspell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫☿Hallowed ⇰ cast\n  shapeshift warp☿silence☿Hallowed\n  initiation\n\nspell NothingLost ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡\n    Rite☿Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp☿FaithfulnessCriterion☿reflect\n\nseal Arcanum☿Enchantment\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -895,7 +895,7 @@
         }
       ],
       "sourceHash": "89af41133fc1ff4474a093633ec40a6a487587c2ea8a4ff8ab5a89d43c229e61",
-      "spellHash": "2d09006bf2bf548409b3037f812bc306fb9b541e8dc42dd3fa04fdb34f773710",
+      "spellHash": "cf22a6ac8c767ba8a446546fbd05cd2950ff7b1b1e518c7e12a3a2166a7d7648",
       "declarations": [
         "Arcane.Enchantment.silence",
         "Arcane.Enchantment.silence_iff",
@@ -938,7 +938,7 @@
         }
       ],
       "lean": "import Mathlib.GroupTheory.QuotientGroup.Basic\n\nnamespace Arcane.Enchantment\n\nvariable {G H : Type*} [Group G] [Group H]\n\ndef descendedPact (N : Subgroup G) [N.Normal] (f : G →* H)\n    (hN : N ≤ f.ker) : G ⧸ N →* H :=\n  QuotientGroup.lift N f hN\n\ntheorem descent_on_representative (N : Subgroup G) [N.Normal]\n    (f : G →* H) (hN : N ≤ f.ker) (x : G) :\n    descendedPact N f hN (QuotientGroup.mk x) = f x := rfl\n\ntheorem descent_is_unique (N : Subgroup G) [N.Normal]\n    (f : G →* H) (hN : N ≤ f.ker) (g : G ⧸ N →* H)\n    (hg : ∀ x : G, g (QuotientGroup.mk x) = f x) :\n    g = descendedPact N f hN := by\n  apply MonoidHom.ext\n  intro q\n  induction q using Quotient.inductionOn with\n  | h x => exact hg x\n\nend Arcane.Enchantment\n",
-      "spell": "beckon GrandArchive.CovenLore.VeiledCoven.Foundations\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫\n    ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰\n  VeiledCoven.descend veil warp veilWard\n\nspell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯\n    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟪mark ⟡ coven⟫ ⟡\n    PassTheVeil veil warp veilWard ⟪VeiledCoven.forge mark⟫ ≣ warp mark ⇰ mirror\n\nspell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯\n    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫\n    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven.forge mark⟫ ≣ warp mark⟫ ⟡\n    weft ≣ PassTheVeil veil warp veilWard ⇰ cast\n  channel Herald.extend\n  summon coset\n  unravel coset through Effigies.LiftTheVeil whence\n  ⫽ ward mark ⇉ missile echoWard mark\n\nseal Arcanum.Enchantment\n",
+      "spell": "beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations\n\nsanctum Arcanum☿Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫\n    ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰\n  VeiledCoven☿descend veil warp veilWard\n\nspell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯\n    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪mark ⟡ coven⟫ ⟡\n    PassTheVeil veil warp veilWard ⟪VeiledCoven☿forge mark⟫ ≣ warp mark ⇰ mirror\n\nspell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯\n    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫\n    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven☿forge mark⟫ ≣ warp mark⟫ ⟡\n    weft ≣ PassTheVeil veil warp veilWard ⇰ cast\n  channel Herald☿extend\n  summon coset\n  unravel coset through Effigies☿LiftTheVeil whence\n  ⫽ ward mark ⇉ missile echoWard mark\n\nseal Arcanum☿Enchantment\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -1098,7 +1098,7 @@
         }
       ],
       "sourceHash": "06b6f57b0dfb10a2abc99d31fdf6a7908d6c91865f87ae8601f5be46125698f4",
-      "spellHash": "300de6d3f49da949ba073b00e04842f9d794ad7bb488d359823acd1c4fd2d845",
+      "spellHash": "57c9ccb3cbde857e579cb9a582c26dcd931caf37b6cfff0f40fa5f4572f23355",
       "declarations": [
         "Arcane.Enchantment.descendedPact",
         "Arcane.Enchantment.descent_on_representative",
@@ -1140,7 +1140,7 @@
         }
       ],
       "lean": "import Mathlib.GroupTheory.QuotientGroup.Basic\n\nnamespace Arcane.Enchantment\n\nvariable {G H : Type*} [Group G] [Group H]\n\nnoncomputable def unveiledImage (f : G →* H) : G ⧸ f.ker ≃* f.range :=\n  QuotientGroup.quotientKerEquivRange f\n\ntheorem unveiling_on_representative (f : G →* H) (x : G) :\n    (unveiledImage f (QuotientGroup.mk x) : H) = f x := rfl\n\ntheorem unveiling_is_bijective (f : G →* H) :\n    Function.Bijective (unveiledImage f) := (unveiledImage f).bijective\n\nnoncomputable def unveiledCodomain (f : G →* H) (hf : Function.Surjective f) :\n    G ⧸ f.ker ≃* H := QuotientGroup.quotientKerEquivOfSurjective f hf\n\nend Arcane.Enchantment\n",
-      "spell": "beckon GrandArchive.CovenLore.VeiledCoven.Foundations\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp.silence ≃⊛ warp.manifestation ⇰\n  VeiledCoven.ImageRevelation warp\n\nspell RevealTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    ⟪UnveilTheImage warp ⟪VeiledCoven.forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror\n\nspell PerfectUnveiling ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡\n    Rite.Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫.perfect\n\nineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite.Reaching warp⟫ ⟡\n    coven ⧸ warp.silence ≃⊛ circle ⇰ VeiledCoven.RealmRevelation warp faith\n\nseal Arcanum.Enchantment\n",
+      "spell": "beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations\n\nsanctum Arcanum☿Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰\n  VeiledCoven☿ImageRevelation warp\n\nspell RevealTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    ⟪UnveilTheImage warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror\n\nspell PerfectUnveiling ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡\n    Rite☿Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫☿perfect\n\nineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡\n    coven ⧸ warp☿silence ≃⊛ circle ⇰ VeiledCoven☿RealmRevelation warp faith\n\nseal Arcanum☿Enchantment\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -1272,7 +1272,7 @@
         }
       ],
       "sourceHash": "bda36b1ff08cb90bfbded9a21fc69e80e6e999a894d6c6c605d31b140e1fc2c4",
-      "spellHash": "735d0e04558dad175fe6ad02fe0b6f500e59c5f99413ed81c4b05c6db915e133",
+      "spellHash": "176de7c0be15c226a0182d87dcda9885efebfad20c1eea275213c682ce5b163b",
       "declarations": [
         "Arcane.Enchantment.unveiledImage",
         "Arcane.Enchantment.unveiling_on_representative",
@@ -1323,7 +1323,7 @@
         }
       ],
       "lean": "import Mathlib.GroupTheory.Coset.Card\nimport Mathlib.GroupTheory.OrderOfElement\n\nnamespace Arcane.Enchantment\n\nvariable {G : Type*} [Group G]\n\ntheorem count_the_cosets (H : Subgroup G) :\n    Nat.card G = Nat.card (G ⧸ H) * Nat.card H :=\n  H.card_eq_card_quotient_mul_card_subgroup\n\ntheorem circle_divides_coven (H : Subgroup G) :\n    Nat.card H ∣ Nat.card G := H.card_subgroup_dvd_card\n\ntheorem period_divides_coven (x : G) : orderOf x ∣ Nat.card G :=\n  orderOf_dvd_natCard x\n\ntheorem full_cycle_returns (x : G) : x ^ Nat.card G = 1 :=\n  pow_card_eq_one'\n\nend Arcane.Enchantment\n",
-      "spell": "beckon GrandArchive.CovenLore.Veils.Census\nbeckon GrandArchive.CovenLore.Cycles\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯\n\nspell CountTheVeils ⟪circle ⟡ Cabal coven⟫ ⟡\n    Tally.census coven ≣ Tally.census ⟪coven ⧸ circle⟫ ⊛ Tally.census circle ⇰\n  circle.CosetCensus\n\nspell MeasureOfTheCoven ⟪circle ⟡ Cabal coven⟫ ⟡\n    Tally.census circle ∣ Tally.census coven ⇰ circle.LagrangeBinding\n\nspell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally.census coven ⇰\n  CycleDividesCensus mark\n\nspell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally.census coven ≣ ☉ ⇰\n  CensusReturns\n\nseal Arcanum.Enchantment\n",
+      "spell": "beckon GrandArchive☿CovenLore☿Veils☿Census\nbeckon GrandArchive☿CovenLore☿Cycles\n\nsanctum Arcanum☿Enchantment\n\nfamiliar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯\n\nspell CountTheVeils ⟪circle ⟡ Cabal coven⟫ ⟡\n    Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰\n  circle☿CosetCensus\n\nspell MeasureOfTheCoven ⟪circle ⟡ Cabal coven⟫ ⟡\n    Tally☿census circle ∣ Tally☿census coven ⇰ circle☿LagrangeBinding\n\nspell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰\n  CycleDividesCensus mark\n\nspell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰\n  CensusReturns\n\nseal Arcanum☿Enchantment\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -1439,7 +1439,7 @@
         }
       ],
       "sourceHash": "69da607c54ae0bbeb798730f3be66efc373179e8966db6206dc2f934c9d574f9",
-      "spellHash": "9d6c3594467036aef12e5f6bf3dcf30fb0c1edfb1d227015b58e9b8c75e80fb8",
+      "spellHash": "912a7b0cb1885d948f6735f8aed2af42cb8dd0ccaaa19819ee2527f934507ba5",
       "declarations": [
         "Arcane.Enchantment.count_the_cosets",
         "Arcane.Enchantment.circle_divides_coven",
@@ -1482,7 +1482,7 @@
         }
       ],
       "lean": "import Mathlib.GroupTheory.GroupAction.Quotient\nimport Mathlib.GroupTheory.Coset.Card\n\nnamespace Arcane.Enchantment\n\nvariable {G X : Type*} [Group G] [MulAction G X]\n\nnoncomputable def orbitPortal (x : X) :\n    MulAction.orbit G x ≃ G ⧸ MulAction.stabilizer G x :=\n  MulAction.orbitEquivQuotientStabilizer G x\n\ntheorem portal_returns_action (x : X) (g : G) :\n    ((orbitPortal x).symm (QuotientGroup.mk g) : X) = g • x := rfl\n\ntheorem orbit_times_stabilizer (x : X) :\n    Nat.card (MulAction.orbit G x) * Nat.card (MulAction.stabilizer G x) =\n      Nat.card G := by\n  rw [← Nat.card_prod]\n  exact Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup G x)\n\nend Arcane.Enchantment\n",
-      "spell": "beckon GrandArchive.CovenLore.Commands.Effigies\nbeckon GrandArchive.CovenLore.Veils.Census\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯\n\nineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡\n    Commanding.procession coven mark ≃ coven ⧸ Commanding.stillguard coven mark ⇰\n  Commanding.OrbitCorrespondence coven mark\n\nspell CommandThroughThePortal ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡\n    ⟪⟪OrbitPortal mark⟫.reflect ⟪VeiledCoven.forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror\n\nspell OrbitOfCommand ⟪mark ⟡ realm⟫ ⟡\n    Tally.census ⟪Commanding.procession coven mark⟫ ⊛ Tally.census ⟪Commanding.stillguard coven mark⟫ ≣\n      Tally.census coven ⇰ cast\n  transmute ⟮↜ Tally.CensusOfPairs⟯\n  missile Tally.CensusThroughPortal ⟪Commanding.OrbitDecomposition coven mark⟫\n\nseal Arcanum.Enchantment\n",
+      "spell": "beckon GrandArchive☿CovenLore☿Commands☿Effigies\nbeckon GrandArchive☿CovenLore☿Veils☿Census\n\nsanctum Arcanum☿Enchantment\n\nfamiliar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯\n\nineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡\n    Commanding☿procession coven mark ≃ coven ⧸ Commanding☿stillguard coven mark ⇰\n  Commanding☿OrbitCorrespondence coven mark\n\nspell CommandThroughThePortal ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡\n    ⟪⟪OrbitPortal mark⟫☿reflect ⟪VeiledCoven☿forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror\n\nspell OrbitOfCommand ⟪mark ⟡ realm⟫ ⟡\n    Tally☿census ⟪Commanding☿procession coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫ ≣\n      Tally☿census coven ⇰ cast\n  transmute ⟮↜ Tally☿CensusOfPairs⟯\n  missile Tally☿CensusThroughPortal ⟪Commanding☿OrbitDecomposition coven mark⟫\n\nseal Arcanum☿Enchantment\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -1638,7 +1638,7 @@
         }
       ],
       "sourceHash": "5991aebfe67be68f6471e04bee1d7ff9ded8b04001b1940634a2b7516e8cdcbe",
-      "spellHash": "c8369fd2c61611d4060fbbd073671ce40b3fe1cd6f167d0c5f3f76ef52b0e87c",
+      "spellHash": "baee99a6f5300f42f89d8fcbbb611c8cf66bfa0845af3e682ca7291f31daf1d7",
       "declarations": [
         "Arcane.Enchantment.orbitPortal",
         "Arcane.Enchantment.portal_returns_action",
@@ -1681,7 +1681,7 @@
         }
       ],
       "lean": "import Mathlib.GroupTheory.Perm.Fin\nimport Mathlib.GroupTheory.OrderOfElement\n\nnamespace Arcane.Enchantment\n\nabbrev triangleSymmetries := Equiv.Perm (Fin 3)\n\ndef firstSwap : triangleSymmetries := Equiv.swap 0 1\n\ndef secondSwap : triangleSymmetries := Equiv.swap 1 2\n\ntheorem six_symmetries : Fintype.card triangleSymmetries = 6 := by decide\n\ntheorem swap_twice : firstSwap * firstSwap = 1 := by decide\n\ntheorem swaps_do_not_commute : firstSwap * secondSwap ≠ secondSwap * firstSwap := by decide\n\nend Arcane.Enchantment\n",
-      "spell": "beckon GrandArchive.CovenLore.Shuffling.Fetter\nbeckon GrandArchive.CovenLore.Cycles\n\nsanctum Arcanum.Enchantment\n\nbyname ThreeSigils ⇰ Portal.Shuffling ⟪Fetter 3⟫\n\nritual FirstExchange ⟡ ThreeSigils ⇰ Portal.exchangeSigils ⊘ ☉\n\nritual SecondExchange ⟡ ThreeSigils ⇰ Portal.exchangeSigils ☉ 2\n\nspell SixDances ⟡ Counted.census ThreeSigils ≣ 6 ⇰ cast divine\n\nspell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰ cast divine\n\nspell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast divine\n\nseal Arcanum.Enchantment\n",
+      "spell": "beckon GrandArchive☿CovenLore☿Shuffling☿Fetter\nbeckon GrandArchive☿CovenLore☿Cycles\n\nsanctum Arcanum☿Enchantment\n\nbyname ThreeSigils ⇰ Portal☿Shuffling ⟪Fetter 3⟫\n\nritual FirstExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ⊘ ☉\n\nritual SecondExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ☉ 2\n\nspell SixDances ⟡ Counted☿census ThreeSigils ≣ 6 ⇰ cast divine\n\nspell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰ cast divine\n\nspell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast divine\n\nseal Arcanum☿Enchantment\n",
       "glossary": [
         {
           "lean": "theorem",
@@ -1785,7 +1785,7 @@
         }
       ],
       "sourceHash": "35adad0b9216cfa89d6e39a89ecb9b1ac17d25097527977aea3edc3385b6fca3",
-      "spellHash": "c99a2e156bcb6c706886a026905c3a2c6892719ae0ebd871f60755c8cbcf67f3",
+      "spellHash": "8b09da4dcc164646f55344216a74e4cd189d2bbca750ef1b296d19949cb2ac72",
       "declarations": [
         "Arcane.Enchantment.triangleSymmetries",
         "Arcane.Enchantment.firstSwap",

@@ -1,22 +1,22 @@
-beckon GrandArchive.Bindings.Coven.Cabal.Foundations
+beckon GrandArchive☿Bindings☿Coven☿Cabal☿Foundations
 
-sanctum Arcanum.Enchantment
+sanctum Arcanum☿Enchantment
 
 familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
-ritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal.encircle seeds
+ritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle seeds
 
 spell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰
-  Cabal.SeedsWithinCircle
+  Cabal☿SeedsWithinCircle
 
 spell SmallestCircle ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
-    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal.LeastBinding circle
+    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal☿LeastBinding circle
 
 spell KeepTheCircle ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽
     ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰
-  circle.BindingRemains sigilWard ⟪circle.ReversalRemains runeWard⟫
+  circle☿BindingRemains sigilWard ⟪circle☿ReversalRemains runeWard⟫
 
 spell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰
-  Cabal.CircleAlreadySealed circle
+  Cabal☿CircleAlreadySealed circle
 
-seal Arcanum.Enchantment
+seal Arcanum☿Enchantment

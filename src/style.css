@@ -184,10 +184,10 @@ button:disabled { opacity: .45; cursor: default; }
 .personal-draft { display: block; margin-top: 18px; border: 1px solid #b6986140; width: 100%; text-align: left; }
 .presentation-changing [data-transmute] { opacity: 0; }
 .transmutation-field { position: fixed; inset: 0; overflow: hidden; z-index: 90; pointer-events: none; contain: strict; }
-.transmutation-glyph { position: absolute; white-space: pre; animation: glyph-transmutation 1.05s both; will-change: transform, opacity; }
+.transmutation-glyph { position: absolute; white-space: pre; animation: glyph-transmutation 2.1s both; will-change: transform, opacity; }
 .transmutation-glyph > span { position: absolute; top: 0; left: 0; white-space: pre; }
-.glyph-before { animation: glyph-departure 1.05s both; }
-.glyph-after { animation: glyph-arrival 1.05s both; }
+.glyph-before { animation: glyph-departure 2.1s both; }
+.glyph-after { animation: glyph-arrival 2.1s both; }
 @keyframes glyph-transmutation {
   0% { transform: translate(0, 0) rotate(0); opacity: 1; animation-timing-function: cubic-bezier(.5, 0, .85, .5); }
   44% { transform: translate(var(--heap-x), var(--heap-y)) rotate(var(--tumble)); opacity: .88; animation-timing-function: cubic-bezier(.2, .6, .2, 1); }

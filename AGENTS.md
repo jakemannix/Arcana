@@ -42,7 +42,7 @@ Lean and mathlib provide the proof checking. Arcana is a reversible presentation
 
 Keep the grimoire welcoming and readable. Magic should help a reader explore the proof. Folding hides the body while retaining the complete statement and hypotheses. Reveal effects should be brief, respect reduced-motion preferences, and preserve keyboard access.
 
-The top-level reading selector offers Magic, Side by side, and Mathematics. Magic hides mathematical exposition, references, the Lean pane, and shared teaching comments; other modes restore the reader's comment preference. Switching modes must preserve both editor instances, documents, undo histories, folds, and synchronization. Character transmutation effects must be bounded, interruptible, and disabled for reduced motion. Folio and personal drafts survive navigation within a tab; a reload loses unsaved work, so avoid unnecessarily refreshing a user's active editor.
+The page starts in Magic mode. The top-level reading selector offers Magic, Side by side, and Mathematics. Magic hides mathematical exposition, references, the Lean pane, and shared teaching comments; other modes restore the reader's comment preference. Switching modes must preserve both editor instances, documents, undo histories, folds, and synchronization. Character transmutation effects must be bounded, interruptible, and disabled for reduced motion. Folio and personal drafts survive navigation within a tab; a reload loses unsaved work, so avoid unnecessarily refreshing a user's active editor.
 
 ## Where to work and how to verify
 

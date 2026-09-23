@@ -12,7 +12,7 @@ The browser opens on the first isomorphism theorem. Use the contents to explore 
 
 Each folio includes its mathematical meaning, hypotheses, proof idea, prerequisites, vocabulary, and upstream proof-library references pinned to the exact commit. Arcana source and ordinary Lean are editable side by side. Spell bodies start folded: click **reveal enchantment**, the gutter, or **Reveal** to open them with a brief glimmer. **Veil** folds them again. Reduced-motion preferences disable the effects.
 
-Use the top-level **Magic / Side by side / Mathematics** switch to change the whole reading view. Magic hides mathematical exposition, references, and the Lean pane. Visible characters tumble into a jumble and reform as the new view; reduced-motion preferences make the switch immediate. Both editors retain their text, undo history, and folds.
+The page opens in **Magic** mode. Use the top-level **Magic / Side by side / Mathematics** switch to change the whole reading view. Magic hides mathematical exposition, references, and the Lean pane. Visible characters tumble into a jumble and reform as the new view over 2.1 seconds; reduced-motion preferences make the switch immediate. Both editors retain their text, undo history, and folds.
 
 Every folio includes a guided tutorial: motivation, four steps through its argument, and an experiment with a hideable hint. Open **Read the tutorial** to expand the walkthrough. Shared teaching comments are identical in Lean and Arcana. **Hide notes** conceals them in both editors; individual **read note** buttons reveal selected comments. Magic mode hides all teaching comments, and your note preference returns when you leave it. Hiding notes never removes them from copies, saved bundles, or checked source.
 

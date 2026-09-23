@@ -1,7 +1,7 @@
 ---
 type: feature
 files: [src/main.ts, src/glyphs.ts, src/catalog.ts, src/magic.ts, src/style.css, index.html]
-last_updated: 2026-09-23
+last_updated: 2026-09-24
 tags: [doctrack/type/feature, doctrack/status/active, doctrack/audience/claude]
 ---
 # Browser editor
@@ -16,9 +16,9 @@ Two CodeMirror 6 instances with StreamLanguage highlighting, reentrancy-guarded 
 
 Dependencies: [[../components/translator]], [[graduate-grimoire]], [[../decisions/browser-translation]].
 
-The masthead offers Magic / Side by side / Mathematics. `src/presentation.ts` changes visibility without reconstructing editors; mode switching preserves documents, history, folding, and synchronization. Magic mode hides all mathematical exposition, tutorials, shared comments, vocabulary, references, and the Lean pane. Mode-specific help and status wording preserve the original-versus-unchecked-draft distinction. The three buttons support arrow, Home, and End navigation.
+The page initially opens in Magic mode, with shared comments hidden from the first editor render. The masthead offers Magic / Side by side / Mathematics. `src/presentation.ts` changes visibility without reconstructing editors; mode switching preserves documents, history, folding, and synchronization. Magic mode hides all mathematical exposition, tutorials, shared comments, vocabulary, references, and the Lean pane. Mode-specific help and status wording preserve the original-versus-unchecked-draft distinction. The three buttons support arrow, Home, and End navigation.
 
-A bounded visible-character effect samples graphemes from the old and new views, tumbles them into a jumble, then reforms them. Controls remain outside the animation; input, scrolling, repeated mode changes, resizing, and backgrounding cancel it. Reduced motion switches instantly. No persistent particles or infinite animation.
+A bounded visible-character effect samples graphemes from the old and new views, tumbles them into a jumble, then reforms them over 2.1 seconds (half the original speed). The CSS animations and JavaScript cleanup share that duration. Controls remain outside the animation; input, scrolling, repeated mode changes, resizing, and backgrounding cancel it. Reduced motion switches instantly. No persistent particles or infinite animation.
 
 `src/comments.ts` uses the translator lexer to identify nested comments without mistaking strings or quoted identifiers for notes. CodeMirror replacement decorations hide comments without changing source, history, or translation. The shared Notes control toggles them in both editors; hidden notes can be opened individually. Magic mode suppresses note text and reveal buttons; leaving it restores the user's notes preference. Copy/export retains every comment. Proof folding masks comments and literals when finding boundaries but counts literal-only bodies as actual code; introductory comments stay outside the preceding proof fold.
 

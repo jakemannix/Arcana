@@ -3,7 +3,7 @@ export const PRESENTATION_MODES: readonly PresentationMode[] = ['magic', 'parall
 const PARTICLE_LIMIT = 180;
 const NODE_LIMIT = 1400;
 const CHARACTER_LIMIT = 6000;
-const DURATION = 1050;
+const DURATION = 2100;
 
 export interface Glyph {
   text: string;
@@ -71,7 +71,7 @@ interface PresentationOptions {
 
 /** Switch presentation without touching either editor's document or state. */
 export function createPresentationController({ root, controls, onChange }: PresentationOptions) {
-  let mode: PresentationMode = 'parallel';
+  let mode: PresentationMode = 'magic';
   let generation = 0, frame = 0, timer: ReturnType<typeof setTimeout> | undefined;
   let overlay: HTMLElement | undefined;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');

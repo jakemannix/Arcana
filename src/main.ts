@@ -89,7 +89,7 @@ const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
     if (stream.match(/\d+|[⊘☉]/)) return 'number';
     if (side === 'spell' && stream.match(runePattern)) return 'variableName';
     if (stream.match(/(?:✨(?:[\p{L}_][\p{L}\p{N}\p{M}_'!?]*✨)+|[\p{L}_][\p{L}\p{N}\p{M}_'!?]*(?:✨[\p{L}_][\p{L}\p{N}\p{M}_'!?]*)+)/u)) return 'atom';
-    const word = stream.match(/[\p{L}_][\p{L}\p{N}\p{M}_\u00a0'!?]*/u);
+    const word = stream.match(/[\p{L}_][\p{L}\p{N}\p{M}_'!?]*/u);
     if (word) {
       const text = (word as RegExpMatchArray)[0];
       if (side === 'lean' ? Object.hasOwn(WORDS, text) : Object.values(WORDS).includes(text)) return 'keyword';
@@ -281,7 +281,7 @@ for (const button of document.querySelectorAll<HTMLButtonElement>('[data-copy]')
   catch { announce('Clipboard unavailable. Select the text in the editor to copy it.'); }
 });
 $('#download').addEventListener('click', () => {
-  const bundle = { format: 'lean-magic/v1', lean: value('lean'), spell: value('spell'), key: key.data() };
+  const bundle = { format: 'arcana/v1', lean: value('lean'), spell: value('spell'), key: key.data() };
   const url = URL.createObjectURL(new Blob([JSON.stringify(bundle, null, 2) + '\n'], { type: 'application/json' }));
   const link = document.createElement('a'); link.href = url; link.download = 'grimoire.json'; link.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000); announce('Grimoire saved with both texts and the name key.');
@@ -294,7 +294,7 @@ $('#file').addEventListener('change', async () => {
     const text = await file.text();
     if (file.name.endsWith('.json')) {
       const bundle = JSON.parse(text) as { format: string; lean: string; spell: string; key: KeyData };
-      if (bundle.format !== 'lean-magic/v1' || typeof bundle.lean !== 'string' || typeof bundle.spell !== 'string' || !bundle.key?.global || !bundle.key?.scoped) throw new Error('Choose a grimoire JSON downloaded from this editor.');
+      if (bundle.format !== 'arcana/v1' || typeof bundle.lean !== 'string' || typeof bundle.spell !== 'string' || !bundle.key?.global || !bundle.key?.scoped) throw new Error('Choose a grimoire JSON downloaded from this editor.');
       const data = new Key(bundle.key);
       if (fromSpell(bundle.spell, data) !== bundle.lean) throw new Error('This grimoire’s text and name key do not match.');
       load(bundle.lean, bundle.spell, data);

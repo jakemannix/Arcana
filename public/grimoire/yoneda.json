@@ -1,47 +1,21 @@
 {
-  "format": "lean-magic/v1",
+  "format": "arcana/v1",
   "lean": "import Mathlib.CategoryTheory.Yoneda\nimport Mathlib.Algebra.FreeMonoid.Basic\nimport Mathlib.Algebra.Group.Nat.Hom\nimport Mathlib.Data.Int.Cast.Lemmas\n\nopen CategoryTheory Opposite\n\nuniverse v u\n\nnamespace Mathematics.CategoryTheory\n\nsection Yoneda\n\nvariable {C : Type u} [Category.{v} C] {X : C} {F : C ⥤ Type v}\n\ndef transformationToElement (η : coyoneda.obj (op X) ⟶ F) : F.obj X :=\n  η.app X (𝟙 X)\n\ndef elementToTransformation (x : F.obj X) : coyoneda.obj (op X) ⟶ F where\n  app Y := ↾fun g => F.map g x\n  naturality Y Z f := by\n    ext g\n    exact F.map_comp_apply g f x\n\ntheorem elementToTransformation_app (x : F.obj X) {Y : C} (g : X ⟶ Y) :\n    (elementToTransformation x).app Y g = F.map g x := rfl\n\ntheorem transformation_determined_by_identity (η : coyoneda.obj (op X) ⟶ F)\n    {Y : C} (g : X ⟶ Y) : η.app Y g = F.map g (transformationToElement η) :=\n  calc η.app Y g = η.app Y (𝟙 X ≫ g) := congrArg (η.app Y) (Category.id_comp g).symm\n    _ = η.app Y ((coyoneda.obj (op X)).map g (𝟙 X)) := rfl\n    _ = F.map g (η.app X (𝟙 X)) := NatTrans.naturality_apply η g (𝟙 X)\n\ntheorem elementToTransformation_transformationToElement (η : coyoneda.obj (op X) ⟶ F) :\n    elementToTransformation (transformationToElement η) = η := by\n  ext Y g\n  exact (transformation_determined_by_identity η g).symm\n\ntheorem transformationToElement_elementToTransformation (x : F.obj X) :\n    transformationToElement (elementToTransformation x) = x :=\n  calc transformationToElement (elementToTransformation x) = F.map (𝟙 X) x := rfl\n    _ = x := F.map_id_apply X x\n\ndef yonedaEquivByHand : (coyoneda.obj (op X) ⟶ F) ≃ F.obj X where\n  toFun := transformationToElement\n  invFun := elementToTransformation\n  left_inv := elementToTransformation_transformationToElement\n  right_inv := transformationToElement_elementToTransformation\n\ntheorem yonedaEquivByHand_eq_coyonedaEquiv :\n    (yonedaEquivByHand : (coyoneda.obj (op X) ⟶ F) ≃ F.obj X) = coyonedaEquiv := by\n  ext η\n  rfl\n\nend Yoneda\n\nsection Representing\n\nvariable (M : Type*) [Monoid M] (G : Type*) [Group G]\n\ndef freeMonoidOnOneGenerator : (FreeMonoid Unit →* M) ≃ M :=\n  FreeMonoid.lift.symm.trans (Equiv.funUnique Unit M)\n\ntheorem freeMonoidOnOneGenerator_apply (φ : FreeMonoid Unit →* M) :\n    freeMonoidOnOneGenerator M φ = φ (FreeMonoid.of ()) := rfl\n\ndef integersRepresentGroup : (Multiplicative ℤ →* G) ≃ G :=\n  (zpowersHom G).symm\n\ntheorem integersRepresentGroup_apply (φ : Multiplicative ℤ →* G) :\n    integersRepresentGroup G φ = φ (Multiplicative.ofAdd 1) := rfl\n\nend Representing\n\nend Mathematics.CategoryTheory\n",
   "spell": "beckon ✨Grand✨Archive✨☿✨Lore✨of✨Forms✨☿Yoneda\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿✨Primordial✨Choir✨☿Foundations\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Tally☿Bonds\nbeckon ✨Grand✨Archive✨☿Lore☿Balance☿Casting☿Charms\n\nunveil ✨Lore✨of✨Forms✨ Mirrorland\n\nplane stratum tier\n\nsanctum Arcana☿Transmutation\n\nchamber Yoneda\n\nfamiliar ⧼ᚳ ⟡ Essence tier⧽ ⟮Cosmology☿⧼stratum⧽ ᚳ⟯ ⧼🌒 ⟡ ᚳ⧽ ⧼ᚠ ⟡ ᚳ ⤳ Essence stratum⧽\n\nritual ✨Where✨the✨Self✨Pact✨Goes✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ⟡ ᚠ☿form 🌒 ⇰\n  silver✨thread☿part 🌒 ⟪◎ 🌒⟫\n\nritual ✨Carry✨the✨Token✨Everywhere✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ begets\n  part ᛇ ⇰ ↾conjure silk✨cord ⇉ ᚠ☿enchant silk✨cord jade✨cube\n  ✨keeps✨accord✨ ᛇ ᛜ copper✨wire ⇰ cast\n    extend silk✨cord\n    missile ᚠ☿✨Carry✨in✨Stages✨ silk✨cord copper✨wire jade✨cube\n\nspell ✨The✨Token✨Travels✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⧼ᛇ ⟡ ᚳ⧽ ⟪silk✨cord ⟡ 🌒 ⟿ ᛇ⟫ ⟡\n    ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫☿part ᛇ silk✨cord ≣ ᚠ☿enchant silk✨cord jade✨cube ⇰ mirror\n\nspell ✨Known✨by✨the✨Self✨Pact✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫\n    ⧼ᛇ ⟡ ᚳ⧽ ⟪silk✨cord ⟡ 🌒 ⟿ ᛇ⟫ ⟡ silver✨thread☿part ᛇ silk✨cord ≣ ᚠ☿enchant silk✨cord ⟪✨Where✨the✨Self✨Pact✨Goes✨ silver✨thread⟫ ⇰\n  litany silver✨thread☿part ᛇ silk✨cord ≣ silver✨thread☿part ᛇ ⟪◎ 🌒 ⨾ silk✨cord⟫ ⇰ sympathy ⟪silver✨thread☿part ᛇ⟫ ⟪Cosmology☿✨Self✨Pact✨First✨ silk✨cord⟫☿reflect\n    ▢ ≣ silver✨thread☿part ᛇ ⟪⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫⟫☿enchant silk✨cord ⟪◎ 🌒⟫⟫ ⇰ mirror\n    ▢ ≣ ᚠ☿enchant silk✨cord ⟪silver✨thread☿part 🌒 ⟪◎ 🌒⟫⟫ ⇰ Accord☿✨Accord✨Holds✨ silver✨thread silk✨cord ⟪◎ 🌒⟫\n\nspell ✨Rebuilt✨from✨the✨Self✨Pact✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ⟡\n    ✨Carry✨the✨Token✨Everywhere✨ ⟪✨Where✨the✨Self✨Pact✨Goes✨ silver✨thread⟫ ≣ silver✨thread ⇰ cast\n  extend ᛇ silk✨cord\n  missile ⟪✨Known✨by✨the✨Self✨Pact✨ silver✨thread silk✨cord⟫☿reflect\n\nspell ✨The✨Token✨Returns✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⟡\n    ✨Where✨the✨Self✨Pact✨Goes✨ ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫ ≣ jade✨cube ⇰\n  litany ✨Where✨the✨Self✨Pact✨Goes✨ ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫ ≣ ᚠ☿enchant ⟪◎ 🌒⟫ jade✨cube ⇰ mirror\n    ▢ ≣ jade✨cube ⇰ ᚠ☿✨Self✨Pact✨Changes✨Nothing✨ 🌒 jade✨cube\n\nritual ✨Yoneda's✨Mirror✨ ⟡ ⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ≃ ᚠ☿form 🌒 begets\n  deed ⇰ ✨Where✨the✨Self✨Pact✨Goes✨\n  ✨reverse✨deed✨ ⇰ ✨Carry✨the✨Token✨Everywhere✨\n  ✨Return✨Path✨ ⇰ ✨Rebuilt✨from✨the✨Self✨Pact✨\n  ✨Departure✨Path✨ ⇰ ✨The✨Token✨Returns✨\n\nspell ✨The✨Archive✨Keeps✨the✨Same✨Mirror✨ ⟡\n    ⟪✨Yoneda's✨Mirror✨ ⟡ ⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ≃ ᚠ☿form 🌒⟫ ≣ ✨archive's✨mirror✨ ⇰ cast\n  extend silver✨thread\n  mirror\n\nseal Yoneda\n\nchamber Proxies\n\nfamiliar ⟪ᛗ ⟡ Essence⊛⟫ ⟮Choir ᛗ⟯ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯\n\nritual ✨One✨Seed✨Holds✨Every✨Member✨ ⟡ ⟪✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ≃ ᛗ ⇰\n  ✨Primordial✨Choir✨☿descend☿reflect☿chain ⟪Portal☿✨lone✨seed✨ Mote ᛗ⟫\n\nspell ✨Where✨the✨Seed✨Goes✨ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ⟡\n    ✨One✨Seed✨Holds✨Every✨Member✨ ᛗ brass✨key ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed ⟪⟫⟫ ⇰ mirror\n\nritual ✨The✨Integers✨Hold✨Every✨Member✨ ⟡ ⟪Unchanted Balances ↝⊛ ᛰ⟫ ≃ ᛰ ⇰\n  ⟪✨powers✨of✨one✨ ᛰ⟫☿reflect\n\nspell ✨Where✨the✨Step✨Goes✨ ⟪brass✨key ⟡ Unchanted Balances ↝⊛ ᛰ⟫ ⟡\n    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant ☉⟫ ⇰ mirror\n\nseal Proxies\n\nseal Arcana☿Transmutation\n",
   "key": {
     "global": {
-      "Element": "Humour",
-      "fire": "flame",
-      "cold": "rime",
-      "double": "Twinning",
-      "double_eq": "Enlarge",
       "n": "pinch✨of✨sulfur",
       "k": "onyx✨bead",
       "ih": "echo",
-      "and_swap": "Sanctuary",
       "p": "ruby✨shard",
       "q": "ivory✨ring",
       "hp": "primalward",
       "hq": "wraithward",
-      "always_more": "Haste",
       "m": "shade",
-      "lt_succ_self": "Outpace",
-      "twice_reversed": "Mirror Image",
       "xs": "beads",
       "α": "ᚨ",
-      "Potion": "Draught",
-      "heat": "warmth",
-      "bitterness": "gall",
-      "mix": "Brew",
-      "mix_comm": "Stir",
       "add_comm": "Exchange",
-      "Named": "Pledged",
-      "name": "pledge",
-      "Titled": "Styled",
-      "title": "style",
-      "fireball": "Fireball",
-      "le_succ": "Kindle",
       "le_trans": "Relay",
-      "Abjuration": "Abjuration",
-      "Conjuration": "Conjuration",
-      "Divination": "Divination",
-      "Evocation": "Evocation",
-      "Illusion": "Illusion",
-      "Necromancy": "Necromancy",
       "a": "ash",
       "b": "elm",
       "c": "yew",
@@ -59,7 +33,6 @@
       "pow_succ": "Flare",
       "choose": "Raise",
       "choose_spec": "Bidding",
-      "turn": "Turning",
       "Mathlib": "✨Grand✨Archive✨",
       "Logic": "Reason",
       "Algebra": "✨Bound✨Veyrath✨",
@@ -397,15 +370,7 @@
       "ofAdd": "unchant",
       "η": "silver✨thread"
     },
-    "scoped": {
-      "and_swap": {
-        "hp": "left",
-        "hq": "right"
-      },
-      "«Plane Shift»": {
-        "h": "loom"
-      }
-    },
+    "scoped": {},
     "namespaces": {
       "Mathematics.GroupTheory": "Arcana☿Enchantment",
       "Mathematics.CategoryTheory": "Arcana☿Transmutation"

@@ -130,21 +130,12 @@
     "rfl": "mirror",
     "trivial": "cantrip",
     "id": "selfsame",
-    "Group": "Coven",
-    "CommGroup": "Sabbat",
     "Monoid": "Choir",
     "Semigroup": "Chorus",
-    "Subgroup": "Cabal",
     "Normal": "Hallowed",
-    "Ring": "Circle",
-    "CommRing": "Wheel",
-    "Field": "Realm",
-    "Module": "Fief",
-    "Submodule": "Manor",
     "LinearMap": "Bridge",
     "MonoidHom": "Herald",
     "RingHom": "Emissary",
-    "Equiv": "Doppelganger",
     "Iso": "Mirrorkin",
     "Preorder": "Hierarchy",
     "PartialOrder": "Pecking",
@@ -314,8 +305,7 @@
     "›",
     "!",
     "?",
-    "~",
-    "."
+    "~"
   ],
   "declWords": [
     "abbrev",
@@ -614,8 +604,5 @@
     "shade",
     "moss",
     "fell"
-  ],
-  "legacyWords": {
-    "initiate": "instance"
-  }
+  ]
 }

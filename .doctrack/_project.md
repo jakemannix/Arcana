@@ -7,7 +7,7 @@ tags: [doctrack/type/index, doctrack/status/active, doctrack/audience/claude]
 ---
 # Arcana browser editor
 
-TypeScript/Vite browser project at the root of `jakemannix/Arcana`, with the GitHub repository tracked by the `origin` remote. Original Python sources and fixtures are bundled unchanged in `prototype/`. See [[features/editor]], [[components/translator]], and [[decisions/browser-translation]]. Run and test commands are in `README.md`.
+TypeScript/Vite browser project at the root of `jakemannix/Arcana`, with the GitHub repository tracked by the `origin` remote. See [[features/editor]], [[components/translator]], and [[decisions/browser-translation]]. Run and test commands are in `README.md`.
 
 `AGENTS.md` is the entry point for future agents: it records the product intent, one-school-first scope, shared cantrips, mathematical guarantees, and the user's interaction and visual preferences.
 
@@ -16,11 +16,8 @@ TypeScript/Vite browser project at the root of `jakemannix/Arcana`, with the Git
 | src/main.ts | CodeMirror editors, synchronization, examples, import/export |
 | src/style.css | Grimoire theme and responsive layouts |
 | src/translator.ts | Tokenization and bidirectional conversion |
-| src/tables.json | Original Python vocabulary |
-| src/grimoire.key.json | Original custom name mappings |
-| src/Schools.lean | Lean examples |
-| src/Schools.spell | Python-generated golden fixture |
-| tests/translator.test.ts | Compatibility and regression coverage |
+| src/tables.json | Built-in syntax, vocabulary, symbols, and name allocation |
+| tests/translator.test.ts | Exact translation and quoted-name regression coverage |
 | index.html | Entry point and metadata |
 
 ## Graduate grimoire (2026-09-23)

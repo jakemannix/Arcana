@@ -36,7 +36,7 @@ The curated key assigns distinct runes to `G H K X R S F M A E V N U B` and `α 
 
 Use `\rune` → `ᛰ`, `\ankh` → `☥`, `\moon` → `🌒`, and `\othala` → `ᛟ` in the spell editor. The folio glossary pairs every used rune with its Lean name.
 
-The source namespace `Mathematics` becomes `Arcana`, so group theory opens with `sanctum Arcana☿Enchantment`. Saved bundles carry their own vocabulary: older bundles keep their previous carrier and structure names and decode exactly with their saved key.
+The source namespace `Mathematics` becomes `Arcana`, so group theory opens with `sanctum Arcana☿Enchantment`. Current `arcana/v1` bundles carry their vocabulary key so renamed identifiers decode exactly.
 
 ## Bestowals, Disenchantments, and the two hands
 

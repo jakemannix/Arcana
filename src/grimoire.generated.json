@@ -3,9 +3,9 @@
   "mathlibRevision": "0df444a360eaa60ab8c11dca51a86af692955474",
   "leanToolchain": "leanprover/lean4:v4.33.1",
   "translatorHash": "562b1bdc3fa342fac54ec0bd34672d37bae42bfbd97981f735817245be07d1be",
-  "tablesHash": "e60dc43c0f9ada55e60d83e4e278197982a78fabcc098fe079b342a55afdbc4d",
-  "metadataHash": "a6d0faa0aef3a8ed8ca11f6e519cb71ade51926ae068f3454b4289079d4b715d",
-  "lexiconHash": "b74fc390a3fc48fde493d6272179b962353b11d9c598d943d33a8478c5356186",
+  "tablesHash": "25b3f6d4d32dd6c8535790db08fe10ead89a3fb74bcc80dcc861ce3c4db66acb",
+  "metadataHash": "a91058f39a64ca5f6c390b24b0aaa590bd5d1a012c3cf00c2d5faf52360fbb4c",
+  "lexiconHash": "05a5607ad9a09e97745c5d00b811ac57a353083ff28f80ecff95886e4869220b",
   "key": {
     "global": {
       "Element": "Humour",
@@ -361,7 +361,45 @@
       "units": "reversibles",
       "forget₂MonAdj": "✨lesser✨hands✨",
       "permEquivUnitsEnd": "✨Shuffles✨Are✨the✨Court's✨Reversibles✨",
-      "equivUnitsEnd": "✨court's✨reversibles✨"
+      "equivUnitsEnd": "✨court's✨reversibles✨",
+      "Yoneda": "Yoneda",
+      "Hom": "Bonds",
+      "Cast": "Casting",
+      "Lemmas": "Charms",
+      "Opposite": "Mirrorland",
+      "v": "stratum",
+      "C": "ᚳ",
+      "transformationToElement": "✨Where✨the✨Self✨Pact✨Goes✨",
+      "coyoneda": "✨pacts✨out✨of✨",
+      "obj": "form",
+      "op": "mirrored",
+      "app": "part",
+      "elementToTransformation": "✨Carry✨the✨Token✨Everywhere✨",
+      "Y": "ᛇ",
+      "naturality": "✨keeps✨accord✨",
+      "Z": "ᛜ",
+      "map_comp_apply": "✨Carry✨in✨Stages✨",
+      "elementToTransformation_app": "✨The✨Token✨Travels✨",
+      "transformation_determined_by_identity": "✨Known✨by✨the✨Self✨Pact✨",
+      "id_comp": "✨Self✨Pact✨First✨",
+      "NatTrans": "Accord",
+      "naturality_apply": "✨Accord✨Holds✨",
+      "elementToTransformation_transformationToElement": "✨Rebuilt✨from✨the✨Self✨Pact✨",
+      "transformationToElement_elementToTransformation": "✨The✨Token✨Returns✨",
+      "map_id_apply": "✨Self✨Pact✨Changes✨Nothing✨",
+      "yonedaEquivByHand": "✨Yoneda's✨Mirror✨",
+      "yonedaEquivByHand_eq_coyonedaEquiv": "✨The✨Archive✨Keeps✨the✨Same✨Mirror✨",
+      "coyonedaEquiv": "✨archive's✨mirror✨",
+      "Representing": "Proxies",
+      "freeMonoidOnOneGenerator": "✨One✨Seed✨Holds✨Every✨Member✨",
+      "funUnique": "✨lone✨seed✨",
+      "freeMonoidOnOneGenerator_apply": "✨Where✨the✨Seed✨Goes✨",
+      "integersRepresentGroup": "✨The✨Integers✨Hold✨Every✨Member✨",
+      "Multiplicative": "Unchanted",
+      "zpowersHom": "✨powers✨of✨one✨",
+      "integersRepresentGroup_apply": "✨Where✨the✨Step✨Goes✨",
+      "ofAdd": "unchant",
+      "η": "silver✨thread"
     },
     "scoped": {
       "and_swap": {
@@ -382,7 +420,7 @@
     "originalBuild": true,
     "decodedBuild": true,
     "axiomAudit": true,
-    "declarationCount": 72
+    "declarationCount": 84
   },
   "entries": [
     {
@@ -3853,6 +3891,413 @@
         "Mathematics.CategoryTheory.unitsLift_unique",
         "Mathematics.CategoryTheory.forgetUnitsAdjunction",
         "Mathematics.CategoryTheory.permEquivUnitsEnd"
+      ]
+    },
+    {
+      "id": "yoneda",
+      "school": "Transmutation",
+      "title": "Known by its pacts",
+      "subtitle": "The Yoneda lemma, built by hand",
+      "file": "Mathematics/CategoryTheory/Yoneda.lean",
+      "level": "I · Foundations",
+      "summary": "To know a creature, watch the pacts that leave it. A natural way of turning those pacts into tokens is fixed by one choice: where the creature's pact with itself goes.",
+      "meaning": "For an object X of a category C and a functor F from C to types, natural transformations from Hom(X, –) to F correspond exactly to elements of F(X). A transformation α gives α_X(id_X); an element x gives the transformation sending g : X → Y to F(g)(x). So X is known completely by the functor Hom(X, –). Two examples: a monoid homomorphism from the free monoid on one generator is the same as one element of the monoid, and a group homomorphism from the integers is the same as one element of the group. Nobuo Yoneda explained the idea to Saunders Mac Lane in 1954, in a café at the Gare du Nord in Paris.",
+      "hypotheses": "C is any category whose morphisms between two objects form a type in universe v, and F takes values in that universe. This is the covariant form, with Hom(X, –); the classical form with Hom(–, X) and presheaves is its mirror image, and mathlib proves both. Cayley's theorem is this lemma applied to a group seen as a category with a single object.",
+      "proofIdea": "Naturality is the whole proof. For g : X → Y, the identity pact id_X followed by g is g itself, so α_Y(g) = α_Y(id_X ≫ g) = F(g)(α_X(id_X)). Every value of α is therefore fixed by α_X(id_X). In the other direction, F(id_X)(x) = x because functors keep identities. The last spell checks that the hand-built correspondence is exactly mathlib's coyonedaEquiv.",
+      "prerequisites": [
+        "adjoints"
+      ],
+      "concepts": [
+        "coyoneda",
+        "NatTrans",
+        "Functor",
+        "FreeMonoid",
+        "zpowersHom"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/CategoryTheory/Yoneda.lean",
+          "symbol": "CategoryTheory.coyonedaEquiv",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/CategoryTheory/Yoneda.lean#L1005"
+        },
+        {
+          "path": "Mathlib/Algebra/FreeMonoid/Basic.lean",
+          "symbol": "FreeMonoid.lift",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/FreeMonoid/Basic.lean#L315"
+        },
+        {
+          "path": "Mathlib/Data/Int/Cast/Lemmas.lean",
+          "symbol": "zpowersHom",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Int/Cast/Lemmas.lean#L283"
+        }
+      ],
+      "lean": "import Mathlib.CategoryTheory.Yoneda\nimport Mathlib.Algebra.FreeMonoid.Basic\nimport Mathlib.Algebra.Group.Nat.Hom\nimport Mathlib.Data.Int.Cast.Lemmas\n\nopen CategoryTheory Opposite\n\nuniverse v u\n\nnamespace Mathematics.CategoryTheory\n\nsection Yoneda\n\nvariable {C : Type u} [Category.{v} C] {X : C} {F : C ⥤ Type v}\n\ndef transformationToElement (η : coyoneda.obj (op X) ⟶ F) : F.obj X :=\n  η.app X (𝟙 X)\n\ndef elementToTransformation (x : F.obj X) : coyoneda.obj (op X) ⟶ F where\n  app Y := ↾fun g => F.map g x\n  naturality Y Z f := by\n    ext g\n    exact F.map_comp_apply g f x\n\ntheorem elementToTransformation_app (x : F.obj X) {Y : C} (g : X ⟶ Y) :\n    (elementToTransformation x).app Y g = F.map g x := rfl\n\ntheorem transformation_determined_by_identity (η : coyoneda.obj (op X) ⟶ F)\n    {Y : C} (g : X ⟶ Y) : η.app Y g = F.map g (transformationToElement η) :=\n  calc η.app Y g = η.app Y (𝟙 X ≫ g) := congrArg (η.app Y) (Category.id_comp g).symm\n    _ = η.app Y ((coyoneda.obj (op X)).map g (𝟙 X)) := rfl\n    _ = F.map g (η.app X (𝟙 X)) := NatTrans.naturality_apply η g (𝟙 X)\n\ntheorem elementToTransformation_transformationToElement (η : coyoneda.obj (op X) ⟶ F) :\n    elementToTransformation (transformationToElement η) = η := by\n  ext Y g\n  exact (transformation_determined_by_identity η g).symm\n\ntheorem transformationToElement_elementToTransformation (x : F.obj X) :\n    transformationToElement (elementToTransformation x) = x :=\n  calc transformationToElement (elementToTransformation x) = F.map (𝟙 X) x := rfl\n    _ = x := F.map_id_apply X x\n\ndef yonedaEquivByHand : (coyoneda.obj (op X) ⟶ F) ≃ F.obj X where\n  toFun := transformationToElement\n  invFun := elementToTransformation\n  left_inv := elementToTransformation_transformationToElement\n  right_inv := transformationToElement_elementToTransformation\n\ntheorem yonedaEquivByHand_eq_coyonedaEquiv :\n    (yonedaEquivByHand : (coyoneda.obj (op X) ⟶ F) ≃ F.obj X) = coyonedaEquiv := by\n  ext η\n  rfl\n\nend Yoneda\n\nsection Representing\n\nvariable (M : Type*) [Monoid M] (G : Type*) [Group G]\n\ndef freeMonoidOnOneGenerator : (FreeMonoid Unit →* M) ≃ M :=\n  FreeMonoid.lift.symm.trans (Equiv.funUnique Unit M)\n\ntheorem freeMonoidOnOneGenerator_apply (φ : FreeMonoid Unit →* M) :\n    freeMonoidOnOneGenerator M φ = φ (FreeMonoid.of ()) := rfl\n\ndef integersRepresentGroup : (Multiplicative ℤ →* G) ≃ G :=\n  (zpowersHom G).symm\n\ntheorem integersRepresentGroup_apply (φ : Multiplicative ℤ →* G) :\n    integersRepresentGroup G φ = φ (Multiplicative.ofAdd 1) := rfl\n\nend Representing\n\nend Mathematics.CategoryTheory\n",
+      "spell": "beckon ✨Grand✨Archive✨☿✨Lore✨of✨Forms✨☿Yoneda\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿✨Primordial✨Choir✨☿Foundations\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Tally☿Bonds\nbeckon ✨Grand✨Archive✨☿Lore☿Balance☿Casting☿Charms\n\nunveil ✨Lore✨of✨Forms✨ Mirrorland\n\nplane stratum tier\n\nsanctum Arcana☿Transmutation\n\nchamber Yoneda\n\nfamiliar ⧼ᚳ ⟡ Essence tier⧽ ⟮Cosmology☿⧼stratum⧽ ᚳ⟯ ⧼🌒 ⟡ ᚳ⧽ ⧼ᚠ ⟡ ᚳ ⤳ Essence stratum⧽\n\nritual ✨Where✨the✨Self✨Pact✨Goes✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ⟡ ᚠ☿form 🌒 ⇰\n  silver✨thread☿part 🌒 ⟪◎ 🌒⟫\n\nritual ✨Carry✨the✨Token✨Everywhere✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ begets\n  part ᛇ ⇰ ↾conjure silk✨cord ⇉ ᚠ☿enchant silk✨cord jade✨cube\n  ✨keeps✨accord✨ ᛇ ᛜ copper✨wire ⇰ cast\n    extend silk✨cord\n    missile ᚠ☿✨Carry✨in✨Stages✨ silk✨cord copper✨wire jade✨cube\n\nspell ✨The✨Token✨Travels✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⧼ᛇ ⟡ ᚳ⧽ ⟪silk✨cord ⟡ 🌒 ⟿ ᛇ⟫ ⟡\n    ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫☿part ᛇ silk✨cord ≣ ᚠ☿enchant silk✨cord jade✨cube ⇰ mirror\n\nspell ✨Known✨by✨the✨Self✨Pact✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫\n    ⧼ᛇ ⟡ ᚳ⧽ ⟪silk✨cord ⟡ 🌒 ⟿ ᛇ⟫ ⟡ silver✨thread☿part ᛇ silk✨cord ≣ ᚠ☿enchant silk✨cord ⟪✨Where✨the✨Self✨Pact✨Goes✨ silver✨thread⟫ ⇰\n  litany silver✨thread☿part ᛇ silk✨cord ≣ silver✨thread☿part ᛇ ⟪◎ 🌒 ⨾ silk✨cord⟫ ⇰ sympathy ⟪silver✨thread☿part ᛇ⟫ ⟪Cosmology☿✨Self✨Pact✨First✨ silk✨cord⟫☿reflect\n    ▢ ≣ silver✨thread☿part ᛇ ⟪⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫⟫☿enchant silk✨cord ⟪◎ 🌒⟫⟫ ⇰ mirror\n    ▢ ≣ ᚠ☿enchant silk✨cord ⟪silver✨thread☿part 🌒 ⟪◎ 🌒⟫⟫ ⇰ Accord☿✨Accord✨Holds✨ silver✨thread silk✨cord ⟪◎ 🌒⟫\n\nspell ✨Rebuilt✨from✨the✨Self✨Pact✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ⟡\n    ✨Carry✨the✨Token✨Everywhere✨ ⟪✨Where✨the✨Self✨Pact✨Goes✨ silver✨thread⟫ ≣ silver✨thread ⇰ cast\n  extend ᛇ silk✨cord\n  missile ⟪✨Known✨by✨the✨Self✨Pact✨ silver✨thread silk✨cord⟫☿reflect\n\nspell ✨The✨Token✨Returns✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⟡\n    ✨Where✨the✨Self✨Pact✨Goes✨ ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫ ≣ jade✨cube ⇰\n  litany ✨Where✨the✨Self✨Pact✨Goes✨ ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫ ≣ ᚠ☿enchant ⟪◎ 🌒⟫ jade✨cube ⇰ mirror\n    ▢ ≣ jade✨cube ⇰ ᚠ☿✨Self✨Pact✨Changes✨Nothing✨ 🌒 jade✨cube\n\nritual ✨Yoneda's✨Mirror✨ ⟡ ⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ≃ ᚠ☿form 🌒 begets\n  deed ⇰ ✨Where✨the✨Self✨Pact✨Goes✨\n  ✨reverse✨deed✨ ⇰ ✨Carry✨the✨Token✨Everywhere✨\n  ✨Return✨Path✨ ⇰ ✨Rebuilt✨from✨the✨Self✨Pact✨\n  ✨Departure✨Path✨ ⇰ ✨The✨Token✨Returns✨\n\nspell ✨The✨Archive✨Keeps✨the✨Same✨Mirror✨ ⟡\n    ⟪✨Yoneda's✨Mirror✨ ⟡ ⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ≃ ᚠ☿form 🌒⟫ ≣ ✨archive's✨mirror✨ ⇰ cast\n  extend silver✨thread\n  mirror\n\nseal Yoneda\n\nchamber Proxies\n\nfamiliar ⟪ᛗ ⟡ Essence⊛⟫ ⟮Choir ᛗ⟯ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯\n\nritual ✨One✨Seed✨Holds✨Every✨Member✨ ⟡ ⟪✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ≃ ᛗ ⇰\n  ✨Primordial✨Choir✨☿descend☿reflect☿chain ⟪Portal☿✨lone✨seed✨ Mote ᛗ⟫\n\nspell ✨Where✨the✨Seed✨Goes✨ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ⟡\n    ✨One✨Seed✨Holds✨Every✨Member✨ ᛗ brass✨key ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed ⟪⟫⟫ ⇰ mirror\n\nritual ✨The✨Integers✨Hold✨Every✨Member✨ ⟡ ⟪Unchanted Balances ↝⊛ ᛰ⟫ ≃ ᛰ ⇰\n  ⟪✨powers✨of✨one✨ ᛰ⟫☿reflect\n\nspell ✨Where✨the✨Step✨Goes✨ ⟪brass✨key ⟡ Unchanted Balances ↝⊛ ᛰ⟫ ⟡\n    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant ☉⟫ ⇰ mirror\n\nseal Proxies\n\nseal Arcana☿Transmutation\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "section",
+          "arcane": "chamber"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "open",
+          "arcane": "unveil"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "universe",
+          "arcane": "plane"
+        },
+        {
+          "lean": "where",
+          "arcane": "begets"
+        },
+        {
+          "lean": "by",
+          "arcane": "cast"
+        },
+        {
+          "lean": "fun",
+          "arcane": "conjure"
+        },
+        {
+          "lean": "calc",
+          "arcane": "litany"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Nat",
+          "arcane": "Tally"
+        },
+        {
+          "lean": "Int",
+          "arcane": "Balance"
+        },
+        {
+          "lean": "Unit",
+          "arcane": "Mote"
+        },
+        {
+          "lean": "ℤ",
+          "arcane": "Balances"
+        },
+        {
+          "lean": "map",
+          "arcane": "enchant"
+        },
+        {
+          "lean": "symm",
+          "arcane": "reflect"
+        },
+        {
+          "lean": "trans",
+          "arcane": "chain"
+        },
+        {
+          "lean": "congrArg",
+          "arcane": "sympathy"
+        },
+        {
+          "lean": "rfl",
+          "arcane": "mirror"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Monoid",
+          "arcane": "Choir"
+        },
+        {
+          "lean": "Equiv",
+          "arcane": "Portal"
+        },
+        {
+          "lean": "exact",
+          "arcane": "missile"
+        },
+        {
+          "lean": "ext",
+          "arcane": "extend"
+        },
+        {
+          "lean": "f",
+          "arcane": "copper✨wire"
+        },
+        {
+          "lean": "g",
+          "arcane": "silk✨cord"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "✨Grand✨Archive✨"
+        },
+        {
+          "lean": "Algebra",
+          "arcane": "✨Bound✨Veyrath✨"
+        },
+        {
+          "lean": "G",
+          "arcane": "ᛰ"
+        },
+        {
+          "lean": "X",
+          "arcane": "🌒"
+        },
+        {
+          "lean": "x",
+          "arcane": "jade✨cube"
+        },
+        {
+          "lean": "lift",
+          "arcane": "descend"
+        },
+        {
+          "lean": "Basic",
+          "arcane": "Foundations"
+        },
+        {
+          "lean": "left_inv",
+          "arcane": "✨Return✨Path✨"
+        },
+        {
+          "lean": "right_inv",
+          "arcane": "✨Departure✨Path✨"
+        },
+        {
+          "lean": "Data",
+          "arcane": "Lore"
+        },
+        {
+          "lean": "F",
+          "arcane": "ᚠ"
+        },
+        {
+          "lean": "M",
+          "arcane": "ᛗ"
+        },
+        {
+          "lean": "toFun",
+          "arcane": "deed"
+        },
+        {
+          "lean": "invFun",
+          "arcane": "✨reverse✨deed✨"
+        },
+        {
+          "lean": "FreeMonoid",
+          "arcane": "✨Primordial✨Choir✨"
+        },
+        {
+          "lean": "Category",
+          "arcane": "Cosmology"
+        },
+        {
+          "lean": "CategoryTheory",
+          "arcane": "✨Lore✨of✨Forms✨"
+        },
+        {
+          "lean": "of",
+          "arcane": "seed"
+        },
+        {
+          "lean": "φ",
+          "arcane": "brass✨key"
+        },
+        {
+          "lean": "Yoneda",
+          "arcane": "Yoneda"
+        },
+        {
+          "lean": "Hom",
+          "arcane": "Bonds"
+        },
+        {
+          "lean": "Cast",
+          "arcane": "Casting"
+        },
+        {
+          "lean": "Lemmas",
+          "arcane": "Charms"
+        },
+        {
+          "lean": "Opposite",
+          "arcane": "Mirrorland"
+        },
+        {
+          "lean": "C",
+          "arcane": "ᚳ"
+        },
+        {
+          "lean": "transformationToElement",
+          "arcane": "✨Where✨the✨Self✨Pact✨Goes✨"
+        },
+        {
+          "lean": "coyoneda",
+          "arcane": "✨pacts✨out✨of✨"
+        },
+        {
+          "lean": "obj",
+          "arcane": "form"
+        },
+        {
+          "lean": "op",
+          "arcane": "mirrored"
+        },
+        {
+          "lean": "app",
+          "arcane": "part"
+        },
+        {
+          "lean": "elementToTransformation",
+          "arcane": "✨Carry✨the✨Token✨Everywhere✨"
+        },
+        {
+          "lean": "Y",
+          "arcane": "ᛇ"
+        },
+        {
+          "lean": "naturality",
+          "arcane": "✨keeps✨accord✨"
+        },
+        {
+          "lean": "Z",
+          "arcane": "ᛜ"
+        },
+        {
+          "lean": "map_comp_apply",
+          "arcane": "✨Carry✨in✨Stages✨"
+        },
+        {
+          "lean": "elementToTransformation_app",
+          "arcane": "✨The✨Token✨Travels✨"
+        },
+        {
+          "lean": "transformation_determined_by_identity",
+          "arcane": "✨Known✨by✨the✨Self✨Pact✨"
+        },
+        {
+          "lean": "id_comp",
+          "arcane": "✨Self✨Pact✨First✨"
+        },
+        {
+          "lean": "NatTrans",
+          "arcane": "Accord"
+        },
+        {
+          "lean": "naturality_apply",
+          "arcane": "✨Accord✨Holds✨"
+        },
+        {
+          "lean": "elementToTransformation_transformationToElement",
+          "arcane": "✨Rebuilt✨from✨the✨Self✨Pact✨"
+        },
+        {
+          "lean": "transformationToElement_elementToTransformation",
+          "arcane": "✨The✨Token✨Returns✨"
+        },
+        {
+          "lean": "map_id_apply",
+          "arcane": "✨Self✨Pact✨Changes✨Nothing✨"
+        },
+        {
+          "lean": "yonedaEquivByHand",
+          "arcane": "✨Yoneda's✨Mirror✨"
+        },
+        {
+          "lean": "yonedaEquivByHand_eq_coyonedaEquiv",
+          "arcane": "✨The✨Archive✨Keeps✨the✨Same✨Mirror✨"
+        },
+        {
+          "lean": "coyonedaEquiv",
+          "arcane": "✨archive's✨mirror✨"
+        },
+        {
+          "lean": "Representing",
+          "arcane": "Proxies"
+        },
+        {
+          "lean": "freeMonoidOnOneGenerator",
+          "arcane": "✨One✨Seed✨Holds✨Every✨Member✨"
+        },
+        {
+          "lean": "funUnique",
+          "arcane": "✨lone✨seed✨"
+        },
+        {
+          "lean": "freeMonoidOnOneGenerator_apply",
+          "arcane": "✨Where✨the✨Seed✨Goes✨"
+        },
+        {
+          "lean": "integersRepresentGroup",
+          "arcane": "✨The✨Integers✨Hold✨Every✨Member✨"
+        },
+        {
+          "lean": "Multiplicative",
+          "arcane": "Unchanted"
+        },
+        {
+          "lean": "zpowersHom",
+          "arcane": "✨powers✨of✨one✨"
+        },
+        {
+          "lean": "integersRepresentGroup_apply",
+          "arcane": "✨Where✨the✨Step✨Goes✨"
+        },
+        {
+          "lean": "ofAdd",
+          "arcane": "unchant"
+        },
+        {
+          "lean": "η",
+          "arcane": "silver✨thread"
+        },
+        {
+          "lean": "Mathematics.CategoryTheory",
+          "arcane": "Arcana☿Transmutation"
+        }
+      ],
+      "sourceHash": "6bc90d4b253b8a25c6db2c7ef758813c9b54545960feeb29a60d3f4ea47ef70b",
+      "spellHash": "26bda310ab47f262690f949cda55f7fda8103380eb2d4f2c32b54437b80b8c00",
+      "declarations": [
+        "Mathematics.CategoryTheory.transformationToElement",
+        "Mathematics.CategoryTheory.elementToTransformation",
+        "Mathematics.CategoryTheory.elementToTransformation_app",
+        "Mathematics.CategoryTheory.transformation_determined_by_identity",
+        "Mathematics.CategoryTheory.elementToTransformation_transformationToElement",
+        "Mathematics.CategoryTheory.transformationToElement_elementToTransformation",
+        "Mathematics.CategoryTheory.yonedaEquivByHand",
+        "Mathematics.CategoryTheory.yonedaEquivByHand_eq_coyonedaEquiv",
+        "Mathematics.CategoryTheory.freeMonoidOnOneGenerator",
+        "Mathematics.CategoryTheory.freeMonoidOnOneGenerator_apply",
+        "Mathematics.CategoryTheory.integersRepresentGroup",
+        "Mathematics.CategoryTheory.integersRepresentGroup_apply"
       ]
     }
   ]

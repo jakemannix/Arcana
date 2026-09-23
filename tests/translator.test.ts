@@ -30,6 +30,17 @@ test('namespace glyph leaves quoted text, decimal points and ellipses intact', (
   assert.equal(fromSpell(toSpell('Foo☿Foo ⟄☿', key), key), 'Foo☿Foo ⟄☿');
 });
 
+test('sparkle names and the inverse dagger translate both ways', () => {
+  const key = new Key({ global: { map_inv: '✨Carry✨the✨Reversal✨', x: 'mark', f: 'warp' }, scoped: {} });
+  const source = 'MonoidHom.map_inv f x : f x⁻¹ = (f x)⁻¹';
+  const spell = 'Herald☿✨Carry✨the✨Reversal✨ warp mark ⟡ warp mark† ≣ ⟪warp mark⟫†';
+  assert.equal(toSpell(source, key), spell);
+  assert.equal(fromSpell(spell, key), source);
+  const literal = 'def a := "✨†" -- ✨\n#check ✨ †';
+  assert.equal(fromSpell(toSpell(literal, key), key), literal);
+  assert.throws(() => new Key({ global: { x: '✨Broken✨sparkle' }, scoped: {} }));
+});
+
 test('round trip survives saving and reopening the name key', () => {
   const key = new Key(grimoire), source = fixture('Schools.lean') + '\ndef newName := 3\n';
   const spell = toSpell(source, key);

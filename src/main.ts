@@ -5,7 +5,7 @@ import { indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
 import { Key, WORDS, fromSpell, toSpell, type KeyData } from './translator';
-import { folios, grimoireKey, isCheckedSource, type Folio } from './catalog';
+import { folios, grimoireKey, isCheckedSource, provenance, type Folio } from './catalog';
 import { foldAll, unfoldAll } from '@codemirror/language';
 import { spellFolding, sparkleAt, shimmer } from './magic';
 import './style.css';
@@ -32,7 +32,7 @@ app.innerHTML = `
       <div class="school-heading"><span aria-hidden="true">⟐</span><div><p class="eyebrow">SCHOOL OF</p><h1>Enchantment</h1></div></div>
       <p class="school-description">Groups, pacts, and the structure that survives a transformation.</p>
       <nav id="chapter-nav" aria-label="Enchantment lessons"></nav>
-      <div class="contents-foot"><strong>Real mathematics. Arcane language.</strong><p>8 lessons · 1 shared foundation<br>40 checked declarations</p><a href="/grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
+      <div class="contents-foot"><strong>Real mathematics. Arcane language.</strong><p>8 lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="/grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
     </aside>
     <div class="reading-desk">
       <section class="folio-introduction"><p class="eyebrow" id="folio-level"></p><h2 id="folio-title"></h2><p class="folio-subtitle" id="folio-subtitle"></p><p class="lede" id="folio-summary"></p></section>
@@ -78,6 +78,7 @@ const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
     if (stream.match(/"(?:[^"\\]|\\.)*"?/)) return 'string';
     if (stream.match(/«[^»]*»/)) return 'variableName';
     if (stream.match(/\d+|[⊘☉]/)) return 'number';
+    if (stream.match(/✨(?:[\p{L}_][\p{L}\p{N}\p{M}_'!?]*✨)+/u)) return 'atom';
     const word = stream.match(/[\p{L}_][\p{L}\p{N}\p{M}_\u00a0'!?]*/u);
     if (word) {
       const text = (word as RegExpMatchArray)[0];
@@ -90,6 +91,7 @@ const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
 const highlight = HighlightStyle.define([
   { tag: tags.keyword, color: '#91b7cb' },
   { tag: tags.variableName, color: '#e4dcc7' },
+  { tag: tags.atom, color: '#ecd29a' },
   { tag: tags.number, color: '#d1b57d' },
   { tag: tags.string, color: '#9ebd9a' },
   { tag: tags.comment, color: '#83948f', fontStyle: 'italic' },

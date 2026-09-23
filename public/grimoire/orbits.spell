@@ -1,40 +1,40 @@
 beckon Arcanum☿Enchantment☿Lagrange
-beckon GrandArchive☿CovenLore☿Commands☿Effigies
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Commands☿Effigies
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯
 
-spell SamePlaceSameVeil ⟪mark ⟡ realm⟫ ⟪weft cinder ⟡ coven⟫ ⟡
-    weft • mark ≣ cinder • mark ↭ weft⁻¹ ⊛ cinder ∈ Commanding☿stillguard coven mark ⇰ cast
-  transmute ⟮Commanding☿StillguardCriterion⟯
+spell ✨Same✨Place✨Same✨Veil✨ ⟪mark ⟡ realm⟫ ⟪weft cinder ⟡ coven⟫ ⟡
+    weft • mark ≣ cinder • mark ↭ weft† ⊛ cinder ∈ Commanding☿stillguard coven mark ⇰ cast
+  transmute ⟮Commanding☿✨Stillguard✨Criterion✨⟯
   fabricate
   ❖ summon meeting
-    litany ⟪weft⁻¹ ⊛ cinder⟫ • mark ≣ weft⁻¹ • cinder • mark ⇰ CommandInStages weft⁻¹ cinder mark
-      ▢ ≣ weft⁻¹ • weft • mark ⇰ sympathy ⟪conjure wisp ⇉ weft⁻¹ • wisp⟫ meeting☿reflect
-      ▢ ≣ mark ⇰ CommandRevoked weft mark
+    litany ⟪weft† ⊛ cinder⟫ • mark ≣ weft† • cinder • mark ⇰ ✨Command✨in✨Stages✨ weft† cinder mark
+      ▢ ≣ weft† • weft • mark ⇰ sympathy ⟪conjure wisp ⇉ weft† • wisp⟫ meeting☿reflect
+      ▢ ≣ mark ⇰ ✨Command✨Revoked✨ weft mark
   ❖ summon unmoved
-    litany weft • mark ≣ weft • ⟪weft⁻¹ ⊛ cinder⟫ • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ unmoved☿reflect
-      ▢ ≣ weft • weft⁻¹ • cinder • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ ⟪CommandInStages weft⁻¹ cinder mark⟫
-      ▢ ≣ cinder • mark ⇰ RevocationCommanded weft ⟪cinder • mark⟫
+    litany weft • mark ≣ weft • ⟪weft† ⊛ cinder⟫ • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ unmoved☿reflect
+      ▢ ≣ weft • weft† • cinder • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ ⟪✨Command✨in✨Stages✨ weft† cinder mark⟫
+      ▢ ≣ cinder • mark ⇰ ✨Revocation✨Commanded✨ weft ⟪cinder • mark⟫
 
-ineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡
+ineffable ritual ✨Orbit✨Portal✨ ⟪mark ⟡ realm⟫ ⟡
     Commanding☿procession coven mark ≃ coven ⧸ Commanding☿stillguard coven mark ⇰
-  Commanding☿OrbitCorrespondence coven mark
+  Commanding☿✨Orbit✨Correspondence✨ coven mark
 
-spell CommandThroughThePortal ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡
-    ⟪⟪OrbitPortal mark⟫☿reflect ⟪VeiledCoven☿forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror
+spell ✨Command✨through✨the✨Portal✨ ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡
+    ⟪⟪✨Orbit✨Portal✨ mark⟫☿reflect ⟪✨Veiled✨Coven✨☿forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror
 
-spell ProcessionCountsVeils ⟪mark ⟡ realm⟫ ⟡
+spell ✨Procession✨Counts✨Veils✨ ⟪mark ⟡ realm⟫ ⟡
     Tally☿census ⟪Commanding☿procession coven mark⟫ ≣ Tally☿census ⟪coven ⧸ Commanding☿stillguard coven mark⟫ ⇰
-  Tally☿CensusThroughPortal ⟪OrbitPortal mark⟫
+  Tally☿✨Census✨through✨Portal✨ ⟪✨Orbit✨Portal✨ mark⟫
 
-spell OrbitOfCommand ⟪mark ⟡ realm⟫ ⟡
+spell ✨Orbit✨of✨Command✨ ⟪mark ⟡ realm⟫ ⟡
     Tally☿census ⟪Commanding☿procession coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫ ≣
       Tally☿census coven ⇰
   litany Tally☿census ⟪Commanding☿procession coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫
         ≣ Tally☿census ⟪coven ⧸ Commanding☿stillguard coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫ ⇰
-          sympathy ⟪conjure ember ⇉ ember ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫⟫ ⟪ProcessionCountsVeils mark⟫
-    ▢ ≣ Tally☿census coven ⇰ ⟪CountTheVeils ⟪Commanding☿stillguard coven mark⟫⟫☿reflect
+          sympathy ⟪conjure ember ⇉ ember ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫⟫ ⟪✨Procession✨Counts✨Veils✨ mark⟫
+    ▢ ≣ Tally☿census coven ⇰ ⟪✨Count✨the✨Veils✨ ⟪Commanding☿stillguard coven mark⟫⟫☿reflect
 
 seal Arcanum☿Enchantment

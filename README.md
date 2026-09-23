@@ -14,6 +14,8 @@ Original folios show **Lean checked** only while their source exactly matches a 
 
 Arcane namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Older spells using dots still import. Decimal points and literal text retain their original punctuation.
 
+Multi-word Arcane names are joined with sparkles: `✨Preserve✨the✨Binding✨` translates to `pact_preserves_product`. A group inverse is a dagger, so `mark†` means `x⁻¹`. Literal ✨ and † characters in Lean source are escaped, so translation stays exact.
+
 Drafts survive switching folios within a tab. Download a grimoire JSON bundle to retain both texts and the name key; reloads lose unsaved drafts. **Open file** accepts those bundles, `.lean`, or `.spell` (using the current key). Original source downloads are provided per folio. CodeMirror's search, undo, redo, indentation, and folding shortcuts are available. Escape followed by Tab leaves an editor.
 
 ## Run the browser locally
@@ -43,7 +45,7 @@ npm run build
 
 Lean is pinned by `math/lean-toolchain` to **v4.33.1**. Mathlib is locked to **0df444a360eaa60ab8c11dca51a86af692955474** in `math/lake-manifest.json`. The verifier checks the dependency checkout, compiles the original project, translates every folio using one curated lexicon, reloads the serialized key, checks byte-for-byte decoding, and independently compiles the decoded modules with their own import path. It then inspects all 50 declarations with `#print axioms` and allows only the three standard axioms listed above.
 
-Only after all checks pass does it generate the browser catalog, `.lean`/`.spell` downloads, bundles, key, audit, and readable book. `npm test` detects stale source, vocabulary, and metadata; validates all translations and prerequisite links; and tests folding boundaries and the edited-proof status. The 33 tests include the prototype's compatibility regressions and namespace glyph handling.
+Only after all checks pass does it generate the browser catalog, `.lean`/`.spell` downloads, bundles, key, audit, and readable book. `npm test` detects stale source, vocabulary, and metadata; validates all translations and prerequisite links; and tests folding boundaries and the edited-proof status. The 34 tests include the prototype's compatibility regressions, namespace glyph handling, and sparkle names.
 
 ## Structure
 

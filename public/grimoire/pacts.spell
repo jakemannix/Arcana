@@ -1,39 +1,39 @@
 beckon Arcanum☿Cantrips
-beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences
+beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Silences
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯
 
-ritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft☿threading warp
+ritual ✨Chain✨of✨Pacts✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft☿threading warp
 
-spell PreserveTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡
-    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿CarryTheBinding mark rune
+spell ✨Preserve✨the✨Binding✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡
+    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿✨Carry✨the✨Binding✨ mark rune
 
-spell PreserveTheStillness ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp ☉ ≣ ☉ ⇰ cast
+spell ✨Preserve✨the✨Stillness✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp ☉ ≣ ☉ ⇰ cast
   bind doubled ⟡ warp ☉ ⊛ warp ☉ ≣ warp ☉ ⊛ ☉ ⇰
-    litany warp ☉ ⊛ warp ☉ ≣ warp ⟪☉ ⊛ ☉⟫ ⇰ ⟪PreserveTheBinding warp ☉ ☉⟫☿reflect
-      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪BindWithStillness ☉⟫
-      ▢ ≣ warp ☉ ⊛ ☉ ⇰ ⟪BindWithStillness ⟪warp ☉⟫⟫☿reflect
-  missile StrikeFromTheLeft doubled
+    litany warp ☉ ⊛ warp ☉ ≣ warp ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp ☉ ☉⟫☿reflect
+      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Bind✨with✨Stillness✨ ☉⟫
+      ▢ ≣ warp ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪warp ☉⟫⟫☿reflect
+  missile ✨Strike✨from✨the✨Left✨ doubled
 
-spell ReverseTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ cast
-  bind undone ⟡ warp mark⁻¹ ⊛ warp mark ≣ ☉ ⇰
-    litany warp mark⁻¹ ⊛ warp mark ≣ warp ⟪mark⁻¹ ⊛ mark⟫ ⇰ ⟪PreserveTheBinding warp mark⁻¹ mark⟫☿reflect
-      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪ReversalUndoes mark⟫
-      ▢ ≣ ☉ ⇰ PreserveTheStillness warp
-  missile UndoerIsReversal undone
+spell ✨Reverse✨the✨Binding✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    warp mark† ≣ ⟪warp mark⟫† ⇰ cast
+  bind undone ⟡ warp mark† ⊛ warp mark ≣ ☉ ⇰
+    litany warp mark† ⊛ warp mark ≣ warp ⟪mark† ⊛ mark⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp mark† mark⟫☿reflect
+      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Reversal✨Undoes✨ mark⟫
+      ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ warp
+  missile ✨Undoer✨is✨Reversal✨ undone
 
-spell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫
-    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
-    Rite☿Faithful ⟪ChainOfPacts warp weft⟫ ⇰
-  Arcanum☿Cantrips☿FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard
+spell ✨Chain✨without✨Loss✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫
+    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoward ⟡ Rite☿Faithful weft⟫ ⟡
+    Rite☿Faithful ⟪✨Chain✨of✨Pacts✨ warp weft⟫ ⇰
+  Arcanum☿Cantrips☿✨Faithful✨Weaving✨ ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoward
 
-spell SilenceInTheChain ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰
-  litany mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ ChainOfPacts warp weft mark ≣ ☉ ⇰ Herald☿SilenceCriterion
+spell ✨Silence✨in✨the✨Chain✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡
+    mark ∈ ⟪✨Chain✨of✨Pacts✨ warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰
+  litany mark ∈ ⟪✨Chain✨of✨Pacts✨ warp weft⟫☿silence ↭ ✨Chain✨of✨Pacts✨ warp weft mark ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
     ▢ ↭ weft ⟪warp mark⟫ ≣ ☉ ⇰ Pact☿mirror
-    ▢ ↭ warp mark ∈ weft☿silence ⇰ Herald☿SilenceCriterion☿reflect
+    ▢ ↭ warp mark ∈ weft☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
 seal Arcanum☿Enchantment

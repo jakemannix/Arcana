@@ -4,7 +4,7 @@ export type NameMap = Record<string, string>;
 export interface KeyData { global: NameMap; scoped: Record<string, NameMap>; auto?: string[] }
 type Kind = 'ws' | 'comment' | 'string' | 'char' | 'num' | 'ident' | 'sym' | 'other' | 'esc';
 export interface Token { kind: Kind; text: string }
-const ESC = '⟄', NBSP = '\u00a0';
+const ESC = '⟄', NBSP = '\u00a0', SPARKLE = '✨';
 export const NAMESPACE_SEPARATOR = '☿';
 const dictionary = (table: NameMap): NameMap => Object.assign(Object.create(null), table);
 export const WORDS: NameMap = dictionary(tables.words);
@@ -13,11 +13,14 @@ const inverse = (table: NameMap): NameMap => dictionary(Object.fromEntries(Objec
 const INV_WORDS = inverse(WORDS), INV_SYMS = inverse(SYMS), INV_NUMS = dictionary({ ...inverse(NUMS), '▢': '_' });
 const declarations = new Set(tables.declWords);
 const component = String.raw`(?:«[^»]*»|[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)`;
-const spellComponent = component.replace("_'!?", "_\u00a0'!?");
+const word = String.raw`[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*`;
+// A sparkle name joins several words, as in ✨Preserve✨the✨Binding✨.
+const sparkled = `${SPARKLE}(?:${word}${SPARKLE})+`;
+const spellComponent = component.replace("_'!?", "_\u00a0'!?").replace('(?:', `(?:${sparkled}|`);
 const ident = new RegExp(`^${component}(?:\\.${component})*`, 'u');
 const spellIdent = new RegExp(`^${spellComponent}(?:[.${NAMESPACE_SEPARATOR}]${spellComponent})*`, 'u');
 const simple = /^[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*(?: [\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)*$/u;
-const legalName = /^[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_\u00a0'!?]*$/u;
+const legalName = new RegExp(`^(?:${sparkled}|[\\p{L}\\p{Nl}_][\\p{L}\\p{Nl}\\p{N}\\p{M}_\\u00a0'!?]*)$`, 'u');
 const glue = /^[\p{L}\p{Nl}\p{N}\p{M}_'!?\u00a0]/u;
 const leanSymbols = [...new Set([...Object.keys(SYMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
 const spellSymbols = [...new Set([...Object.keys(INV_SYMS), ...Object.keys(INV_NUMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
@@ -137,7 +140,7 @@ export function toSpell(source: string, key: Key): string {
       return parts.map(c => key.word(c, scope, !glue.test(tokens[i + 1]?.text ?? ''))).join(NAMESPACE_SEPARATOR);
     }
     if (token.kind === 'sym') return SYMS[t] ?? t;
-    if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || t === ESC || t === NBSP)) return ESC + t;
+    if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || t === ESC || t === NBSP || t === SPARKLE)) return ESC + t;
     return t;
   }).join('');
 }

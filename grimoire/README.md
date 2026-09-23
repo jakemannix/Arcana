@@ -15,8 +15,8 @@ A common language for all schools: weave functions together, preserve injectivit
 **Proof idea.** Each proof takes the definitions apart by hand. For injectivity, peel off g and then f from g(f(x)) = g(f(y)). For surjectivity, walk backwards: find y with g(y) = z, then x with f(x) = y, and check the chain with a calc. An equivalence stores both of its inverse laws. Enchantment's Chain of Pacts imports and uses faithful_thread.
 
 ```text
-beckon GrandArchive☿Reason☿Rite☿Foundations
-beckon GrandArchive☿Reason☿Portal☿Names
+beckon ✨Grand✨Archive✨☿Reason☿Rite☿Foundations
+beckon ✨Grand✨Archive✨☿Reason☿Portal☿Names
 
 sanctum Arcanum☿Cantrips
 
@@ -24,36 +24,36 @@ familiar ⧼aether vapor vesper ⟡ Essence⊛⧽
 
 ritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ conjure mark ⇉ weft ⟪warp mark⟫
 
-spell ThreadUnfolds ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡
+spell ✨Thread✨Unfolds✨ ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡
     Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror
 
-spell FaithfulWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
-    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
+spell ✨Faithful✨Weaving✨ ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
+    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoward ⟡ Rite☿Faithful weft⟫ ⟡
     Rite☿Faithful ⟪Weave warp weft⟫ ⇰ cast
   summon mark rune twinned
-  bind outerWeave ⟡ weft ⟪warp mark⟫ ≣ weft ⟪warp rune⟫ ⇰
-    litany weft ⟪warp mark⟫ ≣ Weave warp weft mark ⇰ ⟪ThreadUnfolds warp weft mark⟫☿reflect
+  bind ✨outer✨weave✨ ⟡ weft ⟪warp mark⟫ ≣ weft ⟪warp rune⟫ ⇰
+    litany weft ⟪warp mark⟫ ≣ Weave warp weft mark ⇰ ⟪✨Thread✨Unfolds✨ warp weft mark⟫☿reflect
       ▢ ≣ Weave warp weft rune ⇰ twinned
-      ▢ ≣ weft ⟪warp rune⟫ ⇰ ThreadUnfolds warp weft rune
-  bind innerWeave ⟡ warp mark ≣ warp rune ⇰ echoWard outerWeave
-  missile faith innerWeave
+      ▢ ≣ weft ⟪warp rune⟫ ⇰ ✨Thread✨Unfolds✨ warp weft rune
+  bind ✨inner✨weave✨ ⟡ warp mark ≣ warp rune ⇰ echoward ✨outer✨weave✨
+  missile faith ✨inner✨weave✨
 
-spell ReachingWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
-    ⟪faith ⟡ Rite☿Reaching warp⟫ ⟪echoWard ⟡ Rite☿Reaching weft⟫ ⟡
+spell ✨Reaching✨Weaving✨ ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
+    ⟪faith ⟡ Rite☿Reaching warp⟫ ⟪echoward ⟡ Rite☿Reaching weft⟫ ⟡
     Rite☿Reaching ⟪Weave warp weft⟫ ⇰ cast
   summon star
-  wrest ⦉rune᛫ runeWard⦊ ⇰ echoWard star
-  wrest ⦉mark᛫ sigilWard⦊ ⇰ faith rune
+  wrest ⦉rune᛫ runeward⦊ ⇰ echoward star
+  wrest ⦉mark᛫ sigilward⦊ ⇰ faith rune
   hone ⦉mark᛫ ?▢⦊
-  litany Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ ThreadUnfolds warp weft mark
-    ▢ ≣ weft rune ⇰ sympathy weft sigilWard
-    ▢ ≣ star ⇰ runeWard
+  litany Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ ✨Thread✨Unfolds✨ warp weft mark
+    ▢ ≣ weft rune ⇰ sympathy weft sigilward
+    ▢ ≣ star ⇰ runeward
 
-spell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal☿reflect ⟪portal mark⟫ ≣ mark ⇰
-  portal☿ReturnPath mark
+spell ✨Mirror✨Return✨ ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal☿reflect ⟪portal mark⟫ ≣ mark ⇰
+  portal☿✨Return✨Path✨ mark
 
-spell MirrorDepart ⟪portal ⟡ aether ≃ vapor⟫ ⟪rune ⟡ vapor⟫ ⟡ portal ⟪portal☿reflect rune⟫ ≣ rune ⇰
-  portal☿DeparturePath rune
+spell ✨Mirror✨Depart✨ ⟪portal ⟡ aether ≃ vapor⟫ ⟪rune ⟡ vapor⟫ ⟡ portal ⟪portal☿reflect rune⟫ ≣ rune ⇰
+  portal☿✨Departure✨Path✨ rune
 
 seal Arcanum☿Cantrips
 ```
@@ -75,42 +75,42 @@ Choose the seeds of an enchantment. The smallest subgroup containing them closes
 **Proof idea.** Membership in the generated subgroup means membership in every subgroup that contains the seeds. From that one criterion, each seed lies in the circle, and any subgroup containing the seeds contains the whole circle. Closure under xy⁻¹ combines the inverse law and the product law. Generating from H returns H by antisymmetry: each side lies inside the other.
 
 ```text
-beckon GrandArchive☿Bindings☿Coven☿Cabal☿Foundations
+beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Foundations
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
-ritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle seeds
+ritual ✨Bound✨Circle✨ ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle seeds
 
-spell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰ cast
-  summon mark sigilWard
+spell ✨Gather✨the✨Seeds✨ ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ ✨Bound✨Circle✨ seeds ⇰ cast
+  summon mark sigilward
   proclaim mark ∈ Cabal☿encircle seeds
-  transmute ⟮Cabal☿EncirclementCriterion⟯
-  summon choir hedgeWard
-  missile hedgeWard sigilWard
+  transmute ⟮Cabal☿✨Encirclement✨Criterion✨⟯
+  summon choir hedgeward
+  missile hedgeward sigilward
 
-spell SmallestCircle ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
-    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ cast
+spell ✨Smallest✨Circle✨ ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
+    ✨Bound✨Circle✨ seeds ⋜ circle ↭ seeds ⊆ circle ⇰ cast
   fabricate
-  ❖ summon enclosed mark sigilWard
-    bind gathered ⟡ mark ∈ BoundCircle seeds ⇰ GatherTheSeeds seeds sigilWard
+  ❖ summon enclosed mark sigilward
+    bind gathered ⟡ mark ∈ ✨Bound✨Circle✨ seeds ⇰ ✨Gather✨the✨Seeds✨ seeds sigilward
     missile enclosed gathered
-  ❖ summon sown mark sigilWard
-    bind everyCircle ⟡ ⟁ choir ⟡ Cabal coven᛫ seeds ⊆ choir ↝ mark ∈ choir ⇰ Cabal☿EncirclementCriterion☿onward sigilWard
-    missile everyCircle circle sown
+  ❖ summon sown mark sigilward
+    bind ✨every✨circle✨ ⟡ ⟁ choir ⟡ Cabal coven᛫ seeds ⊆ choir ↝ mark ∈ choir ⇰ Cabal☿✨Encirclement✨Criterion✨☿onward sigilward
+    missile ✨every✨circle✨ circle sown
 
-spell KeepTheCircle ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽
-    ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰ cast
-  bind reversed ⟡ rune⁻¹ ∈ circle ⇰ circle☿ReversalRemains runeWard
-  missile circle☿BindingRemains sigilWard reversed
+spell ✨Keep✨the✨Circle✨ ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽
+    ⟪sigilward ⟡ mark ∈ circle⟫ ⟪runeward ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune† ∈ circle ⇰ cast
+  bind reversed ⟡ rune† ∈ circle ⇰ circle☿✨Reversal✨Remains✨ runeward
+  missile circle☿✨Binding✨Remains✨ sigilward reversed
 
-spell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰ cast
+spell ✨Seal✨the✨Circle✨ ⟪circle ⟡ Cabal coven⟫ ⟡ ✨Bound✨Circle✨ ⟪circle ⟡ Host coven⟫ ≣ circle ⇰ cast
   channel Stalemate
-  ❖ bind sown ⟡ ⟪circle ⟡ Host coven⟫ ⊆ circle ⇰ conjure mark sigilWard ⇉ sigilWard
-    missile ⟪SmallestCircle ⟪circle ⟡ Host coven⟫ circle⟫☿backward sown
-  ❖ summon mark sigilWard
-    missile GatherTheSeeds ⟪circle ⟡ Host coven⟫ sigilWard
+  ❖ bind sown ⟡ ⟪circle ⟡ Host coven⟫ ⊆ circle ⇰ conjure mark sigilward ⇉ sigilward
+    missile ⟪✨Smallest✨Circle✨ ⟪circle ⟡ Host coven⟫ circle⟫☿backward sown
+  ❖ summon mark sigilward
+    missile ✨Gather✨the✨Seeds✨ ⟪circle ⟡ Host coven⟫ sigilward
 
 seal Arcanum☿Enchantment
 ```
@@ -133,42 +133,42 @@ A pact transports the group operation intact. Chain two faithful pacts and no di
 
 ```text
 beckon Arcanum☿Cantrips
-beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences
+beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Silences
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯
 
-ritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft☿threading warp
+ritual ✨Chain✨of✨Pacts✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft☿threading warp
 
-spell PreserveTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡
-    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿CarryTheBinding mark rune
+spell ✨Preserve✨the✨Binding✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡
+    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿✨Carry✨the✨Binding✨ mark rune
 
-spell PreserveTheStillness ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp ☉ ≣ ☉ ⇰ cast
+spell ✨Preserve✨the✨Stillness✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp ☉ ≣ ☉ ⇰ cast
   bind doubled ⟡ warp ☉ ⊛ warp ☉ ≣ warp ☉ ⊛ ☉ ⇰
-    litany warp ☉ ⊛ warp ☉ ≣ warp ⟪☉ ⊛ ☉⟫ ⇰ ⟪PreserveTheBinding warp ☉ ☉⟫☿reflect
-      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪BindWithStillness ☉⟫
-      ▢ ≣ warp ☉ ⊛ ☉ ⇰ ⟪BindWithStillness ⟪warp ☉⟫⟫☿reflect
-  missile StrikeFromTheLeft doubled
+    litany warp ☉ ⊛ warp ☉ ≣ warp ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp ☉ ☉⟫☿reflect
+      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Bind✨with✨Stillness✨ ☉⟫
+      ▢ ≣ warp ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪warp ☉⟫⟫☿reflect
+  missile ✨Strike✨from✨the✨Left✨ doubled
 
-spell ReverseTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ cast
-  bind undone ⟡ warp mark⁻¹ ⊛ warp mark ≣ ☉ ⇰
-    litany warp mark⁻¹ ⊛ warp mark ≣ warp ⟪mark⁻¹ ⊛ mark⟫ ⇰ ⟪PreserveTheBinding warp mark⁻¹ mark⟫☿reflect
-      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪ReversalUndoes mark⟫
-      ▢ ≣ ☉ ⇰ PreserveTheStillness warp
-  missile UndoerIsReversal undone
+spell ✨Reverse✨the✨Binding✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    warp mark† ≣ ⟪warp mark⟫† ⇰ cast
+  bind undone ⟡ warp mark† ⊛ warp mark ≣ ☉ ⇰
+    litany warp mark† ⊛ warp mark ≣ warp ⟪mark† ⊛ mark⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp mark† mark⟫☿reflect
+      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Reversal✨Undoes✨ mark⟫
+      ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ warp
+  missile ✨Undoer✨is✨Reversal✨ undone
 
-spell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫
-    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
-    Rite☿Faithful ⟪ChainOfPacts warp weft⟫ ⇰
-  Arcanum☿Cantrips☿FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard
+spell ✨Chain✨without✨Loss✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫
+    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoward ⟡ Rite☿Faithful weft⟫ ⟡
+    Rite☿Faithful ⟪✨Chain✨of✨Pacts✨ warp weft⟫ ⇰
+  Arcanum☿Cantrips☿✨Faithful✨Weaving✨ ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoward
 
-spell SilenceInTheChain ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰
-  litany mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ ChainOfPacts warp weft mark ≣ ☉ ⇰ Herald☿SilenceCriterion
+spell ✨Silence✨in✨the✨Chain✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡
+    mark ∈ ⟪✨Chain✨of✨Pacts✨ warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰
+  litany mark ∈ ⟪✨Chain✨of✨Pacts✨ warp weft⟫☿silence ↭ ✨Chain✨of✨Pacts✨ warp weft mark ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
     ▢ ↭ weft ⟪warp mark⟫ ≣ ☉ ⇰ Pact☿mirror
-    ▢ ↭ warp mark ∈ weft☿silence ⇰ Herald☿SilenceCriterion☿reflect
+    ▢ ↭ warp mark ∈ weft☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
 seal Arcanum☿Enchantment
 ```
@@ -196,47 +196,47 @@ sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp☿silence
+ritual ✨Circle✨of✨Silence✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp☿silence
 
-spell NameTheSilent ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald☿SilenceCriterion
+spell ✨Name✨the✨Silent✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    mark ∈ ✨Circle✨of✨Silence✨ warp ↭ warp mark ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
 
-spell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
-    ⟪sigilWard ⟡ mark ∈ CircleOfSilence warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft⁻¹ ∈ CircleOfSilence warp ⇰ cast
-  bind muted ⟡ warp mark ≣ ☉ ⇰ ⟪NameTheSilent warp mark⟫☿onward sigilWard
-  bind hushed ⟡ warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ ☉ ⇰
-    litany warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ warp ⟪weft ⊛ mark⟫ ⊛ warp weft⁻¹ ⇰ PreserveTheBinding warp ⟪weft ⊛ mark⟫ weft⁻¹
-      ▢ ≣ warp weft ⊛ warp mark ⊛ warp weft⁻¹ ⇰
-          sympathy ⟪conjure token ⇉ token ⊛ warp weft⁻¹⟫ ⟪PreserveTheBinding warp weft mark⟫
-      ▢ ≣ warp weft ⊛ ☉ ⊛ warp weft⁻¹ ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token ⊛ warp weft⁻¹⟫ muted
-      ▢ ≣ warp weft ⊛ warp weft⁻¹ ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp weft⁻¹⟫ ⟪BindWithStillness ⟪warp weft⟫⟫
-      ▢ ≣ warp weft ⊛ ⟪warp weft⟫⁻¹ ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token⟫ ⟪ReverseTheBinding warp weft⟫
-      ▢ ≣ ☉ ⇰ BindingUndone ⟪warp weft⟫
-  missile ⟪NameTheSilent warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫⟫☿backward hushed
+spell ✨Unbroken✨Silence✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
+    ⟪sigilward ⟡ mark ∈ ✨Circle✨of✨Silence✨ warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft† ∈ ✨Circle✨of✨Silence✨ warp ⇰ cast
+  bind muted ⟡ warp mark ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ warp mark⟫☿onward sigilward
+  bind hushed ⟡ warp ⟪weft ⊛ mark ⊛ weft†⟫ ≣ ☉ ⇰
+    litany warp ⟪weft ⊛ mark ⊛ weft†⟫ ≣ warp ⟪weft ⊛ mark⟫ ⊛ warp weft† ⇰ ✨Preserve✨the✨Binding✨ warp ⟪weft ⊛ mark⟫ weft†
+      ▢ ≣ warp weft ⊛ warp mark ⊛ warp weft† ⇰
+          sympathy ⟪conjure token ⇉ token ⊛ warp weft†⟫ ⟪✨Preserve✨the✨Binding✨ warp weft mark⟫
+      ▢ ≣ warp weft ⊛ ☉ ⊛ warp weft† ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token ⊛ warp weft†⟫ muted
+      ▢ ≣ warp weft ⊛ warp weft† ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp weft†⟫ ⟪✨Bind✨with✨Stillness✨ ⟪warp weft⟫⟫
+      ▢ ≣ warp weft ⊛ ⟪warp weft⟫† ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token⟫ ⟪✨Reverse✨the✨Binding✨ warp weft⟫
+      ▢ ≣ ☉ ⇰ ✨Binding✨Undone✨ ⟪warp weft⟫
+  missile ⟪✨Name✨the✨Silent✨ warp ⟪weft ⊛ mark ⊛ weft†⟫⟫☿backward hushed
 
-spell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫☿Hallowed ⇰ cast
+spell ✨Silence✨is✨Hallowed✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪✨Circle✨of✨Silence✨ warp⟫☿Hallowed ⇰ cast
   fabricate
-  summon mark sigilWard weft
-  missile UnbrokenSilence warp sigilWard weft
+  summon mark sigilward weft
+  missile ✨Unbroken✨Silence✨ warp sigilward weft
 
-spell NothingLost ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite☿Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ cast
-  transmute ⟮Cabal☿EmptinessCriterion⟯
+spell ✨Nothing✨Lost✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
+    Rite☿Faithful warp ↭ ✨Circle✨of✨Silence✨ warp ≣ ⊥ ⇰ cast
+  transmute ⟮Cabal☿✨Emptiness✨Criterion✨⟯
   fabricate
-  ❖ summon fidelity mark sigilWard
+  ❖ summon fidelity mark sigilward
     bind echoing ⟡ warp mark ≣ warp ☉ ⇰
-      litany warp mark ≣ ☉ ⇰ ⟪NameTheSilent warp mark⟫☿onward sigilWard
-        ▢ ≣ warp ☉ ⇰ ⟪PreserveTheStillness warp⟫☿reflect
+      litany warp mark ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ warp mark⟫☿onward sigilward
+        ▢ ≣ warp ☉ ⇰ ⟪✨Preserve✨the✨Stillness✨ warp⟫☿reflect
     missile fidelity echoing
   ❖ summon hollowness mark rune twinned
-    bind hushed ⟡ warp ⟪mark ⊛ rune⁻¹⟫ ≣ ☉ ⇰
-      litany warp ⟪mark ⊛ rune⁻¹⟫ ≣ warp mark ⊛ warp rune⁻¹ ⇰ PreserveTheBinding warp mark rune⁻¹
-        ▢ ≣ warp rune ⊛ warp rune⁻¹ ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune⁻¹⟫ twinned
-        ▢ ≣ warp ⟪rune ⊛ rune⁻¹⟫ ⇰ ⟪PreserveTheBinding warp rune rune⁻¹⟫☿reflect
-        ▢ ≣ warp ☉ ⇰ sympathy warp ⟪BindingUndone rune⟫
-        ▢ ≣ ☉ ⇰ PreserveTheStillness warp
-    bind vanished ⟡ mark ⊛ rune⁻¹ ≣ ☉ ⇰ hollowness ⟪mark ⊛ rune⁻¹⟫ ⟪⟪NameTheSilent warp ⟪mark ⊛ rune⁻¹⟫⟫☿backward hushed⟫
-    missile BalancedDivision☿onward vanished
+    bind hushed ⟡ warp ⟪mark ⊛ rune†⟫ ≣ ☉ ⇰
+      litany warp ⟪mark ⊛ rune†⟫ ≣ warp mark ⊛ warp rune† ⇰ ✨Preserve✨the✨Binding✨ warp mark rune†
+        ▢ ≣ warp rune ⊛ warp rune† ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune†⟫ twinned
+        ▢ ≣ warp ⟪rune ⊛ rune†⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp rune rune†⟫☿reflect
+        ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Binding✨Undone✨ rune⟫
+        ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ warp
+    bind vanished ⟡ mark ⊛ rune† ≣ ☉ ⇰ hollowness ⟪mark ⊛ rune†⟫ ⟪⟪✨Name✨the✨Silent✨ warp ⟪mark ⊛ rune†⟫⟫☿backward hushed⟫
+    missile ✨Balanced✨Division✨☿onward vanished
 
 seal Arcanum☿Enchantment
 ```
@@ -259,38 +259,38 @@ A pact descends through a quotient exactly when it silences the subgroup being f
 
 ```text
 beckon Arcanum☿Enchantment☿Pacts
-beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿✨Veiled✨Coven✨☿Foundations
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-spell VeilHidesTheDifference ⟪veil ⟡ Cabal coven⟫ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫
-    ⧼mark rune ⟡ coven⧽ ⟪kinship ⟡ mark⁻¹ ⊛ rune ∈ veil⟫ ⟡ warp mark ≣ warp rune ⇰ cast
-  bind muted ⟡ warp ⟪mark⁻¹ ⊛ rune⟫ ≣ ☉ ⇰ veilWard kinship
-  litany warp mark ≣ warp mark ⊛ ☉ ⇰ ⟪BindWithStillness ⟪warp mark⟫⟫☿reflect
-    ▢ ≣ warp mark ⊛ warp ⟪mark⁻¹ ⊛ rune⟫ ⇰ sympathy ⟪conjure token ⇉ warp mark ⊛ token⟫ muted☿reflect
-    ▢ ≣ warp ⟪mark ⊛ ⟪mark⁻¹ ⊛ rune⟫⟫ ⇰ ⟪PreserveTheBinding warp mark ⟪mark⁻¹ ⊛ rune⟫⟫☿reflect
-    ▢ ≣ warp rune ⇰ sympathy warp ⟪ReturnFromTheLeft mark rune⟫
+spell ✨Veil✨Hides✨the✨Difference✨ ⟪veil ⟡ Cabal coven⟫ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ warp☿silence⟫
+    ⧼mark rune ⟡ coven⧽ ⟪kinship ⟡ mark† ⊛ rune ∈ veil⟫ ⟡ warp mark ≣ warp rune ⇰ cast
+  bind muted ⟡ warp ⟪mark† ⊛ rune⟫ ≣ ☉ ⇰ veilward kinship
+  litany warp mark ≣ warp mark ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪warp mark⟫⟫☿reflect
+    ▢ ≣ warp mark ⊛ warp ⟪mark† ⊛ rune⟫ ⇰ sympathy ⟪conjure token ⇉ warp mark ⊛ token⟫ muted☿reflect
+    ▢ ≣ warp ⟪mark ⊛ ⟪mark† ⊛ rune⟫⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp mark ⟪mark† ⊛ rune⟫⟫☿reflect
+    ▢ ≣ warp rune ⇰ sympathy warp ⟪✨Return✨from✨the✨Left✨ mark rune⟫
 
-ritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
-    ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
-  VeiledCoven☿descend veil warp veilWard
+ritual ✨Pass✨the✨Veil✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
+    ⟪veilward ⟡ veil ⋜ warp☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
+  ✨Veiled✨Coven✨☿descend veil warp veilward
 
-spell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
-    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪mark ⟡ coven⟫ ⟡
-    PassTheVeil veil warp veilWard ⟪VeiledCoven☿forge mark⟫ ≣ warp mark ⇰ mirror
+spell ✨Speak✨through✨the✨Veil✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
+    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ warp☿silence⟫ ⟪mark ⟡ coven⟫ ⟡
+    ✨Pass✨the✨Veil✨ veil warp veilward ⟪✨Veiled✨Coven✨☿forge mark⟫ ≣ warp mark ⇰ mirror
 
-spell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
-    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫
-    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven☿forge mark⟫ ≣ warp mark⟫ ⟡
-    weft ≣ PassTheVeil veil warp veilWard ⇰ cast
+spell ✨Only✨One✨Passage✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
+    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ warp☿silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫
+    ⟪echoward ⟡ ⟁ mark ⟡ coven᛫ weft ⟪✨Veiled✨Coven✨☿forge mark⟫ ≣ warp mark⟫ ⟡
+    weft ≣ ✨Pass✨the✨Veil✨ veil warp veilward ⇰ cast
   channel Herald☿extend
   summon coset
-  wrest ⦉mark᛫ mirror⦊ ⇰ VeiledCoven☿EveryVeilHasAFace coset
-  litany weft ⟪VeiledCoven☿forge mark⟫ ≣ warp mark ⇰ echoWard mark
-    ▢ ≣ PassTheVeil veil warp veilWard ⟪VeiledCoven☿forge mark⟫ ⇰
-        ⟪SpeakThroughTheVeil veil warp veilWard mark⟫☿reflect
+  wrest ⦉mark᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ coset
+  litany weft ⟪✨Veiled✨Coven✨☿forge mark⟫ ≣ warp mark ⇰ echoward mark
+    ▢ ≣ ✨Pass✨the✨Veil✨ veil warp veilward ⟪✨Veiled✨Coven✨☿forge mark⟫ ⇰
+        ⟪✨Speak✨through✨the✨Veil✨ veil warp veilward mark⟫☿reflect
 
 seal Arcanum☿Enchantment
 ```
@@ -318,55 +318,55 @@ sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-spell SilenceWithinTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp☿silence ⋜ warp☿confineToManifestation☿silence ⇰ cast
-  summon mark sigilWard
-  bind muted ⟡ warp mark ≣ ☉ ⇰ sigilWard
-  proclaim warp☿confineToManifestation mark ≣ ☉
+spell ✨Silence✨within✨the✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp☿silence ⋜ warp☿✨confine✨to✨manifestation✨☿silence ⇰ cast
+  summon mark sigilward
+  bind muted ⟡ warp mark ≣ ☉ ⇰ sigilward
+  proclaim warp☿✨confine✨to✨manifestation✨ mark ≣ ☉
   missile Kin☿extend muted
 
-ritual ImagePact ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ↝⊛ warp☿manifestation ⇰
-  PassTheVeil warp☿silence warp☿confineToManifestation ⟪SilenceWithinTheImage warp⟫
+ritual ✨Image✨Pact✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ↝⊛ warp☿manifestation ⇰
+  ✨Pass✨the✨Veil✨ warp☿silence warp☿✨confine✨to✨manifestation✨ ⟪✨Silence✨within✨the✨Image✨ warp⟫
 
-spell ImageOfTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    ⟪ImagePact warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
+spell ✨Image✨of✨the✨Sigil✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
 
-spell FaithfulImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Faithful ⟪ImagePact warp⟫ ⇰ cast
+spell ✨Faithful✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Faithful ⟪✨Image✨Pact✨ warp⟫ ⇰ cast
   summon wisp coset twinned
-  wrest ⦉mark᛫ mirror⦊ ⇰ VeiledCoven☿EveryVeilHasAFace wisp
-  wrest ⦉rune᛫ mirror⦊ ⇰ VeiledCoven☿EveryVeilHasAFace coset
+  wrest ⦉mark᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ wisp
+  wrest ⦉rune᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ coset
   bind echoing ⟡ warp mark ≣ warp rune ⇰
-    litany warp mark ≣ ⟪ImagePact warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ⇰ ⟪ImageOfTheSigil warp mark⟫☿reflect
-      ▢ ≣ ⟪ImagePact warp ⟪VeiledCoven☿forge rune⟫ ⟡ circle⟫ ⇰ sympathy Kin☿core twinned
-      ▢ ≣ warp rune ⇰ ImageOfTheSigil warp rune
-  bind hushed ⟡ warp ⟪mark⁻¹ ⊛ rune⟫ ≣ ☉ ⇰
-    litany warp ⟪mark⁻¹ ⊛ rune⟫ ≣ warp mark⁻¹ ⊛ warp rune ⇰ PreserveTheBinding warp mark⁻¹ rune
-      ▢ ≣ ⟪warp mark⟫⁻¹ ⊛ warp rune ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune⟫ ⟪ReverseTheBinding warp mark⟫
-      ▢ ≣ ⟪warp rune⟫⁻¹ ⊛ warp rune ⇰ sympathy ⟪conjure token ⇉ token⁻¹ ⊛ warp rune⟫ echoing
-      ▢ ≣ ☉ ⇰ ReversalUndoes ⟪warp rune⟫
-  missile VeiledCoven☿VeilEquality☿backward hushed
+    litany warp mark ≣ ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ warp mark⟫☿reflect
+      ▢ ≣ ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge rune⟫ ⟡ circle⟫ ⇰ sympathy Kin☿core twinned
+      ▢ ≣ warp rune ⇰ ✨Image✨of✨the✨Sigil✨ warp rune
+  bind hushed ⟡ warp ⟪mark† ⊛ rune⟫ ≣ ☉ ⇰
+    litany warp ⟪mark† ⊛ rune⟫ ≣ warp mark† ⊛ warp rune ⇰ ✨Preserve✨the✨Binding✨ warp mark† rune
+      ▢ ≣ ⟪warp mark⟫† ⊛ warp rune ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune⟫ ⟪✨Reverse✨the✨Binding✨ warp mark⟫
+      ▢ ≣ ⟪warp rune⟫† ⊛ warp rune ⇰ sympathy ⟪conjure token ⇉ token† ⊛ warp rune⟫ echoing
+      ▢ ≣ ☉ ⇰ ✨Reversal✨Undoes✨ ⟪warp rune⟫
+  missile ✨Veiled✨Coven✨☿✨Veil✨Equality✨☿backward hushed
 
-spell ReachingImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Reaching ⟪ImagePact warp⟫ ⇰ cast
+spell ✨Reaching✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ warp⟫ ⇰ cast
   summon quarry
-  wrest ⦉mark᛫ sigilWard⦊ ⇰ Herald☿ManifestationCriterion☿onward quarry☿attestation
-  hone ⦉VeiledCoven☿forge mark᛫ ?▢⦊
+  wrest ⦉mark᛫ sigilward⦊ ⇰ Herald☿✨Manifestation✨Criterion✨☿onward quarry☿attestation
+  hone ⦉✨Veiled✨Coven✨☿forge mark᛫ ?▢⦊
   channel Kin☿extend
-  litany ⟪ImagePact warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ ImageOfTheSigil warp mark
-    ▢ ≣ quarry ⇰ sigilWard
+  litany ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ ✨Image✨of✨the✨Sigil✨ warp mark
+    ▢ ≣ quarry ⇰ sigilward
 
-ineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
-  PactPortal☿fromPerfection ⟪ImagePact warp⟫ ⦉FaithfulImage warp᛫ ReachingImage warp⦊
+ineffable ritual ✨Unveil✨the✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
+  ✨Pact✨Portal✨☿✨from✨perfection✨ ⟪✨Image✨Pact✨ warp⟫ ⦉✨Faithful✨Image✨ warp᛫ ✨Reaching✨Image✨ warp⦊
 
-spell RevealTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    ⟪UnveilTheImage warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
+spell ✨Reveal✨the✨Sigil✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    ⟪✨Unveil✨the✨Image✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
 
-spell PerfectUnveiling ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite☿Perfect ⟪UnveilTheImage warp⟫ ⇰
-  ⦉FaithfulImage warp᛫ ReachingImage warp⦊
+spell ✨Perfect✨Unveiling✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
+    Rite☿Perfect ⟪✨Unveil✨the✨Image✨ warp⟫ ⇰
+  ⦉✨Faithful✨Image✨ warp᛫ ✨Reaching✨Image✨ warp⦊
 
-ineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
+ineffable ritual ✨Unveil✨the✨Realm✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
     coven ⧸ warp☿silence ≃⊛ circle ⇰
-  ⟪UnveilTheImage warp⟫☿chain
-    ⟪⟪PactPortal☿cabalAttunement ⟪Herald☿FullManifestation☿backward faith⟫⟫☿chain Cabal☿wholeCabalPortal⟫
+  ⟪✨Unveil✨the✨Image✨ warp⟫☿chain
+    ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain Cabal☿✨whole✨cabal✨portal✨⟫
 
 seal Arcanum☿Enchantment
 ```
@@ -388,36 +388,36 @@ A finite group partitions into equally sized cosets. The size of every subgroup,
 **Proof idea.** Mathlib splits G into pairs (coset, element of H), so a calc gives |G| = |G/H|·|H|. Commuting the factors exhibits |H| as a divisor. The order of x is the size of the cyclic subgroup it generates, so it divides |G|. Finally, write |G| = ord(x)·k and compute x^|G| = (x^ord(x))^k = 1^k = 1.
 
 ```text
-beckon GrandArchive☿CovenLore☿Veils☿Census
-beckon GrandArchive☿CovenLore☿Cycles
-beckon GrandArchive☿Lore☿Clockwork☿VeiledCoven
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Veils☿Census
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Cycles
+beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿✨Veiled✨Coven✨
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
-spell CountTheVeils ⟪circle ⟡ Cabal coven⟫ ⟡
+spell ✨Count✨the✨Veils✨ ⟪circle ⟡ Cabal coven⟫ ⟡
     Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰
   litany Tally☿census coven ≣ Tally☿census ⟪⟪coven ⧸ circle⟫ ⨯ circle⟫ ⇰
-        Tally☿CensusThroughPortal Cabal☿CovenSplitsIntoVeils
-    ▢ ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ Tally☿CensusOfPairs ⟪coven ⧸ circle⟫ circle
+        Tally☿✨Census✨through✨Portal✨ Cabal☿✨Coven✨Splits✨into✨Veils✨
+    ▢ ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪coven ⧸ circle⟫ circle
 
-spell MeasureOfTheCoven ⟪circle ⟡ Cabal coven⟫ ⟡
+spell ✨Measure✨of✨the✨Coven✨ ⟪circle ⟡ Cabal coven⟫ ⟡
     Tally☿census circle ∣ Tally☿census coven ⇰ cast
   hone ⦉Tally☿census ⟪coven ⧸ circle⟫᛫ ?▢⦊
-  litany Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ CountTheVeils circle
-    ▢ ≣ Tally☿census circle ⊛ Tally☿census ⟪coven ⧸ circle⟫ ⇰ Tally☿BindingsCommute ⟪Tally☿census ⟪coven ⧸ circle⟫⟫ ⟪Tally☿census circle⟫
+  litany Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ ✨Count✨the✨Veils✨ circle
+    ▢ ≣ Tally☿census circle ⊛ Tally☿census ⟪coven ⧸ circle⟫ ⇰ Tally☿✨Bindings✨Commute✨ ⟪Tally☿census ⟪coven ⧸ circle⟫⟫ ⟪Tally☿census circle⟫
 
-spell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰
-  litany period mark ≣ Tally☿census ⟪Cabal☿cycleCircle mark⟫ ⇰ ⟪Tally☿CycleCensus mark⟫☿reflect
-    ▢ ∣ Tally☿census coven ⇰ MeasureOfTheCoven ⟪Cabal☿cycleCircle mark⟫
+spell ✨Measure✨of✨the✨Cycle✨ ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰
+  litany period mark ≣ Tally☿census ⟪Cabal☿✨cycle✨circle✨ mark⟫ ⇰ ⟪Tally☿✨Cycle✨Census✨ mark⟫☿reflect
+    ▢ ∣ Tally☿census coven ⇰ ✨Measure✨of✨the✨Coven✨ ⟪Cabal☿✨cycle✨circle✨ mark⟫
 
-spell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰ cast
-  wrest ⦉cinder᛫ measureWard⦊ ⇰ MeasureOfTheCycle mark
-  litany mark ⌃ Tally☿census coven ≣ mark ⌃ ⟪period mark ⊛ cinder⟫ ⇰ sympathy ⟪conjure ember ⇉ mark ⌃ ember⟫ measureWard
-    ▢ ≣ ⟪mark ⌃ period mark⟫ ⌃ cinder ⇰ NestedAscent mark ⟪period mark⟫ cinder
-    ▢ ≣ ☉ ⌃ cinder ⇰ sympathy ⟪conjure token ⇉ token ⌃ cinder⟫ ⟪PeriodReturns mark⟫
-    ▢ ≣ ☉ ⇰ StillnessAscends cinder
+spell ✨The✨Great✨Return✨ ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰ cast
+  wrest ⦉cinder᛫ measureward⦊ ⇰ ✨Measure✨of✨the✨Cycle✨ mark
+  litany mark ⌃ Tally☿census coven ≣ mark ⌃ ⟪period mark ⊛ cinder⟫ ⇰ sympathy ⟪conjure ember ⇉ mark ⌃ ember⟫ measureward
+    ▢ ≣ ⟪mark ⌃ period mark⟫ ⌃ cinder ⇰ ✨Nested✨Ascent✨ mark ⟪period mark⟫ cinder
+    ▢ ≣ ☉ ⌃ cinder ⇰ sympathy ⟪conjure token ⇉ token ⌃ cinder⟫ ⟪✨Period✨Returns✨ mark⟫
+    ▢ ≣ ☉ ⇰ ✨Stillness✨Ascends✨ cinder
 
 seal Arcanum☿Enchantment
 ```
@@ -440,43 +440,43 @@ An action moves a point through its orbit. The stabilizer records the commands t
 
 ```text
 beckon Arcanum☿Enchantment☿Lagrange
-beckon GrandArchive☿CovenLore☿Commands☿Effigies
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Commands☿Effigies
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯
 
-spell SamePlaceSameVeil ⟪mark ⟡ realm⟫ ⟪weft cinder ⟡ coven⟫ ⟡
-    weft • mark ≣ cinder • mark ↭ weft⁻¹ ⊛ cinder ∈ Commanding☿stillguard coven mark ⇰ cast
-  transmute ⟮Commanding☿StillguardCriterion⟯
+spell ✨Same✨Place✨Same✨Veil✨ ⟪mark ⟡ realm⟫ ⟪weft cinder ⟡ coven⟫ ⟡
+    weft • mark ≣ cinder • mark ↭ weft† ⊛ cinder ∈ Commanding☿stillguard coven mark ⇰ cast
+  transmute ⟮Commanding☿✨Stillguard✨Criterion✨⟯
   fabricate
   ❖ summon meeting
-    litany ⟪weft⁻¹ ⊛ cinder⟫ • mark ≣ weft⁻¹ • cinder • mark ⇰ CommandInStages weft⁻¹ cinder mark
-      ▢ ≣ weft⁻¹ • weft • mark ⇰ sympathy ⟪conjure wisp ⇉ weft⁻¹ • wisp⟫ meeting☿reflect
-      ▢ ≣ mark ⇰ CommandRevoked weft mark
+    litany ⟪weft† ⊛ cinder⟫ • mark ≣ weft† • cinder • mark ⇰ ✨Command✨in✨Stages✨ weft† cinder mark
+      ▢ ≣ weft† • weft • mark ⇰ sympathy ⟪conjure wisp ⇉ weft† • wisp⟫ meeting☿reflect
+      ▢ ≣ mark ⇰ ✨Command✨Revoked✨ weft mark
   ❖ summon unmoved
-    litany weft • mark ≣ weft • ⟪weft⁻¹ ⊛ cinder⟫ • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ unmoved☿reflect
-      ▢ ≣ weft • weft⁻¹ • cinder • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ ⟪CommandInStages weft⁻¹ cinder mark⟫
-      ▢ ≣ cinder • mark ⇰ RevocationCommanded weft ⟪cinder • mark⟫
+    litany weft • mark ≣ weft • ⟪weft† ⊛ cinder⟫ • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ unmoved☿reflect
+      ▢ ≣ weft • weft† • cinder • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ ⟪✨Command✨in✨Stages✨ weft† cinder mark⟫
+      ▢ ≣ cinder • mark ⇰ ✨Revocation✨Commanded✨ weft ⟪cinder • mark⟫
 
-ineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡
+ineffable ritual ✨Orbit✨Portal✨ ⟪mark ⟡ realm⟫ ⟡
     Commanding☿procession coven mark ≃ coven ⧸ Commanding☿stillguard coven mark ⇰
-  Commanding☿OrbitCorrespondence coven mark
+  Commanding☿✨Orbit✨Correspondence✨ coven mark
 
-spell CommandThroughThePortal ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡
-    ⟪⟪OrbitPortal mark⟫☿reflect ⟪VeiledCoven☿forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror
+spell ✨Command✨through✨the✨Portal✨ ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡
+    ⟪⟪✨Orbit✨Portal✨ mark⟫☿reflect ⟪✨Veiled✨Coven✨☿forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror
 
-spell ProcessionCountsVeils ⟪mark ⟡ realm⟫ ⟡
+spell ✨Procession✨Counts✨Veils✨ ⟪mark ⟡ realm⟫ ⟡
     Tally☿census ⟪Commanding☿procession coven mark⟫ ≣ Tally☿census ⟪coven ⧸ Commanding☿stillguard coven mark⟫ ⇰
-  Tally☿CensusThroughPortal ⟪OrbitPortal mark⟫
+  Tally☿✨Census✨through✨Portal✨ ⟪✨Orbit✨Portal✨ mark⟫
 
-spell OrbitOfCommand ⟪mark ⟡ realm⟫ ⟡
+spell ✨Orbit✨of✨Command✨ ⟪mark ⟡ realm⟫ ⟡
     Tally☿census ⟪Commanding☿procession coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫ ≣
       Tally☿census coven ⇰
   litany Tally☿census ⟪Commanding☿procession coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫
         ≣ Tally☿census ⟪coven ⧸ Commanding☿stillguard coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫ ⇰
-          sympathy ⟪conjure ember ⇉ ember ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫⟫ ⟪ProcessionCountsVeils mark⟫
-    ▢ ≣ Tally☿census coven ⇰ ⟪CountTheVeils ⟪Commanding☿stillguard coven mark⟫⟫☿reflect
+          sympathy ⟪conjure ember ⇉ ember ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫⟫ ⟪✨Procession✨Counts✨Veils✨ mark⟫
+    ▢ ≣ Tally☿census coven ⇰ ⟪✨Count✨the✨Veils✨ ⟪Commanding☿stillguard coven mark⟫⟫☿reflect
 
 seal Arcanum☿Enchantment
 ```
@@ -498,29 +498,29 @@ Enchant three labels by permuting them. There are six symmetries. A swap undoes 
 **Proof idea.** Lean's decide tactic evaluates the finite facts, such as the count of six symmetries. A swap undoes itself by a library lemma. For noncommutativity, suppose the two orders agree. Then both sides send 0 to the same place. But one sends 0 to 1 and the other sends 0 to 2, and 1 ≠ 2. Try to make the two swaps the same: the clash disappears, though the browser alone will not check your edit.
 
 ```text
-beckon GrandArchive☿CovenLore☿Shuffling☿Fetter
-beckon GrandArchive☿CovenLore☿Cycles
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Shuffling☿Fetter
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Cycles
 
 sanctum Arcanum☿Enchantment
 
-byname ThreeSigils ⇰ Portal☿Shuffling ⟪Fetter 3⟫
+byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 3⟫
 
-ritual FirstExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ⊘ ☉
+ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ⊘ ☉
 
-ritual SecondExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ☉ 2
+ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ☉ 2
 
-spell SixDances ⟡ Counted☿census ThreeSigils ≣ 6 ⇰ cast divine
+spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 6 ⇰ cast divine
 
-spell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰
-  Portal☿ExchangeUndoesItself ⊘ ☉
+spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ ☉ ⇰
+  Portal☿✨Exchange✨Undoes✨Itself✨ ⊘ ☉
 
-spell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast
+spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast
   summon twinned
-  bind sunwise ⟡ ⟪FirstExchange ⊛ SecondExchange⟫ ⊘ ≣ ☉ ⇰ cast divine
-  bind widdershins ⟡ ⟪SecondExchange ⊛ FirstExchange⟫ ⊘ ≣ 2 ⇰ cast divine
+  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ≣ ☉ ⇰ cast divine
+  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ≣ 2 ⇰ cast divine
   bind clash ⟡ ⟪☉ ⟡ Fetter 3⟫ ≣ 2 ⇰
-    litany ⟪☉ ⟡ Fetter 3⟫ ≣ ⟪FirstExchange ⊛ SecondExchange⟫ ⊘ ⇰ sunwise☿reflect
-      ▢ ≣ ⟪SecondExchange ⊛ FirstExchange⟫ ⊘ ⇰ sympathy ⟪conjure dancer ⇉ dancer ⊘⟫ twinned
+    litany ⟪☉ ⟡ Fetter 3⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ⇰ sunwise☿reflect
+      ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ⇰ sympathy ⟪conjure dancer ⇉ dancer ⊘⟫ twinned
       ▢ ≣ 2 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 

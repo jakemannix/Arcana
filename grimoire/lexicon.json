@@ -297,7 +297,25 @@
     "Field": "Veyrion",
     "Module": "✨Bound✨Veyr✨",
     "Subgroup": "✨Inner✨Veyr✨",
-    "Submodule": "✨Inner✨Bound✨Veyr✨"
+    "Submodule": "✨Inner✨Bound✨Veyr✨",
+    "Action": "Command",
+    "End": "Court",
+    "actionToEnd": "✨Pact✨into✨the✨Court✨",
+    "toFun": "deed",
+    "invFun": "✨reverse✨deed✨",
+    "map_one'": "✨carries✨stillness✨",
+    "map_mul'": "✨carries✨binding✨",
+    "one_smul": "✨Stillness✨Commands✨Nothing✨",
+    "actionToEnd_apply": "✨The✨Court✨Obeys✨",
+    "actionToPerm": "✨Pact✨into✨the✨Shuffles✨",
+    "actionToPerm_apply": "✨The✨Shuffles✨Obey✨",
+    "homKernel_actionToPerm_self": "✨Only✨Stillness✨Moves✨Nothing✨",
+    "h_moves_nothing": "idle",
+    "smul_eq_mul": "✨Command✨is✨Binding✨",
+    "actionToPerm_self_injective": "✨No✨Two✨Commands✨Alike✨",
+    "cayleyEquiv": "✨Cayley's✨Court✨",
+    "ofInjective": "✨from✨faithfulness✨",
+    "cayleyEquiv_apply": "✨Cayley's✨Court✨Speaks✨"
   },
   "scoped": {
     "and_swap": {

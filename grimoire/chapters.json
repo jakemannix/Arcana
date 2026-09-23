@@ -81,6 +81,15 @@
     "references": [{"path":"Mathlib/GroupTheory/GroupAction/Quotient.lean","symbol":"MulAction.orbitEquivQuotientStabilizer"},{"path":"Mathlib/GroupTheory/GroupAction/Quotient.lean","symbol":"MulAction.orbitProdStabilizerEquivGroup"},{"path":"Mathlib/GroupTheory/GroupAction/Defs.lean","symbol":"MulAction.mem_stabilizer_iff"}]
   },
   {
+    "id": "cayley", "school": "Enchantment", "title": "Cayley's court", "subtitle": "Every group is a group of permutations", "file": "Mathematics/GroupTheory/Cayley.lean", "level": "III · Great enchantments",
+    "summary": "Every command is a way to move the points, so every action is a pact into a court of transmutations. Let a Veyr command itself, and nothing is lost: it lives, whole, inside the court of its own shuffles.",
+    "meaning": "The endofunctions of a type X form a monoid under composition, Function.End X; its invertible members are the permutations, Equiv.Perm X. An action of G on X is the same as a homomorphism G → End(X), and for a group each g acts as a permutation. When G acts on itself by left multiplication, this homomorphism is injective, so G is isomorphic to a subgroup of Perm(G). Arthur Cayley stated this in 1854, in the first abstract definition of a group.",
+    "hypotheses": "G is a group and X is any type with a G-action. Cayley's theorem uses the action of G on itself by left multiplication. No finiteness is needed; for a finite group of order n, the court of shuffles has n! members.",
+    "proofIdea": "Each g gives the map x ↦ g • x. One acts as the identity and g * k acts as g then k, so this is a homomorphism into End(X). Because g⁻¹ undoes g, each map is a permutation. For the self-action, a command in the kernel moves 1 to 1, so g = g * 1 = 1. The kernel is trivial, so the Kernels folio gives injectivity, and an injective homomorphism is an isomorphism onto its image.",
+    "prerequisites": ["orbits", "kernels"], "concepts": ["MulAction", "End", "Perm", "range", "cayleyEquiv"],
+    "references": [{"path":"Mathlib/Algebra/Group/Action/End.lean","symbol":"MulAction.toEndHom"},{"path":"Mathlib/GroupTheory/Perm/Subgroup.lean","symbol":"Equiv.Perm.subgroupOfMulAction"},{"path":"Mathlib/Algebra/Group/Subgroup/Ker.lean","symbol":"MonoidHom.ofInjective"}]
+  },
+  {
     "id": "permutations", "school": "Enchantment", "title": "Three dancing sigils", "subtitle": "A concrete noncommutative group: S₃", "file": "Mathematics/GroupTheory/Permutations.lean", "level": "IV · Field exercise",
     "summary": "Enchant three labels by permuting them. There are six symmetries. A swap undoes itself, but the order of two different swaps matters.",
     "meaning": "S₃ = Perm({0,1,2}). It has order 6. If a = (0 1) and b = (1 2), then a² = 1 while ab ≠ ba.",

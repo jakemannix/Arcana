@@ -15,3 +15,5 @@ Two CodeMirror 6 instances with StreamLanguage highlighting, reentrancy-guarded 
 `proofFoldRange` hides implementation after `:=` or `⇰`, preserving every hypothesis and the full conclusion. Custom CodeMirror placeholders are keyboard-operable reveal buttons. Arcane proofs start folded; Veil/Reveal buttons bulk-fold/unfold. Unfold effects schedule a post-update measurement, then short-lived spark particles and an editor glimmer. Successful manual round trips also sparkle. Reduced-motion disables both; no continuous animation. Unit tests cover every shipped declaration and multiline signatures.
 
 Dependencies: [[../components/translator]], [[graduate-grimoire]], [[../decisions/browser-translation]].
+
+Pane visibility buttons sit outside both editors and independently hide/show math or magic. A single visible pane fills the width; hiding both shows a hint while keeping both restore buttons accessible. Hiding retains editor instances, document state, folding, history, and synchronization. Both editors request a measurement when visibility changes. Visibility persists across folio navigation for the current page.

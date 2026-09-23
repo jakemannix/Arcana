@@ -45,9 +45,11 @@ app.innerHTML = `
       <section class="mathematical-reading" aria-label="Mathematical meaning"><p class="eyebrow">BEHIND THE ENCHANTMENT</p><p id="meaning"></p><details><summary>Hypotheses & proof idea</summary><h3>What must be true</h3><p id="hypotheses"></p><h3>Why it works</h3><p id="proof-idea"></p></details><div id="prerequisites" class="prerequisites"></div></section>
       <section class="workspace" aria-label="Spell translation workspace">
         <div class="workspace-toolbar"><span id="folio-badge" class="folio-badge">Original folio</span><div class="toolbar-actions"><button id="restore" class="quiet-button">Restore original</button><button id="open" class="quiet-button">Open file</button><button id="download" class="quiet-button">Save grimoire ↓</button><input id="file" type="file" accept=".lean,.spell,.json" hidden /></div></div>
+        <div class="pane-visibility" role="group" aria-label="Visible editor panes"><button id="toggle-spell" class="quiet-button" aria-controls="spell-pane" aria-expanded="true">Hide magic</button><button id="toggle-lean" class="quiet-button" aria-controls="lean-pane" aria-expanded="true">Hide math</button></div>
+        <p id="panes-hidden" class="panes-hidden" hidden>Both panes are hidden. Show magic or math to return to your work.</p>
         <div class="editors">
-          <section class="editor-pane spell-pane" aria-label="Arcane Lean"><header class="pane-header"><div><span class="pane-index">01</span><h2>Arcane Lean</h2><span class="language-label">.spell</span></div><div class="spell-actions"><button id="veil" class="copy-button" title="Fold all spell bodies">Veil</button><button id="reveal" class="copy-button" title="Reveal all spell bodies">Reveal</button><button class="copy-button" data-copy="spell" aria-label="Copy Arcane Lean">Copy</button></div></header><div id="spell-editor" class="editor-host"></div><footer class="pane-footer"><span id="spell-count"></span><span>THE INCANTATION</span></footer></section>
-          <section class="editor-pane lean-pane" aria-label="Lean source"><header class="pane-header"><div><span class="pane-index">02</span><h2>Lean + mathlib</h2><span class="language-label">.lean</span></div><button class="copy-button" data-copy="lean" aria-label="Copy Lean source">Copy</button></header><div id="lean-editor" class="editor-host"></div><footer class="pane-footer"><span id="lean-count"></span><span>THE MATHEMATICS</span></footer></section>
+          <section id="spell-pane" class="editor-pane spell-pane" aria-label="Arcane Lean"><header class="pane-header"><div><span class="pane-index">01</span><h2>Arcane Lean</h2><span class="language-label">.spell</span></div><div class="spell-actions"><button id="veil" class="copy-button" title="Fold all spell bodies">Veil</button><button id="reveal" class="copy-button" title="Reveal all spell bodies">Reveal</button><button class="copy-button" data-copy="spell" aria-label="Copy Arcane Lean">Copy</button></div></header><div id="spell-editor" class="editor-host"></div><footer class="pane-footer"><span id="spell-count"></span><span>THE INCANTATION</span></footer></section>
+          <section id="lean-pane" class="editor-pane lean-pane" aria-label="Lean source"><header class="pane-header"><div><span class="pane-index">02</span><h2>Lean + mathlib</h2><span class="language-label">.lean</span></div><button class="copy-button" data-copy="lean" aria-label="Copy Lean source">Copy</button></header><div id="lean-editor" class="editor-host"></div><footer class="pane-footer"><span id="lean-count"></span><span>THE MATHEMATICS</span></footer></section>
         </div>
         <div class="validation-bar"><div class="validation-copy"><span id="status-icon" aria-hidden="true">◇</span><div><strong id="status" role="status" aria-live="polite"></strong><span id="status-detail"></span></div></div><button id="check" class="cast-button">Check round trip <span aria-hidden="true">⟐</span></button></div>
       </section>
@@ -119,6 +121,21 @@ function makeEditor(side: Side, doc: string): EditorView {
 const lean = makeEditor('lean', initialFolio.lean);
 const spell = makeEditor('spell', initialFolio.spell);
 const editors = { lean, spell };
+for (const side of ['spell', 'lean'] as const) {
+  const button = $<HTMLButtonElement>(`#toggle-${side}`);
+  button.addEventListener('click', () => {
+    const pane = $(`#${side}-pane`);
+    pane.hidden = !pane.hidden;
+    button.textContent = `${pane.hidden ? 'Show' : 'Hide'} ${side === 'spell' ? 'magic' : 'math'}`;
+    button.setAttribute('aria-expanded', String(!pane.hidden));
+    const visibleCount = Number(!$('#spell-pane').hidden) + Number(!$('#lean-pane').hidden);
+    $('.editors').classList.toggle('single-pane', visibleCount === 1);
+    $('#panes-hidden').hidden = visibleCount > 0;
+    // Keep both editors alive so drafts, folds, undo, and translation survive hiding.
+    for (const editor of Object.values(editors)) editor.requestMeasure();
+  });
+}
+
 const value = (side: Side) => editors[side].state.doc.toString();
 function replace(side: Side, text: string, reset = false) {
   const view = editors[side];

@@ -161,3 +161,10 @@ button:disabled { opacity: .45; cursor: default; }
 @keyframes reveal-glimmer { 0% { filter: brightness(1); } 25% { filter: brightness(1.35); box-shadow: inset 0 0 25px #d6b46816; } 100% { filter: brightness(1); box-shadow: inset 0 0 0 transparent; } }
 @media (prefers-reduced-motion: reduce) { .spark-field { display: none; }.spell-revealing { animation: none; } }
 @media (max-width: 1180px) and (min-width: 901px) { .spell-actions { gap: 7px; }.reading-desk .pane-header { padding: 12px; flex-wrap: wrap; } }
+
+.pane-visibility { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 15px; border-bottom: 1px solid var(--border); background: #182321; }
+.pane-visibility button { border: 1px solid #667b6350; border-radius: 3px; padding: 6px 12px; }
+.pane-visibility button[aria-expanded="false"] { color: #dcc292; border-color: #b6975f70; }
+.reading-desk .editors.single-pane { grid-template-columns: minmax(0, 1fr); }
+.reading-desk .editors.single-pane .editor-pane { border: 0; }
+.panes-hidden { margin: 0; padding: 30px 20px; color: #b7c8bd; font-size: 14px; line-height: 1.6; }

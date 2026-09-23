@@ -40,6 +40,7 @@ app.innerHTML = `
       <section id="help-panel" class="help-panel" hidden>
         <h2>Two languages, one theorem</h2>
         <p>The left pane is Arcane Lean: mathematical names and syntax translated into a consistent spell vocabulary. The right pane is the exact Lean source. Edit either pane to translate in both directions.</p>
+        <p>Spell ingredients such as <code>jade✨cube</code> and <code>silver✨bell</code> are variables: the math pane calls them <code>x</code> and <code>y</code>. Their types and hypotheses say what they can do. Spell names and schools also have mathematical names on the right; the saved name key keeps the correspondence.</p>
         <p>Every original folio was compiled against mathlib, translated, decoded, and compiled again. The proof audit rejects placeholders. Standard Lean axioms such as classical choice may occur. <strong>Your edits are drafts:</strong> the browser checks translation fidelity, but does not run Lean.</p>
         <p><strong>Typing glyphs:</strong> type a backslash and a short name, then a space or Tab. In the spell pane, <code>\\sp</code> gives ✨, <code>\\dag</code> gives †, and <code>\\merc</code> gives ☿. A backslash before any Lean symbol gives its spell glyph: <code>\\:</code> gives ⟡, <code>\\(</code> gives ⟪, <code>\\:=</code> gives ⇰, <code>\\0</code> gives ⊘, and <code>\\1</code> gives ☉. The Lean pane uses Lean's own shortcuts, such as <code>\\to</code> for → and <code>\\-1</code> for ⁻¹.</p>
         <p>Switching lessons keeps your drafts in this tab. Download to keep a copy with its name key; reloading the page loses unsaved drafts. Press Escape then Tab to leave an editor using the keyboard.</p>
@@ -80,7 +81,7 @@ const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
     if (stream.match(/"(?:[^"\\]|\\.)*"?/)) return 'string';
     if (stream.match(/«[^»]*»/)) return 'variableName';
     if (stream.match(/\d+|[⊘☉]/)) return 'number';
-    if (stream.match(/✨(?:[\p{L}_][\p{L}\p{N}\p{M}_'!?]*✨)+/u)) return 'atom';
+    if (stream.match(/(?:✨(?:[\p{L}_][\p{L}\p{N}\p{M}_'!?]*✨)+|[\p{L}_][\p{L}\p{N}\p{M}_'!?]*(?:✨[\p{L}_][\p{L}\p{N}\p{M}_'!?]*)+)/u)) return 'atom';
     const word = stream.match(/[\p{L}_][\p{L}\p{N}\p{M}_\u00a0'!?]*/u);
     if (word) {
       const text = (word as RegExpMatchArray)[0];

@@ -4,46 +4,46 @@ sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ritual ✨Circle✨of✨Silence✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp☿silence
+ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ copper✨wire☿silence
 
-spell ✨Name✨the✨Silent✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ ✨Circle✨of✨Silence✨ warp ↭ warp mark ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
+spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+    jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
 
-spell ✨Unbroken✨Silence✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
-    ⟪sigilward ⟡ mark ∈ ✨Circle✨of✨Silence✨ warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft† ∈ ✨Circle✨of✨Silence✨ warp ⇰ cast
-  bind muted ⟡ warp mark ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ warp mark⟫☿onward sigilward
-  bind hushed ⟡ warp ⟪weft ⊛ mark ⊛ weft†⟫ ≣ ☉ ⇰
-    litany warp ⟪weft ⊛ mark ⊛ weft†⟫ ≣ warp ⟪weft ⊛ mark⟫ ⊛ warp weft† ⇰ ✨Preserve✨the✨Binding✨ warp ⟪weft ⊛ mark⟫ weft†
-      ▢ ≣ warp weft ⊛ warp mark ⊛ warp weft† ⇰
-          sympathy ⟪conjure token ⇉ token ⊛ warp weft†⟫ ⟪✨Preserve✨the✨Binding✨ warp weft mark⟫
-      ▢ ≣ warp weft ⊛ ☉ ⊛ warp weft† ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token ⊛ warp weft†⟫ muted
-      ▢ ≣ warp weft ⊛ warp weft† ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp weft†⟫ ⟪✨Bind✨with✨Stillness✨ ⟪warp weft⟫⟫
-      ▢ ≣ warp weft ⊛ ⟪warp weft⟫† ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token⟫ ⟪✨Reverse✨the✨Binding✨ warp weft⟫
-      ▢ ≣ ☉ ⇰ ✨Binding✨Undone✨ ⟪warp weft⟫
-  missile ⟪✨Name✨the✨Silent✨ warp ⟪weft ⊛ mark ⊛ weft†⟫⟫☿backward hushed
+spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⧼jade✨cube ⟡ coven⧽
+    ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ coven⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
+  bind muted ⟡ copper✨wire jade✨cube ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
+  bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ ☉ ⇰
+    litany copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ ⊛ copper✨wire silk✨cord† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ silk✨cord†
+      ▢ ≣ copper✨wire silk✨cord ⊛ copper✨wire jade✨cube ⊛ copper✨wire silk✨cord† ⇰
+          sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ ⟪✨Preserve✨the✨Binding✨ copper✨wire silk✨cord jade✨cube⟫
+      ▢ ≣ copper✨wire silk✨cord ⊛ ☉ ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ muted
+      ▢ ≣ copper✨wire silk✨cord ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire silk✨cord⟫⟫
+      ▢ ≣ copper✨wire silk✨cord ⊛ ⟪copper✨wire silk✨cord⟫† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire silk✨cord⟫
+      ▢ ≣ ☉ ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
+  missile ⟪✨Name✨the✨Silent✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫⟫☿backward hushed
 
-spell ✨Silence✨is✨Hallowed✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪✨Circle✨of✨Silence✨ warp⟫☿Hallowed ⇰ cast
+spell ✨Silence✨is✨Hallowed✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ ⟪✨Circle✨of✨Silence✨ copper✨wire⟫☿Hallowed ⇰ cast
   fabricate
-  summon mark sigilward weft
-  missile ✨Unbroken✨Silence✨ warp sigilward weft
+  summon jade✨cube sigilward silk✨cord
+  missile ✨Unbroken✨Silence✨ copper✨wire sigilward silk✨cord
 
-spell ✨Nothing✨Lost✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite☿Faithful warp ↭ ✨Circle✨of✨Silence✨ warp ≣ ⊥ ⇰ cast
+spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡
+    Rite☿Faithful copper✨wire ↭ ✨Circle✨of✨Silence✨ copper✨wire ≣ ⊥ ⇰ cast
   transmute ⟮Cabal☿✨Emptiness✨Criterion✨⟯
   fabricate
-  ❖ summon fidelity mark sigilward
-    bind echoing ⟡ warp mark ≣ warp ☉ ⇰
-      litany warp mark ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ warp mark⟫☿onward sigilward
-        ▢ ≣ warp ☉ ⇰ ⟪✨Preserve✨the✨Stillness✨ warp⟫☿reflect
+  ❖ summon fidelity jade✨cube sigilward
+    bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire ☉ ⇰
+      litany copper✨wire jade✨cube ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
+        ▢ ≣ copper✨wire ☉ ⇰ ⟪✨Preserve✨the✨Stillness✨ copper✨wire⟫☿reflect
     missile fidelity echoing
-  ❖ summon hollowness mark rune twinned
-    bind hushed ⟡ warp ⟪mark ⊛ rune†⟫ ≣ ☉ ⇰
-      litany warp ⟪mark ⊛ rune†⟫ ≣ warp mark ⊛ warp rune† ⇰ ✨Preserve✨the✨Binding✨ warp mark rune†
-        ▢ ≣ warp rune ⊛ warp rune† ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune†⟫ twinned
-        ▢ ≣ warp ⟪rune ⊛ rune†⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp rune rune†⟫☿reflect
-        ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Binding✨Undone✨ rune⟫
-        ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ warp
-    bind vanished ⟡ mark ⊛ rune† ≣ ☉ ⇰ hollowness ⟪mark ⊛ rune†⟫ ⟪⟪✨Name✨the✨Silent✨ warp ⟪mark ⊛ rune†⟫⟫☿backward hushed⟫
+  ❖ summon hollowness jade✨cube silver✨bell twinned
+    bind hushed ⟡ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ ☉ ⇰
+      litany copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube silver✨bell†
+        ▢ ≣ copper✨wire silver✨bell ⊛ copper✨wire silver✨bell† ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell†⟫ twinned
+        ▢ ≣ copper✨wire ⟪silver✨bell ⊛ silver✨bell†⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire silver✨bell silver✨bell†⟫☿reflect
+        ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silver✨bell⟫
+        ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
+    bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ ☉ ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
     missile ✨Balanced✨Division✨☿onward vanished
 
 seal Arcanum☿Enchantment

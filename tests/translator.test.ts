@@ -47,6 +47,49 @@ test('round trip survives saving and reopening the name key', () => {
   assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
 });
 
+test('mathematical namespaces have contextual spell names without renaming mathlib modules', () => {
+  const key = new Key({
+    global: { Mathematics: 'Arcanum', GroupTheory: '✨Coven✨Lore✨',
+      GroupActions: 'Orbits', smul_eq_smul_iff_mem_stabilizer: '✨Same✨Place✨Same✨Veil✨' },
+    scoped: {}, namespaces: { 'Mathematics.GroupTheory': 'Arcanum☿Enchantment' },
+  });
+  const source = 'import Mathematics.GroupTheory.GroupActions\nimport Mathlib.GroupTheory.GroupAction.Quotient\n' +
+    'namespace Mathematics.GroupTheory\n#check Mathematics.GroupTheory.smul_eq_smul_iff_mem_stabilizer\n' +
+    'end Mathematics.GroupTheory\n';
+  const spell = toSpell(source, key);
+  assert.match(spell, /Arcanum☿Enchantment☿Orbits/);
+  assert.match(spell, /Arcanum☿Enchantment☿✨Same✨Place✨Same✨Veil✨/);
+  assert.match(spell, /☿✨Coven✨Lore✨☿/);
+  const reloaded = new Key(JSON.parse(JSON.stringify(key.data())));
+  assert.equal(fromSpell(spell, reloaded), source);
+  assert.equal(fromSpell(spell.replaceAll('☿', '.'), reloaded), source);
+  const extended = source + '\n#check Mathematics.«Enchantment»\n#check Enchantment\n';
+  assert.equal(fromSpell(toSpell(extended, key), new Key(key.data())), extended);
+});
+
+test('material components are single identifiers, including scoped names and field access', () => {
+  const key = new Key({ global: { x: 'jade✨cube', y: 'silver✨bell', h: 'ward', demo: '✨Test✨Spell✨' },
+    scoped: { demo: { h: 'pinch✨of✨salt' } } });
+  const source = 'theorem demo (x y : Nat) (h : x = y) : y = x := h.symm\n';
+  const spell = toSpell(source, key);
+  assert.match(spell, /jade✨cube silver✨bell/);
+  assert.match(spell, /pinch✨of✨salt☿/);
+  assert.equal(tokenize('jade✨cube☿silver✨bell', true).length, 1);
+  assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
+  assert.equal(fromSpell('jade✨cube', new Key()), '«jade✨cube»');
+  const literals = '#check x✨y\n#check «jade✨cube»\n"jade✨cube" -- silver✨bell\n';
+  assert.equal(fromSpell(toSpell(literals, key), key), literals);
+});
+
+test('namespace mappings reject invalid paths and ambiguous spell aliases', () => {
+  assert.throws(() => new Key({ global: {}, scoped: {}, namespaces: {
+    'Math.Groups': 'Book☿Bindings', 'Math.Rings': 'Book☿Bindings',
+  } }), /same spell namespace/);
+  assert.throws(() => new Key({ global: {}, scoped: {}, namespaces: { 'Math.Groups': 'Book☿spell' } }), /Invalid namespace/);
+  assert.throws(() => new Key({ global: { Math: 'Book', Rings: 'Bindings' }, scoped: {},
+    namespaces: { 'Math.Groups': 'Book☿Bindings' } }), /Ambiguous namespace/);
+});
+
 for (const [label, source] of Object.entries({
   'quoted name before an automatic name': 'def «ember» := 0\ndef x := 1\n',
   'quoted name after an automatic name': 'def x := 0\ndef «ember» := 1\n',

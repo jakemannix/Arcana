@@ -5,35 +5,35 @@ sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯
 
-ritual ✨Chain✨of✨Pacts✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft☿threading warp
+ritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ silk✨cord☿threading copper✨wire
 
-spell ✨Preserve✨the✨Binding✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡
-    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿✨Carry✨the✨Binding✨ mark rune
+spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube silver✨bell ⟡ coven⟫ ⟡
+    copper✨wire ⟪jade✨cube ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell ⇰ copper✨wire☿✨Carry✨the✨Binding✨ jade✨cube silver✨bell
 
-spell ✨Preserve✨the✨Stillness✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp ☉ ≣ ☉ ⇰ cast
-  bind doubled ⟡ warp ☉ ⊛ warp ☉ ≣ warp ☉ ⊛ ☉ ⇰
-    litany warp ☉ ⊛ warp ☉ ≣ warp ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp ☉ ☉⟫☿reflect
-      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Bind✨with✨Stillness✨ ☉⟫
-      ▢ ≣ warp ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪warp ☉⟫⟫☿reflect
+spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ copper✨wire ☉ ≣ ☉ ⇰ cast
+  bind doubled ⟡ copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ☉ ⊛ ☉ ⇰
+    litany copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire ☉ ☉⟫☿reflect
+      ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ ☉⟫
+      ▢ ≣ copper✨wire ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire ☉⟫⟫☿reflect
   missile ✨Strike✨from✨the✨Left✨ doubled
 
-spell ✨Reverse✨the✨Binding✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    warp mark† ≣ ⟪warp mark⟫† ⇰ cast
-  bind undone ⟡ warp mark† ⊛ warp mark ≣ ☉ ⇰
-    litany warp mark† ⊛ warp mark ≣ warp ⟪mark† ⊛ mark⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp mark† mark⟫☿reflect
-      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Reversal✨Undoes✨ mark⟫
-      ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ warp
+spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+    copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast
+  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ ☉ ⇰
+    litany copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ copper✨wire ⟪jade✨cube† ⊛ jade✨cube⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† jade✨cube⟫☿reflect
+      ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
+      ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
   missile ✨Undoer✨is✨Reversal✨ undone
 
-spell ✨Chain✨without✨Loss✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫
-    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoward ⟡ Rite☿Faithful weft⟫ ⟡
-    Rite☿Faithful ⟪✨Chain✨of✨Pacts✨ warp weft⟫ ⇰
-  Arcanum☿Cantrips☿✨Faithful✨Weaving✨ ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoward
+spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫
+    ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
+    Rite☿Faithful ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫ ⇰
+  Arcanum☿Cantrips☿✨Faithful✨Weaving✨ ⟪copper✨wire ⇰ copper✨wire⟫ ⟪silk✨cord ⇰ silk✨cord⟫ faith echoward
 
-spell ✨Silence✨in✨the✨Chain✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ ⟪✨Chain✨of✨Pacts✨ warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰
-  litany mark ∈ ⟪✨Chain✨of✨Pacts✨ warp weft⟫☿silence ↭ ✨Chain✨of✨Pacts✨ warp weft mark ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
-    ▢ ↭ weft ⟪warp mark⟫ ≣ ☉ ⇰ Pact☿mirror
-    ▢ ↭ warp mark ∈ weft☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
+spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+    jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰
+  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
+    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ ☉ ⇰ Pact☿mirror
+    ▢ ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
 seal Arcanum☿Enchantment

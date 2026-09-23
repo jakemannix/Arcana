@@ -35,4 +35,16 @@ The active product is now Enchantment/group theory, not the initial seven toy ex
 | grimoire/lexicon.json | Curated mathematical Arcane vocabulary |
 | scripts/verify-grimoire.ts | Lean build, decoded compilation, axiom audit, artifact generation |
 | tests/grimoire.test.ts | Provenance, round-trip, folding, and status regression checks |
-| math/Arcane.lean | Whole-book Lean imports |
+| math/Mathematics.lean | Whole-book Lean imports |
+| math/Mathematics/Functions.lean | Function composition and equivalence foundations |
+| math/Mathematics/GroupTheory/Subgroups.lean | Generated subgroups and closure |
+| math/Mathematics/GroupTheory/Homomorphisms.lean | Homomorphism laws and composition |
+| math/Mathematics/GroupTheory/Kernels.lean | Kernels, normality, and injectivity |
+| math/Mathematics/GroupTheory/QuotientGroups.lean | Quotient lifts and uniqueness |
+| math/Mathematics/GroupTheory/FirstIsomorphism.lean | Quotient-to-range isomorphism |
+| math/Mathematics/GroupTheory/Lagrange.lean | Subgroup and element orders |
+| math/Mathematics/GroupTheory/SimpleGroups.lean | Simplicity of groups of prime order |
+| math/Mathematics/GroupTheory/GroupActions.lean | Orbit–stabilizer correspondence |
+| math/Mathematics/GroupTheory/Permutations.lean | The symmetric group on three elements |
+
+See [[decisions/mathematical-names]] for mathematical Lean naming, namespace aliases in saved keys, and material-component spell variables.

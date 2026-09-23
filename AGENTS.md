@@ -28,6 +28,8 @@ Lean and mathlib provide the proof checking. Arcane is a reversible presentation
 - Arcane namespaces and field access use Mercury, **`☿`**: `Rite☿Perfect` corresponds to `Function.Bijective`. Continue accepting legacy dotted spells. Decimal points and punctuation inside literal text retain their meaning.
 - Multi-word Arcane names use sparkles, **`✨Preserve✨the✨Binding✨`**, not TitleCase: capitalized words for spells, rituals, and namespaces; lowercase words for library functions; small words such as "the" and "of" in lower case. Frequent local hypothesis names stay single words (`sigilward`). The group inverse `⁻¹` is written as a dagger, `†`. Named theorems carry their discoverer's name, as in `✨Lagrange's✨Measure✨of✨the✨Coven✨` or `✨Noether's✨Unveiling✨of✨the✨Image✨`; the lesson text says who they were. Words about prime numbers build on `Indivisible` (`Nat.Prime`) and `primal` (`primalward`). The user wants the Arcane side to avoid looking mathematical or programmatic, so keep `:`, `/`, `{`, `}` and similar symbols replaced.
 - Keep the translation key with exported drafts; it carries the information needed to reverse renamed identifiers.
+- Keep actual Lean namespaces, declarations, and proof locals mathematical. The book lives in `Mathematics.Functions` and `Mathematics.GroupTheory`; `grimoire/lexicon.json` holds the spell-side names. Its optional `namespaces` map translates full prefixes, so the Enchantment alias does not rename `Mathlib.GroupTheory`.
+- Spell-side term variables use lowercase material components with interior sparkles (`x` → `jade✨cube`, `y` → `silver✨bell`, `f` → `copper✨wire`). These are single identifiers; keep framed sparkles for spell titles. Include ingredients in generated glossaries. Preserve the historical `src/grimoire.key.json` fixture; regenerate the live catalog and downloadable key through verification.
 
 ## Interaction and visual character
 
@@ -40,7 +42,7 @@ The user requested independent hide/show controls for the math and magic panes. 
 This repository's root is the browser project (locally it was created inside `lean_magic/web`). The original Python implementation is preserved in `prototype/`; the TypeScript translator is the current implementation.
 
 - Read `README.md` and the relevant `.doctrack/` notes before changing a subsystem. Update those notes when behavior or architecture changes.
-- Mathematical sources: `math/Arcane/`; lesson explanations and vocabulary: `grimoire/chapters.json` and `grimoire/lexicon.json`.
+- Mathematical sources: `math/Mathematics/`; lesson explanations and vocabulary: `grimoire/chapters.json` and `grimoire/lexicon.json`.
 - Translation: `src/translator.ts`; verification status: `src/catalog.ts`; editor: `src/main.ts`; folding/effects: `src/magic.ts`; styling: `src/style.css`.
 - Use `npm ci` to install dependencies, `npm run dev` for the editor, `npm test` for regressions, and `npm run build` for TypeScript checking and the static bundle.
 - After changing formal sources, translation, vocabulary, or lesson metadata, run `npm run grimoire:verify`, then the tests and build. The verifier regenerates `src/grimoire.generated.json`, `public/grimoire/`, and `grimoire/README.md`; do not hand-edit those outputs.

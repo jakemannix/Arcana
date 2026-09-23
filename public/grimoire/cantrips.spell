@@ -5,37 +5,37 @@ sanctum Arcanum☿Cantrips
 
 familiar ⧼aether vapor vesper ⟡ Essence⊛⧽
 
-ritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ conjure mark ⇉ weft ⟪warp mark⟫
+ritual Weave ⟪copper✨wire ⟡ aether ↝ vapor⟫ ⟪silk✨cord ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ conjure jade✨cube ⇉ silk✨cord ⟪copper✨wire jade✨cube⟫
 
-spell ✨Thread✨Unfolds✨ ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡
-    Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror
+spell ✨Thread✨Unfolds✨ ⟪copper✨wire ⟡ aether ↝ vapor⟫ ⟪silk✨cord ⟡ vapor ↝ vesper⟫ ⟪jade✨cube ⟡ aether⟫ ⟡
+    Weave copper✨wire silk✨cord jade✨cube ≣ silk✨cord ⟪copper✨wire jade✨cube⟫ ⇰ mirror
 
-spell ✨Faithful✨Weaving✨ ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
-    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoward ⟡ Rite☿Faithful weft⟫ ⟡
-    Rite☿Faithful ⟪Weave warp weft⟫ ⇰ cast
-  summon mark rune twinned
-  bind ✨outer✨weave✨ ⟡ weft ⟪warp mark⟫ ≣ weft ⟪warp rune⟫ ⇰
-    litany weft ⟪warp mark⟫ ≣ Weave warp weft mark ⇰ ⟪✨Thread✨Unfolds✨ warp weft mark⟫☿reflect
-      ▢ ≣ Weave warp weft rune ⇰ twinned
-      ▢ ≣ weft ⟪warp rune⟫ ⇰ ✨Thread✨Unfolds✨ warp weft rune
-  bind ✨inner✨weave✨ ⟡ warp mark ≣ warp rune ⇰ echoward ✨outer✨weave✨
+spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk✨cord ⟡ vapor ↝ vesper⧽
+    ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
+    Rite☿Faithful ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
+  summon jade✨cube silver✨bell twinned
+  bind ✨outer✨weave✨ ⟡ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ silk✨cord ⟪copper✨wire silver✨bell⟫ ⇰
+    litany silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ Weave copper✨wire silk✨cord jade✨cube ⇰ ⟪✨Thread✨Unfolds✨ copper✨wire silk✨cord jade✨cube⟫☿reflect
+      ▢ ≣ Weave copper✨wire silk✨cord silver✨bell ⇰ twinned
+      ▢ ≣ silk✨cord ⟪copper✨wire silver✨bell⟫ ⇰ ✨Thread✨Unfolds✨ copper✨wire silk✨cord silver✨bell
+  bind ✨inner✨weave✨ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ echoward ✨outer✨weave✨
   missile faith ✨inner✨weave✨
 
-spell ✨Reaching✨Weaving✨ ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
-    ⟪faith ⟡ Rite☿Reaching warp⟫ ⟪echoward ⟡ Rite☿Reaching weft⟫ ⟡
-    Rite☿Reaching ⟪Weave warp weft⟫ ⇰ cast
-  summon star
-  wrest ⦉rune᛫ runeward⦊ ⇰ echoward star
-  wrest ⦉mark᛫ sigilward⦊ ⇰ faith rune
-  hone ⦉mark᛫ ?▢⦊
-  litany Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ ✨Thread✨Unfolds✨ warp weft mark
-    ▢ ≣ weft rune ⇰ sympathy weft sigilward
-    ▢ ≣ star ⇰ runeward
+spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk✨cord ⟡ vapor ↝ vesper⧽
+    ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟪echoward ⟡ Rite☿Reaching silk✨cord⟫ ⟡
+    Rite☿Reaching ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
+  summon amber✨rod
+  wrest ⦉silver✨bell᛫ runeward⦊ ⇰ echoward amber✨rod
+  wrest ⦉jade✨cube᛫ sigilward⦊ ⇰ faith silver✨bell
+  hone ⦉jade✨cube᛫ ?▢⦊
+  litany Weave copper✨wire silk✨cord jade✨cube ≣ silk✨cord ⟪copper✨wire jade✨cube⟫ ⇰ ✨Thread✨Unfolds✨ copper✨wire silk✨cord jade✨cube
+    ▢ ≣ silk✨cord silver✨bell ⇰ sympathy silk✨cord sigilward
+    ▢ ≣ amber✨rod ⇰ runeward
 
-spell ✨Mirror✨Return✨ ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal☿reflect ⟪portal mark⟫ ≣ mark ⇰
-  portal☿✨Return✨Path✨ mark
+spell ✨Mirror✨Return✨ ⟪obsidian✨mirror ⟡ aether ≃ vapor⟫ ⟪jade✨cube ⟡ aether⟫ ⟡ obsidian✨mirror☿reflect ⟪obsidian✨mirror jade✨cube⟫ ≣ jade✨cube ⇰
+  obsidian✨mirror☿✨Return✨Path✨ jade✨cube
 
-spell ✨Mirror✨Depart✨ ⟪portal ⟡ aether ≃ vapor⟫ ⟪rune ⟡ vapor⟫ ⟡ portal ⟪portal☿reflect rune⟫ ≣ rune ⇰
-  portal☿✨Departure✨Path✨ rune
+spell ✨Mirror✨Depart✨ ⟪obsidian✨mirror ⟡ aether ≃ vapor⟫ ⟪silver✨bell ⟡ vapor⟫ ⟡ obsidian✨mirror ⟪obsidian✨mirror☿reflect silver✨bell⟫ ≣ silver✨bell ⇰
+  obsidian✨mirror☿✨Departure✨Path✨ silver✨bell
 
 seal Arcanum☿Cantrips

@@ -20,3 +20,5 @@ Pane visibility buttons sit outside both editors and independently hide/show mat
 
 ## Glyph shortcuts
 `src/glyphs.ts` holds two backslash-shortcut tables and a pure `expand` function, tested in `tests/glyphs.test.ts`. The Lean pane uses Lean's usual names (`\to`, `\-1`). The spell pane maps each Lean shortcut and each ASCII Lean symbol to its spell glyph (`\:` → ⟡), plus `\sp` ✨, `\dag` †, `\merc` ☿. A shortcut expands at once when no longer shortcut shares its prefix; otherwise space or Tab completes it. The handler runs at `Prec.highest` so bracket auto-closing cannot claim `\(` first. The help panel lists the common shortcuts.
+
+The spell highlighter accepts both framed spell titles and ingredient identifiers with interior sparkles, such as `jade✨cube`. The help panel explains that these ingredients correspond to ordinary Lean variables, with unchanged types and hypotheses. Used ingredients and namespace aliases appear in the generated folio glossary. See [[../decisions/mathematical-names]].

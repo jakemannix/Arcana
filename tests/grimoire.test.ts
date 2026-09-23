@@ -20,6 +20,26 @@ test('verification evidence covers current source, vocabulary, and metadata', ()
   assert.equal(folios.length, 10);
 });
 
+test('checked folios use mathematical Lean names and expose reversible material components', () => {
+  assert.deepEqual(grimoireKey.auto, []);
+  for (const folio of folios) {
+    assert.match(folio.lean, /^namespace Mathematics\.(?:Functions|GroupTheory)$/m);
+    assert.doesNotMatch(folio.lean, /Arcane\.|same_place_same_veil|pact_preserves|unveiledImage/);
+    assert.ok(folio.declarations.every(name => name.startsWith('Mathematics.')));
+    const bundle = JSON.parse(file('public/grimoire/' + folio.id + '.json'));
+    assert.equal(fromSpell(bundle.spell, new Key(bundle.key)), folio.lean);
+  }
+  const orbits = folios.find(f => f.id === 'orbits')!;
+  assert.match(orbits.lean, /theorem smul_eq_smul_iff_mem_stabilizer \(x : X\)/);
+  assert.match(orbits.spell, /spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube/);
+  assert.ok(orbits.glossary.some(term => term.lean === 'x' && term.arcane === 'jade✨cube'));
+  assert.ok(orbits.glossary.some(term => term.lean === 'Mathematics.GroupTheory' && term.arcane === 'Arcanum☿Enchantment'));
+  const subgroups = folios.find(f => f.id === 'circles')!;
+  assert.ok(!subgroups.glossary.some(term => term.lean === 'GroupTheory'));
+  const key = new Key(JSON.parse(file('public/grimoire/arcane.key.json')));
+  assert.equal(fromSpell('jade✨cube silver✨bell', key), 'x y');
+});
+
 for (const folio of folios) test(`${folio.id}: exact translation, current checked source, valid prerequisites, and foldable bodies`, () => {
   assert.equal(file('math/' + folio.file), folio.lean);
   assert.equal(hash(folio.lean), folio.sourceHash);

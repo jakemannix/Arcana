@@ -47,4 +47,10 @@ This repository's root is the browser project (locally it was created inside `le
 - Run direct `lake` commands from `math/`, where the pinned Lean toolchain and mathlib manifest live. See `README.md` for initial mathlib setup. Ordinary frontend builds use the checked-in catalog and need no Lean installation.
 - Match verification effort to the change. Documentation-only changes need a content/diff review rather than rebuilding the mathematics.
 
-GitHub is `jakemannix/ArcaneLean`, with the local remote named `github`. GitHub pushes and updates to the hosted site are separate operations. Hosting configuration is in `.openai/hosting.json`; preserve the current audience when deploying. Repository and site visibility should follow explicit user direction.
+GitHub is `jakemannix/ArcaneLean` (the remote may be named `github` or `origin`). The repository is private; the site is public, by the user's choice.
+
+- Every push to `main` redeploys the public site to GitHub Pages through `.github/workflows/deploy.yml`, which runs `npm ci`, `npm test`, and `npm run build`, then publishes `dist/`. A failed test stops the deploy. The workflow can also run by hand (`workflow_dispatch`).
+- The user wants work merged quickly: open a PR, verify it, and merge it when checks pass.
+- The build must work under a subfolder (`/ArcaneLean/`). Keep Vite's `base: './'` and use relative paths, never a leading `/`, for links to `public/` files such as `grimoire/axioms.txt`.
+- The Pages deploy does not run Lean. Run `npm run grimoire:verify` locally and commit its outputs before merging formal changes; the tests reject stale outputs.
+- `.openai/hosting.json` configures an older OpenAI-hosted copy that does not update from merges. Repository and site visibility should follow explicit user direction.

@@ -33,7 +33,7 @@ app.innerHTML = `
       <div class="school-heading"><span aria-hidden="true">⟐</span><div><p class="eyebrow">SCHOOL OF</p><h1>Enchantment</h1></div></div>
       <p class="school-description">Groups, pacts, and the structure that survives a transformation.</p>
       <nav id="chapter-nav" aria-label="Enchantment lessons"></nav>
-      <div class="contents-foot"><strong>Real mathematics. Arcane language.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="/grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
+      <div class="contents-foot"><strong>Real mathematics. Arcane language.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
     </aside>
     <div class="reading-desk">
       <section class="folio-introduction"><p class="eyebrow" id="folio-level"></p><h2 id="folio-title"></h2><p class="folio-subtitle" id="folio-subtitle"></p><p class="lede" id="folio-summary"></p></section>
@@ -227,7 +227,7 @@ function renderFolio() {
     $('#references').replaceChildren();
     for (const reference of entry.references) { const item = document.createElement('li'), link = document.createElement('a'); link.textContent = reference.symbol; link.href = reference.url; link.target = '_blank'; link.rel = 'noreferrer'; item.append(link); $('#references').append(item); }
     $('#source-downloads').replaceChildren();
-    for (const [extension, label] of [['spell', 'Arcane source'], ['lean', 'Lean source'], ['json', 'Original bundle']]) { const link = document.createElement('a'); link.href = '/grimoire/' + entry.id + '.' + extension; link.download = entry.id + '.' + extension; link.textContent = label + ' ↓'; $('#source-downloads').append(link); }
+    for (const [extension, label] of [['spell', 'Arcane source'], ['lean', 'Lean source'], ['json', 'Original bundle']]) { const link = document.createElement('a'); link.href = 'grimoire/' + entry.id + '.' + extension; link.download = entry.id + '.' + extension; link.textContent = label + ' ↓'; $('#source-downloads').append(link); }
   }
   for (const button of document.querySelectorAll<HTMLButtonElement>('[data-folio]')) {
     button.classList.toggle('active', button.dataset.folio === selected?.id);

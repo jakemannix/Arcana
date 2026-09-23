@@ -3,8 +3,13 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
 
 sanctum Arcana☿Enchantment
 
+/- Think of the three labels as vertices of an equilateral triangle.
+Every vertex permutation is a geometric symmetry of that triangle;
+the formal model here computes the permutations, not plane geometry. -/
 byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 三⟫
 
+/- Each swap is a mirror fixing the remaining vertex.
+Products of permutations apply the rightmost swap first. -/
 ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 〇 一
 
 ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 一 二
@@ -14,6 +19,8 @@ spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 六 ⇰ c
 spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ 一 ⇰
   Portal☿✨Exchange✨Undoes✨Itself✨ 〇 一
 
+/- To disprove equality of two permutations, one input with different outputs
+is enough. Follow the first labeled vertex through both compositions. -/
 spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast
   summon twinned
   bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ≣ 一 ⇰ cast divine
@@ -24,6 +31,8 @@ spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange�
       ▢ ≣ 二 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
+/- These two mirrors compose to a rotation. The next statements trace
+its vertex cycle and prove its exact period. -/
 ritual ✨Threefold✨Turn✨ ⟡ ✨Three✨Sigils✨ ⇰ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨
 
 spell ✨Follow✨the✨Three✨Sigils✨ ⟡
@@ -34,6 +43,8 @@ spell ✨Three✨Turns✨Return✨ ⟡ ✨Threefold✨Turn✨ ⌃ 三 ≣ 一 �
 spell ✨The✨Threefold✨Period✨ ⟡ period ✨Threefold✨Turn✨ ≣ 三 ⇰
   ✨Indivisible✨Return✨ ✨Three✨Turns✨Return✨ ⟪cast divine⟫
 
+/- Every symmetry is a rotation or a reflected rotation.
+The finite exponent range and decide check all possibilities in this model. -/
 spell ✨All✨Dances✨of✨the✨Triangle✨ ⟡ ⟁ raven✨feather ⟡ ✨Three✨Sigils✨᛫ ⟒ onyx✨bead ⟡ Fetter 三᛫
     raven✨feather ≣ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⩔ raven✨feather ≣ ✨First✨Exchange✨ ⊛ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⇰ cast divine
 

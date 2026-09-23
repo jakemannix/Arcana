@@ -23,3 +23,6 @@ Carrier rune syntax is a finite alphabet exported as `CARRIER_RUNES` and `RUNE_P
 Only current Arcana syntax and `arcana/v1` bundles are supported. There are no retired keyword aliases, dotted spell namespaces, nonbreaking-space name encoding, Python implementation, or toy-school fixtures. The user explicitly removed backward compatibility requirements.
 
 Tests cover quoted forms of every built-in keyword and curated name, key serialization, qualified and adjacent quoted identifiers, scoped names, strings, comments, literal glyphs, incomplete input, and invalid keys. The generated book supplies end-to-end source/spell fixtures. Consumed by [[../features/editor]]; rationale in [[../decisions/browser-translation]].
+
+
+Adversarial key review rejects declaration-keyword remapping, local aliases for a declaration's own name, nested namespace aliases that capture a shorter namespace plus a renamed suffix, and spell names beginning with literal operators (such as Σ/Π) that tokenization would split. Compatible nested namespace mappings still work. These are current-key validation requirements, not backward compatibility paths; `tests/adversarial.test.ts` records the counterexamples.

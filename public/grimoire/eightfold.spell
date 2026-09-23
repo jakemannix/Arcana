@@ -3,6 +3,9 @@ beckon ✨Indivisible✨Cubic✨Veyrs✨☿✨The✨Exhaustive✨Census✨
 
 sanctum Arcana☿Enchantment
 
+/- The three commutative candidates are a single dial, a pair of dials,
+and three independent toggles. The square and quaternion models were imported
+from their earlier folios. -/
 byname ✨Eightfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 八⟫
 
 byname ✨Twin✨Fourfold✨Wheels✨ ⇰ Unchanted ⟪Clockwork 四⟫ ⨯ Unchanted ⟪Clockwork 二⟫
@@ -21,15 +24,22 @@ spell ✨Twin✨Wheels✨Return✨in✨Four✨ ⟡ ⟁ jade✨cube ⟡ ✨Twin�
 
 spell ✨Every✨Triple✨Charm✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Three✨Mirror✨Charms✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
 
+/- First check that all five candidates meet the size requirement.
+Classification will also require distinguishing them and proving exhaustiveness. -/
 spell ✨Five✨Houses✨of✨Eight✨ ⟡
     Counted☿census ✨Eightfold✨Wheel✨ ≣ 八 ⩓ Counted☿census ✨Twin✨Fourfold✨Wheels✨ ≣ 八 ⩓
     Counted☿census ✨Three✨Mirror✨Charms✨ ≣ 八 ⩓ Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 八 ⩓
     Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 八 ⇰ cast
   missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨Count✨the✨Four✨Winds✨᛫ ✨Count✨Hamilton's✨Pact✨⦊
 
+/- Count the nonidentity elements whose squares are the identity.
+The subtype stores both an element and evidence that it has this property. -/
 ineffable ritual ✨Census✨of✨Self✨Undoing✨Spirits✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Tallies ⇰
   Tally☿census ⧼jade✨cube ⟡ ᛰ ⧶⧶ jade✨cube ⌃ 二 ≣ 一 ⩓ jade✨cube ≢ 一⧽
 
+/- An isomorphism preserves squares, the identity, and inequality with the identity.
+It therefore gives a bijection between the two involution subtypes,
+and their cardinalities agree. -/
 spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
     ⟪obsidian✨mirror ⟡ ᛰ ≃⊛ ☥⟫ ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≣ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥ ⇰ cast
   channel Tally☿✨Census✨through✨Portal✨
@@ -55,6 +65,8 @@ spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence
       channel motionward
       missile ⟪sympathy obsidian✨mirror stillward⟫☿chain obsidian✨mirror☿✨keeps✨stillness✨
 
+/- These concrete counts separate every pair except the cyclic and quaternion groups.
+The following arguments turn that observation into proofs excluding isomorphisms. -/
 spell ✨The✨Five✨Houses'✨Hidden✨Censuses✨ ⟡
     ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Eightfold✨Wheel✨ ≣ 一 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Twin✨Fourfold✨Wheels✨ ≣ 三 ⩓
     ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Three✨Mirror✨Charms✨ ≣ 七 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Four✨Winds✨Veyr✨ ≣ 五 ⩓
@@ -68,6 +80,9 @@ spell ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨ ⧼ᛰ ☥ ⟡ Es
   unpack ⦉obsidian✨mirror⦊
   missile tallyward ⟪✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ obsidian✨mirror⟫
 
+/- The repeated count needs a second invariant. The cyclic group is commutative;
+an isomorphism would transfer that law to the quaternion units, contradicting
+the two units already known not to commute. -/
 spell ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨ ⟡ ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
   unpack ⦉obsidian✨mirror⦊
   channel ✨Hamilton's✨Discord✨
@@ -75,6 +90,8 @@ spell ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨ ⟡ ⫬ Inhabited ⟪✨E
     ▢ ≣ obsidian✨mirror ⟪obsidian✨mirror☿reflect ✨Hamilton's✨Second✨Spirit✨ ⊛ obsidian✨mirror☿reflect ✨Hamilton's✨First✨Spirit✨⟫ ⇰ sympathy obsidian✨mirror ⟪✨Bindings✨Commute✨ ▢ ▢⟫
     ▢ ≣ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ⇰ cast purify
 
+/- There are ten pairs among five candidates. Use the special commutativity
+argument for one pair and unequal involution counts for the other nine. -/
 spell ✨The✨Five✨Houses✨Are✨Distinct✨ ⟡
     ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩓
     ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩓
@@ -93,14 +110,22 @@ spell ✨The✨Five✨Houses✨Are✨Distinct✨ ⟡
     purify solely ⟮wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⟯
     divine
 
+/- Exhaustiveness is a separate argument, not a consequence of listing examples.
+The pinned P3Group dependency proves the general prime-cubed classification.
+This theorem specializes that checked proof to the prime two; the linked upstream
+sources contain the abelian structure and nonabelian generator arguments. -/
 spell ✨The✨Eightfold✨Way✨Admits✨No✨Sixth✨House✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟪sizeward ⟡ Tally☿census ᛰ ≣ 八⟫ ⟡
     Inhabited ⟪ᛰ ≃⊛ ✨Eightfold✨Wheel✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩔
     Inhabited ⟪ᛰ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩔
     Inhabited ⟪ᛰ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
   bind ⟡ Witnessed ⟪Tally☿Indivisible 二⟫ ⇰ ⦉cast divine⦊
+  /- Positive cardinality first supplies finiteness; an enumeration is then
+  available for applying the upstream theorem. -/
   bind ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ ⟪cast transmute ⟮sizeward⟯⁂ divine⟫
   dub ⟡ Counted ᛰ ⇰ Counted☿✨Enumerate✨the✨Finite✨ ᛰ
   bind cubeward ⟡ Tally☿census ᛰ ≣ 二 ⌃ 三 ⇰ sizeward☿chain ⟪cast divine⟫
+  /- The two odd-prime branches contradict our chosen prime.
+  The remaining branches are exactly the five concrete groups above. -/
   rend ✨Indivisible✨Cubic✨Veyrs✨☿exhaustive✨census 二 ᛰ cubeward whence
     wheelward ⫽ twinward ⫽ toggleward ⫽ oddward ⫽ oddward ⫽ doubleward ⫽ hamiltonward
   ❖ missile Either☿choose✨left wheelward

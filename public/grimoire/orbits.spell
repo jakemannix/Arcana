@@ -5,6 +5,9 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
 
+/- Two moves reach the same point exactly when their difference fixes it.
+Move the first group element across the equation using its inverse;
+the reverse implication undoes that move. -/
 spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord onyx✨bead ⟡ ᛰ⟫ ⟡
     silk✨cord • jade✨cube ≣ onyx✨bead • jade✨cube ↭ silk✨cord† ⊛ onyx✨bead ∈ Commanding☿stillguard ᛰ jade✨cube ⇰ cast
   transmute ⟮Commanding☿✨Stillguard✨Criterion✨⟯
@@ -18,10 +21,14 @@ spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord
       ▢ ≣ silk✨cord • silk✨cord† • onyx✨bead • jade✨cube ⇰ sympathy ⟪conjure ruby✨shard ⇉ silk✨cord • ruby✨shard⟫ ⟪✨Command✨in✨Stages✨ silk✨cord† onyx✨bead jade✨cube⟫
       ▢ ≣ onyx✨bead • jade✨cube ⇰ ✨Revocation✨Commanded✨ silk✨cord ⟪onyx✨bead • jade✨cube⟫
 
+/- All moves with the same destination form one stabilizer coset.
+This is an equivalence of sets; the stabilizer need not be normal. -/
 ineffable ritual ✨Orbit✨Portal✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
     Commanding☿procession ᛰ jade✨cube ≃ ᛰ ⧸ Commanding☿stillguard ᛰ jade✨cube ⇰
   Commanding☿✨Orbit✨Correspondence✨ ᛰ jade✨cube
 
+/- The inverse correspondence is concrete: a coset represented by a move
+returns the destination of that move applied to the starting point. -/
 spell ✨Command✨through✨the✨Portal✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡
     ⟪⟪✨Orbit✨Portal✨ jade✨cube⟫☿reflect ⟪✨Veiled✨Veyr✨☿forge silk✨cord⟫ ⟡ 🌒⟫ ≣ silk✨cord • jade✨cube ⇰ mirror
 
@@ -29,6 +36,8 @@ spell ✨Procession✨Counts✨Veils✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
     Tally☿census ⟪Commanding☿procession ᛰ jade✨cube⟫ ≣ Tally☿census ⟪ᛰ ⧸ Commanding☿stillguard ᛰ jade✨cube⟫ ⇰
   Tally☿✨Census✨through✨Portal✨ ⟪✨Orbit✨Portal✨ jade✨cube⟫
 
+/- Replace the orbit count with the equivalent coset count, then use Lagrange.
+For a finite group, destinations times moves fixing the point equals all moves. -/
 spell ✨Orbit✨of✨Command✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
     Tally☿census ⟪Commanding☿procession ᛰ jade✨cube⟫ ⊛ Tally☿census ⟪Commanding☿stillguard ᛰ jade✨cube⟫ ≣
       Tally☿census ᛰ ⇰

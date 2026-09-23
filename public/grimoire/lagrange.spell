@@ -6,22 +6,31 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
+/- Count an element by its coset and its position within that coset.
+No normality is needed to count the coset set. The finite interpretation is
+the familiar one; Nat.card uses zero for infinite types. -/
 spell ✨Count✨the✨Veils✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
     Tally☿census ᛰ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰
   litany Tally☿census ᛰ ≣ Tally☿census ⟪⟪ᛰ ⧸ ☥⟫ ⨯ ☥⟫ ⇰
         Tally☿✨Census✨through✨Portal✨ ✨Inner✨Veyr✨☿✨Veyr✨Splits✨into✨Veils✨
     ▢ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪ᛰ ⧸ ☥⟫ ☥
 
+/- Divisibility asks for a multiplication witness.
+The number of cosets supplies it, after commuting the two natural-number factors. -/
 spell ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
     Tally☿census ☥ ∣ Tally☿census ᛰ ⇰ cast
   hone ⦉Tally☿census ⟪ᛰ ⧸ ☥⟫᛫ ?▢⦊
   litany Tally☿census ᛰ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰ ✨Count✨the✨Veils✨ ☥
     ▢ ≣ Tally☿census ☥ ⊛ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⇰ Tally☿✨Bindings✨Commute✨ ⟪Tally☿census ⟪ᛰ ⧸ ☥⟫⟫ ⟪Tally☿census ☥⟫
 
+/- Apply subgroup counting to the integer powers of a single element.
+The cardinality of that cyclic subgroup is the element order. -/
 spell ✨Lagrange's✨Measure✨of✨the✨Cycle✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ period jade✨cube ∣ Tally☿census ᛰ ⇰
   litany period jade✨cube ≣ Tally☿census ⟪✨Inner✨Veyr✨☿✨cycle✨circle✨ jade✨cube⟫ ⇰ ⟪Tally☿✨Cycle✨Census✨ jade✨cube⟫☿reflect
     ▢ ∣ Tally☿census ᛰ ⇰ ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ⟪✨Inner✨Veyr✨☿✨cycle✨circle✨ jade✨cube⟫
 
+/- Open the divisibility witness and group the exponent into full periods.
+Each period returns to the identity, so any number of periods does too. -/
 spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ 一 ⇰ cast
   wrest ⦉onyx✨bead᛫ measureward⦊ ⇰ ✨Lagrange's✨Measure✨of✨the✨Cycle✨ jade✨cube
   litany jade✨cube ⌃ Tally☿census ᛰ ≣ jade✨cube ⌃ ⟪period jade✨cube ⊛ onyx✨bead⟫ ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ jade✨cube ⌃ pinch✨of✨sulfur⟫ measureward

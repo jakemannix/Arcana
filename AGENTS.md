@@ -31,6 +31,7 @@ Lean and mathlib provide the proof checking. Arcana is a reversible presentation
 - Preserve quoted Lean identifiers verbatim, including the `«…»` delimiters, in both panes. Never strip their quotation or reserve their contents as unquoted spell names.
 - Keep the translation key with exported drafts; it carries the information needed to reverse renamed identifiers.
 - Keep actual Lean namespaces, declarations, and proof locals mathematical. The book lives in `Mathematics.Functions` and `Mathematics.GroupTheory`; `grimoire/lexicon.json` holds the spell-side names. Its optional `namespaces` map translates full prefixes, so the Enchantment alias does not rename `Mathlib.GroupTheory`.
+- Shared teaching comments are now requested: preserve exactly the same comment text in Lean and Arcana. They are display-hideable without changing either document. Keep actual mathematical declarations and proofs fixed when editing explanations.
 - Spell-side term variables use lowercase material components with interior sparkles (`x` → `jade✨cube`, `y` → `silver✨bell`, `f` → `copper✨wire`). These are single identifiers; keep framed sparkles for spell titles. Include ingredients in generated glossaries. Regenerate the live catalog and downloadable key through verification.
 - Carrier variables use cryptic runes (`G` → `ᛰ`, `H` → `☥`, `X` → `🌒`); their structures, not their rune, supply mathematical laws. Use the Veyr family: Group → Veyr, Ring → Veyrath, Field → Veyrion, Module → Bound Veyr, Algebra → Bound Veyrath. “Bound” marks scalar action, “Harmonic” commutativity, and “Chanted” additive group notation. See `grimoire/VOCABULARY.md` for precise inheritance and semiring caveats. Keep the current structure vocabulary in the saved lexicon; do not duplicate it with alternate defaults in `src/tables.json`.
 - `instance` reads `bestow`: an instance bestows a structure on a carrier so every later spell can use it. `class` stays `order`.
@@ -41,7 +42,7 @@ Lean and mathlib provide the proof checking. Arcana is a reversible presentation
 
 Keep the grimoire welcoming and readable. Magic should help a reader explore the proof. Folding hides the body while retaining the complete statement and hypotheses. Reveal effects should be brief, respect reduced-motion preferences, and preserve keyboard access.
 
-The user requested independent hide/show controls for the math and magic panes. Keep those controls accessible even when both panes are hidden. Hiding a pane should preserve its document, undo history, folding, and synchronization. Drafts currently survive folio navigation within a tab; a reload loses unsaved work, so avoid unnecessarily refreshing a user's active editor.
+The top-level reading selector offers Magic, Side by side, and Mathematics. Magic hides mathematical exposition, references, the Lean pane, and shared teaching comments; other modes restore the reader's comment preference. Switching modes must preserve both editor instances, documents, undo histories, folds, and synchronization. Character transmutation effects must be bounded, interruptible, and disabled for reduced motion. Folio and personal drafts survive navigation within a tab; a reload loses unsaved work, so avoid unnecessarily refreshing a user's active editor.
 
 ## Where to work and how to verify
 

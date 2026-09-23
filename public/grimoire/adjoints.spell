@@ -13,10 +13,15 @@ chamber ✨Primordial✨Choir✨
 
 familiar ⧼ᛋ ᛗ ⟡ Essence⊛⧽ ⟮Choir ᛗ⟯
 
+/- A function on letters extends to a homomorphism on words by multiplication.
+The one-letter calculation records its prescribed generator values. -/
 ritual ✨Primordial's✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟡ ✨Primordial✨Choir✨ ᛋ ↝⊛ ᛗ ⇰ ✨Primordial✨Choir✨☿descend copper✨wire
 
 spell ✨Seeds✨Go✨Where✨Sent✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟪pouch✨of✨sand ⟡ ᛋ⟫ ⟡ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ≣ copper✨wire pouch✨of✨sand ⇰ mirror
 
+/- A homomorphism’s generator values determine its value on every word.
+Induct on the word: handle the empty word, then a first letter followed
+by a shorter word. -/
 spell ✨Only✨One✨Primordial✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ ᛋ ↝⊛ ᛗ⟫
     ⟪seedward ⟡ ⟁ pouch✨of✨sand᛫ brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ≣ copper✨wire pouch✨of✨sand⟫ ⟡ brass✨key ≣ ✨Primordial's✨Pact✨ copper✨wire ⇰ cast
   channel Herald☿extend
@@ -33,6 +38,8 @@ spell ✨Only✨One✨Primordial✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ �
           sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ ✨Primordial's✨Pact✨ copper✨wire verse⟫ ⟪✨Seeds✨Go✨Where✨Sent✨ copper✨wire pouch✨of✨sand⟫☿reflect
       ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand ⊛ verse⟫ ⇰ ⟪⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨Carry✨the✨Binding✨ ▢ ▢⟫☿reflect
 
+/- Mathlib packages the generator-to-word correspondence as an adjunction.
+The free construction is left adjoint to forgetting the monoid structure. -/
 ritual ✨Left✨Hand✨of✨Disenchantment✨ ⟡ Choirs☿primordial☿⧼tier⧽ ☍ Disenchantment Choirs☿⧼tier⧽ ⇰ Choirs☿✨the✨hands✨
 
 seal ✨Primordial✨Choir✨
@@ -41,6 +48,8 @@ chamber Reversibles
 
 familiar ⧼ᛰ ᛗ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Choir ᛗ⟯
 
+/- The image of a group element has an inverse even in a target monoid:
+use the image of its source inverse. Store both inverse equations explicitly. -/
 ritual ✨Gather✨the✨Reversible✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟡ ᛰ ↝⊛ Reversibles ᛗ begets
   deed silk✨cord ⇰
     ⧼ core ⇰ copper✨wire silk✨cord
@@ -58,10 +67,15 @@ ritual ✨Gather✨the✨Reversible✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ �
 
 spell ✨Gathered✨as✨Given✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ ⟪✨Gather✨the✨Reversible✨ copper✨wire silk✨cord ⟡ ᛗ⟫ ≣ copper✨wire silk✨cord ⇰ mirror
 
+/- A unit is determined by its underlying value, since an inverse is unique.
+Thus equality of all underlying values already determines this lifted homomorphism. -/
 spell ✨Only✨One✨Gathering✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪tin✨key ⟡ ᛰ ↝⊛ Reversibles ᛗ⟫
     ⟪valueward ⟡ ⟁ silk✨cord᛫ ⟪tin✨key silk✨cord ⟡ ᛗ⟫ ≣ copper✨wire silk✨cord⟫ ⟡ tin✨key ≣ ✨Gather✨the✨Reversible✨ copper✨wire ⇰
   Herald☿extend conjure silk✨cord ⇉ Reversibles☿extend ⟪valueward silk✨cord⟫
 
+/- Here the direction reverses: units are right adjoint to forgetting
+from groups to monoids. The final equivalence connects invertible endofunctions
+with the permutations used in Cayley’s theorem. -/
 ritual ✨Right✨Hand✨of✨Lesser✨Disenchantment✨ ⟡ ✨Lesser✨Disenchantment✨ Veyrs☿⧼tier⧽ Choirs☿⧼tier⧽ ☍ Choirs☿reversibles☿⧼tier⧽ ⇰
   Veyrs☿✨lesser✨hands✨
 

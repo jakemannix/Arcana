@@ -14,6 +14,24 @@ A common language for all schools: weave functions together, preserve injectivit
 
 **Proof idea.** Each proof takes the definitions apart by hand. For injectivity, peel off g and then f from g(f(x)) = g(f(y)). For surjectivity, walk backwards: find y with g(y) = z, then x with f(x) = y, and check the chain with a calc. An equivalence stores both of its inverse laws. Enchantment's Chain of Pacts imports and uses injective_compose.
 
+**A guided reading.** Start here if proof syntax is new. A function is a rule taking an input to an output; these small proofs teach how to follow that rule through a calculation. No group theory is needed, and the same moves will recur throughout the grimoire.
+
+1. **Read the types as a route** The notation f : α → β says that f starts in α and lands in β. With g : β → γ, the matching middle type lets us form g(f(x)). composeFunctions names that route. Its application theorem uses rfl because both sides become the same expression after expanding the definition.
+
+2. **Undo equal outputs** Injective means that equal outputs force equal inputs. Begin the composition proof with g(f(x)) = g(f(y)). The hypothesis for g removes the outer layer, giving f(x) = f(y); the hypothesis for f then gives x = y. Each have line names an intermediate fact for the next step.
+
+3. **Build a preimage backwards** Surjective means every target has a preimage. To reach z in γ, first obtain y in β with g(y) = z, then x in α with f(x) = y. The pair ⟨x, proof⟩ supplies both the proposed preimage and the evidence. congrArg transports an equality through a function.
+
+4. **Keep both inverse laws** An equivalence α ≃ β contains a function, an inverse, and proofs that both round trips return to the starting point. The final two theorems read those proofs from the structure. Later, ≃* will add preservation of multiplication to this reversible correspondence.
+
+**Try it yourself.** Trace the injectivity proof from its last line backwards. Which intermediate equality would be missing if only f were known to be injective?
+
+<details><summary>A hint</summary>
+
+You need to remove g before you can use the hypothesis about f. Editing the browser creates a draft; translation preserves the text but does not check a new proof.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿Reason☿Rite☿Foundations
 beckon ✨Grand✨Archive✨☿Reason☿Portal☿Names
@@ -22,11 +40,15 @@ sanctum Arcana☿Cantrips
 
 familiar ⧼ᚨ ᛒ ᚷ ⟡ Essence⊛⧽
 
+/- Follow the types: first send an input through f, then send its output through g.
+The matching middle type makes this composition possible. -/
 ritual Weave ⟪copper✨wire ⟡ ᚨ ↝ ᛒ⟫ ⟪silk✨cord ⟡ ᛒ ↝ ᚷ⟫ ⟡ ᚨ ↝ ᚷ ⇰ conjure jade✨cube ⇉ silk✨cord ⟪copper✨wire jade✨cube⟫
 
 spell ✨Thread✨Unfolds✨ ⟪copper✨wire ⟡ ᚨ ↝ ᛒ⟫ ⟪silk✨cord ⟡ ᛒ ↝ ᚷ⟫ ⟪jade✨cube ⟡ ᚨ⟫ ⟡
     Weave copper✨wire silk✨cord jade✨cube ≣ silk✨cord ⟪copper✨wire jade✨cube⟫ ⇰ mirror
 
+/- Injectivity lets us remove a function from an equality of its outputs.
+Here we remove the outer function first, then the inner one. -/
 spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cord ⟡ ᛒ ↝ ᚷ⧽
     ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
     Rite☿Faithful ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
@@ -38,6 +60,8 @@ spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cor
   bind ✨inner✨weave✨ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ echoward ✨outer✨weave✨
   missile faith ✨inner✨weave✨
 
+/- To reach a target, work backwards through the two surjectivity hypotheses.
+Each supplies a preimage and an equation that the final calculation checks. -/
 spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cord ⟡ ᛒ ↝ ᚷ⧽
     ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟪echoward ⟡ Rite☿Reaching silk✨cord⟫ ⟡
     Rite☿Reaching ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
@@ -49,6 +73,8 @@ spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cor
     ▢ ≣ silk✨cord silver✨bell ⇰ sympathy silk✨cord sigilward
     ▢ ≣ amber✨rod ⇰ runeward
 
+/- An equivalence stores an inverse and both round-trip laws.
+These last two statements expose those laws without reconstructing the inverse. -/
 spell ✨Mirror✨Return✨ ⟪obsidian✨mirror ⟡ ᚨ ≃ ᛒ⟫ ⟪jade✨cube ⟡ ᚨ⟫ ⟡ obsidian✨mirror☿reflect ⟪obsidian✨mirror jade✨cube⟫ ≣ jade✨cube ⇰
   obsidian✨mirror☿✨Return✨Path✨ jade✨cube
 
@@ -74,6 +100,24 @@ Choose the seeds of an enchantment. The smallest subgroup containing them closes
 
 **Proof idea.** Membership in the generated subgroup means membership in every subgroup that contains the seeds. From that one criterion, each seed lies in the circle, and any subgroup containing the seeds contains the whole circle. Closure under xy⁻¹ combines the inverse law and the product law. Generating from H returns H by antisymmetry: each side lies inside the other.
 
+**A guided reading.** A subgroup is a collection of elements that can perform the same group operations without leaving the collection. After the function cantrips, this lesson shows how to specify a construction by what it must contain, instead of listing its elements.
+
+1. **Separate seeds from a subgroup** A set S can be an arbitrary collection of seeds. A subgroup must also contain the identity, products, and inverses. generatedSubgroup is the smallest subgroup containing S. The ambient group may be infinite or noncommutative; neither restriction is needed for the construction.
+
+2. **Read the universal membership test** Subgroup.mem_closure says that an element belongs to the generated subgroup exactly when it belongs to every subgroup containing the seeds. To show that a seed belongs, choose any such subgroup K: its assumption S ⊆ K already puts the seed there. This is the first theorem’s entire argument.
+
+3. **Reduce a large inclusion to small data** The equivalence generatedSubgroup S ≤ H ↔ S ⊆ H is the useful rule. For subgroups, ≤ means containment. To put every generated element in H, it suffices to put the seeds there. The reverse direction follows because each seed already lies in the generated subgroup.
+
+4. **Recognize when closure adds nothing** The product-with-inverse theorem combines two stored subgroup laws. The final proof then generates from all of H and shows that nothing new appears: prove containment in each direction and use le_antisymm. This pattern of proving equality through two inclusions will recur for kernels and images.
+
+**Try it yourself.** In generatedSubgroup_le_iff, identify the direction used to prove that generating from a subgroup gives no extra elements.
+
+<details><summary>A hint</summary>
+
+The .mpr projection uses the right-to-left implication. Try folding the calculation and restating the two containments in words before reopening it.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨☿Foundations
 
@@ -81,8 +125,12 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
+/- Start with arbitrary seeds. Their generated subgroup adds everything required
+by the identity, multiplication, and inverse laws, and nothing beyond that. -/
 ritual ✨Bound✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
 
+/- A seed belongs to every subgroup containing all the seeds.
+The universal membership test turns that observation into membership in the closure. -/
 spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ pouch✨of✨sand ⊆ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ cast
   summon jade✨cube sigilward
   proclaim jade✨cube ∈ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
@@ -90,6 +138,8 @@ spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ pouch�
   summon ᛟ hedgeward
   missile hedgeward sigilward
 
+/- This is the useful universal property: containing every generated element
+is equivalent to containing the original seeds. Prove each implication separately. -/
 spell ✨Smallest✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
     ✨Bound✨Circle✨ pouch✨of✨sand ⋜ ☥ ↭ pouch✨of✨sand ⊆ ☥ ⇰ cast
   fabricate
@@ -100,11 +150,15 @@ spell ✨Smallest✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟪☥ ⟡ �
     bind ✨every✨circle✨ ⟡ ⟁ ᛟ ⟡ ✨Inner✨Veyr✨ ᛰ᛫ pouch✨of✨sand ⊆ ᛟ ↝ jade✨cube ∈ ᛟ ⇰ ✨Inner✨Veyr✨☿✨Encirclement✨Criterion✨☿onward sigilward
     missile ✨every✨circle✨ ☥ sown
 
+/- Subgroup membership survives taking an inverse and then multiplying.
+No commutativity assumption is involved. -/
 spell ✨Keep✨the✨Circle✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⧼jade✨cube silver✨bell ⟡ ᛰ⧽
     ⟪sigilward ⟡ jade✨cube ∈ ☥⟫ ⟪runeward ⟡ silver✨bell ∈ ☥⟫ ⟡ jade✨cube ⊛ silver✨bell† ∈ ☥ ⇰ cast
   bind reversed ⟡ silver✨bell† ∈ ☥ ⇰ ☥☿✨Reversal✨Remains✨ runeward
   missile ☥☿✨Binding✨Remains✨ sigilward reversed
 
+/- Generating from an existing subgroup adds no new elements.
+Antisymmetry reduces equality to containment in both directions. -/
 spell ✨Seal✨the✨Circle✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ✨Bound✨Circle✨ ⟪☥ ⟡ Host ᛰ⟫ ≣ ☥ ⇰ cast
   channel Stalemate
   ❖ bind sown ⟡ ⟪☥ ⟡ Host ᛰ⟫ ⊆ ☥ ⇰ conjure jade✨cube sigilward ⇉ sigilward
@@ -131,6 +185,24 @@ A pact transports the group operation intact. Chain two faithful pacts and no di
 
 **Proof idea.** Only multiplication is assumed. The identity is forced: f(1)·f(1) = f(1·1) = f(1) = f(1)·1, so cancellation gives f(1) = 1. Then f(x⁻¹)·f(x) = f(x⁻¹x) = f(1) = 1, so f(x⁻¹) is the inverse of f(x). The kernel of a composite unfolds in a three-line calc to g(f(x)) = 1. Injective pacts compose through the shared faithful-thread cantrip.
 
+**A guided reading.** A homomorphism transports a group calculation from one group to another. Read this after functions and subgroups: the new ingredient is that the function respects multiplication, so algebraic information survives the journey.
+
+1. **Read the bundled pact** The arrow G →* H packages a function with its homomorphism laws. Writing f x applies its underlying function. Although the bundle already stores identity preservation, the lesson deliberately derives the identity and inverse laws from multiplication to expose why they are forced.
+
+2. **Force the image of the identity** Multiplication preservation turns f(1)f(1) into f(1·1), hence f(1). Re-express the other side as f(1)·1 and cancel the common left factor. A calc block records this chain one equality at a time; .symm uses an equality in the opposite direction.
+
+3. **Transport an inverse** Multiply f(x⁻¹) by f(x). It equals f(x⁻¹x), which is f(1), hence the identity by the preceding theorem. The group inverse is characterized by exactly this cancellation property, so f(x⁻¹) must be the inverse of f(x). No commutativity is used.
+
+4. **Compose, then inspect the kernel** composeHom f g applies f first and g second. Its injectivity proof reuses the function cantrip because injectivity concerns the underlying functions. Its kernel consists of inputs whose image under f lies in the kernel of g: unfolding both membership statements gives the same equation g(f(x)) = 1.
+
+**Try it yourself.** Compare composeFunctions with composeHom. Which argument justifies that a composite is injective, and which extra structure allows it to be a homomorphism?
+
+<details><summary>A hint</summary>
+
+The shared cantrip proves injectivity. The bundled homomorphism composition already supplies the multiplication laws; an arbitrary function need not preserve them.
+
+</details>
+
 ```text
 beckon Arcana☿Cantrips
 beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨☿Silences
@@ -139,11 +211,15 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ☥ ᛟ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯ ⟮Veyr ᛟ⟯
 
+/- A bundled homomorphism carries its operation-preservation proofs with its function.
+The composite applies the first map and then the second. -/
 ritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟡ ᛰ ↝⊛ ᛟ ⇰ silk✨cord☿threading copper✨wire
 
 spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube silver✨bell ⟡ ᛰ⟫ ⟡
     copper✨wire ⟪jade✨cube ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell ⇰ copper✨wire☿✨Carry✨the✨Binding✨ jade✨cube silver✨bell
 
+/- Even though the bundle already stores identity preservation, derive it here
+from multiplication: the image of the identity is idempotent, so cancellation forces it to be the identity. -/
 spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire 一 ≣ 一 ⇰ cast
   bind doubled ⟡ copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire 一 ⊛ 一 ⇰
     litany copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire ⟪一 ⊛ 一⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire 一 一⟫☿reflect
@@ -151,6 +227,8 @@ spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ �
       ▢ ≣ copper✨wire 一 ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire 一⟫⟫☿reflect
   missile ✨Strike✨from✨the✨Left✨ doubled
 
+/- To recognize the image of an inverse, multiply it by the image of the original
+element and show that the product is the identity. -/
 spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast
   bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ 一 ⇰
@@ -159,11 +237,15 @@ spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪ja
       ▢ ≣ 一 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
   missile ✨Undoer✨is✨Reversal✨ undone
 
+/- Injectivity concerns the underlying functions, so the shared function cantrip
+already proves this part of the homomorphism story. -/
 spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫
     ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
     Rite☿Faithful ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫ ⇰
   Arcana☿Cantrips☿✨Faithful✨Weaving✨ ⟪copper✨wire ⇰ copper✨wire⟫ ⟪silk✨cord ⇰ silk✨cord⟫ faith echoward
 
+/- An input vanishes under the composite exactly when its first image vanishes
+under the second map. Unfolding kernel membership reveals the same equation. -/
 spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰
   litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
@@ -189,6 +271,24 @@ The kernel is everything a pact sends to the identity. Conjugating an element ca
 
 **Proof idea.** Take x with f(x) = 1. A seven-line calc pushes f through g·x·g⁻¹ one step at a time, using congrArg to rewrite inside the product: split the product, replace f(x) by 1, drop it, turn f(g⁻¹) into f(g)⁻¹, and cancel. Normality is then built directly from that computation. For injectivity: a trivial kernel sends f(x) = f(y) to f(xy⁻¹) = 1, so xy⁻¹ = 1 and x = y.
 
+**A guided reading.** A map can forget distinctions. Its kernel records everything it sends to the identity, and this lesson turns that one fiber into a test for whether the whole map is injective. Keep the homomorphism laws from Chain of pacts nearby.
+
+1. **Translate membership into an equation** homKernel f is f.ker. The theorem mem_homKernel_iff lets you switch between the geometric language “x lies in this subgroup” and the computational statement f(x) = 1. The projections .mp and .mpr use the forward and backward directions of an equivalence.
+
+2. **Follow one conjugate through the map** To prove gxg⁻¹ stays in the kernel, push f through each multiplication, replace f(x) by the identity, transport the inverse, and cancel f(g) against its inverse. The congrArg lines change one part of a larger expression while keeping its surroundings intact.
+
+3. **Package normality** A normal subgroup remains closed under conjugation by every ambient group element. homKernel_normal asks for exactly the calculation already proved, so its short proof supplies that theorem as the required field. Normality will allow the next folio to form a quotient group.
+
+4. **Recover equality from a trivial kernel** The bottom subgroup ⊥ contains only the identity. If f is injective, anything mapping to 1 equals 1. Conversely, if f(x) = f(y), then xy⁻¹ maps to 1. A trivial kernel forces xy⁻¹ = 1, and group cancellation gives x = y.
+
+**Try it yourself.** Find the precise point in the last proof where the trivial-kernel hypothesis turns information about images into information about elements.
+
+<details><summary>A hint</summary>
+
+Look for h_div_eq_one. Everything before it computes an image; that line concludes an equality inside the original group.
+
+</details>
+
 ```text
 beckon Arcana☿Enchantment☿Pacts
 
@@ -196,11 +296,15 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
+/- The kernel collects exactly the inputs sent to the identity.
+The next equivalence switches between subgroup membership and that equation. -/
 ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ copper✨wire☿silence
 
 spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
 
+/- Push the map through this conjugate. The middle image becomes the identity,
+and the two surrounding images cancel. This is the calculation behind normality. -/
 spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨cube ⟡ ᛰ⧽
     ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
   bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
@@ -214,11 +318,16 @@ spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨
       ▢ ≣ 一 ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
   missile ⟪✨Name✨the✨Silent✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫⟫☿backward hushed
 
+/- Normality asks for closure under every conjugation.
+Package the preceding calculation as that structural property. -/
 spell ✨Silence✨is✨Hallowed✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ⟪✨Circle✨of✨Silence✨ copper✨wire⟫☿Hallowed ⇰ cast
   fabricate
   summon jade✨cube sigilward silk✨cord
   missile ✨Unbroken✨Silence✨ copper✨wire sigilward silk✨cord
 
+/- A trivial kernel means only the identity maps to the identity.
+For the converse implication, equal images make the product with an inverse
+land in the kernel, forcing the original inputs to coincide. -/
 spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Faithful copper✨wire ↭ ✨Circle✨of✨Silence✨ copper✨wire ≣ ⊥ ⇰ cast
   transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
@@ -257,6 +366,24 @@ A pact descends through a quotient exactly when it silences the subgroup being f
 
 **Proof idea.** First, see why N ≤ ker(f) is needed: if x⁻¹y lies in N, then f(x) = f(x)·f(x⁻¹y) = f(y), so f gives one answer on each coset. QuotientGroup.lift packages this into the descended pact. For uniqueness, every quotient element has a representative, and on representatives both maps agree with f.
 
+**A guided reading.** A quotient identifies elements that differ by an element of a chosen normal subgroup. The central question is whether a map can still give a single answer after that identification. Kernels provide the exact compatibility condition.
+
+1. **Think in representatives** A quotient element [x] is an entire coset, represented by x. Representatives x and y give the same coset when x⁻¹y belongs to N. Defining an output by f(x) is legitimate only if changing the representative leaves the output unchanged.
+
+2. **Use the kernel condition** The containment N ≤ ker(f) says that everything being forgotten maps to 1. The first calculation inserts f(x⁻¹y) into f(x) without changing it, combines the factors, and cancels x with x⁻¹. This proves f(x) = f(y) for equivalent representatives.
+
+3. **Build the descended homomorphism** quotientLift uses mathlib’s QuotientGroup.lift to package the map on cosets and its homomorphism laws. The hypothesis N.Normal supplies a group structure on G/N. The following rfl theorem tells you how to calculate: on [x], the descended map returns f(x).
+
+4. **Prove uniqueness on representatives** To compare two homomorphisms, MonoidHom.ext reduces the goal to equality at each input. Every quotient element has a representative, so obtain replaces the arbitrary coset with [x]. Both maps then return f(x), leaving no freedom for a different descended map.
+
+**Try it yourself.** Locate the two separate hypotheses on N. Which one makes G/N a group, and which one makes the proposed output independent of the representative?
+
+<details><summary>A hint</summary>
+
+Normality supplies the quotient group structure. Containment in the kernel is the condition used in the first calculation to show that f ignores the chosen representative.
+
+</details>
+
 ```text
 beckon Arcana☿Enchantment☿Pacts
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Veiled✨Veyr✨☿Foundations
@@ -265,6 +392,8 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
+/- Equivalent representatives must produce the same output.
+The kernel containment makes their difference invisible to the map. -/
 spell ✨Veil✨Hides✨the✨Difference✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫
     ⧼jade✨cube silver✨bell ⟡ ᛰ⧽ ⟪kinship ⟡ jade✨cube† ⊛ silver✨bell ∈ ᚾ⟫ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ cast
   bind muted ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 一 ⇰ veilward kinship
@@ -273,14 +402,20 @@ spell ✨Veil✨Hides✨the✨Difference✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫
     ▢ ≣ copper✨wire ⟪jade✨cube ⊛ ⟪jade✨cube† ⊛ silver✨bell⟫⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube ⟪jade✨cube† ⊛ silver✨bell⟫⟫☿reflect
     ▢ ≣ copper✨wire silver✨bell ⇰ sympathy copper✨wire ⟪✨Return✨from✨the✨Left✨ jade✨cube silver✨bell⟫
 
+/- Normality makes the quotient a group. Kernel containment makes this map
+well defined on its cosets; mathlib packages both requirements into the lift. -/
 ritual ✨Pass✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫
     ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟡ ᛰ ⧸ ᚾ ↝⊛ ☥ ⇰
   ✨Veiled✨Veyr✨☿descend ᚾ copper✨wire veilward
 
+/- To calculate with the descended map, choose a representative and apply
+the original map. This formula follows directly from the construction. -/
 spell ✨Speak✨through✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯
     ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     ✨Pass✨the✨Veil✨ ᚾ copper✨wire veilward ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
+/- Every coset has a representative. Two descended maps agreeing on all
+representatives therefore agree everywhere; there is no further choice to make. -/
 spell ✨Only✨One✨Passage✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯
     ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟪silk✨cord ⟡ ᛰ ⧸ ᚾ ↝⊛ ☥⟫
     ⟪echoward ⟡ ⟁ jade✨cube ⟡ ᛰ᛫ silk✨cord ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube⟫ ⟡
@@ -311,6 +446,24 @@ Forget exactly what a pact cannot distinguish. What remains is the image, with i
 
 **Proof idea.** The isomorphism is built by hand. First, f restricted to its image silences ker(f), so it descends to the quotient. It is injective: if [x] and [y] have the same image, a calc shows f(x⁻¹y) = f(x)⁻¹f(y) = f(y)⁻¹f(y) = 1, so [x] = [y]. It is surjective: every image element is f(x) for some x. A bijective homomorphism is an isomorphism. For a surjective f, the image is the whole codomain.
 
+**A guided reading.** The first isomorphism theorem explains exactly how much a homomorphism forgets. This proof builds the correspondence through the quotient lesson rather than treating the theorem as a single library invocation.
+
+1. **Choose the right target** The image f.range consists of outputs together with evidence that they came from f. Restricting f to that target makes it surjective by construction. ker_le_ker_rangeRestrict shows that this restriction still kills the kernel, so quotientLift produces a map from G/ker(f) into the image.
+
+2. **Prove no distinctions remain lost** For injectivity, choose representatives x and y for two cosets with equal outputs. Their equality implies f(x⁻¹y) = 1 by the homomorphism laws. Thus x⁻¹y belongs to the kernel, which is exactly the relation identifying the two cosets.
+
+3. **Reach every element of the image** An element of the image includes a witness x with f(x) equal to that element. The coset [x] is its preimage under quotientToRange. Subtype.ext lets the proof compare the underlying outputs without separately comparing their membership evidence.
+
+4. **Package the isomorphism** MulEquiv.ofBijective turns the bijective homomorphism into a group isomorphism. The resulting formula still sends [x] to f(x). If the original f is surjective onto H, its image is all of H, giving the final isomorphism to the entire codomain.
+
+**Try it yourself.** Follow the input x through quotientToRange_mk and quotientKernelEquivRange_mk. Does packaging the map as an isomorphism change its output?
+
+<details><summary>A hint</summary>
+
+Both statements reduce to f(x). The extra structure records invertibility and multiplication preservation; it does not change the forward function.
+
+</details>
+
 ```text
 beckon Arcana☿Enchantment☿Descent
 
@@ -318,18 +471,24 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
+/- Restricting the codomain to the image does not change any output value.
+In particular, every kernel element still maps to the identity. -/
 spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
   summon jade✨cube sigilward
   bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ sigilward
   proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ 一
   missile Kin☿extend muted
 
+/- The quotient lift now lands in the image, where every element is known
+to have come from the original map. -/
 ritual ✨Image✨Pact✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ↝⊛ copper✨wire☿manifestation ⇰
   ✨Pass✨the✨Veil✨ copper✨wire☿silence copper✨wire☿✨confine✨to✨manifestation✨ ⟪✨Silence✨within✨the✨Image✨ copper✨wire⟫
 
 spell ✨Image✨of✨the✨Sigil✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
+/- Choose representatives of two cosets with equal images. Their difference
+maps to the identity, so it belongs to the kernel and identifies the two cosets. -/
 spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Faithful ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
   summon ruby✨shard ivory✨ring twinned
   wrest ⦉jade✨cube᛫ mirror⦊ ⇰ ✨Veiled✨Veyr✨☿✨Every✨Veil✨has✨a✨Face✨ ruby✨shard
@@ -345,6 +504,8 @@ spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿F
       ▢ ≣ 一 ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
   missile ✨Veiled✨Veyr✨☿✨Veil✨Equality✨☿backward hushed
 
+/- An image element carries a witness for its origin.
+The coset of that witness is a preimage for the descended map. -/
 spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
   summon quarry
   wrest ⦉jade✨cube᛫ sigilward⦊ ⇰ Herald☿✨Manifestation✨Criterion✨☿onward quarry☿attestation
@@ -353,6 +514,8 @@ spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿R
   litany ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube
     ▢ ≣ quarry ⇰ sigilward
 
+/- The hard work is already done: a homomorphism that is injective and
+surjective can be packaged as a group isomorphism. -/
 ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ≃⊛ copper✨wire☿manifestation ⇰
   ✨Pact✨Portal✨☿✨from✨perfection✨ ⟪✨Image✨Pact✨ copper✨wire⟫ ⦉✨Faithful✨Image✨ copper✨wire᛫ ✨Reaching✨Image✨ copper✨wire⦊
 
@@ -363,6 +526,8 @@ spell ✨Perfect✨Unveiling✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Perfect ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫ ⇰
   ⦉✨Faithful✨Image✨ copper✨wire᛫ ✨Reaching✨Image✨ copper✨wire⦊
 
+/- Surjectivity of the original map makes its image the whole codomain.
+Only this final strengthening requires that extra hypothesis. -/
 ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Essence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
     ᛰ ⧸ copper✨wire☿silence ≃⊛ ☥ ⇰
   ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫☿chain
@@ -387,6 +552,24 @@ A finite group partitions into equally sized cosets. The size of every subgroup,
 
 **Proof idea.** Mathlib splits G into pairs (coset, element of H), so a calc gives |G| = |G/H|·|H|. Commuting the factors exhibits |H| as a divisor. The order of x is the size of the cyclic subgroup it generates, so it divides |G|. Finally, write |G| = ord(x)·k and compute x^|G| = (x^ord(x))^k = 1^k = 1.
 
+**A guided reading.** Counting becomes a structural tool once a group is partitioned into equally sized cosets. You only need the subgroup lesson to begin; the final power calculation will drive several finite examples later.
+
+1. **Count cosets and their contents** Each coset of H has as many elements as H. Mathlib supplies an equivalence between G and pairs consisting of a coset and an element of H. Nat.card_congr transfers the count across that equivalence, and Nat.card_prod counts the pairs by multiplication.
+
+2. **Turn a count into divisibility** The notation a ∣ b means that b = a·k for some natural number k. The number of cosets is the witness here. Normality is unnecessary: a coset set can be counted even when it has no quotient group structure.
+
+3. **Apply the same idea to one element** The integer powers of x form a cyclic subgroup. Its cardinality equals orderOf x, the least positive exponent returning x to the identity when such an exponent exists. Applying the subgroup divisibility theorem shows that the element’s order divides the group’s size.
+
+4. **Use the divisor to calculate a power** Write |G| = ord(x)·k. The final calc block groups the exponent into k repetitions of x^ord(x), each equal to 1. The finite interpretation is the teaching goal. Formally Nat.card is zero on infinite types, so those cases use the convention x⁰ = 1.
+
+**Try it yourself.** In pow_card_group_eq_one, identify the witness k produced by divisibility and the line that changes a product of exponents into a repeated power.
+
+<details><summary>A hint</summary>
+
+The obtain line opens the divisor witness; pow_mul gives x^(ord(x)·k) = (x^ord(x))^k. No commutation of group elements is needed.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Veils☿Census
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
@@ -396,22 +579,31 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
+/- Count an element by its coset and its position within that coset.
+No normality is needed to count the coset set. The finite interpretation is
+the familiar one; Nat.card uses zero for infinite types. -/
 spell ✨Count✨the✨Veils✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
     Tally☿census ᛰ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰
   litany Tally☿census ᛰ ≣ Tally☿census ⟪⟪ᛰ ⧸ ☥⟫ ⨯ ☥⟫ ⇰
         Tally☿✨Census✨through✨Portal✨ ✨Inner✨Veyr✨☿✨Veyr✨Splits✨into✨Veils✨
     ▢ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪ᛰ ⧸ ☥⟫ ☥
 
+/- Divisibility asks for a multiplication witness.
+The number of cosets supplies it, after commuting the two natural-number factors. -/
 spell ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
     Tally☿census ☥ ∣ Tally☿census ᛰ ⇰ cast
   hone ⦉Tally☿census ⟪ᛰ ⧸ ☥⟫᛫ ?▢⦊
   litany Tally☿census ᛰ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰ ✨Count✨the✨Veils✨ ☥
     ▢ ≣ Tally☿census ☥ ⊛ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⇰ Tally☿✨Bindings✨Commute✨ ⟪Tally☿census ⟪ᛰ ⧸ ☥⟫⟫ ⟪Tally☿census ☥⟫
 
+/- Apply subgroup counting to the integer powers of a single element.
+The cardinality of that cyclic subgroup is the element order. -/
 spell ✨Lagrange's✨Measure✨of✨the✨Cycle✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ period jade✨cube ∣ Tally☿census ᛰ ⇰
   litany period jade✨cube ≣ Tally☿census ⟪✨Inner✨Veyr✨☿✨cycle✨circle✨ jade✨cube⟫ ⇰ ⟪Tally☿✨Cycle✨Census✨ jade✨cube⟫☿reflect
     ▢ ∣ Tally☿census ᛰ ⇰ ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ⟪✨Inner✨Veyr✨☿✨cycle✨circle✨ jade✨cube⟫
 
+/- Open the divisibility witness and group the exponent into full periods.
+Each period returns to the identity, so any number of periods does too. -/
 spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ 一 ⇰ cast
   wrest ⦉onyx✨bead᛫ measureward⦊ ⇰ ✨Lagrange's✨Measure✨of✨the✨Cycle✨ jade✨cube
   litany jade✨cube ⌃ Tally☿census ᛰ ≣ jade✨cube ⌃ ⟪period jade✨cube ⊛ onyx✨bead⟫ ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ jade✨cube ⌃ pinch✨of✨sulfur⟫ measureward
@@ -438,6 +630,24 @@ A veyr whose census is indivisible has no hidden circles. Nothing inside it can 
 
 **Proof idea.** By Lagrange, the size of a subgroup H divides p. A prime has only two divisors. If |H| = 1, then H is trivial. If |H| = p = |G|, then H fills the whole group, because G is finite. A group of prime size has at least two elements, so it is nontrivial, and both conditions of an unbreakable veyr hold.
 
+**A guided reading.** A simple group has no proper nontrivial normal subgroup through which to form a smaller quotient. For prime-sized groups, Lagrange gives an especially direct proof: there is no room for an intermediate subgroup size.
+
+1. **Unpack simple** The definition has two parts: the group is nontrivial, and every normal subgroup is either ⊥ or ⊤. Here ⊥ is the identity subgroup and ⊤ is the whole group. The first theorem checks that this explicit definition agrees with mathlib’s IsSimpleGroup structure.
+
+2. **Establish finiteness before counting** The hypothesis Nat.card G = p has positive prime p on the right. Since Nat.card is zero for an infinite type, positivity supplies a Finite instance. This matters when the proof concludes that a subgroup with the whole group’s cardinality must be the whole group.
+
+3. **Let primality force the two cases** Lagrange says |H| divides p. The prime-divisor theorem leaves |H| = 1 or |H| = p. The first case makes H trivial; the second makes H all of G. Notice that this argument never asks whether H is normal, so it proves more than simplicity needs.
+
+4. **Finish both requirements** A prime exceeds 1, so the group has at least two elements and is nontrivial. Combine that with the two-case subgroup result to obtain the explicit simplicity property, then use the initial equivalence to obtain mathlib’s packaged IsSimpleGroup proof.
+
+**Try it yourself.** Read the subgroup theorem’s hypotheses and compare them with the definition of simple. Which hypothesis from that definition disappears in the prime-order argument?
+
+<details><summary>A hint</summary>
+
+The subgroup theorem works for every H. Normality is only part of the general definition of simplicity, not a requirement of the stronger prime-order result.
+
+</details>
+
 ```text
 beckon Arcana☿Enchantment☿Lagrange
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Indices
@@ -448,6 +658,8 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
+/- Simple means nontrivial with no proper nontrivial normal subgroup.
+The next theorem identifies this explicit description with the library structure. -/
 ritual ✨Unbreakable✨Veyr✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Verity ⇰
   Plural ᛰ ⩓ ⟁ ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ᛫ ᚾ☿Hallowed ↝ ᚾ ≣ ⊥ ⩔ ᚾ ≣ ⊤
 
@@ -459,6 +671,9 @@ spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Veyr✨ ᛰ ↭ �
   ❖ summon simplicity
     missile ⦉simplicity☿✨to✨plural✨᛫ simplicity☿✨nothing✨or✨all✨⦊
 
+/- Lagrange makes the subgroup cardinality a divisor of a prime.
+Only the identity subgroup and the entire group can have the resulting sizes.
+This argument is stronger than needed: the subgroup need not be normal. -/
 spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫
     ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ☥ ≣ ⊥ ⩔ ☥ ≣ ⊤ ⇰ cast
   bind counted ⟡ Tally☿census ᛰ ≢ 〇 ⇰
@@ -477,6 +692,9 @@ spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward �
         ▢ ≣ Tally☿census ᛰ ⇰ censusward☿reflect
     missile ⟪✨Inner✨Veyr✨☿✨Full✨Census✨ ☥⟫☿onward filled
 
+/- There are two obligations: the group has more than one element,
+and every normal subgroup is trivial or total. Primality and the preceding
+subgroup theorem supply them separately. -/
 spell ✨Indivisible✨Veyrs✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫ ⟡
     ✨Unbreakable✨Veyr✨ ᛰ ⇰ cast
   bind counted ⟡ Tally☿census ᛰ ≢ 〇 ⇰
@@ -491,6 +709,8 @@ spell ✨Indivisible✨Veyrs✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ 
   summon ᚾ veilward
   missile ✨No✨Hidden✨Circles✨ primalward censusward ᚾ
 
+/- Convert the explicit property into mathlib’s bundled simplicity statement.
+No new group-theoretic argument is needed at this last step. -/
 spell ✨Indivisible✨Veyrs✨are✨Simple✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫ ⟡
     ✨Simple✨Veyr✨ ᛰ ⇰
   ✨Unbreakable✨Means✨Simple✨☿onward ⟪✨Indivisible✨Veyrs✨Cannot✨Break✨ primalward censusward⟫
@@ -514,6 +734,24 @@ An action moves a point through its orbit. The stabilizer records the commands t
 
 **Proof idea.** The heart of the matter: g·x = k·x exactly when g⁻¹k fixes x. Each direction is a three-line calc that moves g across the action. So points of the orbit match cosets of the stabilizer. The count then comes from Lagrange's coset formula, applied to the stabilizer.
 
+**A guided reading.** An action lets group elements move points. An orbit records the places a point can reach; its stabilizer records the moves that leave it where it started. This lesson connects that geometric picture to the coset counting from Lagrange.
+
+1. **Read the action law in order** The notation g • x means that g acts on x. The law (gk) • x = g • (k • x) applies k first, then g. The stabilizer of x contains precisely the elements that fix x, while the orbit contains precisely the points obtainable from x.
+
+2. **Detect when two moves agree** The first theorem proves g • x = k • x exactly when g⁻¹k stabilizes x. In the forward direction, act by g⁻¹ on both equal points. In the reverse direction, act by g on the stabilizer equation. The calculation is cancellation expressed through an action.
+
+3. **Replace orbit points by cosets** The agreement criterion says that all moves reaching one point make one coset of the stabilizer. Mathlib packages the resulting equivalence. Its inverse sends the coset represented by g to g • x, as the application theorem confirms. This is an equivalence of sets; the stabilizer need not be normal.
+
+4. **Transfer the count** The equivalence gives equal cardinalities for the orbit and coset set. Substitute that equality into Lagrange’s count to obtain |Orb(x)|·|Stab(x)| = |G|. For the familiar finite interpretation, a larger stabilizer means fewer distinct destinations for the same number of group moves.
+
+**Try it yourself.** Compare the first theorem with the inverse application theorem. Why can two different representatives g and k produce the same orbit point?
+
+<details><summary>A hint</summary>
+
+Their difference g⁻¹k fixes x. They represent one stabilizer coset, so the inverse map gives the same point for both.
+
+</details>
+
 ```text
 beckon Arcana☿Enchantment☿Lagrange
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Commands☿Effigies
@@ -522,6 +760,9 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
 
+/- Two moves reach the same point exactly when their difference fixes it.
+Move the first group element across the equation using its inverse;
+the reverse implication undoes that move. -/
 spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord onyx✨bead ⟡ ᛰ⟫ ⟡
     silk✨cord • jade✨cube ≣ onyx✨bead • jade✨cube ↭ silk✨cord† ⊛ onyx✨bead ∈ Commanding☿stillguard ᛰ jade✨cube ⇰ cast
   transmute ⟮Commanding☿✨Stillguard✨Criterion✨⟯
@@ -535,10 +776,14 @@ spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord
       ▢ ≣ silk✨cord • silk✨cord† • onyx✨bead • jade✨cube ⇰ sympathy ⟪conjure ruby✨shard ⇉ silk✨cord • ruby✨shard⟫ ⟪✨Command✨in✨Stages✨ silk✨cord† onyx✨bead jade✨cube⟫
       ▢ ≣ onyx✨bead • jade✨cube ⇰ ✨Revocation✨Commanded✨ silk✨cord ⟪onyx✨bead • jade✨cube⟫
 
+/- All moves with the same destination form one stabilizer coset.
+This is an equivalence of sets; the stabilizer need not be normal. -/
 ineffable ritual ✨Orbit✨Portal✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
     Commanding☿procession ᛰ jade✨cube ≃ ᛰ ⧸ Commanding☿stillguard ᛰ jade✨cube ⇰
   Commanding☿✨Orbit✨Correspondence✨ ᛰ jade✨cube
 
+/- The inverse correspondence is concrete: a coset represented by a move
+returns the destination of that move applied to the starting point. -/
 spell ✨Command✨through✨the✨Portal✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡
     ⟪⟪✨Orbit✨Portal✨ jade✨cube⟫☿reflect ⟪✨Veiled✨Veyr✨☿forge silk✨cord⟫ ⟡ 🌒⟫ ≣ silk✨cord • jade✨cube ⇰ mirror
 
@@ -546,6 +791,8 @@ spell ✨Procession✨Counts✨Veils✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
     Tally☿census ⟪Commanding☿procession ᛰ jade✨cube⟫ ≣ Tally☿census ⟪ᛰ ⧸ Commanding☿stillguard ᛰ jade✨cube⟫ ⇰
   Tally☿✨Census✨through✨Portal✨ ⟪✨Orbit✨Portal✨ jade✨cube⟫
 
+/- Replace the orbit count with the equivalent coset count, then use Lagrange.
+For a finite group, destinations times moves fixing the point equals all moves. -/
 spell ✨Orbit✨of✨Command✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
     Tally☿census ⟪Commanding☿procession ᛰ jade✨cube⟫ ⊛ Tally☿census ⟪Commanding☿stillguard ᛰ jade✨cube⟫ ≣
       Tally☿census ᛰ ⇰
@@ -571,7 +818,25 @@ Every command is a way to move the points, so every action is a pact into a cour
 
 **Hypotheses.** G is a group and X is any type with a G-action. Cayley's theorem uses the action of G on itself by left multiplication. No finiteness is needed; for a finite group of order n, the court of shuffles has n! members.
 
-**Proof idea.** Each g gives the map x ↦ g • x. One acts as the identity and g * k acts as g then k, so this is a homomorphism into End(X). Because g⁻¹ undoes g, each map is a permutation. For the self-action, a command in the kernel moves 1 to 1, so g = g * 1 = 1. The kernel is trivial, so the Kernels folio gives injectivity, and an injective homomorphism is an isomorphism onto its image.
+**Proof idea.** Each g gives the map x ↦ g • x. One acts as the identity and g * k acts by k first, then g, so this is a homomorphism into End(X). Because g⁻¹ undoes g, each map is a permutation. For the self-action, a command in the kernel moves 1 to 1, so g = g * 1 = 1. The kernel is trivial, so the Kernels folio gives injectivity, and an injective homomorphism is an isomorphism onto its image.
+
+**A guided reading.** Cayley turns an abstract group into concrete permutations. Build on kernels and group actions: the crucial choice is to let the group act on its own elements, where applying a move to the identity reveals the move itself.
+
+1. **Package all the action maps** For each g, the function x ↦ g • x is an endofunction of X. Endofunctions form a monoid under composition. actionToEnd preserves multiplication because gk acts by k first and g second, matching the composition of their two functions.
+
+2. **Supply an inverse for each move** A group element g has inverse g⁻¹, and their action maps undo each other. actionToPerm records the forward map, inverse map, and both cancellation proofs. This upgrades each endofunction to a permutation while preserving the homomorphism law.
+
+3. **Test the self-action at the identity** For the action on G itself, g sends x to gx. If g gives the identity permutation, it fixes 1, hence g = g·1 = 1. The displayed kernel calculation makes this observation precise, and the earlier kernel theorem turns it into injectivity.
+
+4. **Identify the group with its image** An injective homomorphism gives an isomorphism onto its image subgroup. cayleyEquiv packages that isomorphism, and the final application theorem confirms its formula: the permutation associated with g sends x to gx. No finiteness assumption is needed for this construction.
+
+**Try it yourself.** Find where the proof uses X = G rather than an arbitrary action. Why is evaluating at the identity so effective there?
+
+<details><summary>A hint</summary>
+
+The kernel proof for the self-action evaluates a permutation at 1. The resulting value is g itself, so no nonidentity group element can act as the identity permutation.
+
+</details>
 
 ```text
 beckon Arcana☿Enchantment☿Silence
@@ -582,6 +847,8 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
 
+/- Each group element acts as an endofunction. A product acts by the right-hand
+element first, then the left-hand one, matching function composition. -/
 ritual ✨Pact✨into✨the✨Court✨ ⟡ ᛰ ↝⊛ Rite☿Court 🌒 begets
   deed silk✨cord ⇰ conjure jade✨cube ⇉ silk✨cord • jade✨cube
   ✨carries✨stillness✨ ⇰ oath conjure jade✨cube ⇉ ✨Stillness✨Commands✨Nothing✨ ᛰ jade✨cube
@@ -589,6 +856,8 @@ ritual ✨Pact✨into✨the✨Court✨ ⟡ ᛰ ↝⊛ Rite☿Court 🌒 begets
 
 spell ✨The✨Court✨Obeys✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ 🌒⟫ ⟡ ✨Pact✨into✨the✨Court✨ silk✨cord jade✨cube ≣ silk✨cord • jade✨cube ⇰ mirror
 
+/- The inverse group element undoes the action, so each action map is
+a permutation. Store both cancellation laws with that inverse function. -/
 ritual ✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling 🌒 begets
   deed silk✨cord ⇰
     ⧼ deed ⇰ conjure jade✨cube ⇉ silk✨cord • jade✨cube
@@ -600,6 +869,9 @@ ritual ✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling 🌒
 
 spell ✨The✨Shuffles✨Obey✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ 🌒⟫ ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord jade✨cube ≣ silk✨cord • jade✨cube ⇰ mirror
 
+/- For the self-action by left multiplication, inspect the identity element.
+A move that fixes every input fixes the identity, which forces the move itself
+to be the identity. Thus this action has trivial kernel. -/
 spell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ≣ ⊥ ⇰ cast
   transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
   summon silk✨cord echoward
@@ -609,10 +881,14 @@ spell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ �
     ▢ ≣ ⟪一 ⟡ Portal☿Shuffling ᛰ⟫ 一 ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather 一⟫ idle
     ▢ ≣ 一 ⇰ mirror
 
+/- The kernel criterion from Circle of silence converts this calculation
+into injectivity of the permutation representation. -/
 spell ✨No✨Two✨Commands✨Alike✨ ⟡
     Rite☿Faithful ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ⇰
   ⟪✨Nothing✨Lost✨ ✨Pact✨into✨the✨Shuffles✨⟫☿backward ✨Only✨Stillness✨Moves✨Nothing✨
 
+/- An injective homomorphism identifies its source with its image subgroup.
+The following formula confirms that the represented action is left multiplication. -/
 ineffable ritual ✨Cayley's✨Court✨ ⟡ ᛰ ≃⊛ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫☿manifestation ⇰
   Herald☿✨from✨faithfulness✨ ✨No✨Two✨Commands✨Alike✨
 
@@ -637,14 +913,37 @@ Enchant the three vertices of an equilateral triangle. Every shuffle is a rigid 
 
 **Proof idea.** A swap undoes itself. To distinguish ab from ba, evaluate both at vertex 0: one sends it to 1, the other to 2. Then compute the full vertex cycle and its third power, prove its order is exactly 3, and enumerate all permutations as one of three rotations or three reflected rotations.
 
+**A guided reading.** Picture three labeled vertices of an equilateral triangle. Rotations and mirror reflections give every permutation of those vertices, turning the first noncommutative example into a shape you can hold in mind.
+
+1. **Choose two mirrors** Fin 3 labels the vertices 0, 1, and 2. transposition01 exchanges the first two and fixes the third; transposition12 exchanges the last two and fixes the first. Geometrically each is reflection across the axis through its fixed vertex and the opposite edge’s midpoint.
+
+2. **Compose from right to left** A product ab applies b first, then a. The two products of the chosen swaps send vertex 0 to different vertices, so they cannot be equal. Evaluating at one carefully chosen input is enough to disprove equality of two permutations.
+
+3. **Discover the rotation** triangleRotation is the product of the two mirrors. The next computation follows every vertex: 0 goes to 1, then 2, then back to 0. Its third power is the identity; the order theorem also rules out a smaller positive period. The model computes permutations rather than coordinates in the plane.
+
+4. **Account for every symmetry** The final theorem checks every permutation and finds a power of the rotation, possibly preceded by the chosen reflection. The exponent lies in Fin 3, so the description has three rotations and three reflected rotations. decide proves these finite claims by computation that Lean’s kernel checks.
+
+**Try it yourself.** Before opening the noncommutativity proof, trace vertex 0 through each product of swaps by hand. Then compare your two destinations with the named intermediate facts.
+
+<details><summary>A hint</summary>
+
+Start with the rightmost swap. One product sends 0 to 1, and the other sends it to 2; the unchanged vertex of a swap stays put.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Shuffling☿Fetter
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
 
 sanctum Arcana☿Enchantment
 
+/- Think of the three labels as vertices of an equilateral triangle.
+Every vertex permutation is a geometric symmetry of that triangle;
+the formal model here computes the permutations, not plane geometry. -/
 byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 三⟫
 
+/- Each swap is a mirror fixing the remaining vertex.
+Products of permutations apply the rightmost swap first. -/
 ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 〇 一
 
 ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 一 二
@@ -654,6 +953,8 @@ spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 六 ⇰ c
 spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ 一 ⇰
   Portal☿✨Exchange✨Undoes✨Itself✨ 〇 一
 
+/- To disprove equality of two permutations, one input with different outputs
+is enough. Follow the first labeled vertex through both compositions. -/
 spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast
   summon twinned
   bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ≣ 一 ⇰ cast divine
@@ -664,6 +965,8 @@ spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange�
       ▢ ≣ 二 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
+/- These two mirrors compose to a rotation. The next statements trace
+its vertex cycle and prove its exact period. -/
 ritual ✨Threefold✨Turn✨ ⟡ ✨Three✨Sigils✨ ⇰ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨
 
 spell ✨Follow✨the✨Three✨Sigils✨ ⟡
@@ -674,6 +977,8 @@ spell ✨Three✨Turns✨Return✨ ⟡ ✨Threefold✨Turn✨ ⌃ 三 ≣ 一 �
 spell ✨The✨Threefold✨Period✨ ⟡ period ✨Threefold✨Turn✨ ≣ 三 ⇰
   ✨Indivisible✨Return✨ ✨Three✨Turns✨Return✨ ⟪cast divine⟫
 
+/- Every symmetry is a rotation or a reflected rotation.
+The finite exponent range and decide check all possibilities in this model. -/
 spell ✨All✨Dances✨of✨the✨Triangle✨ ⟡ ⟁ raven✨feather ⟡ ✨Three✨Sigils✨᛫ ⟒ onyx✨bead ⟡ Fetter 三᛫
     raven✨feather ≣ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⩔ raven✨feather ≣ ✨First✨Exchange✨ ⊛ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⇰ cast divine
 
@@ -696,6 +1001,24 @@ Turn the sixfold dial. One step visits every mark; two steps and three steps tra
 
 **Proof idea.** Finite enumeration proves generation and rules out every earlier positive return. The power-order formula then gives ord(rᵏ) = 6/gcd(6,k). The wraparound calculation combines exponents before reducing modulo 6. Every computation is checked by Lean’s kernel.
 
+**A guided reading.** Imagine advancing one place around a six-position dial. Every move is a repetition of that one step. This example connects the abstract order-of-an-element theorem to explicit modular arithmetic.
+
+1. **Translate the type tag** ZMod 6 represents residues modulo six. Multiplicative changes the notation of its additive group: the displayed group product means adding residues, the group identity corresponds to residue zero, and a power means repeated addition. cyclicSixStep is the residue one wrapped in that notation.
+
+2. **Distinguish a return from the first return** The sixth power being 1 shows a return, but does not by itself prove that the order is six. The order proof also checks every positive exponent below six. Fin 6 packages the possible exponents together with their bounds, making that check finite.
+
+3. **Use the power-order formula** The order of rᵏ is ord(r) divided by gcd(ord(r), k). Substituting six gives order three for r² and order two for r³. The calc blocks separate the general library theorem, substitution of the generator’s order, and the final arithmetic computation.
+
+4. **Compute by collecting exponents** The product r⁴r⁵ becomes r⁹ by the power law, and nine steps reach the same position as three. Moving backwards once is moving forwards five times. The generation theorem adds that every element of the model appears among the first six powers.
+
+**Try it yourself.** Predict the wraparound product by counting dial positions before reading its proof. Which part of the calc is a general group identity, and which part uses this six-element model?
+
+<details><summary>A hint</summary>
+
+Combining powers with pow_add works for any group element. Reducing the resulting power to the third power uses the concrete cyclic model and its period.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿Foundations
 beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Guises☿Bounded
@@ -703,6 +1026,8 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
 
 sanctum Arcana☿Enchantment
 
+/- This type tag writes modular addition as multiplication.
+The group identity is residue zero, and powers mean repeated addition. -/
 byname ✨Sixfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 六⟫
 
 ritual ✨Turn✨the✨Sixfold✨Wheel✨ ⟡ ✨Sixfold✨Wheel✨ ⇰ Unchanted☿unchant 一
@@ -711,9 +1036,13 @@ spell ✨Count✨the✨Sixfold✨Wheel✨ ⟡ Counted☿census ✨Sixfold✨Whee
 
 spell ✨Six✨Turns✨Return✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 六 ≣ 一 ⇰ cast divine
 
+/- A single forward step visits every position of the six-place dial.
+The bounded exponent is a witness for how many steps reach each element. -/
 spell ✨One✨Turn✨Commands✨the✨Wheel✨ ⟡ ⟁ jade✨cube ⟡ ✨Sixfold✨Wheel✨᛫ ⟒ onyx✨bead ⟡ Fetter 六᛫ jade✨cube ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ⇰ cast
   divine
 
+/- Returning after a full turn is only half the order proof.
+We must also rule out every smaller positive return time. -/
 spell ✨The✨Sixfold✨Period✨ ⟡ period ✨Turn✨the✨Sixfold✨Wheel✨ ≣ 六 ⇰ cast
   channel ⟪✨Test✨the✨First✨Return✨ ⟪cast divine ⟡ 〇 ⋖ 六⟫⟫☿backward
   fabricate
@@ -722,6 +1051,8 @@ spell ✨The✨Sixfold✨Period✨ ⟡ period ✨Turn✨the✨Sixfold✨Wheel✨
     bind firstward ⟡ ⟁ onyx✨bead ⟡ Fetter 六᛫ 〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
     missile firstward ⦉pinch✨of✨sulfur᛫ rimward⦊ riseward
 
+/- Use the general power-order formula, substitute the known generator order,
+then compute the greatest common divisor. The next example follows the same pattern. -/
 spell ✨Double✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ 三 ⇰
   litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 二 ⇰
         ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
@@ -734,6 +1065,8 @@ spell ✨Triple✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixf
     ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 三 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 三⟫ ✨The✨Sixfold✨Period✨
     ▢ ≣ 二 ⇰ cast divine
 
+/- First add the exponents using a general power law.
+Only the final reduction uses the finite dial’s wraparound. -/
 spell ✨Beyond✨the✨Last✨Mark✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰
   litany ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ ⟪四 ⧾ 五⟫ ⇰ ⟪✨Join✨the✨Ascents✨ ▢ ▢ ▢⟫☿reflect
     ▢ ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰ cast divine
@@ -759,6 +1092,24 @@ Four marks admit two enchantments. One follows a single circuit; the other has t
 
 **Proof idea.** Compute the toggle product and all squares. If an isomorphism existed, preservation of powers would send the square of the C₄ generator to 1. Injectivity would force that square to be 1 already, contradicting the explicit computation.
 
+**A guided reading.** Two groups can have the same number of elements and still have different multiplication. Compare one four-step dial with two independent on/off toggles; this is the first lesson in finding a property that an isomorphism cannot change.
+
+1. **Set up the two models** cyclicFour uses one residue modulo four. kleinFour uses a pair of residues modulo two and adds coordinate by coordinate. The named elements toggle the first or second coordinate. Both models have four elements, as the two cardinality computations confirm.
+
+2. **Inspect powers instead of just size** In the Klein group, applying any toggle combination twice restores both coordinates, so every square is the identity. A single step of the four-step dial does not return after two steps, even though it does after four. This difference survives every relabeling that preserves multiplication.
+
+3. **Transport a square through an isomorphism** Assume an isomorphism e exists. The image of the cyclic generator has square 1 in the Klein group. Because e preserves powers and the identity, e sends the generator’s square and 1 to the same element.
+
+4. **Use injectivity to reach the contradiction** An isomorphism is injective, so those equal images force the original square to equal 1. That contradicts the earlier computation. The proof therefore excludes every possible group isomorphism at once; it does not have to try possible relabelings individually.
+
+**Try it yourself.** Follow the same-image calculation in the final proof. Where is multiplication preservation used, and where is mere injectivity enough?
+
+<details><summary>A hint</summary>
+
+map_pow carries the square through e. The later use of e.injective turns equality of the two images into equality of their inputs.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿Foundations
 beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Guises☿Bounded
@@ -766,12 +1117,16 @@ beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Portal☿Names
 
 sanctum Arcana☿Enchantment
 
+/- Compare a four-place dial with two independent on/off toggles.
+Equal cardinality alone does not determine a group’s multiplication. -/
 byname ✨Fourfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 四⟫
 
 byname ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted ⟪Clockwork 二 ⨯ Clockwork 二⟫
 
 ritual ✨Turn✨the✨Fourfold✨Wheel✨ ⟡ ✨Fourfold✨Wheel✨ ⇰ Unchanted☿unchant 一
 
+/- These two elements toggle different coordinates.
+Their product toggles both, with each coordinate computed modulo two. -/
 ritual ✨First✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪一᛫ 〇⟫
 
 ritual ✨Second✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪〇᛫ 一⟫
@@ -785,12 +1140,17 @@ spell ✨Join✨the✨Forks✨ ⟡ ✨First✨Fork✨ ⊛ ✨Second✨Fork✨ �
 
 spell ✨Klein's✨Harmony✨ ⟡ ⟁ jade✨cube silver✨bell ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⊛ silver✨bell ≣ silver✨bell ⊛ jade✨cube ⇰ cast divine
 
+/- Every toggle combination undoes itself. The cyclic generator, by contrast,
+does not return after two steps; the next statements expose that difference. -/
 spell ✨Every✨Fork✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
 
 spell ✨Two✨Turns✨Have✨Not✨Returned✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二 ≢ 一 ⇰ cast divine
 
 spell ✨Four✨Turns✨Return✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 四 ≣ 一 ⇰ cast divine
 
+/- An isomorphism preserves squares and the identity. If one existed here,
+it would send the cyclic generator’s square and the identity to the same output.
+Injectivity would force them to have been equal, contradicting the computation. -/
 spell ✨The✨Wheel✨Is✨Not✨the✨Fork✨ ⟡ ⫬Inhabited ⟪✨Fourfold✨Wheel✨ ≃⊛ ✨Klein's✨Forked✨Charm✨⟫ ⇰ cast
   summon perfectward
   rend perfectward whence ⦉obsidian✨mirror⦊
@@ -820,13 +1180,35 @@ A quarter-turn and a mirror generate eight commands. Look through the mirror, tu
 
 **Proof idea.** Mathlib supplies rotation and reflection constructors. We compute their orders and conjugation, enumerate all eight normal forms, and distinguish rs from sr. Multiplying two chosen reflections then produces a rotation.
 
+**A guided reading.** Move from the triangle to the square and keep track of how mirrors interact with turns. This dihedral example will become one of the five order-eight groups in the classification chapter.
+
+1. **Name a quarter-turn and a mirror** DihedralGroup 4 uses four rotations and four reflected rotations. Let r be one quarter-turn and s the chosen reflection. Here the subscript counts polygon vertices, so D₄ has eight elements; texts using the group order in the subscript call it D₈.
+
+2. **Check the defining motions** Four quarter-turns restore the square, and a reflection performed twice restores it. The order theorems state that these periods are exact. The conjugation relation srs = r⁻¹ says that viewing a turn through a mirror reverses its direction.
+
+3. **See why order matters** The two products rs and sr yield different reflected rotations. The noncommutativity proof reduces a hypothetical equality to equality between two distinct dihedral constructors. This is the same strategy as testing the triangle’s two swap products, now in the standard algebraic model.
+
+4. **Reduce to a normal form** Every element is rᵏ or srᵏ for an exponent below four. These forms enumerate all eight possibilities and make finite checks possible. The final calculation cancels two adjacent copies of s using associativity, leaving a rotation as the product of the chosen two reflections.
+
+**Try it yourself.** In the reflection-product calculation, find the step that changes parentheses. Why would cancelling the two reflections be harder without that step?
+
+<details><summary>A hint</summary>
+
+Associativity rewrites s(sr) as (ss)r. Only then are the two adjacent reflections presented as the product whose value is 1.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Mirror✨Veyrs✨
 
 sanctum Arcana☿Enchantment
 
+/- This is the algebraic model for a square’s rigid symmetries.
+The dihedral parameter counts vertices, so the group has twice that many elements. -/
 byname ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨ 四
 
+/- Choose a quarter-turn and a reflection. Their powers will generate
+all rotations and reflected rotations of the square. -/
 ritual ✨Turn✨the✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
 
 ritual ✨Mirror✨of✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
@@ -848,12 +1230,16 @@ spell ✨The✨Wind's✨Turning✨Period✨ ⟡ period ✨Turn✨the✨Four✨Wi
 spell ✨The✨Wind's✨Mirror✨Period✨ ⟡ period ✨Mirror✨of✨Four✨Winds✨ ≣ 二 ⇰
   ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
 
+/- A mirror reverses the sense of a turn: reflect, turn, then reflect again
+and the result is the inverse rotation. -/
 spell ✨Mirrors✨Reverse✨the✨Winds✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰
   litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣
         ✨Mirror✨Veyr✨☿mirror✨shard 一 ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
     ▢ ≣ ✨Mirror✨Veyr✨☿amber✨disc 三 ⇰ cast divine
     ▢ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰ cast divine
 
+/- The two orders of a turn and a reflection give distinct reflected rotations.
+This supplies an explicit witness that the group is noncommutative. -/
 spell ✨The✨Winds✨Resist✨Harmony✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≢ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ cast
   summon harmonyward
   bind discordward ⟡ ⟪✨Mirror✨Veyr✨☿mirror✨shard 三 ⟡ ✨Four✨Winds✨Veyr✨⟫ ≢ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
@@ -862,9 +1248,13 @@ spell ✨The✨Winds✨Resist✨Harmony✨ ⟡ ✨Turn✨the✨Four✨Winds✨ �
     ▢ ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ harmonyward
     ▢ ≣ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
 
+/- These normal forms exhaust the group: a rotation, or a product of a reflection
+and a rotation, with the exponent in the displayed range. The rightmost motion acts first. -/
 spell ✨All✨Commands✨of✨Four✨Winds✨ ⟡ ⟁ jade✨cube ⟡ ✨Four✨Winds✨Veyr✨᛫ ⟒ onyx✨bead ⟡ Fetter 四᛫
     jade✨cube ≣ ✨Turn✨the✨Four✨Winds✨ ⌃ onyx✨bead☿core ⩔ jade✨cube ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⌃ onyx✨bead☿core ⇰ cast divine
 
+/- Reassociate to place the two identical mirrors together.
+They cancel, leaving a rotation as the product of these two reflections. -/
 spell ✨Two✨Wind✨Mirrors✨Make✨a✨Turn✨ ⟡
     ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣ ✨Turn✨the✨Four✨Winds✨ ⇰
   litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣
@@ -891,19 +1281,43 @@ Walk every second point to draw the star. Five turns and five mirrors preserve i
 
 **Proof idea.** Use rᵢ(x) = x + i and sᵢ(x) = −x − i, matching mathlib’s multiplication convention. Finite computation checks identity, composition, faithfulness, and adjacency preservation for every group element and pair of tips. It also checks the generators’ orders, mirror conjugation, and all ten normal forms.
 
+**A guided reading.** Draw a regular pentagram by joining every second tip of a regular pentagon. Its ten symmetries give a richer action example: we can check not only the group laws, but also that every move preserves the star’s edges.
+
+1. **Specify what an edge means** The five outer tips are labeled by residues modulo five. starAdjacent x y means that y differs from x by plus or minus two, so it selects star edges rather than the sides of the surrounding pentagon. Interior crossings are not extra labeled vertices in this model.
+
+2. **Write the action explicitly** A rotation indexed by i sends x to x+i. A reflected rotation sends x to −x−i, following mathlib’s multiplication convention. The identity and multiplication theorems verify that this formula is an action; the product g·h acts by h first, then g.
+
+3. **Check faithfulness and edge preservation** Faithfulness says that two group elements moving every tip identically must be the same group element. Edge preservation says that a pair is adjacent before a move exactly when it is adjacent afterwards. Both statements quantify over all finite possibilities, so decide checks the full finite model.
+
+4. **Connect the formulas to the shape** The generator has order five, a mirror has order two, and conjugation reverses the rotation. Every group element is a rotation or a reflected rotation. This is the algebraic model of the regular pentagram’s dihedral symmetries; the formal source does not develop Euclidean geometry.
+
+**Try it yourself.** Read star_edge_and_diagonal and explain why tips 0 and 2 are joined but tips 0 and 1 are not. Then follow those two pairs through one rotation using starAction.
+
+<details><summary>A hint</summary>
+
+Adding the same residue to both endpoints leaves their difference unchanged. The edge test concerns differences of plus or minus two, with all arithmetic modulo five.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Mirror✨Veyrs✨
 
 sanctum Arcana☿Enchantment
 
+/- Use the standard dihedral model for a regular pentagram.
+Only its five outer tips are labeled; crossings are not additional vertices. -/
 byname ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨ 五
 
 ritual ✨Turn✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
 
 ritual ✨Mirror✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
 
+/- Join every second tip around the surrounding pentagon.
+The plus-or-minus alternatives make this an undirected star edge relation. -/
 ritual ✨Thread✨of✨the✨Star✨ ⟪jade✨cube silver✨bell ⟡ Clockwork 五⟫ ⟡ Verity ⇰ silver✨bell ≣ jade✨cube ⧾ 二 ⩔ silver✨bell ≣ jade✨cube ⧿ 二
 
+/- Rotations add a residue; reflected rotations reverse it and shift.
+The sign convention matches multiplication in the dihedral model. -/
 ritual ✨Command✨the✨Star✨ ⟪silk✨cord ⟡ ✨Five✨Pointed✨Seal✨⟫ ⟪jade✨cube ⟡ Clockwork 五⟫ ⟡ Clockwork 五 ⇰
   augur silk✨cord whence
   ⫽ ✨Mirror✨Veyr✨☿amber✨disc opal✨dust ⇉ jade✨cube ⧾ opal✨dust
@@ -925,9 +1339,13 @@ spell ✨Mirrors✨Reverse✨the✨Star✨ ⟡ ✨Mirror✨the✨Star✨ ⊛ ✨
 
 spell ✨Silence✨Leaves✨the✨Star✨Still✨ ⟡ ⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ 一 jade✨cube ≣ jade✨cube ⇰ cast divine
 
+/- The action law checks composition in the correct order:
+the rightmost group element acts first. -/
 spell ✨Compose✨the✨Star's✨Commands✨ ⟡ ⟁ silk✨cord ward ⟡ ✨Five✨Pointed✨Seal✨᛫ ⟁ jade✨cube ⟡ Clockwork 五᛫
     ✨Command✨the✨Star✨ ⟪silk✨cord ⊛ ward⟫ jade✨cube ≣ ✨Command✨the✨Star✨ silk✨cord ⟪✨Command✨the✨Star✨ ward jade✨cube⟫ ⇰ cast divine
 
+/- Faithful means no two different group elements move every tip identically.
+The next theorem separately checks that each move preserves the star’s edges. -/
 spell ✨The✨Star✨Conceals✨No✨Command✨ ⟡ ⟁ silk✨cord ward ⟡ ✨Five✨Pointed✨Seal✨᛫
     ⟪⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ silk✨cord jade✨cube ≣ ✨Command✨the✨Star✨ ward jade✨cube⟫ ↝ silk✨cord ≣ ward ⇰ cast divine
 
@@ -936,6 +1354,8 @@ spell ✨Preserve✨the✨Star's✨Threads✨ ⟡ ⟁ silk✨cord ⟡ ✨Five✨
   unseal ✨Thread✨of✨the✨Star✨
   divine
 
+/- This small check distinguishes an edge of the star from a side of
+the surrounding pentagon. Both predicates use the same explicit adjacency rule. -/
 spell ✨Skip✨a✨Tip✨to✨Trace✨the✨Star✨ ⟡ ✨Thread✨of✨the✨Star✨ 〇 二 ⩓ ⫬✨Thread✨of✨the✨Star✨ 〇 一 ⇰ cast
   unseal ✨Thread✨of✨the✨Star✨
   divine
@@ -962,12 +1382,32 @@ Hamilton’s three spirits i, j, and k share the same shadow. Reverse their orde
 
 **Proof idea.** Compute the three squares and both multiplication orders, then derive ijk = −1. Enumerate all elements to prove that −1 is central, every fourth power is 1, and −1 is the unique nonidentity element squaring to 1. The square’s symmetry group has five such involutions—a clue for the classification ahead.
 
+**A guided reading.** Hamilton’s quaternion group offers a second, very different group with eight elements. Keep the square’s symmetry group in mind: matching cardinalities and some element orders will not be enough to identify the two groups.
+
+1. **Separate the finite group from the algebra** Q₈ consists of ±1, ±i, ±j, and ±k inside Hamilton’s quaternion units. This folio uses the finite model QuaternionGroup 2. Its named minus-one is a group element; multiplying by it plays the role of changing sign. The model is not the entire infinite quaternion algebra.
+
+2. **Compute the three squares** The definitions choose i and j and set k = ij. The next three theorems compute i² = j² = k² = −1. Combining ij = k with k² = −1 gives ijk = −1, so the familiar quaternion identity follows from the earlier small computations.
+
+3. **Keep the multiplication order** The model computes ij = k but ji = −k. Since k and −k are distinct, these products witness noncommutativity. The minus-one element itself commutes with every element, showing that having a central element does not make the entire group commutative.
+
+4. **Count the elements that undo themselves** Every fourth power is 1, but among nonidentity elements only −1 has square 1. Such an element is called an involution. Q₈ has one involution whereas the square group has five. The next chapter will prove that isomorphisms preserve this count.
+
+**Try it yourself.** Compare the fourth-power theorem with the unique-involution theorem. Why does the first statement not imply that every nonidentity element has order four?
+
+<details><summary>A hint</summary>
+
+The element −1 already returns after two steps. A fourth power of 1 gives a possible return time, not necessarily the smallest one.
+
+</details>
+
 ```text
 beckon Arcana☿Enchantment☿✨The✨Four✨Winds✨
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Hamilton's✨Spirits✨
 
 sanctum Arcana☿Enchantment
 
+/- This finite group models the eight signed quaternion units, not the whole
+infinite quaternion algebra. The model parameter gives four times as many elements. -/
 byname ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨ 二
 
 ritual ✨Hamilton's✨First✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿ash 一
@@ -976,12 +1416,16 @@ ritual ✨Hamilton's✨Second✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact�
 
 ritual ✨Hamilton's✨Third✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨
 
+/- The quaternion sign is represented by a central group element.
+Multiplying by this element plays the role of negation. -/
 ritual ✨Hamilton's✨Shadow✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿ash 二
 
 spell ✨Count✨Hamilton's✨Pact✨ ⟡ Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 八 ⇰
   litany Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 四 ⊛ 二 ⇰ ✨Hamilton's✨Veyr✨☿census
     ▢ ≣ 八 ⇰ cast divine
 
+/- The three imaginary units all square to the same minus-one element.
+These are direct finite computations checked by Lean’s kernel. -/
 spell ✨The✨First✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⌃ 二 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
 
 spell ✨The✨Second✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨Second✨Spirit✨ ⌃ 二 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
@@ -992,11 +1436,15 @@ spell ✨The✨First✨Two✨Conjure✨the✨Third✨ ⟡ ✨Hamilton's✨First�
 
 spell ✨Reversal✨Conjures✨the✨Shadow✨ ⟡ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ≣ ✨Hamilton's✨Shadow✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ⇰ cast divine
 
+/- Since the first two units multiply to the third, their triple product
+is the third unit’s square. Reuse the earlier computation to identify it. -/
 spell ✨Three✨Spirits✨Conjure✨the✨Shadow✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ≣ ✨Hamilton's✨Shadow✨ ⇰
   litany ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ≣ ✨Hamilton's✨Third✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ⇰ mirror
     ▢ ≣ ✨Hamilton's✨Third✨Spirit✨ ⌃ 二 ⇰ ⟪✨Unfold✨the✨Double✨Ascent✨ ▢⟫☿reflect
     ▢ ≣ ✨Hamilton's✨Shadow✨ ⇰ ✨The✨Third✨Spirit's✨Shadow✨
 
+/- Reversing the first two units changes the sign of their product.
+The explicit distinction between these two outputs proves noncommutativity. -/
 spell ✨Hamilton's✨Discord✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ≢ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ⇰ cast
   summon harmonyward
   bind discordward ⟡ ✨Hamilton's✨Third✨Spirit✨ ≢ ✨Hamilton's✨Shadow✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ⇰ cast divine
@@ -1010,6 +1458,9 @@ spell ✨The✨Shadow✨Walks✨Among✨All✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamil
 
 spell ✨Hamilton's✨Fourfold✨Return✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫ ivory✨ring ⌃ 四 ≣ 一 ⇰ cast divine
 
+/- An involution is a nonidentity element whose square is the identity.
+Only minus-one qualifies here. The square’s symmetry group has five,
+which will become a way to distinguish the groups up to isomorphism. -/
 spell ✨Only✨the✨Shadow✨Undoes✨Itself✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫
     ⟪ivory✨ring ⌃ 二 ≣ 一 ⩓ ivory✨ring ≢ 一⟫ ↭ ivory✨ring ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
 
@@ -1038,12 +1489,33 @@ Eight members, five possible laws. Count the self-undoing spirits, separate the 
 
 **Proof idea.** First compute all five cardinalities, cyclic generation, power identities, and involution counts. An explicit equivalence transports involutions across any group isomorphism, so unequal counts forbid isomorphisms; commutativity separates C₈ from Q₈. For exhaustiveness, P3Group splits into abelian and nonabelian cases. The abelian structure theorem leaves partitions 3, 2+1, and 1+1+1, giving the three abelian groups. In the nonabelian case, choose x of order 4 and y outside its cyclic subgroup. Conjugation by y inverts x, and either y² = 1 (the square group) or y² = x² (Hamilton’s group). The upstream proof constructs the resulting isomorphisms. Our final spell specializes the full theorem to 2³ and eliminates the odd-prime branches.
 
+**A guided reading.** A classification must do three jobs: build examples, distinguish them, and prove nothing else exists. This chapter does all three for groups of order eight. “Eightfold” refers to their shared size; there are five isomorphism classes.
+
+1. **Build and compute the five candidates** The candidates are C₈, C₄ × C₂, C₂ × C₂ × C₂, the square’s D₄, and Hamilton’s Q₈. Product groups operate in each coordinate. The opening statements check their cardinalities and useful power identities, reusing the square and quaternion computations from earlier folios.
+
+2. **Find an invariant that survives relabeling** involutionCount counts nonidentity elements with square 1. An isomorphism takes exactly these elements to exactly such elements, producing a bijection of the corresponding subtypes. Their counts are 1, 3, 7, 5, and 1. The transport proof works for arbitrary groups, not just these five models.
+
+3. **Separate every pair** Unequal involution counts rule out nine of the ten pairs. C₈ and Q₈ share the count one, so the remaining proof uses commutativity: products in C₈ commute, which an isomorphism would force in Q₈, contradicting its explicit i and j calculation. The conjunction lists all ten distinct pairs.
+
+4. **Read the exhaustive proof at its boundary** order_eight_classification accepts any group with Nat.card G = 8. It specializes the pinned, compiled P3Group classification at the prime two and removes its odd-prime branches. Upstream, the abelian structure theorem gives the three abelian cases; an order-four generator and conjugation analysis produce D₄ or Q₈ in the nonabelian case. Those arguments live in the linked P3Group sources, and their proof dependencies pass the same axiom audit as the local computations.
+
+**Try it yourself.** Find the last theorem’s hypotheses and conclusion. Which lines establish finiteness, and which two branches become impossible because the chosen prime is two?
+
+<details><summary>A hint</summary>
+
+A positive Nat.card supplies Finite, then Fintype supplies an enumeration. Each h_odd branch assumes the prime differs from two; applying that assumption to rfl eliminates the branch. Browser edits still need a separate Lean check.
+
+</details>
+
 ```text
 beckon Arcana☿Enchantment☿✨Hamilton's✨Grimoire✨
 beckon ✨Indivisible✨Cubic✨Veyrs✨☿✨The✨Exhaustive✨Census✨
 
 sanctum Arcana☿Enchantment
 
+/- The three commutative candidates are a single dial, a pair of dials,
+and three independent toggles. The square and quaternion models were imported
+from their earlier folios. -/
 byname ✨Eightfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 八⟫
 
 byname ✨Twin✨Fourfold✨Wheels✨ ⇰ Unchanted ⟪Clockwork 四⟫ ⨯ Unchanted ⟪Clockwork 二⟫
@@ -1062,15 +1534,22 @@ spell ✨Twin✨Wheels✨Return✨in✨Four✨ ⟡ ⟁ jade✨cube ⟡ ✨Twin�
 
 spell ✨Every✨Triple✨Charm✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Three✨Mirror✨Charms✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
 
+/- First check that all five candidates meet the size requirement.
+Classification will also require distinguishing them and proving exhaustiveness. -/
 spell ✨Five✨Houses✨of✨Eight✨ ⟡
     Counted☿census ✨Eightfold✨Wheel✨ ≣ 八 ⩓ Counted☿census ✨Twin✨Fourfold✨Wheels✨ ≣ 八 ⩓
     Counted☿census ✨Three✨Mirror✨Charms✨ ≣ 八 ⩓ Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 八 ⩓
     Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 八 ⇰ cast
   missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨Count✨the✨Four✨Winds✨᛫ ✨Count✨Hamilton's✨Pact✨⦊
 
+/- Count the nonidentity elements whose squares are the identity.
+The subtype stores both an element and evidence that it has this property. -/
 ineffable ritual ✨Census✨of✨Self✨Undoing✨Spirits✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Tallies ⇰
   Tally☿census ⧼jade✨cube ⟡ ᛰ ⧶⧶ jade✨cube ⌃ 二 ≣ 一 ⩓ jade✨cube ≢ 一⧽
 
+/- An isomorphism preserves squares, the identity, and inequality with the identity.
+It therefore gives a bijection between the two involution subtypes,
+and their cardinalities agree. -/
 spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
     ⟪obsidian✨mirror ⟡ ᛰ ≃⊛ ☥⟫ ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≣ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥ ⇰ cast
   channel Tally☿✨Census✨through✨Portal✨
@@ -1096,6 +1575,8 @@ spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence
       channel motionward
       missile ⟪sympathy obsidian✨mirror stillward⟫☿chain obsidian✨mirror☿✨keeps✨stillness✨
 
+/- These concrete counts separate every pair except the cyclic and quaternion groups.
+The following arguments turn that observation into proofs excluding isomorphisms. -/
 spell ✨The✨Five✨Houses'✨Hidden✨Censuses✨ ⟡
     ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Eightfold✨Wheel✨ ≣ 一 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Twin✨Fourfold✨Wheels✨ ≣ 三 ⩓
     ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Three✨Mirror✨Charms✨ ≣ 七 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Four✨Winds✨Veyr✨ ≣ 五 ⩓
@@ -1109,6 +1590,9 @@ spell ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨ ⧼ᛰ ☥ ⟡ Es
   unpack ⦉obsidian✨mirror⦊
   missile tallyward ⟪✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ obsidian✨mirror⟫
 
+/- The repeated count needs a second invariant. The cyclic group is commutative;
+an isomorphism would transfer that law to the quaternion units, contradicting
+the two units already known not to commute. -/
 spell ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨ ⟡ ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
   unpack ⦉obsidian✨mirror⦊
   channel ✨Hamilton's✨Discord✨
@@ -1116,6 +1600,8 @@ spell ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨ ⟡ ⫬ Inhabited ⟪✨E
     ▢ ≣ obsidian✨mirror ⟪obsidian✨mirror☿reflect ✨Hamilton's✨Second✨Spirit✨ ⊛ obsidian✨mirror☿reflect ✨Hamilton's✨First✨Spirit✨⟫ ⇰ sympathy obsidian✨mirror ⟪✨Bindings✨Commute✨ ▢ ▢⟫
     ▢ ≣ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ⇰ cast purify
 
+/- There are ten pairs among five candidates. Use the special commutativity
+argument for one pair and unequal involution counts for the other nine. -/
 spell ✨The✨Five✨Houses✨Are✨Distinct✨ ⟡
     ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩓
     ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩓
@@ -1134,14 +1620,22 @@ spell ✨The✨Five✨Houses✨Are✨Distinct✨ ⟡
     purify solely ⟮wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⟯
     divine
 
+/- Exhaustiveness is a separate argument, not a consequence of listing examples.
+The pinned P3Group dependency proves the general prime-cubed classification.
+This theorem specializes that checked proof to the prime two; the linked upstream
+sources contain the abelian structure and nonabelian generator arguments. -/
 spell ✨The✨Eightfold✨Way✨Admits✨No✨Sixth✨House✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟪sizeward ⟡ Tally☿census ᛰ ≣ 八⟫ ⟡
     Inhabited ⟪ᛰ ≃⊛ ✨Eightfold✨Wheel✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩔
     Inhabited ⟪ᛰ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩔
     Inhabited ⟪ᛰ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
   bind ⟡ Witnessed ⟪Tally☿Indivisible 二⟫ ⇰ ⦉cast divine⦊
+  /- Positive cardinality first supplies finiteness; an enumeration is then
+  available for applying the upstream theorem. -/
   bind ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ ⟪cast transmute ⟮sizeward⟯⁂ divine⟫
   dub ⟡ Counted ᛰ ⇰ Counted☿✨Enumerate✨the✨Finite✨ ᛰ
   bind cubeward ⟡ Tally☿census ᛰ ≣ 二 ⌃ 三 ⇰ sizeward☿chain ⟪cast divine⟫
+  /- The two odd-prime branches contradict our chosen prime.
+  The remaining branches are exactly the five concrete groups above. -/
   rend ✨Indivisible✨Cubic✨Veyrs✨☿exhaustive✨census 二 ᛰ cubeward whence
     wheelward ⫽ twinward ⫽ toggleward ⫽ oddward ⫽ oddward ⫽ doubleward ⫽ hamiltonward
   ❖ missile Either☿choose✨left wheelward
@@ -1171,6 +1665,24 @@ Disenchantment forgets structure. Its left hand conjures the Primordial, the fre
 
 **Proof idea.** Left hand: a homomorphism out of the free monoid is fixed by its values on the generators, because every word is built from generators by multiplication; induction on the word gives uniqueness. Right hand: if f is a homomorphism from a group, then f(g) has inverse f(g⁻¹), since f(g)·f(g⁻¹) = f(g·g⁻¹) = f(1) = 1. So f lands in the units, and a map into the units is fixed by its underlying values. Mathlib packages both as adjunctions, MonCat.adj and GrpCat.forget₂MonAdj.
 
+**A guided reading.** The earlier constructions repeatedly extended a map from a small amount of data and proved that the extension was unique. Adjunctions organize that pattern. This lesson uses familiar monoids, groups, and permutations before introducing the categorical packaging.
+
+1. **Build freely from generators** The free monoid on S consists of finite words in letters from S, with concatenation as multiplication and the empty word as identity. A function f : S → M determines a homomorphism by replacing letters with their images and multiplying. freeLift_of checks its value on a one-letter word.
+
+2. **Prove uniqueness by building words** The uniqueness proof inducts on the word. A homomorphism must send the empty word to 1. For a word with a first letter and a remaining word, multiplication preservation, the specified generator value, and the induction hypothesis determine its value. Mathlib packages this correspondence as the free-forgetful adjunction.
+
+3. **Find the units automatically** A homomorphism from a group into a monoid sends g to an invertible element: f(g⁻¹) is its inverse. unitsLift stores the value, its inverse, and both product equations. Its uniqueness theorem says that maps into the units agree when their underlying values agree.
+
+4. **Compare the two sides of forgetting** The symbol ⊣ places a left adjoint on the left and a right adjoint on the right. Free monoids sit to the left of forgetting from monoids to types; units sit to the right of forgetting from groups to monoids. The final equivalence identifies the invertible endofunctions with permutations, reconnecting to Cayley’s court.
+
+**Try it yourself.** Inspect the two inverse equations stored by unitsLift. Which homomorphism laws and which source-group laws are needed to prove them?
+
+<details><summary>A hint</summary>
+
+Push f through multiplication, cancel g against g⁻¹ in each order, and then use f(1) = 1. The target monoid need not provide inverses for all its elements.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿✨Primordial✨Choir✨☿Foundations
 beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Court
@@ -1187,10 +1699,15 @@ chamber ✨Primordial✨Choir✨
 
 familiar ⧼ᛋ ᛗ ⟡ Essence⊛⧽ ⟮Choir ᛗ⟯
 
+/- A function on letters extends to a homomorphism on words by multiplication.
+The one-letter calculation records its prescribed generator values. -/
 ritual ✨Primordial's✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟡ ✨Primordial✨Choir✨ ᛋ ↝⊛ ᛗ ⇰ ✨Primordial✨Choir✨☿descend copper✨wire
 
 spell ✨Seeds✨Go✨Where✨Sent✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟪pouch✨of✨sand ⟡ ᛋ⟫ ⟡ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ≣ copper✨wire pouch✨of✨sand ⇰ mirror
 
+/- A homomorphism’s generator values determine its value on every word.
+Induct on the word: handle the empty word, then a first letter followed
+by a shorter word. -/
 spell ✨Only✨One✨Primordial✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ ᛋ ↝⊛ ᛗ⟫
     ⟪seedward ⟡ ⟁ pouch✨of✨sand᛫ brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ≣ copper✨wire pouch✨of✨sand⟫ ⟡ brass✨key ≣ ✨Primordial's✨Pact✨ copper✨wire ⇰ cast
   channel Herald☿extend
@@ -1207,6 +1724,8 @@ spell ✨Only✨One✨Primordial✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ �
           sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ ✨Primordial's✨Pact✨ copper✨wire verse⟫ ⟪✨Seeds✨Go✨Where✨Sent✨ copper✨wire pouch✨of✨sand⟫☿reflect
       ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand ⊛ verse⟫ ⇰ ⟪⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨Carry✨the✨Binding✨ ▢ ▢⟫☿reflect
 
+/- Mathlib packages the generator-to-word correspondence as an adjunction.
+The free construction is left adjoint to forgetting the monoid structure. -/
 ritual ✨Left✨Hand✨of✨Disenchantment✨ ⟡ Choirs☿primordial☿⧼tier⧽ ☍ Disenchantment Choirs☿⧼tier⧽ ⇰ Choirs☿✨the✨hands✨
 
 seal ✨Primordial✨Choir✨
@@ -1215,6 +1734,8 @@ chamber Reversibles
 
 familiar ⧼ᛰ ᛗ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Choir ᛗ⟯
 
+/- The image of a group element has an inverse even in a target monoid:
+use the image of its source inverse. Store both inverse equations explicitly. -/
 ritual ✨Gather✨the✨Reversible✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟡ ᛰ ↝⊛ Reversibles ᛗ begets
   deed silk✨cord ⇰
     ⧼ core ⇰ copper✨wire silk✨cord
@@ -1232,10 +1753,15 @@ ritual ✨Gather✨the✨Reversible✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ �
 
 spell ✨Gathered✨as✨Given✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ ⟪✨Gather✨the✨Reversible✨ copper✨wire silk✨cord ⟡ ᛗ⟫ ≣ copper✨wire silk✨cord ⇰ mirror
 
+/- A unit is determined by its underlying value, since an inverse is unique.
+Thus equality of all underlying values already determines this lifted homomorphism. -/
 spell ✨Only✨One✨Gathering✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪tin✨key ⟡ ᛰ ↝⊛ Reversibles ᛗ⟫
     ⟪valueward ⟡ ⟁ silk✨cord᛫ ⟪tin✨key silk✨cord ⟡ ᛗ⟫ ≣ copper✨wire silk✨cord⟫ ⟡ tin✨key ≣ ✨Gather✨the✨Reversible✨ copper✨wire ⇰
   Herald☿extend conjure silk✨cord ⇉ Reversibles☿extend ⟪valueward silk✨cord⟫
 
+/- Here the direction reverses: units are right adjoint to forgetting
+from groups to monoids. The final equivalence connects invertible endofunctions
+with the permutations used in Cayley’s theorem. -/
 ritual ✨Right✨Hand✨of✨Lesser✨Disenchantment✨ ⟡ ✨Lesser✨Disenchantment✨ Veyrs☿⧼tier⧽ Choirs☿⧼tier⧽ ☍ Choirs☿reversibles☿⧼tier⧽ ⇰
   Veyrs☿✨lesser✨hands✨
 
@@ -1263,6 +1789,24 @@ To know a creature, watch the pacts that leave it. A natural way of turning thos
 
 **Proof idea.** Naturality is the whole proof. For g : X → Y, the identity pact id_X followed by g is g itself, so α_Y(g) = α_Y(id_X ≫ g) = F(g)(α_X(id_X)). Every value of α is therefore fixed by α_X(id_X). In the other direction, F(id_X)(x) = x because functors keep identities. The last spell checks that the hand-built correspondence is exactly mathlib's coyonedaEquiv.
 
+**A guided reading.** Yoneda says that a compatible family of responses to every arrow out of an object is already determined by one response: the response to its identity arrow. Read the adjunction folio first, and treat this as another precise correspondence between maps and small pieces of data.
+
+1. **Identify the family being studied** Fix X and a functor F from a category to types. Hom(X, −) sends Y to the arrows X → Y. A natural transformation η supplies a function from those arrows to F(Y) for every Y, with compatibility whenever an arrow takes Y to another object. mathlib calls this covariant representable functor coyoneda.obj (op X).
+
+2. **Extract one distinguished element** transformationToElement evaluates η at the identity arrow of X, giving an element of F(X). Conversely, an element x of F(X) defines a family by sending g : X → Y to F(g)(x). Functoriality proves that this family satisfies naturality.
+
+3. **Let naturality determine everything** Any arrow g factors as the identity of X followed by g. Apply naturality to that factorization to obtain η_Y(g) = F(g)(η_X(id_X)). Thus the extracted element reconstructs every component of η. In the other direction, the functor’s identity law returns the original element x.
+
+4. **Package the correspondence and recognize examples** The two inverse laws give yonedaEquivByHand, and the next theorem identifies it with mathlib’s coyonedaEquiv. The concluding examples evaluate a free-monoid homomorphism at its one generator and an integer-group homomorphism at one. Each packages a whole homomorphism as its freely chosen generator image.
+
+**Try it yourself.** In transformation_determined_by_identity, find the line that uses naturality. What special arrow is fed into that equality?
+
+<details><summary>A hint</summary>
+
+The last line applies naturality along g to the identity of X. That single evaluation connects the component at X with the component at an arbitrary Y.
+
+</details>
+
 ```text
 beckon ✨Grand✨Archive✨☿✨Lore✨of✨Forms✨☿Yoneda
 beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿✨Primordial✨Choir✨☿Foundations
@@ -1279,9 +1823,13 @@ chamber Yoneda
 
 familiar ⧼ᚳ ⟡ Essence tier⧽ ⟮Cosmology☿⧼stratum⧽ ᚳ⟯ ⧼🌒 ⟡ ᚳ⧽ ⧼ᚠ ⟡ ᚳ ⤳ Essence stratum⧽
 
+/- A natural transformation supplies a compatible response to every arrow
+out of the chosen object. Evaluate it at the identity to extract one element. -/
 ritual ✨Where✨the✨Self✨Pact✨Goes✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ⟡ ᚠ☿form 🌒 ⇰
   silver✨thread☿part 🌒 ⟪◎ 🌒⟫
 
+/- Conversely, send the chosen element along each arrow using the functor.
+The functor’s composition law proves that these responses are natural. -/
 ritual ✨Carry✨the✨Token✨Everywhere✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ begets
   part ᛇ ⇰ ↾conjure silk✨cord ⇉ ᚠ☿enchant silk✨cord jade✨cube
   ✨keeps✨accord✨ ᛇ ᛜ copper✨wire ⇰ cast
@@ -1291,12 +1839,16 @@ ritual ✨Carry✨the✨Token✨Everywhere✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒
 spell ✨The✨Token✨Travels✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⧼ᛇ ⟡ ᚳ⧽ ⟪silk✨cord ⟡ 🌒 ⟿ ᛇ⟫ ⟡
     ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫☿part ᛇ silk✨cord ≣ ᚠ☿enchant silk✨cord jade✨cube ⇰ mirror
 
+/- Every arrow is the identity followed by that arrow. Naturality on this
+factorization forces the transformation’s value from its value at the identity. -/
 spell ✨Known✨by✨the✨Self✨Pact✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫
     ⧼ᛇ ⟡ ᚳ⧽ ⟪silk✨cord ⟡ 🌒 ⟿ ᛇ⟫ ⟡ silver✨thread☿part ᛇ silk✨cord ≣ ᚠ☿enchant silk✨cord ⟪✨Where✨the✨Self✨Pact✨Goes✨ silver✨thread⟫ ⇰
   litany silver✨thread☿part ᛇ silk✨cord ≣ silver✨thread☿part ᛇ ⟪◎ 🌒 ⨾ silk✨cord⟫ ⇰ sympathy ⟪silver✨thread☿part ᛇ⟫ ⟪Cosmology☿✨Self✨Pact✨First✨ silk✨cord⟫☿reflect
     ▢ ≣ silver✨thread☿part ᛇ ⟪⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫⟫☿enchant silk✨cord ⟪◎ 🌒⟫⟫ ⇰ mirror
     ▢ ≣ ᚠ☿enchant silk✨cord ⟪silver✨thread☿part 🌒 ⟪◎ 🌒⟫⟫ ⇰ Accord☿✨Accord✨Holds✨ silver✨thread silk✨cord ⟪◎ 🌒⟫
 
+/- These two theorems check the round trips. One uses the naturality calculation;
+the other uses the fact that a functor preserves the identity arrow. -/
 spell ✨Rebuilt✨from✨the✨Self✨Pact✨ ⟪silver✨thread ⟡ ✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ⟡
     ✨Carry✨the✨Token✨Everywhere✨ ⟪✨Where✨the✨Self✨Pact✨Goes✨ silver✨thread⟫ ≣ silver✨thread ⇰ cast
   extend ᛇ silk✨cord
@@ -1307,6 +1859,8 @@ spell ✨The✨Token✨Returns✨ ⟪jade✨cube ⟡ ᚠ☿form 🌒⟫ ⟡
   litany ✨Where✨the✨Self✨Pact✨Goes✨ ⟪✨Carry✨the✨Token✨Everywhere✨ jade✨cube⟫ ≣ ᚠ☿enchant ⟪◎ 🌒⟫ jade✨cube ⇰ mirror
     ▢ ≣ jade✨cube ⇰ ᚠ☿✨Self✨Pact✨Changes✨Nothing✨ 🌒 jade✨cube
 
+/- Package the two constructions and their inverse laws as an equivalence.
+The next proof checks that its forward function is exactly mathlib’s correspondence. -/
 ritual ✨Yoneda's✨Mirror✨ ⟡ ⟪✨pacts✨out✨of✨☿form ⟪mirrored 🌒⟫ ⟿ ᚠ⟫ ≃ ᚠ☿form 🌒 begets
   deed ⇰ ✨Where✨the✨Self✨Pact✨Goes✨
   ✨reverse✨deed✨ ⇰ ✨Carry✨the✨Token✨Everywhere✨
@@ -1324,12 +1878,16 @@ chamber Proxies
 
 familiar ⟪ᛗ ⟡ Essence⊛⟫ ⟮Choir ᛗ⟯ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯
 
+/- A homomorphism from the free monoid on one generator is determined
+by the image of that generator, which can be any element of the target monoid. -/
 ritual ✨One✨Seed✨Holds✨Every✨Member✨ ⟡ ⟪✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ≃ ᛗ ⇰
   ✨Primordial✨Choir✨☿descend☿reflect☿chain ⟪Portal☿✨lone✨seed✨ Mote ᛗ⟫
 
 spell ✨Where✨the✨Seed✨Goes✨ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ⟡
     ✨One✨Seed✨Holds✨Every✨Member✨ ᛗ brass✨key ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed ⟪⟫⟫ ⇰ mirror
 
+/- Likewise, a homomorphism from the integer group is determined by the image
+of one. Multiplicative notation lets the integer source use the same group arrow. -/
 ritual ✨The✨Integers✨Hold✨Every✨Member✨ ⟡ ⟪Unchanted Balances ↝⊛ ᛰ⟫ ≃ ᛰ ⇰
   ⟪✨powers✨of✨one✨ ᛰ⟫☿reflect
 

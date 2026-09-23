@@ -4,11 +4,15 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
+/- The kernel collects exactly the inputs sent to the identity.
+The next equivalence switches between subgroup membership and that equation. -/
 ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ copper✨wire☿silence
 
 spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
 
+/- Push the map through this conjugate. The middle image becomes the identity,
+and the two surrounding images cancel. This is the calculation behind normality. -/
 spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨cube ⟡ ᛰ⧽
     ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
   bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
@@ -22,11 +26,16 @@ spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨
       ▢ ≣ 一 ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
   missile ⟪✨Name✨the✨Silent✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫⟫☿backward hushed
 
+/- Normality asks for closure under every conjugation.
+Package the preceding calculation as that structural property. -/
 spell ✨Silence✨is✨Hallowed✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ⟪✨Circle✨of✨Silence✨ copper✨wire⟫☿Hallowed ⇰ cast
   fabricate
   summon jade✨cube sigilward silk✨cord
   missile ✨Unbroken✨Silence✨ copper✨wire sigilward silk✨cord
 
+/- A trivial kernel means only the identity maps to the identity.
+For the converse implication, equal images make the product with an inverse
+land in the kernel, forcing the original inputs to coincide. -/
 spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Faithful copper✨wire ↭ ✨Circle✨of✨Silence✨ copper✨wire ≣ ⊥ ⇰ cast
   transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯

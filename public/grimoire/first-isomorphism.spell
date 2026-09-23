@@ -4,18 +4,24 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
+/- Restricting the codomain to the image does not change any output value.
+In particular, every kernel element still maps to the identity. -/
 spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
   summon jade✨cube sigilward
   bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ sigilward
   proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ 一
   missile Kin☿extend muted
 
+/- The quotient lift now lands in the image, where every element is known
+to have come from the original map. -/
 ritual ✨Image✨Pact✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ↝⊛ copper✨wire☿manifestation ⇰
   ✨Pass✨the✨Veil✨ copper✨wire☿silence copper✨wire☿✨confine✨to✨manifestation✨ ⟪✨Silence✨within✨the✨Image✨ copper✨wire⟫
 
 spell ✨Image✨of✨the✨Sigil✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
+/- Choose representatives of two cosets with equal images. Their difference
+maps to the identity, so it belongs to the kernel and identifies the two cosets. -/
 spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Faithful ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
   summon ruby✨shard ivory✨ring twinned
   wrest ⦉jade✨cube᛫ mirror⦊ ⇰ ✨Veiled✨Veyr✨☿✨Every✨Veil✨has✨a✨Face✨ ruby✨shard
@@ -31,6 +37,8 @@ spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿F
       ▢ ≣ 一 ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
   missile ✨Veiled✨Veyr✨☿✨Veil✨Equality✨☿backward hushed
 
+/- An image element carries a witness for its origin.
+The coset of that witness is a preimage for the descended map. -/
 spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
   summon quarry
   wrest ⦉jade✨cube᛫ sigilward⦊ ⇰ Herald☿✨Manifestation✨Criterion✨☿onward quarry☿attestation
@@ -39,6 +47,8 @@ spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿R
   litany ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube
     ▢ ≣ quarry ⇰ sigilward
 
+/- The hard work is already done: a homomorphism that is injective and
+surjective can be packaged as a group isomorphism. -/
 ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ≃⊛ copper✨wire☿manifestation ⇰
   ✨Pact✨Portal✨☿✨from✨perfection✨ ⟪✨Image✨Pact✨ copper✨wire⟫ ⦉✨Faithful✨Image✨ copper✨wire᛫ ✨Reaching✨Image✨ copper✨wire⦊
 
@@ -49,6 +59,8 @@ spell ✨Perfect✨Unveiling✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Perfect ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫ ⇰
   ⦉✨Faithful✨Image✨ copper✨wire᛫ ✨Reaching✨Image✨ copper✨wire⦊
 
+/- Surjectivity of the original map makes its image the whole codomain.
+Only this final strengthening requires that extra hypothesis. -/
 ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Essence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
     ᛰ ⧸ copper✨wire☿silence ≃⊛ ☥ ⇰
   ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫☿chain

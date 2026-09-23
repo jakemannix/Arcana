@@ -110,3 +110,16 @@ test('the Eightfold Way ships an audited exhaustive classification and distinct 
   assert.ok(entry.references.some(ref => ref.symbol === 'P3Group.classification' &&
     ref.url.includes('/lixiang90/p3group/blob/' + provenance.dependencyRevisions.P3Group + '/')));
 });
+
+
+test('tutorials cover every folio and teaching comments are identical in both sources', () => {
+  for (const folio of folios) {
+    assert.ok(folio.tutorial.motivation.trim());
+    assert.ok(folio.tutorial.steps.length >= 3);
+    assert.ok(folio.tutorial.steps.every(step => step.title.trim() && step.body.trim()));
+    assert.ok(folio.tutorial.experiment.prompt.trim() && folio.tutorial.experiment.hint.trim());
+    const comments = tokenize(folio.lean).filter(t => t.kind === 'comment').map(t => t.text);
+    assert.ok(comments.length > 0, folio.id + ' has teaching comments');
+    assert.deepEqual(tokenize(folio.spell, true).filter(t => t.kind === 'comment').map(t => t.text), comments);
+  }
+});

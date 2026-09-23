@@ -4,12 +4,16 @@ import Mathlib.Algebra.Group.Equiv.Defs
 
 namespace Mathematics.GroupTheory
 
+/- Compare a four-place dial with two independent on/off toggles.
+Equal cardinality alone does not determine a group’s multiplication. -/
 abbrev cyclicFour := Multiplicative (ZMod 4)
 
 abbrev kleinFour := Multiplicative (ZMod 2 × ZMod 2)
 
 def cyclicFourStep : cyclicFour := Multiplicative.ofAdd 1
 
+/- These two elements toggle different coordinates.
+Their product toggles both, with each coordinate computed modulo two. -/
 def kleinFirst : kleinFour := Multiplicative.ofAdd (1, 0)
 
 def kleinSecond : kleinFour := Multiplicative.ofAdd (0, 1)
@@ -23,12 +27,17 @@ theorem kleinFirst_mul_second : kleinFirst * kleinSecond = Multiplicative.ofAdd 
 
 theorem klein_commutes : ∀ x y : kleinFour, x * y = y * x := by decide
 
+/- Every toggle combination undoes itself. The cyclic generator, by contrast,
+does not return after two steps; the next statements expose that difference. -/
 theorem klein_sq_eq_one : ∀ x : kleinFour, x ^ 2 = 1 := by decide
 
 theorem cyclicFourStep_sq_ne_one : cyclicFourStep ^ 2 ≠ 1 := by decide
 
 theorem cyclicFourStep_pow_four : cyclicFourStep ^ 4 = 1 := by decide
 
+/- An isomorphism preserves squares and the identity. If one existed here,
+it would send the cyclic generator’s square and the identity to the same output.
+Injectivity would force them to have been equal, contradicting the computation. -/
 theorem cyclicFour_not_iso_kleinFour : ¬Nonempty (cyclicFour ≃* kleinFour) := by
   intro h_iso
   rcases h_iso with ⟨e⟩

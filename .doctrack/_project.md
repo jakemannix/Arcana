@@ -50,3 +50,6 @@ See [[decisions/arcana-vocabulary]] for the Arcana rename, rune carriers, and th
 
 
 The finite-group expansion adds six Enchantment folios, including the fully proved classification of order-eight groups. See [[features/graduate-grimoire]] for the pinned P3Group proof dependency, dependency precedence, provenance checks, and exact classification guarantees.
+
+
+The tutorial edition adds guided readings and identical hideable source comments across all folios. [[features/editor]] covers the three animated reading views and source-preserving notes; [[components/translator]] covers fixes discovered by the two independent adversarial reviews. Core mathematics remains unchanged.

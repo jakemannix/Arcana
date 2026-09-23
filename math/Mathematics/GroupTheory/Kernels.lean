@@ -4,11 +4,15 @@ namespace Mathematics.GroupTheory
 
 variable {G H : Type*} [Group G] [Group H]
 
+/- The kernel collects exactly the inputs sent to the identity.
+The next equivalence switches between subgroup membership and that equation. -/
 def homKernel (f : G →* H) : Subgroup G := f.ker
 
 theorem mem_homKernel_iff (f : G →* H) (x : G) :
     x ∈ homKernel f ↔ f x = 1 := MonoidHom.mem_ker
 
+/- Push the map through this conjugate. The middle image becomes the identity,
+and the two surrounding images cancel. This is the calculation behind normality. -/
 theorem conjugate_mem_homKernel (f : G →* H) {x : G}
     (hx : x ∈ homKernel f) (g : G) : g * x * g⁻¹ ∈ homKernel f := by
   have h_map_eq_one : f x = 1 := (mem_homKernel_iff f x).mp hx
@@ -22,11 +26,16 @@ theorem conjugate_mem_homKernel (f : G →* H) {x : G}
       _ = 1 := mul_inv_cancel (f g)
   exact (mem_homKernel_iff f (g * x * g⁻¹)).mpr h_product_map_eq_one
 
+/- Normality asks for closure under every conjugation.
+Package the preceding calculation as that structural property. -/
 theorem homKernel_normal (f : G →* H) : (homKernel f).Normal := by
   constructor
   intro x hx g
   exact conjugate_mem_homKernel f hx g
 
+/- A trivial kernel means only the identity maps to the identity.
+For the converse implication, equal images make the product with an inverse
+land in the kernel, forcing the original inputs to coincide. -/
 theorem injective_iff_homKernel_eq_bot (f : G →* H) :
     Function.Injective f ↔ homKernel f = ⊥ := by
   rw [Subgroup.eq_bot_iff_forall]

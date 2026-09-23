@@ -6,6 +6,8 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
 
+/- Each group element acts as an endofunction. A product acts by the right-hand
+element first, then the left-hand one, matching function composition. -/
 ritual ✨Pact✨into✨the✨Court✨ ⟡ ᛰ ↝⊛ Rite☿Court 🌒 begets
   deed silk✨cord ⇰ conjure jade✨cube ⇉ silk✨cord • jade✨cube
   ✨carries✨stillness✨ ⇰ oath conjure jade✨cube ⇉ ✨Stillness✨Commands✨Nothing✨ ᛰ jade✨cube
@@ -13,6 +15,8 @@ ritual ✨Pact✨into✨the✨Court✨ ⟡ ᛰ ↝⊛ Rite☿Court 🌒 begets
 
 spell ✨The✨Court✨Obeys✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ 🌒⟫ ⟡ ✨Pact✨into✨the✨Court✨ silk✨cord jade✨cube ≣ silk✨cord • jade✨cube ⇰ mirror
 
+/- The inverse group element undoes the action, so each action map is
+a permutation. Store both cancellation laws with that inverse function. -/
 ritual ✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling 🌒 begets
   deed silk✨cord ⇰
     ⧼ deed ⇰ conjure jade✨cube ⇉ silk✨cord • jade✨cube
@@ -24,6 +28,9 @@ ritual ✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling 🌒
 
 spell ✨The✨Shuffles✨Obey✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ 🌒⟫ ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord jade✨cube ≣ silk✨cord • jade✨cube ⇰ mirror
 
+/- For the self-action by left multiplication, inspect the identity element.
+A move that fixes every input fixes the identity, which forces the move itself
+to be the identity. Thus this action has trivial kernel. -/
 spell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ≣ ⊥ ⇰ cast
   transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
   summon silk✨cord echoward
@@ -33,10 +40,14 @@ spell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ �
     ▢ ≣ ⟪一 ⟡ Portal☿Shuffling ᛰ⟫ 一 ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather 一⟫ idle
     ▢ ≣ 一 ⇰ mirror
 
+/- The kernel criterion from Circle of silence converts this calculation
+into injectivity of the permutation representation. -/
 spell ✨No✨Two✨Commands✨Alike✨ ⟡
     Rite☿Faithful ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ⇰
   ⟪✨Nothing✨Lost✨ ✨Pact✨into✨the✨Shuffles✨⟫☿backward ✨Only✨Stillness✨Moves✨Nothing✨
 
+/- An injective homomorphism identifies its source with its image subgroup.
+The following formula confirms that the represented action is left multiplication. -/
 ineffable ritual ✨Cayley's✨Court✨ ⟡ ᛰ ≃⊛ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫☿manifestation ⇰
   Herald☿✨from✨faithfulness✨ ✨No✨Two✨Commands✨Alike✨
 

@@ -4,18 +4,25 @@ import { EditorState, Prec } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
-import { Key, WORDS, RUNE_PATTERN, LEAN_NUMBER, SPELL_NUMBER, fromSpell, toSpell, type KeyData } from './translator';
+import { Key, WORDS, RUNE_PATTERN, LEAN_NUMBER, SPELL_NUMBER, fromSpell, toSpell } from './translator';
 import { folios, grimoireKey, isCheckedSource, provenance, type Folio } from './catalog';
 import { foldAll, unfoldAll } from '@codemirror/language';
 import { spellFolding, sparkleAt, shimmer } from './magic';
 import { expand, LEAN_ABBREVIATIONS, SPELL_ABBREVIATIONS } from './glyphs';
+import { createPresentationController, type PresentationMode } from './presentation';
+import { tutorialComments, setCommentsVisible } from './comments';
+import { renderTutorial } from './tutorial';
+import { parseDraft, serializeDraft, type Draft } from './drafts';
 import './style.css';
 
 type Side = 'lean' | 'spell';
 const initialFolio = folios.find(f => f.id === location.hash.slice(1)) ?? folios.find(f => f.id === 'first-isomorphism')!;
 let selected: Folio | undefined = initialFolio;
 let key = new Key(grimoireKey), updating = false;
-const drafts = new Map<string, { lean: string; spell: string; key: KeyData }>();
+const drafts = new Map<string, Draft>();
+let personalDraft: Draft | undefined;
+let presentationMode: PresentationMode = 'parallel';
+let notesVisible = true;
 let checkTimer: ReturnType<typeof setTimeout>;
 let toastTimer: ReturnType<typeof setTimeout>;
 
@@ -24,23 +31,28 @@ app.innerHTML = `
   <header class="masthead">
     <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">⟐</span><span><b>ARCANA</b></span></a>
     <span class="edition">THE GRADUATE GRIMOIRE <span>VOL. I</span></span>
+    <div id="presentation-controls" class="presentation-controls" role="group" aria-label="Reading view"><button type="button" data-mode="magic" aria-pressed="false">✧ Magic</button><button type="button" data-mode="parallel" aria-pressed="true">Side by side</button><button type="button" data-mode="math" aria-pressed="false">Mathematics</button></div>
     <button id="help" class="quiet-button" aria-expanded="false" aria-controls="help-panel">How to read this <span aria-hidden="true">?</span></button>
   </header>
   <main class="grimoire-layout">
     <aside class="contents" aria-label="Grimoire contents">
       <p class="eyebrow">THE COMMON ARTS</p>
       <nav id="cantrip-nav" aria-label="Shared cantrips"></nav>
-      <div class="school-heading"><span aria-hidden="true">⟐</span><div><p class="eyebrow">SCHOOL OF</p><h1>Enchantment</h1></div></div>
-      <p class="school-description">Groups, pacts, and the structure that survives a transformation.</p>
+      <div class="school-heading"><span aria-hidden="true">⟐</span><div><p class="eyebrow">SCHOOL OF</p><h1><span data-magical>Enchantment</span><span data-only="math">Group theory</span></h1></div></div>
+      <p class="school-description" data-mathematical>Groups, pacts, and the structure that survives a transformation.</p>
       <nav id="chapter-nav" aria-label="Enchantment lessons"></nav>
-      <div class="school-heading"><span aria-hidden="true">⚗</span><div><p class="eyebrow">SCHOOL OF</p><h2>Transmutation</h2></div></div>
-      <p class="school-description">Functors and adjunctions: how one kind of structure becomes another.</p>
+      <div class="school-heading"><span aria-hidden="true">⚗</span><div><p class="eyebrow">SCHOOL OF</p><h2><span data-magical>Transmutation</span><span data-only="math">Category theory</span></h2></div></div>
+      <p class="school-description" data-mathematical>Functors and adjunctions: how one kind of structure becomes another.</p>
       <nav id="transmutation-nav" aria-label="Transmutation lessons"></nav>
-      <div class="contents-foot"><strong>Real mathematics. Written in Arcana.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
+      <button id="personal-draft" class="quiet-button personal-draft" hidden>Return to personal draft</button>
+      <div class="contents-foot" data-mathematical><strong>Real mathematics. Written in Arcana.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
     </aside>
     <div class="reading-desk">
-      <section class="folio-introduction"><p class="eyebrow" id="folio-level"></p><h2 id="folio-title"></h2><p class="folio-subtitle" id="folio-subtitle"></p><p class="lede" id="folio-summary"></p></section>
+      <section class="folio-introduction" data-transmute><p class="eyebrow" id="folio-level" data-mathematical></p><h2 id="folio-title" data-magical></h2><p class="folio-subtitle" id="folio-subtitle" data-mathematical></p><p class="lede" id="folio-summary" data-mathematical></p></section>
       <section id="help-panel" class="help-panel" hidden>
+        <div data-only="magic"><h2>Reading a grimoire</h2><p>Choose a folio, unfold an enchantment, and try changing its ingredients. Use Veil and Reveal to close or open the spell bodies. The other reading views uncover the workings behind the words.</p><p>Type <code>\\sp</code> for ✨, <code>\\dag</code> for †, <code>\\merc</code> for ☿, or <code>\\rune</code> for ᛰ. Space or Tab completes a glyph.</p><p>Original folios are checked. Your edits remain unchecked drafts. Switching folios keeps them in this tab; save a grimoire before reloading. Press Escape, then Tab to leave the editor.</p></div>
+        <div data-only="math"><h2>Reading a proof</h2><p>The editor contains the complete source of the selected folio. Open the proof folds to inspect its steps, and use the tutorial to work through its definitions and hypotheses. Type Lean shortcuts such as <code>\\to</code> for →.</p><p>Original folios were compiled and audited. Edits are drafts: this browser checks translation fidelity but does not run Lean. Save before reloading; folio navigation keeps drafts in this tab. Press Escape, then Tab to leave the editor.</p></div>
+        <div data-only="parallel">
         <h2>Two languages, one theorem</h2>
         <p>The left pane is Arcana: mathematical names and syntax translated into a consistent spell vocabulary. The right pane is the exact Lean source. Edit either pane to translate in both directions.</p>
         <p>Spell ingredients such as <code>jade✨cube</code> and <code>silver✨bell</code> are variables: the math pane calls them <code>x</code> and <code>y</code>. Their types and hypotheses say what they can do. Spell names and schools also have mathematical names on the right; the saved name key keeps the correspondence.</p>
@@ -50,19 +62,20 @@ app.innerHTML = `
         <p>Every original folio was compiled against mathlib, translated, decoded, and compiled again. The proof audit rejects placeholders. Standard Lean axioms such as classical choice may occur. <strong>Your edits are drafts:</strong> the browser checks translation fidelity, but does not run Lean.</p>
         <p><strong>Typing glyphs:</strong> type a backslash and a short name, then a space or Tab. In the spell pane, <code>\\sp</code> gives ✨, <code>\\dag</code> gives †, and <code>\\merc</code> gives ☿. A backslash before any Lean symbol gives its spell glyph: <code>\\:</code> gives ⟡, <code>\\(</code> gives ⟪, <code>\\:=</code> gives ⇰, <code>\\0</code> gives 〇, and <code>\\1</code> gives 一. The Lean pane uses Lean's own shortcuts, such as <code>\\to</code> for → and <code>\\-1</code> for ⁻¹.</p>
         <p>Switching lessons keeps your drafts in this tab. Download to keep a copy with its name key; reloading the page loses unsaved drafts. Press Escape then Tab to leave an editor using the keyboard.</p>
+        </div>
       </section>
-      <section class="mathematical-reading" aria-label="Mathematical meaning"><p class="eyebrow">BEHIND THE ENCHANTMENT</p><p id="meaning"></p><details><summary>Hypotheses & proof idea</summary><h3>What must be true</h3><p id="hypotheses"></p><h3>Why it works</h3><p id="proof-idea"></p></details><div id="prerequisites" class="prerequisites"></div></section>
+      <section class="mathematical-reading" data-mathematical data-transmute aria-label="Mathematical meaning"><p class="eyebrow">BEHIND THE ENCHANTMENT</p><p id="meaning"></p><details><summary>Hypotheses & proof idea</summary><h3>What must be true</h3><p id="hypotheses"></p><h3>Why it works</h3><p id="proof-idea"></p></details><div id="prerequisites" class="prerequisites"></div></section>
+      <section id="tutorial" class="tutorial" data-mathematical data-transmute></section>
       <section class="workspace" aria-label="Spell translation workspace">
         <div class="workspace-toolbar"><span id="folio-badge" class="folio-badge">Original folio</span><div class="toolbar-actions"><button id="restore" class="quiet-button">Restore original</button><button id="open" class="quiet-button">Open file</button><button id="download" class="quiet-button">Save grimoire ↓</button><input id="file" type="file" accept=".lean,.spell,.json" hidden /></div></div>
-        <div class="pane-visibility" role="group" aria-label="Visible editor panes"><button id="toggle-spell" class="quiet-button" aria-controls="spell-pane" aria-expanded="true">Hide magic</button><button id="toggle-lean" class="quiet-button" aria-controls="lean-pane" aria-expanded="true">Hide math</button></div>
-        <p id="panes-hidden" class="panes-hidden" hidden>Both panes are hidden. Show magic or math to return to your work.</p>
+        <div class="comment-toolbar" data-mathematical><button id="toggle-notes" class="quiet-button" aria-controls="spell-editor lean-editor" aria-pressed="true">Hide notes</button><span>Shared notes stay in your saved source.</span></div>
         <div class="editors">
-          <section id="spell-pane" class="editor-pane spell-pane" aria-label="Arcana"><header class="pane-header"><div><span class="pane-index">01</span><h2>Arcana</h2><span class="language-label">.spell</span></div><div class="spell-actions"><button id="veil" class="copy-button" title="Fold all spell bodies">Veil</button><button id="reveal" class="copy-button" title="Reveal all spell bodies">Reveal</button><button class="copy-button" data-copy="spell" aria-label="Copy Arcana">Copy</button></div></header><div id="spell-editor" class="editor-host"></div><footer class="pane-footer"><span id="spell-count"></span><span>THE INCANTATION</span></footer></section>
-          <section id="lean-pane" class="editor-pane lean-pane" aria-label="Lean source"><header class="pane-header"><div><span class="pane-index">02</span><h2>Lean + mathlib</h2><span class="language-label">.lean</span></div><button class="copy-button" data-copy="lean" aria-label="Copy Lean source">Copy</button></header><div id="lean-editor" class="editor-host"></div><footer class="pane-footer"><span id="lean-count"></span><span>THE MATHEMATICS</span></footer></section>
+          <section id="spell-pane" class="editor-pane spell-pane" data-magical aria-label="Arcana"><header class="pane-header"><div><span class="pane-index">01</span><h2>Arcana</h2><span class="language-label">.spell</span></div><div class="spell-actions"><button id="veil" class="copy-button" title="Fold all spell bodies">Veil</button><button id="reveal" class="copy-button" title="Reveal all spell bodies">Reveal</button><button class="copy-button" data-copy="spell" aria-label="Copy Arcana">Copy</button></div></header><div id="spell-editor" class="editor-host" data-transmute></div><footer class="pane-footer"><span id="spell-count"></span><span>THE INCANTATION</span></footer></section>
+          <section id="lean-pane" class="editor-pane lean-pane" data-mathematical aria-label="Lean source"><header class="pane-header"><div><span class="pane-index">02</span><h2>Lean + mathlib</h2><span class="language-label">.lean</span></div><button class="copy-button" data-copy="lean" aria-label="Copy Lean source">Copy</button></header><div id="lean-editor" class="editor-host" data-transmute></div><footer class="pane-footer"><span id="lean-count"></span><span>THE MATHEMATICS</span></footer></section>
         </div>
         <div class="validation-bar"><div class="validation-copy"><span id="status-icon" aria-hidden="true">◇</span><div><strong id="status" role="status" aria-live="polite"></strong><span id="status-detail"></span></div></div><button id="check" class="cast-button">Check round trip <span aria-hidden="true">⟐</span></button></div>
       </section>
-      <section class="reading-notes"><div><p class="eyebrow">WORDS OF POWER</p><p class="section-hint">The vocabulary used in this folio.</p><div id="concepts" class="concept-pairs"></div><details class="full-glossary"><summary>Full translation key for this folio</summary><div id="glossary"></div></details></div><div><p class="eyebrow">FROM THE GRAND ARCHIVE</p><p class="section-hint" id="version"></p><ul id="references"></ul><div class="source-downloads" id="source-downloads"></div></div></section>
+      <section class="reading-notes" data-mathematical data-transmute><div data-only="parallel"><p class="eyebrow">WORDS OF POWER</p><p class="section-hint">The vocabulary used in this folio.</p><div id="concepts" class="concept-pairs"></div><details class="full-glossary"><summary>Full translation key for this folio</summary><div id="glossary"></div></details></div><div><p class="eyebrow">FROM THE GRAND ARCHIVE</p><p class="section-hint" id="version"></p><ul id="references"></ul><div class="source-downloads" id="source-downloads"></div></div></section>
     </div>
   </main>
   <footer class="page-footer"><span>PRECISE WORDS. CURIOUS MAGIC.</span><span>Two schools, a shared foundation, room to grow.</span></footer>
@@ -137,9 +150,9 @@ function glyphShortcuts(side: Side) {
 }
 
 function editorState(side: Side, doc: string): EditorState {
-  return EditorState.create({ doc, extensions: [spellFolding(side === 'spell'), basicSetup, glyphShortcuts(side), keymap.of([indentWithTab]), language(side), syntaxHighlighting(highlight), editorTheme,
+  return EditorState.create({ doc, extensions: [tutorialComments(notesVisible && presentationMode !== 'magic', presentationMode !== 'magic'), spellFolding(side === 'spell'), basicSetup, glyphShortcuts(side), keymap.of([indentWithTab]), language(side), syntaxHighlighting(highlight), editorTheme,
       EditorView.contentAttributes.of({ 'aria-label': side === 'lean' ? 'Edit Lean source' : 'Edit spell text', spellcheck: 'false' }),
-      EditorView.updateListener.of(update => { if (update.docChanged && !updating) translate(side); }),
+      EditorView.updateListener.of(update => { if (update.docChanged && !updating) { invalidateCheck(); counts(); translate(side); } }),
     ] });
 }
 function makeEditor(side: Side, doc: string): EditorView {
@@ -148,20 +161,6 @@ function makeEditor(side: Side, doc: string): EditorView {
 const lean = makeEditor('lean', initialFolio.lean);
 const spell = makeEditor('spell', initialFolio.spell);
 const editors = { lean, spell };
-for (const side of ['spell', 'lean'] as const) {
-  const button = $<HTMLButtonElement>(`#toggle-${side}`);
-  button.addEventListener('click', () => {
-    const pane = $(`#${side}-pane`);
-    pane.hidden = !pane.hidden;
-    button.textContent = `${pane.hidden ? 'Show' : 'Hide'} ${side === 'spell' ? 'magic' : 'math'}`;
-    button.setAttribute('aria-expanded', String(!pane.hidden));
-    const visibleCount = Number(!$('#spell-pane').hidden) + Number(!$('#lean-pane').hidden);
-    $('.editors').classList.toggle('single-pane', visibleCount === 1);
-    $('#panes-hidden').hidden = visibleCount > 0;
-    // Keep both editors alive so drafts, folds, undo, and translation survive hiding.
-    for (const editor of Object.values(editors)) editor.requestMeasure();
-  });
-}
 
 const value = (side: Side) => editors[side].state.doc.toString();
 function replace(side: Side, text: string, reset = false) {
@@ -181,20 +180,26 @@ function status(message: string, detail: string, ok: boolean) {
 function counts() {
   for (const side of ['lean', 'spell'] as const) $(`#${side}-count`).textContent = `${editors[side].state.doc.lines} lines · ${value(side).length.toLocaleString()} characters`;
 }
+function invalidateCheck() {
+  clearTimeout(checkTimer);
+  $('#folio-badge').textContent = 'Draft · proof not checked';
+  status('Draft · checking translation', 'Changes have not been proof checked.', false);
+}
 function check(manual = false) {
   try {
     const decoded = fromSpell(value('spell'), key), exact = decoded === value('lean');
     const hasSource = value('lean').trim().length > 0;
     const verified = isCheckedSource(value('lean'), value('spell'), decoded, selected);
-    $('#folio-badge').textContent = verified ? 'Original · Lean checked' : 'Draft · proof not checked';
-    status(!hasSource ? 'The page awaits a spell' : !exact ? 'The translation needs attention' : verified ? 'This folio is Lean checked' : 'The translation holds · draft proof unchecked',
-      !hasSource ? 'Write in either pane to begin.' : !exact ? 'The spell does not decode to the exact Lean text.' : verified ? 'mathlib v4.33.1 · original and decoded source compiled · exact round trip' : 'Round-trip check only. Run Lean locally to verify this edit.', exact && hasSource);
+    $('#folio-badge').textContent = verified ? (presentationMode === 'magic' ? 'Original · checked' : 'Original · Lean checked') : 'Draft · proof not checked';
+    const magic = presentationMode === 'magic';
+    status(!hasSource ? 'The page awaits a spell' : !exact ? 'The translation needs attention' : verified ? (magic ? 'The original enchantment is checked' : 'This folio is Lean checked') : 'The translation holds · draft proof unchecked',
+      !hasSource ? 'Write in a visible pane to begin.' : !exact ? (magic ? 'The spell does not return to its original form.' : 'The spell does not decode to the exact Lean text.') : verified ? (magic ? 'Original and recovered folio verified · every character returns' : 'mathlib v4.33.1 · original and decoded source compiled · exact round trip') : (magic ? 'The words return faithfully. Changes have not been proof checked.' : 'Round-trip check only. Run Lean locally to verify this edit.'), exact && hasSource);
     if (manual && exact && hasSource) {
       $('.workspace').classList.remove('cast'); void $('.workspace').offsetWidth; $('.workspace').classList.add('cast');
       const rect = $('#check').getBoundingClientRect(); sparkleAt(rect.left + rect.width / 2, rect.top, 24); shimmer($('#spell-editor'));
       announce('Round trip complete. Every character returns.');
     }
-  } catch (error) { status('Translation paused', message(error), false); }
+  } catch (error) { invalidateCheck(); status('Translation paused', message(error), false); }
 }
 function message(error: unknown) { return error instanceof Error ? error.message : 'Unable to translate this text.'; }
 function translate(side: Side) {
@@ -205,10 +210,11 @@ function translate(side: Side) {
     replace(side === 'lean' ? 'spell' : 'lean', translated);
     key = nextKey;
     counts(); clearTimeout(checkTimer); checkTimer = setTimeout(() => check(), 160);
-  } catch (error) { status('Translation paused', message(error), false); }
+  } catch (error) { invalidateCheck(); status('Translation paused', message(error), false); }
   finally { updating = false; }
 }
 function renderFolio() {
+  renderTutorial($('#tutorial'), selected?.tutorial);
   if (!selected) {
     $('#folio-level').textContent = 'PERSONAL GRIMOIRE'; $('#folio-title').textContent = 'Your own incantation';
     $('#folio-subtitle').textContent = 'An imported draft'; $('#folio-summary').textContent = 'Keep the text and its key together when you save your work.';
@@ -238,14 +244,22 @@ function renderFolio() {
     $('#source-downloads').replaceChildren();
     for (const [extension, label] of [['spell', 'Arcana source'], ['lean', 'Lean source'], ['json', 'Original bundle']]) { const link = document.createElement('a'); link.href = 'grimoire/' + entry.id + '.' + extension; link.download = entry.id + '.' + extension; link.textContent = label + ' ↓'; $('#source-downloads').append(link); }
   }
+  $<HTMLButtonElement>('#personal-draft').disabled = !selected;
   for (const button of document.querySelectorAll<HTMLButtonElement>('[data-folio]')) {
     button.classList.toggle('active', button.dataset.folio === selected?.id);
     if (button.dataset.folio === selected?.id) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current');
   }
 }
+function saveCurrentDraft() {
+  const draft = { lean: value('lean'), spell: value('spell'), key: key.data() };
+  if (selected) drafts.set(selected.id, draft);
+  else personalDraft = draft;
+  $('#personal-draft').hidden = !personalDraft;
+  $<HTMLButtonElement>('#personal-draft').disabled = !selected;
+}
 function selectFolio(id: string) {
   const next = folios.find(f => f.id === id); if (!next || next.id === selected?.id) return;
-  if (selected) drafts.set(selected.id, { lean: value('lean'), spell: value('spell'), key: key.data() });
+  saveCurrentDraft();
   selected = next; const draft = drafts.get(id);
   load(draft?.lean ?? next.lean, draft?.spell ?? next.spell, new Key(draft?.key ?? grimoireKey));
   history.replaceState(null, '', '#' + id); renderFolio(); foldAll(spell);
@@ -255,10 +269,19 @@ for (const folio of folios) {
   const button = document.createElement('button'); button.dataset.folio = folio.id;
   const number = document.createElement('span'), title = document.createElement('span');
   const index = (lessonsSoFar.get(folio.school) ?? 0) + 1; lessonsSoFar.set(folio.school, index);
-  number.textContent = folio.school === 'Cantrips' ? '◇' : String(index).padStart(2, '0'); title.textContent = folio.title;
-  button.append(number, title); button.addEventListener('click', () => selectFolio(folio.id));
+  number.textContent = folio.school === 'Cantrips' ? '◇' : String(index).padStart(2, '0');
+  title.textContent = folio.title; title.dataset.magical = '';
+  const mathematicalTitle = document.createElement('span'); mathematicalTitle.textContent = folio.subtitle; mathematicalTitle.dataset.only = 'math';
+  button.append(mathematicalTitle);
+  button.prepend(number, title); button.addEventListener('click', () => selectFolio(folio.id));
   $(({ Cantrips: '#cantrip-nav', Transmutation: '#transmutation-nav' } as Record<string, string>)[folio.school] ?? '#chapter-nav').append(button);
 }
+$('#personal-draft').addEventListener('click', () => {
+  if (!personalDraft || !selected) return;
+  saveCurrentDraft(); selected = undefined;
+  load(personalDraft.lean, personalDraft.spell, new Key(personalDraft.key)); renderFolio();
+  history.replaceState(null, '', location.pathname + location.search);
+});
 $('#restore').addEventListener('click', () => { if (!selected) return; drafts.delete(selected.id); load(selected.lean, selected.spell, new Key(grimoireKey)); foldAll(spell); announce('Original checked folio restored.'); });
 function load(leanText: string, spellText: string, data: Key) {
   updating = true;
@@ -282,8 +305,8 @@ for (const button of document.querySelectorAll<HTMLButtonElement>('[data-copy]')
   catch { announce('Clipboard unavailable. Select the text in the editor to copy it.'); }
 });
 $('#download').addEventListener('click', () => {
-  const bundle = { format: 'arcana/v1', lean: value('lean'), spell: value('spell'), key: key.data() };
-  const url = URL.createObjectURL(new Blob([JSON.stringify(bundle, null, 2) + '\n'], { type: 'application/json' }));
+  const bundle = serializeDraft({ lean: value('lean'), spell: value('spell'), key: key.data() });
+  const url = URL.createObjectURL(new Blob([bundle], { type: 'application/json' }));
   const link = document.createElement('a'); link.href = url; link.download = 'grimoire.json'; link.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000); announce('Grimoire saved with both texts and the name key.');
 });
@@ -293,20 +316,38 @@ $('#file').addEventListener('change', async () => {
   try {
     if (file.size > 1_000_000) throw new Error('Choose a file smaller than 1 MB.');
     const text = await file.text();
+    let imported: Draft;
     if (file.name.endsWith('.json')) {
-      const bundle = JSON.parse(text) as { format: string; lean: string; spell: string; key: KeyData };
-      if (bundle.format !== 'arcana/v1' || typeof bundle.lean !== 'string' || typeof bundle.spell !== 'string' || !bundle.key?.global || !bundle.key?.scoped) throw new Error('Choose a grimoire JSON downloaded from this editor.');
-      const data = new Key(bundle.key);
-      if (fromSpell(bundle.spell, data) !== bundle.lean) throw new Error('This grimoire’s text and name key do not match.');
-      load(bundle.lean, bundle.spell, data);
+      imported = parseDraft(text);
     } else if (file.name.endsWith('.spell')) {
-      const data = new Key(key.data()); load(fromSpell(text, data), text, data);
+      const data = new Key(key.data()); const decoded = fromSpell(text, data);
+      imported = { lean: decoded, spell: text, key: data.data() };
       announce('Spell opened with the current name key.');
     } else if (file.name.endsWith('.lean')) {
-      const data = new Key(grimoireKey); load(text, toSpell(text, data), data);
+      const data = new Key(grimoireKey); const encoded = toSpell(text, data);
+      imported = { lean: text, spell: encoded, key: data.data() };
     } else throw new Error('Choose a .lean, .spell, or grimoire .json file.');
-    selected = undefined; renderFolio(); check();
+    saveCurrentDraft(); selected = undefined; personalDraft = imported;
+    load(imported.lean, imported.spell, new Key(imported.key)); renderFolio(); check();
+    $('#personal-draft').hidden = false;
+    history.replaceState(null, '', location.pathname + location.search);
   } catch (error) { announce(message(error)); }
   finally { input.value = ''; }
 });
 renderFolio(); counts(); check(); foldAll(spell);
+function refreshComments() {
+  const magicOnly = presentationMode === 'magic';
+  for (const view of Object.values(editors)) setCommentsVisible(view, notesVisible && !magicOnly, !magicOnly);
+  $('#toggle-notes').textContent = notesVisible ? 'Hide notes' : 'Show notes';
+  $('#toggle-notes').setAttribute('aria-pressed', String(notesVisible));
+}
+$('#toggle-notes').addEventListener('click', () => { notesVisible = !notesVisible; refreshComments(); });
+document.addEventListener('presentationchange', refreshComments);
+createPresentationController({ root: app, controls: $('#presentation-controls'), onChange: mode => {
+  presentationMode = mode;
+  $('.editors').classList.toggle('single-pane', mode !== 'parallel');
+  $('#check').firstChild!.textContent = mode === 'magic' ? 'Test the enchantment ' : 'Check round trip ';
+  $('#download').textContent = mode === 'math' ? 'Save bundle ↓' : 'Save grimoire ↓';
+  for (const editor of Object.values(editors)) editor.requestMeasure();
+  check();
+} });

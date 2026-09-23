@@ -33,6 +33,7 @@ const spellIdent = new RegExp(`^${spellComponent}(?:${NAMESPACE_SEPARATOR}${spel
 const legalName = new RegExp(`^(?![${KANJI_DIGITS}])(?:${RUNE_PATTERN}|${sparkled}|${word})$`, 'u');
 const leanSymbols = [...new Set([...Object.keys(SYMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
 const spellSymbols = [...new Set([...Object.keys(INV_SYMS), '▢', ...tables.passSyms])].sort((a, b) => b.length - a.length);
+const validSpellName = (name: string): boolean => legalName.test(name) && !spellSymbols.some(symbol => name.startsWith(symbol));
 
 /** A lossless lexical pass; incomplete input is preserved while the user types. */
 export function tokenize(source: string, spell = false): Token[] {
@@ -96,11 +97,15 @@ export class Key {
     this.auto = [...(data.auto ?? [])];
     this.namespaces = dictionary(data.namespaces ?? {});
     const values = Object.values(this.global);
+    if (Object.keys(this.global).some(name => declarations.has(name))) throw new Error('The key cannot rename declaration keywords.');
     if (new Set(values).size !== values.length) throw new Error('The key assigns the same spell word to multiple names.');
-    if (values.some(v => !legalName.test(v) || Object.hasOwn(INV_WORDS, v))) throw new Error('The key contains an invalid or reserved spell word.');
+    if (values.some(v => !validSpellName(v) || Object.hasOwn(INV_WORDS, v))) throw new Error('The key contains an invalid or reserved spell word.');
     for (const [scope, map] of Object.entries(this.scoped)) {
+      if (Object.hasOwn(map, scope) || Object.keys(map).some(name => declarations.has(name))) {
+        throw new Error(`Keep declaration names global and declaration keywords unchanged: ${scope}.`);
+      }
       const scopedValues = Object.values(map);
-      if (new Set(scopedValues).size !== scopedValues.length || scopedValues.some(v => !legalName.test(v) || values.includes(v) || Object.hasOwn(INV_WORDS, v))) throw new Error(`Invalid name mapping in ${scope}.`);
+      if (new Set(scopedValues).size !== scopedValues.length || scopedValues.some(v => !validSpellName(v) || values.includes(v) || Object.hasOwn(INV_WORDS, v))) throw new Error(`Invalid name mapping in ${scope}.`);
     }
     this.invGlobal = inverse(this.global);
     this.invScoped = Object.assign(Object.create(null), Object.fromEntries(Object.entries(this.scoped).map(([k, v]) => [k, inverse(v)])));
@@ -108,7 +113,7 @@ export class Key {
       const source = components(lean), target = components(spell, true);
       if (source.length < 2 || source.join('.') !== lean || !source.every(c => new RegExp(`^${word}$`, 'u').test(c)) ||
           target.length < 2 || target.join(NAMESPACE_SEPARATOR) !== spell ||
-          !target.every(c => legalName.test(c) && !Object.hasOwn(INV_WORDS, c))) {
+          !target.every(c => validSpellName(c) && !Object.hasOwn(INV_WORDS, c))) {
         throw new Error(`Invalid namespace mapping: ${lean}.`);
       }
       return [source, target];
@@ -122,6 +127,13 @@ export class Key {
         const decoded = target.map(c => this.invScoped[scope]?.[c] ?? this.invGlobal[c]);
         if (decoded.every(c => c !== undefined) && decoded.join('.') !== source.join('.')) {
           throw new Error(`Ambiguous namespace mapping: ${source.join('.')}.`);
+        }
+        for (const [prefixSource, prefixTarget] of this.namespaceEntries) {
+          if (prefixTarget.length >= target.length || !prefixTarget.every((c, i) => target[i] === c)) continue;
+          const suffix = target.slice(prefixTarget.length).map(c => this.invScoped[scope]?.[c] ?? this.invGlobal[c]);
+          if (suffix.every(c => c !== undefined) && [...prefixSource, ...suffix].join('.') !== source.join('.')) {
+            throw new Error(`Ambiguous namespace mapping: ${source.join('.')}.`);
+          }
         }
       }
     }

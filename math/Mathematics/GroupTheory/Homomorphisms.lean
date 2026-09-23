@@ -5,11 +5,15 @@ namespace Mathematics.GroupTheory
 
 variable {G H K : Type*} [Group G] [Group H] [Group K]
 
+/- A bundled homomorphism carries its operation-preservation proofs with its function.
+The composite applies the first map and then the second. -/
 def composeHom (f : G →* H) (g : H →* K) : G →* K := g.comp f
 
 theorem hom_map_mul (f : G →* H) (x y : G) :
     f (x * y) = f x * f y := f.map_mul x y
 
+/- Even though the bundle already stores identity preservation, derive it here
+from multiplication: the image of the identity is idempotent, so cancellation forces it to be the identity. -/
 theorem hom_map_one (f : G →* H) : f 1 = 1 := by
   have h_idempotent : f 1 * f 1 = f 1 * 1 :=
     calc f 1 * f 1 = f (1 * 1) := (hom_map_mul f 1 1).symm
@@ -17,6 +21,8 @@ theorem hom_map_one (f : G →* H) : f 1 = 1 := by
       _ = f 1 * 1 := (mul_one (f 1)).symm
   exact mul_left_cancel h_idempotent
 
+/- To recognize the image of an inverse, multiply it by the image of the original
+element and show that the product is the identity. -/
 theorem hom_map_inv (f : G →* H) (x : G) :
     f x⁻¹ = (f x)⁻¹ := by
   have h_mul_eq_one : f x⁻¹ * f x = 1 :=
@@ -25,11 +31,15 @@ theorem hom_map_inv (f : G →* H) (x : G) :
       _ = 1 := hom_map_one f
   exact eq_inv_of_mul_eq_one_left h_mul_eq_one
 
+/- Injectivity concerns the underlying functions, so the shared function cantrip
+already proves this part of the homomorphism story. -/
 theorem injective_composeHom (f : G →* H) (g : H →* K)
     (hf : Function.Injective f) (hg : Function.Injective g) :
     Function.Injective (composeHom f g) :=
   Mathematics.Functions.injective_compose (f := f) (g := g) hf hg
 
+/- An input vanishes under the composite exactly when its first image vanishes
+under the second map. Unfolding kernel membership reveals the same equation. -/
 theorem mem_ker_composeHom (f : G →* H) (g : H →* K) (x : G) :
     x ∈ (composeHom f g).ker ↔ f x ∈ g.ker :=
   calc x ∈ (composeHom f g).ker ↔ composeHom f g x = 1 := MonoidHom.mem_ker

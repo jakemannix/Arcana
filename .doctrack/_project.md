@@ -9,6 +9,8 @@ tags: [doctrack/type/index, doctrack/status/active, doctrack/audience/claude]
 
 TypeScript/Vite static site in the local `web/` subproject, which is the root of the GitHub repository `jakemannix/ArcaneLean`. The `github` remote preserves the existing development history. Original Python sources and fixtures are bundled unchanged in `prototype/`. See [[features/editor]], [[components/translator]], and [[decisions/browser-translation]]. Run and test commands are in `README.md`.
 
+`AGENTS.md` is the entry point for future agents: it records the product intent, one-school-first scope, shared cantrips, mathematical guarantees, and the user's interaction and visual preferences.
+
 | Source file | Responsibility |
 |---|---|
 | src/main.ts | CodeMirror editors, synchronization, examples, import/export |

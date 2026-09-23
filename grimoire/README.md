@@ -1,6 +1,6 @@
-# Arcana · The Enchantment grimoire
+# Arcana · The grimoire
 
-10 lessons in group theory, with shared cantrips. All 63 declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
+11 lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All 72 declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
 
 ## Threads & mirrors
 
@@ -670,3 +670,95 @@ seal Arcana☿Enchantment
 [Lean source](../math/Mathematics/GroupTheory/Permutations.lean) · [Arcana source](../public/grimoire/permutations.spell)
 
 [Equiv.Perm](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Perm/Fin.lean) · [Fin](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Logic/Equiv/Fin/Basic.lean)
+
+## The two hands of Disenchantment
+
+*Free monoids and units: the left and right adjoints of forgetful functors*
+
+Disenchantment forgets structure. Its left hand conjures the Primordial, the freest choir on a set of seeds. A lesser Disenchantment, which forgets only that a Veyr can undo its commands, has a right hand too: it gathers the members of a choir that can be undone.
+
+**Mathematical meaning.** A forgetful functor sends each structure to something with less structure. The full Disenchantment sends a monoid to its underlying type; a lesser Disenchantment sends a group to its underlying monoid. The free monoid on S is the left adjoint of the first: a monoid homomorphism out of FreeMonoid S is exactly a function out of S. The units construction is the right adjoint of the second: a monoid homomorphism from a group G into M is exactly a group homomorphism into the units of M. The units of the court End(X) are exactly the permutations of X, the arena of Cayley's theorem.
+
+**Hypotheses.** S is any type, M any monoid, and G any group. The full Disenchantment from monoids to types has no right adjoint: it would have to preserve coproducts, but the free product of two monoids is much larger than their disjoint union.
+
+**Proof idea.** Left hand: a homomorphism out of the free monoid is fixed by its values on the generators, because every word is built from generators by multiplication; induction on the word gives uniqueness. Right hand: if f is a homomorphism from a group, then f(g) has inverse f(g⁻¹), since f(g)·f(g⁻¹) = f(g·g⁻¹) = f(1) = 1. So f lands in the units, and a map into the units is fixed by its underlying values. Mathlib packages both as adjunctions, MonCat.adj and GrpCat.forget₂MonAdj.
+
+```text
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿✨Primordial✨Choir✨☿Foundations
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Court
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Cosmology☿Choirs☿Hands
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Cosmology☿✨Veyr✨Halls✨☿Hands
+
+unveil ✨Lore✨of✨Forms✨
+
+plane tier
+
+sanctum Arcana☿Transmutation
+
+chamber ✨Primordial✨Choir✨
+
+familiar ⧼ᛋ ᛗ ⟡ Essence⊛⧽ ⟮Choir ᛗ⟯
+
+ritual ✨Primordial's✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟡ ✨Primordial✨Choir✨ ᛋ ↝⊛ ᛗ ⇰ ✨Primordial✨Choir✨☿descend copper✨wire
+
+spell ✨Seeds✨Go✨Where✨Sent✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟪pouch✨of✨sand ⟡ ᛋ⟫ ⟡ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ≣ copper✨wire pouch✨of✨sand ⇰ mirror
+
+spell ✨Only✨One✨Primordial✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ ᛋ ↝⊛ ᛗ⟫
+    ⟪seedward ⟡ ⟁ pouch✨of✨sand᛫ brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ≣ copper✨wire pouch✨of✨sand⟫ ⟡ brass✨key ≣ ✨Primordial's✨Pact✨ copper✨wire ⇰ cast
+  channel Herald☿extend
+  summon verse
+  unravel verse through ✨Primordial✨Choir✨☿✨verse✨by✨verse✨ whence
+  ⫽ ✨empty✨verse✨ ⇉
+    litany brass✨key ☉ ≣ ☉ ⇰ brass✨key☿✨keeps✨stillness✨
+      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ☉ ⇰ ⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨keeps✨stillness✨☿reflect
+  ⫽ ✨seed✨then✨verse✨ pouch✨of✨sand verse verseward ⇉
+    litany brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand ⊛ verse⟫ ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ⊛ brass✨key verse ⇰ brass✨key☿✨Carry✨the✨Binding✨ ▢ ▢
+      ▢ ≣ copper✨wire pouch✨of✨sand ⊛ brass✨key verse ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ brass✨key verse⟫ ⟪seedward pouch✨of✨sand⟫
+      ▢ ≣ copper✨wire pouch✨of✨sand ⊛ ✨Primordial's✨Pact✨ copper✨wire verse ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire pouch✨of✨sand ⊛ pearl✨dust⟫ verseward
+      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ⊛ ✨Primordial's✨Pact✨ copper✨wire verse ⇰
+          sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ ✨Primordial's✨Pact✨ copper✨wire verse⟫ ⟪✨Seeds✨Go✨Where✨Sent✨ copper✨wire pouch✨of✨sand⟫☿reflect
+      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand ⊛ verse⟫ ⇰ ⟪⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨Carry✨the✨Binding✨ ▢ ▢⟫☿reflect
+
+ritual ✨Left✨Hand✨of✨Disenchantment✨ ⟡ Choirs☿primordial☿⧼tier⧽ ☍ Disenchantment Choirs☿⧼tier⧽ ⇰ Choirs☿✨the✨hands✨
+
+seal ✨Primordial✨Choir✨
+
+chamber Reversibles
+
+familiar ⧼ᛰ ᛗ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Choir ᛗ⟯
+
+ritual ✨Gather✨the✨Reversible✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟡ ᛰ ↝⊛ Reversibles ᛗ begets
+  deed silk✨cord ⇰
+    ⧼ core ⇰ copper✨wire silk✨cord
+      undoer ⇰ copper✨wire silk✨cord†
+      ✨undoes✨after✨ ⇰
+        litany copper✨wire silk✨cord ⊛ copper✨wire silk✨cord† ≣ copper✨wire ⟪silk✨cord ⊛ silk✨cord†⟫ ⇰ ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord silk✨cord†⟫☿reflect
+          ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silk✨cord⟫
+          ▢ ≣ ☉ ⇰ copper✨wire☿✨keeps✨stillness✨
+      ✨undoes✨before✨ ⇰
+        litany copper✨wire silk✨cord† ⊛ copper✨wire silk✨cord ≣ copper✨wire ⟪silk✨cord† ⊛ silk✨cord⟫ ⇰ ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord† silk✨cord⟫☿reflect
+          ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ silk✨cord⟫
+          ▢ ≣ ☉ ⇰ copper✨wire☿✨keeps✨stillness✨ ⧽
+  ✨carries✨stillness✨ ⇰ Reversibles☿extend copper✨wire☿✨keeps✨stillness✨
+  ✨carries✨binding✨ silk✨cord onyx✨bead ⇰ Reversibles☿extend ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord onyx✨bead⟫
+
+spell ✨Gathered✨as✨Given✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ ⟪✨Gather✨the✨Reversible✨ copper✨wire silk✨cord ⟡ ᛗ⟫ ≣ copper✨wire silk✨cord ⇰ mirror
+
+spell ✨Only✨One✨Gathering✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪tin✨key ⟡ ᛰ ↝⊛ Reversibles ᛗ⟫
+    ⟪valueward ⟡ ⟁ silk✨cord᛫ ⟪tin✨key silk✨cord ⟡ ᛗ⟫ ≣ copper✨wire silk✨cord⟫ ⟡ tin✨key ≣ ✨Gather✨the✨Reversible✨ copper✨wire ⇰
+  Herald☿extend conjure silk✨cord ⇉ Reversibles☿extend ⟪valueward silk✨cord⟫
+
+ritual ✨Right✨Hand✨of✨Lesser✨Disenchantment✨ ⟡ ✨Lesser✨Disenchantment✨ Veyrs☿⧼tier⧽ Choirs☿⧼tier⧽ ☍ Choirs☿reversibles☿⧼tier⧽ ⇰
+  Veyrs☿✨lesser✨hands✨
+
+ritual ✨Shuffles✨Are✨the✨Court's✨Reversibles✨ ⟪🌒 ⟡ Essence⊛⟫ ⟡ Portal☿Shuffling 🌒 ≃⊛ Reversibles ⟪Rite☿Court 🌒⟫ ⇰
+  Portal☿Shuffling☿✨court's✨reversibles✨
+
+seal Reversibles
+
+seal Arcana☿Transmutation
+```
+
+[Lean source](../math/Mathematics/CategoryTheory/ForgetfulAdjoints.lean) · [Arcana source](../public/grimoire/adjoints.spell)
+
+[FreeMonoid.lift](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/FreeMonoid/Basic.lean#L315) · [MonCat.adj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/MonCat/Adjunctions.lean#L75) · [GrpCat.forget₂MonAdj](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/Grp/Adjunctions.lean) · [Equiv.Perm.equivUnitsEnd](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/End.lean#L90)

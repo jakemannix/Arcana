@@ -99,7 +99,8 @@ select { max-width: 100%; min-width: 0; background: #1c2729; color: #e5decc; bor
 .school-heading { display: flex; align-items: center; gap: 12px; margin-top: 30px; }
 .school-heading > span { font-size: 38px; color: var(--gold); }
 .school-heading .eyebrow { margin-bottom: 5px; }
-.school-heading h1 { font-size: 30px; margin: 0; }
+.school-heading h1, .school-heading h2 { font-size: 30px; margin: 0; }
+.school-heading h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; letter-spacing: -.025em; line-height: 1.05; color: #efeadc; }
 .school-description { font-size: 14px; line-height: 1.7; color: #a6b2a8; margin: 16px 0 20px; }
 .contents-foot { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 12px; color: #9eafa2; line-height: 1.8; }
 .contents-foot strong { font-weight: 500; color: #d2d6c8; }
@@ -143,7 +144,7 @@ select { max-width: 100%; min-width: 0; background: #1c2729; color: #e5decc; bor
 button:disabled { opacity: .45; cursor: default; }
 [hidden] { display: none !important; }
 @media (max-width: 1180px) { .grimoire-layout { grid-template-columns: 210px minmax(0, 1fr); gap: 24px; padding: 0 22px; } .contents { padding-right: 15px; } .contents nav button { padding: 9px 6px; gap: 7px; } .reading-desk .validation-bar { align-items: stretch; flex-direction: column; } .reading-desk .cast-button { align-self: flex-start; } .reading-desk .workspace-toolbar { align-items: flex-start; flex-direction: column; gap: 5px; } .reading-desk .toolbar-actions { flex-wrap: wrap; } }
-@media (max-width: 900px) { .grimoire-layout { grid-template-columns: 1fr; gap: 0; padding: 0 18px; } .contents { border: 0; padding: 23px 0 0; } .contents nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; } #cantrip-nav { grid-template-columns: 1fr; } .school-heading { margin-top: 17px; }.school-heading h1 { font-size: 27px; }.school-description { margin: 8px 0 12px; }.contents-foot { display: none; }.reading-desk { padding-top: 28px; } }
+@media (max-width: 900px) { .grimoire-layout { grid-template-columns: 1fr; gap: 0; padding: 0 18px; } .contents { border: 0; padding: 23px 0 0; } .contents nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; } #cantrip-nav { grid-template-columns: 1fr; } .school-heading { margin-top: 17px; }.school-heading h1, .school-heading h2 { font-size: 27px; }.school-description { margin: 8px 0 12px; }.contents-foot { display: none; }.reading-desk { padding-top: 28px; } }
 @media (max-width: 650px) { .reading-desk .editors { grid-template-columns: 1fr; }.reading-desk .spell-pane { border-right: 0; border-top: 0; border-bottom: 1px solid #48504a; }.reading-desk .editor-host { height: 370px; }.reading-desk .cast-button { align-self: stretch; }.reading-notes { grid-template-columns: 1fr; gap: 26px; }.reading-notes > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--border); padding-top: 25px; }.folio-introduction .lede { max-width: none; }.mathematical-reading { padding-left: 14px; }.contents nav button { font-size: 13px; }.contents nav button > span:first-child { width: 16px; } }
 
 .spell-actions { display: flex; align-items: center; gap: 12px; }

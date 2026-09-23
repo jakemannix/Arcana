@@ -15,15 +15,15 @@ test('verification evidence covers current source, vocabulary, and metadata', ()
   assert.equal(provenance.tablesHash, hash(file('src/tables.json')));
   assert.equal(provenance.metadataHash, hash(file('grimoire/chapters.json')));
   assert.equal(provenance.lexiconHash, hash(file('grimoire/lexicon.json')));
-  assert.equal(provenance.verification.declarationCount, 63);
-  assert.deepEqual(new Set(folios.map(f => f.school)), new Set(['Cantrips', 'Enchantment']));
-  assert.equal(folios.length, 11);
+  assert.equal(provenance.verification.declarationCount, 72);
+  assert.deepEqual(new Set(folios.map(f => f.school)), new Set(['Cantrips', 'Enchantment', 'Transmutation']));
+  assert.equal(folios.length, 12);
 });
 
 test('checked folios use mathematical Lean names and expose reversible material components', () => {
   assert.deepEqual(grimoireKey.auto, []);
   for (const folio of folios) {
-    assert.match(folio.lean, /^namespace Mathematics\.(?:Functions|GroupTheory)$/m);
+    assert.match(folio.lean, /^namespace Mathematics\.(?:Functions|GroupTheory|CategoryTheory)$/m);
     assert.doesNotMatch(folio.lean, /Arcane\.|same_place_same_veil|pact_preserves|unveiledImage/);
     assert.ok(folio.declarations.every(name => name.startsWith('Mathematics.')));
     const bundle = JSON.parse(file('public/grimoire/' + folio.id + '.json'));

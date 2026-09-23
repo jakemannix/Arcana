@@ -5,20 +5,37 @@ sanctum Arcanum☿Cantrips
 
 familiar ⧼aether vapor vesper ⟡ Essence⊛⧽
 
-ritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ weft ⊚ warp
+ritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ conjure mark ⇉ weft ⟪warp mark⟫
 
 spell ThreadUnfolds ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡
     Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror
 
 spell FaithfulWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
     ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
-    Rite☿Faithful ⟪Weave warp weft⟫ ⇰ echoWard☿threading faith
+    Rite☿Faithful ⟪Weave warp weft⟫ ⇰ cast
+  summon mark rune twinned
+  bind outerWeave ⟡ weft ⟪warp mark⟫ ≣ weft ⟪warp rune⟫ ⇰
+    litany weft ⟪warp mark⟫ ≣ Weave warp weft mark ⇰ ⟪ThreadUnfolds warp weft mark⟫☿reflect
+      ▢ ≣ Weave warp weft rune ⇰ twinned
+      ▢ ≣ weft ⟪warp rune⟫ ⇰ ThreadUnfolds warp weft rune
+  bind innerWeave ⟡ warp mark ≣ warp rune ⇰ echoWard outerWeave
+  missile faith innerWeave
 
 spell ReachingWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
     ⟪faith ⟡ Rite☿Reaching warp⟫ ⟪echoWard ⟡ Rite☿Reaching weft⟫ ⟡
-    Rite☿Reaching ⟪Weave warp weft⟫ ⇰ echoWard☿threading faith
+    Rite☿Reaching ⟪Weave warp weft⟫ ⇰ cast
+  summon star
+  wrest ⦉rune᛫ runeWard⦊ ⇰ echoWard star
+  wrest ⦉mark᛫ sigilWard⦊ ⇰ faith rune
+  hone ⦉mark᛫ ?▢⦊
+  litany Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ ThreadUnfolds warp weft mark
+    ▢ ≣ weft rune ⇰ sympathy weft sigilWard
+    ▢ ≣ star ⇰ runeWard
 
 spell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal☿reflect ⟪portal mark⟫ ≣ mark ⇰
-  portal☿ReturnThroughMirror mark
+  portal☿ReturnPath mark
+
+spell MirrorDepart ⟪portal ⟡ aether ≃ vapor⟫ ⟪rune ⟡ vapor⟫ ⟡ portal ⟪portal☿reflect rune⟫ ≣ rune ⇰
+  portal☿DeparturePath rune
 
 seal Arcanum☿Cantrips

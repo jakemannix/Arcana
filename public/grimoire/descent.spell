@@ -1,8 +1,17 @@
+beckon Arcanum☿Enchantment☿Pacts
 beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
+
+spell VeilHidesTheDifference ⟪veil ⟡ Cabal coven⟫ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫
+    ⧼mark rune ⟡ coven⧽ ⟪kinship ⟡ mark⁻¹ ⊛ rune ∈ veil⟫ ⟡ warp mark ≣ warp rune ⇰ cast
+  bind muted ⟡ warp ⟪mark⁻¹ ⊛ rune⟫ ≣ ☉ ⇰ veilWard kinship
+  litany warp mark ≣ warp mark ⊛ ☉ ⇰ ⟪BindWithStillness ⟪warp mark⟫⟫☿reflect
+    ▢ ≣ warp mark ⊛ warp ⟪mark⁻¹ ⊛ rune⟫ ⇰ sympathy ⟪conjure token ⇉ warp mark ⊛ token⟫ muted☿reflect
+    ▢ ≣ warp ⟪mark ⊛ ⟪mark⁻¹ ⊛ rune⟫⟫ ⇰ ⟪PreserveTheBinding warp mark ⟪mark⁻¹ ⊛ rune⟫⟫☿reflect
+    ▢ ≣ warp rune ⇰ sympathy warp ⟪ReturnFromTheLeft mark rune⟫
 
 ritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
     ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
@@ -18,7 +27,9 @@ spell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
     weft ≣ PassTheVeil veil warp veilWard ⇰ cast
   channel Herald☿extend
   summon coset
-  unravel coset through Effigies☿LiftTheVeil whence
-  ⫽ ward mark ⇉ missile echoWard mark
+  wrest ⦉mark᛫ mirror⦊ ⇰ VeiledCoven☿EveryVeilHasAFace coset
+  litany weft ⟪VeiledCoven☿forge mark⟫ ≣ warp mark ⇰ echoWard mark
+    ▢ ≣ PassTheVeil veil warp veilWard ⟪VeiledCoven☿forge mark⟫ ⇰
+        ⟪SpeakThroughTheVeil veil warp veilWard mark⟫☿reflect
 
 seal Arcanum☿Enchantment

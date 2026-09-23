@@ -1,9 +1,22 @@
+beckon Arcanum☿Enchantment☿Lagrange
 beckon GrandArchive☿CovenLore☿Commands☿Effigies
-beckon GrandArchive☿CovenLore☿Veils☿Census
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯
+
+spell SamePlaceSameVeil ⟪mark ⟡ realm⟫ ⟪weft cinder ⟡ coven⟫ ⟡
+    weft • mark ≣ cinder • mark ↭ weft⁻¹ ⊛ cinder ∈ Commanding☿stillguard coven mark ⇰ cast
+  transmute ⟮Commanding☿StillguardCriterion⟯
+  fabricate
+  ❖ summon meeting
+    litany ⟪weft⁻¹ ⊛ cinder⟫ • mark ≣ weft⁻¹ • cinder • mark ⇰ CommandInStages weft⁻¹ cinder mark
+      ▢ ≣ weft⁻¹ • weft • mark ⇰ sympathy ⟪conjure wisp ⇉ weft⁻¹ • wisp⟫ meeting☿reflect
+      ▢ ≣ mark ⇰ CommandRevoked weft mark
+  ❖ summon unmoved
+    litany weft • mark ≣ weft • ⟪weft⁻¹ ⊛ cinder⟫ • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ unmoved☿reflect
+      ▢ ≣ weft • weft⁻¹ • cinder • mark ⇰ sympathy ⟪conjure wisp ⇉ weft • wisp⟫ ⟪CommandInStages weft⁻¹ cinder mark⟫
+      ▢ ≣ cinder • mark ⇰ RevocationCommanded weft ⟪cinder • mark⟫
 
 ineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡
     Commanding☿procession coven mark ≃ coven ⧸ Commanding☿stillguard coven mark ⇰
@@ -12,10 +25,16 @@ ineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡
 spell CommandThroughThePortal ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡
     ⟪⟪OrbitPortal mark⟫☿reflect ⟪VeiledCoven☿forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror
 
+spell ProcessionCountsVeils ⟪mark ⟡ realm⟫ ⟡
+    Tally☿census ⟪Commanding☿procession coven mark⟫ ≣ Tally☿census ⟪coven ⧸ Commanding☿stillguard coven mark⟫ ⇰
+  Tally☿CensusThroughPortal ⟪OrbitPortal mark⟫
+
 spell OrbitOfCommand ⟪mark ⟡ realm⟫ ⟡
     Tally☿census ⟪Commanding☿procession coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫ ≣
-      Tally☿census coven ⇰ cast
-  transmute ⟮↜ Tally☿CensusOfPairs⟯
-  missile Tally☿CensusThroughPortal ⟪Commanding☿OrbitDecomposition coven mark⟫
+      Tally☿census coven ⇰
+  litany Tally☿census ⟪Commanding☿procession coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫
+        ≣ Tally☿census ⟪coven ⧸ Commanding☿stillguard coven mark⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫ ⇰
+          sympathy ⟪conjure ember ⇉ ember ⊛ Tally☿census ⟪Commanding☿stillguard coven mark⟫⟫ ⟪ProcessionCountsVeils mark⟫
+    ▢ ≣ Tally☿census coven ⇰ ⟪CountTheVeils ⟪Commanding☿stillguard coven mark⟫⟫☿reflect
 
 seal Arcanum☿Enchantment

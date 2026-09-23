@@ -1,19 +1,57 @@
-beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
+beckon Arcanum☿Enchantment☿Descent
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
+spell SilenceWithinTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp☿silence ⋜ warp☿confineToManifestation☿silence ⇰ cast
+  summon mark sigilWard
+  bind muted ⟡ warp mark ≣ ☉ ⇰ sigilWard
+  proclaim warp☿confineToManifestation mark ≣ ☉
+  missile Kin☿extend muted
+
+ritual ImagePact ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ↝⊛ warp☿manifestation ⇰
+  PassTheVeil warp☿silence warp☿confineToManifestation ⟪SilenceWithinTheImage warp⟫
+
+spell ImageOfTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    ⟪ImagePact warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
+
+spell FaithfulImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Faithful ⟪ImagePact warp⟫ ⇰ cast
+  summon wisp coset twinned
+  wrest ⦉mark᛫ mirror⦊ ⇰ VeiledCoven☿EveryVeilHasAFace wisp
+  wrest ⦉rune᛫ mirror⦊ ⇰ VeiledCoven☿EveryVeilHasAFace coset
+  bind echoing ⟡ warp mark ≣ warp rune ⇰
+    litany warp mark ≣ ⟪ImagePact warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ⇰ ⟪ImageOfTheSigil warp mark⟫☿reflect
+      ▢ ≣ ⟪ImagePact warp ⟪VeiledCoven☿forge rune⟫ ⟡ circle⟫ ⇰ sympathy Kin☿core twinned
+      ▢ ≣ warp rune ⇰ ImageOfTheSigil warp rune
+  bind hushed ⟡ warp ⟪mark⁻¹ ⊛ rune⟫ ≣ ☉ ⇰
+    litany warp ⟪mark⁻¹ ⊛ rune⟫ ≣ warp mark⁻¹ ⊛ warp rune ⇰ PreserveTheBinding warp mark⁻¹ rune
+      ▢ ≣ ⟪warp mark⟫⁻¹ ⊛ warp rune ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune⟫ ⟪ReverseTheBinding warp mark⟫
+      ▢ ≣ ⟪warp rune⟫⁻¹ ⊛ warp rune ⇰ sympathy ⟪conjure token ⇉ token⁻¹ ⊛ warp rune⟫ echoing
+      ▢ ≣ ☉ ⇰ ReversalUndoes ⟪warp rune⟫
+  missile VeiledCoven☿VeilEquality☿backward hushed
+
+spell ReachingImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Reaching ⟪ImagePact warp⟫ ⇰ cast
+  summon quarry
+  wrest ⦉mark᛫ sigilWard⦊ ⇰ Herald☿ManifestationCriterion☿onward quarry☿attestation
+  hone ⦉VeiledCoven☿forge mark᛫ ?▢⦊
+  channel Kin☿extend
+  litany ⟪ImagePact warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ ImageOfTheSigil warp mark
+    ▢ ≣ quarry ⇰ sigilWard
+
 ineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
-  VeiledCoven☿ImageRevelation warp
+  PactPortal☿fromPerfection ⟪ImagePact warp⟫ ⦉FaithfulImage warp᛫ ReachingImage warp⦊
 
 spell RevealTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
     ⟪UnveilTheImage warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
 
 spell PerfectUnveiling ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite☿Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫☿perfect
+    Rite☿Perfect ⟪UnveilTheImage warp⟫ ⇰
+  ⦉FaithfulImage warp᛫ ReachingImage warp⦊
 
 ineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
-    coven ⧸ warp☿silence ≃⊛ circle ⇰ VeiledCoven☿RealmRevelation warp faith
+    coven ⧸ warp☿silence ≃⊛ circle ⇰
+  ⟪UnveilTheImage warp⟫☿chain
+    ⟪⟪PactPortal☿cabalAttunement ⟪Herald☿FullManifestation☿backward faith⟫⟫☿chain Cabal☿wholeCabalPortal⟫
 
 seal Arcanum☿Enchantment

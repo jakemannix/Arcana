@@ -1,5 +1,6 @@
 beckon GrandArchive☿CovenLore☿Veils☿Census
 beckon GrandArchive☿CovenLore☿Cycles
+beckon GrandArchive☿Lore☿Clockwork☿VeiledCoven
 
 sanctum Arcanum☿Enchantment
 
@@ -7,15 +8,25 @@ familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
 spell CountTheVeils ⟪circle ⟡ Cabal coven⟫ ⟡
     Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰
-  circle☿CosetCensus
+  litany Tally☿census coven ≣ Tally☿census ⟪⟪coven ⧸ circle⟫ ⨯ circle⟫ ⇰
+        Tally☿CensusThroughPortal Cabal☿CovenSplitsIntoVeils
+    ▢ ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ Tally☿CensusOfPairs ⟪coven ⧸ circle⟫ circle
 
 spell MeasureOfTheCoven ⟪circle ⟡ Cabal coven⟫ ⟡
-    Tally☿census circle ∣ Tally☿census coven ⇰ circle☿LagrangeBinding
+    Tally☿census circle ∣ Tally☿census coven ⇰ cast
+  hone ⦉Tally☿census ⟪coven ⧸ circle⟫᛫ ?▢⦊
+  litany Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ CountTheVeils circle
+    ▢ ≣ Tally☿census circle ⊛ Tally☿census ⟪coven ⧸ circle⟫ ⇰ Tally☿BindingsCommute ⟪Tally☿census ⟪coven ⧸ circle⟫⟫ ⟪Tally☿census circle⟫
 
 spell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰
-  CycleDividesCensus mark
+  litany period mark ≣ Tally☿census ⟪Cabal☿cycleCircle mark⟫ ⇰ ⟪Tally☿CycleCensus mark⟫☿reflect
+    ▢ ∣ Tally☿census coven ⇰ MeasureOfTheCoven ⟪Cabal☿cycleCircle mark⟫
 
-spell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰
-  CensusReturns
+spell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰ cast
+  wrest ⦉cinder᛫ measureWard⦊ ⇰ MeasureOfTheCycle mark
+  litany mark ⌃ Tally☿census coven ≣ mark ⌃ ⟪period mark ⊛ cinder⟫ ⇰ sympathy ⟪conjure ember ⇉ mark ⌃ ember⟫ measureWard
+    ▢ ≣ ⟪mark ⌃ period mark⟫ ⌃ cinder ⇰ NestedAscent mark ⟪period mark⟫ cinder
+    ▢ ≣ ☉ ⌃ cinder ⇰ sympathy ⟪conjure token ⇉ token ⌃ cinder⟫ ⟪PeriodReturns mark⟫
+    ▢ ≣ ☉ ⇰ StillnessAscends cinder
 
 seal Arcanum☿Enchantment

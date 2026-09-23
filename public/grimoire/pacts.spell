@@ -10,8 +10,20 @@ ritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛
 spell PreserveTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡
     warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp☿CarryTheBinding mark rune
 
+spell PreserveTheStillness ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp ☉ ≣ ☉ ⇰ cast
+  bind doubled ⟡ warp ☉ ⊛ warp ☉ ≣ warp ☉ ⊛ ☉ ⇰
+    litany warp ☉ ⊛ warp ☉ ≣ warp ⟪☉ ⊛ ☉⟫ ⇰ ⟪PreserveTheBinding warp ☉ ☉⟫☿reflect
+      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪BindWithStillness ☉⟫
+      ▢ ≣ warp ☉ ⊛ ☉ ⇰ ⟪BindWithStillness ⟪warp ☉⟫⟫☿reflect
+  missile StrikeFromTheLeft doubled
+
 spell ReverseTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ warp☿CarryTheReversal mark
+    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ cast
+  bind undone ⟡ warp mark⁻¹ ⊛ warp mark ≣ ☉ ⇰
+    litany warp mark⁻¹ ⊛ warp mark ≣ warp ⟪mark⁻¹ ⊛ mark⟫ ⇰ ⟪PreserveTheBinding warp mark⁻¹ mark⟫☿reflect
+      ▢ ≣ warp ☉ ⇰ sympathy warp ⟪ReversalUndoes mark⟫
+      ▢ ≣ ☉ ⇰ PreserveTheStillness warp
+  missile UndoerIsReversal undone
 
 spell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫
     ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
@@ -19,6 +31,9 @@ spell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝
   Arcanum☿Cantrips☿FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard
 
 spell SilenceInTheChain ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰ Pact☿mirror
+    mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ warp mark ∈ weft☿silence ⇰
+  litany mark ∈ ⟪ChainOfPacts warp weft⟫☿silence ↭ ChainOfPacts warp weft mark ≣ ☉ ⇰ Herald☿SilenceCriterion
+    ▢ ↭ weft ⟪warp mark⟫ ≣ ☉ ⇰ Pact☿mirror
+    ▢ ↭ warp mark ∈ weft☿silence ⇰ Herald☿SilenceCriterion☿reflect
 
 seal Arcanum☿Enchantment

@@ -1,4 +1,4 @@
-beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences
+beckon Arcanum☿Enchantment☿Pacts
 
 sanctum Arcanum☿Enchantment
 
@@ -11,15 +11,39 @@ spell NameTheSilent ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
 
 spell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
     ⟪sigilWard ⟡ mark ∈ CircleOfSilence warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft⁻¹ ∈ CircleOfSilence warp ⇰ cast
-  shapeshift warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ ☉
-  bind silenceWard ⟡ warp mark ≣ ☉ ⇰ sigilWard
-  purify ⟮silenceWard⟯
+  bind muted ⟡ warp mark ≣ ☉ ⇰ ⟪NameTheSilent warp mark⟫☿onward sigilWard
+  bind hushed ⟡ warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ ☉ ⇰
+    litany warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ warp ⟪weft ⊛ mark⟫ ⊛ warp weft⁻¹ ⇰ PreserveTheBinding warp ⟪weft ⊛ mark⟫ weft⁻¹
+      ▢ ≣ warp weft ⊛ warp mark ⊛ warp weft⁻¹ ⇰
+          sympathy ⟪conjure token ⇉ token ⊛ warp weft⁻¹⟫ ⟪PreserveTheBinding warp weft mark⟫
+      ▢ ≣ warp weft ⊛ ☉ ⊛ warp weft⁻¹ ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token ⊛ warp weft⁻¹⟫ muted
+      ▢ ≣ warp weft ⊛ warp weft⁻¹ ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp weft⁻¹⟫ ⟪BindWithStillness ⟪warp weft⟫⟫
+      ▢ ≣ warp weft ⊛ ⟪warp weft⟫⁻¹ ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token⟫ ⟪ReverseTheBinding warp weft⟫
+      ▢ ≣ ☉ ⇰ BindingUndone ⟪warp weft⟫
+  missile ⟪NameTheSilent warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫⟫☿backward hushed
 
 spell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫☿Hallowed ⇰ cast
-  shapeshift warp☿silence☿Hallowed
-  initiation
+  fabricate
+  summon mark sigilWard weft
+  missile UnbrokenSilence warp sigilWard weft
 
 spell NothingLost ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite☿Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp☿FaithfulnessCriterion☿reflect
+    Rite☿Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ cast
+  transmute ⟮Cabal☿EmptinessCriterion⟯
+  fabricate
+  ❖ summon fidelity mark sigilWard
+    bind echoing ⟡ warp mark ≣ warp ☉ ⇰
+      litany warp mark ≣ ☉ ⇰ ⟪NameTheSilent warp mark⟫☿onward sigilWard
+        ▢ ≣ warp ☉ ⇰ ⟪PreserveTheStillness warp⟫☿reflect
+    missile fidelity echoing
+  ❖ summon hollowness mark rune twinned
+    bind hushed ⟡ warp ⟪mark ⊛ rune⁻¹⟫ ≣ ☉ ⇰
+      litany warp ⟪mark ⊛ rune⁻¹⟫ ≣ warp mark ⊛ warp rune⁻¹ ⇰ PreserveTheBinding warp mark rune⁻¹
+        ▢ ≣ warp rune ⊛ warp rune⁻¹ ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune⁻¹⟫ twinned
+        ▢ ≣ warp ⟪rune ⊛ rune⁻¹⟫ ⇰ ⟪PreserveTheBinding warp rune rune⁻¹⟫☿reflect
+        ▢ ≣ warp ☉ ⇰ sympathy warp ⟪BindingUndone rune⟫
+        ▢ ≣ ☉ ⇰ PreserveTheStillness warp
+    bind vanished ⟡ mark ⊛ rune⁻¹ ≣ ☉ ⇰ hollowness ⟪mark ⊛ rune⁻¹⟫ ⟪⟪NameTheSilent warp ⟪mark ⊛ rune⁻¹⟫⟫☿backward hushed⟫
+    missile BalancedDivision☿onward vanished
 
 seal Arcanum☿Enchantment

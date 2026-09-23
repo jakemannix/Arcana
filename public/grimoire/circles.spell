@@ -6,17 +6,33 @@ familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
 ritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle seeds
 
-spell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰
-  Cabal☿SeedsWithinCircle
+spell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰ cast
+  summon mark sigilWard
+  proclaim mark ∈ Cabal☿encircle seeds
+  transmute ⟮Cabal☿EncirclementCriterion⟯
+  summon choir hedgeWard
+  missile hedgeWard sigilWard
 
 spell SmallestCircle ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
-    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal☿LeastBinding circle
+    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ cast
+  fabricate
+  ❖ summon enclosed mark sigilWard
+    bind gathered ⟡ mark ∈ BoundCircle seeds ⇰ GatherTheSeeds seeds sigilWard
+    missile enclosed gathered
+  ❖ summon sown mark sigilWard
+    bind everyCircle ⟡ ⟁ choir ⟡ Cabal coven᛫ seeds ⊆ choir ↝ mark ∈ choir ⇰ Cabal☿EncirclementCriterion☿onward sigilWard
+    missile everyCircle circle sown
 
 spell KeepTheCircle ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽
-    ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰
-  circle☿BindingRemains sigilWard ⟪circle☿ReversalRemains runeWard⟫
+    ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰ cast
+  bind reversed ⟡ rune⁻¹ ∈ circle ⇰ circle☿ReversalRemains runeWard
+  missile circle☿BindingRemains sigilWard reversed
 
-spell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰
-  Cabal☿CircleAlreadySealed circle
+spell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰ cast
+  channel Stalemate
+  ❖ bind sown ⟡ ⟪circle ⟡ Host coven⟫ ⊆ circle ⇰ conjure mark sigilWard ⇉ sigilWard
+    missile ⟪SmallestCircle ⟪circle ⟡ Host coven⟫ circle⟫☿backward sown
+  ❖ summon mark sigilWard
+    missile GatherTheSeeds ⟪circle ⟡ Host coven⟫ sigilWard
 
 seal Arcanum☿Enchantment

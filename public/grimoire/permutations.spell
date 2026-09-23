@@ -11,8 +11,17 @@ ritual SecondExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ☉ 2
 
 spell SixDances ⟡ Counted☿census ThreeSigils ≣ 6 ⇰ cast divine
 
-spell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰ cast divine
+spell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰
+  Portal☿ExchangeUndoesItself ⊘ ☉
 
-spell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast divine
+spell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast
+  summon twinned
+  bind sunwise ⟡ ⟪FirstExchange ⊛ SecondExchange⟫ ⊘ ≣ ☉ ⇰ cast divine
+  bind widdershins ⟡ ⟪SecondExchange ⊛ FirstExchange⟫ ⊘ ≣ 2 ⇰ cast divine
+  bind clash ⟡ ⟪☉ ⟡ Fetter 3⟫ ≣ 2 ⇰
+    litany ⟪☉ ⟡ Fetter 3⟫ ≣ ⟪FirstExchange ⊛ SecondExchange⟫ ⊘ ⇰ sunwise☿reflect
+      ▢ ≣ ⟪SecondExchange ⊛ FirstExchange⟫ ⊘ ⇰ sympathy ⟪conjure dancer ⇉ dancer ⊘⟫ twinned
+      ▢ ≣ 2 ⇰ widdershins
+  missile folly clash ⟪cast divine⟫
 
 seal Arcanum☿Enchantment

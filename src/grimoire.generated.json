@@ -2,50 +2,24 @@
   "format": "arcana-grimoire/v1",
   "mathlibRevision": "0df444a360eaa60ab8c11dca51a86af692955474",
   "leanToolchain": "leanprover/lean4:v4.33.1",
-  "translatorHash": "562b1bdc3fa342fac54ec0bd34672d37bae42bfbd97981f735817245be07d1be",
-  "tablesHash": "e60dc43c0f9ada55e60d83e4e278197982a78fabcc098fe079b342a55afdbc4d",
+  "translatorHash": "be9da994aee3fe9047586073544e6940def4c16f5ec8ce0305f0e94680128fa7",
+  "tablesHash": "a7e29077e061216a607d5f6764fe85bdd625bf00cba8f84705e8e21ad55405e7",
   "metadataHash": "a6d0faa0aef3a8ed8ca11f6e519cb71ade51926ae068f3454b4289079d4b715d",
-  "lexiconHash": "b74fc390a3fc48fde493d6272179b962353b11d9c598d943d33a8478c5356186",
+  "lexiconHash": "51921f9f7e41f0ed8903b8bf705f5c42ce78edf359b6e518d4a4a833b33efc52",
   "key": {
     "global": {
-      "Element": "Humour",
-      "fire": "flame",
-      "cold": "rime",
-      "double": "Twinning",
-      "double_eq": "Enlarge",
       "n": "pinch✨of✨sulfur",
       "k": "onyx✨bead",
       "ih": "echo",
-      "and_swap": "Sanctuary",
       "p": "ruby✨shard",
       "q": "ivory✨ring",
       "hp": "primalward",
       "hq": "wraithward",
-      "always_more": "Haste",
       "m": "shade",
-      "lt_succ_self": "Outpace",
-      "twice_reversed": "Mirror Image",
       "xs": "beads",
       "α": "ᚨ",
-      "Potion": "Draught",
-      "heat": "warmth",
-      "bitterness": "gall",
-      "mix": "Brew",
-      "mix_comm": "Stir",
       "add_comm": "Exchange",
-      "Named": "Pledged",
-      "name": "pledge",
-      "Titled": "Styled",
-      "title": "style",
-      "fireball": "Fireball",
-      "le_succ": "Kindle",
       "le_trans": "Relay",
-      "Abjuration": "Abjuration",
-      "Conjuration": "Conjuration",
-      "Divination": "Divination",
-      "Evocation": "Evocation",
-      "Illusion": "Illusion",
-      "Necromancy": "Necromancy",
       "a": "ash",
       "b": "elm",
       "c": "yew",
@@ -63,7 +37,6 @@
       "pow_succ": "Flare",
       "choose": "Raise",
       "choose_spec": "Bidding",
-      "turn": "Turning",
       "Mathlib": "✨Grand✨Archive✨",
       "Logic": "Reason",
       "Algebra": "✨Bound✨Veyrath✨",
@@ -363,15 +336,7 @@
       "permEquivUnitsEnd": "✨Shuffles✨Are✨the✨Court's✨Reversibles✨",
       "equivUnitsEnd": "✨court's✨reversibles✨"
     },
-    "scoped": {
-      "and_swap": {
-        "hp": "left",
-        "hq": "right"
-      },
-      "«Plane Shift»": {
-        "h": "loom"
-      }
-    },
+    "scoped": {},
     "namespaces": {
       "Mathematics.GroupTheory": "Arcana☿Enchantment",
       "Mathematics.CategoryTheory": "Arcana☿Transmutation"
@@ -480,10 +445,6 @@
           "arcane": "mirror"
         },
         {
-          "lean": "Equiv",
-          "arcane": "Portal"
-        },
-        {
           "lean": "exact",
           "arcane": "missile"
         },
@@ -562,6 +523,10 @@
         {
           "lean": "Surjective",
           "arcane": "Reaching"
+        },
+        {
+          "lean": "Equiv",
+          "arcane": "Portal"
         },
         {
           "lean": "composeFunctions",
@@ -737,14 +702,6 @@
           "arcane": "backward"
         },
         {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
-          "lean": "Subgroup",
-          "arcane": "✨Inner✨Veyr✨"
-        },
-        {
           "lean": "exact",
           "arcane": "missile"
         },
@@ -873,6 +830,14 @@
           "arcane": "reversed"
         },
         {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
+        },
+        {
           "lean": "Mathematics.GroupTheory",
           "arcane": "Arcana☿Enchantment"
         }
@@ -983,14 +948,6 @@
         {
           "lean": "rfl",
           "arcane": "mirror"
-        },
-        {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
-          "lean": "Subgroup",
-          "arcane": "✨Inner✨Veyr✨"
         },
         {
           "lean": "MonoidHom",
@@ -1129,6 +1086,14 @@
           "arcane": "Cantrips"
         },
         {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
+        },
+        {
           "lean": "Mathematics.GroupTheory",
           "arcane": "Arcana☿Enchantment"
         }
@@ -1249,14 +1214,6 @@
         {
           "lean": "congrArg",
           "arcane": "sympathy"
-        },
-        {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
-          "lean": "Subgroup",
-          "arcane": "✨Inner✨Veyr✨"
         },
         {
           "lean": "Normal",
@@ -1407,6 +1364,14 @@
           "arcane": "Pacts"
         },
         {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
+        },
+        {
           "lean": "Mathematics.GroupTheory",
           "arcane": "Arcana☿Enchantment"
         }
@@ -1516,14 +1481,6 @@
         {
           "lean": "rfl",
           "arcane": "mirror"
-        },
-        {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
-          "lean": "Subgroup",
-          "arcane": "✨Inner✨Veyr✨"
         },
         {
           "lean": "Normal",
@@ -1660,6 +1617,14 @@
         {
           "lean": "Homomorphisms",
           "arcane": "Pacts"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
         },
         {
           "lean": "Mathematics.GroupTheory",
@@ -1804,14 +1769,6 @@
         {
           "lean": "rfl",
           "arcane": "mirror"
-        },
-        {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
-          "lean": "Subgroup",
-          "arcane": "✨Inner✨Veyr✨"
         },
         {
           "lean": "MonoidHom",
@@ -2026,6 +1983,14 @@
           "arcane": "Descent"
         },
         {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
+        },
+        {
           "lean": "Mathematics.GroupTheory",
           "arcane": "Arcana☿Enchantment"
         }
@@ -2141,14 +2106,6 @@
         {
           "lean": "congrArg",
           "arcane": "sympathy"
-        },
-        {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
-          "lean": "Subgroup",
-          "arcane": "✨Inner✨Veyr✨"
         },
         {
           "lean": "refine",
@@ -2279,6 +2236,14 @@
           "arcane": "✨Stillness✨Ascends✨"
         },
         {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
+        },
+        {
           "lean": "Mathematics.GroupTheory",
           "arcane": "Arcana☿Enchantment"
         }
@@ -2402,14 +2367,6 @@
         {
           "lean": "mp",
           "arcane": "onward"
-        },
-        {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
-          "lean": "Subgroup",
-          "arcane": "✨Inner✨Veyr✨"
         },
         {
           "lean": "Normal",
@@ -2624,6 +2581,14 @@
           "arcane": "✨Indivisible✨Veyrs✨are✨Simple✨"
         },
         {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
+        },
+        {
           "lean": "Mathematics.GroupTheory",
           "arcane": "Arcana☿Enchantment"
         }
@@ -2747,10 +2712,6 @@
         {
           "lean": "rfl",
           "arcane": "mirror"
-        },
-        {
-          "lean": "Group",
-          "arcane": "Veyr"
         },
         {
           "lean": "intro",
@@ -2883,6 +2844,10 @@
         {
           "lean": "card_orbit_eq_card_quotient",
           "arcane": "✨Procession✨Counts✨Veils✨"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Veyr"
         },
         {
           "lean": "Mathematics.GroupTheory",
@@ -3022,20 +2987,8 @@
           "arcane": "mirror"
         },
         {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
-          "lean": "Subgroup",
-          "arcane": "✨Inner✨Veyr✨"
-        },
-        {
           "lean": "MonoidHom",
           "arcane": "Herald"
-        },
-        {
-          "lean": "Equiv",
-          "arcane": "Portal"
         },
         {
           "lean": "intro",
@@ -3084,6 +3037,10 @@
         {
           "lean": "Injective",
           "arcane": "Faithful"
+        },
+        {
+          "lean": "Equiv",
+          "arcane": "Portal"
         },
         {
           "lean": "MulAction",
@@ -3148,6 +3105,14 @@
         {
           "lean": "Kernels",
           "arcane": "Silence"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
         },
         {
           "lean": "Action",
@@ -3330,10 +3295,6 @@
           "arcane": "sympathy"
         },
         {
-          "lean": "Equiv",
-          "arcane": "Portal"
-        },
-        {
           "lean": "exact",
           "arcane": "missile"
         },
@@ -3356,6 +3317,10 @@
         {
           "lean": "GroupTheory",
           "arcane": "✨Veyr✨Lore✨"
+        },
+        {
+          "lean": "Equiv",
+          "arcane": "Portal"
         },
         {
           "lean": "Perm",
@@ -3569,20 +3534,12 @@
           "arcane": "mirror"
         },
         {
-          "lean": "Group",
-          "arcane": "Veyr"
-        },
-        {
           "lean": "Monoid",
           "arcane": "Choir"
         },
         {
           "lean": "MonoidHom",
           "arcane": "Herald"
-        },
-        {
-          "lean": "Equiv",
-          "arcane": "Portal"
         },
         {
           "lean": "intro",
@@ -3637,6 +3594,10 @@
           "arcane": "pouch✨of✨sand"
         },
         {
+          "lean": "Equiv",
+          "arcane": "Portal"
+        },
+        {
           "lean": "Perm",
           "arcane": "Shuffling"
         },
@@ -3671,6 +3632,10 @@
         {
           "lean": "M",
           "arcane": "ᛗ"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Veyr"
         },
         {
           "lean": "End",

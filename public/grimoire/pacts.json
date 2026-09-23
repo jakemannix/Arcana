@@ -1,47 +1,21 @@
 {
-  "format": "lean-magic/v1",
+  "format": "arcana/v1",
   "lean": "import Mathematics.Functions\nimport Mathlib.Algebra.Group.Subgroup.Ker\n\nnamespace Mathematics.GroupTheory\n\nvariable {G H K : Type*} [Group G] [Group H] [Group K]\n\ndef composeHom (f : G →* H) (g : H →* K) : G →* K := g.comp f\n\ntheorem hom_map_mul (f : G →* H) (x y : G) :\n    f (x * y) = f x * f y := f.map_mul x y\n\ntheorem hom_map_one (f : G →* H) : f 1 = 1 := by\n  have h_idempotent : f 1 * f 1 = f 1 * 1 :=\n    calc f 1 * f 1 = f (1 * 1) := (hom_map_mul f 1 1).symm\n      _ = f 1 := congrArg f (mul_one 1)\n      _ = f 1 * 1 := (mul_one (f 1)).symm\n  exact mul_left_cancel h_idempotent\n\ntheorem hom_map_inv (f : G →* H) (x : G) :\n    f x⁻¹ = (f x)⁻¹ := by\n  have h_mul_eq_one : f x⁻¹ * f x = 1 :=\n    calc f x⁻¹ * f x = f (x⁻¹ * x) := (hom_map_mul f x⁻¹ x).symm\n      _ = f 1 := congrArg f (inv_mul_cancel x)\n      _ = 1 := hom_map_one f\n  exact eq_inv_of_mul_eq_one_left h_mul_eq_one\n\ntheorem injective_composeHom (f : G →* H) (g : H →* K)\n    (hf : Function.Injective f) (hg : Function.Injective g) :\n    Function.Injective (composeHom f g) :=\n  Mathematics.Functions.injective_compose (f := f) (g := g) hf hg\n\ntheorem mem_ker_composeHom (f : G →* H) (g : H →* K) (x : G) :\n    x ∈ (composeHom f g).ker ↔ f x ∈ g.ker :=\n  calc x ∈ (composeHom f g).ker ↔ composeHom f g x = 1 := MonoidHom.mem_ker\n    _ ↔ g (f x) = 1 := Iff.rfl\n    _ ↔ f x ∈ g.ker := MonoidHom.mem_ker.symm\n\nend Mathematics.GroupTheory\n",
   "spell": "beckon Arcana☿Cantrips\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨☿Silences\n\nsanctum Arcana☿Enchantment\n\nfamiliar ⧼ᛰ ☥ ᛟ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯ ⟮Veyr ᛟ⟯\n\nritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟡ ᛰ ↝⊛ ᛟ ⇰ silk✨cord☿threading copper✨wire\n\nspell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube silver✨bell ⟡ ᛰ⟫ ⟡\n    copper✨wire ⟪jade✨cube ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell ⇰ copper✨wire☿✨Carry✨the✨Binding✨ jade✨cube silver✨bell\n\nspell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire ☉ ≣ ☉ ⇰ cast\n  bind doubled ⟡ copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ☉ ⊛ ☉ ⇰\n    litany copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire ☉ ☉⟫☿reflect\n      ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ ☉⟫\n      ▢ ≣ copper✨wire ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire ☉⟫⟫☿reflect\n  missile ✨Strike✨from✨the✨Left✨ doubled\n\nspell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡\n    copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast\n  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ ☉ ⇰\n    litany copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ copper✨wire ⟪jade✨cube† ⊛ jade✨cube⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† jade✨cube⟫☿reflect\n      ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫\n      ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire\n  missile ✨Undoer✨is✨Reversal✨ undone\n\nspell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫\n    ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡\n    Rite☿Faithful ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫ ⇰\n  Arcana☿Cantrips☿✨Faithful✨Weaving✨ ⟪copper✨wire ⇰ copper✨wire⟫ ⟪silk✨cord ⇰ silk✨cord⟫ faith echoward\n\nspell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡\n    jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰\n  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨\n    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ ☉ ⇰ Pact☿mirror\n    ▢ ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect\n\nseal Arcana☿Enchantment\n",
   "key": {
     "global": {
-      "Element": "Humour",
-      "fire": "flame",
-      "cold": "rime",
-      "double": "Twinning",
-      "double_eq": "Enlarge",
       "n": "pinch✨of✨sulfur",
       "k": "onyx✨bead",
       "ih": "echo",
-      "and_swap": "Sanctuary",
       "p": "ruby✨shard",
       "q": "ivory✨ring",
       "hp": "primalward",
       "hq": "wraithward",
-      "always_more": "Haste",
       "m": "shade",
-      "lt_succ_self": "Outpace",
-      "twice_reversed": "Mirror Image",
       "xs": "beads",
       "α": "ᚨ",
-      "Potion": "Draught",
-      "heat": "warmth",
-      "bitterness": "gall",
-      "mix": "Brew",
-      "mix_comm": "Stir",
       "add_comm": "Exchange",
-      "Named": "Pledged",
-      "name": "pledge",
-      "Titled": "Styled",
-      "title": "style",
-      "fireball": "Fireball",
-      "le_succ": "Kindle",
       "le_trans": "Relay",
-      "Abjuration": "Abjuration",
-      "Conjuration": "Conjuration",
-      "Divination": "Divination",
-      "Evocation": "Evocation",
-      "Illusion": "Illusion",
-      "Necromancy": "Necromancy",
       "a": "ash",
       "b": "elm",
       "c": "yew",
@@ -59,7 +33,6 @@
       "pow_succ": "Flare",
       "choose": "Raise",
       "choose_spec": "Bidding",
-      "turn": "Turning",
       "Mathlib": "✨Grand✨Archive✨",
       "Logic": "Reason",
       "Algebra": "✨Bound✨Veyrath✨",
@@ -359,15 +332,7 @@
       "permEquivUnitsEnd": "✨Shuffles✨Are✨the✨Court's✨Reversibles✨",
       "equivUnitsEnd": "✨court's✨reversibles✨"
     },
-    "scoped": {
-      "and_swap": {
-        "hp": "left",
-        "hq": "right"
-      },
-      "«Plane Shift»": {
-        "h": "loom"
-      }
-    },
+    "scoped": {},
     "namespaces": {
       "Mathematics.GroupTheory": "Arcana☿Enchantment",
       "Mathematics.CategoryTheory": "Arcana☿Transmutation"

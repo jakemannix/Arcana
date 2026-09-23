@@ -25,8 +25,6 @@ const lean = run('lake', ['env', 'which', 'lean']).trim();
 const env = { ...process.env, LEAN_PATH: [decodedRoot, ...leanPath.split(delimiter).map(p => resolve(math, p))].join(delimiter) };
 const key = new Key(lexicon);
 const sources = chapters.map(chapter => ({ ...chapter, lean: read(join(math, chapter.file)) }));
-// Reserve readable quoted names across the whole book before allocating anything.
-for (const source of sources) key.reserveQuoted(tokenize(source.lean));
 const translated = sources.map(chapter => ({ ...chapter, spell: toSpell(chapter.lean, key) }));
 const keyText = JSON.stringify(key.data(), null, 2) + '\n';
 const reloaded = new Key(JSON.parse(keyText));
@@ -83,7 +81,7 @@ const entries = translated.map(chapter => {
   const stem = chapter.id;
   write(join(output, `${stem}.lean`), chapter.lean);
   write(join(output, `${stem}.spell`), chapter.spell);
-  write(join(output, `${stem}.json`), JSON.stringify({ format: 'lean-magic/v1', lean: chapter.lean, spell: chapter.spell, key: key.data() }, null, 2) + '\n');
+  write(join(output, `${stem}.json`), JSON.stringify({ format: 'arcana/v1', lean: chapter.lean, spell: chapter.spell, key: key.data() }, null, 2) + '\n');
   return { ...chapter, references, glossary, sourceHash: sha(chapter.lean), spellHash: sha(chapter.spell), declarations: Array.from(chapter.lean.matchAll(/^(?:noncomputable )?(?:def|abbrev|theorem) (\w+)/gm), match => chapter.lean.match(/^namespace (\S+)/m)![1] + '.' + match[1]) };
 });
 const catalog = { format: 'arcana-grimoire/v1', mathlibRevision: pin, leanToolchain: read(join(math, 'lean-toolchain')).trim(),

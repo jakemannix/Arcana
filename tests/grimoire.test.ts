@@ -15,9 +15,9 @@ test('verification evidence covers current source, vocabulary, and metadata', ()
   assert.equal(provenance.tablesHash, hash(file('src/tables.json')));
   assert.equal(provenance.metadataHash, hash(file('grimoire/chapters.json')));
   assert.equal(provenance.lexiconHash, hash(file('grimoire/lexicon.json')));
-  assert.equal(provenance.verification.declarationCount, 72);
+  assert.equal(provenance.verification.declarationCount, 84);
   assert.deepEqual(new Set(folios.map(f => f.school)), new Set(['Cantrips', 'Enchantment', 'Transmutation']));
-  assert.equal(folios.length, 12);
+  assert.equal(folios.length, 13);
 });
 
 test('checked folios use mathematical Lean names and expose reversible material components', () => {

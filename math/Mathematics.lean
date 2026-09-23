@@ -10,3 +10,4 @@ import Mathematics.GroupTheory.GroupActions
 import Mathematics.GroupTheory.Cayley
 import Mathematics.GroupTheory.Permutations
 import Mathematics.CategoryTheory.ForgetfulAdjoints
+import Mathematics.CategoryTheory.Yoneda

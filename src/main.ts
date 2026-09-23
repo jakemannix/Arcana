@@ -1,6 +1,6 @@
 import { basicSetup } from 'codemirror';
 import { EditorView, keymap } from '@codemirror/view';
-import { EditorState } from '@codemirror/state';
+import { EditorState, Prec } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
@@ -8,6 +8,7 @@ import { Key, WORDS, fromSpell, toSpell, type KeyData } from './translator';
 import { folios, grimoireKey, isCheckedSource, provenance, type Folio } from './catalog';
 import { foldAll, unfoldAll } from '@codemirror/language';
 import { spellFolding, sparkleAt, shimmer } from './magic';
+import { expand, LEAN_ABBREVIATIONS, SPELL_ABBREVIATIONS } from './glyphs';
 import './style.css';
 
 type Side = 'lean' | 'spell';
@@ -32,7 +33,7 @@ app.innerHTML = `
       <div class="school-heading"><span aria-hidden="true">⟐</span><div><p class="eyebrow">SCHOOL OF</p><h1>Enchantment</h1></div></div>
       <p class="school-description">Groups, pacts, and the structure that survives a transformation.</p>
       <nav id="chapter-nav" aria-label="Enchantment lessons"></nav>
-      <div class="contents-foot"><strong>Real mathematics. Arcane language.</strong><p>8 lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="/grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
+      <div class="contents-foot"><strong>Real mathematics. Arcane language.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="/grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
     </aside>
     <div class="reading-desk">
       <section class="folio-introduction"><p class="eyebrow" id="folio-level"></p><h2 id="folio-title"></h2><p class="folio-subtitle" id="folio-subtitle"></p><p class="lede" id="folio-summary"></p></section>
@@ -40,6 +41,7 @@ app.innerHTML = `
         <h2>Two languages, one theorem</h2>
         <p>The left pane is Arcane Lean: mathematical names and syntax translated into a consistent spell vocabulary. The right pane is the exact Lean source. Edit either pane to translate in both directions.</p>
         <p>Every original folio was compiled against mathlib, translated, decoded, and compiled again. The proof audit rejects placeholders. Standard Lean axioms such as classical choice may occur. <strong>Your edits are drafts:</strong> the browser checks translation fidelity, but does not run Lean.</p>
+        <p><strong>Typing glyphs:</strong> type a backslash and a short name, then a space or Tab. In the spell pane, <code>\\sp</code> gives ✨, <code>\\dag</code> gives †, and <code>\\merc</code> gives ☿. A backslash before any Lean symbol gives its spell glyph: <code>\\:</code> gives ⟡, <code>\\(</code> gives ⟪, <code>\\:=</code> gives ⇰, <code>\\0</code> gives ⊘, and <code>\\1</code> gives ☉. The Lean pane uses Lean's own shortcuts, such as <code>\\to</code> for → and <code>\\-1</code> for ⁻¹.</p>
         <p>Switching lessons keeps your drafts in this tab. Download to keep a copy with its name key; reloading the page loses unsaved drafts. Press Escape then Tab to leave an editor using the keyboard.</p>
       </section>
       <section class="mathematical-reading" aria-label="Mathematical meaning"><p class="eyebrow">BEHIND THE ENCHANTMENT</p><p id="meaning"></p><details><summary>Hypotheses & proof idea</summary><h3>What must be true</h3><p id="hypotheses"></p><h3>Why it works</h3><p id="proof-idea"></p></details><div id="prerequisites" class="prerequisites"></div></section>
@@ -111,8 +113,22 @@ const editorTheme = EditorView.theme({
   '.cm-panels': { backgroundColor: '#182529', color: '#ede5d0' },
 }, { dark: true });
 
+/** Replace a pending backslash shortcut, such as `\sp` for ✨, as the user types. */
+function glyphShortcuts(side: Side) {
+  const table = side === 'spell' ? SPELL_ABBREVIATIONS : LEAN_ABBREVIATIONS;
+  const apply = (view: EditorView, from: number, to: number, typed: string) => {
+    if (from !== to || !view.state.selection.main.empty) return false;
+    const line = view.state.doc.lineAt(from), expansion = expand(line.text.slice(0, from - line.from), typed, table);
+    if (!expansion) return false;
+    const start = from - expansion.from;
+    view.dispatch({ changes: { from: start, to, insert: expansion.insert }, selection: { anchor: start + expansion.insert.length }, userEvent: 'input.type' });
+    return true;
+  };
+  return Prec.highest([EditorView.inputHandler.of(apply), keymap.of([{ key: 'Tab', run: view => apply(view, view.state.selection.main.head, view.state.selection.main.head, '\t') }])]);
+}
+
 function editorState(side: Side, doc: string): EditorState {
-  return EditorState.create({ doc, extensions: [spellFolding(side === 'spell'), basicSetup, keymap.of([indentWithTab]), language(side), syntaxHighlighting(highlight), editorTheme,
+  return EditorState.create({ doc, extensions: [spellFolding(side === 'spell'), basicSetup, glyphShortcuts(side), keymap.of([indentWithTab]), language(side), syntaxHighlighting(highlight), editorTheme,
       EditorView.contentAttributes.of({ 'aria-label': side === 'lean' ? 'Edit Lean source' : 'Edit spell text', spellcheck: 'false' }),
       EditorView.updateListener.of(update => { if (update.docChanged && !updating) translate(side); }),
     ] });

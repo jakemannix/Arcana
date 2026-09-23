@@ -47,7 +47,7 @@
   {
     "id": "first-isomorphism", "school": "Enchantment", "title": "Unveil the true image", "subtitle": "The first isomorphism theorem", "file": "Arcane/Enchantment/FirstIsomorphism.lean", "level": "III · Great enchantments",
     "summary": "Forget exactly what a pact cannot distinguish. What remains is the image, with its whole group structure preserved.",
-    "meaning": "G/ker(f) ≅ im(f). The canonical isomorphism sends [x] to f(x), viewed as an element of the image subgroup. If f is surjective, the quotient is isomorphic to the entire codomain H.",
+    "meaning": "G/ker(f) ≅ im(f). The canonical isomorphism sends [x] to f(x), viewed as an element of the image subgroup. If f is surjective, the quotient is isomorphic to the entire codomain H. Emmy Noether gave the isomorphism theorems their modern, general form in the 1920s.",
     "hypotheses": "G and H are arbitrary groups. Surjectivity is required only for the final isomorphism to H; the isomorphism to im(f) needs no such assumption.",
     "proofIdea": "The isomorphism is built by hand. First, f restricted to its image silences ker(f), so it descends to the quotient. It is injective: if [x] and [y] have the same image, a calc shows f(x⁻¹y) = f(x)⁻¹f(y) = f(y)⁻¹f(y) = 1, so [x] = [y]. It is surjective: every image element is f(x) for some x. A bijective homomorphism is an isomorphism. For a surjective f, the image is the whole codomain.",
     "prerequisites": ["descent", "cantrips"], "concepts": ["unveiledImage", "range", "MulEquiv", "Bijective", "unveiledCodomain"],
@@ -56,11 +56,20 @@
   {
     "id": "lagrange", "school": "Enchantment", "title": "The measure of a coven", "subtitle": "Lagrange's theorem and element orders", "file": "Arcane/Enchantment/Lagrange.lean", "level": "III · Great enchantments",
     "summary": "A finite group partitions into equally sized cosets. The size of every subgroup, and every element's period, divides the size of the whole.",
-    "meaning": "|G| = |G/H|·|H|, hence |H| divides |G|. Also ord(x) divides |G|, and x raised to |G| is the identity.",
+    "meaning": "|G| = |G/H|·|H|, hence |H| divides |G|. Also ord(x) divides |G|, and x raised to |G| is the identity. Joseph-Louis Lagrange found the counting idea in 1771, in work on polynomial equations. The general form for subgroups came later. When G is the group of nonzero remainders modulo a prime p, the last statement is Fermat's little theorem, which Pierre de Fermat stated in 1640.",
     "hypotheses": "G is a group and H any subgroup; normality is not needed to count cosets. These are finite-group counting statements. The Lean statements use Nat.card, which is defined to be 0 for infinite types, so their formal versions also extend to infinite groups with that convention.",
     "proofIdea": "Mathlib splits G into pairs (coset, element of H), so a calc gives |G| = |G/H|·|H|. Commuting the factors exhibits |H| as a divisor. The order of x is the size of the cyclic subgroup it generates, so it divides |G|. Finally, write |G| = ord(x)·k and compute x^|G| = (x^ord(x))^k = 1^k = 1.",
     "prerequisites": ["circles"], "concepts": ["card", "orderOf", "Subgroup", "Group"],
     "references": [{"path":"Mathlib/GroupTheory/Coset/Basic.lean","symbol":"Subgroup.groupEquivQuotientProdSubgroup"},{"path":"Mathlib/GroupTheory/Coset/Card.lean","symbol":"Subgroup.card_eq_card_quotient_mul_card_subgroup"},{"path":"Mathlib/GroupTheory/Coset/Card.lean","symbol":"Subgroup.card_subgroup_dvd_card"},{"path":"Mathlib/GroupTheory/OrderOfElement.lean","symbol":"orderOf_dvd_natCard"},{"path":"Mathlib/GroupTheory/OrderOfElement.lean","symbol":"pow_card_eq_one'"}]
+  },
+  {
+    "id": "unbreakable", "school": "Enchantment", "title": "The unbreakable coven", "subtitle": "Groups of prime order are simple", "file": "Arcane/Enchantment/Unbreakable.lean", "level": "III · Great enchantments",
+    "summary": "A coven whose census is indivisible has no hidden circles. Nothing inside it can be broken away, so it is unbreakable.",
+    "meaning": "A group is simple when it has more than one element and its only normal subgroups are the trivial one and the whole group. If |G| = p is prime, every subgroup is trivial or all of G, so G is simple. The Arcane definition agrees exactly with mathlib's IsSimpleGroup.",
+    "hypotheses": "p is prime and Nat.card G = p. Because p is not zero, G is finite. Normality is never used: the theorem about hidden circles holds for every subgroup, normal or not.",
+    "proofIdea": "By Lagrange, the size of a subgroup H divides p. A prime has only two divisors. If |H| = 1, then H is trivial. If |H| = p = |G|, then H fills the whole group, because G is finite. A group of prime size has at least two elements, so it is nontrivial, and both conditions of an unbreakable coven hold.",
+    "prerequisites": ["lagrange", "kernels"], "concepts": ["unbreakableCoven", "IsSimpleGroup", "Prime", "Normal", "card"],
+    "references": [{"path":"Mathlib/GroupTheory/Subgroup/Simple.lean","symbol":"IsSimpleGroup"},{"path":"Mathlib/Data/Nat/Prime/Defs.lean","symbol":"Nat.Prime.eq_one_or_self_of_dvd"},{"path":"Mathlib/Algebra/Group/Subgroup/Finite.lean","symbol":"Subgroup.card_eq_iff_eq_top"},{"path":"Mathlib/GroupTheory/Index.lean","symbol":"Subgroup.card_eq_one"}]
   },
   {
     "id": "orbits", "school": "Enchantment", "title": "Orbit of command", "subtitle": "Group actions and orbit–stabilizer", "file": "Arcane/Enchantment/Orbits.lean", "level": "III · Great enchantments",

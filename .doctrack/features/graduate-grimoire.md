@@ -6,7 +6,7 @@ tags: [doctrack/type/feature, doctrack/status/active, doctrack/audience/claude]
 # Graduate grimoire
 
 ## User-directed intermediate deliverable
-The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: eight folios plus Cantrips, totaling 50 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
+The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: nine folios plus Cantrips, totaling 55 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
 
 The longer objective remains a graduate grimoire across all eight schools, including group theory, real analysis, combinatorics, topology, linear analysis, complex analysis, algebraic geometry, manifolds, and “PDSs” (clarification still pending, irrelevant to this first school). This broader objective is not complete.
 
@@ -22,6 +22,7 @@ The user asked for explicit, teaching-style proofs. Prefer named `have` steps an
 - `math/Arcane/Enchantment/Descent.lean`: imports Pacts. Why N ≤ ker f makes the lift well defined, quotient lift, uniqueness through representatives.
 - `math/Arcane/Enchantment/FirstIsomorphism.lean`: imports Descent. Builds the quotient-to-range map by descent, proves injectivity and surjectivity by hand, packages it with `MulEquiv.ofBijective`, surjective variant.
 - `math/Arcane/Enchantment/Lagrange.lean`: coset cardinality from G ≃ (G/H) × H, subgroup divisibility, order divisibility through the cyclic subgroup, power identity by calc.
+- `math/Arcane/Enchantment/Unbreakable.lean`: imports Lagrange. Defines `unbreakableCoven` (nontrivial, and every normal subgroup is ⊥ or ⊤), proves it equals mathlib's `IsSimpleGroup`, proves that a group of prime order has only ⊥ and ⊤ as subgroups (normality unused), and concludes that it is simple.
 - `math/Arcane/Enchantment/Orbits.lean`: imports Lagrange. g·x = k·x iff g⁻¹k fixes x, orbit/coset equivalence, representative action, orbit–stabilizer cardinality from Lagrange's coset count.
 - `math/Arcane/Enchantment/Permutations.lean`: actual S₃, two swaps, order 6 by decide, involution by library lemma, noncommutativity by evaluating both products at 0.
 

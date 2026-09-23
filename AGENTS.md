@@ -10,7 +10,7 @@ The longer-term ambition is substantial graduate mathematics across multiple sch
 
 ## What makes a good addition
 
-- Give a school a coherent mathematical progression. Enchantment currently develops subgroups, homomorphisms, kernels, quotients, the first isomorphism theorem, Lagrange, orbit–stabilizer, and a concrete permutation example.
+- Give a school a coherent mathematical progression. Enchantment currently develops subgroups, homomorphisms, kernels, quotients, the first isomorphism theorem, Lagrange, simple groups of prime order, orbit–stabilizer, and a concrete permutation example.
 - Include mathematical meaning, hypotheses, proof ideas, prerequisites, and precise library references alongside the magical presentation. Substantial examples should reward opening their proofs.
 - Extract shared foundations into **Cantrips** when multiple spells or schools need them. Make these useful imported lemmas and constructions; existing Pacts already uses the shared function-composition cantrips.
 - Choose memorable, consistent magical names for mathematical concepts. Keep the shared vocabulary and serialized translation key coherent across folios.
@@ -26,7 +26,7 @@ Lean and mathlib provide the proof checking. Arcane is a reversible presentation
 - State hypotheses and mathematical caveats accurately. For example, `Nat.card` is zero on infinite types, and orbit/coset correspondence need not be a group isomorphism.
 - Preserve strings, comments, quoted identifiers, whitespace, and literal glyphs through translation. Namespace conversion belongs in the lexer/translator.
 - Arcane namespaces and field access use Mercury, **`☿`**: `Rite☿Perfect` corresponds to `Function.Bijective`. Continue accepting legacy dotted spells. Decimal points and punctuation inside literal text retain their meaning.
-- Multi-word Arcane names use sparkles, **`✨Preserve✨the✨Binding✨`**, not TitleCase: capitalized words for spells, rituals, and namespaces; lowercase words for library functions; small words such as "the" and "of" in lower case. Frequent local hypothesis names stay single words (`sigilward`). The group inverse `⁻¹` is written as a dagger, `†`. The user wants the Arcane side to avoid looking mathematical or programmatic, so keep `:`, `/`, `{`, `}` and similar symbols replaced.
+- Multi-word Arcane names use sparkles, **`✨Preserve✨the✨Binding✨`**, not TitleCase: capitalized words for spells, rituals, and namespaces; lowercase words for library functions; small words such as "the" and "of" in lower case. Frequent local hypothesis names stay single words (`sigilward`). The group inverse `⁻¹` is written as a dagger, `†`. Named theorems carry their discoverer's name, as in `✨Lagrange's✨Measure✨of✨the✨Coven✨` or `✨Noether's✨Unveiling✨of✨the✨Image✨`; the lesson text says who they were. Words about prime numbers build on `Indivisible` (`Nat.Prime`) and `primal` (`primalward`). The user wants the Arcane side to avoid looking mathematical or programmatic, so keep `:`, `/`, `{`, `}` and similar symbols replaced.
 - Keep the translation key with exported drafts; it carries the information needed to reverse renamed identifiers.
 
 ## Interaction and visual character

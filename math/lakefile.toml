@@ -3,6 +3,11 @@ version = "0.2.0"
 defaultTargets = ["Mathematics"]
 
 [[require]]
+name = "P3Group"
+git = "https://github.com/lixiang90/p3group.git"
+rev = "822647a71aedace398cb886eb9a6b7993096e53b"
+
+[[require]]
 name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4.git"
 rev = "v4.33.1"

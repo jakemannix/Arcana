@@ -24,4 +24,17 @@ theorem transpositions_not_commute : transposition01 * transposition12 ≠ trans
       _ = 2 := h_eval_right
   exact absurd h_one_eq_two (by decide)
 
+def triangleRotation : symmetricGroupThree := transposition01 * transposition12
+
+theorem triangleRotation_vertices :
+    triangleRotation 0 = 1 ∧ triangleRotation 1 = 2 ∧ triangleRotation 2 = 0 := by decide
+
+theorem triangleRotation_pow_three : triangleRotation ^ 3 = 1 := by decide
+
+theorem orderOf_triangleRotation : orderOf triangleRotation = 3 :=
+  orderOf_eq_prime triangleRotation_pow_three (by decide)
+
+theorem triangle_symmetries : ∀ σ : symmetricGroupThree, ∃ k : Fin 3,
+    σ = triangleRotation ^ k.val ∨ σ = transposition01 * triangleRotation ^ k.val := by decide
+
 end Mathematics.GroupTheory

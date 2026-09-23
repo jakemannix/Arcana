@@ -1,0 +1,44 @@
+beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿Foundations
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Guises☿Bounded
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
+
+sanctum Arcana☿Enchantment
+
+byname ✨Sixfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 六⟫
+
+ritual ✨Turn✨the✨Sixfold✨Wheel✨ ⟡ ✨Sixfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+
+spell ✨Count✨the✨Sixfold✨Wheel✨ ⟡ Counted☿census ✨Sixfold✨Wheel✨ ≣ 六 ⇰ cast divine
+
+spell ✨Six✨Turns✨Return✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 六 ≣ 一 ⇰ cast divine
+
+spell ✨One✨Turn✨Commands✨the✨Wheel✨ ⟡ ⟁ jade✨cube ⟡ ✨Sixfold✨Wheel✨᛫ ⟒ onyx✨bead ⟡ Fetter 六᛫ jade✨cube ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ⇰ cast
+  divine
+
+spell ✨The✨Sixfold✨Period✨ ⟡ period ✨Turn✨the✨Sixfold✨Wheel✨ ≣ 六 ⇰ cast
+  channel ⟪✨Test✨the✨First✨Return✨ ⟪cast divine ⟡ 〇 ⋖ 六⟫⟫☿backward
+  fabricate
+  ❖ missile ✨Six✨Turns✨Return✨
+  ❖ summon pinch✨of✨sulfur rimward riseward
+    bind firstward ⟡ ⟁ onyx✨bead ⟡ Fetter 六᛫ 〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
+    missile firstward ⦉pinch✨of✨sulfur᛫ rimward⦊ riseward
+
+spell ✨Double✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ 三 ⇰
+  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 二 ⇰
+        ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
+    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 二 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 二⟫ ✨The✨Sixfold✨Period✨
+    ▢ ≣ 三 ⇰ cast divine
+
+spell ✨Triple✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三⟫ ≣ 二 ⇰
+  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 三 ⇰
+        ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
+    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 三 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 三⟫ ✨The✨Sixfold✨Period✨
+    ▢ ≣ 二 ⇰ cast divine
+
+spell ✨Beyond✨the✨Last✨Mark✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰
+  litany ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ ⟪四 ⧾ 五⟫ ⇰ ⟪✨Join✨the✨Ascents✨ ▢ ▢ ▢⟫☿reflect
+    ▢ ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰ cast divine
+
+spell ✨Turn✨the✨Wheel✨Backward✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨† ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ⇰ cast divine
+
+seal Arcana☿Enchantment

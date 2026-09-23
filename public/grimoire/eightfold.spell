@@ -1,0 +1,114 @@
+beckon Arcana☿Enchantment☿✨Hamilton's✨Grimoire✨
+beckon ✨Indivisible✨Cubic✨Veyrs✨☿✨The✨Exhaustive✨Census✨
+
+sanctum Arcana☿Enchantment
+
+byname ✨Eightfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 八⟫
+
+byname ✨Twin✨Fourfold✨Wheels✨ ⇰ Unchanted ⟪Clockwork 四⟫ ⨯ Unchanted ⟪Clockwork 二⟫
+
+byname ✨Three✨Mirror✨Charms✨ ⇰ Unchanted ⟪Clockwork 二⟫ ⨯ Unchanted ⟪Clockwork 二⟫ ⨯ Unchanted ⟪Clockwork 二⟫
+
+ritual ✨Turn✨the✨Eightfold✨Wheel✨ ⟡ ✨Eightfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+
+spell ✨One✨Turn✨Commands✨Eight✨ ⟡ ⟁ jade✨cube ⟡ ✨Eightfold✨Wheel✨᛫
+    ⟒ onyx✨bead ⟡ Fetter 八᛫ jade✨cube ≣ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ⇰ cast divine
+
+spell ✨No✨Earlier✨Eightfold✨Return✨ ⟡ ⟁ onyx✨bead ⟡ Fetter 八᛫
+    〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
+
+spell ✨Twin✨Wheels✨Return✨in✨Four✨ ⟡ ⟁ jade✨cube ⟡ ✨Twin✨Fourfold✨Wheels✨᛫ jade✨cube ⌃ 四 ≣ 一 ⇰ cast divine
+
+spell ✨Every✨Triple✨Charm✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Three✨Mirror✨Charms✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
+
+spell ✨Five✨Houses✨of✨Eight✨ ⟡
+    Counted☿census ✨Eightfold✨Wheel✨ ≣ 八 ⩓ Counted☿census ✨Twin✨Fourfold✨Wheels✨ ≣ 八 ⩓
+    Counted☿census ✨Three✨Mirror✨Charms✨ ≣ 八 ⩓ Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 八 ⩓
+    Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 八 ⇰ cast
+  missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨Count✨the✨Four✨Winds✨᛫ ✨Count✨Hamilton's✨Pact✨⦊
+
+ineffable ritual ✨Census✨of✨Self✨Undoing✨Spirits✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Tallies ⇰
+  Tally☿census ⧼jade✨cube ⟡ ᛰ ⧶⧶ jade✨cube ⌃ 二 ≣ 一 ⩓ jade✨cube ≢ 一⧽
+
+spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+    ⟪obsidian✨mirror ⟡ ᛰ ≃⊛ ☥⟫ ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≣ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥ ⇰ cast
+  channel Tally☿✨Census✨through✨Portal✨
+  channel Portal☿✨Restrict✨the✨Perfect✨Pact✨ obsidian✨mirror☿✨Unveil✨the✨Perfect✨Pact✨
+  summon jade✨cube
+  fabricate
+  ❖ summon ⦉doubleward᛫ motionward⦊
+    fabricate
+    ❖ litany obsidian✨mirror jade✨cube ⌃ 二 ≣ obsidian✨mirror ⟪jade✨cube ⌃ 二⟫ ⇰ ⟪✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 二⟫☿reflect
+        ▢ ≣ obsidian✨mirror 一 ⇰ sympathy obsidian✨mirror doubleward
+        ▢ ≣ 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨
+    ❖ summon reflectionward
+      channel motionward
+      channel obsidian✨mirror☿unconfounded
+      missile reflectionward☿chain obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+  ❖ summon ⦉doubleward᛫ motionward⦊
+    fabricate
+    ❖ channel obsidian✨mirror☿unconfounded
+      litany obsidian✨mirror ⟪jade✨cube ⌃ 二⟫ ≣ obsidian✨mirror jade✨cube ⌃ 二 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 二
+        ▢ ≣ 一 ⇰ doubleward
+        ▢ ≣ obsidian✨mirror 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+    ❖ summon stillward
+      channel motionward
+      missile ⟪sympathy obsidian✨mirror stillward⟫☿chain obsidian✨mirror☿✨keeps✨stillness✨
+
+spell ✨The✨Five✨Houses'✨Hidden✨Censuses✨ ⟡
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Eightfold✨Wheel✨ ≣ 一 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Twin✨Fourfold✨Wheels✨ ≣ 三 ⩓
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Three✨Mirror✨Charms✨ ≣ 七 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Four✨Winds✨Veyr✨ ≣ 五 ⩓
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Hamilton's✨Eightfold✨Pact✨ ≣ 一 ⇰ cast
+  unseal ✨Census✨of✨Self✨Undoing✨Spirits✨
+  purify solely ⟮Tally☿✨Two✨Ways✨to✨Take✨the✨Census✨⟯
+  missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨Count✨the✨Winds'✨Self✨Undoing✨Spirits✨᛫ ✨Count✨Hamilton's✨Self✨Undoing✨Spirits✨⦊
+
+spell ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+    ⟪tallyward ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≢ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥⟫ ⟡ ⫬ Inhabited ⟪ᛰ ≃⊛ ☥⟫ ⇰ cast
+  unpack ⦉obsidian✨mirror⦊
+  missile tallyward ⟪✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ obsidian✨mirror⟫
+
+spell ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨ ⟡ ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
+  unpack ⦉obsidian✨mirror⦊
+  channel ✨Hamilton's✨Discord✨
+  litany ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ≣ obsidian✨mirror ⟪obsidian✨mirror☿reflect ✨Hamilton's✨First✨Spirit✨ ⊛ obsidian✨mirror☿reflect ✨Hamilton's✨Second✨Spirit✨⟫ ⇰ cast purify
+    ▢ ≣ obsidian✨mirror ⟪obsidian✨mirror☿reflect ✨Hamilton's✨Second✨Spirit✨ ⊛ obsidian✨mirror☿reflect ✨Hamilton's✨First✨Spirit✨⟫ ⇰ sympathy obsidian✨mirror ⟪✨Bindings✨Commute✨ ▢ ▢⟫
+    ▢ ≣ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ⇰ cast purify
+
+spell ✨The✨Five✨Houses✨Are✨Distinct✨ ⟡
+    ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Twin✨Fourfold✨Wheels✨ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Twin✨Fourfold✨Wheels✨ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Twin✨Fourfold✨Wheels✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Three✨Mirror✨Charms✨ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Three✨Mirror✨Charms✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Four✨Winds✨Veyr✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
+  wrest ⦉wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⦊ ⇰ ✨The✨Five✨Houses'✨Hidden✨Censuses✨
+  hone ⦉?▢᛫ ?▢᛫ ?▢᛫ ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢⦊
+  everywhere
+    channel ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨
+    purify solely ⟮wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⟯
+    divine
+
+spell ✨The✨Eightfold✨Way✨Admits✨No✨Sixth✨House✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟪sizeward ⟡ Tally☿census ᛰ ≣ 八⟫ ⟡
+    Inhabited ⟪ᛰ ≃⊛ ✨Eightfold✨Wheel✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩔
+    Inhabited ⟪ᛰ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩔
+    Inhabited ⟪ᛰ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
+  bind ⟡ Witnessed ⟪Tally☿Indivisible 二⟫ ⇰ ⦉cast divine⦊
+  bind ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ ⟪cast transmute ⟮sizeward⟯⁂ divine⟫
+  dub ⟡ Counted ᛰ ⇰ Counted☿✨Enumerate✨the✨Finite✨ ᛰ
+  bind cubeward ⟡ Tally☿census ᛰ ≣ 二 ⌃ 三 ⇰ sizeward☿chain ⟪cast divine⟫
+  rend ✨Indivisible✨Cubic✨Veyrs✨☿exhaustive✨census 二 ᛰ cubeward whence
+    wheelward ⫽ twinward ⫽ toggleward ⫽ oddward ⫽ oddward ⫽ doubleward ⫽ hamiltonward
+  ❖ missile Either☿choose✨left wheelward
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨left twinward⟫
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left toggleward⟫⟫
+  ❖ missile ⟪oddward☿一 mirror⟫☿dismiss
+  ❖ missile ⟪oddward☿一 mirror⟫☿dismiss
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left doubleward☿二⟫⟫⟫
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right hamiltonward☿二⟫⟫⟫
+
+seal Arcana☿Enchantment

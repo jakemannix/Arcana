@@ -47,3 +47,6 @@ The active product is now Enchantment/group theory, not the initial seven toy ex
 See [[decisions/mathematical-names]] for mathematical Lean naming, namespace aliases in saved keys, and material-component spell variables.
 
 See [[decisions/arcana-vocabulary]] for the Arcana rename, rune carriers, and the user-selected Veyr family. The human-facing vocabulary and mathematical inheritance guide is `grimoire/VOCABULARY.md`. The npm package is `arcana`; the Lean package is `arcana_grimoire`; the downloadable translation key is `public/grimoire/arcana.key.json`.
+
+
+The finite-group expansion adds six Enchantment folios, including the fully proved classification of order-eight groups. See [[features/graduate-grimoire]] for the pinned P3Group proof dependency, dependency precedence, provenance checks, and exact classification guarantees.

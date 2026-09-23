@@ -1,0 +1,52 @@
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Mirror✨Veyrs✨
+
+sanctum Arcana☿Enchantment
+
+byname ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨ 五
+
+ritual ✨Turn✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
+
+ritual ✨Mirror✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
+
+ritual ✨Thread✨of✨the✨Star✨ ⟪jade✨cube silver✨bell ⟡ Clockwork 五⟫ ⟡ Verity ⇰ silver✨bell ≣ jade✨cube ⧾ 二 ⩔ silver✨bell ≣ jade✨cube ⧿ 二
+
+ritual ✨Command✨the✨Star✨ ⟪silk✨cord ⟡ ✨Five✨Pointed✨Seal✨⟫ ⟪jade✨cube ⟡ Clockwork 五⟫ ⟡ Clockwork 五 ⇰
+  augur silk✨cord whence
+  ⫽ ✨Mirror✨Veyr✨☿amber✨disc opal✨dust ⇉ jade✨cube ⧾ opal✨dust
+  ⫽ ✨Mirror✨Veyr✨☿mirror✨shard opal✨dust ⇉ ⧿jade✨cube ⧿ opal✨dust
+
+spell ✨Count✨the✨Star's✨Commands✨ ⟡ Counted☿census ✨Five✨Pointed✨Seal✨ ≣ 一〇 ⇰
+  litany Counted☿census ✨Five✨Pointed✨Seal✨ ≣ 二 ⊛ 五 ⇰ ✨Mirror✨Veyr✨☿census
+    ▢ ≣ 一〇 ⇰ cast divine
+
+spell ✨Five✨Turns✨Return✨ ⟡ ✨Turn✨the✨Star✨ ⌃ 五 ≣ 一 ⇰ ✨Mirror✨Veyr✨☿✨One✨Circuit✨Returns✨
+
+spell ✨The✨Star's✨Turning✨Period✨ ⟡ period ✨Turn✨the✨Star✨ ≣ 五 ⇰ ✨Mirror✨Veyr✨☿✨The✨Circuit's✨Period✨
+
+spell ✨The✨Star's✨Mirror✨Period✨ ⟡ period ✨Mirror✨the✨Star✨ ≣ 二 ⇰ ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
+
+spell ✨Mirrors✨Reverse✨the✨Star✨ ⟡ ✨Mirror✨the✨Star✨ ⊛ ✨Turn✨the✨Star✨ ⊛ ✨Mirror✨the✨Star✨ ≣ ✨Turn✨the✨Star✨† ⇰
+  litany ✨Mirror✨the✨Star✨ ⊛ ✨Turn✨the✨Star✨ ⊛ ✨Mirror✨the✨Star✨ ≣ ✨Mirror✨Veyr✨☿amber✨disc 四 ⇰ cast divine
+    ▢ ≣ ✨Turn✨the✨Star✨† ⇰ cast divine
+
+spell ✨Silence✨Leaves✨the✨Star✨Still✨ ⟡ ⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ 一 jade✨cube ≣ jade✨cube ⇰ cast divine
+
+spell ✨Compose✨the✨Star's✨Commands✨ ⟡ ⟁ silk✨cord ward ⟡ ✨Five✨Pointed✨Seal✨᛫ ⟁ jade✨cube ⟡ Clockwork 五᛫
+    ✨Command✨the✨Star✨ ⟪silk✨cord ⊛ ward⟫ jade✨cube ≣ ✨Command✨the✨Star✨ silk✨cord ⟪✨Command✨the✨Star✨ ward jade✨cube⟫ ⇰ cast divine
+
+spell ✨The✨Star✨Conceals✨No✨Command✨ ⟡ ⟁ silk✨cord ward ⟡ ✨Five✨Pointed✨Seal✨᛫
+    ⟪⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ silk✨cord jade✨cube ≣ ✨Command✨the✨Star✨ ward jade✨cube⟫ ↝ silk✨cord ≣ ward ⇰ cast divine
+
+spell ✨Preserve✨the✨Star's✨Threads✨ ⟡ ⟁ silk✨cord ⟡ ✨Five✨Pointed✨Seal✨᛫ ⟁ jade✨cube silver✨bell ⟡ Clockwork 五᛫
+    ✨Thread✨of✨the✨Star✨ ⟪✨Command✨the✨Star✨ silk✨cord jade✨cube⟫ ⟪✨Command✨the✨Star✨ silk✨cord silver✨bell⟫ ↭ ✨Thread✨of✨the✨Star✨ jade✨cube silver✨bell ⇰ cast
+  unseal ✨Thread✨of✨the✨Star✨
+  divine
+
+spell ✨Skip✨a✨Tip✨to✨Trace✨the✨Star✨ ⟡ ✨Thread✨of✨the✨Star✨ 〇 二 ⩓ ⫬✨Thread✨of✨the✨Star✨ 〇 一 ⇰ cast
+  unseal ✨Thread✨of✨the✨Star✨
+  divine
+
+spell ✨All✨Commands✨of✨the✨Star✨ ⟡ ⟁ silk✨cord ⟡ ✨Five✨Pointed✨Seal✨᛫ ⟒ onyx✨bead ⟡ Fetter 五᛫
+    silk✨cord ≣ ✨Turn✨the✨Star✨ ⌃ onyx✨bead☿core ⩔ silk✨cord ≣ ✨Mirror✨the✨Star✨ ⊛ ✨Turn✨the✨Star✨ ⌃ onyx✨bead☿core ⇰ cast divine
+
+seal Arcana☿Enchantment

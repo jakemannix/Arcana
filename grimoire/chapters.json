@@ -90,13 +90,244 @@
     "references": [{"path":"Mathlib/Algebra/Group/Action/End.lean","symbol":"MulAction.toEndHom"},{"path":"Mathlib/GroupTheory/Perm/Subgroup.lean","symbol":"Equiv.Perm.subgroupOfMulAction"},{"path":"Mathlib/Algebra/Group/Subgroup/Ker.lean","symbol":"MonoidHom.ofInjective"}]
   },
   {
-    "id": "permutations", "school": "Enchantment", "title": "Three dancing sigils", "subtitle": "A concrete noncommutative group: S₃", "file": "Mathematics/GroupTheory/Permutations.lean", "level": "IV · Field exercise",
-    "summary": "Enchant three labels by permuting them. There are six symmetries. A swap undoes itself, but the order of two different swaps matters.",
-    "meaning": "S₃ = Perm({0,1,2}). It has order 6. If a = (0 1) and b = (1 2), then a² = 1 while ab ≠ ba.",
-    "hypotheses": "The group is exactly Equiv.Perm (Fin 3), using function composition as its multiplication. These statements are checked finite computations, not sampled tests.",
-    "proofIdea": "Lean's decide tactic evaluates the finite facts, such as the count of six symmetries. A swap undoes itself by a library lemma. For noncommutativity, suppose the two orders agree. Then both sides send 0 to the same place. But one sends 0 to 1 and the other sends 0 to 2, and 1 ≠ 2. Try to make the two swaps the same: the clash disappears, though the browser alone will not check your edit.",
-    "prerequisites": ["pacts", "lagrange"], "concepts": ["Perm", "Fin", "swap", "symmetricGroupThree", "transposition01", "transposition12"],
-    "references": [{"path":"Mathlib/GroupTheory/Perm/Fin.lean","symbol":"Equiv.Perm"},{"path":"Mathlib/Logic/Equiv/Fin/Basic.lean","symbol":"Fin"}]
+    "id": "permutations",
+    "school": "Enchantment",
+    "title": "Three dancing sigils",
+    "subtitle": "S₃: the symmetries of an equilateral triangle",
+    "file": "Mathematics/GroupTheory/Permutations.lean",
+    "level": "IV · Field exercise",
+    "summary": "Enchant the three vertices of an equilateral triangle. Every shuffle is a rigid symmetry: three rotations and three reflections. Two mirrors composed in opposite orders turn the triangle in opposite directions.",
+    "meaning": "S₃ = Perm({0,1,2}) is the symmetry group of an equilateral triangle. Each transposition reflects across the axis through the remaining vertex and the opposite edge’s midpoint. With a = (0 1) and b = (1 2), the product r = ab cycles 0 → 1 → 2 → 0 and has order 3. Every symmetry is rᵏ or arᵏ for k = 0,1,2.",
+    "hypotheses": "The group is Equiv.Perm (Fin 3), using function composition (rightmost first). These are exhaustive finite computations on labeled vertices. The equilateral triangle explains why all six permutations are geometric symmetries; this folio formalizes the permutations rather than plane geometry.",
+    "proofIdea": "A swap undoes itself. To distinguish ab from ba, evaluate both at vertex 0: one sends it to 1, the other to 2. Then compute the full vertex cycle and its third power, prove its order is exactly 3, and enumerate all permutations as one of three rotations or three reflected rotations.",
+    "prerequisites": [
+      "pacts",
+      "lagrange"
+    ],
+    "concepts": [
+      "Perm",
+      "Fin",
+      "swap",
+      "symmetricGroupThree",
+      "transposition01",
+      "transposition12",
+      "triangleRotation"
+    ],
+    "references": [
+      {
+        "path": "Mathlib/GroupTheory/Perm/Fin.lean",
+        "symbol": "Equiv.Perm"
+      },
+      {
+        "path": "Mathlib/Logic/Equiv/Fin/Basic.lean",
+        "symbol": "Fin"
+      }
+    ]
+  },
+  {
+    "id": "cyclic",
+    "school": "Enchantment",
+    "title": "The sixfold turning",
+    "subtitle": "Cyclic groups: generators, powers, and inverses",
+    "file": "Mathematics/GroupTheory/CyclicComputations.lean",
+    "level": "IV · Field exercises",
+    "summary": "Turn the sixfold dial. One step visits every mark; two steps and three steps trace smaller circles.",
+    "meaning": "C₆ is addition modulo 6, written multiplicatively. Its generator r has order 6; r² has order 3 and r³ has order 2. We compute r⁴r⁵ = r³ and r⁻¹ = r⁵, and exhibit every element as a power of r.",
+    "hypotheses": "Multiplicative (ZMod 6) changes notation: multiplication is modular addition, the identity is the residue 0, and powers are repeated addition.",
+    "proofIdea": "Finite enumeration proves generation and rules out every earlier positive return. The power-order formula then gives ord(rᵏ) = 6/gcd(6,k). The wraparound calculation combines exponents before reducing modulo 6. Every computation is checked by Lean’s kernel.",
+    "prerequisites": [
+      "lagrange"
+    ],
+    "concepts": [
+      "cyclicSix",
+      "cyclicSixStep",
+      "ZMod",
+      "Multiplicative",
+      "orderOf"
+    ],
+    "references": [
+      {
+        "path": "Mathlib/Data/ZMod/Basic.lean",
+        "symbol": "ZMod"
+      },
+      {
+        "path": "Mathlib/GroupTheory/OrderOfElement.lean",
+        "symbol": "orderOf_pow"
+      }
+    ]
+  },
+  {
+    "id": "klein",
+    "school": "Enchantment",
+    "title": "The forked charm",
+    "subtitle": "C₄ and the Klein four-group: equal size, different laws",
+    "file": "Mathematics/GroupTheory/KleinComputations.lean",
+    "level": "IV · Field exercises",
+    "summary": "Four marks admit two enchantments. One follows a single circuit; the other has two independent toggles, and every motion undoes itself.",
+    "meaning": "C₄ and V₄ = C₂ × C₂ both have four elements. In V₄ every element squares to 1; a generator of C₄ does not. Therefore the groups are not isomorphic. V₄ is named for Felix Klein.",
+    "hypotheses": "The two groups are explicit finite types. V₄ uses pairs of residues modulo 2; its product adds each coordinate separately.",
+    "proofIdea": "Compute the toggle product and all squares. If an isomorphism existed, preservation of powers would send the square of the C₄ generator to 1. Injectivity would force that square to be 1 already, contradicting the explicit computation.",
+    "prerequisites": [
+      "cyclic",
+      "pacts"
+    ],
+    "concepts": [
+      "cyclicFour",
+      "kleinFour",
+      "kleinFirst",
+      "kleinSecond",
+      "MulEquiv"
+    ],
+    "references": [
+      {
+        "path": "Mathlib/Algebra/Group/Equiv/Defs.lean",
+        "symbol": "MulEquiv"
+      },
+      {
+        "path": "Mathlib/Data/ZMod/Basic.lean",
+        "symbol": "ZMod"
+      }
+    ]
+  },
+  {
+    "id": "square",
+    "school": "Enchantment",
+    "title": "The mirror of four winds",
+    "subtitle": "The eight symmetries of a square",
+    "file": "Mathematics/GroupTheory/DihedralComputations.lean",
+    "level": "IV · Field exercises",
+    "summary": "A quarter-turn and a mirror generate eight commands. Look through the mirror, turn, and look back: the turning reverses.",
+    "meaning": "D₄ has order 8: four rotations rᵏ and four reflections srᵏ. Its generators satisfy r⁴ = s² = 1 and srs = r⁻¹. Rotation and reflection do not commute. Here the subscript counts polygon vertices; some texts call this same group D₈.",
+    "hypotheses": "DihedralGroup 4 is the standard algebraic model for the rigid symmetries of a square. The folio computes in this model; it does not formalize Euclidean geometry.",
+    "proofIdea": "Mathlib supplies rotation and reflection constructors. We compute their orders and conjugation, enumerate all eight normal forms, and distinguish rs from sr. Multiplying two chosen reflections then produces a rotation.",
+    "prerequisites": [
+      "permutations",
+      "cyclic"
+    ],
+    "concepts": [
+      "squareSymmetries",
+      "squareRotation",
+      "squareReflection",
+      "DihedralGroup"
+    ],
+    "references": [
+      {
+        "path": "Mathlib/GroupTheory/SpecificGroups/Dihedral.lean",
+        "symbol": "DihedralGroup"
+      },
+      {
+        "path": "Mathlib/GroupTheory/SpecificGroups/Dihedral.lean",
+        "symbol": "orderOf_r_one"
+      }
+    ]
+  },
+  {
+    "id": "pentagram",
+    "school": "Enchantment",
+    "title": "The five-pointed seal",
+    "subtitle": "The ten symmetries of a regular pentagram",
+    "file": "Mathematics/GroupTheory/Pentagram.lean",
+    "level": "IV · Field exercises",
+    "summary": "Walk every second point to draw the star. Five turns and five mirrors preserve its edges; no arbitrary shuffle will do.",
+    "meaning": "A regular pentagram has the same dihedral symmetry group D₅ as its surrounding regular pentagon, of order 10. Label the five tips clockwise by ZMod 5 and join x to x ± 2. Rotations and reflections act faithfully on the tips and preserve this star adjacency.",
+    "hypotheses": "The formal model uses the five outer tips as vertices; interior crossings are not extra labeled vertices. It proves a faithful D₅ action preserving star edges. The geometric interpretation refers to a regular pentagram, not every five-pointed drawing.",
+    "proofIdea": "Use rᵢ(x) = x + i and sᵢ(x) = −x − i, matching mathlib’s multiplication convention. Finite computation checks identity, composition, faithfulness, and adjacency preservation for every group element and pair of tips. It also checks the generators’ orders, mirror conjugation, and all ten normal forms.",
+    "prerequisites": [
+      "square",
+      "orbits"
+    ],
+    "concepts": [
+      "pentagramSymmetries",
+      "starRotation",
+      "starReflection",
+      "starAdjacent",
+      "starAction"
+    ],
+    "references": [
+      {
+        "path": "Mathlib/GroupTheory/SpecificGroups/Dihedral.lean",
+        "symbol": "DihedralGroup"
+      },
+      {
+        "path": "Mathlib/GroupTheory/SpecificGroups/Dihedral.lean",
+        "symbol": "orderOf_sr"
+      }
+    ]
+  },
+  {
+    "id": "quaternions",
+    "school": "Enchantment",
+    "title": "Hamilton’s eightfold pact",
+    "subtitle": "The quaternion group Q₈: signs, order, and a unique involution",
+    "file": "Mathematics/GroupTheory/HamiltonQuaternions.lean",
+    "level": "IV · Field exercises",
+    "summary": "Hamilton’s three spirits i, j, and k share the same shadow. Reverse their order and the sign changes; all roads return after four steps.",
+    "meaning": "Q₈ = {±1, ±i, ±j, ±k} is the finite quaternion group. William Rowan Hamilton’s rules give i² = j² = k² = ijk = −1 and ij = k, while ji = −k. This is a subgroup of the units of his quaternion algebra, not the whole infinite algebra.",
+    "hypotheses": "QuaternionGroup 2 has eight elements. We name its standard generators i and j, define k = ij, and realize the sign −1 as a central group element. Negating q means multiplying by that element.",
+    "proofIdea": "Compute the three squares and both multiplication orders, then derive ijk = −1. Enumerate all elements to prove that −1 is central, every fourth power is 1, and −1 is the unique nonidentity element squaring to 1. The square’s symmetry group has five such involutions—a clue for the classification ahead.",
+    "prerequisites": [
+      "square",
+      "klein"
+    ],
+    "concepts": [
+      "quaternionEight",
+      "quaternionI",
+      "quaternionJ",
+      "quaternionK",
+      "quaternionMinusOne"
+    ],
+    "references": [
+      {
+        "path": "Mathlib/GroupTheory/SpecificGroups/Quaternion.lean",
+        "symbol": "QuaternionGroup"
+      }
+    ]
+  },
+  {
+    "id": "eightfold",
+    "school": "Enchantment",
+    "title": "The Eightfold Way",
+    "subtitle": "Exactly five groups of order eight, up to isomorphism",
+    "file": "Mathematics/GroupTheory/EightfoldWay.lean",
+    "level": "V · Classification",
+    "summary": "Eight members, five possible laws. Count the self-undoing spirits, separate the five houses, and prove that no sixth house can exist.",
+    "meaning": "Every group G with |G| = 8 is isomorphic to C₈, C₄ × C₂, C₂ × C₂ × C₂, D₄, or Q₈. All five have eight elements and are pairwise non-isomorphic. Their numbers of involutions (nonidentity x with x² = 1) are respectively 1, 3, 7, 5, and 1. C₈ is commutative and Q₈ is not, separating the only repeated count. “Eightfold” names the common order, not the number of isomorphism classes.",
+    "hypotheses": "G is an arbitrary group, with the sole size hypothesis Nat.card G = 8. No multiplication table or classification assumption is supplied. This positive cardinality implies finiteness. Exhaustiveness specializes the pinned P3Group theorem at the prime 2; its entire proof dependency is checked by Lean and included in the axiom audit.",
+    "proofIdea": "First compute all five cardinalities, cyclic generation, power identities, and involution counts. An explicit equivalence transports involutions across any group isomorphism, so unequal counts forbid isomorphisms; commutativity separates C₈ from Q₈. For exhaustiveness, P3Group splits into abelian and nonabelian cases. The abelian structure theorem leaves partitions 3, 2+1, and 1+1+1, giving the three abelian groups. In the nonabelian case, choose x of order 4 and y outside its cyclic subgroup. Conjugation by y inverts x, and either y² = 1 (the square group) or y² = x² (Hamilton’s group). The upstream proof constructs the resulting isomorphisms. Our final spell specializes the full theorem to 2³ and eliminates the odd-prime branches.",
+    "prerequisites": [
+      "cyclic",
+      "klein",
+      "quaternions"
+    ],
+    "concepts": [
+      "cyclicEight",
+      "fourTimesTwo",
+      "threeToggles",
+      "involutionCount",
+      "eightfold_pairwise_nonisomorphic",
+      "order_eight_classification"
+    ],
+    "references": [
+      {
+        "path": "P3Group/Classification.lean",
+        "symbol": "P3Group.classification",
+        "package": "P3Group"
+      },
+      {
+        "path": "P3Group/AbelianCase.lean",
+        "symbol": "P3Group.abelian_p3_classification",
+        "package": "P3Group"
+      },
+      {
+        "path": "P3Group/NonAbelianCase.lean",
+        "symbol": "P3Group.nonabelian_8_classification",
+        "package": "P3Group"
+      },
+      {
+        "path": "Mathlib/SetTheory/Cardinal/Finite.lean",
+        "symbol": "Nat.card_congr"
+      }
+    ]
   },
   {
     "id": "adjoints", "school": "Transmutation", "title": "The two hands of Disenchantment", "subtitle": "Free monoids and units: the left and right adjoints of forgetful functors", "file": "Mathematics/CategoryTheory/ForgetfulAdjoints.lean", "level": "I · Foundations",

@@ -9,5 +9,11 @@ import Mathematics.GroupTheory.SimpleGroups
 import Mathematics.GroupTheory.GroupActions
 import Mathematics.GroupTheory.Cayley
 import Mathematics.GroupTheory.Permutations
+import Mathematics.GroupTheory.CyclicComputations
+import Mathematics.GroupTheory.KleinComputations
+import Mathematics.GroupTheory.DihedralComputations
+import Mathematics.GroupTheory.Pentagram
+import Mathematics.GroupTheory.HamiltonQuaternions
+import Mathematics.GroupTheory.EightfoldWay
 import Mathematics.CategoryTheory.ForgetfulAdjoints
 import Mathematics.CategoryTheory.Yoneda

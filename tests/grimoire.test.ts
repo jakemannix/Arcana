@@ -11,13 +11,21 @@ const file = (path: string) => readFileSync(new URL('../' + path, import.meta.ur
 const hash = (source: string) => createHash('sha256').update(source).digest('hex');
 
 test('verification evidence covers current source, vocabulary, and metadata', () => {
+  assert.equal(provenance.manifestHash, hash(file('math/lake-manifest.json')));
+  assert.equal(provenance.lakefileHash, hash(file('math/lakefile.toml')));
+  assert.equal(provenance.verifierHash, hash(file('scripts/verify-grimoire.ts')));
+  assert.equal(provenance.leanToolchain, file('math/lean-toolchain').trim());
+  const manifest = JSON.parse(file('math/lake-manifest.json'));
+  for (const [name, revision] of Object.entries(provenance.dependencyRevisions)) {
+    assert.equal(revision, manifest.packages.find((p: { name: string }) => p.name === name).rev);
+  }
   assert.equal(provenance.translatorHash, hash(file('src/translator.ts')));
   assert.equal(provenance.tablesHash, hash(file('src/tables.json')));
   assert.equal(provenance.metadataHash, hash(file('grimoire/chapters.json')));
   assert.equal(provenance.lexiconHash, hash(file('grimoire/lexicon.json')));
-  assert.equal(provenance.verification.declarationCount, 84);
+  assert.equal(provenance.verification.declarationCount, 174);
   assert.deepEqual(new Set(folios.map(f => f.school)), new Set(['Cantrips', 'Enchantment', 'Transmutation']));
-  assert.equal(folios.length, 13);
+  assert.equal(folios.length, 19);
 });
 
 test('checked folios use mathematical Lean names and expose reversible material components', () => {
@@ -87,4 +95,18 @@ test('folding retains multiline hypotheses and the theorem statement', () => {
   const range = proofFoldRange(state, 0)!;
   assert.equal(state.sliceDoc(range.from, range.to), ' by\n  exact h');
   assert.match(state.sliceDoc(0, range.from), /\(h : x = 1\) : x = 1 :=$/);
+});
+
+test('the Eightfold Way ships an audited exhaustive classification and distinct representatives', () => {
+  const entry = folios.find(f => f.id === 'eightfold')!;
+  const audit = file('public/grimoire/axioms.txt');
+  for (const theorem of ['eightfold_cardinalities', 'eightfold_involution_counts',
+    'eightfold_pairwise_nonisomorphic', 'order_eight_classification']) {
+    const name = 'Mathematics.GroupTheory.' + theorem;
+    assert.ok(entry.declarations.includes(name));
+    assert.ok(audit.includes("'" + name + "' depends on axioms: [propext, Classical.choice, Quot.sound]"));
+  }
+  assert.match(entry.lean, /theorem order_eight_classification \(G : Type\*\) \[Group G\] \(h_card : Nat.card G = 8\)/);
+  assert.ok(entry.references.some(ref => ref.symbol === 'P3Group.classification' &&
+    ref.url.includes('/lixiang90/p3group/blob/' + provenance.dependencyRevisions.P3Group + '/')));
 });

@@ -1,6 +1,6 @@
 # Arcana · The grimoire
 
-12 lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All 84 declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
+18 lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All 174 declarations compile against Lean/mathlib v4.33.1, with the pinned P3Group classification library for the Eightfold Way. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
 
 ## Threads & mirrors
 
@@ -627,15 +627,15 @@ seal Arcana☿Enchantment
 
 ## Three dancing sigils
 
-*A concrete noncommutative group: S₃*
+*S₃: the symmetries of an equilateral triangle*
 
-Enchant three labels by permuting them. There are six symmetries. A swap undoes itself, but the order of two different swaps matters.
+Enchant the three vertices of an equilateral triangle. Every shuffle is a rigid symmetry: three rotations and three reflections. Two mirrors composed in opposite orders turn the triangle in opposite directions.
 
-**Mathematical meaning.** S₃ = Perm({0,1,2}). It has order 6. If a = (0 1) and b = (1 2), then a² = 1 while ab ≠ ba.
+**Mathematical meaning.** S₃ = Perm({0,1,2}) is the symmetry group of an equilateral triangle. Each transposition reflects across the axis through the remaining vertex and the opposite edge’s midpoint. With a = (0 1) and b = (1 2), the product r = ab cycles 0 → 1 → 2 → 0 and has order 3. Every symmetry is rᵏ or arᵏ for k = 0,1,2.
 
-**Hypotheses.** The group is exactly Equiv.Perm (Fin 3), using function composition as its multiplication. These statements are checked finite computations, not sampled tests.
+**Hypotheses.** The group is Equiv.Perm (Fin 3), using function composition (rightmost first). These are exhaustive finite computations on labeled vertices. The equilateral triangle explains why all six permutations are geometric symmetries; this folio formalizes the permutations rather than plane geometry.
 
-**Proof idea.** Lean's decide tactic evaluates the finite facts, such as the count of six symmetries. A swap undoes itself by a library lemma. For noncommutativity, suppose the two orders agree. Then both sides send 0 to the same place. But one sends 0 to 1 and the other sends 0 to 2, and 1 ≠ 2. Try to make the two swaps the same: the clash disappears, though the browser alone will not check your edit.
+**Proof idea.** A swap undoes itself. To distinguish ab from ba, evaluate both at vertex 0: one sends it to 1, the other to 2. Then compute the full vertex cycle and its third power, prove its order is exactly 3, and enumerate all permutations as one of three rotations or three reflected rotations.
 
 ```text
 beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Shuffling☿Fetter
@@ -664,12 +664,500 @@ spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange�
       ▢ ≣ 二 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
+ritual ✨Threefold✨Turn✨ ⟡ ✨Three✨Sigils✨ ⇰ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨
+
+spell ✨Follow✨the✨Three✨Sigils✨ ⟡
+    ✨Threefold✨Turn✨ 〇 ≣ 一 ⩓ ✨Threefold✨Turn✨ 一 ≣ 二 ⩓ ✨Threefold✨Turn✨ 二 ≣ 〇 ⇰ cast divine
+
+spell ✨Three✨Turns✨Return✨ ⟡ ✨Threefold✨Turn✨ ⌃ 三 ≣ 一 ⇰ cast divine
+
+spell ✨The✨Threefold✨Period✨ ⟡ period ✨Threefold✨Turn✨ ≣ 三 ⇰
+  ✨Indivisible✨Return✨ ✨Three✨Turns✨Return✨ ⟪cast divine⟫
+
+spell ✨All✨Dances✨of✨the✨Triangle✨ ⟡ ⟁ raven✨feather ⟡ ✨Three✨Sigils✨᛫ ⟒ onyx✨bead ⟡ Fetter 三᛫
+    raven✨feather ≣ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⩔ raven✨feather ≣ ✨First✨Exchange✨ ⊛ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⇰ cast divine
+
 seal Arcana☿Enchantment
 ```
 
 [Lean source](../math/Mathematics/GroupTheory/Permutations.lean) · [Arcana source](../public/grimoire/permutations.spell)
 
 [Equiv.Perm](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Perm/Fin.lean) · [Fin](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Logic/Equiv/Fin/Basic.lean)
+
+## The sixfold turning
+
+*Cyclic groups: generators, powers, and inverses*
+
+Turn the sixfold dial. One step visits every mark; two steps and three steps trace smaller circles.
+
+**Mathematical meaning.** C₆ is addition modulo 6, written multiplicatively. Its generator r has order 6; r² has order 3 and r³ has order 2. We compute r⁴r⁵ = r³ and r⁻¹ = r⁵, and exhibit every element as a power of r.
+
+**Hypotheses.** Multiplicative (ZMod 6) changes notation: multiplication is modular addition, the identity is the residue 0, and powers are repeated addition.
+
+**Proof idea.** Finite enumeration proves generation and rules out every earlier positive return. The power-order formula then gives ord(rᵏ) = 6/gcd(6,k). The wraparound calculation combines exponents before reducing modulo 6. Every computation is checked by Lean’s kernel.
+
+```text
+beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿Foundations
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Guises☿Bounded
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
+
+sanctum Arcana☿Enchantment
+
+byname ✨Sixfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 六⟫
+
+ritual ✨Turn✨the✨Sixfold✨Wheel✨ ⟡ ✨Sixfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+
+spell ✨Count✨the✨Sixfold✨Wheel✨ ⟡ Counted☿census ✨Sixfold✨Wheel✨ ≣ 六 ⇰ cast divine
+
+spell ✨Six✨Turns✨Return✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 六 ≣ 一 ⇰ cast divine
+
+spell ✨One✨Turn✨Commands✨the✨Wheel✨ ⟡ ⟁ jade✨cube ⟡ ✨Sixfold✨Wheel✨᛫ ⟒ onyx✨bead ⟡ Fetter 六᛫ jade✨cube ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ⇰ cast
+  divine
+
+spell ✨The✨Sixfold✨Period✨ ⟡ period ✨Turn✨the✨Sixfold✨Wheel✨ ≣ 六 ⇰ cast
+  channel ⟪✨Test✨the✨First✨Return✨ ⟪cast divine ⟡ 〇 ⋖ 六⟫⟫☿backward
+  fabricate
+  ❖ missile ✨Six✨Turns✨Return✨
+  ❖ summon pinch✨of✨sulfur rimward riseward
+    bind firstward ⟡ ⟁ onyx✨bead ⟡ Fetter 六᛫ 〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
+    missile firstward ⦉pinch✨of✨sulfur᛫ rimward⦊ riseward
+
+spell ✨Double✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ 三 ⇰
+  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 二 ⇰
+        ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
+    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 二 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 二⟫ ✨The✨Sixfold✨Period✨
+    ▢ ≣ 三 ⇰ cast divine
+
+spell ✨Triple✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三⟫ ≣ 二 ⇰
+  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 三 ⇰
+        ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
+    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 三 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 三⟫ ✨The✨Sixfold✨Period✨
+    ▢ ≣ 二 ⇰ cast divine
+
+spell ✨Beyond✨the✨Last✨Mark✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰
+  litany ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ ⟪四 ⧾ 五⟫ ⇰ ⟪✨Join✨the✨Ascents✨ ▢ ▢ ▢⟫☿reflect
+    ▢ ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰ cast divine
+
+spell ✨Turn✨the✨Wheel✨Backward✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨† ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ⇰ cast divine
+
+seal Arcana☿Enchantment
+```
+
+[Lean source](../math/Mathematics/GroupTheory/CyclicComputations.lean) · [Arcana source](../public/grimoire/cyclic.spell)
+
+[ZMod](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/ZMod/Basic.lean) · [orderOf_pow](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/OrderOfElement.lean#L996)
+
+## The forked charm
+
+*C₄ and the Klein four-group: equal size, different laws*
+
+Four marks admit two enchantments. One follows a single circuit; the other has two independent toggles, and every motion undoes itself.
+
+**Mathematical meaning.** C₄ and V₄ = C₂ × C₂ both have four elements. In V₄ every element squares to 1; a generator of C₄ does not. Therefore the groups are not isomorphic. V₄ is named for Felix Klein.
+
+**Hypotheses.** The two groups are explicit finite types. V₄ uses pairs of residues modulo 2; its product adds each coordinate separately.
+
+**Proof idea.** Compute the toggle product and all squares. If an isomorphism existed, preservation of powers would send the square of the C₄ generator to 1. Injectivity would force that square to be 1 already, contradicting the explicit computation.
+
+```text
+beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿Foundations
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Guises☿Bounded
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Portal☿Names
+
+sanctum Arcana☿Enchantment
+
+byname ✨Fourfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 四⟫
+
+byname ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted ⟪Clockwork 二 ⨯ Clockwork 二⟫
+
+ritual ✨Turn✨the✨Fourfold✨Wheel✨ ⟡ ✨Fourfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+
+ritual ✨First✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪一᛫ 〇⟫
+
+ritual ✨Second✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪〇᛫ 一⟫
+
+spell ✨Count✨the✨Fourfold✨Wheel✨ ⟡ Counted☿census ✨Fourfold✨Wheel✨ ≣ 四 ⇰ cast divine
+
+spell ✨Count✨Klein's✨Charm✨ ⟡ Counted☿census ✨Klein's✨Forked✨Charm✨ ≣ 四 ⇰ cast divine
+
+spell ✨Join✨the✨Forks✨ ⟡ ✨First✨Fork✨ ⊛ ✨Second✨Fork✨ ≣ Unchanted☿unchant ⟪一᛫ 一⟫ ⇰ cast
+  divine
+
+spell ✨Klein's✨Harmony✨ ⟡ ⟁ jade✨cube silver✨bell ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⊛ silver✨bell ≣ silver✨bell ⊛ jade✨cube ⇰ cast divine
+
+spell ✨Every✨Fork✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
+
+spell ✨Two✨Turns✨Have✨Not✨Returned✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二 ≢ 一 ⇰ cast divine
+
+spell ✨Four✨Turns✨Return✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 四 ≣ 一 ⇰ cast divine
+
+spell ✨The✨Wheel✨Is✨Not✨the✨Fork✨ ⟡ ⫬Inhabited ⟪✨Fourfold✨Wheel✨ ≃⊛ ✨Klein's✨Forked✨Charm✨⟫ ⇰ cast
+  summon perfectward
+  rend perfectward whence ⦉obsidian✨mirror⦊
+  bind imageward ⟡ obsidian✨mirror ⟪✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二⟫ ≣ obsidian✨mirror 一 ⇰
+    litany obsidian✨mirror ⟪✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二⟫ ≣ ⟪obsidian✨mirror ✨Turn✨the✨Fourfold✨Wheel✨⟫ ⌃ 二 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror ▢ ▢
+      ▢ ≣ 一 ⇰ ✨Every✨Fork✨Undoes✨Itself✨ ⟪obsidian✨mirror ✨Turn✨the✨Fourfold✨Wheel✨⟫
+      ▢ ≣ obsidian✨mirror 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+  bind returnward ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二 ≣ 一 ⇰ obsidian✨mirror☿unconfounded imageward
+  missile ✨Two✨Turns✨Have✨Not✨Returned✨ returnward
+
+seal Arcana☿Enchantment
+```
+
+[Lean source](../math/Mathematics/GroupTheory/KleinComputations.lean) · [Arcana source](../public/grimoire/klein.spell)
+
+[MulEquiv](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Equiv/Defs.lean#L75) · [ZMod](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/ZMod/Basic.lean)
+
+## The mirror of four winds
+
+*The eight symmetries of a square*
+
+A quarter-turn and a mirror generate eight commands. Look through the mirror, turn, and look back: the turning reverses.
+
+**Mathematical meaning.** D₄ has order 8: four rotations rᵏ and four reflections srᵏ. Its generators satisfy r⁴ = s² = 1 and srs = r⁻¹. Rotation and reflection do not commute. Here the subscript counts polygon vertices; some texts call this same group D₈.
+
+**Hypotheses.** DihedralGroup 4 is the standard algebraic model for the rigid symmetries of a square. The folio computes in this model; it does not formalize Euclidean geometry.
+
+**Proof idea.** Mathlib supplies rotation and reflection constructors. We compute their orders and conjugation, enumerate all eight normal forms, and distinguish rs from sr. Multiplying two chosen reflections then produces a rotation.
+
+```text
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Mirror✨Veyrs✨
+
+sanctum Arcana☿Enchantment
+
+byname ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨ 四
+
+ritual ✨Turn✨the✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
+
+ritual ✨Mirror✨of✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
+
+spell ✨Count✨the✨Four✨Winds✨ ⟡ Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 八 ⇰
+  litany Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 二 ⊛ 四 ⇰ ✨Mirror✨Veyr✨☿census
+    ▢ ≣ 八 ⇰ cast divine
+
+spell ✨Four✨Winds✨Return✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⌃ 四 ≣ 一 ⇰
+  ✨Mirror✨Veyr✨☿✨One✨Circuit✨Returns✨
+
+spell ✨The✨Wind✨Mirror✨Undoes✨Itself✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⌃ 二 ≣ 一 ⇰
+  litany ✨Mirror✨of✨Four✨Winds✨ ⌃ 二 ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ ✨Unfold✨the✨Double✨Ascent✨ ▢
+    ▢ ≣ 一 ⇰ ✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇
+
+spell ✨The✨Wind's✨Turning✨Period✨ ⟡ period ✨Turn✨the✨Four✨Winds✨ ≣ 四 ⇰
+  ✨Mirror✨Veyr✨☿✨The✨Circuit's✨Period✨
+
+spell ✨The✨Wind's✨Mirror✨Period✨ ⟡ period ✨Mirror✨of✨Four✨Winds✨ ≣ 二 ⇰
+  ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
+
+spell ✨Mirrors✨Reverse✨the✨Winds✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰
+  litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣
+        ✨Mirror✨Veyr✨☿mirror✨shard 一 ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
+    ▢ ≣ ✨Mirror✨Veyr✨☿amber✨disc 三 ⇰ cast divine
+    ▢ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰ cast divine
+
+spell ✨The✨Winds✨Resist✨Harmony✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≢ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ cast
+  summon harmonyward
+  bind discordward ⟡ ⟪✨Mirror✨Veyr✨☿mirror✨shard 三 ⟡ ✨Four✨Winds✨Veyr✨⟫ ≢ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
+  channel discordward
+  litany ✨Mirror✨Veyr✨☿mirror✨shard 三 ≣ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
+    ▢ ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ harmonyward
+    ▢ ≣ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
+
+spell ✨All✨Commands✨of✨Four✨Winds✨ ⟡ ⟁ jade✨cube ⟡ ✨Four✨Winds✨Veyr✨᛫ ⟒ onyx✨bead ⟡ Fetter 四᛫
+    jade✨cube ≣ ✨Turn✨the✨Four✨Winds✨ ⌃ onyx✨bead☿core ⩔ jade✨cube ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⌃ onyx✨bead☿core ⇰ cast divine
+
+spell ✨Two✨Wind✨Mirrors✨Make✨a✨Turn✨ ⟡
+    ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣ ✨Turn✨the✨Four✨Winds✨ ⇰
+  litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣
+        ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨⟫ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ ⟪✨Regather✨the✨Binding✨ ▢ ▢ ▢⟫☿reflect
+    ▢ ≣ 一 ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ sympathy ⟪conjure jade✨cube ⇉ jade✨cube ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ⟪✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇⟫
+    ▢ ≣ ✨Turn✨the✨Four✨Winds✨ ⇰ ✨Silence✨Before✨the✨Binding✨ ▢
+
+seal Arcana☿Enchantment
+```
+
+[Lean source](../math/Mathematics/GroupTheory/DihedralComputations.lean) · [Arcana source](../public/grimoire/square.spell)
+
+[DihedralGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/SpecificGroups/Dihedral.lean) · [orderOf_r_one](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/SpecificGroups/Dihedral.lean#L189)
+
+## The five-pointed seal
+
+*The ten symmetries of a regular pentagram*
+
+Walk every second point to draw the star. Five turns and five mirrors preserve its edges; no arbitrary shuffle will do.
+
+**Mathematical meaning.** A regular pentagram has the same dihedral symmetry group D₅ as its surrounding regular pentagon, of order 10. Label the five tips clockwise by ZMod 5 and join x to x ± 2. Rotations and reflections act faithfully on the tips and preserve this star adjacency.
+
+**Hypotheses.** The formal model uses the five outer tips as vertices; interior crossings are not extra labeled vertices. It proves a faithful D₅ action preserving star edges. The geometric interpretation refers to a regular pentagram, not every five-pointed drawing.
+
+**Proof idea.** Use rᵢ(x) = x + i and sᵢ(x) = −x − i, matching mathlib’s multiplication convention. Finite computation checks identity, composition, faithfulness, and adjacency preservation for every group element and pair of tips. It also checks the generators’ orders, mirror conjugation, and all ten normal forms.
+
+```text
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Mirror✨Veyrs✨
+
+sanctum Arcana☿Enchantment
+
+byname ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨ 五
+
+ritual ✨Turn✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
+
+ritual ✨Mirror✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
+
+ritual ✨Thread✨of✨the✨Star✨ ⟪jade✨cube silver✨bell ⟡ Clockwork 五⟫ ⟡ Verity ⇰ silver✨bell ≣ jade✨cube ⧾ 二 ⩔ silver✨bell ≣ jade✨cube ⧿ 二
+
+ritual ✨Command✨the✨Star✨ ⟪silk✨cord ⟡ ✨Five✨Pointed✨Seal✨⟫ ⟪jade✨cube ⟡ Clockwork 五⟫ ⟡ Clockwork 五 ⇰
+  augur silk✨cord whence
+  ⫽ ✨Mirror✨Veyr✨☿amber✨disc opal✨dust ⇉ jade✨cube ⧾ opal✨dust
+  ⫽ ✨Mirror✨Veyr✨☿mirror✨shard opal✨dust ⇉ ⧿jade✨cube ⧿ opal✨dust
+
+spell ✨Count✨the✨Star's✨Commands✨ ⟡ Counted☿census ✨Five✨Pointed✨Seal✨ ≣ 一〇 ⇰
+  litany Counted☿census ✨Five✨Pointed✨Seal✨ ≣ 二 ⊛ 五 ⇰ ✨Mirror✨Veyr✨☿census
+    ▢ ≣ 一〇 ⇰ cast divine
+
+spell ✨Five✨Turns✨Return✨ ⟡ ✨Turn✨the✨Star✨ ⌃ 五 ≣ 一 ⇰ ✨Mirror✨Veyr✨☿✨One✨Circuit✨Returns✨
+
+spell ✨The✨Star's✨Turning✨Period✨ ⟡ period ✨Turn✨the✨Star✨ ≣ 五 ⇰ ✨Mirror✨Veyr✨☿✨The✨Circuit's✨Period✨
+
+spell ✨The✨Star's✨Mirror✨Period✨ ⟡ period ✨Mirror✨the✨Star✨ ≣ 二 ⇰ ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
+
+spell ✨Mirrors✨Reverse✨the✨Star✨ ⟡ ✨Mirror✨the✨Star✨ ⊛ ✨Turn✨the✨Star✨ ⊛ ✨Mirror✨the✨Star✨ ≣ ✨Turn✨the✨Star✨† ⇰
+  litany ✨Mirror✨the✨Star✨ ⊛ ✨Turn✨the✨Star✨ ⊛ ✨Mirror✨the✨Star✨ ≣ ✨Mirror✨Veyr✨☿amber✨disc 四 ⇰ cast divine
+    ▢ ≣ ✨Turn✨the✨Star✨† ⇰ cast divine
+
+spell ✨Silence✨Leaves✨the✨Star✨Still✨ ⟡ ⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ 一 jade✨cube ≣ jade✨cube ⇰ cast divine
+
+spell ✨Compose✨the✨Star's✨Commands✨ ⟡ ⟁ silk✨cord ward ⟡ ✨Five✨Pointed✨Seal✨᛫ ⟁ jade✨cube ⟡ Clockwork 五᛫
+    ✨Command✨the✨Star✨ ⟪silk✨cord ⊛ ward⟫ jade✨cube ≣ ✨Command✨the✨Star✨ silk✨cord ⟪✨Command✨the✨Star✨ ward jade✨cube⟫ ⇰ cast divine
+
+spell ✨The✨Star✨Conceals✨No✨Command✨ ⟡ ⟁ silk✨cord ward ⟡ ✨Five✨Pointed✨Seal✨᛫
+    ⟪⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ silk✨cord jade✨cube ≣ ✨Command✨the✨Star✨ ward jade✨cube⟫ ↝ silk✨cord ≣ ward ⇰ cast divine
+
+spell ✨Preserve✨the✨Star's✨Threads✨ ⟡ ⟁ silk✨cord ⟡ ✨Five✨Pointed✨Seal✨᛫ ⟁ jade✨cube silver✨bell ⟡ Clockwork 五᛫
+    ✨Thread✨of✨the✨Star✨ ⟪✨Command✨the✨Star✨ silk✨cord jade✨cube⟫ ⟪✨Command✨the✨Star✨ silk✨cord silver✨bell⟫ ↭ ✨Thread✨of✨the✨Star✨ jade✨cube silver✨bell ⇰ cast
+  unseal ✨Thread✨of✨the✨Star✨
+  divine
+
+spell ✨Skip✨a✨Tip✨to✨Trace✨the✨Star✨ ⟡ ✨Thread✨of✨the✨Star✨ 〇 二 ⩓ ⫬✨Thread✨of✨the✨Star✨ 〇 一 ⇰ cast
+  unseal ✨Thread✨of✨the✨Star✨
+  divine
+
+spell ✨All✨Commands✨of✨the✨Star✨ ⟡ ⟁ silk✨cord ⟡ ✨Five✨Pointed✨Seal✨᛫ ⟒ onyx✨bead ⟡ Fetter 五᛫
+    silk✨cord ≣ ✨Turn✨the✨Star✨ ⌃ onyx✨bead☿core ⩔ silk✨cord ≣ ✨Mirror✨the✨Star✨ ⊛ ✨Turn✨the✨Star✨ ⌃ onyx✨bead☿core ⇰ cast divine
+
+seal Arcana☿Enchantment
+```
+
+[Lean source](../math/Mathematics/GroupTheory/Pentagram.lean) · [Arcana source](../public/grimoire/pentagram.spell)
+
+[DihedralGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/SpecificGroups/Dihedral.lean) · [orderOf_sr](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/SpecificGroups/Dihedral.lean#L181)
+
+## Hamilton’s eightfold pact
+
+*The quaternion group Q₈: signs, order, and a unique involution*
+
+Hamilton’s three spirits i, j, and k share the same shadow. Reverse their order and the sign changes; all roads return after four steps.
+
+**Mathematical meaning.** Q₈ = {±1, ±i, ±j, ±k} is the finite quaternion group. William Rowan Hamilton’s rules give i² = j² = k² = ijk = −1 and ij = k, while ji = −k. This is a subgroup of the units of his quaternion algebra, not the whole infinite algebra.
+
+**Hypotheses.** QuaternionGroup 2 has eight elements. We name its standard generators i and j, define k = ij, and realize the sign −1 as a central group element. Negating q means multiplying by that element.
+
+**Proof idea.** Compute the three squares and both multiplication orders, then derive ijk = −1. Enumerate all elements to prove that −1 is central, every fourth power is 1, and −1 is the unique nonidentity element squaring to 1. The square’s symmetry group has five such involutions—a clue for the classification ahead.
+
+```text
+beckon Arcana☿Enchantment☿✨The✨Four✨Winds✨
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Hamilton's✨Spirits✨
+
+sanctum Arcana☿Enchantment
+
+byname ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨ 二
+
+ritual ✨Hamilton's✨First✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿ash 一
+
+ritual ✨Hamilton's✨Second✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿shadow✨bead 〇
+
+ritual ✨Hamilton's✨Third✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨
+
+ritual ✨Hamilton's✨Shadow✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿ash 二
+
+spell ✨Count✨Hamilton's✨Pact✨ ⟡ Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 八 ⇰
+  litany Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 四 ⊛ 二 ⇰ ✨Hamilton's✨Veyr✨☿census
+    ▢ ≣ 八 ⇰ cast divine
+
+spell ✨The✨First✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⌃ 二 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+
+spell ✨The✨Second✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨Second✨Spirit✨ ⌃ 二 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+
+spell ✨The✨Third✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨Third✨Spirit✨ ⌃ 二 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+
+spell ✨The✨First✨Two✨Conjure✨the✨Third✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ≣ ✨Hamilton's✨Third✨Spirit✨ ⇰ mirror
+
+spell ✨Reversal✨Conjures✨the✨Shadow✨ ⟡ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ≣ ✨Hamilton's✨Shadow✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ⇰ cast divine
+
+spell ✨Three✨Spirits✨Conjure✨the✨Shadow✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ≣ ✨Hamilton's✨Shadow✨ ⇰
+  litany ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ≣ ✨Hamilton's✨Third✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ⇰ mirror
+    ▢ ≣ ✨Hamilton's✨Third✨Spirit✨ ⌃ 二 ⇰ ⟪✨Unfold✨the✨Double✨Ascent✨ ▢⟫☿reflect
+    ▢ ≣ ✨Hamilton's✨Shadow✨ ⇰ ✨The✨Third✨Spirit's✨Shadow✨
+
+spell ✨Hamilton's✨Discord✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ≢ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ⇰ cast
+  summon harmonyward
+  bind discordward ⟡ ✨Hamilton's✨Third✨Spirit✨ ≢ ✨Hamilton's✨Shadow✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ⇰ cast divine
+  channel discordward
+  litany ✨Hamilton's✨Third✨Spirit✨ ≣ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ⇰ ✨The✨First✨Two✨Conjure✨the✨Third✨☿reflect
+    ▢ ≣ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ⇰ harmonyward
+    ▢ ≣ ✨Hamilton's✨Shadow✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ⇰ ✨Reversal✨Conjures✨the✨Shadow✨
+
+spell ✨The✨Shadow✨Walks✨Among✨All✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫
+    ✨Hamilton's✨Shadow✨ ⊛ ivory✨ring ≣ ivory✨ring ⊛ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+
+spell ✨Hamilton's✨Fourfold✨Return✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫ ivory✨ring ⌃ 四 ≣ 一 ⇰ cast divine
+
+spell ✨Only✨the✨Shadow✨Undoes✨Itself✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫
+    ⟪ivory✨ring ⌃ 二 ≣ 一 ⩓ ivory✨ring ≢ 一⟫ ↭ ivory✨ring ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+
+spell ✨Count✨Hamilton's✨Self✨Undoing✨Spirits✨ ⟡
+    Counted☿census ⧼ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⧶⧶ ivory✨ring ⌃ 二 ≣ 一 ⩓ ivory✨ring ≢ 一⧽ ≣ 一 ⇰ cast divine
+
+spell ✨Count✨the✨Winds'✨Self✨Undoing✨Spirits✨ ⟡
+    Counted☿census ⧼jade✨cube ⟡ ✨Four✨Winds✨Veyr✨ ⧶⧶ jade✨cube ⌃ 二 ≣ 一 ⩓ jade✨cube ≢ 一⧽ ≣ 五 ⇰ cast divine
+
+seal Arcana☿Enchantment
+```
+
+[Lean source](../math/Mathematics/GroupTheory/HamiltonQuaternions.lean) · [Arcana source](../public/grimoire/quaternions.spell)
+
+[QuaternionGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/SpecificGroups/Quaternion.lean)
+
+## The Eightfold Way
+
+*Exactly five groups of order eight, up to isomorphism*
+
+Eight members, five possible laws. Count the self-undoing spirits, separate the five houses, and prove that no sixth house can exist.
+
+**Mathematical meaning.** Every group G with |G| = 8 is isomorphic to C₈, C₄ × C₂, C₂ × C₂ × C₂, D₄, or Q₈. All five have eight elements and are pairwise non-isomorphic. Their numbers of involutions (nonidentity x with x² = 1) are respectively 1, 3, 7, 5, and 1. C₈ is commutative and Q₈ is not, separating the only repeated count. “Eightfold” names the common order, not the number of isomorphism classes.
+
+**Hypotheses.** G is an arbitrary group, with the sole size hypothesis Nat.card G = 8. No multiplication table or classification assumption is supplied. This positive cardinality implies finiteness. Exhaustiveness specializes the pinned P3Group theorem at the prime 2; its entire proof dependency is checked by Lean and included in the axiom audit.
+
+**Proof idea.** First compute all five cardinalities, cyclic generation, power identities, and involution counts. An explicit equivalence transports involutions across any group isomorphism, so unequal counts forbid isomorphisms; commutativity separates C₈ from Q₈. For exhaustiveness, P3Group splits into abelian and nonabelian cases. The abelian structure theorem leaves partitions 3, 2+1, and 1+1+1, giving the three abelian groups. In the nonabelian case, choose x of order 4 and y outside its cyclic subgroup. Conjugation by y inverts x, and either y² = 1 (the square group) or y² = x² (Hamilton’s group). The upstream proof constructs the resulting isomorphisms. Our final spell specializes the full theorem to 2³ and eliminates the odd-prime branches.
+
+```text
+beckon Arcana☿Enchantment☿✨Hamilton's✨Grimoire✨
+beckon ✨Indivisible✨Cubic✨Veyrs✨☿✨The✨Exhaustive✨Census✨
+
+sanctum Arcana☿Enchantment
+
+byname ✨Eightfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 八⟫
+
+byname ✨Twin✨Fourfold✨Wheels✨ ⇰ Unchanted ⟪Clockwork 四⟫ ⨯ Unchanted ⟪Clockwork 二⟫
+
+byname ✨Three✨Mirror✨Charms✨ ⇰ Unchanted ⟪Clockwork 二⟫ ⨯ Unchanted ⟪Clockwork 二⟫ ⨯ Unchanted ⟪Clockwork 二⟫
+
+ritual ✨Turn✨the✨Eightfold✨Wheel✨ ⟡ ✨Eightfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+
+spell ✨One✨Turn✨Commands✨Eight✨ ⟡ ⟁ jade✨cube ⟡ ✨Eightfold✨Wheel✨᛫
+    ⟒ onyx✨bead ⟡ Fetter 八᛫ jade✨cube ≣ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ⇰ cast divine
+
+spell ✨No✨Earlier✨Eightfold✨Return✨ ⟡ ⟁ onyx✨bead ⟡ Fetter 八᛫
+    〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
+
+spell ✨Twin✨Wheels✨Return✨in✨Four✨ ⟡ ⟁ jade✨cube ⟡ ✨Twin✨Fourfold✨Wheels✨᛫ jade✨cube ⌃ 四 ≣ 一 ⇰ cast divine
+
+spell ✨Every✨Triple✨Charm✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Three✨Mirror✨Charms✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
+
+spell ✨Five✨Houses✨of✨Eight✨ ⟡
+    Counted☿census ✨Eightfold✨Wheel✨ ≣ 八 ⩓ Counted☿census ✨Twin✨Fourfold✨Wheels✨ ≣ 八 ⩓
+    Counted☿census ✨Three✨Mirror✨Charms✨ ≣ 八 ⩓ Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 八 ⩓
+    Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 八 ⇰ cast
+  missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨Count✨the✨Four✨Winds✨᛫ ✨Count✨Hamilton's✨Pact✨⦊
+
+ineffable ritual ✨Census✨of✨Self✨Undoing✨Spirits✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Tallies ⇰
+  Tally☿census ⧼jade✨cube ⟡ ᛰ ⧶⧶ jade✨cube ⌃ 二 ≣ 一 ⩓ jade✨cube ≢ 一⧽
+
+spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+    ⟪obsidian✨mirror ⟡ ᛰ ≃⊛ ☥⟫ ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≣ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥ ⇰ cast
+  channel Tally☿✨Census✨through✨Portal✨
+  channel Portal☿✨Restrict✨the✨Perfect✨Pact✨ obsidian✨mirror☿✨Unveil✨the✨Perfect✨Pact✨
+  summon jade✨cube
+  fabricate
+  ❖ summon ⦉doubleward᛫ motionward⦊
+    fabricate
+    ❖ litany obsidian✨mirror jade✨cube ⌃ 二 ≣ obsidian✨mirror ⟪jade✨cube ⌃ 二⟫ ⇰ ⟪✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 二⟫☿reflect
+        ▢ ≣ obsidian✨mirror 一 ⇰ sympathy obsidian✨mirror doubleward
+        ▢ ≣ 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨
+    ❖ summon reflectionward
+      channel motionward
+      channel obsidian✨mirror☿unconfounded
+      missile reflectionward☿chain obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+  ❖ summon ⦉doubleward᛫ motionward⦊
+    fabricate
+    ❖ channel obsidian✨mirror☿unconfounded
+      litany obsidian✨mirror ⟪jade✨cube ⌃ 二⟫ ≣ obsidian✨mirror jade✨cube ⌃ 二 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 二
+        ▢ ≣ 一 ⇰ doubleward
+        ▢ ≣ obsidian✨mirror 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+    ❖ summon stillward
+      channel motionward
+      missile ⟪sympathy obsidian✨mirror stillward⟫☿chain obsidian✨mirror☿✨keeps✨stillness✨
+
+spell ✨The✨Five✨Houses'✨Hidden✨Censuses✨ ⟡
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Eightfold✨Wheel✨ ≣ 一 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Twin✨Fourfold✨Wheels✨ ≣ 三 ⩓
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Three✨Mirror✨Charms✨ ≣ 七 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Four✨Winds✨Veyr✨ ≣ 五 ⩓
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Hamilton's✨Eightfold✨Pact✨ ≣ 一 ⇰ cast
+  unseal ✨Census✨of✨Self✨Undoing✨Spirits✨
+  purify solely ⟮Tally☿✨Two✨Ways✨to✨Take✨the✨Census✨⟯
+  missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨Count✨the✨Winds'✨Self✨Undoing✨Spirits✨᛫ ✨Count✨Hamilton's✨Self✨Undoing✨Spirits✨⦊
+
+spell ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+    ⟪tallyward ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≢ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥⟫ ⟡ ⫬ Inhabited ⟪ᛰ ≃⊛ ☥⟫ ⇰ cast
+  unpack ⦉obsidian✨mirror⦊
+  missile tallyward ⟪✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ obsidian✨mirror⟫
+
+spell ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨ ⟡ ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
+  unpack ⦉obsidian✨mirror⦊
+  channel ✨Hamilton's✨Discord✨
+  litany ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ≣ obsidian✨mirror ⟪obsidian✨mirror☿reflect ✨Hamilton's✨First✨Spirit✨ ⊛ obsidian✨mirror☿reflect ✨Hamilton's✨Second✨Spirit✨⟫ ⇰ cast purify
+    ▢ ≣ obsidian✨mirror ⟪obsidian✨mirror☿reflect ✨Hamilton's✨Second✨Spirit✨ ⊛ obsidian✨mirror☿reflect ✨Hamilton's✨First✨Spirit✨⟫ ⇰ sympathy obsidian✨mirror ⟪✨Bindings✨Commute✨ ▢ ▢⟫
+    ▢ ≣ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨First✨Spirit✨ ⇰ cast purify
+
+spell ✨The✨Five✨Houses✨Are✨Distinct✨ ⟡
+    ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Eightfold✨Wheel✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Twin✨Fourfold✨Wheels✨ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Twin✨Fourfold✨Wheels✨ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Twin✨Fourfold✨Wheels✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Three✨Mirror✨Charms✨ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Three✨Mirror✨Charms✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⩓
+    ⫬ Inhabited ⟪✨Four✨Winds✨Veyr✨ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
+  wrest ⦉wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⦊ ⇰ ✨The✨Five✨Houses'✨Hidden✨Censuses✨
+  hone ⦉?▢᛫ ?▢᛫ ?▢᛫ ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢⦊
+  everywhere
+    channel ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨
+    purify solely ⟮wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⟯
+    divine
+
+spell ✨The✨Eightfold✨Way✨Admits✨No✨Sixth✨House✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟪sizeward ⟡ Tally☿census ᛰ ≣ 八⟫ ⟡
+    Inhabited ⟪ᛰ ≃⊛ ✨Eightfold✨Wheel✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩔
+    Inhabited ⟪ᛰ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩔
+    Inhabited ⟪ᛰ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
+  bind ⟡ Witnessed ⟪Tally☿Indivisible 二⟫ ⇰ ⦉cast divine⦊
+  bind ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ ⟪cast transmute ⟮sizeward⟯⁂ divine⟫
+  dub ⟡ Counted ᛰ ⇰ Counted☿✨Enumerate✨the✨Finite✨ ᛰ
+  bind cubeward ⟡ Tally☿census ᛰ ≣ 二 ⌃ 三 ⇰ sizeward☿chain ⟪cast divine⟫
+  rend ✨Indivisible✨Cubic✨Veyrs✨☿exhaustive✨census 二 ᛰ cubeward whence
+    wheelward ⫽ twinward ⫽ toggleward ⫽ oddward ⫽ oddward ⫽ doubleward ⫽ hamiltonward
+  ❖ missile Either☿choose✨left wheelward
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨left twinward⟫
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left toggleward⟫⟫
+  ❖ missile ⟪oddward☿一 mirror⟫☿dismiss
+  ❖ missile ⟪oddward☿一 mirror⟫☿dismiss
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left doubleward☿二⟫⟫⟫
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right hamiltonward☿二⟫⟫⟫
+
+seal Arcana☿Enchantment
+```
+
+[Lean source](../math/Mathematics/GroupTheory/EightfoldWay.lean) · [Arcana source](../public/grimoire/eightfold.spell)
+
+[P3Group.classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/Classification.lean#L50) · [P3Group.abelian_p3_classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/AbelianCase.lean#L99) · [P3Group.nonabelian_8_classification](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/NonAbelianCase.lean#L1965) · [Nat.card_congr](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/SetTheory/Cardinal/Finite.lean#L91)
 
 ## The two hands of Disenchantment
 

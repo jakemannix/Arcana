@@ -1,0 +1,42 @@
+beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿Foundations
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Guises☿Bounded
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Portal☿Names
+
+sanctum Arcana☿Enchantment
+
+byname ✨Fourfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 四⟫
+
+byname ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted ⟪Clockwork 二 ⨯ Clockwork 二⟫
+
+ritual ✨Turn✨the✨Fourfold✨Wheel✨ ⟡ ✨Fourfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+
+ritual ✨First✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪一᛫ 〇⟫
+
+ritual ✨Second✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪〇᛫ 一⟫
+
+spell ✨Count✨the✨Fourfold✨Wheel✨ ⟡ Counted☿census ✨Fourfold✨Wheel✨ ≣ 四 ⇰ cast divine
+
+spell ✨Count✨Klein's✨Charm✨ ⟡ Counted☿census ✨Klein's✨Forked✨Charm✨ ≣ 四 ⇰ cast divine
+
+spell ✨Join✨the✨Forks✨ ⟡ ✨First✨Fork✨ ⊛ ✨Second✨Fork✨ ≣ Unchanted☿unchant ⟪一᛫ 一⟫ ⇰ cast
+  divine
+
+spell ✨Klein's✨Harmony✨ ⟡ ⟁ jade✨cube silver✨bell ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⊛ silver✨bell ≣ silver✨bell ⊛ jade✨cube ⇰ cast divine
+
+spell ✨Every✨Fork✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
+
+spell ✨Two✨Turns✨Have✨Not✨Returned✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二 ≢ 一 ⇰ cast divine
+
+spell ✨Four✨Turns✨Return✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 四 ≣ 一 ⇰ cast divine
+
+spell ✨The✨Wheel✨Is✨Not✨the✨Fork✨ ⟡ ⫬Inhabited ⟪✨Fourfold✨Wheel✨ ≃⊛ ✨Klein's✨Forked✨Charm✨⟫ ⇰ cast
+  summon perfectward
+  rend perfectward whence ⦉obsidian✨mirror⦊
+  bind imageward ⟡ obsidian✨mirror ⟪✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二⟫ ≣ obsidian✨mirror 一 ⇰
+    litany obsidian✨mirror ⟪✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二⟫ ≣ ⟪obsidian✨mirror ✨Turn✨the✨Fourfold✨Wheel✨⟫ ⌃ 二 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror ▢ ▢
+      ▢ ≣ 一 ⇰ ✨Every✨Fork✨Undoes✨Itself✨ ⟪obsidian✨mirror ✨Turn✨the✨Fourfold✨Wheel✨⟫
+      ▢ ≣ obsidian✨mirror 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+  bind returnward ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二 ≣ 一 ⇰ obsidian✨mirror☿unconfounded imageward
+  missile ✨Two✨Turns✨Have✨Not✨Returned✨ returnward
+
+seal Arcana☿Enchantment

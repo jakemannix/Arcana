@@ -1,6 +1,6 @@
 # Arcana · The Enchantment Grimoire
 
-A browser grimoire of **real group theory**, presented in Arcana. Ten Enchantment lessons and two Transmutation lessons share a foundational cantrip folio. The 84 definitions and theorems are compiled against a pinned mathlib release; their translated `.spell` sources are decoded and compiled again.
+A browser grimoire of **real group theory**, presented in Arcana. Sixteen Enchantment lessons and two Transmutation lessons share a foundational cantrip folio. The 174 definitions and theorems are compiled against a pinned mathlib release; their translated `.spell` sources are decoded and compiled again.
 
 [Read the complete grimoire](grimoire/README.md) · [Proof dependency audit](public/grimoire/axioms.txt)
 
@@ -8,9 +8,9 @@ A browser grimoire of **real group theory**, presented in Arcana. Ten Enchantmen
 
 ## Read and experiment
 
-The browser opens on the first isomorphism theorem. Use the contents to explore generated subgroups, homomorphisms, kernels and normality, quotient descent and uniqueness, Lagrange's theorem, simple groups of prime order, orbit–stabilizer, Cayley's theorem, and the concrete permutation group S₃.
+The browser opens on the first isomorphism theorem. Use the contents to explore generated subgroups, homomorphisms, kernels and normality, quotient descent and uniqueness, Lagrange's theorem, simple groups of prime order, orbit–stabilizer, Cayley's theorem, the symmetries of the equilateral triangle and regular pentagram, cyclic and Klein groups, square symmetries, Hamilton’s quaternion group, and a complete classification of groups of order eight.
 
-Each folio includes its mathematical meaning, hypotheses, proof idea, prerequisites, vocabulary, and upstream mathlib references pinned to the exact commit. Arcana source and ordinary Lean are editable side by side. Spell bodies start folded: click **reveal enchantment**, the gutter, or **Reveal** to open them with a brief glimmer. **Veil** folds them again. Reduced-motion preferences disable the effects.
+Each folio includes its mathematical meaning, hypotheses, proof idea, prerequisites, vocabulary, and upstream proof-library references pinned to the exact commit. Arcana source and ordinary Lean are editable side by side. Spell bodies start folded: click **reveal enchantment**, the gutter, or **Reveal** to open them with a brief glimmer. **Veil** folds them again. Reduced-motion preferences disable the effects.
 
 Original folios show **Lean checked** only while their source exactly matches a verified original and the translation round-trips. Editing changes that status to **draft proof unchecked**. The browser does not run Lean; a successful translation does not prove an edited theorem. Standard Lean axioms (`propext`, `Classical.choice`, and `Quot.sound`) may occur; `sorry`, custom axioms, and native evaluation shortcuts are not used.
 
@@ -59,17 +59,19 @@ npm test
 npm run build
 ```
 
-Lean is pinned by `math/lean-toolchain` to **v4.33.1**. Mathlib is locked to **0df444a360eaa60ab8c11dca51a86af692955474** in `math/lake-manifest.json`. The verifier checks the dependency checkout, compiles the original project, translates every folio using one curated lexicon, reloads the serialized key, checks byte-for-byte decoding, and independently compiles the decoded modules with their own import path. It then inspects all 84 declarations with `#print axioms` and allows only the three standard axioms listed above.
+Lean is pinned by `math/lean-toolchain` to **v4.33.1**. Mathlib is locked to **0df444a360eaa60ab8c11dca51a86af692955474** in `math/lake-manifest.json`. The verifier checks the dependency checkout, compiles the original project, translates every folio using one curated lexicon, reloads the serialized key, checks byte-for-byte decoding, and independently compiles the decoded modules with their own import path. It then inspects all 174 declarations with `#print axioms` and allows only the three standard axioms listed above.
+
+The **Eightfold Way** proves that every group of order eight is isomorphic to C₈, C₄ × C₂, C₂³, D₄, or Q₈, and proves all ten pairwise non-isomorphism claims. Its finite computations count involutions as 1, 3, 7, 5, and 1; commutativity separates the remaining C₈/Q₈ pair. Exhaustiveness uses [lixiang90 and the P3Group contributors’ classification of groups of order p³](https://github.com/lixiang90/p3group/blob/822647a71aedace398cb886eb9a6b7993096e53b/P3Group/Classification.lean), pinned at **822647a71aedace398cb886eb9a6b7993096e53b**. The source files carry Apache 2.0 notices. It builds unmodified with our Lean/mathlib version. The verifier checks both library revisions and clean source trees; the transitive axiom audit covers the imported classification proof. The catalog records the dependency revisions and hashes of the manifest, Lake configuration, and verifier itself.
 
 Only after all checks pass does it generate the browser catalog, `.lean`/`.spell` downloads, bundles, key, audit, and readable book. `npm test` detects stale source, vocabulary, and metadata; validates all translations and prerequisite links; and tests folding boundaries and the edited-proof status. The tests cover quoted identifiers, saved-key round trips, namespace glyph handling, and sparkle names.
 
 ## Structure
 
 - `math/Mathematics/Functions.lean`: reusable function composition, injectivity, surjectivity, and equivalence lemmas. The Homomorphisms module actually imports and uses these.
-- `math/Mathematics/GroupTheory/*.lean`: ten substantive group-theory folios.
+- `math/Mathematics/GroupTheory/*.lean`: sixteen substantive group-theory folios.
 - `math/Mathematics/CategoryTheory/ForgetfulAdjoints.lean`: the first Transmutation folio, on the left and right adjoints of forgetful functors.
 - `math/Mathematics/CategoryTheory/Yoneda.lean`: the covariant Yoneda lemma built by hand, checked against mathlib, with two representing objects as examples.
-- `grimoire/chapters.json`: explanations, prerequisite graph, and mathlib source references.
+- `grimoire/chapters.json`: explanations, prerequisite graph, and proof-library source references.
 - `grimoire/lexicon.json`: curated Arcana names for mathematical constructs and library lemmas.
 - `scripts/verify-grimoire.ts`: reproducible build, translation, and proof audit.
 - `src/grimoire.generated.json`: verified browser catalog and evidence hashes; do not edit manually.

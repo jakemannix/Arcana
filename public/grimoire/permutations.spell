@@ -24,4 +24,17 @@ spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange�
       ▢ ≣ 二 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
+ritual ✨Threefold✨Turn✨ ⟡ ✨Three✨Sigils✨ ⇰ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨
+
+spell ✨Follow✨the✨Three✨Sigils✨ ⟡
+    ✨Threefold✨Turn✨ 〇 ≣ 一 ⩓ ✨Threefold✨Turn✨ 一 ≣ 二 ⩓ ✨Threefold✨Turn✨ 二 ≣ 〇 ⇰ cast divine
+
+spell ✨Three✨Turns✨Return✨ ⟡ ✨Threefold✨Turn✨ ⌃ 三 ≣ 一 ⇰ cast divine
+
+spell ✨The✨Threefold✨Period✨ ⟡ period ✨Threefold✨Turn✨ ≣ 三 ⇰
+  ✨Indivisible✨Return✨ ✨Three✨Turns✨Return✨ ⟪cast divine⟫
+
+spell ✨All✨Dances✨of✨the✨Triangle✨ ⟡ ⟁ raven✨feather ⟡ ✨Three✨Sigils✨᛫ ⟒ onyx✨bead ⟡ Fetter 三᛫
+    raven✨feather ≣ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⩔ raven✨feather ≣ ✨First✨Exchange✨ ⊛ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⇰ cast divine
+
 seal Arcana☿Enchantment

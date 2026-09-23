@@ -6,7 +6,7 @@ tags: [doctrack/type/feature, doctrack/status/active, doctrack/audience/claude]
 # Graduate grimoire
 
 ## User-directed intermediate deliverable
-The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: ten Enchantment folios, two Transmutation folios, and Cantrips, totaling 84 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
+The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: sixteen Enchantment folios, two Transmutation folios, and Cantrips, totaling 174 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
 
 The longer objective remains a graduate grimoire across all eight schools, including group theory, real analysis, combinatorics, topology, linear analysis, complex analysis, algebraic geometry, manifolds, and “PDSs” (clarification still pending, irrelevant to this first school). This broader objective is not complete.
 
@@ -38,3 +38,13 @@ Use Nat.card carefully: it is zero for infinite types. Lagrange and orbit–stab
 Related: [[editor]], [[../components/translator]], [[../decisions/browser-translation]].
 - `math/Mathematics/CategoryTheory/ForgetfulAdjoints.lean` (Transmutation): the free monoid's universal property proved by induction on words (left adjoint of `forget MonCat`), the units construction built by hand with its universal property (right adjoint of `forget₂ GrpCat MonCat`), mathlib's `MonCat.adj` and `GrpCat.forget₂MonAdj`, and `Perm X ≃* Units (Function.End X)` linking back to Cayley's court.
 - `math/Mathematics/CategoryTheory/Yoneda.lean` (Transmutation): the covariant Yoneda lemma built by hand (`transformationToElement`, `elementToTransformation`, both round trips by naturality and `map_id`), proved equal to mathlib's `coyonedaEquiv`, plus `FreeMonoid Unit` representing the forgetful functor and `Multiplicative ℤ` representing a group's elements.
+
+
+## Finite groups and the Eightfold Way
+The field exercises now cover C₆, C₄ versus Klein V₄, D₄ (square symmetries), D₅ acting faithfully on the regular pentagram, and Hamilton's Q₈. S₃ explicitly enumerates equilateral-triangle rotations and reflections. New modules: `CyclicComputations`, `KleinComputations`, `DihedralComputations`, `Pentagram`, `HamiltonQuaternions`, `EightfoldWay`.
+
+`EightfoldWay` gives three abelian models alongside D₄/Q₈, computes cardinalities/powers/involution counts, transports involutions through an explicit equivalence, and proves all ten pairwise non-isomorphism claims. `order_eight_classification` quantifies over an arbitrary group with `Nat.card G = 8`; it specializes P3Group's full p³ classification at 2, deriving finiteness rather than assuming a multiplication table. The final spell plus pairwise distinctness establishes exactly five isomorphism classes.
+
+P3Group is an unmodified pinned dependency at `822647a71aedace398cb886eb9a6b7993096e53b` (lixiang90/p3group; Apache 2.0 notices in source). It originally targeted Lean4.32.2 and compiles on our4.33.1 with only upstream style warnings. Keep mathlib's require block **last** in `math/lakefile.toml` so its transitive dependency pins take precedence. The axiom audit checks the transitive dependency on the full external proof, not only the local wrapper.
+
+References may have `package: "P3Group"`; omitted package means mathlib. Verification rejects dirty or mismatched source trees for both, creates exact-revision links for either package, and records `dependencyRevisions`, `manifestHash`, `lakefileHash`, and `verifierHash`. Tests guard these provenance fields. All spell names are curated; there are no auto names. See [[../decisions/arcana-vocabulary]] and the human vocabulary guide for the five houses' magical names.

@@ -37,3 +37,20 @@ The curated key assigns distinct runes to `G H K X R S F M A E V N U B` and `α 
 Use `\rune` → `ᛰ`, `\ankh` → `☥`, `\moon` → `🌒`, and `\othala` → `ᛟ` in the spell editor. The folio glossary pairs every used rune with its Lean name.
 
 The source namespace `Mathematics` becomes `Arcana`, so group theory opens with `sanctum Arcana☿Enchantment`. Saved bundles carry their own vocabulary: older bundles keep their previous carrier and structure names and decode exactly with their saved key.
+
+## Bestowals, Disenchantments, and the two hands
+
+An `instance` reads `bestow`: it bestows a structure on a carrier, and every later spell may use that structure without asking. A `class` is an `order`: a kind of structure that Lean finds by itself.
+
+| Lean | Spell | Meaning |
+|---|---|---|
+| `forget C` | `Disenchantment` | Forget all structure; keep the carrier |
+| `forget₂ C D` | `✨Lesser✨Disenchantment✨` | Forget part of the structure, such as a Veyr's inverses |
+| `FreeMonoid S` | `✨Primordial✨Choir✨` | The freest choir on seeds `S`; the left hand of Disenchantment |
+| `Units M` | `Reversibles` | The members of a choir that can be undone; the right hand of the lesser Disenchantment from Veyrs to Choirs |
+| `Function.End X` | `Rite☿Court` | All transmutations of `X`; pacts into a court are actions |
+| `MonCat`, `GrpCat` | `Choirs`, `Veyrs` | The category of all choirs, of all Veyrs |
+| `⊣` | `☍` | "is the left hand of" (an adjunction) |
+
+The full Disenchantment from Choirs to carriers has a left hand but no right hand: a right hand would need it to preserve coproducts, and it does not.
+

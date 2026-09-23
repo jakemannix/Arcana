@@ -2,10 +2,10 @@
   "format": "arcana-grimoire/v1",
   "mathlibRevision": "0df444a360eaa60ab8c11dca51a86af692955474",
   "leanToolchain": "leanprover/lean4:v4.33.1",
-  "translatorHash": "a1b5d414680f6a0d866bddbf5a1c28eb5f0fbc3e818234874f48165c033da04e",
-  "tablesHash": "7052c17fab89dc3362911be5916d093c6aa4cc4c58023d3a1a3a026d3a815f07",
-  "metadataHash": "b5bb43ff5b018aa93595b9b546ef5a1f03997cf34145c5ee753c5a9b1f67c822",
-  "lexiconHash": "a1a010a649fe4ee977ab090b421ba8487671fa1cbfb48a644afa42d221e88d3a",
+  "translatorHash": "562b1bdc3fa342fac54ec0bd34672d37bae42bfbd97981f735817245be07d1be",
+  "tablesHash": "e60dc43c0f9ada55e60d83e4e278197982a78fabcc098fe079b342a55afdbc4d",
+  "metadataHash": "a6d0faa0aef3a8ed8ca11f6e519cb71ade51926ae068f3454b4289079d4b715d",
+  "lexiconHash": "b74fc390a3fc48fde493d6272179b962353b11d9c598d943d33a8478c5356186",
   "key": {
     "global": {
       "Element": "Humour",
@@ -46,7 +46,6 @@
       "Evocation": "Evocation",
       "Illusion": "Illusion",
       "Necromancy": "Necromancy",
-      "Transmutation": "Transmutation",
       "a": "ash",
       "b": "elm",
       "c": "yew",
@@ -323,7 +322,46 @@
       "actionToPerm_self_injective": "✨No✨Two✨Commands✨Alike✨",
       "cayleyEquiv": "✨Cayley's✨Court✨",
       "ofInjective": "✨from✨faithfulness✨",
-      "cayleyEquiv_apply": "✨Cayley's✨Court✨Speaks✨"
+      "cayleyEquiv_apply": "✨Cayley's✨Court✨Speaks✨",
+      "FreeMonoid": "✨Primordial✨Choir✨",
+      "Category": "Cosmology",
+      "MonCat": "Choirs",
+      "Adjunctions": "Hands",
+      "Grp": "✨Veyr✨Halls✨",
+      "CategoryTheory": "✨Lore✨of✨Forms✨",
+      "u": "tier",
+      "freeLift": "✨Primordial's✨Pact✨",
+      "freeLift_of": "✨Seeds✨Go✨Where✨Sent✨",
+      "of": "seed",
+      "freeLift_unique": "✨Only✨One✨Primordial✨Pact✨",
+      "φ": "brass✨key",
+      "h_generators": "seedward",
+      "w": "verse",
+      "inductionOn'": "✨verse✨by✨verse✨",
+      "one": "✨empty✨verse✨",
+      "map_one": "✨keeps✨stillness✨",
+      "of_mul": "✨seed✨then✨verse✨",
+      "h_word": "verseward",
+      "freeForgetAdjunction": "✨Left✨Hand✨of✨Disenchantment✨",
+      "free": "primordial",
+      "forget": "Disenchantment",
+      "adj": "✨the✨hands✨",
+      "Units": "Reversibles",
+      "unitsLift": "✨Gather✨the✨Reversible✨",
+      "inv": "undoer",
+      "val_inv": "✨undoes✨after✨",
+      "inv_val": "✨undoes✨before✨",
+      "unitsLift_val": "✨Gathered✨as✨Given✨",
+      "unitsLift_unique": "✨Only✨One✨Gathering✨",
+      "ψ": "tin✨key",
+      "h_values": "valueward",
+      "forgetUnitsAdjunction": "✨Right✨Hand✨of✨Lesser✨Disenchantment✨",
+      "forget₂": "✨Lesser✨Disenchantment✨",
+      "GrpCat": "Veyrs",
+      "units": "reversibles",
+      "forget₂MonAdj": "✨lesser✨hands✨",
+      "permEquivUnitsEnd": "✨Shuffles✨Are✨the✨Court's✨Reversibles✨",
+      "equivUnitsEnd": "✨court's✨reversibles✨"
     },
     "scoped": {
       "and_swap": {
@@ -335,7 +373,8 @@
       }
     },
     "namespaces": {
-      "Mathematics.GroupTheory": "Arcana☿Enchantment"
+      "Mathematics.GroupTheory": "Arcana☿Enchantment",
+      "Mathematics.CategoryTheory": "Arcana☿Transmutation"
     },
     "auto": []
   },
@@ -343,7 +382,7 @@
     "originalBuild": true,
     "decodedBuild": true,
     "axiomAudit": true,
-    "declarationCount": 63
+    "declarationCount": 72
   },
   "entries": [
     {
@@ -3400,6 +3439,420 @@
         "Mathematics.GroupTheory.card_symmetricGroupThree",
         "Mathematics.GroupTheory.transposition01_mul_self",
         "Mathematics.GroupTheory.transpositions_not_commute"
+      ]
+    },
+    {
+      "id": "adjoints",
+      "school": "Transmutation",
+      "title": "The two hands of Disenchantment",
+      "subtitle": "Free monoids and units: the left and right adjoints of forgetful functors",
+      "file": "Mathematics/CategoryTheory/ForgetfulAdjoints.lean",
+      "level": "I · Foundations",
+      "summary": "Disenchantment forgets structure. Its left hand conjures the Primordial, the freest choir on a set of seeds. A lesser Disenchantment, which forgets only that a Veyr can undo its commands, has a right hand too: it gathers the members of a choir that can be undone.",
+      "meaning": "A forgetful functor sends each structure to something with less structure. The full Disenchantment sends a monoid to its underlying type; a lesser Disenchantment sends a group to its underlying monoid. The free monoid on S is the left adjoint of the first: a monoid homomorphism out of FreeMonoid S is exactly a function out of S. The units construction is the right adjoint of the second: a monoid homomorphism from a group G into M is exactly a group homomorphism into the units of M. The units of the court End(X) are exactly the permutations of X, the arena of Cayley's theorem.",
+      "hypotheses": "S is any type, M any monoid, and G any group. The full Disenchantment from monoids to types has no right adjoint: it would have to preserve coproducts, but the free product of two monoids is much larger than their disjoint union.",
+      "proofIdea": "Left hand: a homomorphism out of the free monoid is fixed by its values on the generators, because every word is built from generators by multiplication; induction on the word gives uniqueness. Right hand: if f is a homomorphism from a group, then f(g) has inverse f(g⁻¹), since f(g)·f(g⁻¹) = f(g·g⁻¹) = f(1) = 1. So f lands in the units, and a map into the units is fixed by its underlying values. Mathlib packages both as adjunctions, MonCat.adj and GrpCat.forget₂MonAdj.",
+      "prerequisites": [
+        "cayley",
+        "pacts"
+      ],
+      "concepts": [
+        "forget",
+        "forget₂",
+        "FreeMonoid",
+        "Units",
+        "Adjunction"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/Algebra/FreeMonoid/Basic.lean",
+          "symbol": "FreeMonoid.lift",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/FreeMonoid/Basic.lean#L315"
+        },
+        {
+          "path": "Mathlib/Algebra/Category/MonCat/Adjunctions.lean",
+          "symbol": "MonCat.adj",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/MonCat/Adjunctions.lean#L75"
+        },
+        {
+          "path": "Mathlib/Algebra/Category/Grp/Adjunctions.lean",
+          "symbol": "GrpCat.forget₂MonAdj",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Category/Grp/Adjunctions.lean"
+        },
+        {
+          "path": "Mathlib/Algebra/Group/End.lean",
+          "symbol": "Equiv.Perm.equivUnitsEnd",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/End.lean#L90"
+        }
+      ],
+      "lean": "import Mathlib.Algebra.FreeMonoid.Basic\nimport Mathlib.Algebra.Group.End\nimport Mathlib.Algebra.Category.MonCat.Adjunctions\nimport Mathlib.Algebra.Category.Grp.Adjunctions\n\nopen CategoryTheory\n\nuniverse u\n\nnamespace Mathematics.CategoryTheory\n\nsection FreeMonoid\n\nvariable {S M : Type*} [Monoid M]\n\ndef freeLift (f : S → M) : FreeMonoid S →* M := FreeMonoid.lift f\n\ntheorem freeLift_of (f : S → M) (s : S) : freeLift f (FreeMonoid.of s) = f s := rfl\n\ntheorem freeLift_unique (f : S → M) (φ : FreeMonoid S →* M)\n    (h_generators : ∀ s, φ (FreeMonoid.of s) = f s) : φ = freeLift f := by\n  apply MonoidHom.ext\n  intro w\n  induction w using FreeMonoid.inductionOn' with\n  | one =>\n    calc φ 1 = 1 := φ.map_one\n      _ = freeLift f 1 := (freeLift f).map_one.symm\n  | of_mul s w h_word =>\n    calc φ (FreeMonoid.of s * w) = φ (FreeMonoid.of s) * φ w := φ.map_mul _ _\n      _ = f s * φ w := congrArg (fun t => t * φ w) (h_generators s)\n      _ = f s * freeLift f w := congrArg (fun t => f s * t) h_word\n      _ = freeLift f (FreeMonoid.of s) * freeLift f w :=\n          congrArg (fun t => t * freeLift f w) (freeLift_of f s).symm\n      _ = freeLift f (FreeMonoid.of s * w) := ((freeLift f).map_mul _ _).symm\n\ndef freeForgetAdjunction : MonCat.free.{u} ⊣ forget MonCat.{u} := MonCat.adj\n\nend FreeMonoid\n\nsection Units\n\nvariable {G M : Type*} [Group G] [Monoid M]\n\ndef unitsLift (f : G →* M) : G →* Units M where\n  toFun g :=\n    { val := f g\n      inv := f g⁻¹\n      val_inv :=\n        calc f g * f g⁻¹ = f (g * g⁻¹) := (f.map_mul g g⁻¹).symm\n          _ = f 1 := congrArg f (mul_inv_cancel g)\n          _ = 1 := f.map_one\n      inv_val :=\n        calc f g⁻¹ * f g = f (g⁻¹ * g) := (f.map_mul g⁻¹ g).symm\n          _ = f 1 := congrArg f (inv_mul_cancel g)\n          _ = 1 := f.map_one }\n  map_one' := Units.ext f.map_one\n  map_mul' g k := Units.ext (f.map_mul g k)\n\ntheorem unitsLift_val (f : G →* M) (g : G) : (unitsLift f g : M) = f g := rfl\n\ntheorem unitsLift_unique (f : G →* M) (ψ : G →* Units M)\n    (h_values : ∀ g, (ψ g : M) = f g) : ψ = unitsLift f :=\n  MonoidHom.ext fun g => Units.ext (h_values g)\n\ndef forgetUnitsAdjunction : forget₂ GrpCat.{u} MonCat.{u} ⊣ MonCat.units.{u} :=\n  GrpCat.forget₂MonAdj\n\ndef permEquivUnitsEnd (X : Type*) : Equiv.Perm X ≃* Units (Function.End X) :=\n  Equiv.Perm.equivUnitsEnd\n\nend Units\n\nend Mathematics.CategoryTheory\n",
+      "spell": "beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿✨Primordial✨Choir✨☿Foundations\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Court\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Cosmology☿Choirs☿Hands\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Cosmology☿✨Veyr✨Halls✨☿Hands\n\nunveil ✨Lore✨of✨Forms✨\n\nplane tier\n\nsanctum Arcana☿Transmutation\n\nchamber ✨Primordial✨Choir✨\n\nfamiliar ⧼ᛋ ᛗ ⟡ Essence⊛⧽ ⟮Choir ᛗ⟯\n\nritual ✨Primordial's✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟡ ✨Primordial✨Choir✨ ᛋ ↝⊛ ᛗ ⇰ ✨Primordial✨Choir✨☿descend copper✨wire\n\nspell ✨Seeds✨Go✨Where✨Sent✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟪pouch✨of✨sand ⟡ ᛋ⟫ ⟡ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ≣ copper✨wire pouch✨of✨sand ⇰ mirror\n\nspell ✨Only✨One✨Primordial✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ ᛋ ↝⊛ ᛗ⟫\n    ⟪seedward ⟡ ⟁ pouch✨of✨sand᛫ brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ≣ copper✨wire pouch✨of✨sand⟫ ⟡ brass✨key ≣ ✨Primordial's✨Pact✨ copper✨wire ⇰ cast\n  channel Herald☿extend\n  summon verse\n  unravel verse through ✨Primordial✨Choir✨☿✨verse✨by✨verse✨ whence\n  ⫽ ✨empty✨verse✨ ⇉\n    litany brass✨key ☉ ≣ ☉ ⇰ brass✨key☿✨keeps✨stillness✨\n      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ☉ ⇰ ⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨keeps✨stillness✨☿reflect\n  ⫽ ✨seed✨then✨verse✨ pouch✨of✨sand verse verseward ⇉\n    litany brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand ⊛ verse⟫ ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ⊛ brass✨key verse ⇰ brass✨key☿✨Carry✨the✨Binding✨ ▢ ▢\n      ▢ ≣ copper✨wire pouch✨of✨sand ⊛ brass✨key verse ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ brass✨key verse⟫ ⟪seedward pouch✨of✨sand⟫\n      ▢ ≣ copper✨wire pouch✨of✨sand ⊛ ✨Primordial's✨Pact✨ copper✨wire verse ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire pouch✨of✨sand ⊛ pearl✨dust⟫ verseward\n      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ⊛ ✨Primordial's✨Pact✨ copper✨wire verse ⇰\n          sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ ✨Primordial's✨Pact✨ copper✨wire verse⟫ ⟪✨Seeds✨Go✨Where✨Sent✨ copper✨wire pouch✨of✨sand⟫☿reflect\n      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand ⊛ verse⟫ ⇰ ⟪⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨Carry✨the✨Binding✨ ▢ ▢⟫☿reflect\n\nritual ✨Left✨Hand✨of✨Disenchantment✨ ⟡ Choirs☿primordial☿⧼tier⧽ ☍ Disenchantment Choirs☿⧼tier⧽ ⇰ Choirs☿✨the✨hands✨\n\nseal ✨Primordial✨Choir✨\n\nchamber Reversibles\n\nfamiliar ⧼ᛰ ᛗ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Choir ᛗ⟯\n\nritual ✨Gather✨the✨Reversible✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟡ ᛰ ↝⊛ Reversibles ᛗ begets\n  deed silk✨cord ⇰\n    ⧼ core ⇰ copper✨wire silk✨cord\n      undoer ⇰ copper✨wire silk✨cord†\n      ✨undoes✨after✨ ⇰\n        litany copper✨wire silk✨cord ⊛ copper✨wire silk✨cord† ≣ copper✨wire ⟪silk✨cord ⊛ silk✨cord†⟫ ⇰ ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord silk✨cord†⟫☿reflect\n          ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silk✨cord⟫\n          ▢ ≣ ☉ ⇰ copper✨wire☿✨keeps✨stillness✨\n      ✨undoes✨before✨ ⇰\n        litany copper✨wire silk✨cord† ⊛ copper✨wire silk✨cord ≣ copper✨wire ⟪silk✨cord† ⊛ silk✨cord⟫ ⇰ ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord† silk✨cord⟫☿reflect\n          ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ silk✨cord⟫\n          ▢ ≣ ☉ ⇰ copper✨wire☿✨keeps✨stillness✨ ⧽\n  ✨carries✨stillness✨ ⇰ Reversibles☿extend copper✨wire☿✨keeps✨stillness✨\n  ✨carries✨binding✨ silk✨cord onyx✨bead ⇰ Reversibles☿extend ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord onyx✨bead⟫\n\nspell ✨Gathered✨as✨Given✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ ⟪✨Gather✨the✨Reversible✨ copper✨wire silk✨cord ⟡ ᛗ⟫ ≣ copper✨wire silk✨cord ⇰ mirror\n\nspell ✨Only✨One✨Gathering✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪tin✨key ⟡ ᛰ ↝⊛ Reversibles ᛗ⟫\n    ⟪valueward ⟡ ⟁ silk✨cord᛫ ⟪tin✨key silk✨cord ⟡ ᛗ⟫ ≣ copper✨wire silk✨cord⟫ ⟡ tin✨key ≣ ✨Gather✨the✨Reversible✨ copper✨wire ⇰\n  Herald☿extend conjure silk✨cord ⇉ Reversibles☿extend ⟪valueward silk✨cord⟫\n\nritual ✨Right✨Hand✨of✨Lesser✨Disenchantment✨ ⟡ ✨Lesser✨Disenchantment✨ Veyrs☿⧼tier⧽ Choirs☿⧼tier⧽ ☍ Choirs☿reversibles☿⧼tier⧽ ⇰\n  Veyrs☿✨lesser✨hands✨\n\nritual ✨Shuffles✨Are✨the✨Court's✨Reversibles✨ ⟪🌒 ⟡ Essence⊛⟫ ⟡ Portal☿Shuffling 🌒 ≃⊛ Reversibles ⟪Rite☿Court 🌒⟫ ⇰\n  Portal☿Shuffling☿✨court's✨reversibles✨\n\nseal Reversibles\n\nseal Arcana☿Transmutation\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "section",
+          "arcane": "chamber"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "open",
+          "arcane": "unveil"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "universe",
+          "arcane": "plane"
+        },
+        {
+          "lean": "where",
+          "arcane": "begets"
+        },
+        {
+          "lean": "with",
+          "arcane": "whence"
+        },
+        {
+          "lean": "by",
+          "arcane": "cast"
+        },
+        {
+          "lean": "fun",
+          "arcane": "conjure"
+        },
+        {
+          "lean": "calc",
+          "arcane": "litany"
+        },
+        {
+          "lean": "using",
+          "arcane": "through"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Function",
+          "arcane": "Rite"
+        },
+        {
+          "lean": "symm",
+          "arcane": "reflect"
+        },
+        {
+          "lean": "congrArg",
+          "arcane": "sympathy"
+        },
+        {
+          "lean": "rfl",
+          "arcane": "mirror"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Monoid",
+          "arcane": "Choir"
+        },
+        {
+          "lean": "MonoidHom",
+          "arcane": "Herald"
+        },
+        {
+          "lean": "Equiv",
+          "arcane": "Portal"
+        },
+        {
+          "lean": "intro",
+          "arcane": "summon"
+        },
+        {
+          "lean": "apply",
+          "arcane": "channel"
+        },
+        {
+          "lean": "induction",
+          "arcane": "unravel"
+        },
+        {
+          "lean": "ext",
+          "arcane": "extend"
+        },
+        {
+          "lean": "k",
+          "arcane": "onyx✨bead"
+        },
+        {
+          "lean": "f",
+          "arcane": "copper✨wire"
+        },
+        {
+          "lean": "g",
+          "arcane": "silk✨cord"
+        },
+        {
+          "lean": "t",
+          "arcane": "pearl✨dust"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "✨Grand✨Archive✨"
+        },
+        {
+          "lean": "Algebra",
+          "arcane": "✨Bound✨Veyrath✨"
+        },
+        {
+          "lean": "G",
+          "arcane": "ᛰ"
+        },
+        {
+          "lean": "X",
+          "arcane": "🌒"
+        },
+        {
+          "lean": "s",
+          "arcane": "pouch✨of✨sand"
+        },
+        {
+          "lean": "Perm",
+          "arcane": "Shuffling"
+        },
+        {
+          "lean": "lift",
+          "arcane": "descend"
+        },
+        {
+          "lean": "Basic",
+          "arcane": "Foundations"
+        },
+        {
+          "lean": "map_mul",
+          "arcane": "✨Carry✨the✨Binding✨"
+        },
+        {
+          "lean": "inv_mul_cancel",
+          "arcane": "✨Reversal✨Undoes✨"
+        },
+        {
+          "lean": "mul_inv_cancel",
+          "arcane": "✨Binding✨Undone✨"
+        },
+        {
+          "lean": "val",
+          "arcane": "core"
+        },
+        {
+          "lean": "S",
+          "arcane": "ᛋ"
+        },
+        {
+          "lean": "M",
+          "arcane": "ᛗ"
+        },
+        {
+          "lean": "End",
+          "arcane": "Court"
+        },
+        {
+          "lean": "toFun",
+          "arcane": "deed"
+        },
+        {
+          "lean": "map_one'",
+          "arcane": "✨carries✨stillness✨"
+        },
+        {
+          "lean": "map_mul'",
+          "arcane": "✨carries✨binding✨"
+        },
+        {
+          "lean": "FreeMonoid",
+          "arcane": "✨Primordial✨Choir✨"
+        },
+        {
+          "lean": "Category",
+          "arcane": "Cosmology"
+        },
+        {
+          "lean": "MonCat",
+          "arcane": "Choirs"
+        },
+        {
+          "lean": "Adjunctions",
+          "arcane": "Hands"
+        },
+        {
+          "lean": "Grp",
+          "arcane": "✨Veyr✨Halls✨"
+        },
+        {
+          "lean": "CategoryTheory",
+          "arcane": "✨Lore✨of✨Forms✨"
+        },
+        {
+          "lean": "freeLift",
+          "arcane": "✨Primordial's✨Pact✨"
+        },
+        {
+          "lean": "freeLift_of",
+          "arcane": "✨Seeds✨Go✨Where✨Sent✨"
+        },
+        {
+          "lean": "of",
+          "arcane": "seed"
+        },
+        {
+          "lean": "freeLift_unique",
+          "arcane": "✨Only✨One✨Primordial✨Pact✨"
+        },
+        {
+          "lean": "φ",
+          "arcane": "brass✨key"
+        },
+        {
+          "lean": "h_generators",
+          "arcane": "seedward"
+        },
+        {
+          "lean": "inductionOn'",
+          "arcane": "✨verse✨by✨verse✨"
+        },
+        {
+          "lean": "one",
+          "arcane": "✨empty✨verse✨"
+        },
+        {
+          "lean": "map_one",
+          "arcane": "✨keeps✨stillness✨"
+        },
+        {
+          "lean": "of_mul",
+          "arcane": "✨seed✨then✨verse✨"
+        },
+        {
+          "lean": "h_word",
+          "arcane": "verseward"
+        },
+        {
+          "lean": "freeForgetAdjunction",
+          "arcane": "✨Left✨Hand✨of✨Disenchantment✨"
+        },
+        {
+          "lean": "free",
+          "arcane": "primordial"
+        },
+        {
+          "lean": "forget",
+          "arcane": "Disenchantment"
+        },
+        {
+          "lean": "adj",
+          "arcane": "✨the✨hands✨"
+        },
+        {
+          "lean": "Units",
+          "arcane": "Reversibles"
+        },
+        {
+          "lean": "unitsLift",
+          "arcane": "✨Gather✨the✨Reversible✨"
+        },
+        {
+          "lean": "inv",
+          "arcane": "undoer"
+        },
+        {
+          "lean": "val_inv",
+          "arcane": "✨undoes✨after✨"
+        },
+        {
+          "lean": "inv_val",
+          "arcane": "✨undoes✨before✨"
+        },
+        {
+          "lean": "unitsLift_val",
+          "arcane": "✨Gathered✨as✨Given✨"
+        },
+        {
+          "lean": "unitsLift_unique",
+          "arcane": "✨Only✨One✨Gathering✨"
+        },
+        {
+          "lean": "ψ",
+          "arcane": "tin✨key"
+        },
+        {
+          "lean": "h_values",
+          "arcane": "valueward"
+        },
+        {
+          "lean": "forgetUnitsAdjunction",
+          "arcane": "✨Right✨Hand✨of✨Lesser✨Disenchantment✨"
+        },
+        {
+          "lean": "forget₂",
+          "arcane": "✨Lesser✨Disenchantment✨"
+        },
+        {
+          "lean": "GrpCat",
+          "arcane": "Veyrs"
+        },
+        {
+          "lean": "units",
+          "arcane": "reversibles"
+        },
+        {
+          "lean": "forget₂MonAdj",
+          "arcane": "✨lesser✨hands✨"
+        },
+        {
+          "lean": "permEquivUnitsEnd",
+          "arcane": "✨Shuffles✨Are✨the✨Court's✨Reversibles✨"
+        },
+        {
+          "lean": "equivUnitsEnd",
+          "arcane": "✨court's✨reversibles✨"
+        },
+        {
+          "lean": "Mathematics.CategoryTheory",
+          "arcane": "Arcana☿Transmutation"
+        }
+      ],
+      "sourceHash": "cd41378e7663bc3f301839ccb7f2422637f95a88041747dc482c4706b641d281",
+      "spellHash": "fb0310e56995d6e38b0333720f67549178d6bca58955fb247a4fee8b6aae390a",
+      "declarations": [
+        "Mathematics.CategoryTheory.freeLift",
+        "Mathematics.CategoryTheory.freeLift_of",
+        "Mathematics.CategoryTheory.freeLift_unique",
+        "Mathematics.CategoryTheory.freeForgetAdjunction",
+        "Mathematics.CategoryTheory.unitsLift",
+        "Mathematics.CategoryTheory.unitsLift_val",
+        "Mathematics.CategoryTheory.unitsLift_unique",
+        "Mathematics.CategoryTheory.forgetUnitsAdjunction",
+        "Mathematics.CategoryTheory.permEquivUnitsEnd"
       ]
     }
   ]

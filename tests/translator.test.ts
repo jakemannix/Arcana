@@ -166,3 +166,10 @@ test('rejects ambiguous keys', () => {
   assert.throws(() => new Key({ global: { a: 'ember', b: 'ember' }, scoped: {} }), /same spell word/);
   assert.throws(() => new Key({ global: { a: 'spell' }, scoped: {} }), /reserved/);
 });
+
+test('instances read as bestow, and older spells that say initiate still decode', () => {
+  const key = new Key({ global: { M: 'ᛗ' }, scoped: {} });
+  assert.equal(toSpell('instance : Monoid M', key), 'bestow ⟡ Choir ᛗ');
+  assert.equal(fromSpell('bestow ⟡ Choir ᛗ', key), 'instance : Monoid M');
+  assert.equal(fromSpell('initiate ⟡ Choir ᛗ', key), 'instance : Monoid M');
+});

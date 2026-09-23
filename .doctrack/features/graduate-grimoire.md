@@ -6,7 +6,7 @@ tags: [doctrack/type/feature, doctrack/status/active, doctrack/audience/claude]
 # Graduate grimoire
 
 ## User-directed intermediate deliverable
-The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: ten folios plus Cantrips, totaling 63 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
+The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: ten Enchantment folios, one Transmutation folio, and Cantrips, totaling 72 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
 
 The longer objective remains a graduate grimoire across all eight schools, including group theory, real analysis, combinatorics, topology, linear analysis, complex analysis, algebraic geometry, manifolds, and “PDSs” (clarification still pending, irrelevant to this first school). This broader objective is not complete.
 
@@ -36,3 +36,4 @@ Formal namespaces, declarations, and proof-local names are mathematical; spell n
 Use Nat.card carefully: it is zero for infinite types. Lagrange and orbit–stabilizer explanations explicitly describe finite-group interpretation and the extended formal convention. Orbit/coset correspondence is a set equivalence, not a group isomorphism when stabilizers are non-normal.
 
 Related: [[editor]], [[../components/translator]], [[../decisions/browser-translation]].
+- `math/Mathematics/CategoryTheory/ForgetfulAdjoints.lean` (Transmutation): the free monoid's universal property proved by induction on words (left adjoint of `forget MonCat`), the units construction built by hand with its universal property (right adjoint of `forget₂ GrpCat MonCat`), mathlib's `MonCat.adj` and `GrpCat.forget₂MonAdj`, and `Perm X ≃* Units (Function.End X)` linking back to Cayley's court.

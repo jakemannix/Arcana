@@ -9,3 +9,4 @@ import Mathematics.GroupTheory.SimpleGroups
 import Mathematics.GroupTheory.GroupActions
 import Mathematics.GroupTheory.Cayley
 import Mathematics.GroupTheory.Permutations
+import Mathematics.CategoryTheory.ForgetfulAdjoints

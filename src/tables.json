@@ -7,7 +7,7 @@
     "inductive": "lineage",
     "structure": "sigil",
     "class": "order",
-    "instance": "initiate",
+    "instance": "bestow",
     "example": "trial",
     "axiom": "decree",
     "opaque": "veiled",
@@ -234,6 +234,7 @@
   "syms": {
     ":=": "⇰",
     "⁻¹": "†",
+    "⊣": "☍",
     "=>": "⇉",
     "->": "~>",
     "<-": "<~",
@@ -609,5 +610,8 @@
     "shade",
     "moss",
     "fell"
-  ]
+  ],
+  "legacyWords": {
+    "initiate": "instance"
+  }
 }

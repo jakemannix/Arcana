@@ -33,6 +33,9 @@ app.innerHTML = `
       <div class="school-heading"><span aria-hidden="true">⟐</span><div><p class="eyebrow">SCHOOL OF</p><h1>Enchantment</h1></div></div>
       <p class="school-description">Groups, pacts, and the structure that survives a transformation.</p>
       <nav id="chapter-nav" aria-label="Enchantment lessons"></nav>
+      <div class="school-heading"><span aria-hidden="true">⚗</span><div><p class="eyebrow">SCHOOL OF</p><h2>Transmutation</h2></div></div>
+      <p class="school-description">Functors and adjunctions: how one kind of structure becomes another.</p>
+      <nav id="transmutation-nav" aria-label="Transmutation lessons"></nav>
       <div class="contents-foot"><strong>Real mathematics. Written in Arcana.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
     </aside>
     <div class="reading-desk">
@@ -61,7 +64,7 @@ app.innerHTML = `
       <section class="reading-notes"><div><p class="eyebrow">WORDS OF POWER</p><p class="section-hint">The vocabulary used in this folio.</p><div id="concepts" class="concept-pairs"></div><details class="full-glossary"><summary>Full translation key for this folio</summary><div id="glossary"></div></details></div><div><p class="eyebrow">FROM THE GRAND ARCHIVE</p><p class="section-hint" id="version"></p><ul id="references"></ul><div class="source-downloads" id="source-downloads"></div></div></section>
     </div>
   </main>
-  <footer class="page-footer"><span>PRECISE WORDS. CURIOUS MAGIC.</span><span>One school, a shared foundation, room to grow.</span></footer>
+  <footer class="page-footer"><span>PRECISE WORDS. CURIOUS MAGIC.</span><span>Two schools, a shared foundation, room to grow.</span></footer>
   <div id="toast" class="toast" role="status" hidden></div>
 `;
 
@@ -246,12 +249,14 @@ function selectFolio(id: string) {
   load(draft?.lean ?? next.lean, draft?.spell ?? next.spell, new Key(draft?.key ?? grimoireKey));
   history.replaceState(null, '', '#' + id); renderFolio(); foldAll(spell);
 }
-for (const [index, folio] of folios.entries()) {
+const lessonsSoFar = new Map<string, number>();
+for (const folio of folios) {
   const button = document.createElement('button'); button.dataset.folio = folio.id;
   const number = document.createElement('span'), title = document.createElement('span');
-  number.textContent = index ? String(index).padStart(2, '0') : '◇'; title.textContent = folio.title;
+  const index = (lessonsSoFar.get(folio.school) ?? 0) + 1; lessonsSoFar.set(folio.school, index);
+  number.textContent = folio.school === 'Cantrips' ? '◇' : String(index).padStart(2, '0'); title.textContent = folio.title;
   button.append(number, title); button.addEventListener('click', () => selectFolio(folio.id));
-  $(folio.school === 'Cantrips' ? '#cantrip-nav' : '#chapter-nav').append(button);
+  $(({ Cantrips: '#cantrip-nav', Transmutation: '#transmutation-nav' } as Record<string, string>)[folio.school] ?? '#chapter-nav').append(button);
 }
 $('#restore').addEventListener('click', () => { if (!selected) return; drafts.delete(selected.id); load(selected.lean, selected.spell, new Key(grimoireKey)); foldAll(spell); announce('Original checked folio restored.'); });
 function load(leanText: string, spellText: string, data: Key) {

@@ -5,6 +5,8 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
+/- Equivalent representatives must produce the same output.
+The kernel containment makes their difference invisible to the map. -/
 spell ✨Veil✨Hides✨the✨Difference✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫
     ⧼jade✨cube silver✨bell ⟡ ᛰ⧽ ⟪kinship ⟡ jade✨cube† ⊛ silver✨bell ∈ ᚾ⟫ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ cast
   bind muted ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 一 ⇰ veilward kinship
@@ -13,14 +15,20 @@ spell ✨Veil✨Hides✨the✨Difference✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫
     ▢ ≣ copper✨wire ⟪jade✨cube ⊛ ⟪jade✨cube† ⊛ silver✨bell⟫⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube ⟪jade✨cube† ⊛ silver✨bell⟫⟫☿reflect
     ▢ ≣ copper✨wire silver✨bell ⇰ sympathy copper✨wire ⟪✨Return✨from✨the✨Left✨ jade✨cube silver✨bell⟫
 
+/- Normality makes the quotient a group. Kernel containment makes this map
+well defined on its cosets; mathlib packages both requirements into the lift. -/
 ritual ✨Pass✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫
     ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟡ ᛰ ⧸ ᚾ ↝⊛ ☥ ⇰
   ✨Veiled✨Veyr✨☿descend ᚾ copper✨wire veilward
 
+/- To calculate with the descended map, choose a representative and apply
+the original map. This formula follows directly from the construction. -/
 spell ✨Speak✨through✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯
     ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     ✨Pass✨the✨Veil✨ ᚾ copper✨wire veilward ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
+/- Every coset has a representative. Two descended maps agreeing on all
+representatives therefore agree everywhere; there is no further choice to make. -/
 spell ✨Only✨One✨Passage✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯
     ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟪silk✨cord ⟡ ᛰ ⧸ ᚾ ↝⊛ ☥⟫
     ⟪echoward ⟡ ⟁ jade✨cube ⟡ ᛰ᛫ silk✨cord ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube⟫ ⟡

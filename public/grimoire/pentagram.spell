@@ -2,14 +2,20 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Mirr
 
 sanctum Arcana☿Enchantment
 
+/- Use the standard dihedral model for a regular pentagram.
+Only its five outer tips are labeled; crossings are not additional vertices. -/
 byname ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨ 五
 
 ritual ✨Turn✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
 
 ritual ✨Mirror✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
 
+/- Join every second tip around the surrounding pentagon.
+The plus-or-minus alternatives make this an undirected star edge relation. -/
 ritual ✨Thread✨of✨the✨Star✨ ⟪jade✨cube silver✨bell ⟡ Clockwork 五⟫ ⟡ Verity ⇰ silver✨bell ≣ jade✨cube ⧾ 二 ⩔ silver✨bell ≣ jade✨cube ⧿ 二
 
+/- Rotations add a residue; reflected rotations reverse it and shift.
+The sign convention matches multiplication in the dihedral model. -/
 ritual ✨Command✨the✨Star✨ ⟪silk✨cord ⟡ ✨Five✨Pointed✨Seal✨⟫ ⟪jade✨cube ⟡ Clockwork 五⟫ ⟡ Clockwork 五 ⇰
   augur silk✨cord whence
   ⫽ ✨Mirror✨Veyr✨☿amber✨disc opal✨dust ⇉ jade✨cube ⧾ opal✨dust
@@ -31,9 +37,13 @@ spell ✨Mirrors✨Reverse✨the✨Star✨ ⟡ ✨Mirror✨the✨Star✨ ⊛ ✨
 
 spell ✨Silence✨Leaves✨the✨Star✨Still✨ ⟡ ⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ 一 jade✨cube ≣ jade✨cube ⇰ cast divine
 
+/- The action law checks composition in the correct order:
+the rightmost group element acts first. -/
 spell ✨Compose✨the✨Star's✨Commands✨ ⟡ ⟁ silk✨cord ward ⟡ ✨Five✨Pointed✨Seal✨᛫ ⟁ jade✨cube ⟡ Clockwork 五᛫
     ✨Command✨the✨Star✨ ⟪silk✨cord ⊛ ward⟫ jade✨cube ≣ ✨Command✨the✨Star✨ silk✨cord ⟪✨Command✨the✨Star✨ ward jade✨cube⟫ ⇰ cast divine
 
+/- Faithful means no two different group elements move every tip identically.
+The next theorem separately checks that each move preserves the star’s edges. -/
 spell ✨The✨Star✨Conceals✨No✨Command✨ ⟡ ⟁ silk✨cord ward ⟡ ✨Five✨Pointed✨Seal✨᛫
     ⟪⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ silk✨cord jade✨cube ≣ ✨Command✨the✨Star✨ ward jade✨cube⟫ ↝ silk✨cord ≣ ward ⇰ cast divine
 
@@ -42,6 +52,8 @@ spell ✨Preserve✨the✨Star's✨Threads✨ ⟡ ⟁ silk✨cord ⟡ ✨Five✨
   unseal ✨Thread✨of✨the✨Star✨
   divine
 
+/- This small check distinguishes an edge of the star from a side of
+the surrounding pentagon. Both predicates use the same explicit adjacency rule. -/
 spell ✨Skip✨a✨Tip✨to✨Trace✨the✨Star✨ ⟡ ✨Thread✨of✨the✨Star✨ 〇 二 ⩓ ⫬✨Thread✨of✨the✨Star✨ 〇 一 ⇰ cast
   unseal ✨Thread✨of✨the✨Star✨
   divine

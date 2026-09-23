@@ -7,6 +7,8 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
+/- Simple means nontrivial with no proper nontrivial normal subgroup.
+The next theorem identifies this explicit description with the library structure. -/
 ritual ✨Unbreakable✨Veyr✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Verity ⇰
   Plural ᛰ ⩓ ⟁ ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ᛫ ᚾ☿Hallowed ↝ ᚾ ≣ ⊥ ⩔ ᚾ ≣ ⊤
 
@@ -18,6 +20,9 @@ spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Veyr✨ ᛰ ↭ �
   ❖ summon simplicity
     missile ⦉simplicity☿✨to✨plural✨᛫ simplicity☿✨nothing✨or✨all✨⦊
 
+/- Lagrange makes the subgroup cardinality a divisor of a prime.
+Only the identity subgroup and the entire group can have the resulting sizes.
+This argument is stronger than needed: the subgroup need not be normal. -/
 spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫
     ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ☥ ≣ ⊥ ⩔ ☥ ≣ ⊤ ⇰ cast
   bind counted ⟡ Tally☿census ᛰ ≢ 〇 ⇰
@@ -36,6 +41,9 @@ spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward �
         ▢ ≣ Tally☿census ᛰ ⇰ censusward☿reflect
     missile ⟪✨Inner✨Veyr✨☿✨Full✨Census✨ ☥⟫☿onward filled
 
+/- There are two obligations: the group has more than one element,
+and every normal subgroup is trivial or total. Primality and the preceding
+subgroup theorem supply them separately. -/
 spell ✨Indivisible✨Veyrs✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫ ⟡
     ✨Unbreakable✨Veyr✨ ᛰ ⇰ cast
   bind counted ⟡ Tally☿census ᛰ ≢ 〇 ⇰
@@ -50,6 +58,8 @@ spell ✨Indivisible✨Veyrs✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ 
   summon ᚾ veilward
   missile ✨No✨Hidden✨Circles✨ primalward censusward ᚾ
 
+/- Convert the explicit property into mathlib’s bundled simplicity statement.
+No new group-theoretic argument is needed at this last step. -/
 spell ✨Indivisible✨Veyrs✨are✨Simple✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫ ⟡
     ✨Simple✨Veyr✨ ᛰ ⇰
   ✨Unbreakable✨Means✨Simple✨☿onward ⟪✨Indivisible✨Veyrs✨Cannot✨Break✨ primalward censusward⟫

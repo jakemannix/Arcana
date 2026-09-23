@@ -2,8 +2,12 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Named✨Veyrs✨☿✨Mirr
 
 sanctum Arcana☿Enchantment
 
+/- This is the algebraic model for a square’s rigid symmetries.
+The dihedral parameter counts vertices, so the group has twice that many elements. -/
 byname ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨ 四
 
+/- Choose a quarter-turn and a reflection. Their powers will generate
+all rotations and reflected rotations of the square. -/
 ritual ✨Turn✨the✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
 
 ritual ✨Mirror✨of✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
@@ -25,12 +29,16 @@ spell ✨The✨Wind's✨Turning✨Period✨ ⟡ period ✨Turn✨the✨Four✨Wi
 spell ✨The✨Wind's✨Mirror✨Period✨ ⟡ period ✨Mirror✨of✨Four✨Winds✨ ≣ 二 ⇰
   ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
 
+/- A mirror reverses the sense of a turn: reflect, turn, then reflect again
+and the result is the inverse rotation. -/
 spell ✨Mirrors✨Reverse✨the✨Winds✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰
   litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣
         ✨Mirror✨Veyr✨☿mirror✨shard 一 ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
     ▢ ≣ ✨Mirror✨Veyr✨☿amber✨disc 三 ⇰ cast divine
     ▢ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰ cast divine
 
+/- The two orders of a turn and a reflection give distinct reflected rotations.
+This supplies an explicit witness that the group is noncommutative. -/
 spell ✨The✨Winds✨Resist✨Harmony✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≢ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ cast
   summon harmonyward
   bind discordward ⟡ ⟪✨Mirror✨Veyr✨☿mirror✨shard 三 ⟡ ✨Four✨Winds✨Veyr✨⟫ ≢ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
@@ -39,9 +47,13 @@ spell ✨The✨Winds✨Resist✨Harmony✨ ⟡ ✨Turn✨the✨Four✨Winds✨ �
     ▢ ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ harmonyward
     ▢ ≣ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
 
+/- These normal forms exhaust the group: a rotation, or a product of a reflection
+and a rotation, with the exponent in the displayed range. The rightmost motion acts first. -/
 spell ✨All✨Commands✨of✨Four✨Winds✨ ⟡ ⟁ jade✨cube ⟡ ✨Four✨Winds✨Veyr✨᛫ ⟒ onyx✨bead ⟡ Fetter 四᛫
     jade✨cube ≣ ✨Turn✨the✨Four✨Winds✨ ⌃ onyx✨bead☿core ⩔ jade✨cube ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⌃ onyx✨bead☿core ⇰ cast divine
 
+/- Reassociate to place the two identical mirrors together.
+They cancel, leaving a rotation as the product of these two reflections. -/
 spell ✨Two✨Wind✨Mirrors✨Make✨a✨Turn✨ ⟡
     ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣ ✨Turn✨the✨Four✨Winds✨ ⇰
   litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣

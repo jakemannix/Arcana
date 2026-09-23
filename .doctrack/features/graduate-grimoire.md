@@ -11,7 +11,7 @@ The user narrowed the immediate step to one substantial school for review, plus 
 The longer objective remains a graduate grimoire across all eight schools, including group theory, real analysis, combinatorics, topology, linear analysis, complex analysis, algebraic geometry, manifolds, and “PDSs” (clarification still pending, irrelevant to this first school). This broader objective is not complete.
 
 ## Proof style
-The user asked for explicit, teaching-style proofs. Prefer named `have` steps and `calc` chains, with `congrArg` for each rewrite inside a product, over one-line library calls or `simp`. Reuse earlier folios' spells (for example, Kernels uses Pacts' preservation laws). Give every new identifier a curated name in `grimoire/lexicon.json`, so no automatic filler words appear. Keep proofs free of comments, because comments pass through translation unchanged.
+The user asked for explicit, teaching-style proofs. Prefer named `have` steps and `calc` chains, with `congrArg` for each rewrite inside a product, over one-line library calls or `simp`. Reuse earlier folios' spells (for example, Kernels uses Pacts' preservation laws). Give every new identifier a curated name in `grimoire/lexicon.json`, so no automatic filler words appear. The user now requests shared teaching comments. Preserve identical comments in both panes; comment visibility is a display effect, while saved and compiled sources keep them. Keep mathematical code unchanged during tutorial-only work.
 
 ## Source and verification
 `math/lean-toolchain` pins Lean v4.33.1; `math/lake-manifest.json` pins mathlib 0df444a360eaa60ab8c11dca51a86af692955474. `math/Mathematics.lean` imports the whole book. Individual source modules:
@@ -48,3 +48,9 @@ The field exercises now cover C₆, C₄ versus Klein V₄, D₄ (square symmetr
 P3Group is an unmodified pinned dependency at `822647a71aedace398cb886eb9a6b7993096e53b` (lixiang90/p3group; Apache 2.0 notices in source). It originally targeted Lean4.32.2 and compiles on our4.33.1 with only upstream style warnings. Keep mathlib's require block **last** in `math/lakefile.toml` so its transitive dependency pins take precedence. The axiom audit checks the transitive dependency on the full external proof, not only the local wrapper.
 
 References may have `package: "P3Group"`; omitted package means mathlib. Verification rejects dirty or mismatched source trees for both, creates exact-revision links for either package, and records `dependencyRevisions`, `manifestHash`, `lakefileHash`, and `verifierHash`. Tests guard these provenance fields. All spell names are curated; there are no auto names. See [[../decisions/arcana-vocabulary]] and the human vocabulary guide for the five houses' magical names.
+
+
+## Tutorial edition
+Every folio has a `tutorial` object: motivation, four titled explanatory steps, and a guided experiment with a hint. `src/tutorial.ts` renders this as plain text in a collapsible walkthrough; the verifier includes it in the generated readable book. Shared Lean comments explain constructions and proof steps, and pass through unchanged into Arcana. The verifier explicitly checks identical comment token sequences in both sources. The tutorial pass preserves all non-comment mathematical tokens and all 174 declarations; only Cayley's explanatory composition-order sentence was corrected (k acts first in g*k).
+
+Related: [[editor]] for the tutorial renderer and source-preserving comment visibility, [[../components/translator]] for adversarial custom-key validation.

@@ -4,8 +4,12 @@ sanctum Arcana☿Enchantment
 
 familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
+/- Start with arbitrary seeds. Their generated subgroup adds everything required
+by the identity, multiplication, and inverse laws, and nothing beyond that. -/
 ritual ✨Bound✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
 
+/- A seed belongs to every subgroup containing all the seeds.
+The universal membership test turns that observation into membership in the closure. -/
 spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ pouch✨of✨sand ⊆ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ cast
   summon jade✨cube sigilward
   proclaim jade✨cube ∈ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
@@ -13,6 +17,8 @@ spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ pouch�
   summon ᛟ hedgeward
   missile hedgeward sigilward
 
+/- This is the useful universal property: containing every generated element
+is equivalent to containing the original seeds. Prove each implication separately. -/
 spell ✨Smallest✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
     ✨Bound✨Circle✨ pouch✨of✨sand ⋜ ☥ ↭ pouch✨of✨sand ⊆ ☥ ⇰ cast
   fabricate
@@ -23,11 +29,15 @@ spell ✨Smallest✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟪☥ ⟡ �
     bind ✨every✨circle✨ ⟡ ⟁ ᛟ ⟡ ✨Inner✨Veyr✨ ᛰ᛫ pouch✨of✨sand ⊆ ᛟ ↝ jade✨cube ∈ ᛟ ⇰ ✨Inner✨Veyr✨☿✨Encirclement✨Criterion✨☿onward sigilward
     missile ✨every✨circle✨ ☥ sown
 
+/- Subgroup membership survives taking an inverse and then multiplying.
+No commutativity assumption is involved. -/
 spell ✨Keep✨the✨Circle✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⧼jade✨cube silver✨bell ⟡ ᛰ⧽
     ⟪sigilward ⟡ jade✨cube ∈ ☥⟫ ⟪runeward ⟡ silver✨bell ∈ ☥⟫ ⟡ jade✨cube ⊛ silver✨bell† ∈ ☥ ⇰ cast
   bind reversed ⟡ silver✨bell† ∈ ☥ ⇰ ☥☿✨Reversal✨Remains✨ runeward
   missile ☥☿✨Binding✨Remains✨ sigilward reversed
 
+/- Generating from an existing subgroup adds no new elements.
+Antisymmetry reduces equality to containment in both directions. -/
 spell ✨Seal✨the✨Circle✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ✨Bound✨Circle✨ ⟪☥ ⟡ Host ᛰ⟫ ≣ ☥ ⇰ cast
   channel Stalemate
   ❖ bind sown ⟡ ⟪☥ ⟡ Host ᛰ⟫ ⊆ ☥ ⇰ conjure jade✨cube sigilward ⇉ sigilward

@@ -7,6 +7,8 @@ namespace Mathematics.GroupTheory
 
 variable {G : Type*} [Group G]
 
+/- Simple means nontrivial with no proper nontrivial normal subgroup.
+The next theorem identifies this explicit description with the library structure. -/
 def isSimpleGroupProperty (G : Type*) [Group G] : Prop :=
   Nontrivial G ∧ ∀ N : Subgroup G, N.Normal → N = ⊥ ∨ N = ⊤
 
@@ -18,6 +20,9 @@ theorem isSimpleGroupProperty_iff : isSimpleGroupProperty G ↔ IsSimpleGroup G 
   · intro h_simple
     exact ⟨h_simple.toNontrivial, h_simple.eq_bot_or_eq_top_of_normal⟩
 
+/- Lagrange makes the subgroup cardinality a divisor of a prime.
+Only the identity subgroup and the entire group can have the resulting sizes.
+This argument is stronger than needed: the subgroup need not be normal. -/
 theorem subgroup_eq_bot_or_top_of_prime_card {p : ℕ} (hp : p.Prime) (hG : Nat.card G = p)
     (H : Subgroup G) : H = ⊥ ∨ H = ⊤ := by
   have h_card_ne_zero : Nat.card G ≠ 0 :=
@@ -36,6 +41,9 @@ theorem subgroup_eq_bot_or_top_of_prime_card {p : ℕ} (hp : p.Prime) (hG : Nat.
         _ = Nat.card G := hG.symm
     exact (Subgroup.card_eq_iff_eq_top H).mp h_card_eq
 
+/- There are two obligations: the group has more than one element,
+and every normal subgroup is trivial or total. Primality and the preceding
+subgroup theorem supply them separately. -/
 theorem isSimpleGroupProperty_of_prime_card {p : ℕ} (hp : p.Prime) (hG : Nat.card G = p) :
     isSimpleGroupProperty G := by
   have h_card_ne_zero : Nat.card G ≠ 0 :=
@@ -50,6 +58,8 @@ theorem isSimpleGroupProperty_of_prime_card {p : ℕ} (hp : p.Prime) (hG : Nat.c
   intro N hN
   exact subgroup_eq_bot_or_top_of_prime_card hp hG N
 
+/- Convert the explicit property into mathlib’s bundled simplicity statement.
+No new group-theoretic argument is needed at this last step. -/
 theorem isSimpleGroup_of_prime_card {p : ℕ} (hp : p.Prime) (hG : Nat.card G = p) :
     IsSimpleGroup G :=
   isSimpleGroupProperty_iff.mp (isSimpleGroupProperty_of_prime_card hp hG)

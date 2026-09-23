@@ -163,9 +163,64 @@ button:disabled { opacity: .45; cursor: default; }
 @media (prefers-reduced-motion: reduce) { .spark-field { display: none; }.spell-revealing { animation: none; } }
 @media (max-width: 1180px) and (min-width: 901px) { .spell-actions { gap: 7px; }.reading-desk .pane-header { padding: 12px; flex-wrap: wrap; } }
 
-.pane-visibility { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 15px; border-bottom: 1px solid var(--border); background: #182321; }
-.pane-visibility button { border: 1px solid #667b6350; border-radius: 3px; padding: 6px 12px; }
-.pane-visibility button[aria-expanded="false"] { color: #dcc292; border-color: #b6975f70; }
 .reading-desk .editors.single-pane { grid-template-columns: minmax(0, 1fr); }
 .reading-desk .editors.single-pane .editor-pane { border: 0; }
-.panes-hidden { margin: 0; padding: 30px 20px; color: #b7c8bd; font-size: 14px; line-height: 1.6; }
+
+/* Reading views hide exposition as well as the source pane. */
+.presentation-controls { display: flex; align-items: center; padding: 4px; gap: 3px; border: 1px solid #8b79594d; border-radius: 7px; background: #111d20; flex-shrink: 0; }
+.presentation-controls button { background: transparent; border: 1px solid transparent; border-radius: 4px; padding: 9px 12px; color: #bcc6b9; font-size: 13px; white-space: nowrap; }
+.presentation-controls button:hover { background: #cdb27214; color: #ffedbf; }
+.presentation-controls button[aria-pressed="true"] { background: #d1b37920; border-color: #b698615e; color: #f2d8a5; box-shadow: inset 0 0 12px #d7a43c09; }
+.presentation-controls button:focus-visible { outline: 2px solid #e8c379; outline-offset: 2px; }
+#app[data-presentation="magic"] [data-mathematical],
+#app[data-presentation="math"] [data-magical],
+#app:not([data-presentation="magic"]) [data-only="magic"],
+#app:not([data-presentation="math"]) [data-only="math"],
+#app:not([data-presentation="parallel"]) [data-only="parallel"] { display: none !important; }
+#app[data-presentation="magic"] .folio-introduction { margin-bottom: 28px; }
+#app[data-presentation="math"] .folio-subtitle { font: 400 clamp(30px, 3vw, 44px)/1.15 'Cormorant Garamond', Georgia, serif; color: #efeadc; }
+#app[data-presentation="math"] .reading-notes { grid-template-columns: 1fr; }
+#app[data-presentation="math"] .reading-notes > div + div { border-left: 0; padding-left: 0; }
+.personal-draft { display: block; margin-top: 18px; border: 1px solid #b6986140; width: 100%; text-align: left; }
+.presentation-changing [data-transmute] { opacity: 0; }
+.transmutation-field { position: fixed; inset: 0; overflow: hidden; z-index: 90; pointer-events: none; contain: strict; }
+.transmutation-glyph { position: absolute; white-space: pre; animation: glyph-transmutation 1.05s both; will-change: transform, opacity; }
+.transmutation-glyph > span { position: absolute; top: 0; left: 0; white-space: pre; }
+.glyph-before { animation: glyph-departure 1.05s both; }
+.glyph-after { animation: glyph-arrival 1.05s both; }
+@keyframes glyph-transmutation {
+  0% { transform: translate(0, 0) rotate(0); opacity: 1; animation-timing-function: cubic-bezier(.5, 0, .85, .5); }
+  44% { transform: translate(var(--heap-x), var(--heap-y)) rotate(var(--tumble)); opacity: .88; animation-timing-function: cubic-bezier(.2, .6, .2, 1); }
+  88% { transform: translate(var(--target-x), var(--target-y)) rotate(0); opacity: 1; }
+  100% { transform: translate(var(--target-x), var(--target-y)) rotate(0); opacity: 0; }
+}
+@keyframes glyph-departure { 0%, 35% { opacity: 1; } 52%, 100% { opacity: 0; } }
+@keyframes glyph-arrival { 0%, 35% { opacity: 0; } 52%, 100% { opacity: 1; } }
+@media (min-width: 1250px) { .masthead .edition { margin-right: auto; } }
+@media (max-width: 1249px) { .masthead .edition { display: none; } }
+@media (max-width: 760px) {
+  .masthead { height: auto; min-height: 78px; padding-top: 14px; padding-bottom: 12px; flex-wrap: wrap; gap: 13px; }
+  .presentation-controls { order: 3; flex: 1 0 100%; justify-content: center; }
+  .presentation-controls button { flex: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .transmutation-field { display: none; } .presentation-changing [data-transmute] { opacity: 1; } }
+
+
+/* Tutorial text is available beside the lesson without burying the working folio. */
+.tutorial { border: 1px solid #a88b5333; border-radius: 5px; padding: 20px 24px; margin: 24px 0; background: #cdb27205; }
+.tutorial h3 { margin: 0 0 10px; font: 500 26px/1.2 'Cormorant Garamond', Georgia, serif; color: #ead9b5; }
+.tutorial h4 { color: #decda8; font-size: 15px; margin: 0 0 7px; font-weight: 500; }
+.tutorial p { line-height: 1.8; color: #bac7ba; font-size: 15px; max-width: 95ch; }
+.tutorial .eyebrow { font-size: 11px; color: var(--gold); }
+.tutorial summary { cursor: pointer; color: #dbc393; font-size: 14px; padding: 8px 0; }
+.tutorial summary:focus-visible { outline: 2px solid #d5b375; outline-offset: 4px; }
+.tutorial-steps { padding-left: 25px; margin: 20px 0; }
+.tutorial-steps li { padding: 0 0 14px 8px; }
+.tutorial-steps li::marker { color: #bc9f6d; }
+.tutorial-steps p { margin: 0; }
+.tutorial-experiment { border-top: 1px solid var(--border); padding-top: 20px; }
+.tutorial-experiment .section-hint { font-size: 12px; margin-top: 16px; }
+.comment-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid var(--border); padding: 4px 14px; }
+.comment-toolbar span { color: #97aa9b; font-size: 12px; }
+.comment-toolbar button { color: #d5c49e; }
+@media (max-width: 650px) { .tutorial { padding: 17px; }.comment-toolbar { gap: 4px; } }

@@ -5,11 +5,15 @@ sanctum Arcana☿Cantrips
 
 familiar ⧼ᚨ ᛒ ᚷ ⟡ Essence⊛⧽
 
+/- Follow the types: first send an input through f, then send its output through g.
+The matching middle type makes this composition possible. -/
 ritual Weave ⟪copper✨wire ⟡ ᚨ ↝ ᛒ⟫ ⟪silk✨cord ⟡ ᛒ ↝ ᚷ⟫ ⟡ ᚨ ↝ ᚷ ⇰ conjure jade✨cube ⇉ silk✨cord ⟪copper✨wire jade✨cube⟫
 
 spell ✨Thread✨Unfolds✨ ⟪copper✨wire ⟡ ᚨ ↝ ᛒ⟫ ⟪silk✨cord ⟡ ᛒ ↝ ᚷ⟫ ⟪jade✨cube ⟡ ᚨ⟫ ⟡
     Weave copper✨wire silk✨cord jade✨cube ≣ silk✨cord ⟪copper✨wire jade✨cube⟫ ⇰ mirror
 
+/- Injectivity lets us remove a function from an equality of its outputs.
+Here we remove the outer function first, then the inner one. -/
 spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cord ⟡ ᛒ ↝ ᚷ⧽
     ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
     Rite☿Faithful ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
@@ -21,6 +25,8 @@ spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cor
   bind ✨inner✨weave✨ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ echoward ✨outer✨weave✨
   missile faith ✨inner✨weave✨
 
+/- To reach a target, work backwards through the two surjectivity hypotheses.
+Each supplies a preimage and an equation that the final calculation checks. -/
 spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cord ⟡ ᛒ ↝ ᚷ⧽
     ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟪echoward ⟡ Rite☿Reaching silk✨cord⟫ ⟡
     Rite☿Reaching ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
@@ -32,6 +38,8 @@ spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cor
     ▢ ≣ silk✨cord silver✨bell ⇰ sympathy silk✨cord sigilward
     ▢ ≣ amber✨rod ⇰ runeward
 
+/- An equivalence stores an inverse and both round-trip laws.
+These last two statements expose those laws without reconstructing the inverse. -/
 spell ✨Mirror✨Return✨ ⟪obsidian✨mirror ⟡ ᚨ ≃ ᛒ⟫ ⟪jade✨cube ⟡ ᚨ⟫ ⟡ obsidian✨mirror☿reflect ⟪obsidian✨mirror jade✨cube⟫ ≣ jade✨cube ⇰
   obsidian✨mirror☿✨Return✨Path✨ jade✨cube
 

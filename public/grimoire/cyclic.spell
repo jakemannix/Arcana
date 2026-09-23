@@ -4,6 +4,8 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
 
 sanctum Arcana☿Enchantment
 
+/- This type tag writes modular addition as multiplication.
+The group identity is residue zero, and powers mean repeated addition. -/
 byname ✨Sixfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 六⟫
 
 ritual ✨Turn✨the✨Sixfold✨Wheel✨ ⟡ ✨Sixfold✨Wheel✨ ⇰ Unchanted☿unchant 一
@@ -12,9 +14,13 @@ spell ✨Count✨the✨Sixfold✨Wheel✨ ⟡ Counted☿census ✨Sixfold✨Whee
 
 spell ✨Six✨Turns✨Return✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 六 ≣ 一 ⇰ cast divine
 
+/- A single forward step visits every position of the six-place dial.
+The bounded exponent is a witness for how many steps reach each element. -/
 spell ✨One✨Turn✨Commands✨the✨Wheel✨ ⟡ ⟁ jade✨cube ⟡ ✨Sixfold✨Wheel✨᛫ ⟒ onyx✨bead ⟡ Fetter 六᛫ jade✨cube ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ⇰ cast
   divine
 
+/- Returning after a full turn is only half the order proof.
+We must also rule out every smaller positive return time. -/
 spell ✨The✨Sixfold✨Period✨ ⟡ period ✨Turn✨the✨Sixfold✨Wheel✨ ≣ 六 ⇰ cast
   channel ⟪✨Test✨the✨First✨Return✨ ⟪cast divine ⟡ 〇 ⋖ 六⟫⟫☿backward
   fabricate
@@ -23,6 +29,8 @@ spell ✨The✨Sixfold✨Period✨ ⟡ period ✨Turn✨the✨Sixfold✨Wheel✨
     bind firstward ⟡ ⟁ onyx✨bead ⟡ Fetter 六᛫ 〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
     missile firstward ⦉pinch✨of✨sulfur᛫ rimward⦊ riseward
 
+/- Use the general power-order formula, substitute the known generator order,
+then compute the greatest common divisor. The next example follows the same pattern. -/
 spell ✨Double✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ 三 ⇰
   litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 二 ⇰
         ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
@@ -35,6 +43,8 @@ spell ✨Triple✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixf
     ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 三 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 三⟫ ✨The✨Sixfold✨Period✨
     ▢ ≣ 二 ⇰ cast divine
 
+/- First add the exponents using a general power law.
+Only the final reduction uses the finite dial’s wraparound. -/
 spell ✨Beyond✨the✨Last✨Mark✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰
   litany ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ ⟪四 ⧾ 五⟫ ⇰ ⟪✨Join✨the✨Ascents✨ ▢ ▢ ▢⟫☿reflect
     ▢ ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰ cast divine

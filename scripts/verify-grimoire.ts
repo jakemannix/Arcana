@@ -39,14 +39,24 @@ const sources = chapters.map(chapter => ({ ...chapter, lean: read(join(math, cha
 const translated = sources.map(chapter => ({ ...chapter, spell: toSpell(chapter.lean, key) }));
 const keyText = JSON.stringify(key.data(), null, 2) + '\n';
 const reloaded = new Key(JSON.parse(keyText));
+const declarationsOf = (source: string) => {
+  const code = tokenize(source).map(token => ['comment', 'string', 'char'].includes(token.kind)
+    ? token.text.replace(/[^\n]/g, ' ') : token.text).join('');
+  const namespace = code.match(/^namespace (\S+)/m)?.[1];
+  if (!namespace) throw new Error('A folio must declare its mathematical namespace.');
+  return Array.from(code.matchAll(/^(?:noncomputable )?(?:def|abbrev|theorem) (\w+)/gm), match => namespace + '.' + match[1]);
+};
 const declarations: string[] = [];
 for (const chapter of translated) {
   const decoded = fromSpell(chapter.spell, reloaded);
   if (decoded !== chapter.lean) throw new Error(`Round-trip failure: ${chapter.id}`);
+  const comments = (source: string, spell = false) => tokenize(source, spell).filter(t => t.kind === 'comment').map(t => t.text);
+  if (JSON.stringify(comments(chapter.lean)) !== JSON.stringify(comments(chapter.spell, true))) {
+    throw new Error(`Shared comments differ between panes: ${chapter.id}`);
+  }
   const forbidden = tokenize(decoded).filter(t => t.kind === 'ident' && ['sorry', 'admit', 'axiom', 'unsafe', 'native_decide'].includes(t.text));
   if (forbidden.length) throw new Error(`Forbidden proof escape: ${chapter.id}`);
-  const namespace = decoded.match(/^namespace (\S+)/m)![1];
-  declarations.push(...Array.from(decoded.matchAll(/^(?:noncomputable )?(?:def|abbrev|theorem) (\w+)/gm), match => namespace + '.' + match[1]));
+  declarations.push(...declarationsOf(decoded));
   const path = join(decodedRoot, chapter.file);
   write(path, decoded);
   const result = run(lean, ['-DwarningAsError=true', path, '-o', path.replace(/\.lean$/, '.olean')], decodedRoot, env);
@@ -96,7 +106,7 @@ const entries = translated.map(chapter => {
   write(join(output, `${stem}.lean`), chapter.lean);
   write(join(output, `${stem}.spell`), chapter.spell);
   write(join(output, `${stem}.json`), JSON.stringify({ format: 'arcana/v1', lean: chapter.lean, spell: chapter.spell, key: key.data() }, null, 2) + '\n');
-  return { ...chapter, references, glossary, sourceHash: sha(chapter.lean), spellHash: sha(chapter.spell), declarations: Array.from(chapter.lean.matchAll(/^(?:noncomputable )?(?:def|abbrev|theorem) (\w+)/gm), match => chapter.lean.match(/^namespace (\S+)/m)![1] + '.' + match[1]) };
+  return { ...chapter, references, glossary, sourceHash: sha(chapter.lean), spellHash: sha(chapter.spell), declarations: declarationsOf(chapter.lean) };
 });
 const catalog = { format: 'arcana-grimoire/v1', mathlibRevision: pin, dependencyRevisions,
   manifestHash: sha(read(join(math, 'lake-manifest.json'))), lakefileHash: sha(read(join(math, 'lakefile.toml'))),
@@ -105,6 +115,11 @@ const catalog = { format: 'arcana-grimoire/v1', mathlibRevision: pin, dependency
   metadataHash: sha(read(join(root, 'grimoire/chapters.json'))), lexiconHash: sha(read(join(root, 'grimoire/lexicon.json'))),
   key: key.data(), verification: { originalBuild: true, decodedBuild: true, axiomAudit: true, declarationCount: declarations.length }, entries };
 write(join(root, 'src/grimoire.generated.json'), JSON.stringify(catalog, null, 2) + '\n');
-const book = '# Arcana · The grimoire\n\n' + (entries.length - 1) + ' lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All ' + declarations.length + ' declarations compile against Lean/mathlib v4.33.1, with the pinned P3Group classification library for the Eightfold Way. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.\n\n' + entries.map(entry => `## ${entry.title}\n\n*${entry.subtitle}*\n\n${entry.summary}\n\n**Mathematical meaning.** ${entry.meaning}\n\n**Hypotheses.** ${entry.hypotheses}\n\n**Proof idea.** ${entry.proofIdea}\n\n` + '```text\n' + entry.spell + '```\n\n' + `[Lean source](../math/${entry.file}) · [Arcana source](../public/grimoire/${entry.id}.spell)\n\n` + entry.references.map(ref => `[${ref.symbol}](${ref.url})`).join(' · ') + '\n').join('\n');
+const tutorialMarkdown = (tutorial: { motivation: string; steps: { title: string; body: string }[];
+  experiment: { prompt: string; hint: string } }) =>
+  `**A guided reading.** ${tutorial.motivation}\n\n` +
+  tutorial.steps.map((step, index) => `${index + 1}. **${step.title}** ${step.body}`).join('\n\n') +
+  `\n\n**Try it yourself.** ${tutorial.experiment.prompt}\n\n<details><summary>A hint</summary>\n\n${tutorial.experiment.hint}\n\n</details>\n\n`;
+const book = '# Arcana · The grimoire\n\n' + (entries.length - 1) + ' lessons in Enchantment (group theory) and Transmutation (category theory), with shared cantrips. All ' + declarations.length + ' declarations compile against Lean/mathlib v4.33.1, with the pinned P3Group classification library for the Eightfold Way. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.\n\n' + entries.map(entry => `## ${entry.title}\n\n*${entry.subtitle}*\n\n${entry.summary}\n\n**Mathematical meaning.** ${entry.meaning}\n\n**Hypotheses.** ${entry.hypotheses}\n\n**Proof idea.** ${entry.proofIdea}\n\n` + tutorialMarkdown(entry.tutorial) + '```text\n' + entry.spell + '```\n\n' + `[Lean source](../math/${entry.file}) · [Arcana source](../public/grimoire/${entry.id}.spell)\n\n` + entry.references.map(ref => `[${ref.symbol}](${ref.url})`).join(' · ') + '\n').join('\n');
 write(join(root, 'grimoire/README.md'), book);
 console.log(`Verified ${entries.length} folios and ${declarations.length} declarations against mathlib ${pin}.`);

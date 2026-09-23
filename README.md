@@ -12,6 +12,10 @@ The browser opens on the first isomorphism theorem. Use the contents to explore 
 
 Each folio includes its mathematical meaning, hypotheses, proof idea, prerequisites, vocabulary, and upstream proof-library references pinned to the exact commit. Arcana source and ordinary Lean are editable side by side. Spell bodies start folded: click **reveal enchantment**, the gutter, or **Reveal** to open them with a brief glimmer. **Veil** folds them again. Reduced-motion preferences disable the effects.
 
+Use the top-level **Magic / Side by side / Mathematics** switch to change the whole reading view. Magic hides mathematical exposition, references, and the Lean pane. Visible characters tumble into a jumble and reform as the new view; reduced-motion preferences make the switch immediate. Both editors retain their text, undo history, and folds.
+
+Every folio includes a guided tutorial: motivation, four steps through its argument, and an experiment with a hideable hint. Open **Read the tutorial** to expand the walkthrough. Shared teaching comments are identical in Lean and Arcana. **Hide notes** conceals them in both editors; individual **read note** buttons reveal selected comments. Magic mode hides all teaching comments, and your note preference returns when you leave it. Hiding notes never removes them from copies, saved bundles, or checked source.
+
 Original folios show **Lean checked** only while their source exactly matches a verified original and the translation round-trips. Editing changes that status to **draft proof unchecked**. The browser does not run Lean; a successful translation does not prove an edited theorem. Standard Lean axioms (`propext`, `Classical.choice`, and `Quot.sound`) may occur; `sorry`, custom axioms, and native evaluation shortcuts are not used.
 
 Arcana namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Spell namespaces and field access require Mercury. Decimal points and literal text retain their original punctuation.
@@ -32,7 +36,7 @@ Type `\rune`, `\ankh`, `\moon`, or `\othala` for `ᛰ`, `☥`, `🌒`, or `ᛟ`.
 
 To type glyphs, use a backslash and a short name, then a space or Tab, as in Lean's own editors. In the spell pane, `\sp` gives ✨ and `\dag` gives †; a backslash before any Lean symbol gives its spell glyph, so `\:` gives ⟡ and `\(` gives ⟪. The Lean pane uses Lean's shortcuts, such as `\to` and `\-1`. The "How to read this" panel lists the common ones.
 
-Drafts survive switching folios within a tab. Download a grimoire JSON bundle to retain both texts and the name key; reloads lose unsaved drafts. **Open file** accepts those bundles, `.lean`, or `.spell` (using the current key). Original source downloads are provided per folio. CodeMirror's search, undo, redo, indentation, and folding shortcuts are available. Escape followed by Tab leaves an editor.
+Drafts survive switching folios and importing files within a tab. Use **Return to personal draft** to return to an imported document. Saved drafts with paused translation reopen with both texts intact and remain unchecked. Download a grimoire JSON bundle to retain both texts and the name key; reloads lose unsaved drafts. **Open file** accepts those bundles, `.lean`, or `.spell` (using the current key). Original source downloads are provided per folio. CodeMirror's search, undo, redo, indentation, and folding shortcuts are available. Escape followed by Tab leaves an editor.
 
 ## Run the browser locally
 

@@ -20,9 +20,9 @@ spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Veyr✨ ᛰ ↭ �
 
 spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫
     ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ☥ ≣ ⊥ ⩔ ☥ ≣ ⊤ ⇰ cast
-  bind counted ⟡ Tally☿census ᛰ ≢ ⊘ ⇰
+  bind counted ⟡ Tally☿census ᛰ ≢ 〇 ⇰
     litany Tally☿census ᛰ ≣ ruby✨shard ⇰ censusward
-      ▢ ≢ ⊘ ⇰ primalward☿✨never✨void✨
+      ▢ ≢ 〇 ⇰ primalward☿✨never✨void✨
   bind bounded ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ counted
   bind measured ⟡ Tally☿census ☥ ∣ ruby✨shard ⇰
     litany Tally☿census ☥ ∣ Tally☿census ᛰ ⇰ ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ☥
@@ -38,12 +38,12 @@ spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward �
 
 spell ✨Indivisible✨Veyrs✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫ ⟡
     ✨Unbreakable✨Veyr✨ ᛰ ⇰ cast
-  bind counted ⟡ Tally☿census ᛰ ≢ ⊘ ⇰
+  bind counted ⟡ Tally☿census ᛰ ≢ 〇 ⇰
     litany Tally☿census ᛰ ≣ ruby✨shard ⇰ censusward
-      ▢ ≢ ⊘ ⇰ primalward☿✨never✨void✨
+      ▢ ≢ 〇 ⇰ primalward☿✨never✨void✨
   bind bounded ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ counted
-  bind many ⟡ ☉ ⋖ Tally☿census ᛰ ⇰
-    litany ☉ ⋖ ruby✨shard ⇰ primalward☿✨beyond✨one✨
+  bind many ⟡ 一 ⋖ Tally☿census ᛰ ⇰
+    litany 一 ⋖ ruby✨shard ⇰ primalward☿✨beyond✨one✨
       ▢ ≣ Tally☿census ᛰ ⇰ censusward☿reflect
   bind plural ⟡ Plural ᛰ ⇰ Bounded☿✨Many✨Means✨Plural✨☿onward many
   hone ⦉plural᛫ ?▢⦊

@@ -34,3 +34,10 @@ test('carrier shortcuts insert complete rune code points', () => {
   assert.deepEqual(expand('\\ank', 'h', spell), { from: 4, insert: '☥' });
   assert.deepEqual(expand('\\run', 'e', spell), { from: 4, insert: 'ᛰ' });
 });
+
+test('every decimal digit has a kanji shortcut and decodes exactly', () => {
+  for (const [digit, glyph] of Array.from('〇一二三四五六七八九').entries()) {
+    assert.deepEqual(expand('\\', String(digit), spell), { from: 1, insert: glyph });
+    assert.equal(fromSpell(glyph, new Key()), String(digit));
+  }
+});

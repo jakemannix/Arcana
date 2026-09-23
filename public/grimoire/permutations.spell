@@ -3,25 +3,25 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
 
 sanctum Arcana☿Enchantment
 
-byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 3⟫
+byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 三⟫
 
-ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ⊘ ☉
+ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 〇 一
 
-ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ☉ 2
+ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 一 二
 
-spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 6 ⇰ cast divine
+spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 六 ⇰ cast divine
 
-spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ ☉ ⇰
-  Portal☿✨Exchange✨Undoes✨Itself✨ ⊘ ☉
+spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ 一 ⇰
+  Portal☿✨Exchange✨Undoes✨Itself✨ 〇 一
 
 spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast
   summon twinned
-  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ≣ ☉ ⇰ cast divine
-  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ≣ 2 ⇰ cast divine
-  bind clash ⟡ ⟪☉ ⟡ Fetter 3⟫ ≣ 2 ⇰
-    litany ⟪☉ ⟡ Fetter 3⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ⇰ sunwise☿reflect
-      ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ⇰ sympathy ⟪conjure raven✨feather ⇉ raven✨feather ⊘⟫ twinned
-      ▢ ≣ 2 ⇰ widdershins
+  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ≣ 一 ⇰ cast divine
+  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ≣ 二 ⇰ cast divine
+  bind clash ⟡ ⟪一 ⟡ Fetter 三⟫ ≣ 二 ⇰
+    litany ⟪一 ⟡ Fetter 三⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ⇰ sunwise☿reflect
+      ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ⇰ sympathy ⟪conjure raven✨feather ⇉ raven✨feather 〇⟫ twinned
+      ▢ ≣ 二 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
 seal Arcana☿Enchantment

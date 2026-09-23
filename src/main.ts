@@ -4,7 +4,7 @@ import { EditorState, Prec } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
-import { Key, WORDS, RUNE_PATTERN, fromSpell, toSpell, type KeyData } from './translator';
+import { Key, WORDS, RUNE_PATTERN, LEAN_NUMBER, SPELL_NUMBER, fromSpell, toSpell, type KeyData } from './translator';
 import { folios, grimoireKey, isCheckedSource, provenance, type Folio } from './catalog';
 import { foldAll, unfoldAll } from '@codemirror/language';
 import { spellFolding, sparkleAt, shimmer } from './magic';
@@ -46,8 +46,9 @@ app.innerHTML = `
         <p>Spell ingredients such as <code>jade✨cube</code> and <code>silver✨bell</code> are variables: the math pane calls them <code>x</code> and <code>y</code>. Their types and hypotheses say what they can do. Spell names and schools also have mathematical names on the right; the saved name key keeps the correspondence.</p>
         <p><strong>Carriers and their laws:</strong> runes such as <code>ᛰ</code>, <code>☥</code>, and <code>🌒</code> name the types inhabited by ingredients. A <strong>Veyr</strong> is a group; a <strong>Veyrath</strong> is a ring, whose addition forms a commutative group. A <strong>Veyrion</strong> is a field. <strong>Bound Veyr</strong> names a module, and <strong>Bound Veyrath</strong> names an algebra: “Bound” marks a scalar action, with both carriers written explicitly. “Harmonic” marks commutativity; “Chanted” distinguishes additive group notation. The Lean pane states the exact laws and hypotheses.</p>
         <p><strong>Typing carrier runes:</strong> <code>\\rune</code> gives ᛰ, <code>\\ankh</code> gives ☥, <code>\\moon</code> gives 🌒, and <code>\\othala</code> gives ᛟ. The full translation key below each folio pairs runes with their mathematical names.</p>
+        <p><strong>Reading numbers:</strong> the spell pane writes each digit as 〇一二三四五六七八九: <code>三</code> is 3, <code>六</code> is 6, and <code>二四</code> is 24. Type a backslash before any digit to insert its kanji. Digits keep their positions, so leading zeros and decimal places return exactly in Lean. Text inside quotes and comments stays literal.</p>
         <p>Every original folio was compiled against mathlib, translated, decoded, and compiled again. The proof audit rejects placeholders. Standard Lean axioms such as classical choice may occur. <strong>Your edits are drafts:</strong> the browser checks translation fidelity, but does not run Lean.</p>
-        <p><strong>Typing glyphs:</strong> type a backslash and a short name, then a space or Tab. In the spell pane, <code>\\sp</code> gives ✨, <code>\\dag</code> gives †, and <code>\\merc</code> gives ☿. A backslash before any Lean symbol gives its spell glyph: <code>\\:</code> gives ⟡, <code>\\(</code> gives ⟪, <code>\\:=</code> gives ⇰, <code>\\0</code> gives ⊘, and <code>\\1</code> gives ☉. The Lean pane uses Lean's own shortcuts, such as <code>\\to</code> for → and <code>\\-1</code> for ⁻¹.</p>
+        <p><strong>Typing glyphs:</strong> type a backslash and a short name, then a space or Tab. In the spell pane, <code>\\sp</code> gives ✨, <code>\\dag</code> gives †, and <code>\\merc</code> gives ☿. A backslash before any Lean symbol gives its spell glyph: <code>\\:</code> gives ⟡, <code>\\(</code> gives ⟪, <code>\\:=</code> gives ⇰, <code>\\0</code> gives 〇, and <code>\\1</code> gives 一. The Lean pane uses Lean's own shortcuts, such as <code>\\to</code> for → and <code>\\-1</code> for ⁻¹.</p>
         <p>Switching lessons keeps your drafts in this tab. Download to keep a copy with its name key; reloading the page loses unsaved drafts. Press Escape then Tab to leave an editor using the keyboard.</p>
       </section>
       <section class="mathematical-reading" aria-label="Mathematical meaning"><p class="eyebrow">BEHIND THE ENCHANTMENT</p><p id="meaning"></p><details><summary>Hypotheses & proof idea</summary><h3>What must be true</h3><p id="hypotheses"></p><h3>Why it works</h3><p id="proof-idea"></p></details><div id="prerequisites" class="prerequisites"></div></section>
@@ -86,7 +87,7 @@ const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
     if (stream.match('--')) { stream.skipToEnd(); return 'comment'; }
     if (stream.match(/"(?:[^"\\]|\\.)*"?/)) return 'string';
     if (stream.match(/«[^»]*»/)) return 'variableName';
-    if (stream.match(/\d+|[⊘☉]/)) return 'number';
+    if (stream.match(side === 'spell' ? SPELL_NUMBER : LEAN_NUMBER)) return 'number';
     if (side === 'spell' && stream.match(runePattern)) return 'variableName';
     if (stream.match(/(?:✨(?:[\p{L}_][\p{L}\p{N}\p{M}_'!?]*✨)+|[\p{L}_][\p{L}\p{N}\p{M}_'!?]*(?:✨[\p{L}_][\p{L}\p{N}\p{M}_'!?]*)+)/u)) return 'atom';
     const word = stream.match(/[\p{L}_][\p{L}\p{N}\p{M}_'!?]*/u);

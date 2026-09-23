@@ -16,6 +16,8 @@ Original folios show **Lean checked** only while their source exactly matches a 
 
 Arcana namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Spell namespaces and field access require Mercury. Decimal points and literal text retain their original punctuation.
 
+Numeric literals use digit-by-digit kanji in Arcana: `0123456789` → `〇一二三四五六七八九`. Thus `24` becomes `二四`, `007` becomes `〇〇七`, and `3.1400` becomes `三.一四〇〇`. This is a positional digit encoding rather than Japanese tens/hundreds notation. It preserves the spelling of every literal, including large integers, decimal places, scientific notation, and base prefixes (`0x10` → `〇x一〇`). The Lean pane keeps ordinary numerals. Type `\0` through `\9` to insert kanji digits; raw Arabic numeric literals in the spell pane prompt you to use these shortcuts. Strings, characters, comments, and quoted identifiers retain their contents.
+
 Quoted Lean identifiers (`«…»`) remain literal, with their quotation intact, so names such as `«bestow»` cannot be mistaken for Arcana keywords.
 
 Multi-word Arcana names are joined with sparkles: `✨Preserve✨the✨Binding✨` translates to `hom_map_mul`. A group inverse is a dagger, so `jade✨cube†` means `x⁻¹`. Literal ✨ and † characters in Lean source are escaped, so translation stays exact.

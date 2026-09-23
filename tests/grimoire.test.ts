@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { EditorState } from '@codemirror/state';
 import { proofFoldRange } from '../src/magic';
-import { Key, toSpell, fromSpell } from '../src/translator';
+import { Key, toSpell, fromSpell, tokenize } from '../src/translator';
 import { folios, provenance, grimoireKey, isCheckedSource } from '../src/catalog';
 
 const file = (path: string) => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
@@ -50,6 +50,7 @@ for (const folio of folios) test(`${folio.id}: exact translation, current checke
   assert.equal(hash(folio.spell), folio.spellHash);
   const key = new Key(grimoireKey);
   assert.equal(toSpell(folio.lean, key), folio.spell);
+  assert.ok(tokenize(folio.spell, true).filter(t => t.kind === 'num').every(t => !/[0-9]/.test(t.text)));
   assert.equal(fromSpell(folio.spell, new Key(JSON.parse(JSON.stringify(key.data())))), folio.lean);
   assert.equal(file('public/grimoire/' + folio.id + '.spell'), folio.spell);
   assert.equal(file('public/grimoire/' + folio.id + '.lean'), folio.lean);

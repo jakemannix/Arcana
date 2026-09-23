@@ -24,3 +24,5 @@ Pane visibility buttons sit outside both editors and independently hide/show mat
 The spell highlighter accepts both framed spell titles and ingredient identifiers with interior sparkles, such as `jade✨cube`. The help panel explains that these ingredients correspond to ordinary Lean variables, with unchanged types and hypotheses. Used ingredients and namespace aliases appear in the generated folio glossary. See [[../decisions/mathematical-names]].
 
 Arcana branding is shared by the masthead, pane labels, metadata, and docs. The spell highlighter recognizes the translator's finite carrier-rune alphabet. Help explains the Veyr family and provides `\rune`, `\ankh`, `\moon`, and `\othala` shortcuts. Glossaries include all used carrier runes, including single-letter Greek variables. See [[../decisions/arcana-vocabulary]].
+
+Spell numbers use positional kanji digits with `\0` through `\9` shortcuts, shared numeric highlighting, and an explanation in the reading guide. The math pane retains ordinary Lean literals; see [[../components/translator]].

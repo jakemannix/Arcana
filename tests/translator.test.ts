@@ -15,7 +15,7 @@ test('Mercury joins namespaces and projections', () => {
 test('namespace glyph leaves quoted text, decimal points and ellipses intact', () => {
   const key = new Key({ global: { Foo: 'Astral' }, scoped: {} });
   const source = `Foo.«some.name☿inside» 3.14 .. ... "Foo.bar☿" '☿' -- Foo.bar☿\n/- Foo.bar☿ -/`;
-  const spell = `Astral☿«some.name☿inside» 3.14 .. ... "Foo.bar☿" '☿' -- Foo.bar☿\n/- Foo.bar☿ -/`;
+  const spell = `Astral☿«some.name☿inside» 三.一四 .. ... "Foo.bar☿" '☿' -- Foo.bar☿\n/- Foo.bar☿ -/`;
   assert.equal(toSpell(source, key), spell);
   assert.equal(fromSpell(spell, key), source);
   assert.equal(fromSpell(toSpell('Foo☿Foo ⟄☿', key), key), 'Foo☿Foo ⟄☿');
@@ -164,7 +164,7 @@ test('quotes distinguish names with identical visible contents', () => {
 });
 
 test('new spell names become quoted Lean identifiers', () => {
-  assert.equal(fromSpell('spell Fireball ⟡ Tally ⇰ ⊘', new Key()), 'theorem «Fireball» : Nat := 0');
+  assert.equal(fromSpell('spell Fireball ⟡ Tally ⇰ 〇', new Key()), 'theorem «Fireball» : Nat := 0');
 });
 
 test('rejects ambiguous keys', () => {
@@ -177,4 +177,46 @@ test('instances read as bestow', () => {
   assert.equal(toSpell('instance : Monoid M', key), 'bestow ⟡ Choir ᛗ');
   assert.equal(fromSpell('bestow ⟡ Choir ᛗ', key), 'instance : Monoid M');
   assert.equal(fromSpell('initiate', key), '«initiate»');
+});
+
+test('kanji digits encode whole numeric literals without changing their spelling', () => {
+  const examples = new Map([
+    ['0 1 2 3 4 5 6 7 8 9', '〇 一 二 三 四 五 六 七 八 九'],
+    ['12 24 60 120 0012', '一二 二四 六〇 一二〇 〇〇一二'],
+    ['-3 +4 3.1400 1e-20 2E+03', '⧿三 ⧾四 三.一四〇〇 一e-二〇 二E+〇三'],
+    ['0xff 0X0Af 0b00101 0B10 0o007 0O17', '〇xff 〇X〇Af 〇b〇〇一〇一 〇B一〇 〇o〇〇七 〇O一七'],
+    ['900719925474099312345678901234567890', '九〇〇七一九九二五四七四〇九九三一二三四五六七八九〇一二三四五六七八九〇'],
+  ]);
+  for (const [source, spell] of examples) {
+    const key = new Key();
+    assert.equal(toSpell(source, key), spell);
+    const reloaded = new Key(JSON.parse(JSON.stringify(key.data())));
+    assert.equal(fromSpell(spell, reloaded), source);
+    assert.equal(toSpell(fromSpell(spell, reloaded), reloaded), spell);
+    assert.doesNotMatch(spell, /[0-9]/);
+  }
+  for (let n = 0; n <= 1024; n++) {
+    const key = new Key(), source = String(n), spell = toSpell(source, key);
+    assert.equal(fromSpell(spell, new Key(key.data())), source);
+    assert.equal(tokenize(spell, true).length, 1);
+    assert.equal(tokenize(spell, true)[0].kind, 'num');
+  }
+});
+
+test('kanji numerals stay distinct from identifiers, projections, and literal text', () => {
+  const key = new Key(lexicon);
+  const source = '#check (x, y).1\n#check x.2\n#check x.1.2\n#check 1..3\n' +
+    '#check 一\n#check 〇\n#check 数三\n#check «三»\n#check «123»\n' +
+    '#check "012 三"\n#check r#"123"#\n#check \'3\'\n-- 123 三\n/- 456 六 -/\n';
+  const spell = toSpell(source, key);
+  assert.match(spell, /☿一/);
+  assert.match(spell, /一\.\.三/);
+  assert.match(spell, /«123»/);
+  assert.match(spell, /"012 三"/);
+  assert.match(spell, /-- 123 三/);
+  assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
+  assert.throws(() => new Key({ global: { a: '三' }, scoped: {} }), /reserved/);
+  assert.throws(() => new Key({ global: {}, scoped: { demo: { a: '一thing' } } }), /Invalid name/);
+  assert.throws(() => new Key({ global: {}, scoped: {}, namespaces: { 'Math.Group': 'Book☿二' } }), /Invalid namespace/);
+  assert.throws(() => fromSpell('123', new Key()), /kanji digits/);
 });

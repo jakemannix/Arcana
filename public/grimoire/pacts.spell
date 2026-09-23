@@ -10,19 +10,19 @@ ritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk�
 spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube silver✨bell ⟡ ᛰ⟫ ⟡
     copper✨wire ⟪jade✨cube ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell ⇰ copper✨wire☿✨Carry✨the✨Binding✨ jade✨cube silver✨bell
 
-spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire ☉ ≣ ☉ ⇰ cast
-  bind doubled ⟡ copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ☉ ⊛ ☉ ⇰
-    litany copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire ☉ ☉⟫☿reflect
-      ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ ☉⟫
-      ▢ ≣ copper✨wire ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire ☉⟫⟫☿reflect
+spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire 一 ≣ 一 ⇰ cast
+  bind doubled ⟡ copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire 一 ⊛ 一 ⇰
+    litany copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire ⟪一 ⊛ 一⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire 一 一⟫☿reflect
+      ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ 一⟫
+      ▢ ≣ copper✨wire 一 ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire 一⟫⟫☿reflect
   missile ✨Strike✨from✨the✨Left✨ doubled
 
 spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast
-  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ ☉ ⇰
+  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ 一 ⇰
     litany copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ copper✨wire ⟪jade✨cube† ⊛ jade✨cube⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† jade✨cube⟫☿reflect
-      ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
-      ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
+      ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
+      ▢ ≣ 一 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
   missile ✨Undoer✨is✨Reversal✨ undone
 
 spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫
@@ -32,8 +32,8 @@ spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪sil
 
 spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰
-  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
-    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ ☉ ⇰ Pact☿mirror
+  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
+    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ 一 ⇰ Pact☿mirror
     ▢ ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
 seal Arcana☿Enchantment

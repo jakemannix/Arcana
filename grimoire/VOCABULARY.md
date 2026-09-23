@@ -54,3 +54,7 @@ An `instance` reads `bestow`: it bestows a structure on a carrier, and every lat
 
 The full Disenchantment from Choirs to carriers has a left hand but no right hand: a right hand would need it to preserve coproducts, and it does not.
 
+
+## Numerals
+
+Spell numbers use kanji digits in place-value order: `0 1 2 3 4 5 6 7 8 9` becomes `〇 一 二 三 四 五 六 七 八 九`. For example, the six permutations of three sigils use `六` and `三`, while `24` is `二四`. We use digit substitution, not additive Japanese forms such as `二十四`, so every source character can return exactly. Type a backslash before a digit to insert it. Literal text and quoted names keep their contents.

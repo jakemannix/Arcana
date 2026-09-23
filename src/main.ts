@@ -21,17 +21,18 @@ let selected: Folio | undefined = initialFolio;
 let key = new Key(grimoireKey), updating = false;
 const drafts = new Map<string, Draft>();
 let personalDraft: Draft | undefined;
-let presentationMode: PresentationMode = 'parallel';
+let presentationMode: PresentationMode = 'magic';
 let notesVisible = true;
 let checkTimer: ReturnType<typeof setTimeout>;
 let toastTimer: ReturnType<typeof setTimeout>;
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
+app.dataset.presentation = presentationMode;
 app.innerHTML = `
   <header class="masthead">
     <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">⟐</span><span><b>ARCANA</b></span></a>
     <span class="edition">THE GRADUATE GRIMOIRE <span>VOL. I</span></span>
-    <div id="presentation-controls" class="presentation-controls" role="group" aria-label="Reading view"><button type="button" data-mode="magic" aria-pressed="false">✧ Magic</button><button type="button" data-mode="parallel" aria-pressed="true">Side by side</button><button type="button" data-mode="math" aria-pressed="false">Mathematics</button></div>
+    <div id="presentation-controls" class="presentation-controls" role="group" aria-label="Reading view"><button type="button" data-mode="magic" aria-pressed="true">✧ Magic</button><button type="button" data-mode="parallel" aria-pressed="false">Side by side</button><button type="button" data-mode="math" aria-pressed="false">Mathematics</button></div>
     <button id="help" class="quiet-button" aria-expanded="false" aria-controls="help-panel">How to read this <span aria-hidden="true">?</span></button>
   </header>
   <main class="grimoire-layout">

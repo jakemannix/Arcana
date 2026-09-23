@@ -70,11 +70,13 @@ function setup(t: TestContext, reduced = true) {
 
 test('reduced-motion view changes apply immediately and rapid switches retain the final mode', t => {
   const { root, controls, controller, callbacks, events, frames } = setup(t);
-  assert.equal(controller.mode, 'parallel');
-  controller.setMode('magic'); controller.setMode('math'); controller.setMode('magic'); controller.setMode('magic');
   assert.equal(controller.mode, 'magic');
   assert.equal(root.dataset.presentation, 'magic');
-  assert.deepEqual(callbacks, ['parallel', 'magic', 'math', 'magic']);
+  assert.deepEqual(controls.buttons.map(button => button.attributes.get('aria-pressed')), ['true', 'false', 'false']);
+  controller.setMode('parallel'); controller.setMode('math'); controller.setMode('magic'); controller.setMode('magic');
+  assert.equal(controller.mode, 'magic');
+  assert.equal(root.dataset.presentation, 'magic');
+  assert.deepEqual(callbacks, ['magic', 'parallel', 'math', 'magic']);
   assert.deepEqual(events, callbacks);
   assert.equal(frames.size, 0);
   assert.equal(root.classes.size, 0);
@@ -92,8 +94,8 @@ test('view controls support wrapping arrow navigation, Home, and End', t => {
 
 test('failed source layout measurements never block a view change', t => {
   const { root, controller, frames } = setup(t, false);
-  controller.setMode('magic');
-  assert.equal(controller.mode, 'magic');
+  controller.setMode('parallel');
+  assert.equal(controller.mode, 'parallel');
   assert.equal(root.classes.size, 0);
   assert.equal(frames.size, 0);
 });
@@ -107,12 +109,12 @@ test('failed target measurements restore text after the transition has started',
     let visited = false;
     return { nextNode: () => { if (visited) return null; visited = true; return { parentElement: textParent, textContent: '🌒' }; } };
   }) as typeof doc.createTreeWalker;
-  controller.setMode('magic');
+  controller.setMode('parallel');
   assert.equal(root.classes.has('presentation-changing'), true);
   while (frames.size) {
     const [id, callback] = frames.entries().next().value!;
     frames.delete(id); callback(0);
   }
-  assert.equal(controller.mode, 'magic');
+  assert.equal(controller.mode, 'parallel');
   assert.equal(root.classes.has('presentation-changing'), false);
 });

@@ -33,10 +33,13 @@ test('checked folios use mathematical Lean names and expose reversible material 
   assert.match(orbits.lean, /theorem smul_eq_smul_iff_mem_stabilizer \(x : X\)/);
   assert.match(orbits.spell, /spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube/);
   assert.ok(orbits.glossary.some(term => term.lean === 'x' && term.arcane === 'jade✨cube'));
-  assert.ok(orbits.glossary.some(term => term.lean === 'Mathematics.GroupTheory' && term.arcane === 'Arcanum☿Enchantment'));
+  assert.ok(orbits.glossary.some(term => term.lean === 'Mathematics.GroupTheory' && term.arcane === 'Arcana☿Enchantment'));
+  assert.ok(orbits.glossary.some(term => term.lean === 'G' && term.arcane === 'ᛰ'));
+  assert.ok(orbits.glossary.some(term => term.lean === 'X' && term.arcane === '🌒'));
+  assert.ok(orbits.glossary.some(term => term.lean === 'Group' && term.arcane === 'Veyr'));
   const subgroups = folios.find(f => f.id === 'circles')!;
   assert.ok(!subgroups.glossary.some(term => term.lean === 'GroupTheory'));
-  const key = new Key(JSON.parse(file('public/grimoire/arcane.key.json')));
+  const key = new Key(JSON.parse(file('public/grimoire/arcana.key.json')));
   assert.equal(fromSpell('jade✨cube silver✨bell', key), 'x y');
 });
 

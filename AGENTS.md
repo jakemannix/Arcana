@@ -1,10 +1,10 @@
-# ArcaneLean: intent and working notes
+# Arcana: intent and working notes
 
 ## What we are making
 
-ArcaneLean lets someone read and write real Lean mathematics as a magical grimoire. Definitions become rituals, theorems become spells, proofs become their inner workings, and mathematical subjects give substance to schools of magic. The fun comes from discovering that the spell actually means something precise and works.
+Arcana lets someone read and write real Lean mathematics as a magical grimoire. Definitions become rituals, theorems become spells, proofs become their inner workings, and mathematical subjects give substance to schools of magic. The fun comes from discovering that the spell actually means something precise and works.
 
-The core experience is a browser-based, side-by-side editor: Arcane on the left, ordinary Lean on the right, with reversible editing in either direction. A reader should be able to enjoy the magical language, inspect its mathematical meaning, and explore how the proof works. Preserve both the playful atmosphere and the ability to understand the mathematics.
+The core experience is a browser-based, side-by-side editor: Arcana on the left, ordinary Lean on the right, with reversible editing in either direction. A reader should be able to enjoy the magical language, inspect its mathematical meaning, and explore how the proof works. Preserve both the playful atmosphere and the ability to understand the mathematics.
 
 The longer-term ambition is substantial graduate mathematics across multiple schools, drawing on mathlib: algebra, analysis, topology, geometry, and related subjects. The user explicitly chose an intermediate step of developing **one school deeply enough to judge the experience**. The current school is **Enchantment / group theory**. Continue from that scope; expansion into other schools should follow the user's direction.
 
@@ -18,18 +18,20 @@ The longer-term ambition is substantial graduate mathematics across multiple sch
 
 ## Mathematical and translation guarantees
 
-Lean and mathlib provide the proof checking. Arcane is a reversible presentation language. A successful translation round trip means the text survived conversion; it does not establish that an edited proof is valid.
+Lean and mathlib provide the proof checking. Arcana is a reversible presentation language. A successful translation round trip means the text survived conversion; it does not establish that an edited proof is valid.
 
 - Preserve the distinction between checked original folios and unchecked drafts. The static browser currently does not run Lean. Editing a checked example must never retain an unsupported proof-check claim.
-- Shipped folios must compile as Lean, decode byte-for-byte from their Arcane representation using the saved key, and compile again from that decoded source.
+- Shipped folios must compile as Lean, decode byte-for-byte from their Arcana representation using the saved key, and compile again from that decoded source.
 - Keep the existing axiom audit: only `propext`, `Classical.choice`, and `Quot.sound` are allowed. Do not use `sorry`, `admit`, custom axioms, or native evaluation shortcuts to make a lesson appear verified.
 - State hypotheses and mathematical caveats accurately. For example, `Nat.card` is zero on infinite types, and orbit/coset correspondence need not be a group isomorphism.
 - Preserve strings, comments, quoted identifiers, whitespace, and literal glyphs through translation. Namespace conversion belongs in the lexer/translator.
-- Arcane namespaces and field access use Mercury, **`☿`**: `Rite☿Perfect` corresponds to `Function.Bijective`. Continue accepting legacy dotted spells. Decimal points and punctuation inside literal text retain their meaning.
-- Multi-word Arcane names use sparkles, **`✨Preserve✨the✨Binding✨`**, not TitleCase: capitalized words for spells, rituals, and namespaces; lowercase words for library functions; small words such as "the" and "of" in lower case. Frequent local hypothesis names stay single words (`sigilward`). The group inverse `⁻¹` is written as a dagger, `†`. Named theorems carry their discoverer's name, as in `✨Lagrange's✨Measure✨of✨the✨Coven✨` or `✨Noether's✨Unveiling✨of✨the✨Image✨`; the lesson text says who they were. Words about prime numbers build on `Indivisible` (`Nat.Prime`) and `primal` (`primalward`). The user wants the Arcane side to avoid looking mathematical or programmatic, so keep `:`, `/`, `{`, `}` and similar symbols replaced.
+- Arcana namespaces and field access use Mercury, **`☿`**: `Rite☿Perfect` corresponds to `Function.Bijective`. Continue accepting legacy dotted spells. Decimal points and punctuation inside literal text retain their meaning.
+- Multi-word Arcana names use sparkles, **`✨Preserve✨the✨Binding✨`**, not TitleCase: capitalized words for spells, rituals, and namespaces; lowercase words for library functions; small words such as "the" and "of" in lower case. Frequent local hypothesis names stay single words (`sigilward`). The group inverse `⁻¹` is written as a dagger, `†`. Named theorems carry their discoverer's name, as in `✨Lagrange's✨Measure✨of✨the✨Veyr✨` or `✨Noether's✨Unveiling✨of✨the✨Image✨`; the lesson text says who they were. Words about prime numbers build on `Indivisible` (`Nat.Prime`) and `primal` (`primalward`). The user wants the Arcana side to avoid looking mathematical or programmatic, so keep `:`, `/`, `{`, `}` and similar symbols replaced.
 - Keep the translation key with exported drafts; it carries the information needed to reverse renamed identifiers.
 - Keep actual Lean namespaces, declarations, and proof locals mathematical. The book lives in `Mathematics.Functions` and `Mathematics.GroupTheory`; `grimoire/lexicon.json` holds the spell-side names. Its optional `namespaces` map translates full prefixes, so the Enchantment alias does not rename `Mathlib.GroupTheory`.
 - Spell-side term variables use lowercase material components with interior sparkles (`x` → `jade✨cube`, `y` → `silver✨bell`, `f` → `copper✨wire`). These are single identifiers; keep framed sparkles for spell titles. Include ingredients in generated glossaries. Preserve the historical `src/grimoire.key.json` fixture; regenerate the live catalog and downloadable key through verification.
+- Carrier variables use cryptic runes (`G` → `ᛰ`, `H` → `☥`, `X` → `🌒`); their structures, not their rune, supply mathematical laws. Use the Veyr family: Group → Veyr, Ring → Veyrath, Field → Veyrion, Module → Bound Veyr, Algebra → Bound Veyrath. “Bound” marks scalar action, “Harmonic” commutativity, and “Chanted” additive group notation. See `grimoire/VOCABULARY.md` for precise inheritance and semiring caveats. Keep legacy default tables stable and put the current structure vocabulary in the saved lexicon.
+- The product and repository are Arcana. `Mathematics` translates to `Arcana`; the school namespace is `Arcana☿Enchantment`. Preserve mathematical Lean names.
 
 ## Interaction and visual character
 
@@ -39,7 +41,7 @@ The user requested independent hide/show controls for the math and magic panes. 
 
 ## Where to work and how to verify
 
-This repository's root is the browser project (locally it was created inside `lean_magic/web`). The original Python implementation is preserved in `prototype/`; the TypeScript translator is the current implementation.
+This repository's root is the Arcana browser project. The original Python implementation is preserved in `prototype/`; the TypeScript translator is the current implementation.
 
 - Read `README.md` and the relevant `.doctrack/` notes before changing a subsystem. Update those notes when behavior or architecture changes.
 - Mathematical sources: `math/Mathematics/`; lesson explanations and vocabulary: `grimoire/chapters.json` and `grimoire/lexicon.json`.
@@ -49,10 +51,10 @@ This repository's root is the browser project (locally it was created inside `le
 - Run direct `lake` commands from `math/`, where the pinned Lean toolchain and mathlib manifest live. See `README.md` for initial mathlib setup. Ordinary frontend builds use the checked-in catalog and need no Lean installation.
 - Match verification effort to the change. Documentation-only changes need a content/diff review rather than rebuilding the mathematics.
 
-GitHub is `jakemannix/ArcaneLean` (the remote may be named `github` or `origin`). The repository is private; the site is public, by the user's choice.
+GitHub is `jakemannix/Arcana` (the remote may be named `github` or `origin`). The repository is private; the site is public, by the user's choice.
 
 - Every push to `main` redeploys the public site to GitHub Pages through `.github/workflows/deploy.yml`, which runs `npm ci`, `npm test`, and `npm run build`, then publishes `dist/`. A failed test stops the deploy. The workflow can also run by hand (`workflow_dispatch`).
 - The user wants work merged quickly: open a PR, verify it, and merge it when checks pass.
-- The build must work under a subfolder (`/ArcaneLean/`). Keep Vite's `base: './'` and use relative paths, never a leading `/`, for links to `public/` files such as `grimoire/axioms.txt`.
+- The build must work under a subfolder (`/Arcana/`). Keep Vite's `base: './'` and use relative paths, never a leading `/`, for links to `public/` files such as `grimoire/axioms.txt`.
 - The Pages deploy does not run Lean. Run `npm run grimoire:verify` locally and commit its outputs before merging formal changes; the tests reject stale outputs.
-- `.openai/hosting.json` configures an older OpenAI-hosted copy that does not update from merges. Repository and site visibility should follow explicit user direction.
+- `.openai/hosting.json` configures an additional private Sites copy at `https://arcana.jakemannix.chatgpt.site`, updated separately from GitHub merges. GitHub Pages is the public site at `https://blog.yetanotheruseless.com/Arcana/`. Preserve each site's existing audience unless the user asks to change it.

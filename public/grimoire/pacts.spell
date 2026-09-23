@@ -1,23 +1,23 @@
-beckon Arcanum☿Cantrips
-beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Silences
+beckon Arcana☿Cantrips
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨☿Silences
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯
+familiar ⧼ᛰ ☥ ᛟ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯ ⟮Veyr ᛟ⟯
 
-ritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ silk✨cord☿threading copper✨wire
+ritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟡ ᛰ ↝⊛ ᛟ ⇰ silk✨cord☿threading copper✨wire
 
-spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube silver✨bell ⟡ coven⟫ ⟡
+spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube silver✨bell ⟡ ᛰ⟫ ⟡
     copper✨wire ⟪jade✨cube ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell ⇰ copper✨wire☿✨Carry✨the✨Binding✨ jade✨cube silver✨bell
 
-spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ copper✨wire ☉ ≣ ☉ ⇰ cast
+spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire ☉ ≣ ☉ ⇰ cast
   bind doubled ⟡ copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ☉ ⊛ ☉ ⇰
     litany copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire ☉ ☉⟫☿reflect
       ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ ☉⟫
       ▢ ≣ copper✨wire ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire ☉⟫⟫☿reflect
   missile ✨Strike✨from✨the✨Left✨ doubled
 
-spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast
   bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ ☉ ⇰
     litany copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ copper✨wire ⟪jade✨cube† ⊛ jade✨cube⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† jade✨cube⟫☿reflect
@@ -25,15 +25,15 @@ spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ 
       ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
   missile ✨Undoer✨is✨Reversal✨ undone
 
-spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫
+spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫
     ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
     Rite☿Faithful ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫ ⇰
-  Arcanum☿Cantrips☿✨Faithful✨Weaving✨ ⟪copper✨wire ⇰ copper✨wire⟫ ⟪silk✨cord ⇰ silk✨cord⟫ faith echoward
+  Arcana☿Cantrips☿✨Faithful✨Weaving✨ ⟪copper✨wire ⇰ copper✨wire⟫ ⟪silk✨cord ⇰ silk✨cord⟫ faith echoward
 
-spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰
   litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
     ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ ☉ ⇰ Pact☿mirror
     ▢ ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment

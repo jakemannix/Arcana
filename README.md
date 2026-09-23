@@ -1,24 +1,30 @@
-# ArcaneLean · The Enchantment Grimoire
+# Arcana · The Enchantment Grimoire
 
-A browser grimoire of **real group theory**, presented in Arcane Lean. Nine Enchantment lessons share a foundational cantrip folio. The 55 definitions and theorems are compiled against a pinned mathlib release; their translated `.spell` sources are decoded and compiled again.
+A browser grimoire of **real group theory**, presented in Arcana. Nine Enchantment lessons share a foundational cantrip folio. The 55 definitions and theorems are compiled against a pinned mathlib release; their translated `.spell` sources are decoded and compiled again.
 
 [Read the complete grimoire](grimoire/README.md) · [Proof dependency audit](public/grimoire/axioms.txt)
+
+[Open Arcana](https://blog.yetanotheruseless.com/Arcana/) · [Structure vocabulary](grimoire/VOCABULARY.md)
 
 ## Read and experiment
 
 The browser opens on the first isomorphism theorem. Use the contents to explore generated subgroups, homomorphisms, kernels and normality, quotient descent and uniqueness, Lagrange's theorem, simple groups of prime order, orbit–stabilizer, and the concrete permutation group S₃.
 
-Each folio includes its mathematical meaning, hypotheses, proof idea, prerequisites, vocabulary, and upstream mathlib references pinned to the exact commit. Arcane source and ordinary Lean are editable side by side. Spell bodies start folded: click **reveal enchantment**, the gutter, or **Reveal** to open them with a brief glimmer. **Veil** folds them again. Reduced-motion preferences disable the effects.
+Each folio includes its mathematical meaning, hypotheses, proof idea, prerequisites, vocabulary, and upstream mathlib references pinned to the exact commit. Arcana source and ordinary Lean are editable side by side. Spell bodies start folded: click **reveal enchantment**, the gutter, or **Reveal** to open them with a brief glimmer. **Veil** folds them again. Reduced-motion preferences disable the effects.
 
 Original folios show **Lean checked** only while their source exactly matches a verified original and the translation round-trips. Editing changes that status to **draft proof unchecked**. The browser does not run Lean; a successful translation does not prove an edited theorem. Standard Lean axioms (`propext`, `Classical.choice`, and `Quot.sound`) may occur; `sorry`, custom axioms, and native evaluation shortcuts are not used.
 
-Arcane namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Older spells using dots still import. Decimal points and literal text retain their original punctuation.
+Arcana namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Older spells using dots still import. Decimal points and literal text retain their original punctuation.
 
-Multi-word Arcane names are joined with sparkles: `✨Preserve✨the✨Binding✨` translates to `hom_map_mul`. A group inverse is a dagger, so `jade✨cube†` means `x⁻¹`. Literal ✨ and † characters in Lean source are escaped, so translation stays exact.
+Multi-word Arcana names are joined with sparkles: `✨Preserve✨the✨Binding✨` translates to `hom_map_mul`. A group inverse is a dagger, so `jade✨cube†` means `x⁻¹`. Literal ✨ and † characters in Lean source are escaped, so translation stays exact.
 
-Lean declarations and modules use mathematical names: `Mathematics.GroupTheory` is the namespace behind `Arcanum☿Enchantment`, and `smul_eq_smul_iff_mem_stabilizer` is the theorem behind `✨Same✨Place✨Same✨Veil✨`. These are the actual compiled sources. The saved key's optional `namespaces` map translates full namespace prefixes independently of individual words, so `Mathlib.GroupTheory` retains its own translation.
+Lean declarations and modules use mathematical names: `Mathematics.GroupTheory` is the namespace behind `Arcana☿Enchantment`, and `smul_eq_smul_iff_mem_stabilizer` is the theorem behind `✨Same✨Place✨Same✨Veil✨`. These are the actual compiled sources. The saved key's optional `namespaces` map translates full namespace prefixes independently of individual words, so `Mathlib.GroupTheory` retains its own translation.
 
-Variables become material components on the spell side: `x` is `jade✨cube`, `y` is `silver✨bell`, and `f` is `copper✨wire`. These lowercase names are single identifiers, joined by interior sparkles. Their mathematical types and hypotheses are unchanged. The folio glossary includes the ingredients and their Lean names. Curate names in `grimoire/lexicon.json`; verification generates the catalog key, downloadable `public/grimoire/arcane.key.json`, and each saved bundle. `src/grimoire.key.json` remains the original prototype's compatibility fixture; older bundles still decode with their own keys.
+Variables become material components on the spell side: `x` is `jade✨cube`, `y` is `silver✨bell`, and `f` is `copper✨wire`. These lowercase names are single identifiers, joined by interior sparkles. Their mathematical types and hypotheses are unchanged. The folio glossary includes the ingredients and their Lean names. Curate names in `grimoire/lexicon.json`; verification generates the catalog key, downloadable `public/grimoire/arcana.key.json`, and each saved bundle. `src/grimoire.key.json` remains the original prototype's compatibility fixture; older bundles still decode with their own keys.
+
+Carriers use cryptic runes: `G` → `ᛰ`, `H` → `☥`, and `X` → `🌒`. A rune names a type, while the accompanying structure supplies its laws. The shared family is **Veyr** (Group), **Veyrath** (Ring), **Veyrion** (Field), **Bound Veyr** (Module), and **Bound Veyrath** (Algebra). “Harmonic” marks commutativity; “Chanted” distinguishes additive group notation. See the [vocabulary and inheritance guide](grimoire/VOCABULARY.md) for the precise relationships and future semiring generalizations. The spell namespace is `sanctum Arcana`; the mathematical namespace remains `Mathematics`.
+
+Type `\rune`, `\ankh`, `\moon`, or `\othala` for `ᛰ`, `☥`, `🌒`, or `ᛟ`. Saved bundles retain the stable `lean-magic/v1` format identifier for compatibility; this is a file-format identifier, not the application name.
 
 To type glyphs, use a backslash and a short name, then a space or Tab, as in Lean's own editors. In the spell pane, `\sp` gives ✨ and `\dag` gives †; a backslash before any Lean symbol gives its spell glyph, so `\:` gives ⟡ and `\(` gives ⟪. The Lean pane uses Lean's shortcuts, such as `\to` and `\-1`. The "How to read this" panel lists the common ones.
 
@@ -58,7 +64,7 @@ Only after all checks pass does it generate the browser catalog, `.lean`/`.spell
 - `math/Mathematics/Functions.lean`: reusable function composition, injectivity, surjectivity, and equivalence lemmas. The Homomorphisms module actually imports and uses these.
 - `math/Mathematics/GroupTheory/*.lean`: nine substantive group-theory folios.
 - `grimoire/chapters.json`: explanations, prerequisite graph, and mathlib source references.
-- `grimoire/lexicon.json`: curated Arcane names for mathematical constructs and library lemmas.
+- `grimoire/lexicon.json`: curated Arcana names for mathematical constructs and library lemmas.
 - `scripts/verify-grimoire.ts`: reproducible build, translation, and proof audit.
 - `src/grimoire.generated.json`: verified browser catalog and evidence hashes; do not edit manually.
 - `src/translator.ts`: DOM-independent token translator, accepting the original Python sample format.
@@ -68,6 +74,6 @@ Only after all checks pass does it generate the browser catalog, `.lean`/`.spell
 - `public/grimoire/`: downloadable sources, shared key, bundles, and axiom report.
 - `prototype/`: original Python translator, school examples, and vocabulary key. This historical version uses dot-separated namespaces; the browser translator implements the current Mercury syntax.
 
-Arcane Lean is a reversible presentation language, not a separate proof kernel. Its tokenizer supports these verified sources, not all possible Lean syntax extensions. The original Python prototype is preserved in `prototype/`.
+Arcana is a reversible presentation language, not a separate proof kernel. Its tokenizer supports these verified sources, not all possible Lean syntax extensions. The original Python prototype is preserved in `prototype/`.
 
 The other schools remain future work. This release deliberately develops one school for review before expanding the graduate grimoire.

@@ -4,7 +4,7 @@ import { EditorState, Prec } from '@codemirror/state';
 import { indentWithTab } from '@codemirror/commands';
 import { StreamLanguage, HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags } from '@lezer/highlight';
-import { Key, WORDS, fromSpell, toSpell, type KeyData } from './translator';
+import { Key, WORDS, RUNE_PATTERN, fromSpell, toSpell, type KeyData } from './translator';
 import { folios, grimoireKey, isCheckedSource, provenance, type Folio } from './catalog';
 import { foldAll, unfoldAll } from '@codemirror/language';
 import { spellFolding, sparkleAt, shimmer } from './magic';
@@ -22,7 +22,7 @@ let toastTimer: ReturnType<typeof setTimeout>;
 const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = `
   <header class="masthead">
-    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">⟐</span><span>LEAN <b>MAGIC</b></span></a>
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">⟐</span><span><b>ARCANA</b></span></a>
     <span class="edition">THE GRADUATE GRIMOIRE <span>VOL. I</span></span>
     <button id="help" class="quiet-button" aria-expanded="false" aria-controls="help-panel">How to read this <span aria-hidden="true">?</span></button>
   </header>
@@ -33,14 +33,16 @@ app.innerHTML = `
       <div class="school-heading"><span aria-hidden="true">⟐</span><div><p class="eyebrow">SCHOOL OF</p><h1>Enchantment</h1></div></div>
       <p class="school-description">Groups, pacts, and the structure that survives a transformation.</p>
       <nav id="chapter-nav" aria-label="Enchantment lessons"></nav>
-      <div class="contents-foot"><strong>Real mathematics. Arcane language.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
+      <div class="contents-foot"><strong>Real mathematics. Written in Arcana.</strong><p>${folios.filter(f => f.school !== 'Cantrips').length} lessons · 1 shared foundation<br>${provenance.verification.declarationCount} checked declarations</p><a href="grimoire/axioms.txt" target="_blank" rel="noreferrer">Inspect the proof audit ↗</a></div>
     </aside>
     <div class="reading-desk">
       <section class="folio-introduction"><p class="eyebrow" id="folio-level"></p><h2 id="folio-title"></h2><p class="folio-subtitle" id="folio-subtitle"></p><p class="lede" id="folio-summary"></p></section>
       <section id="help-panel" class="help-panel" hidden>
         <h2>Two languages, one theorem</h2>
-        <p>The left pane is Arcane Lean: mathematical names and syntax translated into a consistent spell vocabulary. The right pane is the exact Lean source. Edit either pane to translate in both directions.</p>
+        <p>The left pane is Arcana: mathematical names and syntax translated into a consistent spell vocabulary. The right pane is the exact Lean source. Edit either pane to translate in both directions.</p>
         <p>Spell ingredients such as <code>jade✨cube</code> and <code>silver✨bell</code> are variables: the math pane calls them <code>x</code> and <code>y</code>. Their types and hypotheses say what they can do. Spell names and schools also have mathematical names on the right; the saved name key keeps the correspondence.</p>
+        <p><strong>Carriers and their laws:</strong> runes such as <code>ᛰ</code>, <code>☥</code>, and <code>🌒</code> name the types inhabited by ingredients. A <strong>Veyr</strong> is a group; a <strong>Veyrath</strong> is a ring, whose addition forms a commutative group. A <strong>Veyrion</strong> is a field. <strong>Bound Veyr</strong> names a module, and <strong>Bound Veyrath</strong> names an algebra: “Bound” marks a scalar action, with both carriers written explicitly. “Harmonic” marks commutativity; “Chanted” distinguishes additive group notation. The Lean pane states the exact laws and hypotheses.</p>
+        <p><strong>Typing carrier runes:</strong> <code>\\rune</code> gives ᛰ, <code>\\ankh</code> gives ☥, <code>\\moon</code> gives 🌒, and <code>\\othala</code> gives ᛟ. The full translation key below each folio pairs runes with their mathematical names.</p>
         <p>Every original folio was compiled against mathlib, translated, decoded, and compiled again. The proof audit rejects placeholders. Standard Lean axioms such as classical choice may occur. <strong>Your edits are drafts:</strong> the browser checks translation fidelity, but does not run Lean.</p>
         <p><strong>Typing glyphs:</strong> type a backslash and a short name, then a space or Tab. In the spell pane, <code>\\sp</code> gives ✨, <code>\\dag</code> gives †, and <code>\\merc</code> gives ☿. A backslash before any Lean symbol gives its spell glyph: <code>\\:</code> gives ⟡, <code>\\(</code> gives ⟪, <code>\\:=</code> gives ⇰, <code>\\0</code> gives ⊘, and <code>\\1</code> gives ☉. The Lean pane uses Lean's own shortcuts, such as <code>\\to</code> for → and <code>\\-1</code> for ⁻¹.</p>
         <p>Switching lessons keeps your drafts in this tab. Download to keep a copy with its name key; reloading the page loses unsaved drafts. Press Escape then Tab to leave an editor using the keyboard.</p>
@@ -51,7 +53,7 @@ app.innerHTML = `
         <div class="pane-visibility" role="group" aria-label="Visible editor panes"><button id="toggle-spell" class="quiet-button" aria-controls="spell-pane" aria-expanded="true">Hide magic</button><button id="toggle-lean" class="quiet-button" aria-controls="lean-pane" aria-expanded="true">Hide math</button></div>
         <p id="panes-hidden" class="panes-hidden" hidden>Both panes are hidden. Show magic or math to return to your work.</p>
         <div class="editors">
-          <section id="spell-pane" class="editor-pane spell-pane" aria-label="Arcane Lean"><header class="pane-header"><div><span class="pane-index">01</span><h2>Arcane Lean</h2><span class="language-label">.spell</span></div><div class="spell-actions"><button id="veil" class="copy-button" title="Fold all spell bodies">Veil</button><button id="reveal" class="copy-button" title="Reveal all spell bodies">Reveal</button><button class="copy-button" data-copy="spell" aria-label="Copy Arcane Lean">Copy</button></div></header><div id="spell-editor" class="editor-host"></div><footer class="pane-footer"><span id="spell-count"></span><span>THE INCANTATION</span></footer></section>
+          <section id="spell-pane" class="editor-pane spell-pane" aria-label="Arcana"><header class="pane-header"><div><span class="pane-index">01</span><h2>Arcana</h2><span class="language-label">.spell</span></div><div class="spell-actions"><button id="veil" class="copy-button" title="Fold all spell bodies">Veil</button><button id="reveal" class="copy-button" title="Reveal all spell bodies">Reveal</button><button class="copy-button" data-copy="spell" aria-label="Copy Arcana">Copy</button></div></header><div id="spell-editor" class="editor-host"></div><footer class="pane-footer"><span id="spell-count"></span><span>THE INCANTATION</span></footer></section>
           <section id="lean-pane" class="editor-pane lean-pane" aria-label="Lean source"><header class="pane-header"><div><span class="pane-index">02</span><h2>Lean + mathlib</h2><span class="language-label">.lean</span></div><button class="copy-button" data-copy="lean" aria-label="Copy Lean source">Copy</button></header><div id="lean-editor" class="editor-host"></div><footer class="pane-footer"><span id="lean-count"></span><span>THE MATHEMATICS</span></footer></section>
         </div>
         <div class="validation-bar"><div class="validation-copy"><span id="status-icon" aria-hidden="true">◇</span><div><strong id="status" role="status" aria-live="polite"></strong><span id="status-detail"></span></div></div><button id="check" class="cast-button">Check round trip <span aria-hidden="true">⟐</span></button></div>
@@ -65,6 +67,7 @@ app.innerHTML = `
 
 const $ = <T extends HTMLElement = HTMLElement>(selector: string) => document.querySelector<T>(selector)!;
 
+const runePattern = new RegExp(RUNE_PATTERN, 'u');
 const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
   startState: () => ({ depth: 0 }),
   token(stream, state) {
@@ -81,6 +84,7 @@ const language = (side: Side) => StreamLanguage.define<{ depth: number }>({
     if (stream.match(/"(?:[^"\\]|\\.)*"?/)) return 'string';
     if (stream.match(/«[^»]*»/)) return 'variableName';
     if (stream.match(/\d+|[⊘☉]/)) return 'number';
+    if (side === 'spell' && stream.match(runePattern)) return 'variableName';
     if (stream.match(/(?:✨(?:[\p{L}_][\p{L}\p{N}\p{M}_'!?]*✨)+|[\p{L}_][\p{L}\p{N}\p{M}_'!?]*(?:✨[\p{L}_][\p{L}\p{N}\p{M}_'!?]*)+)/u)) return 'atom';
     const word = stream.match(/[\p{L}_][\p{L}\p{N}\p{M}_\u00a0'!?]*/u);
     if (word) {
@@ -228,7 +232,7 @@ function renderFolio() {
     $('#references').replaceChildren();
     for (const reference of entry.references) { const item = document.createElement('li'), link = document.createElement('a'); link.textContent = reference.symbol; link.href = reference.url; link.target = '_blank'; link.rel = 'noreferrer'; item.append(link); $('#references').append(item); }
     $('#source-downloads').replaceChildren();
-    for (const [extension, label] of [['spell', 'Arcane source'], ['lean', 'Lean source'], ['json', 'Original bundle']]) { const link = document.createElement('a'); link.href = 'grimoire/' + entry.id + '.' + extension; link.download = entry.id + '.' + extension; link.textContent = label + ' ↓'; $('#source-downloads').append(link); }
+    for (const [extension, label] of [['spell', 'Arcana source'], ['lean', 'Lean source'], ['json', 'Original bundle']]) { const link = document.createElement('a'); link.href = 'grimoire/' + entry.id + '.' + extension; link.download = entry.id + '.' + extension; link.textContent = label + ' ↓'; $('#source-downloads').append(link); }
   }
   for (const button of document.querySelectorAll<HTMLButtonElement>('[data-folio]')) {
     button.classList.toggle('active', button.dataset.folio === selected?.id);

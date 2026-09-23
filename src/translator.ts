@@ -6,6 +6,9 @@ type Kind = 'ws' | 'comment' | 'string' | 'char' | 'num' | 'ident' | 'sym' | 'ot
 export interface Token { kind: Kind; text: string }
 const ESC = '⟄', NBSP = '\u00a0', SPARKLE = '✨';
 export const NAMESPACE_SEPARATOR = '☿';
+export const CARRIER_RUNES = ['ᛰ', '☥', '🌒', 'ᛟ', 'ᚨ', 'ᛒ', 'ᚷ', 'ᛞ', 'ᚱ', 'ᛋ', 'ᚠ', 'ᛗ', 'ᚫ', 'ᛖ', 'ᚹ', 'ᚾ', 'ᚢ', 'ᛉ'] as const;
+export const RUNE_PATTERN = `(?:${CARRIER_RUNES.join('|')})`;
+const runeSet = new Set<string>(CARRIER_RUNES);
 const dictionary = (table: NameMap): NameMap => Object.assign(Object.create(null), table);
 export const WORDS: NameMap = dictionary(tables.words);
 const SYMS = dictionary({ ...tables.syms, '.': NAMESPACE_SEPARATOR }), NUMS = dictionary(tables.nums);
@@ -16,11 +19,11 @@ const component = String.raw`(?:«[^»]*»|[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_
 const word = String.raw`[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*`;
 // Spell titles retain their framing sparkles; material components use jade✨cube.
 const sparkled = `(?:${SPARKLE}(?:${word}${SPARKLE})+|${word}(?:${SPARKLE}${word})+)`;
-const spellComponent = component.replace("_'!?", "_\u00a0'!?").replace('(?:', `(?:${sparkled}|`);
+const spellComponent = `(?:${sparkled}|${component.replace("_'!?", "_\u00a0'!?")}|${RUNE_PATTERN})`;
 const ident = new RegExp(`^${component}(?:\\.${component})*`, 'u');
 const spellIdent = new RegExp(`^${spellComponent}(?:[.${NAMESPACE_SEPARATOR}]${spellComponent})*`, 'u');
 const simple = /^[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*(?: [\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)*$/u;
-const legalName = new RegExp(`^(?:${sparkled}|[\\p{L}\\p{Nl}_][\\p{L}\\p{Nl}\\p{N}\\p{M}_\\u00a0'!?]*)$`, 'u');
+const legalName = new RegExp(`^(?:${RUNE_PATTERN}|${sparkled}|[\\p{L}\\p{Nl}_][\\p{L}\\p{Nl}\\p{N}\\p{M}_\\u00a0'!?]*)$`, 'u');
 const glue = /^[\p{L}\p{Nl}\p{N}\p{M}_'!?\u00a0]/u;
 const leanSymbols = [...new Set([...Object.keys(SYMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
 const spellSymbols = [...new Set([...Object.keys(INV_SYMS), ...Object.keys(INV_NUMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
@@ -179,7 +182,7 @@ export function toSpell(source: string, key: Key): string {
       return key.name(parts, scope, !glue.test(tokens[i + 1]?.text ?? ''));
     }
     if (token.kind === 'sym') return SYMS[t] ?? t;
-    if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || t === ESC || t === NBSP || t === SPARKLE)) return ESC + t;
+    if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || runeSet.has(t) || t === ESC || t === NBSP || t === SPARKLE)) return ESC + t;
     return t;
   }).join('');
 }

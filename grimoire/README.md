@@ -1,6 +1,6 @@
-# Enchantment · The graduate grimoire
+# Arcana · The Enchantment grimoire
 
-9 lessons in group theory, with shared cantrips. All 55 declarations compile against Lean/mathlib v4.33.1. Every Arcane source decodes exactly and is compiled again. Browser edits are not checked by Lean.
+9 lessons in group theory, with shared cantrips. All 55 declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
 
 ## Threads & mirrors
 
@@ -18,16 +18,16 @@ A common language for all schools: weave functions together, preserve injectivit
 beckon ✨Grand✨Archive✨☿Reason☿Rite☿Foundations
 beckon ✨Grand✨Archive✨☿Reason☿Portal☿Names
 
-sanctum Arcanum☿Cantrips
+sanctum Arcana☿Cantrips
 
-familiar ⧼aether vapor vesper ⟡ Essence⊛⧽
+familiar ⧼ᚨ ᛒ ᚷ ⟡ Essence⊛⧽
 
-ritual Weave ⟪copper✨wire ⟡ aether ↝ vapor⟫ ⟪silk✨cord ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ conjure jade✨cube ⇉ silk✨cord ⟪copper✨wire jade✨cube⟫
+ritual Weave ⟪copper✨wire ⟡ ᚨ ↝ ᛒ⟫ ⟪silk✨cord ⟡ ᛒ ↝ ᚷ⟫ ⟡ ᚨ ↝ ᚷ ⇰ conjure jade✨cube ⇉ silk✨cord ⟪copper✨wire jade✨cube⟫
 
-spell ✨Thread✨Unfolds✨ ⟪copper✨wire ⟡ aether ↝ vapor⟫ ⟪silk✨cord ⟡ vapor ↝ vesper⟫ ⟪jade✨cube ⟡ aether⟫ ⟡
+spell ✨Thread✨Unfolds✨ ⟪copper✨wire ⟡ ᚨ ↝ ᛒ⟫ ⟪silk✨cord ⟡ ᛒ ↝ ᚷ⟫ ⟪jade✨cube ⟡ ᚨ⟫ ⟡
     Weave copper✨wire silk✨cord jade✨cube ≣ silk✨cord ⟪copper✨wire jade✨cube⟫ ⇰ mirror
 
-spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk✨cord ⟡ vapor ↝ vesper⧽
+spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cord ⟡ ᛒ ↝ ᚷ⧽
     ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
     Rite☿Faithful ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
   summon jade✨cube silver✨bell twinned
@@ -38,7 +38,7 @@ spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk�
   bind ✨inner✨weave✨ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ echoward ✨outer✨weave✨
   missile faith ✨inner✨weave✨
 
-spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk✨cord ⟡ vapor ↝ vesper⧽
+spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cord ⟡ ᛒ ↝ ᚷ⧽
     ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟪echoward ⟡ Rite☿Reaching silk✨cord⟫ ⟡
     Rite☿Reaching ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
   summon amber✨rod
@@ -49,16 +49,16 @@ spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk�
     ▢ ≣ silk✨cord silver✨bell ⇰ sympathy silk✨cord sigilward
     ▢ ≣ amber✨rod ⇰ runeward
 
-spell ✨Mirror✨Return✨ ⟪obsidian✨mirror ⟡ aether ≃ vapor⟫ ⟪jade✨cube ⟡ aether⟫ ⟡ obsidian✨mirror☿reflect ⟪obsidian✨mirror jade✨cube⟫ ≣ jade✨cube ⇰
+spell ✨Mirror✨Return✨ ⟪obsidian✨mirror ⟡ ᚨ ≃ ᛒ⟫ ⟪jade✨cube ⟡ ᚨ⟫ ⟡ obsidian✨mirror☿reflect ⟪obsidian✨mirror jade✨cube⟫ ≣ jade✨cube ⇰
   obsidian✨mirror☿✨Return✨Path✨ jade✨cube
 
-spell ✨Mirror✨Depart✨ ⟪obsidian✨mirror ⟡ aether ≃ vapor⟫ ⟪silver✨bell ⟡ vapor⟫ ⟡ obsidian✨mirror ⟪obsidian✨mirror☿reflect silver✨bell⟫ ≣ silver✨bell ⇰
+spell ✨Mirror✨Depart✨ ⟪obsidian✨mirror ⟡ ᚨ ≃ ᛒ⟫ ⟪silver✨bell ⟡ ᛒ⟫ ⟡ obsidian✨mirror ⟪obsidian✨mirror☿reflect silver✨bell⟫ ≣ silver✨bell ⇰
   obsidian✨mirror☿✨Departure✨Path✨ silver✨bell
 
-seal Arcanum☿Cantrips
+seal Arcana☿Cantrips
 ```
 
-[Lean source](../math/Mathematics/Functions.lean) · [Arcane source](../public/grimoire/cantrips.spell)
+[Lean source](../math/Mathematics/Functions.lean) · [Arcana source](../public/grimoire/cantrips.spell)
 
 [Function.Injective.comp](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Logic/Function/Basic.lean) · [Equiv.symm_apply_apply](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Logic/Equiv/Defs.lean#L252)
 
@@ -75,47 +75,47 @@ Choose the seeds of an enchantment. The smallest subgroup containing them closes
 **Proof idea.** Membership in the generated subgroup means membership in every subgroup that contains the seeds. From that one criterion, each seed lies in the circle, and any subgroup containing the seeds contains the whole circle. Closure under xy⁻¹ combines the inverse law and the product law. Generating from H returns H by antisymmetry: each side lies inside the other.
 
 ```text
-beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Foundations
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨☿Foundations
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
+familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
-ritual ✨Bound✨Circle✨ ⟪pouch✨of✨sand ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle pouch✨of✨sand
+ritual ✨Bound✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
 
-spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host coven⟫ ⟡ pouch✨of✨sand ⊆ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ cast
+spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ pouch✨of✨sand ⊆ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ cast
   summon jade✨cube sigilward
-  proclaim jade✨cube ∈ Cabal☿encircle pouch✨of✨sand
-  transmute ⟮Cabal☿✨Encirclement✨Criterion✨⟯
-  summon choir hedgeward
+  proclaim jade✨cube ∈ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
+  transmute ⟮✨Inner✨Veyr✨☿✨Encirclement✨Criterion✨⟯
+  summon ᛟ hedgeward
   missile hedgeward sigilward
 
-spell ✨Smallest✨Circle✨ ⟪pouch✨of✨sand ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
-    ✨Bound✨Circle✨ pouch✨of✨sand ⋜ circle ↭ pouch✨of✨sand ⊆ circle ⇰ cast
+spell ✨Smallest✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
+    ✨Bound✨Circle✨ pouch✨of✨sand ⋜ ☥ ↭ pouch✨of✨sand ⊆ ☥ ⇰ cast
   fabricate
   ❖ summon enclosed jade✨cube sigilward
     bind gathered ⟡ jade✨cube ∈ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ ✨Gather✨the✨Seeds✨ pouch✨of✨sand sigilward
     missile enclosed gathered
   ❖ summon sown jade✨cube sigilward
-    bind ✨every✨circle✨ ⟡ ⟁ choir ⟡ Cabal coven᛫ pouch✨of✨sand ⊆ choir ↝ jade✨cube ∈ choir ⇰ Cabal☿✨Encirclement✨Criterion✨☿onward sigilward
-    missile ✨every✨circle✨ circle sown
+    bind ✨every✨circle✨ ⟡ ⟁ ᛟ ⟡ ✨Inner✨Veyr✨ ᛰ᛫ pouch✨of✨sand ⊆ ᛟ ↝ jade✨cube ∈ ᛟ ⇰ ✨Inner✨Veyr✨☿✨Encirclement✨Criterion✨☿onward sigilward
+    missile ✨every✨circle✨ ☥ sown
 
-spell ✨Keep✨the✨Circle✨ ⟪circle ⟡ Cabal coven⟫ ⧼jade✨cube silver✨bell ⟡ coven⧽
-    ⟪sigilward ⟡ jade✨cube ∈ circle⟫ ⟪runeward ⟡ silver✨bell ∈ circle⟫ ⟡ jade✨cube ⊛ silver✨bell† ∈ circle ⇰ cast
-  bind reversed ⟡ silver✨bell† ∈ circle ⇰ circle☿✨Reversal✨Remains✨ runeward
-  missile circle☿✨Binding✨Remains✨ sigilward reversed
+spell ✨Keep✨the✨Circle✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⧼jade✨cube silver✨bell ⟡ ᛰ⧽
+    ⟪sigilward ⟡ jade✨cube ∈ ☥⟫ ⟪runeward ⟡ silver✨bell ∈ ☥⟫ ⟡ jade✨cube ⊛ silver✨bell† ∈ ☥ ⇰ cast
+  bind reversed ⟡ silver✨bell† ∈ ☥ ⇰ ☥☿✨Reversal✨Remains✨ runeward
+  missile ☥☿✨Binding✨Remains✨ sigilward reversed
 
-spell ✨Seal✨the✨Circle✨ ⟪circle ⟡ Cabal coven⟫ ⟡ ✨Bound✨Circle✨ ⟪circle ⟡ Host coven⟫ ≣ circle ⇰ cast
+spell ✨Seal✨the✨Circle✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ✨Bound✨Circle✨ ⟪☥ ⟡ Host ᛰ⟫ ≣ ☥ ⇰ cast
   channel Stalemate
-  ❖ bind sown ⟡ ⟪circle ⟡ Host coven⟫ ⊆ circle ⇰ conjure jade✨cube sigilward ⇉ sigilward
-    missile ⟪✨Smallest✨Circle✨ ⟪circle ⟡ Host coven⟫ circle⟫☿backward sown
+  ❖ bind sown ⟡ ⟪☥ ⟡ Host ᛰ⟫ ⊆ ☥ ⇰ conjure jade✨cube sigilward ⇉ sigilward
+    missile ⟪✨Smallest✨Circle✨ ⟪☥ ⟡ Host ᛰ⟫ ☥⟫☿backward sown
   ❖ summon jade✨cube sigilward
-    missile ✨Gather✨the✨Seeds✨ ⟪circle ⟡ Host coven⟫ sigilward
+    missile ✨Gather✨the✨Seeds✨ ⟪☥ ⟡ Host ᛰ⟫ sigilward
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/Subgroups.lean) · [Arcane source](../public/grimoire/circles.spell)
+[Lean source](../math/Mathematics/GroupTheory/Subgroups.lean) · [Arcana source](../public/grimoire/circles.spell)
 
 [Subgroup.closure_le](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Lattice.lean#L355) · [Subgroup.closure_eq](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Lattice.lean#L433) · [Subgroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Defs.lean#L295)
 
@@ -132,26 +132,26 @@ A pact transports the group operation intact. Chain two faithful pacts and no di
 **Proof idea.** Only multiplication is assumed. The identity is forced: f(1)·f(1) = f(1·1) = f(1) = f(1)·1, so cancellation gives f(1) = 1. Then f(x⁻¹)·f(x) = f(x⁻¹x) = f(1) = 1, so f(x⁻¹) is the inverse of f(x). The kernel of a composite unfolds in a three-line calc to g(f(x)) = 1. Injective pacts compose through the shared faithful-thread cantrip.
 
 ```text
-beckon Arcanum☿Cantrips
-beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Silences
+beckon Arcana☿Cantrips
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨☿Silences
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯
+familiar ⧼ᛰ ☥ ᛟ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯ ⟮Veyr ᛟ⟯
 
-ritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ silk✨cord☿threading copper✨wire
+ritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟡ ᛰ ↝⊛ ᛟ ⇰ silk✨cord☿threading copper✨wire
 
-spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube silver✨bell ⟡ coven⟫ ⟡
+spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube silver✨bell ⟡ ᛰ⟫ ⟡
     copper✨wire ⟪jade✨cube ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell ⇰ copper✨wire☿✨Carry✨the✨Binding✨ jade✨cube silver✨bell
 
-spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ copper✨wire ☉ ≣ ☉ ⇰ cast
+spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire ☉ ≣ ☉ ⇰ cast
   bind doubled ⟡ copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ☉ ⊛ ☉ ⇰
     litany copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire ☉ ☉⟫☿reflect
       ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ ☉⟫
       ▢ ≣ copper✨wire ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire ☉⟫⟫☿reflect
   missile ✨Strike✨from✨the✨Left✨ doubled
 
-spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast
   bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ ☉ ⇰
     litany copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ copper✨wire ⟪jade✨cube† ⊛ jade✨cube⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† jade✨cube⟫☿reflect
@@ -159,21 +159,21 @@ spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ 
       ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
   missile ✨Undoer✨is✨Reversal✨ undone
 
-spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫
+spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫
     ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
     Rite☿Faithful ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫ ⇰
-  Arcanum☿Cantrips☿✨Faithful✨Weaving✨ ⟪copper✨wire ⇰ copper✨wire⟫ ⟪silk✨cord ⇰ silk✨cord⟫ faith echoward
+  Arcana☿Cantrips☿✨Faithful✨Weaving✨ ⟪copper✨wire ⇰ copper✨wire⟫ ⟪silk✨cord ⇰ silk✨cord⟫ faith echoward
 
-spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪silk✨cord ⟡ circle ↝⊛ choir⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰
   litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
     ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ ☉ ⇰ Pact☿mirror
     ▢ ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/Homomorphisms.lean) · [Arcane source](../public/grimoire/pacts.spell)
+[Lean source](../math/Mathematics/GroupTheory/Homomorphisms.lean) · [Arcana source](../public/grimoire/pacts.spell)
 
 [MonoidHom](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Hom/Defs.lean#L366) · [MonoidHom.mem_ker](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L245)
 
@@ -190,19 +190,19 @@ The kernel is everything a pact sends to the identity. Conjugating an element ca
 **Proof idea.** Take x with f(x) = 1. A seven-line calc pushes f through g·x·g⁻¹ one step at a time, using congrArg to rewrite inside the product: split the product, replace f(x) by 1, drop it, turn f(g⁻¹) into f(g)⁻¹, and cancel. Normality is then built directly from that computation. For injectivity: a trivial kernel sends f(x) = f(y) to f(xy⁻¹) = 1, so xy⁻¹ = 1 and x = y.
 
 ```text
-beckon Arcanum☿Enchantment☿Pacts
+beckon Arcana☿Enchantment☿Pacts
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
-ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ copper✨wire☿silence
+ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ copper✨wire☿silence
 
-spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
 
-spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⧼jade✨cube ⟡ coven⧽
-    ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ coven⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
+spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨cube ⟡ ᛰ⧽
+    ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
   bind muted ⟡ copper✨wire jade✨cube ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
   bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ ☉ ⇰
     litany copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ ⊛ copper✨wire silk✨cord† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ silk✨cord†
@@ -214,14 +214,14 @@ spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⧼ja
       ▢ ≣ ☉ ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
   missile ⟪✨Name✨the✨Silent✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫⟫☿backward hushed
 
-spell ✨Silence✨is✨Hallowed✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ ⟪✨Circle✨of✨Silence✨ copper✨wire⟫☿Hallowed ⇰ cast
+spell ✨Silence✨is✨Hallowed✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ⟪✨Circle✨of✨Silence✨ copper✨wire⟫☿Hallowed ⇰ cast
   fabricate
   summon jade✨cube sigilward silk✨cord
   missile ✨Unbroken✨Silence✨ copper✨wire sigilward silk✨cord
 
-spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡
+spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Faithful copper✨wire ↭ ✨Circle✨of✨Silence✨ copper✨wire ≣ ⊥ ⇰ cast
-  transmute ⟮Cabal☿✨Emptiness✨Criterion✨⟯
+  transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
   fabricate
   ❖ summon fidelity jade✨cube sigilward
     bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire ☉ ⇰
@@ -238,10 +238,10 @@ spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡
     bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ ☉ ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
     missile ✨Balanced✨Division✨☿onward vanished
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/Kernels.lean) · [Arcane source](../public/grimoire/kernels.spell)
+[Lean source](../math/Mathematics/GroupTheory/Kernels.lean) · [Arcana source](../public/grimoire/kernels.spell)
 
 [MonoidHom.mem_ker](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L245) · [MonoidHom.normal_ker](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean) · [MonoidHom.ker_eq_bot_iff](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L319)
 
@@ -258,44 +258,44 @@ A pact descends through a quotient exactly when it silences the subgroup being f
 **Proof idea.** First, see why N ≤ ker(f) is needed: if x⁻¹y lies in N, then f(x) = f(x)·f(x⁻¹y) = f(y), so f gives one answer on each coset. QuotientGroup.lift packages this into the descended pact. For uniqueness, every quotient element has a representative, and on representatives both maps agree with f.
 
 ```text
-beckon Arcanum☿Enchantment☿Pacts
-beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿✨Veiled✨Coven✨☿Foundations
+beckon Arcana☿Enchantment☿Pacts
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Veiled✨Veyr✨☿Foundations
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
-spell ✨Veil✨Hides✨the✨Difference✨ ⟪veil ⟡ Cabal coven⟫ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ copper✨wire☿silence⟫
-    ⧼jade✨cube silver✨bell ⟡ coven⧽ ⟪kinship ⟡ jade✨cube† ⊛ silver✨bell ∈ veil⟫ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ cast
+spell ✨Veil✨Hides✨the✨Difference✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫
+    ⧼jade✨cube silver✨bell ⟡ ᛰ⧽ ⟪kinship ⟡ jade✨cube† ⊛ silver✨bell ∈ ᚾ⟫ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ cast
   bind muted ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ ☉ ⇰ veilward kinship
   litany copper✨wire jade✨cube ≣ copper✨wire jade✨cube ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire jade✨cube⟫⟫☿reflect
     ▢ ≣ copper✨wire jade✨cube ⊛ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire jade✨cube ⊛ pearl✨dust⟫ muted☿reflect
     ▢ ≣ copper✨wire ⟪jade✨cube ⊛ ⟪jade✨cube† ⊛ silver✨bell⟫⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube ⟪jade✨cube† ⊛ silver✨bell⟫⟫☿reflect
     ▢ ≣ copper✨wire silver✨bell ⇰ sympathy copper✨wire ⟪✨Return✨from✨the✨Left✨ jade✨cube silver✨bell⟫
 
-ritual ✨Pass✨the✨Veil✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫
-    ⟪veilward ⟡ veil ⋜ copper✨wire☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
-  ✨Veiled✨Coven✨☿descend veil copper✨wire veilward
+ritual ✨Pass✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫
+    ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟡ ᛰ ⧸ ᚾ ↝⊛ ☥ ⇰
+  ✨Veiled✨Veyr✨☿descend ᚾ copper✨wire veilward
 
-spell ✨Speak✨through✨the✨Veil✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
-    ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ copper✨wire☿silence⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
-    ✨Pass✨the✨Veil✨ veil copper✨wire veilward ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube ⇰ mirror
+spell ✨Speak✨through✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯
+    ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
+    ✨Pass✨the✨Veil✨ ᚾ copper✨wire veilward ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
-spell ✨Only✨One✨Passage✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
-    ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ copper✨wire☿silence⟫ ⟪silk✨cord ⟡ coven ⧸ veil ↝⊛ circle⟫
-    ⟪echoward ⟡ ⟁ jade✨cube ⟡ coven᛫ silk✨cord ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube⟫ ⟡
-    silk✨cord ≣ ✨Pass✨the✨Veil✨ veil copper✨wire veilward ⇰ cast
+spell ✨Only✨One✨Passage✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯
+    ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟪silk✨cord ⟡ ᛰ ⧸ ᚾ ↝⊛ ☥⟫
+    ⟪echoward ⟡ ⟁ jade✨cube ⟡ ᛰ᛫ silk✨cord ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube⟫ ⟡
+    silk✨cord ≣ ✨Pass✨the✨Veil✨ ᚾ copper✨wire veilward ⇰ cast
   channel Herald☿extend
   summon ivory✨ring
-  wrest ⦉jade✨cube᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ ivory✨ring
-  litany silk✨cord ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube ⇰ echoward jade✨cube
-    ▢ ≣ ✨Pass✨the✨Veil✨ veil copper✨wire veilward ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⇰
-        ⟪✨Speak✨through✨the✨Veil✨ veil copper✨wire veilward jade✨cube⟫☿reflect
+  wrest ⦉jade✨cube᛫ mirror⦊ ⇰ ✨Veiled✨Veyr✨☿✨Every✨Veil✨has✨a✨Face✨ ivory✨ring
+  litany silk✨cord ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube ⇰ echoward jade✨cube
+    ▢ ≣ ✨Pass✨the✨Veil✨ ᚾ copper✨wire veilward ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⇰
+        ⟪✨Speak✨through✨the✨Veil✨ ᚾ copper✨wire veilward jade✨cube⟫☿reflect
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/QuotientGroups.lean) · [Arcane source](../public/grimoire/descent.spell)
+[Lean source](../math/Mathematics/GroupTheory/QuotientGroups.lean) · [Arcana source](../public/grimoire/descent.spell)
 
 [QuotientGroup.lift](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/QuotientGroup/Defs.lean#L248) · [QuotientGroup.lift_mk](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/QuotientGroup/Defs.lean#L252)
 
@@ -312,70 +312,70 @@ Forget exactly what a pact cannot distinguish. What remains is the image, with i
 **Proof idea.** The isomorphism is built by hand. First, f restricted to its image silences ker(f), so it descends to the quotient. It is injective: if [x] and [y] have the same image, a calc shows f(x⁻¹y) = f(x)⁻¹f(y) = f(y)⁻¹f(y) = 1, so [x] = [y]. It is surjective: every image element is f(x) for some x. A bijective homomorphism is an isomorphism. For a surjective f, the image is the whole codomain.
 
 ```text
-beckon Arcanum☿Enchantment☿Descent
+beckon Arcana☿Enchantment☿Descent
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
-spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
+spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
   summon jade✨cube sigilward
   bind muted ⟡ copper✨wire jade✨cube ≣ ☉ ⇰ sigilward
   proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ ☉
   missile Kin☿extend muted
 
-ritual ✨Image✨Pact✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ copper✨wire☿silence ↝⊛ copper✨wire☿manifestation ⇰
+ritual ✨Image✨Pact✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ↝⊛ copper✨wire☿manifestation ⇰
   ✨Pass✨the✨Veil✨ copper✨wire☿silence copper✨wire☿✨confine✨to✨manifestation✨ ⟪✨Silence✨within✨the✨Image✨ copper✨wire⟫
 
-spell ✨Image✨of✨the✨Sigil✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
-    ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⟡ circle⟫ ≣ copper✨wire jade✨cube ⇰ mirror
+spell ✨Image✨of✨the✨Sigil✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
+    ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
-spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Faithful ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
+spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Faithful ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
   summon ruby✨shard ivory✨ring twinned
-  wrest ⦉jade✨cube᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ ruby✨shard
-  wrest ⦉silver✨bell᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ ivory✨ring
+  wrest ⦉jade✨cube᛫ mirror⦊ ⇰ ✨Veiled✨Veyr✨☿✨Every✨Veil✨has✨a✨Face✨ ruby✨shard
+  wrest ⦉silver✨bell᛫ mirror⦊ ⇰ ✨Veiled✨Veyr✨☿✨Every✨Veil✨has✨a✨Face✨ ivory✨ring
   bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰
-    litany copper✨wire jade✨cube ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⟡ circle⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube⟫☿reflect
-      ▢ ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge silver✨bell⟫ ⟡ circle⟫ ⇰ sympathy Kin☿core twinned
+    litany copper✨wire jade✨cube ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube⟫☿reflect
+      ▢ ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge silver✨bell⟫ ⟡ ☥⟫ ⇰ sympathy Kin☿core twinned
       ▢ ≣ copper✨wire silver✨bell ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire silver✨bell
   bind hushed ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ ☉ ⇰
     litany copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube† ⊛ copper✨wire silver✨bell ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† silver✨bell
       ▢ ≣ ⟪copper✨wire jade✨cube⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire jade✨cube⟫
       ▢ ≣ ⟪copper✨wire silver✨bell⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust† ⊛ copper✨wire silver✨bell⟫ echoing
       ▢ ≣ ☉ ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
-  missile ✨Veiled✨Coven✨☿✨Veil✨Equality✨☿backward hushed
+  missile ✨Veiled✨Veyr✨☿✨Veil✨Equality✨☿backward hushed
 
-spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
+spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
   summon quarry
   wrest ⦉jade✨cube᛫ sigilward⦊ ⇰ Herald☿✨Manifestation✨Criterion✨☿onward quarry☿attestation
-  hone ⦉✨Veiled✨Coven✨☿forge jade✨cube᛫ ?▢⦊
+  hone ⦉✨Veiled✨Veyr✨☿forge jade✨cube᛫ ?▢⦊
   channel Kin☿extend
-  litany ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⟡ circle⟫ ≣ copper✨wire jade✨cube ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube
+  litany ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube
     ▢ ≣ quarry ⇰ sigilward
 
-ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Image✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ copper✨wire☿silence ≃⊛ copper✨wire☿manifestation ⇰
+ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ≃⊛ copper✨wire☿manifestation ⇰
   ✨Pact✨Portal✨☿✨from✨perfection✨ ⟪✨Image✨Pact✨ copper✨wire⟫ ⦉✨Faithful✨Image✨ copper✨wire᛫ ✨Reaching✨Image✨ copper✨wire⦊
 
-spell ✨Reveal✨the✨Sigil✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
-    ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⟡ circle⟫ ≣ copper✨wire jade✨cube ⇰ mirror
+spell ✨Reveal✨the✨Sigil✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
+    ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
-spell ✨Perfect✨Unveiling✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡
+spell ✨Perfect✨Unveiling✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Perfect ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫ ⇰
   ⦉✨Faithful✨Image✨ copper✨wire᛫ ✨Reaching✨Image✨ copper✨wire⦊
 
-ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Realm✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
-    coven ⧸ copper✨wire☿silence ≃⊛ circle ⇰
+ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Essence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
+    ᛰ ⧸ copper✨wire☿silence ≃⊛ ☥ ⇰
   ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫☿chain
-    ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain Cabal☿✨whole✨cabal✨portal✨⟫
+    ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain ✨Inner✨Veyr✨☿✨whole✨cabal✨portal✨⟫
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/FirstIsomorphism.lean) · [Arcane source](../public/grimoire/first-isomorphism.spell)
+[Lean source](../math/Mathematics/GroupTheory/FirstIsomorphism.lean) · [Arcana source](../public/grimoire/first-isomorphism.spell)
 
 [QuotientGroup.quotientKerEquivRange](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/QuotientGroup/Basic.lean#L134) · [QuotientGroup.eq](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Defs.lean#L198) · [MulEquiv.ofBijective](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Equiv/Defs.lean#L499)
 
-## The measure of a coven
+## The measure of a veyr
 
 *Lagrange's theorem and element orders*
 
@@ -388,70 +388,70 @@ A finite group partitions into equally sized cosets. The size of every subgroup,
 **Proof idea.** Mathlib splits G into pairs (coset, element of H), so a calc gives |G| = |G/H|·|H|. Commuting the factors exhibits |H| as a divisor. The order of x is the size of the cyclic subgroup it generates, so it divides |G|. Finally, write |G| = ord(x)·k and compute x^|G| = (x^ord(x))^k = 1^k = 1.
 
 ```text
-beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Veils☿Census
-beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Cycles
-beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿✨Veiled✨Coven✨
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Veils☿Census
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
+beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿✨Veiled✨Veyr✨
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
+familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
-spell ✨Count✨the✨Veils✨ ⟪circle ⟡ Cabal coven⟫ ⟡
-    Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰
-  litany Tally☿census coven ≣ Tally☿census ⟪⟪coven ⧸ circle⟫ ⨯ circle⟫ ⇰
-        Tally☿✨Census✨through✨Portal✨ Cabal☿✨Coven✨Splits✨into✨Veils✨
-    ▢ ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪coven ⧸ circle⟫ circle
+spell ✨Count✨the✨Veils✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
+    Tally☿census ᛰ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰
+  litany Tally☿census ᛰ ≣ Tally☿census ⟪⟪ᛰ ⧸ ☥⟫ ⨯ ☥⟫ ⇰
+        Tally☿✨Census✨through✨Portal✨ ✨Inner✨Veyr✨☿✨Veyr✨Splits✨into✨Veils✨
+    ▢ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪ᛰ ⧸ ☥⟫ ☥
 
-spell ✨Lagrange's✨Measure✨of✨the✨Coven✨ ⟪circle ⟡ Cabal coven⟫ ⟡
-    Tally☿census circle ∣ Tally☿census coven ⇰ cast
-  hone ⦉Tally☿census ⟪coven ⧸ circle⟫᛫ ?▢⦊
-  litany Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ ✨Count✨the✨Veils✨ circle
-    ▢ ≣ Tally☿census circle ⊛ Tally☿census ⟪coven ⧸ circle⟫ ⇰ Tally☿✨Bindings✨Commute✨ ⟪Tally☿census ⟪coven ⧸ circle⟫⟫ ⟪Tally☿census circle⟫
+spell ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
+    Tally☿census ☥ ∣ Tally☿census ᛰ ⇰ cast
+  hone ⦉Tally☿census ⟪ᛰ ⧸ ☥⟫᛫ ?▢⦊
+  litany Tally☿census ᛰ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰ ✨Count✨the✨Veils✨ ☥
+    ▢ ≣ Tally☿census ☥ ⊛ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⇰ Tally☿✨Bindings✨Commute✨ ⟪Tally☿census ⟪ᛰ ⧸ ☥⟫⟫ ⟪Tally☿census ☥⟫
 
-spell ✨Lagrange's✨Measure✨of✨the✨Cycle✨ ⟪jade✨cube ⟡ coven⟫ ⟡ period jade✨cube ∣ Tally☿census coven ⇰
-  litany period jade✨cube ≣ Tally☿census ⟪Cabal☿✨cycle✨circle✨ jade✨cube⟫ ⇰ ⟪Tally☿✨Cycle✨Census✨ jade✨cube⟫☿reflect
-    ▢ ∣ Tally☿census coven ⇰ ✨Lagrange's✨Measure✨of✨the✨Coven✨ ⟪Cabal☿✨cycle✨circle✨ jade✨cube⟫
+spell ✨Lagrange's✨Measure✨of✨the✨Cycle✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ period jade✨cube ∣ Tally☿census ᛰ ⇰
+  litany period jade✨cube ≣ Tally☿census ⟪✨Inner✨Veyr✨☿✨cycle✨circle✨ jade✨cube⟫ ⇰ ⟪Tally☿✨Cycle✨Census✨ jade✨cube⟫☿reflect
+    ▢ ∣ Tally☿census ᛰ ⇰ ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ⟪✨Inner✨Veyr✨☿✨cycle✨circle✨ jade✨cube⟫
 
-spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ coven⟫ ⟡ jade✨cube ⌃ Tally☿census coven ≣ ☉ ⇰ cast
+spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ ☉ ⇰ cast
   wrest ⦉onyx✨bead᛫ measureward⦊ ⇰ ✨Lagrange's✨Measure✨of✨the✨Cycle✨ jade✨cube
-  litany jade✨cube ⌃ Tally☿census coven ≣ jade✨cube ⌃ ⟪period jade✨cube ⊛ onyx✨bead⟫ ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ jade✨cube ⌃ pinch✨of✨sulfur⟫ measureward
+  litany jade✨cube ⌃ Tally☿census ᛰ ≣ jade✨cube ⌃ ⟪period jade✨cube ⊛ onyx✨bead⟫ ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ jade✨cube ⌃ pinch✨of✨sulfur⟫ measureward
     ▢ ≣ ⟪jade✨cube ⌃ period jade✨cube⟫ ⌃ onyx✨bead ⇰ ✨Nested✨Ascent✨ jade✨cube ⟪period jade✨cube⟫ onyx✨bead
     ▢ ≣ ☉ ⌃ onyx✨bead ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⌃ onyx✨bead⟫ ⟪✨Period✨Returns✨ jade✨cube⟫
     ▢ ≣ ☉ ⇰ ✨Stillness✨Ascends✨ onyx✨bead
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/Lagrange.lean) · [Arcane source](../public/grimoire/lagrange.spell)
+[Lean source](../math/Mathematics/GroupTheory/Lagrange.lean) · [Arcana source](../public/grimoire/lagrange.spell)
 
 [Subgroup.groupEquivQuotientProdSubgroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Basic.lean#L334) · [Subgroup.card_eq_card_quotient_mul_card_subgroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Card.lean#L53) · [Subgroup.card_subgroup_dvd_card](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Card.lean#L69) · [orderOf_dvd_natCard](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/OrderOfElement.lean#L1164) · [pow_card_eq_one'](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/OrderOfElement.lean#L1186)
 
-## The unbreakable coven
+## The unbreakable veyr
 
 *Groups of prime order are simple*
 
-A coven whose census is indivisible has no hidden circles. Nothing inside it can be broken away, so it is unbreakable.
+A veyr whose census is indivisible has no hidden circles. Nothing inside it can be broken away, so it is unbreakable.
 
-**Mathematical meaning.** A group is simple when it has more than one element and its only normal subgroups are the trivial one and the whole group. If |G| = p is prime, every subgroup is trivial or all of G, so G is simple. The Arcane definition agrees exactly with mathlib's IsSimpleGroup.
+**Mathematical meaning.** A group is simple when it has more than one element and its only normal subgroups are the trivial one and the whole group. If |G| = p is prime, every subgroup is trivial or all of G, so G is simple. The Arcana definition agrees exactly with mathlib's IsSimpleGroup.
 
 **Hypotheses.** p is prime and Nat.card G = p. Because p is not zero, G is finite. Normality is never used: the theorem about hidden circles holds for every subgroup, normal or not.
 
-**Proof idea.** By Lagrange, the size of a subgroup H divides p. A prime has only two divisors. If |H| = 1, then H is trivial. If |H| = p = |G|, then H fills the whole group, because G is finite. A group of prime size has at least two elements, so it is nontrivial, and both conditions of an unbreakable coven hold.
+**Proof idea.** By Lagrange, the size of a subgroup H divides p. A prime has only two divisors. If |H| = 1, then H is trivial. If |H| = p = |G|, then H fills the whole group, because G is finite. A group of prime size has at least two elements, so it is nontrivial, and both conditions of an unbreakable veyr hold.
 
 ```text
-beckon Arcanum☿Enchantment☿Lagrange
-beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Indices
-beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Cabal☿Unbreakable
-beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Bounded
+beckon Arcana☿Enchantment☿Lagrange
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Indices
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Inner✨Veyr✨☿Unbreakable
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨☿Bounded
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
+familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
-ritual ✨Unbreakable✨Coven✨ ⟪coven ⟡ Essence⊛⟫ ⟮Coven coven⟯ ⟡ Verity ⇰
-  Plural coven ⩓ ⟁ veil ⟡ Cabal coven᛫ veil☿Hallowed ↝ veil ≣ ⊥ ⩔ veil ≣ ⊤
+ritual ✨Unbreakable✨Veyr✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Verity ⇰
+  Plural ᛰ ⩓ ⟁ ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ᛫ ᚾ☿Hallowed ↝ ᚾ ≣ ⊥ ⩔ ᚾ ≣ ⊤
 
-spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Coven✨ coven ↭ ✨Simple✨Coven✨ coven ⇰ cast
+spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Veyr✨ ᛰ ↭ ✨Indivisible✨Veyr✨ ᛰ ⇰ cast
   fabricate
   ❖ summon unbroken
     wrest ⦉plural᛫ sealed⦊ ⇰ unbroken
@@ -459,46 +459,46 @@ spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Coven✨ coven ↭
   ❖ summon simplicity
     missile ⦉simplicity☿✨to✨plural✨᛫ simplicity☿✨nothing✨or✨all✨⦊
 
-spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census coven ≣ ruby✨shard⟫
-    ⟪circle ⟡ Cabal coven⟫ ⟡ circle ≣ ⊥ ⩔ circle ≣ ⊤ ⇰ cast
-  bind counted ⟡ Tally☿census coven ≢ ⊘ ⇰
-    litany Tally☿census coven ≣ ruby✨shard ⇰ censusward
+spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫
+    ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ☥ ≣ ⊥ ⩔ ☥ ≣ ⊤ ⇰ cast
+  bind counted ⟡ Tally☿census ᛰ ≢ ⊘ ⇰
+    litany Tally☿census ᛰ ≣ ruby✨shard ⇰ censusward
       ▢ ≢ ⊘ ⇰ primalward☿✨never✨void✨
-  bind bounded ⟡ Bounded coven ⇰ Tally☿✨Bounded✨by✨Census✨ counted
-  bind measured ⟡ Tally☿census circle ∣ ruby✨shard ⇰
-    litany Tally☿census circle ∣ Tally☿census coven ⇰ ✨Lagrange's✨Measure✨of✨the✨Coven✨ circle
+  bind bounded ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ counted
+  bind measured ⟡ Tally☿census ☥ ∣ ruby✨shard ⇰
+    litany Tally☿census ☥ ∣ Tally☿census ᛰ ⇰ ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ☥
       ▢ ≣ ruby✨shard ⇰ censusward
-  rend primalward☿✨Only✨One✨or✨All✨ ⟪Tally☿census circle⟫ measured whence lonely ⫽ whole
+  rend primalward☿✨Only✨One✨or✨All✨ ⟪Tally☿census ☥⟫ measured whence lonely ⫽ whole
   ❖ sinister
-    missile Cabal☿✨Census✨of✨One✨☿onward lonely
+    missile ✨Inner✨Veyr✨☿✨Census✨of✨One✨☿onward lonely
   ❖ dexter
-    bind filled ⟡ Tally☿census circle ≣ Tally☿census coven ⇰
-      litany Tally☿census circle ≣ ruby✨shard ⇰ whole
-        ▢ ≣ Tally☿census coven ⇰ censusward☿reflect
-    missile ⟪Cabal☿✨Full✨Census✨ circle⟫☿onward filled
+    bind filled ⟡ Tally☿census ☥ ≣ Tally☿census ᛰ ⇰
+      litany Tally☿census ☥ ≣ ruby✨shard ⇰ whole
+        ▢ ≣ Tally☿census ᛰ ⇰ censusward☿reflect
+    missile ⟪✨Inner✨Veyr✨☿✨Full✨Census✨ ☥⟫☿onward filled
 
-spell ✨Indivisible✨Covens✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census coven ≣ ruby✨shard⟫ ⟡
-    ✨Unbreakable✨Coven✨ coven ⇰ cast
-  bind counted ⟡ Tally☿census coven ≢ ⊘ ⇰
-    litany Tally☿census coven ≣ ruby✨shard ⇰ censusward
+spell ✨Indivisible✨Veyrs✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫ ⟡
+    ✨Unbreakable✨Veyr✨ ᛰ ⇰ cast
+  bind counted ⟡ Tally☿census ᛰ ≢ ⊘ ⇰
+    litany Tally☿census ᛰ ≣ ruby✨shard ⇰ censusward
       ▢ ≢ ⊘ ⇰ primalward☿✨never✨void✨
-  bind bounded ⟡ Bounded coven ⇰ Tally☿✨Bounded✨by✨Census✨ counted
-  bind many ⟡ ☉ ⋖ Tally☿census coven ⇰
+  bind bounded ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ counted
+  bind many ⟡ ☉ ⋖ Tally☿census ᛰ ⇰
     litany ☉ ⋖ ruby✨shard ⇰ primalward☿✨beyond✨one✨
-      ▢ ≣ Tally☿census coven ⇰ censusward☿reflect
-  bind plural ⟡ Plural coven ⇰ Bounded☿✨Many✨Means✨Plural✨☿onward many
+      ▢ ≣ Tally☿census ᛰ ⇰ censusward☿reflect
+  bind plural ⟡ Plural ᛰ ⇰ Bounded☿✨Many✨Means✨Plural✨☿onward many
   hone ⦉plural᛫ ?▢⦊
-  summon veil veilward
-  missile ✨No✨Hidden✨Circles✨ primalward censusward veil
+  summon ᚾ veilward
+  missile ✨No✨Hidden✨Circles✨ primalward censusward ᚾ
 
-spell ✨Indivisible✨Covens✨are✨Simple✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census coven ≣ ruby✨shard⟫ ⟡
-    ✨Simple✨Coven✨ coven ⇰
-  ✨Unbreakable✨Means✨Simple✨☿onward ⟪✨Indivisible✨Covens✨Cannot✨Break✨ primalward censusward⟫
+spell ✨Indivisible✨Veyrs✨are✨Simple✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫ ⟡
+    ✨Indivisible✨Veyr✨ ᛰ ⇰
+  ✨Unbreakable✨Means✨Simple✨☿onward ⟪✨Indivisible✨Veyrs✨Cannot✨Break✨ primalward censusward⟫
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/SimpleGroups.lean) · [Arcane source](../public/grimoire/unbreakable.spell)
+[Lean source](../math/Mathematics/GroupTheory/SimpleGroups.lean) · [Arcana source](../public/grimoire/unbreakable.spell)
 
 [IsSimpleGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Subgroup/Simple.lean) · [Nat.Prime.eq_one_or_self_of_dvd](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Data/Nat/Prime/Defs.lean) · [Subgroup.card_eq_iff_eq_top](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Finite.lean#L130) · [Subgroup.card_eq_one](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Index.lean#L473)
 
@@ -515,15 +515,15 @@ An action moves a point through its orbit. The stabilizer records the commands t
 **Proof idea.** The heart of the matter: g·x = k·x exactly when g⁻¹k fixes x. Each direction is a three-line calc that moves g across the action. So points of the orbit match cosets of the stabilizer. The count then comes from Lagrange's coset formula, applied to the stabilizer.
 
 ```text
-beckon Arcanum☿Enchantment☿Lagrange
-beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Commands☿Effigies
+beckon Arcana☿Enchantment☿Lagrange
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Commands☿Effigies
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯
+familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
 
-spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube ⟡ realm⟫ ⟪silk✨cord onyx✨bead ⟡ coven⟫ ⟡
-    silk✨cord • jade✨cube ≣ onyx✨bead • jade✨cube ↭ silk✨cord† ⊛ onyx✨bead ∈ Commanding☿stillguard coven jade✨cube ⇰ cast
+spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord onyx✨bead ⟡ ᛰ⟫ ⟡
+    silk✨cord • jade✨cube ≣ onyx✨bead • jade✨cube ↭ silk✨cord† ⊛ onyx✨bead ∈ Commanding☿stillguard ᛰ jade✨cube ⇰ cast
   transmute ⟮Commanding☿✨Stillguard✨Criterion✨⟯
   fabricate
   ❖ summon meeting
@@ -535,29 +535,29 @@ spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube ⟡ realm⟫ ⟪silk✨cor
       ▢ ≣ silk✨cord • silk✨cord† • onyx✨bead • jade✨cube ⇰ sympathy ⟪conjure ruby✨shard ⇉ silk✨cord • ruby✨shard⟫ ⟪✨Command✨in✨Stages✨ silk✨cord† onyx✨bead jade✨cube⟫
       ▢ ≣ onyx✨bead • jade✨cube ⇰ ✨Revocation✨Commanded✨ silk✨cord ⟪onyx✨bead • jade✨cube⟫
 
-ineffable ritual ✨Orbit✨Portal✨ ⟪jade✨cube ⟡ realm⟫ ⟡
-    Commanding☿procession coven jade✨cube ≃ coven ⧸ Commanding☿stillguard coven jade✨cube ⇰
-  Commanding☿✨Orbit✨Correspondence✨ coven jade✨cube
+ineffable ritual ✨Orbit✨Portal✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
+    Commanding☿procession ᛰ jade✨cube ≃ ᛰ ⧸ Commanding☿stillguard ᛰ jade✨cube ⇰
+  Commanding☿✨Orbit✨Correspondence✨ ᛰ jade✨cube
 
-spell ✨Command✨through✨the✨Portal✨ ⟪jade✨cube ⟡ realm⟫ ⟪silk✨cord ⟡ coven⟫ ⟡
-    ⟪⟪✨Orbit✨Portal✨ jade✨cube⟫☿reflect ⟪✨Veiled✨Coven✨☿forge silk✨cord⟫ ⟡ realm⟫ ≣ silk✨cord • jade✨cube ⇰ mirror
+spell ✨Command✨through✨the✨Portal✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡
+    ⟪⟪✨Orbit✨Portal✨ jade✨cube⟫☿reflect ⟪✨Veiled✨Veyr✨☿forge silk✨cord⟫ ⟡ 🌒⟫ ≣ silk✨cord • jade✨cube ⇰ mirror
 
-spell ✨Procession✨Counts✨Veils✨ ⟪jade✨cube ⟡ realm⟫ ⟡
-    Tally☿census ⟪Commanding☿procession coven jade✨cube⟫ ≣ Tally☿census ⟪coven ⧸ Commanding☿stillguard coven jade✨cube⟫ ⇰
+spell ✨Procession✨Counts✨Veils✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
+    Tally☿census ⟪Commanding☿procession ᛰ jade✨cube⟫ ≣ Tally☿census ⟪ᛰ ⧸ Commanding☿stillguard ᛰ jade✨cube⟫ ⇰
   Tally☿✨Census✨through✨Portal✨ ⟪✨Orbit✨Portal✨ jade✨cube⟫
 
-spell ✨Orbit✨of✨Command✨ ⟪jade✨cube ⟡ realm⟫ ⟡
-    Tally☿census ⟪Commanding☿procession coven jade✨cube⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven jade✨cube⟫ ≣
-      Tally☿census coven ⇰
-  litany Tally☿census ⟪Commanding☿procession coven jade✨cube⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven jade✨cube⟫
-        ≣ Tally☿census ⟪coven ⧸ Commanding☿stillguard coven jade✨cube⟫ ⊛ Tally☿census ⟪Commanding☿stillguard coven jade✨cube⟫ ⇰
-          sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⊛ Tally☿census ⟪Commanding☿stillguard coven jade✨cube⟫⟫ ⟪✨Procession✨Counts✨Veils✨ jade✨cube⟫
-    ▢ ≣ Tally☿census coven ⇰ ⟪✨Count✨the✨Veils✨ ⟪Commanding☿stillguard coven jade✨cube⟫⟫☿reflect
+spell ✨Orbit✨of✨Command✨ ⟪jade✨cube ⟡ 🌒⟫ ⟡
+    Tally☿census ⟪Commanding☿procession ᛰ jade✨cube⟫ ⊛ Tally☿census ⟪Commanding☿stillguard ᛰ jade✨cube⟫ ≣
+      Tally☿census ᛰ ⇰
+  litany Tally☿census ⟪Commanding☿procession ᛰ jade✨cube⟫ ⊛ Tally☿census ⟪Commanding☿stillguard ᛰ jade✨cube⟫
+        ≣ Tally☿census ⟪ᛰ ⧸ Commanding☿stillguard ᛰ jade✨cube⟫ ⊛ Tally☿census ⟪Commanding☿stillguard ᛰ jade✨cube⟫ ⇰
+          sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⊛ Tally☿census ⟪Commanding☿stillguard ᛰ jade✨cube⟫⟫ ⟪✨Procession✨Counts✨Veils✨ jade✨cube⟫
+    ▢ ≣ Tally☿census ᛰ ⇰ ⟪✨Count✨the✨Veils✨ ⟪Commanding☿stillguard ᛰ jade✨cube⟫⟫☿reflect
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/GroupActions.lean) · [Arcane source](../public/grimoire/orbits.spell)
+[Lean source](../math/Mathematics/GroupTheory/GroupActions.lean) · [Arcana source](../public/grimoire/orbits.spell)
 
 [MulAction.orbitEquivQuotientStabilizer](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/GroupAction/Quotient.lean#L174) · [MulAction.orbitProdStabilizerEquivGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/GroupAction/Quotient.lean#L182) · [MulAction.mem_stabilizer_iff](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/GroupAction/Defs.lean#L519)
 
@@ -574,10 +574,10 @@ Enchant three labels by permuting them. There are six symmetries. A swap undoes 
 **Proof idea.** Lean's decide tactic evaluates the finite facts, such as the count of six symmetries. A swap undoes itself by a library lemma. For noncommutativity, suppose the two orders agree. Then both sides send 0 to the same place. But one sends 0 to 1 and the other sends 0 to 2, and 1 ≠ 2. Try to make the two swaps the same: the clash disappears, though the browser alone will not check your edit.
 
 ```text
-beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Shuffling☿Fetter
-beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Cycles
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Shuffling☿Fetter
+beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
 byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 3⟫
 
@@ -600,9 +600,9 @@ spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange�
       ▢ ≣ 2 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment
 ```
 
-[Lean source](../math/Mathematics/GroupTheory/Permutations.lean) · [Arcane source](../public/grimoire/permutations.spell)
+[Lean source](../math/Mathematics/GroupTheory/Permutations.lean) · [Arcana source](../public/grimoire/permutations.spell)
 
 [Equiv.Perm](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Perm/Fin.lean) · [Fin](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Logic/Equiv/Fin/Basic.lean)

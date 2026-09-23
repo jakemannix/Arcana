@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve, delimiter } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Key, toSpell, fromSpell, tokenize } from '../src/translator';
+import { Key, CARRIER_RUNES, toSpell, fromSpell, tokenize } from '../src/translator';
 import chapters from '../grimoire/chapters.json';
 import lexicon from '../grimoire/lexicon.json';
 
@@ -42,7 +42,7 @@ for (const chapter of translated) {
   write(path, decoded);
   const result = run(lean, ['-DwarningAsError=true', path, '-o', path.replace(/\.lean$/, '.olean')], decodedRoot, env);
   if (result.trim()) console.log(result);
-  console.log(`Checked decoded Arcane: ${chapter.id}`);
+  console.log(`Checked decoded Arcana: ${chapter.id}`);
 }
 const audit = translated.map(c => `import ${c.file.replace(/\.lean$/, '').replaceAll('/', '.')}`).join('\n') + '\n\n' + declarations.map(d => `#print axioms ${d}`).join('\n') + '\n';
 write(join(decodedRoot, 'Audit.lean'), audit);
@@ -53,7 +53,7 @@ for (const match of axioms.matchAll(/\[([^\]]*)\]/g)) for (const name of match[1
 }
 if (axioms.split('\n').filter(line => /depends on axioms|does not depend on any axioms/.test(line)).length !== declarations.length) throw new Error('Incomplete axiom audit.');
 write(join(output, 'axioms.txt'), axioms);
-write(join(output, 'arcane.key.json'), keyText);
+write(join(output, 'arcana.key.json'), keyText);
 const entries = translated.map(chapter => {
   const references = chapter.references.map(ref => {
     const path = join(math, '.lake/packages/mathlib', ref.path);
@@ -77,7 +77,8 @@ const entries = translated.map(chapter => {
     ...key.data().global, ...namespaces })
     .filter(([name, arcane]) => (used.has(name) || usedNamespaces.has(name)) &&
       (!/^[a-zα-ω]$/u.test(name) || chapter.concepts.includes(name) ||
-        (typeof arcane === 'string' && arcane.includes('✨') && !arcane.startsWith('✨'))))
+        (typeof arcane === 'string' && (CARRIER_RUNES.some(rune => rune === arcane) ||
+          (arcane.includes('✨') && !arcane.startsWith('✨'))))))
     .map(([lean, arcane]) => ({ lean, arcane }));
   const stem = chapter.id;
   write(join(output, `${stem}.lean`), chapter.lean);
@@ -85,11 +86,11 @@ const entries = translated.map(chapter => {
   write(join(output, `${stem}.json`), JSON.stringify({ format: 'lean-magic/v1', lean: chapter.lean, spell: chapter.spell, key: key.data() }, null, 2) + '\n');
   return { ...chapter, references, glossary, sourceHash: sha(chapter.lean), spellHash: sha(chapter.spell), declarations: Array.from(chapter.lean.matchAll(/^(?:noncomputable )?(?:def|abbrev|theorem) (\w+)/gm), match => chapter.lean.match(/^namespace (\S+)/m)![1] + '.' + match[1]) };
 });
-const catalog = { format: 'arcane-grimoire/v1', mathlibRevision: pin, leanToolchain: read(join(math, 'lean-toolchain')).trim(),
+const catalog = { format: 'arcana-grimoire/v1', mathlibRevision: pin, leanToolchain: read(join(math, 'lean-toolchain')).trim(),
   translatorHash: sha(read(join(root, 'src/translator.ts'))), tablesHash: sha(read(join(root, 'src/tables.json'))),
   metadataHash: sha(read(join(root, 'grimoire/chapters.json'))), lexiconHash: sha(read(join(root, 'grimoire/lexicon.json'))),
   key: key.data(), verification: { originalBuild: true, decodedBuild: true, axiomAudit: true, declarationCount: declarations.length }, entries };
 write(join(root, 'src/grimoire.generated.json'), JSON.stringify(catalog, null, 2) + '\n');
-const book = '# Enchantment · The graduate grimoire\n\n' + (entries.length - 1) + ' lessons in group theory, with shared cantrips. All ' + declarations.length + ' declarations compile against Lean/mathlib v4.33.1. Every Arcane source decodes exactly and is compiled again. Browser edits are not checked by Lean.\n\n' + entries.map(entry => `## ${entry.title}\n\n*${entry.subtitle}*\n\n${entry.summary}\n\n**Mathematical meaning.** ${entry.meaning}\n\n**Hypotheses.** ${entry.hypotheses}\n\n**Proof idea.** ${entry.proofIdea}\n\n` + '```text\n' + entry.spell + '```\n\n' + `[Lean source](../math/${entry.file}) · [Arcane source](../public/grimoire/${entry.id}.spell)\n\n` + entry.references.map(ref => `[${ref.symbol}](${ref.url})`).join(' · ') + '\n').join('\n');
+const book = '# Arcana · The Enchantment grimoire\n\n' + (entries.length - 1) + ' lessons in group theory, with shared cantrips. All ' + declarations.length + ' declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.\n\n' + entries.map(entry => `## ${entry.title}\n\n*${entry.subtitle}*\n\n${entry.summary}\n\n**Mathematical meaning.** ${entry.meaning}\n\n**Hypotheses.** ${entry.hypotheses}\n\n**Proof idea.** ${entry.proofIdea}\n\n` + '```text\n' + entry.spell + '```\n\n' + `[Lean source](../math/${entry.file}) · [Arcana source](../public/grimoire/${entry.id}.spell)\n\n` + entry.references.map(ref => `[${ref.symbol}](${ref.url})`).join(' · ') + '\n').join('\n');
 write(join(root, 'grimoire/README.md'), book);
 console.log(`Verified ${entries.length} folios and ${declarations.length} declarations against mathlib ${pin}.`);

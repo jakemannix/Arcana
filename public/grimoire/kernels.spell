@@ -1,16 +1,16 @@
-beckon Arcanum☿Enchantment☿Pacts
+beckon Arcana☿Enchantment☿Pacts
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
-ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ copper✨wire☿silence
+ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ copper✨wire☿silence
 
-spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
+spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
 
-spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⧼jade✨cube ⟡ coven⧽
-    ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ coven⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
+spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨cube ⟡ ᛰ⧽
+    ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
   bind muted ⟡ copper✨wire jade✨cube ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
   bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ ☉ ⇰
     litany copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ ⊛ copper✨wire silk✨cord† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ silk✨cord†
@@ -22,14 +22,14 @@ spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⧼ja
       ▢ ≣ ☉ ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
   missile ⟪✨Name✨the✨Silent✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫⟫☿backward hushed
 
-spell ✨Silence✨is✨Hallowed✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ ⟪✨Circle✨of✨Silence✨ copper✨wire⟫☿Hallowed ⇰ cast
+spell ✨Silence✨is✨Hallowed✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ⟪✨Circle✨of✨Silence✨ copper✨wire⟫☿Hallowed ⇰ cast
   fabricate
   summon jade✨cube sigilward silk✨cord
   missile ✨Unbroken✨Silence✨ copper✨wire sigilward silk✨cord
 
-spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡
+spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Faithful copper✨wire ↭ ✨Circle✨of✨Silence✨ copper✨wire ≣ ⊥ ⇰ cast
-  transmute ⟮Cabal☿✨Emptiness✨Criterion✨⟯
+  transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
   fabricate
   ❖ summon fidelity jade✨cube sigilward
     bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire ☉ ⇰
@@ -46,4 +46,4 @@ spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡
     bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ ☉ ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
     missile ✨Balanced✨Division✨☿onward vanished
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment

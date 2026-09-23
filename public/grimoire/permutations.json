@@ -1,47 +1,21 @@
 {
-  "format": "lean-magic/v1",
+  "format": "arcana/v1",
   "lean": "import Mathlib.GroupTheory.Perm.Fin\nimport Mathlib.GroupTheory.OrderOfElement\n\nnamespace Mathematics.GroupTheory\n\nabbrev symmetricGroupThree := Equiv.Perm (Fin 3)\n\ndef transposition01 : symmetricGroupThree := Equiv.swap 0 1\n\ndef transposition12 : symmetricGroupThree := Equiv.swap 1 2\n\ntheorem card_symmetricGroupThree : Fintype.card symmetricGroupThree = 6 := by decide\n\ntheorem transposition01_mul_self : transposition01 * transposition01 = 1 :=\n  Equiv.swap_mul_self 0 1\n\ntheorem transpositions_not_commute : transposition01 * transposition12 ≠ transposition12 * transposition01 := by\n  intro h_eq\n  have h_eval_left : (transposition01 * transposition12) 0 = 1 := by decide\n  have h_eval_right : (transposition12 * transposition01) 0 = 2 := by decide\n  have h_one_eq_two : (1 : Fin 3) = 2 :=\n    calc (1 : Fin 3) = (transposition01 * transposition12) 0 := h_eval_left.symm\n      _ = (transposition12 * transposition01) 0 := congrArg (fun σ => σ 0) h_eq\n      _ = 2 := h_eval_right\n  exact absurd h_one_eq_two (by decide)\n\nend Mathematics.GroupTheory\n",
   "spell": "beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Shuffling☿Fetter\nbeckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles\n\nsanctum Arcana☿Enchantment\n\nbyname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 3⟫\n\nritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ⊘ ☉\n\nritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ☉ 2\n\nspell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 6 ⇰ cast divine\n\nspell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ ☉ ⇰\n  Portal☿✨Exchange✨Undoes✨Itself✨ ⊘ ☉\n\nspell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast\n  summon twinned\n  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ≣ ☉ ⇰ cast divine\n  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ≣ 2 ⇰ cast divine\n  bind clash ⟡ ⟪☉ ⟡ Fetter 3⟫ ≣ 2 ⇰\n    litany ⟪☉ ⟡ Fetter 3⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ⇰ sunwise☿reflect\n      ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ⇰ sympathy ⟪conjure raven✨feather ⇉ raven✨feather ⊘⟫ twinned\n      ▢ ≣ 2 ⇰ widdershins\n  missile folly clash ⟪cast divine⟫\n\nseal Arcana☿Enchantment\n",
   "key": {
     "global": {
-      "Element": "Humour",
-      "fire": "flame",
-      "cold": "rime",
-      "double": "Twinning",
-      "double_eq": "Enlarge",
       "n": "pinch✨of✨sulfur",
       "k": "onyx✨bead",
       "ih": "echo",
-      "and_swap": "Sanctuary",
       "p": "ruby✨shard",
       "q": "ivory✨ring",
       "hp": "primalward",
       "hq": "wraithward",
-      "always_more": "Haste",
       "m": "shade",
-      "lt_succ_self": "Outpace",
-      "twice_reversed": "Mirror Image",
       "xs": "beads",
       "α": "ᚨ",
-      "Potion": "Draught",
-      "heat": "warmth",
-      "bitterness": "gall",
-      "mix": "Brew",
-      "mix_comm": "Stir",
       "add_comm": "Exchange",
-      "Named": "Pledged",
-      "name": "pledge",
-      "Titled": "Styled",
-      "title": "style",
-      "fireball": "Fireball",
-      "le_succ": "Kindle",
       "le_trans": "Relay",
-      "Abjuration": "Abjuration",
-      "Conjuration": "Conjuration",
-      "Divination": "Divination",
-      "Evocation": "Evocation",
-      "Illusion": "Illusion",
-      "Necromancy": "Necromancy",
       "a": "ash",
       "b": "elm",
       "c": "yew",
@@ -59,7 +33,6 @@
       "pow_succ": "Flare",
       "choose": "Raise",
       "choose_spec": "Bidding",
-      "turn": "Turning",
       "Mathlib": "✨Grand✨Archive✨",
       "Logic": "Reason",
       "Algebra": "✨Bound✨Veyrath✨",
@@ -359,15 +332,7 @@
       "permEquivUnitsEnd": "✨Shuffles✨Are✨the✨Court's✨Reversibles✨",
       "equivUnitsEnd": "✨court's✨reversibles✨"
     },
-    "scoped": {
-      "and_swap": {
-        "hp": "left",
-        "hq": "right"
-      },
-      "«Plane Shift»": {
-        "h": "loom"
-      }
-    },
+    "scoped": {},
     "namespaces": {
       "Mathematics.GroupTheory": "Arcana☿Enchantment",
       "Mathematics.CategoryTheory": "Arcana☿Transmutation"

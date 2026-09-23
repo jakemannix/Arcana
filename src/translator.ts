@@ -4,7 +4,7 @@ export type NameMap = Record<string, string>;
 export interface KeyData { global: NameMap; scoped: Record<string, NameMap>; namespaces?: NameMap; auto?: string[] }
 type Kind = 'ws' | 'comment' | 'string' | 'char' | 'num' | 'ident' | 'sym' | 'other' | 'esc';
 export interface Token { kind: Kind; text: string }
-const ESC = '⟄', NBSP = '\u00a0', SPARKLE = '✨';
+const ESC = '⟄', SPARKLE = '✨';
 export const NAMESPACE_SEPARATOR = '☿';
 export const CARRIER_RUNES = ['ᛰ', '☥', '🌒', 'ᛟ', 'ᚨ', 'ᛒ', 'ᚷ', 'ᛞ', 'ᚱ', 'ᛋ', 'ᚠ', 'ᛗ', 'ᚫ', 'ᛖ', 'ᚹ', 'ᚾ', 'ᚢ', 'ᛉ'] as const;
 export const RUNE_PATTERN = `(?:${CARRIER_RUNES.join('|')})`;
@@ -13,19 +13,16 @@ const dictionary = (table: NameMap): NameMap => Object.assign(Object.create(null
 export const WORDS: NameMap = dictionary(tables.words);
 const SYMS = dictionary({ ...tables.syms, '.': NAMESPACE_SEPARATOR }), NUMS = dictionary(tables.nums);
 const inverse = (table: NameMap): NameMap => dictionary(Object.fromEntries(Object.entries(table).map(([k, v]) => [v, k])));
-// Older spells may still use retired keywords; they decode to the same Lean word.
-const INV_WORDS = dictionary({ ...tables.legacyWords, ...inverse(WORDS) }), INV_SYMS = inverse(SYMS), INV_NUMS = dictionary({ ...inverse(NUMS), '▢': '_' });
+const INV_WORDS = inverse(WORDS), INV_SYMS = inverse(SYMS), INV_NUMS = dictionary({ ...inverse(NUMS), '▢': '_' });
 const declarations = new Set(tables.declWords);
 const component = String.raw`(?:«[^»]*»|[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)`;
 const word = String.raw`[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*`;
 // Spell titles retain their framing sparkles; material components use jade✨cube.
 const sparkled = `(?:${SPARKLE}(?:${word}${SPARKLE})+|${word}(?:${SPARKLE}${word})+)`;
-const spellComponent = `(?:${sparkled}|${component.replace("_'!?", "_\u00a0'!?")}|${RUNE_PATTERN})`;
+const spellComponent = `(?:${sparkled}|${component}|${RUNE_PATTERN})`;
 const ident = new RegExp(`^${component}(?:\\.${component})*`, 'u');
-const spellIdent = new RegExp(`^${spellComponent}(?:[.${NAMESPACE_SEPARATOR}]${spellComponent})*`, 'u');
-const simple = /^[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*(?: [\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)*$/u;
-const legalName = new RegExp(`^(?:${RUNE_PATTERN}|${sparkled}|[\\p{L}\\p{Nl}_][\\p{L}\\p{Nl}\\p{N}\\p{M}_\\u00a0'!?]*)$`, 'u');
-const glue = /^[\p{L}\p{Nl}\p{N}\p{M}_'!?\u00a0]/u;
+const spellIdent = new RegExp(`^${spellComponent}(?:${NAMESPACE_SEPARATOR}${spellComponent})*`, 'u');
+const legalName = new RegExp(`^(?:${RUNE_PATTERN}|${sparkled}|${word})$`, 'u');
 const leanSymbols = [...new Set([...Object.keys(SYMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
 const spellSymbols = [...new Set([...Object.keys(INV_SYMS), ...Object.keys(INV_NUMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
 
@@ -37,7 +34,7 @@ export function tokenize(source: string, spell = false): Token[] {
   while (i < source.length) {
     const rest = source.slice(i);
     let match: RegExpMatchArray | null;
-    if ((match = /^[^\S\u00a0]+/u.exec(rest))) { emit('ws', match[0].length); continue; }
+    if ((match = /^\s+/u.exec(rest))) { emit('ws', match[0].length); continue; }
     if (rest.startsWith('--')) { const end = rest.indexOf('\n'); emit('comment', end < 0 ? rest.length : end); continue; }
     if (rest.startsWith('/-')) {
       let depth = 1, end = 2;
@@ -72,7 +69,7 @@ export function tokenize(source: string, spell = false): Token[] {
 }
 
 function components(name: string, spell = false): string[] {
-  return name.match(spell ? /«[^»]*»|[^.☿]+/gu : /«[^»]*»|[^.]+/gu) ?? [];
+  return name.match(spell ? /«[^»]*»|[^☿]+/gu : /«[^»]*»|[^.]+/gu) ?? [];
 }
 
 export class Key {
@@ -126,20 +123,9 @@ export class Key {
   private assign(name: string, image: string): string {
     this.global[name] = image; this.invGlobal[image] = name; this.used.add(image); return image;
   }
-  /** Reserve all readable quoted names before automatic words can consume them. */
-  reserveQuoted(tokens: Token[]): void {
-    for (const token of tokens) if (token.kind === 'ident') for (const name of components(token.text)) {
-      if (!name.startsWith('«') || Object.hasOwn(this.global, name)) continue;
-      const inner = name.slice(1, -1), image = inner.replaceAll(' ', NBSP);
-      if (simple.test(inner) && !this.used.has(image)) this.assign(name, image);
-    }
-  }
-  word(name: string, scope: string, bare = true): string {
-    if (name.startsWith('«')) {
-      // Keep quotation where removing it would merge neighboring lexical tokens.
-      if (!bare) return name;
-      return this.global[name] ?? name;
-    }
+  word(name: string, scope: string): string {
+    // Quotation is a literal boundary, including names that resemble spell keywords.
+    if (name.startsWith('«')) return name;
     const known = this.scoped[scope]?.[name] ?? this.global[name] ?? WORDS[name];
     if (known !== undefined) return known;
     while (this.cursor < tables.bases.length * tables.suffixes.length) {
@@ -150,12 +136,12 @@ export class Key {
   }
   lean(word: string, scope: string): string {
     if (word.startsWith('«')) return word;
-    return this.invScoped[scope]?.[word] ?? this.invGlobal[word] ?? INV_WORDS[word] ?? `«${word.replaceAll(NBSP, ' ')}»`;
+    return this.invScoped[scope]?.[word] ?? this.invGlobal[word] ?? INV_WORDS[word] ?? `«${word}»`;
   }
-  name(parts: string[], scope: string, bare = true): string {
+  name(parts: string[], scope: string): string {
     const match = this.namespaceEntries.filter(([source]) => source.every((c, i) => parts[i] === c))
       .sort(([a], [b]) => b.length - a.length)[0];
-    return [...(match?.[1] ?? []), ...parts.slice(match?.[0].length ?? 0).map(c => this.word(c, scope, bare))]
+    return [...(match?.[1] ?? []), ...parts.slice(match?.[0].length ?? 0).map(c => this.word(c, scope))]
       .join(NAMESPACE_SEPARATOR);
   }
   leanName(parts: string[], scope: string): string[] {
@@ -170,9 +156,9 @@ export class Key {
 }
 
 export function toSpell(source: string, key: Key): string {
-  const tokens = tokenize(source); key.reserveQuoted(tokens);
+  const tokens = tokenize(source);
   let scope = '', pending = false, anon = 0;
-  return tokens.map((token, i) => {
+  return tokens.map(token => {
     const t = token.text;
     if (token.kind === 'num') return NUMS[t] ?? t;
     if (token.kind === 'ident') {
@@ -180,10 +166,10 @@ export function toSpell(source: string, key: Key): string {
       const parts = components(t);
       if (declarations.has(parts[0]) && parts.length === 1) { pending = true; scope = `#${++anon}`; }
       else if (pending) { pending = false; if (!Object.hasOwn(WORDS, parts[0])) scope = parts[0]; }
-      return key.name(parts, scope, !glue.test(tokens[i + 1]?.text ?? ''));
+      return key.name(parts, scope);
     }
     if (token.kind === 'sym') return SYMS[t] ?? t;
-    if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || runeSet.has(t) || t === ESC || t === NBSP || t === SPARKLE)) return ESC + t;
+    if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || runeSet.has(t) || t === ESC || t === SPARKLE)) return ESC + t;
     return t;
   }).join('');
 }
@@ -192,6 +178,7 @@ export function fromSpell(source: string, key: Key): string {
   let scope = '', pending = false, anon = 0;
   return tokenize(source, true).map(({ kind, text: t }) => {
     if (kind === 'esc') return t.slice(1);
+    if (kind === 'other' && t === '.') throw new Error('Use ☿ for namespaces and field access in Arcana.');
     if (kind === 'ident') {
       const parts = components(t, true);
       if (declarations.has(INV_WORDS[parts[0]]) && parts.length === 1) { pending = true; scope = `#${++anon}`; return INV_WORDS[t]; }

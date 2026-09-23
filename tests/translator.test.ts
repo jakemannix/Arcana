@@ -1,25 +1,15 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
-import { Key, toSpell, fromSpell, tokenize } from '../src/translator';
-import grimoire from '../src/grimoire.key.json';
+import { Key, WORDS, toSpell, fromSpell, tokenize } from '../src/translator';
 import lexicon from '../grimoire/lexicon.json';
-const fixture = (name: string) => readFileSync(new URL(`../src/${name}`, import.meta.url), 'utf8');
-
-test('decodes the original Python-generated school spell and re-encodes it losslessly', () => {
-  const key = new Key(grimoire), source = fixture('Schools.lean'), spell = fixture('Schools.spell');
-  assert.equal(fromSpell(spell, key), source);
-  assert.equal(fromSpell(toSpell(source, key), key), source);
-});
-
-test('Mercury joins namespaces and projections, with legacy dots still accepted', () => {
+test('Mercury joins namespaces and projections', () => {
   const key = new Key({ global: { Bijective: 'Perfect', f: 'warp' }, scoped: {} });
   const source = 'Function.Bijective (f).Bijective .Bijective';
   const spell = 'Rite☿Perfect ⟪warp⟫☿Perfect ☿Perfect';
   assert.equal(toSpell(source, key), spell);
   assert.equal(fromSpell(spell, key), source);
-  assert.equal(fromSpell('Rite.Perfect ⟪warp⟫.Perfect .Perfect', key), source);
-  assert.equal(fromSpell('Rite☿Perfect.Perfect', key), 'Function.Bijective.Bijective');
+  assert.throws(() => fromSpell('Rite.Perfect', key), /Use ☿/);
+  assert.throws(() => fromSpell('Rite☿Perfect.Perfect', key), /Use ☿/);
 });
 
 test('namespace glyph leaves quoted text, decimal points and ellipses intact', () => {
@@ -43,27 +33,26 @@ test('sparkle names and the inverse dagger translate both ways', () => {
 });
 
 test('round trip survives saving and reopening the name key', () => {
-  const key = new Key(grimoire), source = fixture('Schools.lean') + '\ndef newName := 3\n';
+  const key = new Key(lexicon), source = 'theorem demo (x : Nat) : x = x := rfl\ndef newName := 3\n';
   const spell = toSpell(source, key);
   assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
 });
 
 test('mathematical namespaces have contextual spell names without renaming mathlib modules', () => {
   const key = new Key({
-    global: { Mathematics: 'Arcanum', GroupTheory: '✨Coven✨Lore✨',
+    global: { Mathematics: 'Arcana', GroupTheory: '✨Veyr✨Lore✨',
       GroupActions: 'Orbits', smul_eq_smul_iff_mem_stabilizer: '✨Same✨Place✨Same✨Veil✨' },
-    scoped: {}, namespaces: { 'Mathematics.GroupTheory': 'Arcanum☿Enchantment' },
+    scoped: {}, namespaces: { 'Mathematics.GroupTheory': 'Arcana☿Enchantment' },
   });
   const source = 'import Mathematics.GroupTheory.GroupActions\nimport Mathlib.GroupTheory.GroupAction.Quotient\n' +
     'namespace Mathematics.GroupTheory\n#check Mathematics.GroupTheory.smul_eq_smul_iff_mem_stabilizer\n' +
     'end Mathematics.GroupTheory\n';
   const spell = toSpell(source, key);
-  assert.match(spell, /Arcanum☿Enchantment☿Orbits/);
-  assert.match(spell, /Arcanum☿Enchantment☿✨Same✨Place✨Same✨Veil✨/);
-  assert.match(spell, /☿✨Coven✨Lore✨☿/);
+  assert.match(spell, /Arcana☿Enchantment☿Orbits/);
+  assert.match(spell, /Arcana☿Enchantment☿✨Same✨Place✨Same✨Veil✨/);
+  assert.match(spell, /☿✨Veyr✨Lore✨☿/);
   const reloaded = new Key(JSON.parse(JSON.stringify(key.data())));
   assert.equal(fromSpell(spell, reloaded), source);
-  assert.equal(fromSpell(spell.replaceAll('☿', '.'), reloaded), source);
   const extended = source + '\n#check Mathematics.«Enchantment»\n#check Enchantment\n';
   assert.equal(fromSpell(toSpell(extended, key), new Key(key.data())), extended);
 });
@@ -121,15 +110,6 @@ test('the Veyr family distinguishes structures and preserves scalar-action argum
   assert.equal(toSpell('Nat.Prime', key), 'Tally☿Indivisible');
 });
 
-test('older carrier names, structure names, and namespaces retain their saved-key meaning', () => {
-  const key = new Key({ global: { G: 'coven', X: 'realm', Mathematics: 'Arcanum' }, scoped: {},
-    namespaces: { 'Mathematics.GroupTheory': 'Arcanum☿Enchantment' } });
-  const source = 'namespace Mathematics.GroupTheory\nvariable {G X : Type*} [Group G]\nend Mathematics.GroupTheory';
-  const spell = 'sanctum Arcanum☿Enchantment\nfamiliar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯\nseal Arcanum☿Enchantment';
-  assert.equal(fromSpell(spell, key), source);
-  assert.equal(toSpell(source, key), spell);
-});
-
 for (const [label, source] of Object.entries({
   'quoted name before an automatic name': 'def «ember» := 0\ndef x := 1\n',
   'quoted name after an automatic name': 'def x := 0\ndef «ember» := 1\n',
@@ -146,16 +126,41 @@ for (const [label, source] of Object.entries({
   'incomplete string': 'def s := "theorem',
   'incomplete comment': '/- theorem',
 })) test(label, () => {
-  const key = new Key(grimoire), spell = toSpell(source, key);
+  const key = new Key(lexicon), spell = toSpell(source, key);
   assert.equal(tokenize(source).map(t => t.text).join(''), source);
-  assert.equal(fromSpell(spell, key), source);
+  assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
 });
 
-test('quoted-name reservations remain safe over consecutive edits', () => {
+test('quoted names stay literal over consecutive edits', () => {
   const key = new Key();
   toSpell('def «ember» := 0\n', key);
   const source = 'def «ember» := 0\ndef x := 1\n';
-  assert.equal(fromSpell(toSpell(source, key), key), source);
+  assert.equal(fromSpell(toSpell(source, key), new Key(key.data())), source);
+});
+
+test('quoted identifiers cannot collide with keywords, vocabulary, or automatic names', () => {
+  const names = new Set(['initiate', 'ember', 'Plane Shift', 'jade✨cube', 'ᛰ', '🌒', 'some.name☿inside',
+    'non\u00a0breaking space', ...Object.keys(WORDS), ...Object.values(WORDS),
+    ...Object.keys(lexicon.global), ...Object.values(lexicon.global)]);
+  const key = new Key(lexicon);
+  for (const name of names) {
+    const quoted = `«${name}»`;
+    const source = `def ${quoted} := 1\n#check ${quoted}\n#check Foo.${quoted}\n#check ${quoted}.bar\n`;
+    const spell = toSpell(source, key);
+    assert.equal(spell.split(quoted).length, 5, name);
+    assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source, name);
+    assert.ok(!Object.hasOwn(key.data().global, quoted), name);
+  }
+});
+
+test('quotes distinguish names with identical visible contents', () => {
+  const key = new Key({ global: { f: 'jade✨cube' }, scoped: { '«bestow»': { h: 'ward' } } });
+  const source = 'theorem «bestow» (h : True) : True := h\n' +
+    '#check f\n#check «f»\n#check «jade✨cube»\n#check «Foo»bar\n#check «Foo»«bar»\n' +
+    '#check «with spaces»\n#check «with\u00a0spaces»\n';
+  const spell = toSpell(source, key);
+  assert.match(spell, /spell «bestow» ⟪ward/);
+  assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
 });
 
 test('new spell names become quoted Lean identifiers', () => {
@@ -167,9 +172,9 @@ test('rejects ambiguous keys', () => {
   assert.throws(() => new Key({ global: { a: 'spell' }, scoped: {} }), /reserved/);
 });
 
-test('instances read as bestow, and older spells that say initiate still decode', () => {
+test('instances read as bestow', () => {
   const key = new Key({ global: { M: 'ᛗ' }, scoped: {} });
   assert.equal(toSpell('instance : Monoid M', key), 'bestow ⟡ Choir ᛗ');
   assert.equal(fromSpell('bestow ⟡ Choir ᛗ', key), 'instance : Monoid M');
-  assert.equal(fromSpell('initiate ⟡ Choir ᛗ', key), 'instance : Monoid M');
+  assert.equal(fromSpell('initiate', key), '«initiate»');
 });

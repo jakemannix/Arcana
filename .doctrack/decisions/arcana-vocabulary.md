@@ -15,6 +15,6 @@ The shared root encodes a mnemonic family: Group → Veyr, Ring → Veyrath, Fie
 
 Keep `IsSimpleGroup → Simple Veyr` distinct from `Nat.Prime → Indivisible`: simple groups need not have prime order. The separately defined simplicity property retains its Unbreakable Veyr spell name.
 
-Current non-syntactic structure names override the historical default words in `grimoire/lexicon.json`. Keep `src/tables.json` and the original key/fixtures stable, so old saved bundles still interpret their original vocabulary. The internal `lean-magic/v1` bundle identifier stays compatible; current branding, npm package, Lean package, and downloadable key use Arcana. The actual Lean namespace remains `Mathematics`, translated as `Arcana` by the current key.
+Non-syntactic structure names live in `grimoire/lexicon.json`; alternate defaults have been removed from `src/tables.json`. The user explicitly dropped backward compatibility and the Python prototype. Bundles use `arcana/v1`; branding, npm package, Lean package, and downloadable key use Arcana. The actual Lean namespace remains `Mathematics`, translated as `Arcana` by the current key.
 
 Related: [[mathematical-names]], [[../components/translator]], [[../features/editor]], [[../features/graduate-grimoire]].

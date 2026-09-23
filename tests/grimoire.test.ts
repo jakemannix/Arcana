@@ -27,6 +27,7 @@ test('checked folios use mathematical Lean names and expose reversible material 
     assert.doesNotMatch(folio.lean, /Arcane\.|same_place_same_veil|pact_preserves|unveiledImage/);
     assert.ok(folio.declarations.every(name => name.startsWith('Mathematics.')));
     const bundle = JSON.parse(file('public/grimoire/' + folio.id + '.json'));
+    assert.equal(bundle.format, 'arcana/v1');
     assert.equal(fromSpell(bundle.spell, new Key(bundle.key)), folio.lean);
   }
   const orbits = folios.find(f => f.id === 'orbits')!;

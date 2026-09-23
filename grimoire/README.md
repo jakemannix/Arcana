@@ -1,6 +1,6 @@
 # Arcana · The Enchantment grimoire
 
-9 lessons in group theory, with shared cantrips. All 55 declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
+10 lessons in group theory, with shared cantrips. All 63 declarations compile against Lean/mathlib v4.33.1. Every Arcana source decodes exactly and is compiled again. Browser edits are not checked by Lean.
 
 ## Threads & mirrors
 
@@ -560,6 +560,70 @@ seal Arcana☿Enchantment
 [Lean source](../math/Mathematics/GroupTheory/GroupActions.lean) · [Arcana source](../public/grimoire/orbits.spell)
 
 [MulAction.orbitEquivQuotientStabilizer](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/GroupAction/Quotient.lean#L174) · [MulAction.orbitProdStabilizerEquivGroup](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/GroupAction/Quotient.lean#L182) · [MulAction.mem_stabilizer_iff](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/GroupAction/Defs.lean#L519)
+
+## Cayley's court
+
+*Every group is a group of permutations*
+
+Every command is a way to move the points, so every action is a pact into a court of transmutations. Let a Veyr command itself, and nothing is lost: it lives, whole, inside the court of its own shuffles.
+
+**Mathematical meaning.** The endofunctions of a type X form a monoid under composition, Function.End X; its invertible members are the permutations, Equiv.Perm X. An action of G on X is the same as a homomorphism G → End(X), and for a group each g acts as a permutation. When G acts on itself by left multiplication, this homomorphism is injective, so G is isomorphic to a subgroup of Perm(G). Arthur Cayley stated this in 1854, in the first abstract definition of a group.
+
+**Hypotheses.** G is a group and X is any type with a G-action. Cayley's theorem uses the action of G on itself by left multiplication. No finiteness is needed; for a finite group of order n, the court of shuffles has n! members.
+
+**Proof idea.** Each g gives the map x ↦ g • x. One acts as the identity and g * k acts as g then k, so this is a homomorphism into End(X). Because g⁻¹ undoes g, each map is a permutation. For the self-action, a command in the kernel moves 1 to 1, so g = g * 1 = 1. The kernel is trivial, so the Kernels folio gives injectivity, and an injective homomorphism is an isomorphism onto its image.
+
+```text
+beckon Arcana☿Enchantment☿Silence
+beckon Arcana☿Enchantment☿Orbits
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Command☿Court
+
+sanctum Arcana☿Enchantment
+
+familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
+
+ritual ✨Pact✨into✨the✨Court✨ ⟡ ᛰ ↝⊛ Rite☿Court 🌒 begets
+  deed silk✨cord ⇰ conjure jade✨cube ⇉ silk✨cord • jade✨cube
+  ✨carries✨stillness✨ ⇰ oath conjure jade✨cube ⇉ ✨Stillness✨Commands✨Nothing✨ ᛰ jade✨cube
+  ✨carries✨binding✨ silk✨cord onyx✨bead ⇰ oath conjure jade✨cube ⇉ ✨Command✨in✨Stages✨ silk✨cord onyx✨bead jade✨cube
+
+spell ✨The✨Court✨Obeys✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ 🌒⟫ ⟡ ✨Pact✨into✨the✨Court✨ silk✨cord jade✨cube ≣ silk✨cord • jade✨cube ⇰ mirror
+
+ritual ✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling 🌒 begets
+  deed silk✨cord ⇰
+    ⧼ deed ⇰ conjure jade✨cube ⇉ silk✨cord • jade✨cube
+      ✨reverse✨deed✨ ⇰ conjure jade✨cube ⇉ silk✨cord† • jade✨cube
+      ✨Return✨Path✨ ⇰ conjure jade✨cube ⇉ ✨Command✨Revoked✨ silk✨cord jade✨cube
+      ✨Departure✨Path✨ ⇰ conjure jade✨cube ⇉ ✨Revocation✨Commanded✨ silk✨cord jade✨cube ⧽
+  ✨carries✨stillness✨ ⇰ Portal☿extend conjure jade✨cube ⇉ ✨Stillness✨Commands✨Nothing✨ ᛰ jade✨cube
+  ✨carries✨binding✨ silk✨cord onyx✨bead ⇰ Portal☿extend conjure jade✨cube ⇉ ✨Command✨in✨Stages✨ silk✨cord onyx✨bead jade✨cube
+
+spell ✨The✨Shuffles✨Obey✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ 🌒⟫ ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord jade✨cube ≣ silk✨cord • jade✨cube ⇰ mirror
+
+spell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ≣ ⊥ ⇰ cast
+  transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
+  summon silk✨cord echoward
+  bind idle ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ ✨Pact✨into✨the✨Shuffles✨ silk✨cord⟫☿onward echoward
+  litany silk✨cord ≣ silk✨cord ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ silk✨cord⟫☿reflect
+    ▢ ≣ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ☉ ⇰ ⟪✨Command✨is✨Binding✨ silk✨cord ☉⟫☿reflect
+    ▢ ≣ ⟪☉ ⟡ Portal☿Shuffling ᛰ⟫ ☉ ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather ☉⟫ idle
+    ▢ ≣ ☉ ⇰ mirror
+
+spell ✨No✨Two✨Commands✨Alike✨ ⟡
+    Rite☿Faithful ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ⇰
+  ⟪✨Nothing✨Lost✨ ✨Pact✨into✨the✨Shuffles✨⟫☿backward ✨Only✨Stillness✨Moves✨Nothing✨
+
+ineffable ritual ✨Cayley's✨Court✨ ⟡ ᛰ ≃⊛ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫☿manifestation ⇰
+  Herald☿✨from✨faithfulness✨ ✨No✨Two✨Commands✨Alike✨
+
+spell ✨Cayley's✨Court✨Speaks✨ ⟪silk✨cord jade✨cube ⟡ ᛰ⟫ ⟡ ⟪✨Cayley's✨Court✨ silk✨cord ⟡ Portal☿Shuffling ᛰ⟫ jade✨cube ≣ silk✨cord ⊛ jade✨cube ⇰ mirror
+
+seal Arcana☿Enchantment
+```
+
+[Lean source](../math/Mathematics/GroupTheory/Cayley.lean) · [Arcana source](../public/grimoire/cayley.spell)
+
+[MulAction.toEndHom](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Action/End.lean) · [Equiv.Perm.subgroupOfMulAction](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Perm/Subgroup.lean#L72) · [MonoidHom.ofInjective](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L201)
 
 ## Three dancing sigils
 

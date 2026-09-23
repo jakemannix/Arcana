@@ -4,8 +4,8 @@
   "leanToolchain": "leanprover/lean4:v4.33.1",
   "translatorHash": "a1b5d414680f6a0d866bddbf5a1c28eb5f0fbc3e818234874f48165c033da04e",
   "tablesHash": "7052c17fab89dc3362911be5916d093c6aa4cc4c58023d3a1a3a026d3a815f07",
-  "metadataHash": "847375cde6cc62ab70b40aac73d012150797b051de4980d655846da88a1a2053",
-  "lexiconHash": "ceeff73547a7385ccfac776cc45d706203d2959287a613ca1d10855364e2d268",
+  "metadataHash": "b5bb43ff5b018aa93595b9b546ef5a1f03997cf34145c5ee753c5a9b1f67c822",
+  "lexiconHash": "a1a010a649fe4ee977ab090b421ba8487671fa1cbfb48a644afa42d221e88d3a",
   "key": {
     "global": {
       "Element": "Humour",
@@ -305,7 +305,25 @@
       "Field": "Veyrion",
       "Module": "✨Bound✨Veyr✨",
       "Subgroup": "✨Inner✨Veyr✨",
-      "Submodule": "✨Inner✨Bound✨Veyr✨"
+      "Submodule": "✨Inner✨Bound✨Veyr✨",
+      "Action": "Command",
+      "End": "Court",
+      "actionToEnd": "✨Pact✨into✨the✨Court✨",
+      "toFun": "deed",
+      "invFun": "✨reverse✨deed✨",
+      "map_one'": "✨carries✨stillness✨",
+      "map_mul'": "✨carries✨binding✨",
+      "one_smul": "✨Stillness✨Commands✨Nothing✨",
+      "actionToEnd_apply": "✨The✨Court✨Obeys✨",
+      "actionToPerm": "✨Pact✨into✨the✨Shuffles✨",
+      "actionToPerm_apply": "✨The✨Shuffles✨Obey✨",
+      "homKernel_actionToPerm_self": "✨Only✨Stillness✨Moves✨Nothing✨",
+      "h_moves_nothing": "idle",
+      "smul_eq_mul": "✨Command✨is✨Binding✨",
+      "actionToPerm_self_injective": "✨No✨Two✨Commands✨Alike✨",
+      "cayleyEquiv": "✨Cayley's✨Court✨",
+      "ofInjective": "✨from✨faithfulness✨",
+      "cayleyEquiv_apply": "✨Cayley's✨Court✨Speaks✨"
     },
     "scoped": {
       "and_swap": {
@@ -325,7 +343,7 @@
     "originalBuild": true,
     "decodedBuild": true,
     "axiomAudit": true,
-    "declarationCount": 55
+    "declarationCount": 63
   },
   "entries": [
     {
@@ -2840,6 +2858,346 @@
         "Mathematics.GroupTheory.orbitQuotientEquiv_symm_mk",
         "Mathematics.GroupTheory.card_orbit_eq_card_quotient",
         "Mathematics.GroupTheory.card_orbit_mul_card_stabilizer"
+      ]
+    },
+    {
+      "id": "cayley",
+      "school": "Enchantment",
+      "title": "Cayley's court",
+      "subtitle": "Every group is a group of permutations",
+      "file": "Mathematics/GroupTheory/Cayley.lean",
+      "level": "III · Great enchantments",
+      "summary": "Every command is a way to move the points, so every action is a pact into a court of transmutations. Let a Veyr command itself, and nothing is lost: it lives, whole, inside the court of its own shuffles.",
+      "meaning": "The endofunctions of a type X form a monoid under composition, Function.End X; its invertible members are the permutations, Equiv.Perm X. An action of G on X is the same as a homomorphism G → End(X), and for a group each g acts as a permutation. When G acts on itself by left multiplication, this homomorphism is injective, so G is isomorphic to a subgroup of Perm(G). Arthur Cayley stated this in 1854, in the first abstract definition of a group.",
+      "hypotheses": "G is a group and X is any type with a G-action. Cayley's theorem uses the action of G on itself by left multiplication. No finiteness is needed; for a finite group of order n, the court of shuffles has n! members.",
+      "proofIdea": "Each g gives the map x ↦ g • x. One acts as the identity and g * k acts as g then k, so this is a homomorphism into End(X). Because g⁻¹ undoes g, each map is a permutation. For the self-action, a command in the kernel moves 1 to 1, so g = g * 1 = 1. The kernel is trivial, so the Kernels folio gives injectivity, and an injective homomorphism is an isomorphism onto its image.",
+      "prerequisites": [
+        "orbits",
+        "kernels"
+      ],
+      "concepts": [
+        "MulAction",
+        "End",
+        "Perm",
+        "range",
+        "cayleyEquiv"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/Algebra/Group/Action/End.lean",
+          "symbol": "MulAction.toEndHom",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Action/End.lean"
+        },
+        {
+          "path": "Mathlib/GroupTheory/Perm/Subgroup.lean",
+          "symbol": "Equiv.Perm.subgroupOfMulAction",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Perm/Subgroup.lean#L72"
+        },
+        {
+          "path": "Mathlib/Algebra/Group/Subgroup/Ker.lean",
+          "symbol": "MonoidHom.ofInjective",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L201"
+        }
+      ],
+      "lean": "import Mathematics.GroupTheory.Kernels\nimport Mathematics.GroupTheory.GroupActions\nimport Mathlib.Algebra.Group.Action.End\n\nnamespace Mathematics.GroupTheory\n\nvariable {G X : Type*} [Group G] [MulAction G X]\n\ndef actionToEnd : G →* Function.End X where\n  toFun g := fun x => g • x\n  map_one' := funext fun x => one_smul G x\n  map_mul' g k := funext fun x => mul_smul g k x\n\ntheorem actionToEnd_apply (g : G) (x : X) : actionToEnd g x = g • x := rfl\n\ndef actionToPerm : G →* Equiv.Perm X where\n  toFun g :=\n    { toFun := fun x => g • x\n      invFun := fun x => g⁻¹ • x\n      left_inv := fun x => inv_smul_smul g x\n      right_inv := fun x => smul_inv_smul g x }\n  map_one' := Equiv.ext fun x => one_smul G x\n  map_mul' g k := Equiv.ext fun x => mul_smul g k x\n\ntheorem actionToPerm_apply (g : G) (x : X) : actionToPerm g x = g • x := rfl\n\ntheorem homKernel_actionToPerm_self : homKernel (actionToPerm : G →* Equiv.Perm G) = ⊥ := by\n  rw [Subgroup.eq_bot_iff_forall]\n  intro g hg\n  have h_moves_nothing : actionToPerm g = 1 := (mem_homKernel_iff actionToPerm g).mp hg\n  calc g = g * 1 := (mul_one g).symm\n    _ = actionToPerm g 1 := (smul_eq_mul g 1).symm\n    _ = (1 : Equiv.Perm G) 1 := congrArg (fun σ : Equiv.Perm G => σ 1) h_moves_nothing\n    _ = 1 := rfl\n\ntheorem actionToPerm_self_injective :\n    Function.Injective (actionToPerm : G →* Equiv.Perm G) :=\n  (injective_iff_homKernel_eq_bot actionToPerm).mpr homKernel_actionToPerm_self\n\nnoncomputable def cayleyEquiv : G ≃* (actionToPerm : G →* Equiv.Perm G).range :=\n  MonoidHom.ofInjective actionToPerm_self_injective\n\ntheorem cayleyEquiv_apply (g x : G) : (cayleyEquiv g : Equiv.Perm G) x = g * x := rfl\n\nend Mathematics.GroupTheory\n",
+      "spell": "beckon Arcana☿Enchantment☿Silence\nbeckon Arcana☿Enchantment☿Orbits\nbeckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Command☿Court\n\nsanctum Arcana☿Enchantment\n\nfamiliar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯\n\nritual ✨Pact✨into✨the✨Court✨ ⟡ ᛰ ↝⊛ Rite☿Court 🌒 begets\n  deed silk✨cord ⇰ conjure jade✨cube ⇉ silk✨cord • jade✨cube\n  ✨carries✨stillness✨ ⇰ oath conjure jade✨cube ⇉ ✨Stillness✨Commands✨Nothing✨ ᛰ jade✨cube\n  ✨carries✨binding✨ silk✨cord onyx✨bead ⇰ oath conjure jade✨cube ⇉ ✨Command✨in✨Stages✨ silk✨cord onyx✨bead jade✨cube\n\nspell ✨The✨Court✨Obeys✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ 🌒⟫ ⟡ ✨Pact✨into✨the✨Court✨ silk✨cord jade✨cube ≣ silk✨cord • jade✨cube ⇰ mirror\n\nritual ✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling 🌒 begets\n  deed silk✨cord ⇰\n    ⧼ deed ⇰ conjure jade✨cube ⇉ silk✨cord • jade✨cube\n      ✨reverse✨deed✨ ⇰ conjure jade✨cube ⇉ silk✨cord† • jade✨cube\n      ✨Return✨Path✨ ⇰ conjure jade✨cube ⇉ ✨Command✨Revoked✨ silk✨cord jade✨cube\n      ✨Departure✨Path✨ ⇰ conjure jade✨cube ⇉ ✨Revocation✨Commanded✨ silk✨cord jade✨cube ⧽\n  ✨carries✨stillness✨ ⇰ Portal☿extend conjure jade✨cube ⇉ ✨Stillness✨Commands✨Nothing✨ ᛰ jade✨cube\n  ✨carries✨binding✨ silk✨cord onyx✨bead ⇰ Portal☿extend conjure jade✨cube ⇉ ✨Command✨in✨Stages✨ silk✨cord onyx✨bead jade✨cube\n\nspell ✨The✨Shuffles✨Obey✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ 🌒⟫ ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord jade✨cube ≣ silk✨cord • jade✨cube ⇰ mirror\n\nspell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ≣ ⊥ ⇰ cast\n  transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯\n  summon silk✨cord echoward\n  bind idle ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ ✨Pact✨into✨the✨Shuffles✨ silk✨cord⟫☿onward echoward\n  litany silk✨cord ≣ silk✨cord ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ silk✨cord⟫☿reflect\n    ▢ ≣ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ☉ ⇰ ⟪✨Command✨is✨Binding✨ silk✨cord ☉⟫☿reflect\n    ▢ ≣ ⟪☉ ⟡ Portal☿Shuffling ᛰ⟫ ☉ ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather ☉⟫ idle\n    ▢ ≣ ☉ ⇰ mirror\n\nspell ✨No✨Two✨Commands✨Alike✨ ⟡\n    Rite☿Faithful ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ⇰\n  ⟪✨Nothing✨Lost✨ ✨Pact✨into✨the✨Shuffles✨⟫☿backward ✨Only✨Stillness✨Moves✨Nothing✨\n\nineffable ritual ✨Cayley's✨Court✨ ⟡ ᛰ ≃⊛ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫☿manifestation ⇰\n  Herald☿✨from✨faithfulness✨ ✨No✨Two✨Commands✨Alike✨\n\nspell ✨Cayley's✨Court✨Speaks✨ ⟪silk✨cord jade✨cube ⟡ ᛰ⟫ ⟡ ⟪✨Cayley's✨Court✨ silk✨cord ⟡ Portal☿Shuffling ᛰ⟫ jade✨cube ≣ silk✨cord ⊛ jade✨cube ⇰ mirror\n\nseal Arcana☿Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "noncomputable",
+          "arcane": "ineffable"
+        },
+        {
+          "lean": "where",
+          "arcane": "begets"
+        },
+        {
+          "lean": "by",
+          "arcane": "cast"
+        },
+        {
+          "lean": "fun",
+          "arcane": "conjure"
+        },
+        {
+          "lean": "have",
+          "arcane": "bind"
+        },
+        {
+          "lean": "calc",
+          "arcane": "litany"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Function",
+          "arcane": "Rite"
+        },
+        {
+          "lean": "funext",
+          "arcane": "oath"
+        },
+        {
+          "lean": "symm",
+          "arcane": "reflect"
+        },
+        {
+          "lean": "mp",
+          "arcane": "onward"
+        },
+        {
+          "lean": "mpr",
+          "arcane": "backward"
+        },
+        {
+          "lean": "congrArg",
+          "arcane": "sympathy"
+        },
+        {
+          "lean": "rfl",
+          "arcane": "mirror"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Veyr"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "✨Inner✨Veyr✨"
+        },
+        {
+          "lean": "MonoidHom",
+          "arcane": "Herald"
+        },
+        {
+          "lean": "Equiv",
+          "arcane": "Portal"
+        },
+        {
+          "lean": "intro",
+          "arcane": "summon"
+        },
+        {
+          "lean": "rw",
+          "arcane": "transmute"
+        },
+        {
+          "lean": "ext",
+          "arcane": "extend"
+        },
+        {
+          "lean": "k",
+          "arcane": "onyx✨bead"
+        },
+        {
+          "lean": "g",
+          "arcane": "silk✨cord"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "✨Grand✨Archive✨"
+        },
+        {
+          "lean": "Algebra",
+          "arcane": "✨Bound✨Veyrath✨"
+        },
+        {
+          "lean": "G",
+          "arcane": "ᛰ"
+        },
+        {
+          "lean": "X",
+          "arcane": "🌒"
+        },
+        {
+          "lean": "x",
+          "arcane": "jade✨cube"
+        },
+        {
+          "lean": "hg",
+          "arcane": "echoward"
+        },
+        {
+          "lean": "Injective",
+          "arcane": "Faithful"
+        },
+        {
+          "lean": "MulAction",
+          "arcane": "Commanding"
+        },
+        {
+          "lean": "Perm",
+          "arcane": "Shuffling"
+        },
+        {
+          "lean": "range",
+          "arcane": "manifestation"
+        },
+        {
+          "lean": "homKernel",
+          "arcane": "✨Circle✨of✨Silence✨"
+        },
+        {
+          "lean": "mem_homKernel_iff",
+          "arcane": "✨Name✨the✨Silent✨"
+        },
+        {
+          "lean": "injective_iff_homKernel_eq_bot",
+          "arcane": "✨Nothing✨Lost✨"
+        },
+        {
+          "lean": "left_inv",
+          "arcane": "✨Return✨Path✨"
+        },
+        {
+          "lean": "right_inv",
+          "arcane": "✨Departure✨Path✨"
+        },
+        {
+          "lean": "mul_one",
+          "arcane": "✨Bind✨with✨Stillness✨"
+        },
+        {
+          "lean": "eq_bot_iff_forall",
+          "arcane": "✨Emptiness✨Criterion✨"
+        },
+        {
+          "lean": "mul_smul",
+          "arcane": "✨Command✨in✨Stages✨"
+        },
+        {
+          "lean": "inv_smul_smul",
+          "arcane": "✨Command✨Revoked✨"
+        },
+        {
+          "lean": "smul_inv_smul",
+          "arcane": "✨Revocation✨Commanded✨"
+        },
+        {
+          "lean": "σ",
+          "arcane": "raven✨feather"
+        },
+        {
+          "lean": "GroupActions",
+          "arcane": "Orbits"
+        },
+        {
+          "lean": "Kernels",
+          "arcane": "Silence"
+        },
+        {
+          "lean": "Action",
+          "arcane": "Command"
+        },
+        {
+          "lean": "End",
+          "arcane": "Court"
+        },
+        {
+          "lean": "actionToEnd",
+          "arcane": "✨Pact✨into✨the✨Court✨"
+        },
+        {
+          "lean": "toFun",
+          "arcane": "deed"
+        },
+        {
+          "lean": "invFun",
+          "arcane": "✨reverse✨deed✨"
+        },
+        {
+          "lean": "map_one'",
+          "arcane": "✨carries✨stillness✨"
+        },
+        {
+          "lean": "map_mul'",
+          "arcane": "✨carries✨binding✨"
+        },
+        {
+          "lean": "one_smul",
+          "arcane": "✨Stillness✨Commands✨Nothing✨"
+        },
+        {
+          "lean": "actionToEnd_apply",
+          "arcane": "✨The✨Court✨Obeys✨"
+        },
+        {
+          "lean": "actionToPerm",
+          "arcane": "✨Pact✨into✨the✨Shuffles✨"
+        },
+        {
+          "lean": "actionToPerm_apply",
+          "arcane": "✨The✨Shuffles✨Obey✨"
+        },
+        {
+          "lean": "homKernel_actionToPerm_self",
+          "arcane": "✨Only✨Stillness✨Moves✨Nothing✨"
+        },
+        {
+          "lean": "h_moves_nothing",
+          "arcane": "idle"
+        },
+        {
+          "lean": "smul_eq_mul",
+          "arcane": "✨Command✨is✨Binding✨"
+        },
+        {
+          "lean": "actionToPerm_self_injective",
+          "arcane": "✨No✨Two✨Commands✨Alike✨"
+        },
+        {
+          "lean": "cayleyEquiv",
+          "arcane": "✨Cayley's✨Court✨"
+        },
+        {
+          "lean": "ofInjective",
+          "arcane": "✨from✨faithfulness✨"
+        },
+        {
+          "lean": "cayleyEquiv_apply",
+          "arcane": "✨Cayley's✨Court✨Speaks✨"
+        },
+        {
+          "lean": "Mathematics.GroupTheory",
+          "arcane": "Arcana☿Enchantment"
+        }
+      ],
+      "sourceHash": "d1d3a95fb95830b9c5b66dc5af2c46360ea4a13ab122bbe7266731e6a4475a0e",
+      "spellHash": "7439af1939805606c1902dba2a2a1346b331bf2de0f167e531b8cdebdd92ffbd",
+      "declarations": [
+        "Mathematics.GroupTheory.actionToEnd",
+        "Mathematics.GroupTheory.actionToEnd_apply",
+        "Mathematics.GroupTheory.actionToPerm",
+        "Mathematics.GroupTheory.actionToPerm_apply",
+        "Mathematics.GroupTheory.homKernel_actionToPerm_self",
+        "Mathematics.GroupTheory.actionToPerm_self_injective",
+        "Mathematics.GroupTheory.cayleyEquiv",
+        "Mathematics.GroupTheory.cayleyEquiv_apply"
       ]
     },
     {

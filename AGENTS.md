@@ -10,7 +10,7 @@ The longer-term ambition is substantial graduate mathematics across multiple sch
 
 ## What makes a good addition
 
-- Give a school a coherent mathematical progression. Enchantment currently develops subgroups, homomorphisms, kernels, quotients, the first isomorphism theorem, Lagrange, simple groups of prime order, orbit–stabilizer, and a concrete permutation example.
+- Give a school a coherent mathematical progression. Enchantment currently develops subgroups, homomorphisms, kernels, quotients, the first isomorphism theorem, Lagrange, simple groups of prime order, orbit–stabilizer, Cayley's theorem, and a concrete permutation example.
 - Include mathematical meaning, hypotheses, proof ideas, prerequisites, and precise library references alongside the magical presentation. Substantial examples should reward opening their proofs.
 - Extract shared foundations into **Cantrips** when multiple spells or schools need them. Make these useful imported lemmas and constructions; existing Pacts already uses the shared function-composition cantrips.
 - Choose memorable, consistent magical names for mathematical concepts. Keep the shared vocabulary and serialized translation key coherent across folios.

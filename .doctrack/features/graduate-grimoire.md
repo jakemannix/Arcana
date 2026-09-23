@@ -6,7 +6,7 @@ tags: [doctrack/type/feature, doctrack/status/active, doctrack/audience/claude]
 # Graduate grimoire
 
 ## User-directed intermediate deliverable
-The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: nine folios plus Cantrips, totaling 55 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
+The user narrowed the immediate step to one substantial school for review, plus reusable cantrips. Enchantment/group theory is implemented: ten folios plus Cantrips, totaling 63 checked declarations. The user also asked for sparkly code folding after functionality; see [[editor]]. Do not proceed to build all schools before the user reviews this intermediate direction.
 
 The longer objective remains a graduate grimoire across all eight schools, including group theory, real analysis, combinatorics, topology, linear analysis, complex analysis, algebraic geometry, manifolds, and “PDSs” (clarification still pending, irrelevant to this first school). This broader objective is not complete.
 
@@ -24,6 +24,7 @@ The user asked for explicit, teaching-style proofs. Prefer named `have` steps an
 - `math/Mathematics/GroupTheory/Lagrange.lean`: coset cardinality from G ≃ (G/H) × H, subgroup divisibility, order divisibility through the cyclic subgroup, power identity by calc.
 - `math/Mathematics/GroupTheory/SimpleGroups.lean`: imports Lagrange. Defines `isSimpleGroupProperty` (nontrivial, and every normal subgroup is ⊥ or ⊤), proves it equals mathlib's `IsSimpleGroup`, proves that a group of prime order has only ⊥ and ⊤ as subgroups (normality unused), and concludes that it is simple.
 - `math/Mathematics/GroupTheory/GroupActions.lean`: imports Lagrange. g·x = k·x iff g⁻¹k fixes x, orbit/coset equivalence, representative action, orbit–stabilizer cardinality from Lagrange's coset count.
+- `math/Mathematics/GroupTheory/Cayley.lean`: imports Kernels and GroupActions. Builds the pacts from an action into `Function.End X` (the court) and into `Equiv.Perm X` by hand, proves the self-action has trivial kernel, reuses the Kernels injectivity criterion, and packages Cayley's theorem with `MonoidHom.ofInjective`. Free objects (primordials) and endomorphism objects (courts) are planned as mirror images.
 - `math/Mathematics/GroupTheory/Permutations.lean`: actual S₃, two swaps, order 6 by decide, involution by library lemma, noncommutativity by evaluating both products at 0.
 
 `grimoire/chapters.json` holds mathematical explanations, hypotheses, prerequisite IDs, and exact-revision source references. `grimoire/lexicon.json` curates concept and proof names; the translator allocates any additional unknown names reversibly.

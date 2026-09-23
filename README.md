@@ -14,7 +14,11 @@ Original folios show **Lean checked** only while their source exactly matches a 
 
 Arcane namespaces and field access use Mercury's **☿** glyph: `Rite☿Perfect` translates to `Function.Bijective`. Older spells using dots still import. Decimal points and literal text retain their original punctuation.
 
-Multi-word Arcane names are joined with sparkles: `✨Preserve✨the✨Binding✨` translates to `pact_preserves_product`. A group inverse is a dagger, so `mark†` means `x⁻¹`. Literal ✨ and † characters in Lean source are escaped, so translation stays exact.
+Multi-word Arcane names are joined with sparkles: `✨Preserve✨the✨Binding✨` translates to `hom_map_mul`. A group inverse is a dagger, so `jade✨cube†` means `x⁻¹`. Literal ✨ and † characters in Lean source are escaped, so translation stays exact.
+
+Lean declarations and modules use mathematical names: `Mathematics.GroupTheory` is the namespace behind `Arcanum☿Enchantment`, and `smul_eq_smul_iff_mem_stabilizer` is the theorem behind `✨Same✨Place✨Same✨Veil✨`. These are the actual compiled sources. The saved key's optional `namespaces` map translates full namespace prefixes independently of individual words, so `Mathlib.GroupTheory` retains its own translation.
+
+Variables become material components on the spell side: `x` is `jade✨cube`, `y` is `silver✨bell`, and `f` is `copper✨wire`. These lowercase names are single identifiers, joined by interior sparkles. Their mathematical types and hypotheses are unchanged. The folio glossary includes the ingredients and their Lean names. Curate names in `grimoire/lexicon.json`; verification generates the catalog key, downloadable `public/grimoire/arcane.key.json`, and each saved bundle. `src/grimoire.key.json` remains the original prototype's compatibility fixture; older bundles still decode with their own keys.
 
 To type glyphs, use a backslash and a short name, then a space or Tab, as in Lean's own editors. In the spell pane, `\sp` gives ✨ and `\dag` gives †; a backslash before any Lean symbol gives its spell glyph, so `\:` gives ⟡ and `\(` gives ⟪. The Lean pane uses Lean's shortcuts, such as `\to` and `\-1`. The "How to read this" panel lists the common ones.
 
@@ -47,12 +51,12 @@ npm run build
 
 Lean is pinned by `math/lean-toolchain` to **v4.33.1**. Mathlib is locked to **0df444a360eaa60ab8c11dca51a86af692955474** in `math/lake-manifest.json`. The verifier checks the dependency checkout, compiles the original project, translates every folio using one curated lexicon, reloads the serialized key, checks byte-for-byte decoding, and independently compiles the decoded modules with their own import path. It then inspects all 55 declarations with `#print axioms` and allows only the three standard axioms listed above.
 
-Only after all checks pass does it generate the browser catalog, `.lean`/`.spell` downloads, bundles, key, audit, and readable book. `npm test` detects stale source, vocabulary, and metadata; validates all translations and prerequisite links; and tests folding boundaries and the edited-proof status. The 39 tests include the prototype's compatibility regressions, namespace glyph handling, and sparkle names.
+Only after all checks pass does it generate the browser catalog, `.lean`/`.spell` downloads, bundles, key, audit, and readable book. `npm test` detects stale source, vocabulary, and metadata; validates all translations and prerequisite links; and tests folding boundaries and the edited-proof status. The tests include the prototype's compatibility regressions, namespace glyph handling, and sparkle names.
 
 ## Structure
 
-- `math/Arcane/Cantrips.lean`: reusable function composition, injectivity, surjectivity, and equivalence lemmas. The Pacts module actually imports and uses these.
-- `math/Arcane/Enchantment/*.lean`: nine substantive group-theory folios.
+- `math/Mathematics/Functions.lean`: reusable function composition, injectivity, surjectivity, and equivalence lemmas. The Homomorphisms module actually imports and uses these.
+- `math/Mathematics/GroupTheory/*.lean`: nine substantive group-theory folios.
 - `grimoire/chapters.json`: explanations, prerequisite graph, and mathlib source references.
 - `grimoire/lexicon.json`: curated Arcane names for mathematical constructs and library lemmas.
 - `scripts/verify-grimoire.ts`: reproducible build, translation, and proof audit.

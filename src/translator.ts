@@ -1,7 +1,7 @@
 import tables from './tables.json';
 
 export type NameMap = Record<string, string>;
-export interface KeyData { global: NameMap; scoped: Record<string, NameMap>; auto?: string[] }
+export interface KeyData { global: NameMap; scoped: Record<string, NameMap>; namespaces?: NameMap; auto?: string[] }
 type Kind = 'ws' | 'comment' | 'string' | 'char' | 'num' | 'ident' | 'sym' | 'other' | 'esc';
 export interface Token { kind: Kind; text: string }
 const ESC = '⟄', NBSP = '\u00a0', SPARKLE = '✨';
@@ -14,8 +14,8 @@ const INV_WORDS = inverse(WORDS), INV_SYMS = inverse(SYMS), INV_NUMS = dictionar
 const declarations = new Set(tables.declWords);
 const component = String.raw`(?:«[^»]*»|[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)`;
 const word = String.raw`[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*`;
-// A sparkle name joins several words, as in ✨Preserve✨the✨Binding✨.
-const sparkled = `${SPARKLE}(?:${word}${SPARKLE})+`;
+// Spell titles retain their framing sparkles; material components use jade✨cube.
+const sparkled = `(?:${SPARKLE}(?:${word}${SPARKLE})+|${word}(?:${SPARKLE}${word})+)`;
 const spellComponent = component.replace("_'!?", "_\u00a0'!?").replace('(?:', `(?:${sparkled}|`);
 const ident = new RegExp(`^${component}(?:\\.${component})*`, 'u');
 const spellIdent = new RegExp(`^${spellComponent}(?:[.${NAMESPACE_SEPARATOR}]${spellComponent})*`, 'u');
@@ -77,12 +77,15 @@ export class Key {
   private used: Set<string>;
   private invGlobal: NameMap;
   private invScoped: Record<string, NameMap>;
+  private namespaces: NameMap;
+  private namespaceEntries: [string[], string[]][];
   private cursor = 0;
   private auto: string[];
   constructor(data: KeyData = { global: {}, scoped: {} }) {
     this.global = dictionary(data.global);
     this.scoped = Object.assign(Object.create(null), Object.fromEntries(Object.entries(data.scoped).map(([k, v]) => [k, dictionary(v)])));
     this.auto = [...(data.auto ?? [])];
+    this.namespaces = dictionary(data.namespaces ?? {});
     const values = Object.values(this.global);
     if (new Set(values).size !== values.length) throw new Error('The key assigns the same spell word to multiple names.');
     if (values.some(v => !legalName.test(v) || Object.hasOwn(INV_WORDS, v))) throw new Error('The key contains an invalid or reserved spell word.');
@@ -90,9 +93,31 @@ export class Key {
       const scopedValues = Object.values(map);
       if (new Set(scopedValues).size !== scopedValues.length || scopedValues.some(v => !legalName.test(v) || values.includes(v) || Object.hasOwn(INV_WORDS, v))) throw new Error(`Invalid name mapping in ${scope}.`);
     }
-    this.used = new Set([...values, ...Object.values(WORDS), ...Object.values(this.scoped).flatMap(Object.values)]);
     this.invGlobal = inverse(this.global);
     this.invScoped = Object.assign(Object.create(null), Object.fromEntries(Object.entries(this.scoped).map(([k, v]) => [k, inverse(v)])));
+    this.namespaceEntries = Object.entries(this.namespaces).map(([lean, spell]) => {
+      const source = components(lean), target = components(spell, true);
+      if (source.length < 2 || source.join('.') !== lean || !source.every(c => new RegExp(`^${word}$`, 'u').test(c)) ||
+          target.length < 2 || target.join(NAMESPACE_SEPARATOR) !== spell ||
+          !target.every(c => legalName.test(c) && !Object.hasOwn(INV_WORDS, c))) {
+        throw new Error(`Invalid namespace mapping: ${lean}.`);
+      }
+      return [source, target];
+    });
+    if (new Set(Object.values(this.namespaces)).size !== this.namespaceEntries.length) {
+      throw new Error('The key assigns the same spell namespace to multiple namespaces.');
+    }
+    // A special path must not steal a path that already decodes to another Lean name.
+    for (const [source, target] of this.namespaceEntries) {
+      for (const scope of ['', ...Object.keys(this.scoped)]) {
+        const decoded = target.map(c => this.invScoped[scope]?.[c] ?? this.invGlobal[c]);
+        if (decoded.every(c => c !== undefined) && decoded.join('.') !== source.join('.')) {
+          throw new Error(`Ambiguous namespace mapping: ${source.join('.')}.`);
+        }
+      }
+    }
+    this.used = new Set([...values, ...Object.values(WORDS), ...Object.values(this.scoped).flatMap(Object.values),
+      ...this.namespaceEntries.flatMap(([, target]) => target)]);
   }
   private assign(name: string, image: string): string {
     this.global[name] = image; this.invGlobal[image] = name; this.used.add(image); return image;
@@ -123,7 +148,21 @@ export class Key {
     if (word.startsWith('«')) return word;
     return this.invScoped[scope]?.[word] ?? this.invGlobal[word] ?? INV_WORDS[word] ?? `«${word.replaceAll(NBSP, ' ')}»`;
   }
-  data(): KeyData { return { global: { ...this.global }, scoped: structuredClone(this.scoped), auto: [...this.auto] }; }
+  name(parts: string[], scope: string, bare = true): string {
+    const match = this.namespaceEntries.filter(([source]) => source.every((c, i) => parts[i] === c))
+      .sort(([a], [b]) => b.length - a.length)[0];
+    return [...(match?.[1] ?? []), ...parts.slice(match?.[0].length ?? 0).map(c => this.word(c, scope, bare))]
+      .join(NAMESPACE_SEPARATOR);
+  }
+  leanName(parts: string[], scope: string): string[] {
+    const match = this.namespaceEntries.filter(([, target]) => target.every((c, i) => parts[i] === c))
+      .sort(([, a], [, b]) => b.length - a.length)[0];
+    return [...(match?.[0] ?? []), ...parts.slice(match?.[1].length ?? 0).map(c => this.lean(c, scope))];
+  }
+  data(): KeyData {
+    return { global: { ...this.global }, scoped: structuredClone(this.scoped),
+      namespaces: { ...this.namespaces }, auto: [...this.auto] };
+  }
 }
 
 export function toSpell(source: string, key: Key): string {
@@ -137,7 +176,7 @@ export function toSpell(source: string, key: Key): string {
       const parts = components(t);
       if (declarations.has(parts[0]) && parts.length === 1) { pending = true; scope = `#${++anon}`; }
       else if (pending) { pending = false; if (!Object.hasOwn(WORDS, parts[0])) scope = parts[0]; }
-      return parts.map(c => key.word(c, scope, !glue.test(tokens[i + 1]?.text ?? ''))).join(NAMESPACE_SEPARATOR);
+      return key.name(parts, scope, !glue.test(tokens[i + 1]?.text ?? ''));
     }
     if (token.kind === 'sym') return SYMS[t] ?? t;
     if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || t === ESC || t === NBSP || t === SPARKLE)) return ESC + t;
@@ -152,8 +191,8 @@ export function fromSpell(source: string, key: Key): string {
     if (kind === 'ident') {
       const parts = components(t, true);
       if (declarations.has(INV_WORDS[parts[0]]) && parts.length === 1) { pending = true; scope = `#${++anon}`; return INV_WORDS[t]; }
-      let decoded = parts.map(c => key.lean(c, scope));
-      if (pending) { pending = false; if (!Object.hasOwn(WORDS, decoded[0])) { scope = decoded[0]; decoded = parts.map(c => key.lean(c, scope)); } }
+      let decoded = key.leanName(parts, scope);
+      if (pending) { pending = false; if (!Object.hasOwn(WORDS, decoded[0])) { scope = decoded[0]; decoded = key.leanName(parts, scope); } }
       return decoded.join('.');
     }
     if (kind === 'sym') return INV_NUMS[t as keyof typeof INV_NUMS] ?? INV_SYMS[t] ?? t;

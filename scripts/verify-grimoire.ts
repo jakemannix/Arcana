@@ -63,9 +63,21 @@ const entries = translated.map(chapter => {
     const line = lines.findIndex(text => new RegExp(`(?:def|theorem|lemma|structure|abbrev) ${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:[\\s:{(]|$)`).test(text)) + 1;
     return { ...ref, url: `https://github.com/leanprover-community/mathlib4/blob/${pin}/${ref.path}${line ? '#L' + line : ''}` };
   });
-  const used = new Set(tokenize(chapter.lean).filter(t => t.kind === 'ident').flatMap(t => t.text.split('.')));
-  const glossary = Object.entries({ ...JSON.parse(read(join(root, 'src/tables.json'))).words, ...key.data().global })
-    .filter(([name]) => used.has(name) && (!/^[a-zα-ω]$/u.test(name) || chapter.concepts.includes(name)))
+  const identifiers = tokenize(chapter.lean).filter(t => t.kind === 'ident').map(t => t.text);
+  const namespaces = key.data().namespaces ?? {};
+  const namespaceNames = Object.keys(namespaces).sort((a, b) => b.length - a.length);
+  const usedNamespaces = new Set<string>();
+  const used = new Set(identifiers.flatMap(name => {
+    const prefix = namespaceNames.find(namespace => name === namespace || name.startsWith(namespace + '.'));
+    if (!prefix) return name.split('.');
+    usedNamespaces.add(prefix);
+    return name.slice(prefix.length + 1).split('.').filter(Boolean);
+  }));
+  const glossary = Object.entries({ ...JSON.parse(read(join(root, 'src/tables.json'))).words,
+    ...key.data().global, ...namespaces })
+    .filter(([name, arcane]) => (used.has(name) || usedNamespaces.has(name)) &&
+      (!/^[a-zα-ω]$/u.test(name) || chapter.concepts.includes(name) ||
+        (typeof arcane === 'string' && arcane.includes('✨') && !arcane.startsWith('✨'))))
     .map(([lean, arcane]) => ({ lean, arcane }));
   const stem = chapter.id;
   write(join(output, `${stem}.lean`), chapter.lean);

@@ -12,7 +12,7 @@ Two CodeMirror 6 instances with StreamLanguage highlighting, reentrancy-guarded 
 
 `isCheckedSource` requires exact match with the selected verified original, exact spell decoding, and all catalog verification gates. A changed theorem, even with perfect translation, is visibly unverified. The client never runs Lean. Round trips are debounced 160ms.
 
-`proofFoldRange` hides implementation after `:=` or `⇰`, preserving every hypothesis and the full conclusion. Custom CodeMirror placeholders are keyboard-operable reveal buttons. Arcane proofs start folded; Veil/Reveal buttons bulk-fold/unfold. Unfold effects schedule a post-update measurement, then short-lived spark particles and an editor glimmer. Successful manual round trips also sparkle. Reduced-motion disables both; no continuous animation. Unit tests cover every shipped declaration and multiline signatures.
+`proofFoldRange` hides implementation after `:=` or `⇰`, preserving every hypothesis and the full conclusion. Custom CodeMirror placeholders are keyboard-operable reveal buttons. Arcana proofs start folded; Veil/Reveal buttons bulk-fold/unfold. Unfold effects schedule a post-update measurement, then short-lived spark particles and an editor glimmer. Successful manual round trips also sparkle. Reduced-motion disables both; no continuous animation. Unit tests cover every shipped declaration and multiline signatures.
 
 Dependencies: [[../components/translator]], [[graduate-grimoire]], [[../decisions/browser-translation]].
 
@@ -22,3 +22,5 @@ Pane visibility buttons sit outside both editors and independently hide/show mat
 `src/glyphs.ts` holds two backslash-shortcut tables and a pure `expand` function, tested in `tests/glyphs.test.ts`. The Lean pane uses Lean's usual names (`\to`, `\-1`). The spell pane maps each Lean shortcut and each ASCII Lean symbol to its spell glyph (`\:` → ⟡), plus `\sp` ✨, `\dag` †, `\merc` ☿. A shortcut expands at once when no longer shortcut shares its prefix; otherwise space or Tab completes it. The handler runs at `Prec.highest` so bracket auto-closing cannot claim `\(` first. The help panel lists the common shortcuts.
 
 The spell highlighter accepts both framed spell titles and ingredient identifiers with interior sparkles, such as `jade✨cube`. The help panel explains that these ingredients correspond to ordinary Lean variables, with unchanged types and hypotheses. Used ingredients and namespace aliases appear in the generated folio glossary. See [[../decisions/mathematical-names]].
+
+Arcana branding is shared by the masthead, pane labels, metadata, and docs. The spell highlighter recognizes the translator's finite carrier-rune alphabet. Help explains the Veyr family and provides `\rune`, `\ankh`, `\moon`, and `\othala` shortcuts. Glossaries include all used carrier runes, including single-letter Greek variables. See [[../decisions/arcana-vocabulary]].

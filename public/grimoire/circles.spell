@@ -1,38 +1,38 @@
-beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Foundations
+beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨☿Foundations
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
+familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
 
-ritual ✨Bound✨Circle✨ ⟪pouch✨of✨sand ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle pouch✨of✨sand
+ritual ✨Bound✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
 
-spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host coven⟫ ⟡ pouch✨of✨sand ⊆ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ cast
+spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ pouch✨of✨sand ⊆ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ cast
   summon jade✨cube sigilward
-  proclaim jade✨cube ∈ Cabal☿encircle pouch✨of✨sand
-  transmute ⟮Cabal☿✨Encirclement✨Criterion✨⟯
-  summon choir hedgeward
+  proclaim jade✨cube ∈ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
+  transmute ⟮✨Inner✨Veyr✨☿✨Encirclement✨Criterion✨⟯
+  summon ᛟ hedgeward
   missile hedgeward sigilward
 
-spell ✨Smallest✨Circle✨ ⟪pouch✨of✨sand ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
-    ✨Bound✨Circle✨ pouch✨of✨sand ⋜ circle ↭ pouch✨of✨sand ⊆ circle ⇰ cast
+spell ✨Smallest✨Circle✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
+    ✨Bound✨Circle✨ pouch✨of✨sand ⋜ ☥ ↭ pouch✨of✨sand ⊆ ☥ ⇰ cast
   fabricate
   ❖ summon enclosed jade✨cube sigilward
     bind gathered ⟡ jade✨cube ∈ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ ✨Gather✨the✨Seeds✨ pouch✨of✨sand sigilward
     missile enclosed gathered
   ❖ summon sown jade✨cube sigilward
-    bind ✨every✨circle✨ ⟡ ⟁ choir ⟡ Cabal coven᛫ pouch✨of✨sand ⊆ choir ↝ jade✨cube ∈ choir ⇰ Cabal☿✨Encirclement✨Criterion✨☿onward sigilward
-    missile ✨every✨circle✨ circle sown
+    bind ✨every✨circle✨ ⟡ ⟁ ᛟ ⟡ ✨Inner✨Veyr✨ ᛰ᛫ pouch✨of✨sand ⊆ ᛟ ↝ jade✨cube ∈ ᛟ ⇰ ✨Inner✨Veyr✨☿✨Encirclement✨Criterion✨☿onward sigilward
+    missile ✨every✨circle✨ ☥ sown
 
-spell ✨Keep✨the✨Circle✨ ⟪circle ⟡ Cabal coven⟫ ⧼jade✨cube silver✨bell ⟡ coven⧽
-    ⟪sigilward ⟡ jade✨cube ∈ circle⟫ ⟪runeward ⟡ silver✨bell ∈ circle⟫ ⟡ jade✨cube ⊛ silver✨bell† ∈ circle ⇰ cast
-  bind reversed ⟡ silver✨bell† ∈ circle ⇰ circle☿✨Reversal✨Remains✨ runeward
-  missile circle☿✨Binding✨Remains✨ sigilward reversed
+spell ✨Keep✨the✨Circle✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⧼jade✨cube silver✨bell ⟡ ᛰ⧽
+    ⟪sigilward ⟡ jade✨cube ∈ ☥⟫ ⟪runeward ⟡ silver✨bell ∈ ☥⟫ ⟡ jade✨cube ⊛ silver✨bell† ∈ ☥ ⇰ cast
+  bind reversed ⟡ silver✨bell† ∈ ☥ ⇰ ☥☿✨Reversal✨Remains✨ runeward
+  missile ☥☿✨Binding✨Remains✨ sigilward reversed
 
-spell ✨Seal✨the✨Circle✨ ⟪circle ⟡ Cabal coven⟫ ⟡ ✨Bound✨Circle✨ ⟪circle ⟡ Host coven⟫ ≣ circle ⇰ cast
+spell ✨Seal✨the✨Circle✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ✨Bound✨Circle✨ ⟪☥ ⟡ Host ᛰ⟫ ≣ ☥ ⇰ cast
   channel Stalemate
-  ❖ bind sown ⟡ ⟪circle ⟡ Host coven⟫ ⊆ circle ⇰ conjure jade✨cube sigilward ⇉ sigilward
-    missile ⟪✨Smallest✨Circle✨ ⟪circle ⟡ Host coven⟫ circle⟫☿backward sown
+  ❖ bind sown ⟡ ⟪☥ ⟡ Host ᛰ⟫ ⊆ ☥ ⇰ conjure jade✨cube sigilward ⇉ sigilward
+    missile ⟪✨Smallest✨Circle✨ ⟪☥ ⟡ Host ᛰ⟫ ☥⟫☿backward sown
   ❖ summon jade✨cube sigilward
-    missile ✨Gather✨the✨Seeds✨ ⟪circle ⟡ Host coven⟫ sigilward
+    missile ✨Gather✨the✨Seeds✨ ⟪☥ ⟡ Host ᛰ⟫ sigilward
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment

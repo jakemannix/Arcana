@@ -1,4 +1,4 @@
-name = "arcane_grimoire"
+name = "arcana_grimoire"
 version = "0.2.0"
 defaultTargets = ["Mathematics"]
 

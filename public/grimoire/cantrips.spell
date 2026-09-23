@@ -1,16 +1,16 @@
 beckon ✨Grand✨Archive✨☿Reason☿Rite☿Foundations
 beckon ✨Grand✨Archive✨☿Reason☿Portal☿Names
 
-sanctum Arcanum☿Cantrips
+sanctum Arcana☿Cantrips
 
-familiar ⧼aether vapor vesper ⟡ Essence⊛⧽
+familiar ⧼ᚨ ᛒ ᚷ ⟡ Essence⊛⧽
 
-ritual Weave ⟪copper✨wire ⟡ aether ↝ vapor⟫ ⟪silk✨cord ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ conjure jade✨cube ⇉ silk✨cord ⟪copper✨wire jade✨cube⟫
+ritual Weave ⟪copper✨wire ⟡ ᚨ ↝ ᛒ⟫ ⟪silk✨cord ⟡ ᛒ ↝ ᚷ⟫ ⟡ ᚨ ↝ ᚷ ⇰ conjure jade✨cube ⇉ silk✨cord ⟪copper✨wire jade✨cube⟫
 
-spell ✨Thread✨Unfolds✨ ⟪copper✨wire ⟡ aether ↝ vapor⟫ ⟪silk✨cord ⟡ vapor ↝ vesper⟫ ⟪jade✨cube ⟡ aether⟫ ⟡
+spell ✨Thread✨Unfolds✨ ⟪copper✨wire ⟡ ᚨ ↝ ᛒ⟫ ⟪silk✨cord ⟡ ᛒ ↝ ᚷ⟫ ⟪jade✨cube ⟡ ᚨ⟫ ⟡
     Weave copper✨wire silk✨cord jade✨cube ≣ silk✨cord ⟪copper✨wire jade✨cube⟫ ⇰ mirror
 
-spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk✨cord ⟡ vapor ↝ vesper⧽
+spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cord ⟡ ᛒ ↝ ᚷ⧽
     ⟪faith ⟡ Rite☿Faithful copper✨wire⟫ ⟪echoward ⟡ Rite☿Faithful silk✨cord⟫ ⟡
     Rite☿Faithful ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
   summon jade✨cube silver✨bell twinned
@@ -21,7 +21,7 @@ spell ✨Faithful✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk�
   bind ✨inner✨weave✨ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ echoward ✨outer✨weave✨
   missile faith ✨inner✨weave✨
 
-spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk✨cord ⟡ vapor ↝ vesper⧽
+spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ ᚨ ↝ ᛒ⧽ ⧼silk✨cord ⟡ ᛒ ↝ ᚷ⧽
     ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟪echoward ⟡ Rite☿Reaching silk✨cord⟫ ⟡
     Rite☿Reaching ⟪Weave copper✨wire silk✨cord⟫ ⇰ cast
   summon amber✨rod
@@ -32,10 +32,10 @@ spell ✨Reaching✨Weaving✨ ⧼copper✨wire ⟡ aether ↝ vapor⧽ ⧼silk�
     ▢ ≣ silk✨cord silver✨bell ⇰ sympathy silk✨cord sigilward
     ▢ ≣ amber✨rod ⇰ runeward
 
-spell ✨Mirror✨Return✨ ⟪obsidian✨mirror ⟡ aether ≃ vapor⟫ ⟪jade✨cube ⟡ aether⟫ ⟡ obsidian✨mirror☿reflect ⟪obsidian✨mirror jade✨cube⟫ ≣ jade✨cube ⇰
+spell ✨Mirror✨Return✨ ⟪obsidian✨mirror ⟡ ᚨ ≃ ᛒ⟫ ⟪jade✨cube ⟡ ᚨ⟫ ⟡ obsidian✨mirror☿reflect ⟪obsidian✨mirror jade✨cube⟫ ≣ jade✨cube ⇰
   obsidian✨mirror☿✨Return✨Path✨ jade✨cube
 
-spell ✨Mirror✨Depart✨ ⟪obsidian✨mirror ⟡ aether ≃ vapor⟫ ⟪silver✨bell ⟡ vapor⟫ ⟡ obsidian✨mirror ⟪obsidian✨mirror☿reflect silver✨bell⟫ ≣ silver✨bell ⇰
+spell ✨Mirror✨Depart✨ ⟪obsidian✨mirror ⟡ ᚨ ≃ ᛒ⟫ ⟪silver✨bell ⟡ ᛒ⟫ ⟡ obsidian✨mirror ⟪obsidian✨mirror☿reflect silver✨bell⟫ ≣ silver✨bell ⇰
   obsidian✨mirror☿✨Departure✨Path✨ silver✨bell
 
-seal Arcanum☿Cantrips
+seal Arcana☿Cantrips

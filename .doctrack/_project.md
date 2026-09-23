@@ -1,13 +1,13 @@
 ---
-project: lean-magic-editor
+project: arcana
 type: index
 doctrack_version: "3.0.0"
 last_updated: 2026-09-23
 tags: [doctrack/type/index, doctrack/status/active, doctrack/audience/claude]
 ---
-# Lean Magic browser editor
+# Arcana browser editor
 
-TypeScript/Vite static site in the local `web/` subproject, which is the root of the GitHub repository `jakemannix/ArcaneLean`. The `github` remote preserves the existing development history. Original Python sources and fixtures are bundled unchanged in `prototype/`. See [[features/editor]], [[components/translator]], and [[decisions/browser-translation]]. Run and test commands are in `README.md`.
+TypeScript/Vite browser project at the root of `jakemannix/Arcana`, with the GitHub repository tracked by the `origin` remote. Original Python sources and fixtures are bundled unchanged in `prototype/`. See [[features/editor]], [[components/translator]], and [[decisions/browser-translation]]. Run and test commands are in `README.md`.
 
 `AGENTS.md` is the entry point for future agents: it records the product intent, one-school-first scope, shared cantrips, mathematical guarantees, and the user's interaction and visual preferences.
 
@@ -32,7 +32,7 @@ The active product is now Enchantment/group theory, not the initial seven toy ex
 | src/magic.ts | Proof-body folding and reduced-motion-aware effects |
 | src/grimoire.generated.json | Verified generated catalog |
 | grimoire/chapters.json | Explanations and reference metadata |
-| grimoire/lexicon.json | Curated mathematical Arcane vocabulary |
+| grimoire/lexicon.json | Curated mathematical Arcana vocabulary |
 | scripts/verify-grimoire.ts | Lean build, decoded compilation, axiom audit, artifact generation |
 | tests/grimoire.test.ts | Provenance, round-trip, folding, and status regression checks |
 | math/Mathematics.lean | Whole-book Lean imports |
@@ -48,3 +48,5 @@ The active product is now Enchantment/group theory, not the initial seven toy ex
 | math/Mathematics/GroupTheory/Permutations.lean | The symmetric group on three elements |
 
 See [[decisions/mathematical-names]] for mathematical Lean naming, namespace aliases in saved keys, and material-component spell variables.
+
+See [[decisions/arcana-vocabulary]] for the Arcana rename, rune carriers, and the user-selected Veyr family. The human-facing vocabulary and mathematical inheritance guide is `grimoire/VOCABULARY.md`. The npm package is `arcana`; the Lean package is `arcana_grimoire`; the downloadable translation key is `public/grimoire/arcana.key.json`.

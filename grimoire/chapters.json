@@ -54,7 +54,7 @@
     "references": [{"path":"Mathlib/GroupTheory/QuotientGroup/Basic.lean","symbol":"QuotientGroup.quotientKerEquivRange"},{"path":"Mathlib/GroupTheory/Coset/Defs.lean","symbol":"QuotientGroup.eq"},{"path":"Mathlib/Algebra/Group/Equiv/Defs.lean","symbol":"MulEquiv.ofBijective"}]
   },
   {
-    "id": "lagrange", "school": "Enchantment", "title": "The measure of a coven", "subtitle": "Lagrange's theorem and element orders", "file": "Mathematics/GroupTheory/Lagrange.lean", "level": "III · Great enchantments",
+    "id": "lagrange", "school": "Enchantment", "title": "The measure of a veyr", "subtitle": "Lagrange's theorem and element orders", "file": "Mathematics/GroupTheory/Lagrange.lean", "level": "III · Great enchantments",
     "summary": "A finite group partitions into equally sized cosets. The size of every subgroup, and every element's period, divides the size of the whole.",
     "meaning": "|G| = |G/H|·|H|, hence |H| divides |G|. Also ord(x) divides |G|, and x raised to |G| is the identity. Joseph-Louis Lagrange found the counting idea in 1771, in work on polynomial equations. The general form for subgroups came later. When G is the group of nonzero remainders modulo a prime p, the last statement is Fermat's little theorem, which Pierre de Fermat stated in 1640.",
     "hypotheses": "G is a group and H any subgroup; normality is not needed to count cosets. These are finite-group counting statements. The Lean statements use Nat.card, which is defined to be 0 for infinite types, so their formal versions also extend to infinite groups with that convention.",
@@ -63,11 +63,11 @@
     "references": [{"path":"Mathlib/GroupTheory/Coset/Basic.lean","symbol":"Subgroup.groupEquivQuotientProdSubgroup"},{"path":"Mathlib/GroupTheory/Coset/Card.lean","symbol":"Subgroup.card_eq_card_quotient_mul_card_subgroup"},{"path":"Mathlib/GroupTheory/Coset/Card.lean","symbol":"Subgroup.card_subgroup_dvd_card"},{"path":"Mathlib/GroupTheory/OrderOfElement.lean","symbol":"orderOf_dvd_natCard"},{"path":"Mathlib/GroupTheory/OrderOfElement.lean","symbol":"pow_card_eq_one'"}]
   },
   {
-    "id": "unbreakable", "school": "Enchantment", "title": "The unbreakable coven", "subtitle": "Groups of prime order are simple", "file": "Mathematics/GroupTheory/SimpleGroups.lean", "level": "III · Great enchantments",
-    "summary": "A coven whose census is indivisible has no hidden circles. Nothing inside it can be broken away, so it is unbreakable.",
-    "meaning": "A group is simple when it has more than one element and its only normal subgroups are the trivial one and the whole group. If |G| = p is prime, every subgroup is trivial or all of G, so G is simple. The Arcane definition agrees exactly with mathlib's IsSimpleGroup.",
+    "id": "unbreakable", "school": "Enchantment", "title": "The unbreakable veyr", "subtitle": "Groups of prime order are simple", "file": "Mathematics/GroupTheory/SimpleGroups.lean", "level": "III · Great enchantments",
+    "summary": "A veyr whose census is indivisible has no hidden circles. Nothing inside it can be broken away, so it is unbreakable.",
+    "meaning": "A group is simple when it has more than one element and its only normal subgroups are the trivial one and the whole group. If |G| = p is prime, every subgroup is trivial or all of G, so G is simple. The Arcana definition agrees exactly with mathlib's IsSimpleGroup.",
     "hypotheses": "p is prime and Nat.card G = p. Because p is not zero, G is finite. Normality is never used: the theorem about hidden circles holds for every subgroup, normal or not.",
-    "proofIdea": "By Lagrange, the size of a subgroup H divides p. A prime has only two divisors. If |H| = 1, then H is trivial. If |H| = p = |G|, then H fills the whole group, because G is finite. A group of prime size has at least two elements, so it is nontrivial, and both conditions of an unbreakable coven hold.",
+    "proofIdea": "By Lagrange, the size of a subgroup H divides p. A prime has only two divisors. If |H| = 1, then H is trivial. If |H| = p = |G|, then H fills the whole group, because G is finite. A group of prime size has at least two elements, so it is nontrivial, and both conditions of an unbreakable veyr hold.",
     "prerequisites": ["lagrange", "kernels"], "concepts": ["isSimpleGroupProperty", "IsSimpleGroup", "Prime", "Normal", "card"],
     "references": [{"path":"Mathlib/GroupTheory/Subgroup/Simple.lean","symbol":"IsSimpleGroup"},{"path":"Mathlib/Data/Nat/Prime/Defs.lean","symbol":"Nat.Prime.eq_one_or_self_of_dvd"},{"path":"Mathlib/Algebra/Group/Subgroup/Finite.lean","symbol":"Subgroup.card_eq_iff_eq_top"},{"path":"Mathlib/GroupTheory/Index.lean","symbol":"Subgroup.card_eq_one"}]
   },

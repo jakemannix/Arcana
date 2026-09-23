@@ -19,6 +19,7 @@ export const SPELL_ABBREVIATIONS: Abbreviations = {
   ...Object.fromEntries(Object.entries(syms).filter(([lean]) => ascii.test(lean))),
   ...Object.fromEntries(Object.entries(tables.nums)),
   _: '▢', sp: '✨', dag: '†', merc: '☿', lang: '⦉', rang: '⦊', esc: '⟄',
+  rune: 'ᛰ', ankh: '☥', moon: '🌒', othala: 'ᛟ',
 };
 
 export interface Expansion { from: number; insert: string }

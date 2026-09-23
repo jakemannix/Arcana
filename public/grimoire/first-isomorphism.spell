@@ -1,57 +1,57 @@
-beckon Arcanum☿Enchantment☿Descent
+beckon Arcana☿Enchantment☿Descent
 
-sanctum Arcanum☿Enchantment
+sanctum Arcana☿Enchantment
 
-familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
-spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
+spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
   summon jade✨cube sigilward
   bind muted ⟡ copper✨wire jade✨cube ≣ ☉ ⇰ sigilward
   proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ ☉
   missile Kin☿extend muted
 
-ritual ✨Image✨Pact✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ copper✨wire☿silence ↝⊛ copper✨wire☿manifestation ⇰
+ritual ✨Image✨Pact✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ↝⊛ copper✨wire☿manifestation ⇰
   ✨Pass✨the✨Veil✨ copper✨wire☿silence copper✨wire☿✨confine✨to✨manifestation✨ ⟪✨Silence✨within✨the✨Image✨ copper✨wire⟫
 
-spell ✨Image✨of✨the✨Sigil✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
-    ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⟡ circle⟫ ≣ copper✨wire jade✨cube ⇰ mirror
+spell ✨Image✨of✨the✨Sigil✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
+    ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
-spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Faithful ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
+spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Faithful ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
   summon ruby✨shard ivory✨ring twinned
-  wrest ⦉jade✨cube᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ ruby✨shard
-  wrest ⦉silver✨bell᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ ivory✨ring
+  wrest ⦉jade✨cube᛫ mirror⦊ ⇰ ✨Veiled✨Veyr✨☿✨Every✨Veil✨has✨a✨Face✨ ruby✨shard
+  wrest ⦉silver✨bell᛫ mirror⦊ ⇰ ✨Veiled✨Veyr✨☿✨Every✨Veil✨has✨a✨Face✨ ivory✨ring
   bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰
-    litany copper✨wire jade✨cube ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⟡ circle⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube⟫☿reflect
-      ▢ ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge silver✨bell⟫ ⟡ circle⟫ ⇰ sympathy Kin☿core twinned
+    litany copper✨wire jade✨cube ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube⟫☿reflect
+      ▢ ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge silver✨bell⟫ ⟡ ☥⟫ ⇰ sympathy Kin☿core twinned
       ▢ ≣ copper✨wire silver✨bell ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire silver✨bell
   bind hushed ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ ☉ ⇰
     litany copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube† ⊛ copper✨wire silver✨bell ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† silver✨bell
       ▢ ≣ ⟪copper✨wire jade✨cube⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire jade✨cube⟫
       ▢ ≣ ⟪copper✨wire silver✨bell⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust† ⊛ copper✨wire silver✨bell⟫ echoing
       ▢ ≣ ☉ ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
-  missile ✨Veiled✨Coven✨☿✨Veil✨Equality✨☿backward hushed
+  missile ✨Veiled✨Veyr✨☿✨Veil✨Equality✨☿backward hushed
 
-spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
+spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
   summon quarry
   wrest ⦉jade✨cube᛫ sigilward⦊ ⇰ Herald☿✨Manifestation✨Criterion✨☿onward quarry☿attestation
-  hone ⦉✨Veiled✨Coven✨☿forge jade✨cube᛫ ?▢⦊
+  hone ⦉✨Veiled✨Veyr✨☿forge jade✨cube᛫ ?▢⦊
   channel Kin☿extend
-  litany ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⟡ circle⟫ ≣ copper✨wire jade✨cube ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube
+  litany ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube
     ▢ ≣ quarry ⇰ sigilward
 
-ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Image✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ copper✨wire☿silence ≃⊛ copper✨wire☿manifestation ⇰
+ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ≃⊛ copper✨wire☿manifestation ⇰
   ✨Pact✨Portal✨☿✨from✨perfection✨ ⟪✨Image✨Pact✨ copper✨wire⟫ ⦉✨Faithful✨Image✨ copper✨wire᛫ ✨Reaching✨Image✨ copper✨wire⦊
 
-spell ✨Reveal✨the✨Sigil✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪jade✨cube ⟡ coven⟫ ⟡
-    ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire ⟪✨Veiled✨Coven✨☿forge jade✨cube⟫ ⟡ circle⟫ ≣ copper✨wire jade✨cube ⇰ mirror
+spell ✨Reveal✨the✨Sigil✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
+    ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
-spell ✨Perfect✨Unveiling✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟡
+spell ✨Perfect✨Unveiling✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Perfect ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫ ⇰
   ⦉✨Faithful✨Image✨ copper✨wire᛫ ✨Reaching✨Image✨ copper✨wire⦊
 
-ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Realm✨ ⟪copper✨wire ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
-    coven ⧸ copper✨wire☿silence ≃⊛ circle ⇰
+ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Essence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
+    ᛰ ⧸ copper✨wire☿silence ≃⊛ ☥ ⇰
   ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫☿chain
-    ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain Cabal☿✨whole✨cabal✨portal✨⟫
+    ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain ✨Inner✨Veyr✨☿✨whole✨cabal✨portal✨⟫
 
-seal Arcanum☿Enchantment
+seal Arcana☿Enchantment

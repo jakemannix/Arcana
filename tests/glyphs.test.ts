@@ -28,3 +28,9 @@ test('every spell shortcut produces text that decodes to Lean', () => {
   for (const glyph of Object.values(spell)) assert.equal(typeof fromSpell(glyph, key), 'string');
   assert.equal(fromSpell(spell['(']! + spell[':=']! + spell['-1']!, key), '(:=⁻¹');
 });
+
+test('carrier shortcuts insert complete rune code points', () => {
+  assert.deepEqual(expand('\\moo', 'n', spell), { from: 4, insert: '🌒' });
+  assert.deepEqual(expand('\\ank', 'h', spell), { from: 4, insert: '☥' });
+  assert.deepEqual(expand('\\run', 'e', spell), { from: 4, insert: 'ᛰ' });
+});

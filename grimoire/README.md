@@ -144,19 +144,19 @@ ritual ✨Chain✨of✨Pacts✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk�
 spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube silver✨bell ⟡ ᛰ⟫ ⟡
     copper✨wire ⟪jade✨cube ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell ⇰ copper✨wire☿✨Carry✨the✨Binding✨ jade✨cube silver✨bell
 
-spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire ☉ ≣ ☉ ⇰ cast
-  bind doubled ⟡ copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ☉ ⊛ ☉ ⇰
-    litany copper✨wire ☉ ⊛ copper✨wire ☉ ≣ copper✨wire ⟪☉ ⊛ ☉⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire ☉ ☉⟫☿reflect
-      ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ ☉⟫
-      ▢ ≣ copper✨wire ☉ ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire ☉⟫⟫☿reflect
+spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire 一 ≣ 一 ⇰ cast
+  bind doubled ⟡ copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire 一 ⊛ 一 ⇰
+    litany copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire ⟪一 ⊛ 一⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire 一 一⟫☿reflect
+      ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ 一⟫
+      ▢ ≣ copper✨wire 一 ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire 一⟫⟫☿reflect
   missile ✨Strike✨from✨the✨Left✨ doubled
 
 spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast
-  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ ☉ ⇰
+  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ 一 ⇰
     litany copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ copper✨wire ⟪jade✨cube† ⊛ jade✨cube⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† jade✨cube⟫☿reflect
-      ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
-      ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
+      ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
+      ▢ ≣ 一 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
   missile ✨Undoer✨is✨Reversal✨ undone
 
 spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫
@@ -166,8 +166,8 @@ spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪sil
 
 spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰
-  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
-    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ ☉ ⇰ Pact☿mirror
+  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
+    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ 一 ⇰ Pact☿mirror
     ▢ ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
 seal Arcana☿Enchantment
@@ -199,19 +199,19 @@ familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ copper✨wire☿silence
 
 spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
-    jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
+    jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
 
 spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨cube ⟡ ᛰ⧽
     ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
-  bind muted ⟡ copper✨wire jade✨cube ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
-  bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ ☉ ⇰
+  bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
+  bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ 一 ⇰
     litany copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ ⊛ copper✨wire silk✨cord† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ silk✨cord†
       ▢ ≣ copper✨wire silk✨cord ⊛ copper✨wire jade✨cube ⊛ copper✨wire silk✨cord† ⇰
           sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ ⟪✨Preserve✨the✨Binding✨ copper✨wire silk✨cord jade✨cube⟫
-      ▢ ≣ copper✨wire silk✨cord ⊛ ☉ ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ muted
+      ▢ ≣ copper✨wire silk✨cord ⊛ 一 ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ muted
       ▢ ≣ copper✨wire silk✨cord ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire silk✨cord⟫⟫
       ▢ ≣ copper✨wire silk✨cord ⊛ ⟪copper✨wire silk✨cord⟫† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire silk✨cord⟫
-      ▢ ≣ ☉ ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
+      ▢ ≣ 一 ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
   missile ⟪✨Name✨the✨Silent✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫⟫☿backward hushed
 
 spell ✨Silence✨is✨Hallowed✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ⟪✨Circle✨of✨Silence✨ copper✨wire⟫☿Hallowed ⇰ cast
@@ -224,18 +224,18 @@ spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
   transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
   fabricate
   ❖ summon fidelity jade✨cube sigilward
-    bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire ☉ ⇰
-      litany copper✨wire jade✨cube ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
-        ▢ ≣ copper✨wire ☉ ⇰ ⟪✨Preserve✨the✨Stillness✨ copper✨wire⟫☿reflect
+    bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire 一 ⇰
+      litany copper✨wire jade✨cube ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
+        ▢ ≣ copper✨wire 一 ⇰ ⟪✨Preserve✨the✨Stillness✨ copper✨wire⟫☿reflect
     missile fidelity echoing
   ❖ summon hollowness jade✨cube silver✨bell twinned
-    bind hushed ⟡ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ ☉ ⇰
+    bind hushed ⟡ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ 一 ⇰
       litany copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube silver✨bell†
         ▢ ≣ copper✨wire silver✨bell ⊛ copper✨wire silver✨bell† ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell†⟫ twinned
         ▢ ≣ copper✨wire ⟪silver✨bell ⊛ silver✨bell†⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire silver✨bell silver✨bell†⟫☿reflect
-        ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silver✨bell⟫
-        ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
-    bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ ☉ ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
+        ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silver✨bell⟫
+        ▢ ≣ 一 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
+    bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ 一 ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
     missile ✨Balanced✨Division✨☿onward vanished
 
 seal Arcana☿Enchantment
@@ -267,8 +267,8 @@ familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
 spell ✨Veil✨Hides✨the✨Difference✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫
     ⧼jade✨cube silver✨bell ⟡ ᛰ⧽ ⟪kinship ⟡ jade✨cube† ⊛ silver✨bell ∈ ᚾ⟫ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ cast
-  bind muted ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ ☉ ⇰ veilward kinship
-  litany copper✨wire jade✨cube ≣ copper✨wire jade✨cube ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire jade✨cube⟫⟫☿reflect
+  bind muted ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 一 ⇰ veilward kinship
+  litany copper✨wire jade✨cube ≣ copper✨wire jade✨cube ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire jade✨cube⟫⟫☿reflect
     ▢ ≣ copper✨wire jade✨cube ⊛ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire jade✨cube ⊛ pearl✨dust⟫ muted☿reflect
     ▢ ≣ copper✨wire ⟪jade✨cube ⊛ ⟪jade✨cube† ⊛ silver✨bell⟫⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube ⟪jade✨cube† ⊛ silver✨bell⟫⟫☿reflect
     ▢ ≣ copper✨wire silver✨bell ⇰ sympathy copper✨wire ⟪✨Return✨from✨the✨Left✨ jade✨cube silver✨bell⟫
@@ -320,8 +320,8 @@ familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
 
 spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
   summon jade✨cube sigilward
-  bind muted ⟡ copper✨wire jade✨cube ≣ ☉ ⇰ sigilward
-  proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ ☉
+  bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ sigilward
+  proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ 一
   missile Kin☿extend muted
 
 ritual ✨Image✨Pact✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ᛰ ⧸ copper✨wire☿silence ↝⊛ copper✨wire☿manifestation ⇰
@@ -338,11 +338,11 @@ spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿F
     litany copper✨wire jade✨cube ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube⟫☿reflect
       ▢ ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge silver✨bell⟫ ⟡ ☥⟫ ⇰ sympathy Kin☿core twinned
       ▢ ≣ copper✨wire silver✨bell ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire silver✨bell
-  bind hushed ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ ☉ ⇰
+  bind hushed ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 一 ⇰
     litany copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube† ⊛ copper✨wire silver✨bell ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† silver✨bell
       ▢ ≣ ⟪copper✨wire jade✨cube⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire jade✨cube⟫
       ▢ ≣ ⟪copper✨wire silver✨bell⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust† ⊛ copper✨wire silver✨bell⟫ echoing
-      ▢ ≣ ☉ ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
+      ▢ ≣ 一 ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
   missile ✨Veiled✨Veyr✨☿✨Veil✨Equality✨☿backward hushed
 
 spell ✨Reaching✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ copper✨wire⟫ ⇰ cast
@@ -412,12 +412,12 @@ spell ✨Lagrange's✨Measure✨of✨the✨Cycle✨ ⟪jade✨cube ⟡ ᛰ⟫ �
   litany period jade✨cube ≣ Tally☿census ⟪✨Inner✨Veyr✨☿✨cycle✨circle✨ jade✨cube⟫ ⇰ ⟪Tally☿✨Cycle✨Census✨ jade✨cube⟫☿reflect
     ▢ ∣ Tally☿census ᛰ ⇰ ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ⟪✨Inner✨Veyr✨☿✨cycle✨circle✨ jade✨cube⟫
 
-spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ ☉ ⇰ cast
+spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ 一 ⇰ cast
   wrest ⦉onyx✨bead᛫ measureward⦊ ⇰ ✨Lagrange's✨Measure✨of✨the✨Cycle✨ jade✨cube
   litany jade✨cube ⌃ Tally☿census ᛰ ≣ jade✨cube ⌃ ⟪period jade✨cube ⊛ onyx✨bead⟫ ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ jade✨cube ⌃ pinch✨of✨sulfur⟫ measureward
     ▢ ≣ ⟪jade✨cube ⌃ period jade✨cube⟫ ⌃ onyx✨bead ⇰ ✨Nested✨Ascent✨ jade✨cube ⟪period jade✨cube⟫ onyx✨bead
-    ▢ ≣ ☉ ⌃ onyx✨bead ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⌃ onyx✨bead⟫ ⟪✨Period✨Returns✨ jade✨cube⟫
-    ▢ ≣ ☉ ⇰ ✨Stillness✨Ascends✨ onyx✨bead
+    ▢ ≣ 一 ⌃ onyx✨bead ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⌃ onyx✨bead⟫ ⟪✨Period✨Returns✨ jade✨cube⟫
+    ▢ ≣ 一 ⇰ ✨Stillness✨Ascends✨ onyx✨bead
 
 seal Arcana☿Enchantment
 ```
@@ -461,9 +461,9 @@ spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Veyr✨ ᛰ ↭ �
 
 spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫
     ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡ ☥ ≣ ⊥ ⩔ ☥ ≣ ⊤ ⇰ cast
-  bind counted ⟡ Tally☿census ᛰ ≢ ⊘ ⇰
+  bind counted ⟡ Tally☿census ᛰ ≢ 〇 ⇰
     litany Tally☿census ᛰ ≣ ruby✨shard ⇰ censusward
-      ▢ ≢ ⊘ ⇰ primalward☿✨never✨void✨
+      ▢ ≢ 〇 ⇰ primalward☿✨never✨void✨
   bind bounded ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ counted
   bind measured ⟡ Tally☿census ☥ ∣ ruby✨shard ⇰
     litany Tally☿census ☥ ∣ Tally☿census ᛰ ⇰ ✨Lagrange's✨Measure✨of✨the✨Veyr✨ ☥
@@ -479,12 +479,12 @@ spell ✨No✨Hidden✨Circles✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward �
 
 spell ✨Indivisible✨Veyrs✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪censusward ⟡ Tally☿census ᛰ ≣ ruby✨shard⟫ ⟡
     ✨Unbreakable✨Veyr✨ ᛰ ⇰ cast
-  bind counted ⟡ Tally☿census ᛰ ≢ ⊘ ⇰
+  bind counted ⟡ Tally☿census ᛰ ≢ 〇 ⇰
     litany Tally☿census ᛰ ≣ ruby✨shard ⇰ censusward
-      ▢ ≢ ⊘ ⇰ primalward☿✨never✨void✨
+      ▢ ≢ 〇 ⇰ primalward☿✨never✨void✨
   bind bounded ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ counted
-  bind many ⟡ ☉ ⋖ Tally☿census ᛰ ⇰
-    litany ☉ ⋖ ruby✨shard ⇰ primalward☿✨beyond✨one✨
+  bind many ⟡ 一 ⋖ Tally☿census ᛰ ⇰
+    litany 一 ⋖ ruby✨shard ⇰ primalward☿✨beyond✨one✨
       ▢ ≣ Tally☿census ᛰ ⇰ censusward☿reflect
   bind plural ⟡ Plural ᛰ ⇰ Bounded☿✨Many✨Means✨Plural✨☿onward many
   hone ⦉plural᛫ ?▢⦊
@@ -603,11 +603,11 @@ spell ✨The✨Shuffles✨Obey✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ �
 spell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ≣ ⊥ ⇰ cast
   transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
   summon silk✨cord echoward
-  bind idle ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ ✨Pact✨into✨the✨Shuffles✨ silk✨cord⟫☿onward echoward
-  litany silk✨cord ≣ silk✨cord ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ silk✨cord⟫☿reflect
-    ▢ ≣ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ☉ ⇰ ⟪✨Command✨is✨Binding✨ silk✨cord ☉⟫☿reflect
-    ▢ ≣ ⟪☉ ⟡ Portal☿Shuffling ᛰ⟫ ☉ ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather ☉⟫ idle
-    ▢ ≣ ☉ ⇰ mirror
+  bind idle ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ ✨Pact✨into✨the✨Shuffles✨ silk✨cord⟫☿onward echoward
+  litany silk✨cord ≣ silk✨cord ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ silk✨cord⟫☿reflect
+    ▢ ≣ ✨Pact✨into✨the✨Shuffles✨ silk✨cord 一 ⇰ ⟪✨Command✨is✨Binding✨ silk✨cord 一⟫☿reflect
+    ▢ ≣ ⟪一 ⟡ Portal☿Shuffling ᛰ⟫ 一 ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather 一⟫ idle
+    ▢ ≣ 一 ⇰ mirror
 
 spell ✨No✨Two✨Commands✨Alike✨ ⟡
     Rite☿Faithful ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ⇰
@@ -643,25 +643,25 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Cycles
 
 sanctum Arcana☿Enchantment
 
-byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 3⟫
+byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 三⟫
 
-ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ⊘ ☉
+ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 〇 一
 
-ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ☉ 2
+ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 一 二
 
-spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 6 ⇰ cast divine
+spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 六 ⇰ cast divine
 
-spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ ☉ ⇰
-  Portal☿✨Exchange✨Undoes✨Itself✨ ⊘ ☉
+spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ 一 ⇰
+  Portal☿✨Exchange✨Undoes✨Itself✨ 〇 一
 
 spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast
   summon twinned
-  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ≣ ☉ ⇰ cast divine
-  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ≣ 2 ⇰ cast divine
-  bind clash ⟡ ⟪☉ ⟡ Fetter 3⟫ ≣ 2 ⇰
-    litany ⟪☉ ⟡ Fetter 3⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ⇰ sunwise☿reflect
-      ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ⇰ sympathy ⟪conjure raven✨feather ⇉ raven✨feather ⊘⟫ twinned
-      ▢ ≣ 2 ⇰ widdershins
+  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ≣ 一 ⇰ cast divine
+  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ≣ 二 ⇰ cast divine
+  bind clash ⟡ ⟪一 ⟡ Fetter 三⟫ ≣ 二 ⇰
+    litany ⟪一 ⟡ Fetter 三⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ⇰ sunwise☿reflect
+      ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ⇰ sympathy ⟪conjure raven✨feather ⇉ raven✨feather 〇⟫ twinned
+      ▢ ≣ 二 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
 seal Arcana☿Enchantment
@@ -709,8 +709,8 @@ spell ✨Only✨One✨Primordial✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ �
   summon verse
   unravel verse through ✨Primordial✨Choir✨☿✨verse✨by✨verse✨ whence
   ⫽ ✨empty✨verse✨ ⇉
-    litany brass✨key ☉ ≣ ☉ ⇰ brass✨key☿✨keeps✨stillness✨
-      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire ☉ ⇰ ⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨keeps✨stillness✨☿reflect
+    litany brass✨key 一 ≣ 一 ⇰ brass✨key☿✨keeps✨stillness✨
+      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire 一 ⇰ ⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨keeps✨stillness✨☿reflect
   ⫽ ✨seed✨then✨verse✨ pouch✨of✨sand verse verseward ⇉
     litany brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand ⊛ verse⟫ ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ⊛ brass✨key verse ⇰ brass✨key☿✨Carry✨the✨Binding✨ ▢ ▢
       ▢ ≣ copper✨wire pouch✨of✨sand ⊛ brass✨key verse ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ brass✨key verse⟫ ⟪seedward pouch✨of✨sand⟫
@@ -733,12 +733,12 @@ ritual ✨Gather✨the✨Reversible✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ �
       undoer ⇰ copper✨wire silk✨cord†
       ✨undoes✨after✨ ⇰
         litany copper✨wire silk✨cord ⊛ copper✨wire silk✨cord† ≣ copper✨wire ⟪silk✨cord ⊛ silk✨cord†⟫ ⇰ ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord silk✨cord†⟫☿reflect
-          ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silk✨cord⟫
-          ▢ ≣ ☉ ⇰ copper✨wire☿✨keeps✨stillness✨
+          ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silk✨cord⟫
+          ▢ ≣ 一 ⇰ copper✨wire☿✨keeps✨stillness✨
       ✨undoes✨before✨ ⇰
         litany copper✨wire silk✨cord† ⊛ copper✨wire silk✨cord ≣ copper✨wire ⟪silk✨cord† ⊛ silk✨cord⟫ ⇰ ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord† silk✨cord⟫☿reflect
-          ▢ ≣ copper✨wire ☉ ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ silk✨cord⟫
-          ▢ ≣ ☉ ⇰ copper✨wire☿✨keeps✨stillness✨ ⧽
+          ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ silk✨cord⟫
+          ▢ ≣ 一 ⇰ copper✨wire☿✨keeps✨stillness✨ ⧽
   ✨carries✨stillness✨ ⇰ Reversibles☿extend copper✨wire☿✨keeps✨stillness✨
   ✨carries✨binding✨ silk✨cord onyx✨bead ⇰ Reversibles☿extend ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord onyx✨bead⟫
 
@@ -846,7 +846,7 @@ ritual ✨The✨Integers✨Hold✨Every✨Member✨ ⟡ ⟪Unchanted Balances �
   ⟪✨powers✨of✨one✨ ᛰ⟫☿reflect
 
 spell ✨Where✨the✨Step✨Goes✨ ⟪brass✨key ⟡ Unchanted Balances ↝⊛ ᛰ⟫ ⟡
-    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant ☉⟫ ⇰ mirror
+    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant 一⟫ ⇰ mirror
 
 seal Proxies
 

@@ -13,18 +13,26 @@ const dictionary = (table: NameMap): NameMap => Object.assign(Object.create(null
 export const WORDS: NameMap = dictionary(tables.words);
 const SYMS = dictionary({ ...tables.syms, '.': NAMESPACE_SEPARATOR }), NUMS = dictionary(tables.nums);
 const inverse = (table: NameMap): NameMap => dictionary(Object.fromEntries(Object.entries(table).map(([k, v]) => [v, k])));
-const INV_WORDS = inverse(WORDS), INV_SYMS = inverse(SYMS), INV_NUMS = dictionary({ ...inverse(NUMS), '▢': '_' });
+const INV_WORDS = inverse(WORDS), INV_SYMS = inverse(SYMS), INV_NUMS = inverse(NUMS);
+export const KANJI_DIGITS = Object.values(NUMS).join('');
+const kanjiDigit = new RegExp(`[${KANJI_DIGITS}]`, 'gu');
+function numberPattern(digits: string): RegExp {
+  return new RegExp(`^(?:${digits[0]}[xX][${digits}a-fA-F]+|${digits[0]}[bB][${digits.slice(0, 2)}]+|` +
+    `${digits[0]}[oO][${digits.slice(0, 8)}]+|[${digits}]+(?:\\.[${digits}]+)?(?:[eE][+-]?[${digits}]+)?)`, 'u');
+}
+export const LEAN_NUMBER = numberPattern('0123456789');
+export const SPELL_NUMBER = numberPattern(KANJI_DIGITS);
 const declarations = new Set(tables.declWords);
 const component = String.raw`(?:«[^»]*»|[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*)`;
 const word = String.raw`[\p{L}\p{Nl}_][\p{L}\p{Nl}\p{N}\p{M}_'!?]*`;
 // Spell titles retain their framing sparkles; material components use jade✨cube.
 const sparkled = `(?:${SPARKLE}(?:${word}${SPARKLE})+|${word}(?:${SPARKLE}${word})+)`;
-const spellComponent = `(?:${sparkled}|${component}|${RUNE_PATTERN})`;
+const spellComponent = `(?![${KANJI_DIGITS}])(?:${sparkled}|${component}|${RUNE_PATTERN})`;
 const ident = new RegExp(`^${component}(?:\\.${component})*`, 'u');
 const spellIdent = new RegExp(`^${spellComponent}(?:${NAMESPACE_SEPARATOR}${spellComponent})*`, 'u');
-const legalName = new RegExp(`^(?:${RUNE_PATTERN}|${sparkled}|${word})$`, 'u');
+const legalName = new RegExp(`^(?![${KANJI_DIGITS}])(?:${RUNE_PATTERN}|${sparkled}|${word})$`, 'u');
 const leanSymbols = [...new Set([...Object.keys(SYMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
-const spellSymbols = [...new Set([...Object.keys(INV_SYMS), ...Object.keys(INV_NUMS), ...tables.passSyms])].sort((a, b) => b.length - a.length);
+const spellSymbols = [...new Set([...Object.keys(INV_SYMS), '▢', ...tables.passSyms])].sort((a, b) => b.length - a.length);
 
 /** A lossless lexical pass; incomplete input is preserved while the user types. */
 export function tokenize(source: string, spell = false): Token[] {
@@ -59,7 +67,7 @@ export function tokenize(source: string, spell = false): Token[] {
     }
     if ((match = /^'(?:[^'\\]|\\(?:u\{[\da-fA-F]+\}|.))'/u.exec(rest))) { emit('char', match[0].length); continue; }
     if (rest.startsWith(ESC)) { const next = Array.from(rest.slice(1))[0] ?? ''; emit(spell ? 'esc' : 'other', spell ? 1 + next.length : 1); continue; }
-    if ((match = /^(?:0[xX][0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+|\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)/.exec(rest))) { emit('num', match[0].length); continue; }
+    if ((match = (spell ? SPELL_NUMBER : LEAN_NUMBER).exec(rest))) { emit('num', match[0].length); continue; }
     const symbol = symbols.find(s => rest.startsWith(s));
     if (symbol) { emit('sym', symbol.length); continue; }
     if ((match = (spell ? spellIdent : ident).exec(rest))) { emit('ident', match[0].length); continue; }
@@ -160,7 +168,7 @@ export function toSpell(source: string, key: Key): string {
   let scope = '', pending = false, anon = 0;
   return tokens.map(token => {
     const t = token.text;
-    if (token.kind === 'num') return NUMS[t] ?? t;
+    if (token.kind === 'num') return t.replace(/[0-9]/g, digit => NUMS[digit]);
     if (token.kind === 'ident') {
       if (t === '_') return '▢';
       const parts = components(t);
@@ -169,7 +177,7 @@ export function toSpell(source: string, key: Key): string {
       return key.name(parts, scope);
     }
     if (token.kind === 'sym') return SYMS[t] ?? t;
-    if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || Object.hasOwn(INV_NUMS, t) || runeSet.has(t) || t === ESC || t === SPARKLE)) return ESC + t;
+    if (token.kind === 'other' && (Object.hasOwn(INV_SYMS, t) || t === '▢' || runeSet.has(t) || t === ESC || t === SPARKLE)) return ESC + t;
     return t;
   }).join('');
 }
@@ -178,7 +186,9 @@ export function fromSpell(source: string, key: Key): string {
   let scope = '', pending = false, anon = 0;
   return tokenize(source, true).map(({ kind, text: t }) => {
     if (kind === 'esc') return t.slice(1);
+    if (kind === 'num') return t.replace(kanjiDigit, digit => INV_NUMS[digit]);
     if (kind === 'other' && t === '.') throw new Error('Use ☿ for namespaces and field access in Arcana.');
+    if (kind === 'other' && /^[0-9]$/.test(t)) throw new Error('Use kanji digits 〇一二三四五六七八九 in Arcana; type a backslash before a digit to insert it.');
     if (kind === 'ident') {
       const parts = components(t, true);
       if (declarations.has(INV_WORDS[parts[0]]) && parts.length === 1) { pending = true; scope = `#${++anon}`; return INV_WORDS[t]; }
@@ -186,7 +196,7 @@ export function fromSpell(source: string, key: Key): string {
       if (pending) { pending = false; if (!Object.hasOwn(WORDS, decoded[0])) { scope = decoded[0]; decoded = key.leanName(parts, scope); } }
       return decoded.join('.');
     }
-    if (kind === 'sym') return INV_NUMS[t as keyof typeof INV_NUMS] ?? INV_SYMS[t] ?? t;
+    if (kind === 'sym') return t === '▢' ? '_' : INV_SYMS[t] ?? t;
     return t;
   }).join('');
 }

@@ -1,0 +1,21 @@
+beckon GrandArchive.CovenLore.Veils.Census
+beckon GrandArchive.CovenLore.Cycles
+
+sanctum Arcanum.Enchantment
+
+familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
+
+spell CountTheVeils ⟪circle ⟡ Cabal coven⟫ ⟡
+    Tally.census coven ≣ Tally.census ⟪coven ⧸ circle⟫ ⊛ Tally.census circle ⇰
+  circle.CosetCensus
+
+spell MeasureOfTheCoven ⟪circle ⟡ Cabal coven⟫ ⟡
+    Tally.census circle ∣ Tally.census coven ⇰ circle.LagrangeBinding
+
+spell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally.census coven ⇰
+  CycleDividesCensus mark
+
+spell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally.census coven ≣ ☉ ⇰
+  CensusReturns
+
+seal Arcanum.Enchantment

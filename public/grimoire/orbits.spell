@@ -1,0 +1,21 @@
+beckon GrandArchive.CovenLore.Commands.Effigies
+beckon GrandArchive.CovenLore.Veils.Census
+
+sanctum Arcanum.Enchantment
+
+familiar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯
+
+ineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡
+    Commanding.procession coven mark ≃ coven ⧸ Commanding.stillguard coven mark ⇰
+  Commanding.OrbitCorrespondence coven mark
+
+spell CommandThroughThePortal ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡
+    ⟪⟪OrbitPortal mark⟫.reflect ⟪VeiledCoven.forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror
+
+spell OrbitOfCommand ⟪mark ⟡ realm⟫ ⟡
+    Tally.census ⟪Commanding.procession coven mark⟫ ⊛ Tally.census ⟪Commanding.stillguard coven mark⟫ ≣
+      Tally.census coven ⇰ cast
+  transmute ⟮↜ Tally.CensusOfPairs⟯
+  missile Tally.CensusThroughPortal ⟪Commanding.OrbitDecomposition coven mark⟫
+
+seal Arcanum.Enchantment

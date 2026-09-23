@@ -20,3 +20,17 @@ TypeScript/Vite static site in the `web/` subproject. See [[features/editor]], [
 | src/Schools.spell | Python-generated golden fixture |
 | tests/translator.test.ts | Compatibility and regression coverage |
 | index.html | Entry point and metadata |
+
+## Graduate grimoire (2026-09-23)
+The active product is now Enchantment/group theory, not the initial seven toy examples. See [[features/graduate-grimoire]] for every formal source module and verification flow. The broader multi-school goal remains pending user review of this intermediate chapter.
+
+| Source file | Responsibility |
+|---|---|
+| src/catalog.ts | Verified library access and checked/draft status |
+| src/magic.ts | Proof-body folding and reduced-motion-aware effects |
+| src/grimoire.generated.json | Verified generated catalog |
+| grimoire/chapters.json | Explanations and reference metadata |
+| grimoire/lexicon.json | Curated mathematical Arcane vocabulary |
+| scripts/verify-grimoire.ts | Lean build, decoded compilation, axiom audit, artifact generation |
+| tests/grimoire.test.ts | Provenance, round-trip, folding, and status regression checks |
+| math/Arcane.lean | Whole-book Lean imports |

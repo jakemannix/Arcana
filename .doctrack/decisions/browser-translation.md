@@ -10,3 +10,6 @@ Use a pure TypeScript port of the original Python toy and CodeMirror for both pa
 Bundle both source texts with their key because spell text alone cannot reliably recover arbitrary renamed Lean identifiers. Reserve readable quoted names before lexicon allocation to repair the known collision. Original Python files remain unchanged.
 
 See [[components/translator]] and [[features/editor]]; project map [[_project]].
+
+## Checked library, unchecked edits (2026-09-23)
+The graduate grimoire adds a local Lean/mathlib verification pipeline; the browser remains static. This preserves the lightweight editor while allowing genuine proof-checked originals. A generated catalog plus hashes ties badges to exact verified source; edits immediately lose the proof-check claim. See [[../features/graduate-grimoire]].

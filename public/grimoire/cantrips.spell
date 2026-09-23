@@ -1,0 +1,24 @@
+beckon GrandArchive.Reason.Rite.Foundations
+beckon GrandArchive.Reason.Portal.Names
+
+sanctum Arcanum.Cantrips
+
+familiar ⧼aether vapor vesper ⟡ Essence⊛⧽
+
+ritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ weft ⊚ warp
+
+spell ThreadUnfolds ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡
+    Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror
+
+spell FaithfulWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
+    ⟪faith ⟡ Rite.Faithful warp⟫ ⟪echoWard ⟡ Rite.Faithful weft⟫ ⟡
+    Rite.Faithful ⟪Weave warp weft⟫ ⇰ echoWard.threading faith
+
+spell ReachingWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
+    ⟪faith ⟡ Rite.Reaching warp⟫ ⟪echoWard ⟡ Rite.Reaching weft⟫ ⟡
+    Rite.Reaching ⟪Weave warp weft⟫ ⇰ echoWard.threading faith
+
+spell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal.reflect ⟪portal mark⟫ ≣ mark ⇰
+  portal.ReturnThroughMirror mark
+
+seal Arcanum.Cantrips

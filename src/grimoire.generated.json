@@ -1,0 +1,1799 @@
+{
+  "format": "arcane-grimoire/v1",
+  "mathlibRevision": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "leanToolchain": "leanprover/lean4:v4.33.1",
+  "translatorHash": "b319f1d492764b14cc8dbf031e0436e234108bd018a2519c6d37e076e68291b6",
+  "tablesHash": "2c37c34ad9d15f3c570ad1549fb75737daf2b2ef0f08eb325890f2a18c9a0746",
+  "metadataHash": "9ae37caef9091ffa7b1fee2f6c454ae5597487c2e6d7d02089a3853892d92643",
+  "lexiconHash": "24b239bf0334066c99e5cf2c4da0acf1261acf70c25b61d2b5506c113ab625b9",
+  "key": {
+    "global": {
+      "Element": "Humour",
+      "fire": "flame",
+      "cold": "rime",
+      "double": "Twinning",
+      "double_eq": "Enlarge",
+      "n": "ember",
+      "k": "cinder",
+      "ih": "echo",
+      "and_swap": "Sanctuary",
+      "p": "wisp",
+      "q": "coset",
+      "hp": "wispward",
+      "hq": "wraithward",
+      "always_more": "Haste",
+      "m": "shade",
+      "lt_succ_self": "Outpace",
+      "twice_reversed": "Mirror Image",
+      "xs": "beads",
+      "α": "aether",
+      "Potion": "Draught",
+      "heat": "warmth",
+      "bitterness": "gall",
+      "mix": "Brew",
+      "mix_comm": "Stir",
+      "add_comm": "Exchange",
+      "Named": "Pledged",
+      "name": "pledge",
+      "Titled": "Styled",
+      "title": "style",
+      "fireball": "Fireball",
+      "le_succ": "Kindle",
+      "le_trans": "Relay",
+      "Abjuration": "Abjuration",
+      "Conjuration": "Conjuration",
+      "Divination": "Divination",
+      "Enchantment": "Enchantment",
+      "Evocation": "Evocation",
+      "Illusion": "Illusion",
+      "Necromancy": "Necromancy",
+      "Transmutation": "Transmutation",
+      "a": "ash",
+      "b": "elm",
+      "c": "yew",
+      "h": "ward",
+      "h₁": "innerward",
+      "h₂": "outerward",
+      "f": "warp",
+      "g": "weft",
+      "β": "vapor",
+      "γ": "vesper",
+      "δ": "dusk",
+      "t": "token",
+      "lt_or_gt_of_ne": "Parting",
+      "le_antisymm": "Stalemate",
+      "pow_succ": "Flare",
+      "choose": "Raise",
+      "choose_spec": "Bidding",
+      "turn": "Turning",
+      "Arcane": "Arcanum",
+      "Cantrips": "Cantrips",
+      "Mathlib": "GrandArchive",
+      "Logic": "Reason",
+      "Algebra": "Bindings",
+      "GroupTheory": "CovenLore",
+      "G": "coven",
+      "H": "circle",
+      "K": "choir",
+      "X": "realm",
+      "N": "veil",
+      "x": "mark",
+      "y": "rune",
+      "s": "seeds",
+      "e": "portal",
+      "hf": "faith",
+      "hg": "echoWard",
+      "hx": "sigilWard",
+      "hy": "runeWard",
+      "hN": "veilWard",
+      "Injective": "Faithful",
+      "Surjective": "Reaching",
+      "Bijective": "Perfect",
+      "Equiv": "Portal",
+      "MulEquiv": "PactPortal",
+      "MulAction": "Commanding",
+      "Perm": "Shuffling",
+      "ker": "silence",
+      "range": "manifestation",
+      "closure": "encircle",
+      "card": "census",
+      "orderOf": "period",
+      "comp": "threading",
+      "swap": "exchangeSigils",
+      "stabilizer": "stillguard",
+      "orbit": "procession",
+      "QuotientGroup": "VeiledCoven",
+      "lift": "descend",
+      "thread": "Weave",
+      "thread_apply": "ThreadUnfolds",
+      "faithful_thread": "FaithfulWeaving",
+      "reaching_thread": "ReachingWeaving",
+      "mirror_return": "MirrorReturn",
+      "generatedCircle": "BoundCircle",
+      "circle_contains_seed": "GatherTheSeeds",
+      "circle_is_least": "SmallestCircle",
+      "circle_closed_under_division": "KeepTheCircle",
+      "circle_of_circle": "SealTheCircle",
+      "chainedPact": "ChainOfPacts",
+      "pact_preserves_product": "PreserveTheBinding",
+      "pact_preserves_inverse": "ReverseTheBinding",
+      "faithful_pacts_compose": "ChainWithoutLoss",
+      "silence_of_chain": "SilenceInTheChain",
+      "silence": "CircleOfSilence",
+      "silence_iff": "NameTheSilent",
+      "silence_survives_conjugation": "UnbrokenSilence",
+      "silence_is_normal": "SilenceIsHallowed",
+      "faithful_iff_silence_trivial": "NothingLost",
+      "descendedPact": "PassTheVeil",
+      "descent_on_representative": "SpeakThroughTheVeil",
+      "descent_is_unique": "OnlyOnePassage",
+      "unveiledImage": "UnveilTheImage",
+      "unveiling_on_representative": "RevealTheSigil",
+      "unveiling_is_bijective": "PerfectUnveiling",
+      "unveiledCodomain": "UnveilTheRealm",
+      "count_the_cosets": "CountTheVeils",
+      "circle_divides_coven": "MeasureOfTheCoven",
+      "period_divides_coven": "MeasureOfTheCycle",
+      "full_cycle_returns": "TheGreatReturn",
+      "orbitPortal": "OrbitPortal",
+      "portal_returns_action": "CommandThroughThePortal",
+      "orbit_times_stabilizer": "OrbitOfCommand",
+      "triangleSymmetries": "ThreeSigils",
+      "firstSwap": "FirstExchange",
+      "secondSwap": "SecondExchange",
+      "six_symmetries": "SixDances",
+      "swap_twice": "DanceAndReturn",
+      "swaps_do_not_commute": "OrderMatters",
+      "Basic": "Foundations",
+      "Defs": "Names",
+      "symm_apply_apply": "ReturnThroughMirror",
+      "subset_closure": "SeedsWithinCircle",
+      "closure_le": "LeastBinding",
+      "mul_mem": "BindingRemains",
+      "inv_mem": "ReversalRemains",
+      "closure_eq": "CircleAlreadySealed",
+      "Ker": "Silences",
+      "map_mul": "CarryTheBinding",
+      "map_inv": "CarryTheReversal",
+      "mem_ker": "SilenceCriterion",
+      "hx'": "silenceWard",
+      "ker_eq_bot_iff": "FaithfulnessCriterion",
+      "inductionOn": "LiftTheVeil",
+      "quotientKerEquivRange": "ImageRevelation",
+      "bijective": "perfect",
+      "quotientKerEquivOfSurjective": "RealmRevelation",
+      "Coset": "Veils",
+      "Card": "Census",
+      "OrderOfElement": "Cycles",
+      "card_eq_card_quotient_mul_card_subgroup": "CosetCensus",
+      "card_subgroup_dvd_card": "LagrangeBinding",
+      "orderOf_dvd_natCard": "CycleDividesCensus",
+      "pow_card_eq_one'": "CensusReturns",
+      "GroupAction": "Commands",
+      "orbitEquivQuotientStabilizer": "OrbitCorrespondence",
+      "card_prod": "CensusOfPairs",
+      "card_congr": "CensusThroughPortal",
+      "orbitProdStabilizerEquivGroup": "OrbitDecomposition",
+      "Fintype": "Counted"
+    },
+    "scoped": {
+      "and_swap": {
+        "hp": "left",
+        "hq": "right"
+      },
+      "«Plane Shift»": {
+        "h": "loom"
+      }
+    },
+    "auto": []
+  },
+  "verification": {
+    "originalBuild": true,
+    "decodedBuild": true,
+    "axiomAudit": true,
+    "declarationCount": 40
+  },
+  "entries": [
+    {
+      "id": "cantrips",
+      "school": "Cantrips",
+      "title": "Threads & mirrors",
+      "subtitle": "Functions, composition, and equivalence",
+      "file": "Arcane/Cantrips.lean",
+      "level": "Shared foundations",
+      "summary": "A common language for all schools: weave functions together, preserve injectivity and surjectivity, and undo an equivalence.",
+      "meaning": "If f and g are injective, g ∘ f is injective. If they are surjective, their composition is surjective. An equivalence carries an inverse, so e⁻¹(e(x)) = x.",
+      "hypotheses": "Arbitrary types α, β, γ. Injectivity and surjectivity are separate hypotheses, not automatic properties of a function.",
+      "proofIdea": "Composition uses mathlib's function lemmas. The inverse law comes from the data stored in an equivalence. Enchantment's Chain of Pacts imports and uses faithful_thread.",
+      "prerequisites": [],
+      "concepts": [
+        "Function",
+        "Injective",
+        "Surjective",
+        "Equiv",
+        "thread"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/Logic/Function/Basic.lean",
+          "symbol": "Function.Injective.comp",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Logic/Function/Basic.lean"
+        },
+        {
+          "path": "Mathlib/Logic/Equiv/Defs.lean",
+          "symbol": "Equiv.symm_apply_apply",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Logic/Equiv/Defs.lean#L252"
+        }
+      ],
+      "lean": "import Mathlib.Logic.Function.Basic\nimport Mathlib.Logic.Equiv.Defs\n\nnamespace Arcane.Cantrips\n\nvariable {α β γ : Type*}\n\ndef thread (f : α → β) (g : β → γ) : α → γ := g ∘ f\n\ntheorem thread_apply (f : α → β) (g : β → γ) (x : α) :\n    thread f g x = g (f x) := rfl\n\ntheorem faithful_thread {f : α → β} {g : β → γ}\n    (hf : Function.Injective f) (hg : Function.Injective g) :\n    Function.Injective (thread f g) := hg.comp hf\n\ntheorem reaching_thread {f : α → β} {g : β → γ}\n    (hf : Function.Surjective f) (hg : Function.Surjective g) :\n    Function.Surjective (thread f g) := hg.comp hf\n\ntheorem mirror_return (e : α ≃ β) (x : α) : e.symm (e x) = x :=\n  e.symm_apply_apply x\n\nend Arcane.Cantrips\n",
+      "spell": "beckon GrandArchive.Reason.Rite.Foundations\nbeckon GrandArchive.Reason.Portal.Names\n\nsanctum Arcanum.Cantrips\n\nfamiliar ⧼aether vapor vesper ⟡ Essence⊛⧽\n\nritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ weft ⊚ warp\n\nspell ThreadUnfolds ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡\n    Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror\n\nspell FaithfulWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽\n    ⟪faith ⟡ Rite.Faithful warp⟫ ⟪echoWard ⟡ Rite.Faithful weft⟫ ⟡\n    Rite.Faithful ⟪Weave warp weft⟫ ⇰ echoWard.threading faith\n\nspell ReachingWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽\n    ⟪faith ⟡ Rite.Reaching warp⟫ ⟪echoWard ⟡ Rite.Reaching weft⟫ ⟡\n    Rite.Reaching ⟪Weave warp weft⟫ ⇰ echoWard.threading faith\n\nspell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal.reflect ⟪portal mark⟫ ≣ mark ⇰\n  portal.ReturnThroughMirror mark\n\nseal Arcanum.Cantrips\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Function",
+          "arcane": "Rite"
+        },
+        {
+          "lean": "symm",
+          "arcane": "reflect"
+        },
+        {
+          "lean": "rfl",
+          "arcane": "mirror"
+        },
+        {
+          "lean": "Equiv",
+          "arcane": "Portal"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Cantrips",
+          "arcane": "Cantrips"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "Logic",
+          "arcane": "Reason"
+        },
+        {
+          "lean": "hf",
+          "arcane": "faith"
+        },
+        {
+          "lean": "hg",
+          "arcane": "echoWard"
+        },
+        {
+          "lean": "Injective",
+          "arcane": "Faithful"
+        },
+        {
+          "lean": "Surjective",
+          "arcane": "Reaching"
+        },
+        {
+          "lean": "comp",
+          "arcane": "threading"
+        },
+        {
+          "lean": "thread",
+          "arcane": "Weave"
+        },
+        {
+          "lean": "thread_apply",
+          "arcane": "ThreadUnfolds"
+        },
+        {
+          "lean": "faithful_thread",
+          "arcane": "FaithfulWeaving"
+        },
+        {
+          "lean": "reaching_thread",
+          "arcane": "ReachingWeaving"
+        },
+        {
+          "lean": "mirror_return",
+          "arcane": "MirrorReturn"
+        },
+        {
+          "lean": "Basic",
+          "arcane": "Foundations"
+        },
+        {
+          "lean": "Defs",
+          "arcane": "Names"
+        },
+        {
+          "lean": "symm_apply_apply",
+          "arcane": "ReturnThroughMirror"
+        }
+      ],
+      "sourceHash": "8443649e9b00b902f7e047a191feaabb82f126c769c67774cd72f7d450d40553",
+      "spellHash": "64a4e99bd8cdb33d42a627e088f5cdcdf84a25067640cbf5511ea7ba0e482cba",
+      "declarations": [
+        "Arcane.Cantrips.thread",
+        "Arcane.Cantrips.thread_apply",
+        "Arcane.Cantrips.faithful_thread",
+        "Arcane.Cantrips.reaching_thread",
+        "Arcane.Cantrips.mirror_return"
+      ]
+    },
+    {
+      "id": "circles",
+      "school": "Enchantment",
+      "title": "Bind a circle",
+      "subtitle": "Generated subgroups and their universal property",
+      "file": "Arcane/Enchantment/Circles.lean",
+      "level": "I · Foundations",
+      "summary": "Choose the seeds of an enchantment. The smallest subgroup containing them closes the circle under multiplication and inverses.",
+      "meaning": "⟨S⟩ is the subgroup generated by S. It contains S, and ⟨S⟩ ≤ H exactly when S ⊆ H. For x,y ∈ H, xy⁻¹ ∈ H. Generating from an existing subgroup returns that subgroup.",
+      "hypotheses": "G is a group; S is any set of group elements; H is a subgroup. Neither commutativity nor finiteness is assumed.",
+      "proofIdea": "Subgroup.closure is defined as the intersection of all subgroups containing the seeds. Its universal property gives minimality. Closure under xy⁻¹ follows by composing the subgroup's inverse and multiplication laws.",
+      "prerequisites": [
+        "cantrips"
+      ],
+      "concepts": [
+        "Group",
+        "Subgroup",
+        "Set",
+        "closure",
+        "generatedCircle"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/Algebra/Group/Subgroup/Lattice.lean",
+          "symbol": "Subgroup.closure_le",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Lattice.lean#L355"
+        },
+        {
+          "path": "Mathlib/Algebra/Group/Subgroup/Lattice.lean",
+          "symbol": "Subgroup.closure_eq",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Lattice.lean#L433"
+        },
+        {
+          "path": "Mathlib/Algebra/Group/Subgroup/Defs.lean",
+          "symbol": "Subgroup",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Defs.lean#L295"
+        }
+      ],
+      "lean": "import Mathlib.Algebra.Group.Subgroup.Basic\n\nnamespace Arcane.Enchantment\n\nvariable {G : Type*} [Group G]\n\ndef generatedCircle (s : Set G) : Subgroup G := Subgroup.closure s\n\ntheorem circle_contains_seed (s : Set G) : s ⊆ generatedCircle s :=\n  Subgroup.subset_closure\n\ntheorem circle_is_least (s : Set G) (H : Subgroup G) :\n    generatedCircle s ≤ H ↔ s ⊆ H := Subgroup.closure_le H\n\ntheorem circle_closed_under_division (H : Subgroup G) {x y : G}\n    (hx : x ∈ H) (hy : y ∈ H) : x * y⁻¹ ∈ H :=\n  H.mul_mem hx (H.inv_mem hy)\n\ntheorem circle_of_circle (H : Subgroup G) : generatedCircle (H : Set G) = H :=\n  Subgroup.closure_eq H\n\nend Arcane.Enchantment\n",
+      "spell": "beckon GrandArchive.Bindings.Coven.Cabal.Foundations\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯\n\nritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal.encircle seeds\n\nspell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰\n  Cabal.SeedsWithinCircle\n\nspell SmallestCircle ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡\n    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal.LeastBinding circle\n\nspell KeepTheCircle ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽\n    ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰\n  circle.BindingRemains sigilWard ⟪circle.ReversalRemains runeWard⟫\n\nspell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰\n  Cabal.CircleAlreadySealed circle\n\nseal Arcanum.Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Set",
+          "arcane": "Host"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Coven"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "Cabal"
+        },
+        {
+          "lean": "Enchantment",
+          "arcane": "Enchantment"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "Algebra",
+          "arcane": "Bindings"
+        },
+        {
+          "lean": "G",
+          "arcane": "coven"
+        },
+        {
+          "lean": "H",
+          "arcane": "circle"
+        },
+        {
+          "lean": "hx",
+          "arcane": "sigilWard"
+        },
+        {
+          "lean": "hy",
+          "arcane": "runeWard"
+        },
+        {
+          "lean": "closure",
+          "arcane": "encircle"
+        },
+        {
+          "lean": "generatedCircle",
+          "arcane": "BoundCircle"
+        },
+        {
+          "lean": "circle_contains_seed",
+          "arcane": "GatherTheSeeds"
+        },
+        {
+          "lean": "circle_is_least",
+          "arcane": "SmallestCircle"
+        },
+        {
+          "lean": "circle_closed_under_division",
+          "arcane": "KeepTheCircle"
+        },
+        {
+          "lean": "circle_of_circle",
+          "arcane": "SealTheCircle"
+        },
+        {
+          "lean": "Basic",
+          "arcane": "Foundations"
+        },
+        {
+          "lean": "subset_closure",
+          "arcane": "SeedsWithinCircle"
+        },
+        {
+          "lean": "closure_le",
+          "arcane": "LeastBinding"
+        },
+        {
+          "lean": "mul_mem",
+          "arcane": "BindingRemains"
+        },
+        {
+          "lean": "inv_mem",
+          "arcane": "ReversalRemains"
+        },
+        {
+          "lean": "closure_eq",
+          "arcane": "CircleAlreadySealed"
+        }
+      ],
+      "sourceHash": "93fcb9837fa2038959d0a94ec2c2690e355ff31febd7e8eb8b7f26434133e51a",
+      "spellHash": "1322ca112bc4e340d9434512a284275607b58ded9160cc4236de61f801d9c414",
+      "declarations": [
+        "Arcane.Enchantment.generatedCircle",
+        "Arcane.Enchantment.circle_contains_seed",
+        "Arcane.Enchantment.circle_is_least",
+        "Arcane.Enchantment.circle_closed_under_division",
+        "Arcane.Enchantment.circle_of_circle"
+      ]
+    },
+    {
+      "id": "pacts",
+      "school": "Enchantment",
+      "title": "Chain of pacts",
+      "subtitle": "Homomorphisms and their composition",
+      "file": "Arcane/Enchantment/Pacts.lean",
+      "level": "I · Foundations",
+      "summary": "A pact transports the group operation intact. Chain two faithful pacts and no distinctions are lost.",
+      "meaning": "A homomorphism f satisfies f(xy) = f(x)f(y) and f(x⁻¹) = f(x)⁻¹. Injective homomorphisms compose. An element lies in ker(g ∘ f) precisely when f(x) lies in ker(g).",
+      "hypotheses": "G, H, K are groups. A bundled homomorphism G →* H already includes preservation of multiplication and the identity. Injectivity is explicitly assumed where needed.",
+      "proofIdea": "The group laws travel through a MonoidHom. Composition uses MonoidHom.comp and the shared faithful-thread cantrip. The kernel-of-composition statement unfolds directly to g(f(x)) = 1.",
+      "prerequisites": [
+        "cantrips",
+        "circles"
+      ],
+      "concepts": [
+        "MonoidHom",
+        "chainedPact",
+        "Injective",
+        "ker",
+        "comp"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/Algebra/Group/Hom/Defs.lean",
+          "symbol": "MonoidHom",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Hom/Defs.lean#L366"
+        },
+        {
+          "path": "Mathlib/Algebra/Group/Subgroup/Ker.lean",
+          "symbol": "MonoidHom.mem_ker",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L245"
+        }
+      ],
+      "lean": "import Arcane.Cantrips\nimport Mathlib.Algebra.Group.Subgroup.Ker\n\nnamespace Arcane.Enchantment\n\nvariable {G H K : Type*} [Group G] [Group H] [Group K]\n\ndef chainedPact (f : G →* H) (g : H →* K) : G →* K := g.comp f\n\ntheorem pact_preserves_product (f : G →* H) (x y : G) :\n    f (x * y) = f x * f y := f.map_mul x y\n\ntheorem pact_preserves_inverse (f : G →* H) (x : G) :\n    f x⁻¹ = (f x)⁻¹ := f.map_inv x\n\ntheorem faithful_pacts_compose (f : G →* H) (g : H →* K)\n    (hf : Function.Injective f) (hg : Function.Injective g) :\n    Function.Injective (chainedPact f g) :=\n  Arcane.Cantrips.faithful_thread (f := f) (g := g) hf hg\n\ntheorem silence_of_chain (f : G →* H) (g : H →* K) (x : G) :\n    x ∈ (chainedPact f g).ker ↔ f x ∈ g.ker := Iff.rfl\n\nend Arcane.Enchantment\n",
+      "spell": "beckon Arcanum.Cantrips\nbeckon GrandArchive.Bindings.Coven.Cabal.Silences\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven circle choir ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯ ⟮Coven choir⟯\n\nritual ChainOfPacts ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟡ coven ↝⊛ choir ⇰ weft.threading warp\n\nspell PreserveTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark rune ⟡ coven⟫ ⟡\n    warp ⟪mark ⊛ rune⟫ ≣ warp mark ⊛ warp rune ⇰ warp.CarryTheBinding mark rune\n\nspell ReverseTheBinding ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    warp mark⁻¹ ≣ ⟪warp mark⟫⁻¹ ⇰ warp.CarryTheReversal mark\n\nspell ChainWithoutLoss ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫\n    ⟪faith ⟡ Rite.Faithful warp⟫ ⟪echoWard ⟡ Rite.Faithful weft⟫ ⟡\n    Rite.Faithful ⟪ChainOfPacts warp weft⟫ ⇰\n  Arcanum.Cantrips.FaithfulWeaving ⟪warp ⇰ warp⟫ ⟪weft ⇰ weft⟫ faith echoWard\n\nspell SilenceInTheChain ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪weft ⟡ circle ↝⊛ choir⟫ ⟪mark ⟡ coven⟫ ⟡\n    mark ∈ ⟪ChainOfPacts warp weft⟫.silence ↭ warp mark ∈ weft.silence ⇰ Pact.mirror\n\nseal Arcanum.Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Iff",
+          "arcane": "Pact"
+        },
+        {
+          "lean": "Function",
+          "arcane": "Rite"
+        },
+        {
+          "lean": "rfl",
+          "arcane": "mirror"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Coven"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "Cabal"
+        },
+        {
+          "lean": "Enchantment",
+          "arcane": "Enchantment"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Cantrips",
+          "arcane": "Cantrips"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "Algebra",
+          "arcane": "Bindings"
+        },
+        {
+          "lean": "G",
+          "arcane": "coven"
+        },
+        {
+          "lean": "H",
+          "arcane": "circle"
+        },
+        {
+          "lean": "K",
+          "arcane": "choir"
+        },
+        {
+          "lean": "hf",
+          "arcane": "faith"
+        },
+        {
+          "lean": "hg",
+          "arcane": "echoWard"
+        },
+        {
+          "lean": "Injective",
+          "arcane": "Faithful"
+        },
+        {
+          "lean": "ker",
+          "arcane": "silence"
+        },
+        {
+          "lean": "comp",
+          "arcane": "threading"
+        },
+        {
+          "lean": "faithful_thread",
+          "arcane": "FaithfulWeaving"
+        },
+        {
+          "lean": "chainedPact",
+          "arcane": "ChainOfPacts"
+        },
+        {
+          "lean": "pact_preserves_product",
+          "arcane": "PreserveTheBinding"
+        },
+        {
+          "lean": "pact_preserves_inverse",
+          "arcane": "ReverseTheBinding"
+        },
+        {
+          "lean": "faithful_pacts_compose",
+          "arcane": "ChainWithoutLoss"
+        },
+        {
+          "lean": "silence_of_chain",
+          "arcane": "SilenceInTheChain"
+        },
+        {
+          "lean": "Ker",
+          "arcane": "Silences"
+        },
+        {
+          "lean": "map_mul",
+          "arcane": "CarryTheBinding"
+        },
+        {
+          "lean": "map_inv",
+          "arcane": "CarryTheReversal"
+        }
+      ],
+      "sourceHash": "d1611b44a62e7c90ec69c125b7fb0565b557b04808f09d1cba9105b08b2844a7",
+      "spellHash": "41bcb2a160729df7202114a663fef7d6a1c0986d0465c519a2b7b5d160dc4550",
+      "declarations": [
+        "Arcane.Enchantment.chainedPact",
+        "Arcane.Enchantment.pact_preserves_product",
+        "Arcane.Enchantment.pact_preserves_inverse",
+        "Arcane.Enchantment.faithful_pacts_compose",
+        "Arcane.Enchantment.silence_of_chain"
+      ]
+    },
+    {
+      "id": "kernels",
+      "school": "Enchantment",
+      "title": "Circle of silence",
+      "subtitle": "Kernels, normality, and faithful maps",
+      "file": "Arcane/Enchantment/Kernels.lean",
+      "level": "II · Structure",
+      "summary": "The kernel is everything a pact sends to the identity. Conjugating an element cannot break that silence.",
+      "meaning": "ker(f) = {x | f(x) = 1}. It is a normal subgroup: if x ∈ ker(f), then gxg⁻¹ ∈ ker(f). A homomorphism is injective exactly when its kernel is trivial.",
+      "hypotheses": "G and H are groups and f : G →* H. No commutativity is required. The bottom subgroup ⊥ contains just the identity.",
+      "proofIdea": "Apply f to gxg⁻¹, distribute it over products and inverses, replace f(x) by 1, then cancel f(g) against its inverse. Mathlib supplies the normality instance and the kernel criterion for injectivity.",
+      "prerequisites": [
+        "circles",
+        "pacts"
+      ],
+      "concepts": [
+        "silence",
+        "ker",
+        "Normal",
+        "Injective",
+        "Subgroup"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/Algebra/Group/Subgroup/Ker.lean",
+          "symbol": "MonoidHom.mem_ker",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L245"
+        },
+        {
+          "path": "Mathlib/Algebra/Group/Subgroup/Ker.lean",
+          "symbol": "MonoidHom.normal_ker",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean"
+        },
+        {
+          "path": "Mathlib/Algebra/Group/Subgroup/Ker.lean",
+          "symbol": "MonoidHom.ker_eq_bot_iff",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Algebra/Group/Subgroup/Ker.lean#L319"
+        }
+      ],
+      "lean": "import Mathlib.Algebra.Group.Subgroup.Ker\n\nnamespace Arcane.Enchantment\n\nvariable {G H : Type*} [Group G] [Group H]\n\ndef silence (f : G →* H) : Subgroup G := f.ker\n\ntheorem silence_iff (f : G →* H) (x : G) :\n    x ∈ silence f ↔ f x = 1 := MonoidHom.mem_ker\n\ntheorem silence_survives_conjugation (f : G →* H) {x : G}\n    (hx : x ∈ silence f) (g : G) : g * x * g⁻¹ ∈ silence f := by\n  change f (g * x * g⁻¹) = 1\n  have hx' : f x = 1 := hx\n  simp [hx']\n\ntheorem silence_is_normal (f : G →* H) : (silence f).Normal := by\n  change f.ker.Normal\n  infer_instance\n\ntheorem faithful_iff_silence_trivial (f : G →* H) :\n    Function.Injective f ↔ silence f = ⊥ := f.ker_eq_bot_iff.symm\n\nend Arcane.Enchantment\n",
+      "spell": "beckon GrandArchive.Bindings.Coven.Cabal.Silences\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp.silence\n\nspell NameTheSilent ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald.SilenceCriterion\n\nspell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽\n    ⟪sigilWard ⟡ mark ∈ CircleOfSilence warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft⁻¹ ∈ CircleOfSilence warp ⇰ cast\n  shapeshift warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ ☉\n  bind silenceWard ⟡ warp mark ≣ ☉ ⇰ sigilWard\n  purify ⟮silenceWard⟯\n\nspell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫.Hallowed ⇰ cast\n  shapeshift warp.silence.Hallowed\n  initiation\n\nspell NothingLost ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡\n    Rite.Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp.FaithfulnessCriterion.reflect\n\nseal Arcanum.Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "by",
+          "arcane": "cast"
+        },
+        {
+          "lean": "have",
+          "arcane": "bind"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Function",
+          "arcane": "Rite"
+        },
+        {
+          "lean": "symm",
+          "arcane": "reflect"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Coven"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "Cabal"
+        },
+        {
+          "lean": "Normal",
+          "arcane": "Hallowed"
+        },
+        {
+          "lean": "MonoidHom",
+          "arcane": "Herald"
+        },
+        {
+          "lean": "simp",
+          "arcane": "purify"
+        },
+        {
+          "lean": "change",
+          "arcane": "shapeshift"
+        },
+        {
+          "lean": "infer_instance",
+          "arcane": "initiation"
+        },
+        {
+          "lean": "Enchantment",
+          "arcane": "Enchantment"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "Algebra",
+          "arcane": "Bindings"
+        },
+        {
+          "lean": "G",
+          "arcane": "coven"
+        },
+        {
+          "lean": "H",
+          "arcane": "circle"
+        },
+        {
+          "lean": "hx",
+          "arcane": "sigilWard"
+        },
+        {
+          "lean": "Injective",
+          "arcane": "Faithful"
+        },
+        {
+          "lean": "ker",
+          "arcane": "silence"
+        },
+        {
+          "lean": "silence",
+          "arcane": "CircleOfSilence"
+        },
+        {
+          "lean": "silence_iff",
+          "arcane": "NameTheSilent"
+        },
+        {
+          "lean": "silence_survives_conjugation",
+          "arcane": "UnbrokenSilence"
+        },
+        {
+          "lean": "silence_is_normal",
+          "arcane": "SilenceIsHallowed"
+        },
+        {
+          "lean": "faithful_iff_silence_trivial",
+          "arcane": "NothingLost"
+        },
+        {
+          "lean": "Ker",
+          "arcane": "Silences"
+        },
+        {
+          "lean": "mem_ker",
+          "arcane": "SilenceCriterion"
+        },
+        {
+          "lean": "hx'",
+          "arcane": "silenceWard"
+        },
+        {
+          "lean": "ker_eq_bot_iff",
+          "arcane": "FaithfulnessCriterion"
+        }
+      ],
+      "sourceHash": "89af41133fc1ff4474a093633ec40a6a487587c2ea8a4ff8ab5a89d43c229e61",
+      "spellHash": "2d09006bf2bf548409b3037f812bc306fb9b541e8dc42dd3fa04fdb34f773710",
+      "declarations": [
+        "Arcane.Enchantment.silence",
+        "Arcane.Enchantment.silence_iff",
+        "Arcane.Enchantment.silence_survives_conjugation",
+        "Arcane.Enchantment.silence_is_normal",
+        "Arcane.Enchantment.faithful_iff_silence_trivial"
+      ]
+    },
+    {
+      "id": "descent",
+      "school": "Enchantment",
+      "title": "Pass through the veil",
+      "subtitle": "The universal property of quotient groups",
+      "file": "Arcane/Enchantment/Descent.lean",
+      "level": "II · Structure",
+      "summary": "A pact descends through a quotient exactly when it silences the subgroup being forgotten. Its action on representatives determines it uniquely.",
+      "meaning": "For N normal in G and N ≤ ker(f), there is a homomorphism f̄ : G/N → H with f̄([x]) = f(x). Any other homomorphism with this property equals f̄.",
+      "hypotheses": "N must be normal so G/N is a group. The explicit containment N ≤ ker(f) ensures that different representatives of one coset get the same image.",
+      "proofIdea": "QuotientGroup.lift constructs the descended map. Uniqueness uses homomorphism extensionality and quotient induction: every quotient element has a representative.",
+      "prerequisites": [
+        "kernels"
+      ],
+      "concepts": [
+        "QuotientGroup",
+        "Normal",
+        "descendedPact",
+        "lift",
+        "ext"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/GroupTheory/QuotientGroup/Defs.lean",
+          "symbol": "QuotientGroup.lift",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/QuotientGroup/Defs.lean#L248"
+        },
+        {
+          "path": "Mathlib/GroupTheory/QuotientGroup/Defs.lean",
+          "symbol": "QuotientGroup.lift_mk",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/QuotientGroup/Defs.lean#L252"
+        }
+      ],
+      "lean": "import Mathlib.GroupTheory.QuotientGroup.Basic\n\nnamespace Arcane.Enchantment\n\nvariable {G H : Type*} [Group G] [Group H]\n\ndef descendedPact (N : Subgroup G) [N.Normal] (f : G →* H)\n    (hN : N ≤ f.ker) : G ⧸ N →* H :=\n  QuotientGroup.lift N f hN\n\ntheorem descent_on_representative (N : Subgroup G) [N.Normal]\n    (f : G →* H) (hN : N ≤ f.ker) (x : G) :\n    descendedPact N f hN (QuotientGroup.mk x) = f x := rfl\n\ntheorem descent_is_unique (N : Subgroup G) [N.Normal]\n    (f : G →* H) (hN : N ≤ f.ker) (g : G ⧸ N →* H)\n    (hg : ∀ x : G, g (QuotientGroup.mk x) = f x) :\n    g = descendedPact N f hN := by\n  apply MonoidHom.ext\n  intro q\n  induction q using Quotient.inductionOn with\n  | h x => exact hg x\n\nend Arcane.Enchantment\n",
+      "spell": "beckon GrandArchive.CovenLore.VeiledCoven.Foundations\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫\n    ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰\n  VeiledCoven.descend veil warp veilWard\n\nspell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯\n    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟪mark ⟡ coven⟫ ⟡\n    PassTheVeil veil warp veilWard ⟪VeiledCoven.forge mark⟫ ≣ warp mark ⇰ mirror\n\nspell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil.Hallowed⟯\n    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp.silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫\n    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven.forge mark⟫ ≣ warp mark⟫ ⟡\n    weft ≣ PassTheVeil veil warp veilWard ⇰ cast\n  channel Herald.extend\n  summon coset\n  unravel coset through Effigies.LiftTheVeil whence\n  ⫽ ward mark ⇉ missile echoWard mark\n\nseal Arcanum.Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "with",
+          "arcane": "whence"
+        },
+        {
+          "lean": "by",
+          "arcane": "cast"
+        },
+        {
+          "lean": "using",
+          "arcane": "through"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Quotient",
+          "arcane": "Effigies"
+        },
+        {
+          "lean": "mk",
+          "arcane": "forge"
+        },
+        {
+          "lean": "rfl",
+          "arcane": "mirror"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Coven"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "Cabal"
+        },
+        {
+          "lean": "Normal",
+          "arcane": "Hallowed"
+        },
+        {
+          "lean": "MonoidHom",
+          "arcane": "Herald"
+        },
+        {
+          "lean": "exact",
+          "arcane": "missile"
+        },
+        {
+          "lean": "intro",
+          "arcane": "summon"
+        },
+        {
+          "lean": "apply",
+          "arcane": "channel"
+        },
+        {
+          "lean": "induction",
+          "arcane": "unravel"
+        },
+        {
+          "lean": "ext",
+          "arcane": "extend"
+        },
+        {
+          "lean": "Enchantment",
+          "arcane": "Enchantment"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "GroupTheory",
+          "arcane": "CovenLore"
+        },
+        {
+          "lean": "G",
+          "arcane": "coven"
+        },
+        {
+          "lean": "H",
+          "arcane": "circle"
+        },
+        {
+          "lean": "N",
+          "arcane": "veil"
+        },
+        {
+          "lean": "hg",
+          "arcane": "echoWard"
+        },
+        {
+          "lean": "hN",
+          "arcane": "veilWard"
+        },
+        {
+          "lean": "ker",
+          "arcane": "silence"
+        },
+        {
+          "lean": "QuotientGroup",
+          "arcane": "VeiledCoven"
+        },
+        {
+          "lean": "lift",
+          "arcane": "descend"
+        },
+        {
+          "lean": "descendedPact",
+          "arcane": "PassTheVeil"
+        },
+        {
+          "lean": "descent_on_representative",
+          "arcane": "SpeakThroughTheVeil"
+        },
+        {
+          "lean": "descent_is_unique",
+          "arcane": "OnlyOnePassage"
+        },
+        {
+          "lean": "Basic",
+          "arcane": "Foundations"
+        },
+        {
+          "lean": "inductionOn",
+          "arcane": "LiftTheVeil"
+        }
+      ],
+      "sourceHash": "06b6f57b0dfb10a2abc99d31fdf6a7908d6c91865f87ae8601f5be46125698f4",
+      "spellHash": "300de6d3f49da949ba073b00e04842f9d794ad7bb488d359823acd1c4fd2d845",
+      "declarations": [
+        "Arcane.Enchantment.descendedPact",
+        "Arcane.Enchantment.descent_on_representative",
+        "Arcane.Enchantment.descent_is_unique"
+      ]
+    },
+    {
+      "id": "first-isomorphism",
+      "school": "Enchantment",
+      "title": "Unveil the true image",
+      "subtitle": "The first isomorphism theorem",
+      "file": "Arcane/Enchantment/FirstIsomorphism.lean",
+      "level": "III · Great enchantments",
+      "summary": "Forget exactly what a pact cannot distinguish. What remains is the image, with its whole group structure preserved.",
+      "meaning": "G/ker(f) ≅ im(f). The canonical isomorphism sends [x] to f(x), viewed as an element of the image subgroup. If f is surjective, the quotient is isomorphic to the entire codomain H.",
+      "hypotheses": "G and H are arbitrary groups. Surjectivity is required only for the final isomorphism to H; the isomorphism to im(f) needs no such assumption.",
+      "proofIdea": "Mathlib constructs a bijective homomorphism from the quotient to the range and packages it as a multiplicative equivalence. Here the theorem is a definition returning an actual isomorphism, not merely a proposition asserting one exists.",
+      "prerequisites": [
+        "descent",
+        "cantrips"
+      ],
+      "concepts": [
+        "unveiledImage",
+        "range",
+        "MulEquiv",
+        "Bijective",
+        "unveiledCodomain"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/GroupTheory/QuotientGroup/Basic.lean",
+          "symbol": "QuotientGroup.quotientKerEquivRange",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/QuotientGroup/Basic.lean#L134"
+        },
+        {
+          "path": "Mathlib/GroupTheory/QuotientGroup/Basic.lean",
+          "symbol": "QuotientGroup.quotientKerEquivOfSurjective",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/QuotientGroup/Basic.lean#L159"
+        }
+      ],
+      "lean": "import Mathlib.GroupTheory.QuotientGroup.Basic\n\nnamespace Arcane.Enchantment\n\nvariable {G H : Type*} [Group G] [Group H]\n\nnoncomputable def unveiledImage (f : G →* H) : G ⧸ f.ker ≃* f.range :=\n  QuotientGroup.quotientKerEquivRange f\n\ntheorem unveiling_on_representative (f : G →* H) (x : G) :\n    (unveiledImage f (QuotientGroup.mk x) : H) = f x := rfl\n\ntheorem unveiling_is_bijective (f : G →* H) :\n    Function.Bijective (unveiledImage f) := (unveiledImage f).bijective\n\nnoncomputable def unveiledCodomain (f : G →* H) (hf : Function.Surjective f) :\n    G ⧸ f.ker ≃* H := QuotientGroup.quotientKerEquivOfSurjective f hf\n\nend Arcane.Enchantment\n",
+      "spell": "beckon GrandArchive.CovenLore.VeiledCoven.Foundations\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯\n\nineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp.silence ≃⊛ warp.manifestation ⇰\n  VeiledCoven.ImageRevelation warp\n\nspell RevealTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡\n    ⟪UnveilTheImage warp ⟪VeiledCoven.forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror\n\nspell PerfectUnveiling ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡\n    Rite.Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫.perfect\n\nineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite.Reaching warp⟫ ⟡\n    coven ⧸ warp.silence ≃⊛ circle ⇰ VeiledCoven.RealmRevelation warp faith\n\nseal Arcanum.Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "noncomputable",
+          "arcane": "ineffable"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Function",
+          "arcane": "Rite"
+        },
+        {
+          "lean": "mk",
+          "arcane": "forge"
+        },
+        {
+          "lean": "rfl",
+          "arcane": "mirror"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Coven"
+        },
+        {
+          "lean": "Enchantment",
+          "arcane": "Enchantment"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "GroupTheory",
+          "arcane": "CovenLore"
+        },
+        {
+          "lean": "G",
+          "arcane": "coven"
+        },
+        {
+          "lean": "H",
+          "arcane": "circle"
+        },
+        {
+          "lean": "hf",
+          "arcane": "faith"
+        },
+        {
+          "lean": "Surjective",
+          "arcane": "Reaching"
+        },
+        {
+          "lean": "Bijective",
+          "arcane": "Perfect"
+        },
+        {
+          "lean": "ker",
+          "arcane": "silence"
+        },
+        {
+          "lean": "range",
+          "arcane": "manifestation"
+        },
+        {
+          "lean": "QuotientGroup",
+          "arcane": "VeiledCoven"
+        },
+        {
+          "lean": "unveiledImage",
+          "arcane": "UnveilTheImage"
+        },
+        {
+          "lean": "unveiling_on_representative",
+          "arcane": "RevealTheSigil"
+        },
+        {
+          "lean": "unveiling_is_bijective",
+          "arcane": "PerfectUnveiling"
+        },
+        {
+          "lean": "unveiledCodomain",
+          "arcane": "UnveilTheRealm"
+        },
+        {
+          "lean": "Basic",
+          "arcane": "Foundations"
+        },
+        {
+          "lean": "quotientKerEquivRange",
+          "arcane": "ImageRevelation"
+        },
+        {
+          "lean": "bijective",
+          "arcane": "perfect"
+        },
+        {
+          "lean": "quotientKerEquivOfSurjective",
+          "arcane": "RealmRevelation"
+        }
+      ],
+      "sourceHash": "bda36b1ff08cb90bfbded9a21fc69e80e6e999a894d6c6c605d31b140e1fc2c4",
+      "spellHash": "735d0e04558dad175fe6ad02fe0b6f500e59c5f99413ed81c4b05c6db915e133",
+      "declarations": [
+        "Arcane.Enchantment.unveiledImage",
+        "Arcane.Enchantment.unveiling_on_representative",
+        "Arcane.Enchantment.unveiling_is_bijective",
+        "Arcane.Enchantment.unveiledCodomain"
+      ]
+    },
+    {
+      "id": "lagrange",
+      "school": "Enchantment",
+      "title": "The measure of a coven",
+      "subtitle": "Lagrange's theorem and element orders",
+      "file": "Arcane/Enchantment/Lagrange.lean",
+      "level": "III · Great enchantments",
+      "summary": "A finite group partitions into equally sized cosets. The size of every subgroup, and every element's period, divides the size of the whole.",
+      "meaning": "|G| = |G/H|·|H|, hence |H| divides |G|. Also ord(x) divides |G|, and x raised to |G| is the identity.",
+      "hypotheses": "G is a group and H any subgroup; normality is not needed to count cosets. These are finite-group counting statements. The Lean statements use Nat.card, which is defined to be 0 for infinite types, so their formal versions also extend to infinite groups with that convention.",
+      "proofIdea": "Mathlib constructs an equivalence G ≃ (G/H) × H. Cardinality turns it into the product formula. Apply Lagrange to the cyclic subgroup generated by x to obtain the statement about element orders.",
+      "prerequisites": [
+        "circles"
+      ],
+      "concepts": [
+        "card",
+        "orderOf",
+        "Subgroup",
+        "Group"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/GroupTheory/Coset/Card.lean",
+          "symbol": "Subgroup.card_eq_card_quotient_mul_card_subgroup",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Card.lean#L53"
+        },
+        {
+          "path": "Mathlib/GroupTheory/Coset/Card.lean",
+          "symbol": "Subgroup.card_subgroup_dvd_card",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Coset/Card.lean#L69"
+        },
+        {
+          "path": "Mathlib/GroupTheory/OrderOfElement.lean",
+          "symbol": "orderOf_dvd_natCard",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/OrderOfElement.lean#L1164"
+        },
+        {
+          "path": "Mathlib/GroupTheory/OrderOfElement.lean",
+          "symbol": "pow_card_eq_one'",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/OrderOfElement.lean#L1186"
+        }
+      ],
+      "lean": "import Mathlib.GroupTheory.Coset.Card\nimport Mathlib.GroupTheory.OrderOfElement\n\nnamespace Arcane.Enchantment\n\nvariable {G : Type*} [Group G]\n\ntheorem count_the_cosets (H : Subgroup G) :\n    Nat.card G = Nat.card (G ⧸ H) * Nat.card H :=\n  H.card_eq_card_quotient_mul_card_subgroup\n\ntheorem circle_divides_coven (H : Subgroup G) :\n    Nat.card H ∣ Nat.card G := H.card_subgroup_dvd_card\n\ntheorem period_divides_coven (x : G) : orderOf x ∣ Nat.card G :=\n  orderOf_dvd_natCard x\n\ntheorem full_cycle_returns (x : G) : x ^ Nat.card G = 1 :=\n  pow_card_eq_one'\n\nend Arcane.Enchantment\n",
+      "spell": "beckon GrandArchive.CovenLore.Veils.Census\nbeckon GrandArchive.CovenLore.Cycles\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯\n\nspell CountTheVeils ⟪circle ⟡ Cabal coven⟫ ⟡\n    Tally.census coven ≣ Tally.census ⟪coven ⧸ circle⟫ ⊛ Tally.census circle ⇰\n  circle.CosetCensus\n\nspell MeasureOfTheCoven ⟪circle ⟡ Cabal coven⟫ ⟡\n    Tally.census circle ∣ Tally.census coven ⇰ circle.LagrangeBinding\n\nspell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally.census coven ⇰\n  CycleDividesCensus mark\n\nspell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally.census coven ≣ ☉ ⇰\n  CensusReturns\n\nseal Arcanum.Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Nat",
+          "arcane": "Tally"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Coven"
+        },
+        {
+          "lean": "Subgroup",
+          "arcane": "Cabal"
+        },
+        {
+          "lean": "Enchantment",
+          "arcane": "Enchantment"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "GroupTheory",
+          "arcane": "CovenLore"
+        },
+        {
+          "lean": "G",
+          "arcane": "coven"
+        },
+        {
+          "lean": "H",
+          "arcane": "circle"
+        },
+        {
+          "lean": "card",
+          "arcane": "census"
+        },
+        {
+          "lean": "orderOf",
+          "arcane": "period"
+        },
+        {
+          "lean": "count_the_cosets",
+          "arcane": "CountTheVeils"
+        },
+        {
+          "lean": "circle_divides_coven",
+          "arcane": "MeasureOfTheCoven"
+        },
+        {
+          "lean": "period_divides_coven",
+          "arcane": "MeasureOfTheCycle"
+        },
+        {
+          "lean": "full_cycle_returns",
+          "arcane": "TheGreatReturn"
+        },
+        {
+          "lean": "Coset",
+          "arcane": "Veils"
+        },
+        {
+          "lean": "Card",
+          "arcane": "Census"
+        },
+        {
+          "lean": "OrderOfElement",
+          "arcane": "Cycles"
+        },
+        {
+          "lean": "card_eq_card_quotient_mul_card_subgroup",
+          "arcane": "CosetCensus"
+        },
+        {
+          "lean": "card_subgroup_dvd_card",
+          "arcane": "LagrangeBinding"
+        },
+        {
+          "lean": "orderOf_dvd_natCard",
+          "arcane": "CycleDividesCensus"
+        },
+        {
+          "lean": "pow_card_eq_one'",
+          "arcane": "CensusReturns"
+        }
+      ],
+      "sourceHash": "69da607c54ae0bbeb798730f3be66efc373179e8966db6206dc2f934c9d574f9",
+      "spellHash": "9d6c3594467036aef12e5f6bf3dcf30fb0c1edfb1d227015b58e9b8c75e80fb8",
+      "declarations": [
+        "Arcane.Enchantment.count_the_cosets",
+        "Arcane.Enchantment.circle_divides_coven",
+        "Arcane.Enchantment.period_divides_coven",
+        "Arcane.Enchantment.full_cycle_returns"
+      ]
+    },
+    {
+      "id": "orbits",
+      "school": "Enchantment",
+      "title": "Orbit of command",
+      "subtitle": "Group actions and orbit–stabilizer",
+      "file": "Arcane/Enchantment/Orbits.lean",
+      "level": "III · Great enchantments",
+      "summary": "An action moves a point through its orbit. The stabilizer records the commands that leave it still; its cosets enumerate all possible destinations.",
+      "meaning": "Orb(x) ≃ G/Stab(x) as sets. The inverse sends [g] to g • x. For finite G, |Orb(x)|·|Stab(x)| = |G|.",
+      "hypotheses": "A group G acts on a type X via MulAction G X. The stabilizer need not be normal: this is an equivalence of sets, not a group isomorphism. Nat.card again uses 0 for infinite types.",
+      "proofIdea": "Mathlib's orbit–stabilizer equivalence identifies commands precisely when they move x to the same place. An equivalence Orb(x) × Stab(x) ≃ G supplies the counting theorem.",
+      "prerequisites": [
+        "lagrange",
+        "cantrips"
+      ],
+      "concepts": [
+        "MulAction",
+        "orbit",
+        "stabilizer",
+        "orbitPortal",
+        "Equiv"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/GroupTheory/GroupAction/Quotient.lean",
+          "symbol": "MulAction.orbitEquivQuotientStabilizer",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/GroupAction/Quotient.lean#L174"
+        },
+        {
+          "path": "Mathlib/GroupTheory/GroupAction/Quotient.lean",
+          "symbol": "MulAction.orbitProdStabilizerEquivGroup",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/GroupAction/Quotient.lean#L182"
+        }
+      ],
+      "lean": "import Mathlib.GroupTheory.GroupAction.Quotient\nimport Mathlib.GroupTheory.Coset.Card\n\nnamespace Arcane.Enchantment\n\nvariable {G X : Type*} [Group G] [MulAction G X]\n\nnoncomputable def orbitPortal (x : X) :\n    MulAction.orbit G x ≃ G ⧸ MulAction.stabilizer G x :=\n  MulAction.orbitEquivQuotientStabilizer G x\n\ntheorem portal_returns_action (x : X) (g : G) :\n    ((orbitPortal x).symm (QuotientGroup.mk g) : X) = g • x := rfl\n\ntheorem orbit_times_stabilizer (x : X) :\n    Nat.card (MulAction.orbit G x) * Nat.card (MulAction.stabilizer G x) =\n      Nat.card G := by\n  rw [← Nat.card_prod]\n  exact Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup G x)\n\nend Arcane.Enchantment\n",
+      "spell": "beckon GrandArchive.CovenLore.Commands.Effigies\nbeckon GrandArchive.CovenLore.Veils.Census\n\nsanctum Arcanum.Enchantment\n\nfamiliar ⧼coven realm ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Commanding coven realm⟯\n\nineffable ritual OrbitPortal ⟪mark ⟡ realm⟫ ⟡\n    Commanding.procession coven mark ≃ coven ⧸ Commanding.stillguard coven mark ⇰\n  Commanding.OrbitCorrespondence coven mark\n\nspell CommandThroughThePortal ⟪mark ⟡ realm⟫ ⟪weft ⟡ coven⟫ ⟡\n    ⟪⟪OrbitPortal mark⟫.reflect ⟪VeiledCoven.forge weft⟫ ⟡ realm⟫ ≣ weft • mark ⇰ mirror\n\nspell OrbitOfCommand ⟪mark ⟡ realm⟫ ⟡\n    Tally.census ⟪Commanding.procession coven mark⟫ ⊛ Tally.census ⟪Commanding.stillguard coven mark⟫ ≣\n      Tally.census coven ⇰ cast\n  transmute ⟮↜ Tally.CensusOfPairs⟯\n  missile Tally.CensusThroughPortal ⟪Commanding.OrbitDecomposition coven mark⟫\n\nseal Arcanum.Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "variable",
+          "arcane": "familiar"
+        },
+        {
+          "lean": "noncomputable",
+          "arcane": "ineffable"
+        },
+        {
+          "lean": "by",
+          "arcane": "cast"
+        },
+        {
+          "lean": "Type",
+          "arcane": "Essence"
+        },
+        {
+          "lean": "Nat",
+          "arcane": "Tally"
+        },
+        {
+          "lean": "Quotient",
+          "arcane": "Effigies"
+        },
+        {
+          "lean": "mk",
+          "arcane": "forge"
+        },
+        {
+          "lean": "symm",
+          "arcane": "reflect"
+        },
+        {
+          "lean": "rfl",
+          "arcane": "mirror"
+        },
+        {
+          "lean": "Group",
+          "arcane": "Coven"
+        },
+        {
+          "lean": "exact",
+          "arcane": "missile"
+        },
+        {
+          "lean": "rw",
+          "arcane": "transmute"
+        },
+        {
+          "lean": "Enchantment",
+          "arcane": "Enchantment"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "GroupTheory",
+          "arcane": "CovenLore"
+        },
+        {
+          "lean": "G",
+          "arcane": "coven"
+        },
+        {
+          "lean": "X",
+          "arcane": "realm"
+        },
+        {
+          "lean": "MulAction",
+          "arcane": "Commanding"
+        },
+        {
+          "lean": "card",
+          "arcane": "census"
+        },
+        {
+          "lean": "stabilizer",
+          "arcane": "stillguard"
+        },
+        {
+          "lean": "orbit",
+          "arcane": "procession"
+        },
+        {
+          "lean": "QuotientGroup",
+          "arcane": "VeiledCoven"
+        },
+        {
+          "lean": "orbitPortal",
+          "arcane": "OrbitPortal"
+        },
+        {
+          "lean": "portal_returns_action",
+          "arcane": "CommandThroughThePortal"
+        },
+        {
+          "lean": "orbit_times_stabilizer",
+          "arcane": "OrbitOfCommand"
+        },
+        {
+          "lean": "Coset",
+          "arcane": "Veils"
+        },
+        {
+          "lean": "Card",
+          "arcane": "Census"
+        },
+        {
+          "lean": "GroupAction",
+          "arcane": "Commands"
+        },
+        {
+          "lean": "orbitEquivQuotientStabilizer",
+          "arcane": "OrbitCorrespondence"
+        },
+        {
+          "lean": "card_prod",
+          "arcane": "CensusOfPairs"
+        },
+        {
+          "lean": "card_congr",
+          "arcane": "CensusThroughPortal"
+        },
+        {
+          "lean": "orbitProdStabilizerEquivGroup",
+          "arcane": "OrbitDecomposition"
+        }
+      ],
+      "sourceHash": "5991aebfe67be68f6471e04bee1d7ff9ded8b04001b1940634a2b7516e8cdcbe",
+      "spellHash": "c8369fd2c61611d4060fbbd073671ce40b3fe1cd6f167d0c5f3f76ef52b0e87c",
+      "declarations": [
+        "Arcane.Enchantment.orbitPortal",
+        "Arcane.Enchantment.portal_returns_action",
+        "Arcane.Enchantment.orbit_times_stabilizer"
+      ]
+    },
+    {
+      "id": "permutations",
+      "school": "Enchantment",
+      "title": "Three dancing sigils",
+      "subtitle": "A concrete noncommutative group: S₃",
+      "file": "Arcane/Enchantment/Permutations.lean",
+      "level": "IV · Field exercise",
+      "summary": "Enchant three labels by permuting them. There are six symmetries. A swap undoes itself, but the order of two different swaps matters.",
+      "meaning": "S₃ = Perm({0,1,2}). It has order 6. If a = (0 1) and b = (1 2), then a² = 1 while ab ≠ ba.",
+      "hypotheses": "The group is exactly Equiv.Perm (Fin 3), using function composition as its multiplication. These statements are checked finite computations, not sampled tests.",
+      "proofIdea": "Lean's decide tactic constructs proofs by evaluating the decidable propositions. Try changing the two swaps to the same swap: the noncommutativity claim would become false, though the browser alone will not check your edit.",
+      "prerequisites": [
+        "pacts",
+        "lagrange"
+      ],
+      "concepts": [
+        "Perm",
+        "Fin",
+        "swap",
+        "triangleSymmetries",
+        "firstSwap",
+        "secondSwap"
+      ],
+      "references": [
+        {
+          "path": "Mathlib/GroupTheory/Perm/Fin.lean",
+          "symbol": "Equiv.Perm",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/GroupTheory/Perm/Fin.lean"
+        },
+        {
+          "path": "Mathlib/Logic/Equiv/Fin/Basic.lean",
+          "symbol": "Fin",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Logic/Equiv/Fin/Basic.lean"
+        }
+      ],
+      "lean": "import Mathlib.GroupTheory.Perm.Fin\nimport Mathlib.GroupTheory.OrderOfElement\n\nnamespace Arcane.Enchantment\n\nabbrev triangleSymmetries := Equiv.Perm (Fin 3)\n\ndef firstSwap : triangleSymmetries := Equiv.swap 0 1\n\ndef secondSwap : triangleSymmetries := Equiv.swap 1 2\n\ntheorem six_symmetries : Fintype.card triangleSymmetries = 6 := by decide\n\ntheorem swap_twice : firstSwap * firstSwap = 1 := by decide\n\ntheorem swaps_do_not_commute : firstSwap * secondSwap ≠ secondSwap * firstSwap := by decide\n\nend Arcane.Enchantment\n",
+      "spell": "beckon GrandArchive.CovenLore.Shuffling.Fetter\nbeckon GrandArchive.CovenLore.Cycles\n\nsanctum Arcanum.Enchantment\n\nbyname ThreeSigils ⇰ Portal.Shuffling ⟪Fetter 3⟫\n\nritual FirstExchange ⟡ ThreeSigils ⇰ Portal.exchangeSigils ⊘ ☉\n\nritual SecondExchange ⟡ ThreeSigils ⇰ Portal.exchangeSigils ☉ 2\n\nspell SixDances ⟡ Counted.census ThreeSigils ≣ 6 ⇰ cast divine\n\nspell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰ cast divine\n\nspell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast divine\n\nseal Arcanum.Enchantment\n",
+      "glossary": [
+        {
+          "lean": "theorem",
+          "arcane": "spell"
+        },
+        {
+          "lean": "def",
+          "arcane": "ritual"
+        },
+        {
+          "lean": "abbrev",
+          "arcane": "byname"
+        },
+        {
+          "lean": "namespace",
+          "arcane": "sanctum"
+        },
+        {
+          "lean": "end",
+          "arcane": "seal"
+        },
+        {
+          "lean": "import",
+          "arcane": "beckon"
+        },
+        {
+          "lean": "by",
+          "arcane": "cast"
+        },
+        {
+          "lean": "Fin",
+          "arcane": "Fetter"
+        },
+        {
+          "lean": "Equiv",
+          "arcane": "Portal"
+        },
+        {
+          "lean": "decide",
+          "arcane": "divine"
+        },
+        {
+          "lean": "Enchantment",
+          "arcane": "Enchantment"
+        },
+        {
+          "lean": "Arcane",
+          "arcane": "Arcanum"
+        },
+        {
+          "lean": "Mathlib",
+          "arcane": "GrandArchive"
+        },
+        {
+          "lean": "GroupTheory",
+          "arcane": "CovenLore"
+        },
+        {
+          "lean": "Perm",
+          "arcane": "Shuffling"
+        },
+        {
+          "lean": "card",
+          "arcane": "census"
+        },
+        {
+          "lean": "swap",
+          "arcane": "exchangeSigils"
+        },
+        {
+          "lean": "triangleSymmetries",
+          "arcane": "ThreeSigils"
+        },
+        {
+          "lean": "firstSwap",
+          "arcane": "FirstExchange"
+        },
+        {
+          "lean": "secondSwap",
+          "arcane": "SecondExchange"
+        },
+        {
+          "lean": "six_symmetries",
+          "arcane": "SixDances"
+        },
+        {
+          "lean": "swap_twice",
+          "arcane": "DanceAndReturn"
+        },
+        {
+          "lean": "swaps_do_not_commute",
+          "arcane": "OrderMatters"
+        },
+        {
+          "lean": "OrderOfElement",
+          "arcane": "Cycles"
+        },
+        {
+          "lean": "Fintype",
+          "arcane": "Counted"
+        }
+      ],
+      "sourceHash": "35adad0b9216cfa89d6e39a89ecb9b1ac17d25097527977aea3edc3385b6fca3",
+      "spellHash": "c99a2e156bcb6c706886a026905c3a2c6892719ae0ebd871f60755c8cbcf67f3",
+      "declarations": [
+        "Arcane.Enchantment.triangleSymmetries",
+        "Arcane.Enchantment.firstSwap",
+        "Arcane.Enchantment.secondSwap",
+        "Arcane.Enchantment.six_symmetries",
+        "Arcane.Enchantment.swap_twice",
+        "Arcane.Enchantment.swaps_do_not_commute"
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Lean Magic · Enchantment
+# ArcaneLean · The Enchantment Grimoire
 
 A browser grimoire of **real group theory**, presented in Arcane Lean. Eight Enchantment lessons share a foundational cantrip folio. The 40 definitions and theorems are compiled against a pinned mathlib release; their translated `.spell` sources are decoded and compiled again.
 
@@ -58,7 +58,8 @@ Only after all checks pass does it generate the browser catalog, `.lean`/`.spell
 - `src/main.ts`: book navigation, CodeMirror editing, draft retention, and import/export.
 - `src/magic.ts`: proof-body folding, reveal glimmers, and finite-lived sparkle effects.
 - `public/grimoire/`: downloadable sources, shared key, bundles, and axiom report.
+- `prototype/`: original Python translator, school examples, and vocabulary key. This historical version uses dot-separated namespaces; the browser translator implements the current Mercury syntax.
 
-Arcane Lean is a reversible presentation language, not a separate proof kernel. Its tokenizer supports these verified sources, not all possible Lean syntax extensions. The original Python prototype remains untouched in the parent directory.
+Arcane Lean is a reversible presentation language, not a separate proof kernel. Its tokenizer supports these verified sources, not all possible Lean syntax extensions. The original Python prototype is preserved in `prototype/`.
 
 The other schools remain future work. This release deliberately develops one school for review before expanding the graduate grimoire.

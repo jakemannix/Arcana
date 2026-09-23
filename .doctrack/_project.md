@@ -2,12 +2,12 @@
 project: lean-magic-editor
 type: index
 doctrack_version: "3.0.0"
-last_updated: 2026-09-22
+last_updated: 2026-09-23
 tags: [doctrack/type/index, doctrack/status/active, doctrack/audience/claude]
 ---
 # Lean Magic browser editor
 
-TypeScript/Vite static site in the `web/` subproject. See [[features/editor]], [[components/translator]], and [[decisions/browser-translation]]. Run and test commands are in `README.md`.
+TypeScript/Vite static site in the local `web/` subproject, which is the root of the GitHub repository `jakemannix/ArcaneLean`. The `github` remote preserves the existing development history. Original Python sources and fixtures are bundled unchanged in `prototype/`. See [[features/editor]], [[components/translator]], and [[decisions/browser-translation]]. Run and test commands are in `README.md`.
 
 | Source file | Responsibility |
 |---|---|

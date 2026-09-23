@@ -3,3 +3,5 @@ dist/
 *.local
 math/.lake/
 math/decoded/
+__pycache__/
+*.pyc

@@ -117,6 +117,8 @@ test('the Veyr family distinguishes structures and preserves scalar-action argum
   assert.match(spell, /⟮✨Bound✨Veyrath✨ ᚠ ᚫ⟯/);
   assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
   assert.deepEqual(key.data().auto, []);
+  assert.equal(toSpell('IsSimpleGroup', key), '✨Simple✨Veyr✨');
+  assert.equal(toSpell('Nat.Prime', key), 'Tally☿Indivisible');
 });
 
 test('older carrier names, structure names, and namespaces retain their saved-key meaning', () => {

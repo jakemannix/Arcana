@@ -13,6 +13,8 @@ Use runes for abstract carriers and lowercase material components for term varia
 
 The shared root encodes a mnemonic family: Group → Veyr, Ring → Veyrath, Field → Veyrion; Module → Bound Veyr and Algebra → Bound Veyrath expose external scalar action. Harmonic marks commutativity; Chanted distinguishes additive notation; Inner marks substructures. A ring has an additive commutative group, not generally a multiplicative group on its entire carrier. Lean supports semiring modules/algebras, so the explicit hypotheses remain authoritative. `grimoire/VOCABULARY.md` explains the family without adding new mathematical lessons.
 
+Keep `IsSimpleGroup → Simple Veyr` distinct from `Nat.Prime → Indivisible`: simple groups need not have prime order. The separately defined simplicity property retains its Unbreakable Veyr spell name.
+
 Current non-syntactic structure names override the historical default words in `grimoire/lexicon.json`. Keep `src/tables.json` and the original key/fixtures stable, so old saved bundles still interpret their original vocabulary. The internal `lean-magic/v1` bundle identifier stays compatible; current branding, npm package, Lean package, and downloadable key use Arcana. The actual Lean namespace remains `Mathematics`, translated as `Arcana` by the current key.
 
 Related: [[mathematical-names]], [[../components/translator]], [[../features/editor]], [[../features/graduate-grimoire]].

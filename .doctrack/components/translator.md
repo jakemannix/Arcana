@@ -12,4 +12,6 @@ tags: [doctrack/type/component, doctrack/status/active, doctrack/audience/claude
 
 Arcane namespace components and standalone projection dots use `☿` (Mercury), so `Function.Bijective` becomes `Rite☿Perfect`. The Arcane lexer accepts both Mercury and legacy dots. Quoted names, decimals, comments, strings, and multi-dot operators retain their literal punctuation; literal Lean Mercury symbols are escaped. All nine generated folios were decoded and recompiled after this syntax change.
 
+A sparkle name (`✨Word✨word✨`) is one identifier component: the spell lexer reads it as a unit, and `Key` accepts it as a legal spell word. The lexicon holds these names directly, so the translator does not split or join words itself. `⁻¹` maps to the `†` symbol. Literal Lean `✨` and `†` characters are escaped with `⟄`. The spell editor highlights sparkle names in gold.
+
 Compatibility tests decode the unchanged original Schools.spell fixture and round-trip its new encoding. Additional tests cover namespace chains and projections, literal punctuation, serialized keys, quoted collisions, scoped names, prototype names, strings, comments, glyph escapes, incomplete input, and invalid keys. Consumed by [[features/editor]]. Rationale: [[decisions/browser-translation]].

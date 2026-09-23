@@ -1,25 +1,49 @@
-beckon GrandArchive☿Bindings☿Coven☿Cabal☿Silences
+beckon Arcanum☿Enchantment☿Pacts
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ritual CircleOfSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp☿silence
+ritual ✨Circle✨of✨Silence✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Cabal coven ⇰ warp☿silence
 
-spell NameTheSilent ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    mark ∈ CircleOfSilence warp ↭ warp mark ≣ ☉ ⇰ Herald☿SilenceCriterion
+spell ✨Name✨the✨Silent✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    mark ∈ ✨Circle✨of✨Silence✨ warp ↭ warp mark ≣ ☉ ⇰ Herald☿✨Silence✨Criterion✨
 
-spell UnbrokenSilence ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
-    ⟪sigilWard ⟡ mark ∈ CircleOfSilence warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft⁻¹ ∈ CircleOfSilence warp ⇰ cast
-  shapeshift warp ⟪weft ⊛ mark ⊛ weft⁻¹⟫ ≣ ☉
-  bind silenceWard ⟡ warp mark ≣ ☉ ⇰ sigilWard
-  purify ⟮silenceWard⟯
+spell ✨Unbroken✨Silence✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⧼mark ⟡ coven⧽
+    ⟪sigilward ⟡ mark ∈ ✨Circle✨of✨Silence✨ warp⟫ ⟪weft ⟡ coven⟫ ⟡ weft ⊛ mark ⊛ weft† ∈ ✨Circle✨of✨Silence✨ warp ⇰ cast
+  bind muted ⟡ warp mark ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ warp mark⟫☿onward sigilward
+  bind hushed ⟡ warp ⟪weft ⊛ mark ⊛ weft†⟫ ≣ ☉ ⇰
+    litany warp ⟪weft ⊛ mark ⊛ weft†⟫ ≣ warp ⟪weft ⊛ mark⟫ ⊛ warp weft† ⇰ ✨Preserve✨the✨Binding✨ warp ⟪weft ⊛ mark⟫ weft†
+      ▢ ≣ warp weft ⊛ warp mark ⊛ warp weft† ⇰
+          sympathy ⟪conjure token ⇉ token ⊛ warp weft†⟫ ⟪✨Preserve✨the✨Binding✨ warp weft mark⟫
+      ▢ ≣ warp weft ⊛ ☉ ⊛ warp weft† ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token ⊛ warp weft†⟫ muted
+      ▢ ≣ warp weft ⊛ warp weft† ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp weft†⟫ ⟪✨Bind✨with✨Stillness✨ ⟪warp weft⟫⟫
+      ▢ ≣ warp weft ⊛ ⟪warp weft⟫† ⇰ sympathy ⟪conjure token ⇉ warp weft ⊛ token⟫ ⟪✨Reverse✨the✨Binding✨ warp weft⟫
+      ▢ ≣ ☉ ⇰ ✨Binding✨Undone✨ ⟪warp weft⟫
+  missile ⟪✨Name✨the✨Silent✨ warp ⟪weft ⊛ mark ⊛ weft†⟫⟫☿backward hushed
 
-spell SilenceIsHallowed ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪CircleOfSilence warp⟫☿Hallowed ⇰ cast
-  shapeshift warp☿silence☿Hallowed
-  initiation
+spell ✨Silence✨is✨Hallowed✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ ⟪✨Circle✨of✨Silence✨ warp⟫☿Hallowed ⇰ cast
+  fabricate
+  summon mark sigilward weft
+  missile ✨Unbroken✨Silence✨ warp sigilward weft
 
-spell NothingLost ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite☿Faithful warp ↭ CircleOfSilence warp ≣ ⊥ ⇰ warp☿FaithfulnessCriterion☿reflect
+spell ✨Nothing✨Lost✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
+    Rite☿Faithful warp ↭ ✨Circle✨of✨Silence✨ warp ≣ ⊥ ⇰ cast
+  transmute ⟮Cabal☿✨Emptiness✨Criterion✨⟯
+  fabricate
+  ❖ summon fidelity mark sigilward
+    bind echoing ⟡ warp mark ≣ warp ☉ ⇰
+      litany warp mark ≣ ☉ ⇰ ⟪✨Name✨the✨Silent✨ warp mark⟫☿onward sigilward
+        ▢ ≣ warp ☉ ⇰ ⟪✨Preserve✨the✨Stillness✨ warp⟫☿reflect
+    missile fidelity echoing
+  ❖ summon hollowness mark rune twinned
+    bind hushed ⟡ warp ⟪mark ⊛ rune†⟫ ≣ ☉ ⇰
+      litany warp ⟪mark ⊛ rune†⟫ ≣ warp mark ⊛ warp rune† ⇰ ✨Preserve✨the✨Binding✨ warp mark rune†
+        ▢ ≣ warp rune ⊛ warp rune† ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune†⟫ twinned
+        ▢ ≣ warp ⟪rune ⊛ rune†⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp rune rune†⟫☿reflect
+        ▢ ≣ warp ☉ ⇰ sympathy warp ⟪✨Binding✨Undone✨ rune⟫
+        ▢ ≣ ☉ ⇰ ✨Preserve✨the✨Stillness✨ warp
+    bind vanished ⟡ mark ⊛ rune† ≣ ☉ ⇰ hollowness ⟪mark ⊛ rune†⟫ ⟪⟪✨Name✨the✨Silent✨ warp ⟪mark ⊛ rune†⟫⟫☿backward hushed⟫
+    missile ✨Balanced✨Division✨☿onward vanished
 
 seal Arcanum☿Enchantment

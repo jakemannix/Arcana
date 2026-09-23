@@ -1,19 +1,57 @@
-beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
+beckon Arcanum☿Enchantment☿Descent
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ineffable ritual UnveilTheImage ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
-  VeiledCoven☿ImageRevelation warp
+spell ✨Silence✨within✨the✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ warp☿silence ⋜ warp☿✨confine✨to✨manifestation✨☿silence ⇰ cast
+  summon mark sigilward
+  bind muted ⟡ warp mark ≣ ☉ ⇰ sigilward
+  proclaim warp☿✨confine✨to✨manifestation✨ mark ≣ ☉
+  missile Kin☿extend muted
 
-spell RevealTheSigil ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
-    ⟪UnveilTheImage warp ⟪VeiledCoven☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
+ritual ✨Image✨Pact✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ↝⊛ warp☿manifestation ⇰
+  ✨Pass✨the✨Veil✨ warp☿silence warp☿✨confine✨to✨manifestation✨ ⟪✨Silence✨within✨the✨Image✨ warp⟫
 
-spell PerfectUnveiling ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
-    Rite☿Perfect ⟪UnveilTheImage warp⟫ ⇰ ⟪UnveilTheImage warp⟫☿perfect
+spell ✨Image✨of✨the✨Sigil✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
 
-ineffable ritual UnveilTheRealm ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
-    coven ⧸ warp☿silence ≃⊛ circle ⇰ VeiledCoven☿RealmRevelation warp faith
+spell ✨Faithful✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Faithful ⟪✨Image✨Pact✨ warp⟫ ⇰ cast
+  summon wisp coset twinned
+  wrest ⦉mark᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ wisp
+  wrest ⦉rune᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ coset
+  bind echoing ⟡ warp mark ≣ warp rune ⇰
+    litany warp mark ≣ ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ warp mark⟫☿reflect
+      ▢ ≣ ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge rune⟫ ⟡ circle⟫ ⇰ sympathy Kin☿core twinned
+      ▢ ≣ warp rune ⇰ ✨Image✨of✨the✨Sigil✨ warp rune
+  bind hushed ⟡ warp ⟪mark† ⊛ rune⟫ ≣ ☉ ⇰
+    litany warp ⟪mark† ⊛ rune⟫ ≣ warp mark† ⊛ warp rune ⇰ ✨Preserve✨the✨Binding✨ warp mark† rune
+      ▢ ≣ ⟪warp mark⟫† ⊛ warp rune ⇰ sympathy ⟪conjure token ⇉ token ⊛ warp rune⟫ ⟪✨Reverse✨the✨Binding✨ warp mark⟫
+      ▢ ≣ ⟪warp rune⟫† ⊛ warp rune ⇰ sympathy ⟪conjure token ⇉ token† ⊛ warp rune⟫ echoing
+      ▢ ≣ ☉ ⇰ ✨Reversal✨Undoes✨ ⟪warp rune⟫
+  missile ✨Veiled✨Coven✨☿✨Veil✨Equality✨☿backward hushed
+
+spell ✨Reaching✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ Rite☿Reaching ⟪✨Image✨Pact✨ warp⟫ ⇰ cast
+  summon quarry
+  wrest ⦉mark᛫ sigilward⦊ ⇰ Herald☿✨Manifestation✨Criterion✨☿onward quarry☿attestation
+  hone ⦉✨Veiled✨Coven✨☿forge mark᛫ ?▢⦊
+  channel Kin☿extend
+  litany ⟪✨Image✨Pact✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ ✨Image✨of✨the✨Sigil✨ warp mark
+    ▢ ≣ quarry ⇰ sigilward
+
+ineffable ritual ✨Unveil✨the✨Image✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡ coven ⧸ warp☿silence ≃⊛ warp☿manifestation ⇰
+  ✨Pact✨Portal✨☿✨from✨perfection✨ ⟪✨Image✨Pact✨ warp⟫ ⦉✨Faithful✨Image✨ warp᛫ ✨Reaching✨Image✨ warp⦊
+
+spell ✨Reveal✨the✨Sigil✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪mark ⟡ coven⟫ ⟡
+    ⟪✨Unveil✨the✨Image✨ warp ⟪✨Veiled✨Coven✨☿forge mark⟫ ⟡ circle⟫ ≣ warp mark ⇰ mirror
+
+spell ✨Perfect✨Unveiling✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟡
+    Rite☿Perfect ⟪✨Unveil✨the✨Image✨ warp⟫ ⇰
+  ⦉✨Faithful✨Image✨ warp᛫ ✨Reaching✨Image✨ warp⦊
+
+ineffable ritual ✨Unveil✨the✨Realm✨ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪faith ⟡ Rite☿Reaching warp⟫ ⟡
+    coven ⧸ warp☿silence ≃⊛ circle ⇰
+  ⟪✨Unveil✨the✨Image✨ warp⟫☿chain
+    ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain Cabal☿✨whole✨cabal✨portal✨⟫
 
 seal Arcanum☿Enchantment

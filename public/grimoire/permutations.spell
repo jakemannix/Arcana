@@ -1,18 +1,27 @@
-beckon GrandArchive☿CovenLore☿Shuffling☿Fetter
-beckon GrandArchive☿CovenLore☿Cycles
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Shuffling☿Fetter
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Cycles
 
 sanctum Arcanum☿Enchantment
 
-byname ThreeSigils ⇰ Portal☿Shuffling ⟪Fetter 3⟫
+byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 3⟫
 
-ritual FirstExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ⊘ ☉
+ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ⊘ ☉
 
-ritual SecondExchange ⟡ ThreeSigils ⇰ Portal☿exchangeSigils ☉ 2
+ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ ☉ 2
 
-spell SixDances ⟡ Counted☿census ThreeSigils ≣ 6 ⇰ cast divine
+spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 6 ⇰ cast divine
 
-spell DanceAndReturn ⟡ FirstExchange ⊛ FirstExchange ≣ ☉ ⇰ cast divine
+spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ ☉ ⇰
+  Portal☿✨Exchange✨Undoes✨Itself✨ ⊘ ☉
 
-spell OrderMatters ⟡ FirstExchange ⊛ SecondExchange ≢ SecondExchange ⊛ FirstExchange ⇰ cast divine
+spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast
+  summon twinned
+  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ≣ ☉ ⇰ cast divine
+  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ≣ 2 ⇰ cast divine
+  bind clash ⟡ ⟪☉ ⟡ Fetter 3⟫ ≣ 2 ⇰
+    litany ⟪☉ ⟡ Fetter 3⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ ⊘ ⇰ sunwise☿reflect
+      ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ ⊘ ⇰ sympathy ⟪conjure dancer ⇉ dancer ⊘⟫ twinned
+      ▢ ≣ 2 ⇰ widdershins
+  missile folly clash ⟪cast divine⟫
 
 seal Arcanum☿Enchantment

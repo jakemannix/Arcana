@@ -15,7 +15,7 @@ test('verification evidence covers current source, vocabulary, and metadata', ()
   assert.equal(provenance.tablesHash, hash(file('src/tables.json')));
   assert.equal(provenance.metadataHash, hash(file('grimoire/chapters.json')));
   assert.equal(provenance.lexiconHash, hash(file('grimoire/lexicon.json')));
-  assert.equal(provenance.verification.declarationCount, 40);
+  assert.equal(provenance.verification.declarationCount, 50);
   assert.deepEqual(new Set(folios.map(f => f.school)), new Set(['Cantrips', 'Enchantment']));
   assert.equal(folios.length, 9);
 });

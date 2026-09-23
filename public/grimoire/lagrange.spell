@@ -1,21 +1,32 @@
-beckon GrandArchive☿CovenLore☿Veils☿Census
-beckon GrandArchive☿CovenLore☿Cycles
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Veils☿Census
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿Cycles
+beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿✨Veiled✨Coven✨
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
-spell CountTheVeils ⟪circle ⟡ Cabal coven⟫ ⟡
+spell ✨Count✨the✨Veils✨ ⟪circle ⟡ Cabal coven⟫ ⟡
     Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰
-  circle☿CosetCensus
+  litany Tally☿census coven ≣ Tally☿census ⟪⟪coven ⧸ circle⟫ ⨯ circle⟫ ⇰
+        Tally☿✨Census✨through✨Portal✨ Cabal☿✨Coven✨Splits✨into✨Veils✨
+    ▢ ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪coven ⧸ circle⟫ circle
 
-spell MeasureOfTheCoven ⟪circle ⟡ Cabal coven⟫ ⟡
-    Tally☿census circle ∣ Tally☿census coven ⇰ circle☿LagrangeBinding
+spell ✨Measure✨of✨the✨Coven✨ ⟪circle ⟡ Cabal coven⟫ ⟡
+    Tally☿census circle ∣ Tally☿census coven ⇰ cast
+  hone ⦉Tally☿census ⟪coven ⧸ circle⟫᛫ ?▢⦊
+  litany Tally☿census coven ≣ Tally☿census ⟪coven ⧸ circle⟫ ⊛ Tally☿census circle ⇰ ✨Count✨the✨Veils✨ circle
+    ▢ ≣ Tally☿census circle ⊛ Tally☿census ⟪coven ⧸ circle⟫ ⇰ Tally☿✨Bindings✨Commute✨ ⟪Tally☿census ⟪coven ⧸ circle⟫⟫ ⟪Tally☿census circle⟫
 
-spell MeasureOfTheCycle ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰
-  CycleDividesCensus mark
+spell ✨Measure✨of✨the✨Cycle✨ ⟪mark ⟡ coven⟫ ⟡ period mark ∣ Tally☿census coven ⇰
+  litany period mark ≣ Tally☿census ⟪Cabal☿✨cycle✨circle✨ mark⟫ ⇰ ⟪Tally☿✨Cycle✨Census✨ mark⟫☿reflect
+    ▢ ∣ Tally☿census coven ⇰ ✨Measure✨of✨the✨Coven✨ ⟪Cabal☿✨cycle✨circle✨ mark⟫
 
-spell TheGreatReturn ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰
-  CensusReturns
+spell ✨The✨Great✨Return✨ ⟪mark ⟡ coven⟫ ⟡ mark ⌃ Tally☿census coven ≣ ☉ ⇰ cast
+  wrest ⦉cinder᛫ measureward⦊ ⇰ ✨Measure✨of✨the✨Cycle✨ mark
+  litany mark ⌃ Tally☿census coven ≣ mark ⌃ ⟪period mark ⊛ cinder⟫ ⇰ sympathy ⟪conjure ember ⇉ mark ⌃ ember⟫ measureward
+    ▢ ≣ ⟪mark ⌃ period mark⟫ ⌃ cinder ⇰ ✨Nested✨Ascent✨ mark ⟪period mark⟫ cinder
+    ▢ ≣ ☉ ⌃ cinder ⇰ sympathy ⟪conjure token ⇉ token ⌃ cinder⟫ ⟪✨Period✨Returns✨ mark⟫
+    ▢ ≣ ☉ ⇰ ✨Stillness✨Ascends✨ cinder
 
 seal Arcanum☿Enchantment

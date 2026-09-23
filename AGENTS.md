@@ -26,6 +26,7 @@ Lean and mathlib provide the proof checking. Arcane is a reversible presentation
 - State hypotheses and mathematical caveats accurately. For example, `Nat.card` is zero on infinite types, and orbit/coset correspondence need not be a group isomorphism.
 - Preserve strings, comments, quoted identifiers, whitespace, and literal glyphs through translation. Namespace conversion belongs in the lexer/translator.
 - Arcane namespaces and field access use Mercury, **`☿`**: `Rite☿Perfect` corresponds to `Function.Bijective`. Continue accepting legacy dotted spells. Decimal points and punctuation inside literal text retain their meaning.
+- Multi-word Arcane names use sparkles, **`✨Preserve✨the✨Binding✨`**, not TitleCase: capitalized words for spells, rituals, and namespaces; lowercase words for library functions; small words such as "the" and "of" in lower case. Frequent local hypothesis names stay single words (`sigilward`). The group inverse `⁻¹` is written as a dagger, `†`. The user wants the Arcane side to avoid looking mathematical or programmatic, so keep `:`, `/`, `{`, `}` and similar symbols replaced.
 - Keep the translation key with exported drafts; it carries the information needed to reverse renamed identifiers.
 
 ## Interaction and visual character

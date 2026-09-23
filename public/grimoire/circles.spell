@@ -1,22 +1,38 @@
-beckon GrandArchive☿Bindings☿Coven☿Cabal☿Foundations
+beckon ✨Grand✨Archive✨☿Bindings☿Coven☿Cabal☿Foundations
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven ⟡ Essence⊛⧽ ⟮Coven coven⟯
 
-ritual BoundCircle ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle seeds
+ritual ✨Bound✨Circle✨ ⟪seeds ⟡ Host coven⟫ ⟡ Cabal coven ⇰ Cabal☿encircle seeds
 
-spell GatherTheSeeds ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ BoundCircle seeds ⇰
-  Cabal☿SeedsWithinCircle
+spell ✨Gather✨the✨Seeds✨ ⟪seeds ⟡ Host coven⟫ ⟡ seeds ⊆ ✨Bound✨Circle✨ seeds ⇰ cast
+  summon mark sigilward
+  proclaim mark ∈ Cabal☿encircle seeds
+  transmute ⟮Cabal☿✨Encirclement✨Criterion✨⟯
+  summon choir hedgeward
+  missile hedgeward sigilward
 
-spell SmallestCircle ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
-    BoundCircle seeds ⋜ circle ↭ seeds ⊆ circle ⇰ Cabal☿LeastBinding circle
+spell ✨Smallest✨Circle✨ ⟪seeds ⟡ Host coven⟫ ⟪circle ⟡ Cabal coven⟫ ⟡
+    ✨Bound✨Circle✨ seeds ⋜ circle ↭ seeds ⊆ circle ⇰ cast
+  fabricate
+  ❖ summon enclosed mark sigilward
+    bind gathered ⟡ mark ∈ ✨Bound✨Circle✨ seeds ⇰ ✨Gather✨the✨Seeds✨ seeds sigilward
+    missile enclosed gathered
+  ❖ summon sown mark sigilward
+    bind ✨every✨circle✨ ⟡ ⟁ choir ⟡ Cabal coven᛫ seeds ⊆ choir ↝ mark ∈ choir ⇰ Cabal☿✨Encirclement✨Criterion✨☿onward sigilward
+    missile ✨every✨circle✨ circle sown
 
-spell KeepTheCircle ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽
-    ⟪sigilWard ⟡ mark ∈ circle⟫ ⟪runeWard ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune⁻¹ ∈ circle ⇰
-  circle☿BindingRemains sigilWard ⟪circle☿ReversalRemains runeWard⟫
+spell ✨Keep✨the✨Circle✨ ⟪circle ⟡ Cabal coven⟫ ⧼mark rune ⟡ coven⧽
+    ⟪sigilward ⟡ mark ∈ circle⟫ ⟪runeward ⟡ rune ∈ circle⟫ ⟡ mark ⊛ rune† ∈ circle ⇰ cast
+  bind reversed ⟡ rune† ∈ circle ⇰ circle☿✨Reversal✨Remains✨ runeward
+  missile circle☿✨Binding✨Remains✨ sigilward reversed
 
-spell SealTheCircle ⟪circle ⟡ Cabal coven⟫ ⟡ BoundCircle ⟪circle ⟡ Host coven⟫ ≣ circle ⇰
-  Cabal☿CircleAlreadySealed circle
+spell ✨Seal✨the✨Circle✨ ⟪circle ⟡ Cabal coven⟫ ⟡ ✨Bound✨Circle✨ ⟪circle ⟡ Host coven⟫ ≣ circle ⇰ cast
+  channel Stalemate
+  ❖ bind sown ⟡ ⟪circle ⟡ Host coven⟫ ⊆ circle ⇰ conjure mark sigilward ⇉ sigilward
+    missile ⟪✨Smallest✨Circle✨ ⟪circle ⟡ Host coven⟫ circle⟫☿backward sown
+  ❖ summon mark sigilward
+    missile ✨Gather✨the✨Seeds✨ ⟪circle ⟡ Host coven⟫ sigilward
 
 seal Arcanum☿Enchantment

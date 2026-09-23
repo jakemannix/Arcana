@@ -1,24 +1,35 @@
-beckon GrandArchive☿CovenLore☿VeiledCoven☿Foundations
+beckon Arcanum☿Enchantment☿Pacts
+beckon ✨Grand✨Archive✨☿✨Coven✨Lore✨☿✨Veiled✨Coven✨☿Foundations
 
 sanctum Arcanum☿Enchantment
 
 familiar ⧼coven circle ⟡ Essence⊛⧽ ⟮Coven coven⟯ ⟮Coven circle⟯
 
-ritual PassTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
-    ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
-  VeiledCoven☿descend veil warp veilWard
+spell ✨Veil✨Hides✨the✨Difference✨ ⟪veil ⟡ Cabal coven⟫ ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ warp☿silence⟫
+    ⧼mark rune ⟡ coven⧽ ⟪kinship ⟡ mark† ⊛ rune ∈ veil⟫ ⟡ warp mark ≣ warp rune ⇰ cast
+  bind muted ⟡ warp ⟪mark† ⊛ rune⟫ ≣ ☉ ⇰ veilward kinship
+  litany warp mark ≣ warp mark ⊛ ☉ ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪warp mark⟫⟫☿reflect
+    ▢ ≣ warp mark ⊛ warp ⟪mark† ⊛ rune⟫ ⇰ sympathy ⟪conjure token ⇉ warp mark ⊛ token⟫ muted☿reflect
+    ▢ ≣ warp ⟪mark ⊛ ⟪mark† ⊛ rune⟫⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ warp mark ⟪mark† ⊛ rune⟫⟫☿reflect
+    ▢ ≣ warp rune ⇰ sympathy warp ⟪✨Return✨from✨the✨Left✨ mark rune⟫
 
-spell SpeakThroughTheVeil ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
-    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪mark ⟡ coven⟫ ⟡
-    PassTheVeil veil warp veilWard ⟪VeiledCoven☿forge mark⟫ ≣ warp mark ⇰ mirror
+ritual ✨Pass✨the✨Veil✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯ ⟪warp ⟡ coven ↝⊛ circle⟫
+    ⟪veilward ⟡ veil ⋜ warp☿silence⟫ ⟡ coven ⧸ veil ↝⊛ circle ⇰
+  ✨Veiled✨Coven✨☿descend veil warp veilward
 
-spell OnlyOnePassage ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
-    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilWard ⟡ veil ⋜ warp☿silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫
-    ⟪echoWard ⟡ ⟁ mark ⟡ coven᛫ weft ⟪VeiledCoven☿forge mark⟫ ≣ warp mark⟫ ⟡
-    weft ≣ PassTheVeil veil warp veilWard ⇰ cast
+spell ✨Speak✨through✨the✨Veil✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
+    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ warp☿silence⟫ ⟪mark ⟡ coven⟫ ⟡
+    ✨Pass✨the✨Veil✨ veil warp veilward ⟪✨Veiled✨Coven✨☿forge mark⟫ ≣ warp mark ⇰ mirror
+
+spell ✨Only✨One✨Passage✨ ⟪veil ⟡ Cabal coven⟫ ⟮veil☿Hallowed⟯
+    ⟪warp ⟡ coven ↝⊛ circle⟫ ⟪veilward ⟡ veil ⋜ warp☿silence⟫ ⟪weft ⟡ coven ⧸ veil ↝⊛ circle⟫
+    ⟪echoward ⟡ ⟁ mark ⟡ coven᛫ weft ⟪✨Veiled✨Coven✨☿forge mark⟫ ≣ warp mark⟫ ⟡
+    weft ≣ ✨Pass✨the✨Veil✨ veil warp veilward ⇰ cast
   channel Herald☿extend
   summon coset
-  unravel coset through Effigies☿LiftTheVeil whence
-  ⫽ ward mark ⇉ missile echoWard mark
+  wrest ⦉mark᛫ mirror⦊ ⇰ ✨Veiled✨Coven✨☿✨Every✨Veil✨has✨a✨Face✨ coset
+  litany weft ⟪✨Veiled✨Coven✨☿forge mark⟫ ≣ warp mark ⇰ echoward mark
+    ▢ ≣ ✨Pass✨the✨Veil✨ veil warp veilward ⟪✨Veiled✨Coven✨☿forge mark⟫ ⇰
+        ⟪✨Speak✨through✨the✨Veil✨ veil warp veilward mark⟫☿reflect
 
 seal Arcanum☿Enchantment

@@ -1,24 +1,41 @@
-beckon GrandArchive☿Reason☿Rite☿Foundations
-beckon GrandArchive☿Reason☿Portal☿Names
+beckon ✨Grand✨Archive✨☿Reason☿Rite☿Foundations
+beckon ✨Grand✨Archive✨☿Reason☿Portal☿Names
 
 sanctum Arcanum☿Cantrips
 
 familiar ⧼aether vapor vesper ⟡ Essence⊛⧽
 
-ritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ weft ⊚ warp
+ritual Weave ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟡ aether ↝ vesper ⇰ conjure mark ⇉ weft ⟪warp mark⟫
 
-spell ThreadUnfolds ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡
+spell ✨Thread✨Unfolds✨ ⟪warp ⟡ aether ↝ vapor⟫ ⟪weft ⟡ vapor ↝ vesper⟫ ⟪mark ⟡ aether⟫ ⟡
     Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ mirror
 
-spell FaithfulWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
-    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoWard ⟡ Rite☿Faithful weft⟫ ⟡
-    Rite☿Faithful ⟪Weave warp weft⟫ ⇰ echoWard☿threading faith
+spell ✨Faithful✨Weaving✨ ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
+    ⟪faith ⟡ Rite☿Faithful warp⟫ ⟪echoward ⟡ Rite☿Faithful weft⟫ ⟡
+    Rite☿Faithful ⟪Weave warp weft⟫ ⇰ cast
+  summon mark rune twinned
+  bind ✨outer✨weave✨ ⟡ weft ⟪warp mark⟫ ≣ weft ⟪warp rune⟫ ⇰
+    litany weft ⟪warp mark⟫ ≣ Weave warp weft mark ⇰ ⟪✨Thread✨Unfolds✨ warp weft mark⟫☿reflect
+      ▢ ≣ Weave warp weft rune ⇰ twinned
+      ▢ ≣ weft ⟪warp rune⟫ ⇰ ✨Thread✨Unfolds✨ warp weft rune
+  bind ✨inner✨weave✨ ⟡ warp mark ≣ warp rune ⇰ echoward ✨outer✨weave✨
+  missile faith ✨inner✨weave✨
 
-spell ReachingWeaving ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
-    ⟪faith ⟡ Rite☿Reaching warp⟫ ⟪echoWard ⟡ Rite☿Reaching weft⟫ ⟡
-    Rite☿Reaching ⟪Weave warp weft⟫ ⇰ echoWard☿threading faith
+spell ✨Reaching✨Weaving✨ ⧼warp ⟡ aether ↝ vapor⧽ ⧼weft ⟡ vapor ↝ vesper⧽
+    ⟪faith ⟡ Rite☿Reaching warp⟫ ⟪echoward ⟡ Rite☿Reaching weft⟫ ⟡
+    Rite☿Reaching ⟪Weave warp weft⟫ ⇰ cast
+  summon star
+  wrest ⦉rune᛫ runeward⦊ ⇰ echoward star
+  wrest ⦉mark᛫ sigilward⦊ ⇰ faith rune
+  hone ⦉mark᛫ ?▢⦊
+  litany Weave warp weft mark ≣ weft ⟪warp mark⟫ ⇰ ✨Thread✨Unfolds✨ warp weft mark
+    ▢ ≣ weft rune ⇰ sympathy weft sigilward
+    ▢ ≣ star ⇰ runeward
 
-spell MirrorReturn ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal☿reflect ⟪portal mark⟫ ≣ mark ⇰
-  portal☿ReturnThroughMirror mark
+spell ✨Mirror✨Return✨ ⟪portal ⟡ aether ≃ vapor⟫ ⟪mark ⟡ aether⟫ ⟡ portal☿reflect ⟪portal mark⟫ ≣ mark ⇰
+  portal☿✨Return✨Path✨ mark
+
+spell ✨Mirror✨Depart✨ ⟪portal ⟡ aether ≃ vapor⟫ ⟪rune ⟡ vapor⟫ ⟡ portal ⟪portal☿reflect rune⟫ ≣ rune ⇰
+  portal☿✨Departure✨Path✨ rune
 
 seal Arcanum☿Cantrips

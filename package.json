@@ -8,7 +8,9 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "tsx --test tests/*.test.ts",
-    "grimoire:verify": "tsx scripts/verify-grimoire.ts"
+    "grimoire:verify": "tsx scripts/verify-grimoire.ts",
+    "cli": "tsx scripts/arcana-cli.ts",
+    "build:cli": "vite build --config vite.cli.config.ts"
   },
   "dependencies": {
     "@codemirror/commands": "^6.8.1",

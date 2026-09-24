@@ -88,6 +88,18 @@ Only after all checks pass does it generate the browser catalog, `.lean`/`.spell
 
 Arcana is a reversible presentation language, not a separate proof kernel. Its tokenizer supports these verified sources, not all possible Lean syntax extensions.
 
+## Machine interface
+
+`scripts/arcana-cli.ts` lets tools and agents (such as the Mathemagician's Lean service) use the translator without the browser. It reads one JSON object on stdin and writes one on stdout:
+
+```sh
+echo '{"identifiers": ["Function.Bijective"]}' | npm run --silent cli -- lookup
+echo '{"names": {"seven_inv": "✨Seven✨Reversed✨"}}' | npm run --silent cli -- names
+echo '{"lean": "theorem seven_inv : …", "names": {…}}' | npm run --silent cli -- translate
+```
+
+`lookup` returns existing spell names and the components the key does not name. `names` checks proposed names against the key, each other, `src/naming.ts`, and the capitalized or sparkle-framed style for declarations. `translate` applies the accepted names, returns the spell, whether it decodes back exactly, and the `additions` (proposed plus automatically allocated names) a draft's key needs. Every call starts from the verified grimoire key and never changes it. `npm run build:cli` writes a standalone Node bundle, `dist-cli/arcana-cli.js`. `tests/cli.test.ts` checks that translating every folio reproduces its published spell exactly.
+
 ## The new paths
 
 - **Transmutation · Chains & echoes:** build an actual Mathlib chain complex, prove boundaries are cycles, and show chain maps preserve both. Compute a rational example’s homology as ℚ, connect that quotient to Mathlib’s H₁, and check induced-map identity and composition laws.

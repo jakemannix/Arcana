@@ -18,6 +18,9 @@ TypeScript/Vite browser project at the root of `jakemannix/Arcana`, with the Git
 | src/translator.ts | Tokenization and bidirectional conversion |
 | src/tables.json | Built-in syntax, vocabulary, symbols, and name allocation |
 | tests/translator.test.ts | Exact translation and quoted-name regression coverage |
+| scripts/arcana-cli.ts | JSON machine interface: lookup, names, translate |
+| tests/cli.test.ts | CLI reproduction of every folio spell and name-check rules |
+| vite.cli.config.ts | Standalone Node bundle of the CLI |
 | index.html | Entry point and metadata |
 
 ## Graduate grimoire (2026-09-23)

@@ -3,3 +3,4 @@ dist/
 *.local
 math/.lake/
 math/decoded/
+dist-cli/

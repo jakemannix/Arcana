@@ -19,11 +19,11 @@ A carrier rune is a variable naming a type. It makes no claim about that type's 
 “Harmonic” expresses commutativity of the named operation. “Chanted” distinguishes additive notation; it does not add a new mathematical law. “Bound” always marks an external scalar action, not containment. “Inner” marks a substructure, as in `✨Inner✨Veyr✨` (Subgroup) and `✨Inner✨Bound✨Veyr✨` (Submodule).
 
 ```text
-⟮Veyr ᛰ⟯                         -- Group G
-⟮Veyrath ᚱ⟯                      -- Ring R
-⟮✨Bound✨Veyr✨ ᚱ ᛗ⟯              -- Module R M
-⟮Veyrion ᚠ⟯                      -- Field F
-⟮✨Bound✨Veyrath✨ ᚠ ᚫ⟯           -- Algebra F A
+⁅Veyr ᛰ⁆                         -- Group G
+⁅Veyrath ᚱ⁆                      -- Ring R
+⁅✨Bound✨Veyr✨ ᚱ ᛗ⁆              -- Module R M
+⁅Veyrion ᚠ⁆                      -- Field F
+⁅✨Bound✨Veyrath✨ ᚠ ᚫ⁆           -- Algebra F A
 ```
 
 In each binding, the first rune supplies scalars and the second receives their action. The names expose the relationship while the Lean pane remains the exact mathematical statement.
@@ -57,7 +57,7 @@ The full Disenchantment from Choirs to carriers has a left hand but no right han
 
 ## Numerals
 
-Spell numbers use kanji digits in place-value order: `0 1 2 3 4 5 6 7 8 9` becomes `〇 一 二 三 四 五 六 七 八 九`. For example, the six permutations of three sigils use `六` and `三`, while `24` is `二四`. We use digit substitution, not additive Japanese forms such as `二十四`, so every source character can return exactly. Type a backslash before a digit to insert it. Literal text and quoted names keep their contents.
+Spell numbers use kanji digits in place-value order: `0 1 2 3 4 5 6 7 8 9` becomes `〇 壱 弐 参 四 五 六 七 八 九`. For example, the six permutations of three sigils use `六` and `参`, while `24` is `弐四`. We use digit substitution, not additive Japanese forms such as `弐十四`, so every source character can return exactly. Type a backslash before a digit to insert it. Literal text and quoted names keep their contents.
 
 ## Accords and the Yoneda mirror
 
@@ -90,4 +90,4 @@ Yoneda's Mirror says an accord out of `✨pacts✨out✨of✨ 🌒` is fixed by 
 
 Hamilton's First, Second, and Third Spirits are i, j, and k. Hamilton's Shadow is −1, the unique nonidentity self-undoing spirit. These names describe the finite group; the entire quaternion algebra is infinite.
 
-The **Eightfold Way** refers to the order of each group. Its final spell, **The Eightfold Way Admits No Sixth House**, proves that the five houses exhaust all groups of order eight up to isomorphism. **The Five Houses Are Distinct** proves the ten non-isomorphism claims. The census of self-undoing spirits counts nonidentity involutions, so its five values are 1, 3, 7, 5, 1.
+The **Eightfold Way** refers to the order of each group. Its final spell, **The Eightfold Way Has Five Houses**, proves that the five houses exhaust all groups of order eight up to isomorphism. **The Five Houses Are Distinct** proves the ten non-isomorphism claims. The census of self-undoing spirits counts nonidentity involutions, so its five values are 1, 3, 7, 5, 1.

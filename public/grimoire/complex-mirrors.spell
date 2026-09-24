@@ -7,7 +7,7 @@ unveil Umbra Mirrors
 
 /- The imaginary unit is an ordinary field element with one unusual square.
 Multiplication by it rotates the real and imaginary coordinates a quarter turn. -/
-spell ✨Conjure✨the✨Imaginary✨Ember✨ ⟡ ✨Imaginary✨Ember✨ ⌃ 二 ≣ ⟪⧿一 ⟡ Umbrae⟫ ⇰ Umbra☿✨The✨Ember's✨Shadow✨
+spell ✨Conjure✨the✨Imaginary✨Ember✨ ⟡ ✨Imaginary✨Ember✨ ⌃ 弐 ≣ ⟪⧿壱 ⟡ Umbrae⟫ ⇰ Umbra☿✨The✨Ember's✨Shadow✨
 
 spell ✨A✨Quarter✨Turn✨through✨the✨Mirror✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
     ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫☿sunface ≣ ⧿amber✨rod☿moonface ⩓ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫☿moonface ≣ amber✨rod☿sunface ⇰ cast
@@ -15,31 +15,31 @@ spell ✨A✨Quarter✨Turn✨through✨the✨Mirror✨ ⟪amber✨rod ⟡ Umbra
 
 spell ✨Four✨Imaginary✨Turns✨Return✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ ✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫⟫⟫ ≣ amber✨rod ⇰ cast
   litany ✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫⟫⟫ ≣ ⟪✨Imaginary✨Ember✨ ⊛ ✨Imaginary✨Ember✨⟫ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ✨Imaginary✨Ember✨⟫ ⊛ amber✨rod ⇰ cast circlet
-    ▢ ≣ amber✨rod ⇰ cast transmute ⟮Umbra☿✨Two✨Embers✨Cast✨a✨Shadow✨⟯⁂ circlet
+    ▢ ≣ amber✨rod ⇰ cast transmute ⁅Umbra☿✨Two✨Embers✨Cast✨a✨Shadow✨⁆⁂ circlet
 
 /- Conjugation fixes the real coordinate and negates the imaginary one.
 It is an involution, so looking into this mirror twice restores the input. -/
-spell ✨Twice✨through✨the✨Imaginary✨Mirror✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ mirrorlight ⟪mirrorlight amber✨rod⟫ ≣ amber✨rod ⇰ cast purify
+spell ✨Twice✨through✨the✨Mirror✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ mirrorlight ⟪mirrorlight amber✨rod⟫ ≣ amber✨rod ⇰ cast purify
 
 /- The squared modulus is real and nonnegative. Multiplying a complex number
 by its conjugate gives that squared modulus, embedded back into the complex field. -/
 spell ✨The✨Mirror✨Reveals✨Radiance✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ amber✨rod ⊛ mirrorlight amber✨rod ≣ ⟪✨radiance✨squared✨ amber✨rod ⟡ Umbrae⟫ ⇰
   Umbra☿✨bind✨the✨mirrorlight✨ amber✨rod
 
-spell ✨Radiance✨from✨Two✨Shadows✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ ‖amber✨rod‖ ⌃ 二 ≣ amber✨rod☿sunface ⌃ 二 ⧾ amber✨rod☿moonface ⌃ 二 ⇰ cast
-  transmute ⟮Umbra☿✨square✨the✨radiance✨᛫ Umbra☿✨unveil✨the✨squared✨radiance✨⟯
+spell ✨Radiance✨from✨Two✨Shadows✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ ‖amber✨rod‖ ⌃ 弐 ≣ amber✨rod☿sunface ⌃ 弐 ⧾ amber✨rod☿moonface ⌃ 弐 ⇰ cast
+  transmute ⁅Umbra☿✨square✨the✨radiance✨᛫ Umbra☿✨unveil✨the✨squared✨radiance✨⁆
   circlet
 
 /- This exact computation uses field algebra, not a floating-point approximation. -/
-spell ✨Twin✨Sparks✨Become✨Moonlight✨ ⟡ ⟪一 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 二 ≣ ⟪二 ⟡ Umbrae⟫ ⊛ ✨Imaginary✨Ember✨ ⇰ cast
-  litany ⟪一 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 二 ≣ 一 ⧾ 二 ⊛ ✨Imaginary✨Ember✨ ⧾ ✨Imaginary✨Ember✨ ⌃ 二 ⇰ cast circlet
-    ▢ ≣ 二 ⊛ ✨Imaginary✨Ember✨ ⇰ cast transmute ⟮Umbra☿✨The✨Ember's✨Shadow✨⟯⁂ circlet
+spell ✨Twin✨Sparks✨Become✨Moonlight✨ ⟡ ⟪壱 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 弐 ≣ ⟪弐 ⟡ Umbrae⟫ ⊛ ✨Imaginary✨Ember✨ ⇰ cast
+  litany ⟪壱 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 弐 ≣ 壱 ⧾ 弐 ⊛ ✨Imaginary✨Ember✨ ⧾ ✨Imaginary✨Ember✨ ⌃ 弐 ⇰ cast circlet
+    ▢ ≣ 弐 ⊛ ✨Imaginary✨Ember✨ ⇰ cast transmute ⁅Umbra☿✨The✨Ember's✨Shadow✨⁆⁂ circlet
 
-spell ✨The✨Fivefold✨Radiance✨ ⟡ ‖⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ≣ 五 ⇰ cast
-  bind doubleward ⟡ ‖⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ⌃ 二 ≣ 二五 ⇰ cast
-    transmute ⟮✨Radiance✨from✨Two✨Shadows✨⟯
+spell ✨The✨Fivefold✨Radiance✨ ⟡ ‖⟪参 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ≣ 五 ⇰ cast
+  bind doubleward ⟡ ‖⟪参 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ⌃ 弐 ≣ 弐五 ⇰ cast
+    transmute ⁅✨Radiance✨from✨Two✨Shadows✨⁆
     numerology
-  bind lightward ⇰ ✨radiance✨cannot✨darken✨ ⟪⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨⟫
+  bind lightward ⇰ ✨radiance✨cannot✨darken✨ ⟪⟪参 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨⟫
   greatledger
 
 seal Arcana☿Illusion

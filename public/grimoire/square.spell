@@ -8,44 +8,44 @@ byname ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨ 四
 
 /- Choose a quarter-turn and a reflection. Their powers will generate
 all rotations and reflected rotations of the square. -/
-ritual ✨Turn✨the✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
+ritual ✨Turn✨the✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 壱
 
 ritual ✨Mirror✨of✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
 
 spell ✨Count✨the✨Four✨Winds✨ ⟡ Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 八 ⇰
-  litany Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 二 ⊛ 四 ⇰ ✨Mirror✨Veyr✨☿census
+  litany Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 弐 ⊛ 四 ⇰ ✨Mirror✨Veyr✨☿census
     ▢ ≣ 八 ⇰ cast divine
 
-spell ✨Four✨Winds✨Return✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⌃ 四 ≣ 一 ⇰
+spell ✨Four✨Winds✨Return✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⌃ 四 ≣ 壱 ⇰
   ✨Mirror✨Veyr✨☿✨One✨Circuit✨Returns✨
 
-spell ✨The✨Wind✨Mirror✨Undoes✨Itself✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⌃ 二 ≣ 一 ⇰
-  litany ✨Mirror✨of✨Four✨Winds✨ ⌃ 二 ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ ✨Unfold✨the✨Double✨Ascent✨ ▢
-    ▢ ≣ 一 ⇰ ✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇
+spell ✨The✨Wind✨Mirror✨Undoes✨Itself✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⌃ 弐 ≣ 壱 ⇰
+  litany ✨Mirror✨of✨Four✨Winds✨ ⌃ 弐 ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ ✨Unfold✨the✨Double✨Ascent✨ ▢
+    ▢ ≣ 壱 ⇰ ✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇
 
 spell ✨The✨Wind's✨Turning✨Period✨ ⟡ period ✨Turn✨the✨Four✨Winds✨ ≣ 四 ⇰
   ✨Mirror✨Veyr✨☿✨The✨Circuit's✨Period✨
 
-spell ✨The✨Wind's✨Mirror✨Period✨ ⟡ period ✨Mirror✨of✨Four✨Winds✨ ≣ 二 ⇰
+spell ✨The✨Wind's✨Mirror✨Period✨ ⟡ period ✨Mirror✨of✨Four✨Winds✨ ≣ 弐 ⇰
   ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
 
 /- A mirror reverses the sense of a turn: reflect, turn, then reflect again
 and the result is the inverse rotation. -/
 spell ✨Mirrors✨Reverse✨the✨Winds✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰
   litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣
-        ✨Mirror✨Veyr✨☿mirror✨shard 一 ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
-    ▢ ≣ ✨Mirror✨Veyr✨☿amber✨disc 三 ⇰ cast divine
+        ✨Mirror✨Veyr✨☿mirror✨shard 壱 ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
+    ▢ ≣ ✨Mirror✨Veyr✨☿amber✨disc 参 ⇰ cast divine
     ▢ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰ cast divine
 
 /- The two orders of a turn and a reflection give distinct reflected rotations.
 This supplies an explicit witness that the group is noncommutative. -/
 spell ✨The✨Winds✨Resist✨Harmony✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≢ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ cast
   summon harmonyward
-  bind discordward ⟡ ⟪✨Mirror✨Veyr✨☿mirror✨shard 三 ⟡ ✨Four✨Winds✨Veyr✨⟫ ≢ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
+  bind discordward ⟡ ⟪✨Mirror✨Veyr✨☿mirror✨shard 参 ⟡ ✨Four✨Winds✨Veyr✨⟫ ≢ ✨Mirror✨Veyr✨☿mirror✨shard 壱 ⇰ cast divine
   channel discordward
-  litany ✨Mirror✨Veyr✨☿mirror✨shard 三 ≣ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
+  litany ✨Mirror✨Veyr✨☿mirror✨shard 参 ≣ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
     ▢ ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ harmonyward
-    ▢ ≣ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
+    ▢ ≣ ✨Mirror✨Veyr✨☿mirror✨shard 壱 ⇰ cast divine
 
 /- These normal forms exhaust the group: a rotation, or a product of a reflection
 and a rotation, with the exponent in the displayed range. The rightmost motion acts first. -/
@@ -54,11 +54,11 @@ spell ✨All✨Commands✨of✨Four✨Winds✨ ⟡ ⟁ jade✨cube ⟡ ✨Four�
 
 /- Reassociate to place the two identical mirrors together.
 They cancel, leaving a rotation as the product of these two reflections. -/
-spell ✨Two✨Wind✨Mirrors✨Make✨a✨Turn✨ ⟡
+spell ✨Two✨Mirrors✨Make✨a✨Turn✨ ⟡
     ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣ ✨Turn✨the✨Four✨Winds✨ ⇰
   litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣
         ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨⟫ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ ⟪✨Regather✨the✨Binding✨ ▢ ▢ ▢⟫☿reflect
-    ▢ ≣ 一 ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ sympathy ⟪conjure jade✨cube ⇉ jade✨cube ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ⟪✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇⟫
+    ▢ ≣ 壱 ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ sympathy ⟪conjure jade✨cube ⇉ jade✨cube ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ⟪✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇⟫
     ▢ ≣ ✨Turn✨the✨Four✨Winds✨ ⇰ ✨Silence✨Before✨the✨Binding✨ ▢
 
 seal Arcana☿Enchantment

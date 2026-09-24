@@ -8,11 +8,11 @@ sanctum Arcana☿Enchantment
 The group identity is residue zero, and powers mean repeated addition. -/
 byname ✨Sixfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 六⟫
 
-ritual ✨Turn✨the✨Sixfold✨Wheel✨ ⟡ ✨Sixfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+ritual ✨Turn✨the✨Sixfold✨Wheel✨ ⟡ ✨Sixfold✨Wheel✨ ⇰ Unchanted☿unchant 壱
 
 spell ✨Count✨the✨Sixfold✨Wheel✨ ⟡ Counted☿census ✨Sixfold✨Wheel✨ ≣ 六 ⇰ cast divine
 
-spell ✨Six✨Turns✨Return✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 六 ≣ 一 ⇰ cast divine
+spell ✨Six✨Turns✨Return✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 六 ≣ 壱 ⇰ cast divine
 
 /- A single forward step visits every position of the six-place dial.
 The bounded exponent is a witness for how many steps reach each element. -/
@@ -26,28 +26,28 @@ spell ✨The✨Sixfold✨Period✨ ⟡ period ✨Turn✨the✨Sixfold✨Wheel✨
   fabricate
   ❖ missile ✨Six✨Turns✨Return✨
   ❖ summon pinch✨of✨sulfur rimward riseward
-    bind firstward ⟡ ⟁ onyx✨bead ⟡ Fetter 六᛫ 〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
+    bind firstward ⟡ ⟁ onyx✨bead ⟡ Fetter 六᛫ 〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 壱 ⇰ cast divine
     missile firstward ⦉pinch✨of✨sulfur᛫ rimward⦊ riseward
 
 /- Use the general power-order formula, substitute the known generator order,
 then compute the greatest common divisor. The next example follows the same pattern. -/
-spell ✨Double✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ 三 ⇰
-  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 二 ⇰
+spell ✨Double✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 弐⟫ ≣ 参 ⇰
+  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 弐⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 弐 ⇰
         ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
-    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 二 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 二⟫ ✨The✨Sixfold✨Period✨
-    ▢ ≣ 三 ⇰ cast divine
+    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 弐 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 弐⟫ ✨The✨Sixfold✨Period✨
+    ▢ ≣ 参 ⇰ cast divine
 
-spell ✨Triple✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三⟫ ≣ 二 ⇰
-  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 三 ⇰
+spell ✨Triple✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 参⟫ ≣ 弐 ⇰
+  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 参⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 参 ⇰
         ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
-    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 三 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 三⟫ ✨The✨Sixfold✨Period✨
-    ▢ ≣ 二 ⇰ cast divine
+    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 参 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 参⟫ ✨The✨Sixfold✨Period✨
+    ▢ ≣ 弐 ⇰ cast divine
 
 /- First add the exponents using a general power law.
 Only the final reduction uses the finite dial’s wraparound. -/
-spell ✨Beyond✨the✨Last✨Mark✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰
+spell ✨Beyond✨the✨Last✨Mark✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 参 ⇰
   litany ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ ⟪四 ⧾ 五⟫ ⇰ ⟪✨Join✨the✨Ascents✨ ▢ ▢ ▢⟫☿reflect
-    ▢ ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰ cast divine
+    ▢ ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 参 ⇰ cast divine
 
 spell ✨Turn✨the✨Wheel✨Backward✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨† ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ⇰ cast divine
 

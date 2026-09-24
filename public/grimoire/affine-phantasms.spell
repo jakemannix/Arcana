@@ -36,40 +36,40 @@ is exactly the ideal of equations vanishing at that point. -/
 spell ✨A✨Sigil's✨Vows✨Are✨Its✨Silence✨ ⧼ᚨ ⟡ Essence⊛⧽ ⟪jade✨cube ⟡ ᚨ ↝ Umbrae⟫ ⟡
     ✨Vows✨of✨the✨Apparition✨ ⧼jade✨cube⧽ ≣ Emissary☿silence ⟪✨Many✨Glyph✨Incantations✨☿✨conjure✨at✨the✨sigils✨ jade✨cube⟫☿✨unveil✨the✨Veyrath✨pact✨ ⇰ cast
   extend ruby✨shard
-  purify ⟮✨Vows✨of✨the✨Apparition✨᛫ Emissary☿✨Silence✨Criterion✨⟯
+  purify ⁅✨Vows✨of✨the✨Apparition✨᛫ Emissary☿✨Silence✨Criterion✨⁆
 
 /- In two coordinates, the equation xy = 0 describes the union of the axes.
 Fin 2 names the coordinates; each coordinate itself can be any complex number. -/
-ritual ✨The✨Crossed✨Apparition✨ ⟡ ✨Many✨Glyph✨Incantations✨ ⟪Fetter 二⟫ Umbrae ⇰
-  ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 〇 ⊛ ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 一
+ritual ✨The✨Crossed✨Apparition✨ ⟡ ✨Many✨Glyph✨Incantations✨ ⟪Fetter 弐⟫ Umbrae ⇰
+  ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 〇 ⊛ ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 壱
 
-ritual ✨Covenant✨of✨Crossed✨Apparitions✨ ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ⟪Fetter 二⟫ Umbrae⟫ ⇰
+ritual ✨Covenant✨of✨Crossed✨Apparitions✨ ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ⟪Fetter 弐⟫ Umbrae⟫ ⇰
   Covenant☿consecrate ⧼✨The✨Crossed✨Apparition✨⧽
 
-spell ✨One✨Arm✨or✨the✨Other✨ ⟪jade✨cube ⟡ Fetter 二 ↝ Umbrae⟫ ⟡
-    jade✨cube ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ↭ jade✨cube 〇 ≣ 〇 ⩔ jade✨cube 一 ≣ 〇 ⇰ cast
-  transmute ⟮✨Apparition✨of✨the✨Covenant✨᛫ ✨Covenant✨of✨Crossed✨Apparitions✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨⟯
-  purify ⟮✨The✨Crossed✨Apparition✨᛫ ✨a✨silent✨binding✨betrays✨a✨silence✨⟯
+spell ✨One✨Arm✨or✨the✨Other✨ ⟪jade✨cube ⟡ Fetter 弐 ↝ Umbrae⟫ ⟡
+    jade✨cube ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ↭ jade✨cube 〇 ≣ 〇 ⩔ jade✨cube 壱 ≣ 〇 ⇰ cast
+  transmute ⁅✨Apparition✨of✨the✨Covenant✨᛫ ✨Covenant✨of✨Crossed✨Apparitions✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨⁆
+  purify ⁅✨The✨Crossed✨Apparition✨᛫ ✨silent✨binding✨silent✨part✨⁆
 
 /- The point (i, 0) lies on the horizontal complex axis. The point (i, 1)
 lies on neither axis. These are exact complex-coordinate computations. -/
 spell ✨The✨Ember✨Rests✨upon✨the✨Cross✨ ⟡
-    ⟪!⟮Umbra☿✨Imaginary✨Ember✨᛫ 〇⟯ ⟡ Fetter 二 ↝ Umbrae⟫ ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
-  transmute ⟮✨One✨Arm✨or✨the✨Other✨⟯
+    ⟪!⁅Umbra☿✨Imaginary✨Ember✨᛫ 〇⁆ ⟡ Fetter 弐 ↝ Umbrae⟫ ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
+  transmute ⁅✨One✨Arm✨or✨the✨Other✨⁆
   missile Either☿choose✨right mirror
 
 spell ✨The✨Ember✨Escapes✨the✨Cross✨ ⟡
-    ⟪!⟮Umbra☿✨Imaginary✨Ember✨᛫ 一⟯ ⟡ Fetter 二 ↝ Umbrae⟫ ∉ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
-  transmute ⟮✨One✨Arm✨or✨the✨Other✨⟯
+    ⟪!⁅Umbra☿✨Imaginary✨Ember✨᛫ 壱⁆ ⟡ Fetter 弐 ↝ Umbrae⟫ ∉ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
+  transmute ⁅✨One✨Arm✨or✨the✨Other✨⁆
   purify
 
 /- Squaring an equation changes its multiplicity, but not its zero set over
 the complex field. A bare set of solutions forgets this extra algebraic data. -/
-spell ✨A✨Deeper✨Vow✨Casts✨the✨Same✨Shape✨ ⟡
-    ✨Apparition✨of✨the✨Covenant✨ ⟪Covenant☿consecrate ⧼✨The✨Crossed✨Apparition✨ ⌃ 二⧽⟫ ≣
+spell ✨Deeper✨Vows✨Same✨Shape✨ ⟡
+    ✨Apparition✨of✨the✨Covenant✨ ⟪Covenant☿consecrate ⧼✨The✨Crossed✨Apparition✨ ⌃ 弐⧽⟫ ≣
       ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
   extend jade✨cube
-  transmute ⟮✨Apparition✨of✨the✨Covenant✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨᛫ ✨One✨Arm✨or✨the✨Other✨⟯
-  purify ⟮✨The✨Crossed✨Apparition✨᛫ ✨a✨silent✨binding✨betrays✨a✨silence✨⟯
+  transmute ⁅✨Apparition✨of✨the✨Covenant✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨᛫ ✨One✨Arm✨or✨the✨Other✨⁆
+  purify ⁅✨The✨Crossed✨Apparition✨᛫ ✨silent✨binding✨silent✨part✨⁆
 
 seal Arcana☿Phantasms

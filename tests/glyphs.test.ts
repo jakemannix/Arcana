@@ -36,7 +36,7 @@ test('carrier shortcuts insert complete rune code points', () => {
 });
 
 test('every decimal digit has a kanji shortcut and decodes exactly', () => {
-  for (const [digit, glyph] of Array.from('〇一二三四五六七八九').entries()) {
+  for (const [digit, glyph] of Array.from('〇壱弐参四五六七八九').entries()) {
     assert.deepEqual(expand('\\', String(digit), spell), { from: 1, insert: glyph });
     assert.equal(fromSpell(glyph, new Key()), String(digit));
   }

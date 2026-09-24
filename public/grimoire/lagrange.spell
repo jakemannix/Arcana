@@ -4,14 +4,14 @@ beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿✨Veiled✨Veyr✨
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
+familiar ⧼ᛰ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆
 
 /- Count an element by its coset and its position within that coset.
 No normality is needed to count the coset set. The finite interpretation is
 the familiar one; Nat.card uses zero for infinite types. -/
 spell ✨Count✨the✨Veils✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
     Tally☿census ᛰ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰
-  litany Tally☿census ᛰ ≣ Tally☿census ⟪⟪ᛰ ⧸ ☥⟫ ⨯ ☥⟫ ⇰
+  litany Tally☿census ᛰ ≣ Tally☿census ⟪⟪ᛰ ⧸ ☥⟫ ※ ☥⟫ ⇰
         Tally☿✨Census✨through✨Portal✨ ✨Inner✨Veyr✨☿✨Veyr✨Splits✨into✨Veils✨
     ▢ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪ᛰ ⧸ ☥⟫ ☥
 
@@ -31,11 +31,11 @@ spell ✨Lagrange's✨Measure✨of✨the✨Cycle✨ ⟪jade✨cube ⟡ ᛰ⟫ �
 
 /- Open the divisibility witness and group the exponent into full periods.
 Each period returns to the identity, so any number of periods does too. -/
-spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ 一 ⇰ cast
+spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ 壱 ⇰ cast
   wrest ⦉onyx✨bead᛫ measureward⦊ ⇰ ✨Lagrange's✨Measure✨of✨the✨Cycle✨ jade✨cube
   litany jade✨cube ⌃ Tally☿census ᛰ ≣ jade✨cube ⌃ ⟪period jade✨cube ⊛ onyx✨bead⟫ ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ jade✨cube ⌃ pinch✨of✨sulfur⟫ measureward
     ▢ ≣ ⟪jade✨cube ⌃ period jade✨cube⟫ ⌃ onyx✨bead ⇰ ✨Nested✨Ascent✨ jade✨cube ⟪period jade✨cube⟫ onyx✨bead
-    ▢ ≣ 一 ⌃ onyx✨bead ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⌃ onyx✨bead⟫ ⟪✨Period✨Returns✨ jade✨cube⟫
-    ▢ ≣ 一 ⇰ ✨Stillness✨Ascends✨ onyx✨bead
+    ▢ ≣ 壱 ⌃ onyx✨bead ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⌃ onyx✨bead⟫ ⟪✨Period✨Returns✨ jade✨cube⟫
+    ▢ ≣ 壱 ⇰ ✨Stillness✨Ascends✨ onyx✨bead
 
 seal Arcana☿Enchantment

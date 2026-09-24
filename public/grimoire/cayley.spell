@@ -4,7 +4,7 @@ beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Command☿Court
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
+familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Commanding ᛰ 🌒⁆
 
 /- Each group element acts as an endofunction. A product acts by the right-hand
 element first, then the left-hand one, matching function composition. -/
@@ -32,13 +32,13 @@ spell ✨The✨Shuffles✨Obey✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ �
 A move that fixes every input fixes the identity, which forces the move itself
 to be the identity. Thus this action has trivial kernel. -/
 spell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ≣ ⊥ ⇰ cast
-  transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
+  transmute ⁅✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⁆
   summon silk✨cord echoward
-  bind idle ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ ✨Pact✨into✨the✨Shuffles✨ silk✨cord⟫☿onward echoward
-  litany silk✨cord ≣ silk✨cord ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ silk✨cord⟫☿reflect
-    ▢ ≣ ✨Pact✨into✨the✨Shuffles✨ silk✨cord 一 ⇰ ⟪✨Command✨is✨Binding✨ silk✨cord 一⟫☿reflect
-    ▢ ≣ ⟪一 ⟡ Portal☿Shuffling ᛰ⟫ 一 ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather 一⟫ idle
-    ▢ ≣ 一 ⇰ mirror
+  bind idle ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ≣ 壱 ⇰ ⟪✨Name✨the✨Silent✨ ✨Pact✨into✨the✨Shuffles✨ silk✨cord⟫☿onward echoward
+  litany silk✨cord ≣ silk✨cord ⊛ 壱 ⇰ ⟪✨Bind✨with✨Stillness✨ silk✨cord⟫☿reflect
+    ▢ ≣ ✨Pact✨into✨the✨Shuffles✨ silk✨cord 壱 ⇰ ⟪✨Command✨is✨Binding✨ silk✨cord 壱⟫☿reflect
+    ▢ ≣ ⟪壱 ⟡ Portal☿Shuffling ᛰ⟫ 壱 ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather 壱⟫ idle
+    ▢ ≣ 壱 ⇰ mirror
 
 /- The kernel criterion from Circle of silence converts this calculation
 into injectivity of the permutation representation. -/

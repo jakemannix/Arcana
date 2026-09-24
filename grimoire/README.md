@@ -123,7 +123,7 @@ beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
+familiar ⧼ᛰ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆
 
 /- Start with arbitrary seeds. Their generated subgroup adds everything required
 by the identity, multiplication, and inverse laws, and nothing beyond that. -/
@@ -134,7 +134,7 @@ The universal membership test turns that observation into membership in the clos
 spell ✨Gather✨the✨Seeds✨ ⟪pouch✨of✨sand ⟡ Host ᛰ⟫ ⟡ pouch✨of✨sand ⊆ ✨Bound✨Circle✨ pouch✨of✨sand ⇰ cast
   summon jade✨cube sigilward
   proclaim jade✨cube ∈ ✨Inner✨Veyr✨☿encircle pouch✨of✨sand
-  transmute ⟮✨Inner✨Veyr✨☿✨Encirclement✨Criterion✨⟯
+  transmute ⁅✨Inner✨Veyr✨☿✨Encirclement✨Criterion✨⁆
   summon ᛟ hedgeward
   missile hedgeward sigilward
 
@@ -209,7 +209,7 @@ beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ☥ ᛟ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯ ⟮Veyr ᛟ⟯
+familiar ⧼ᛰ ☥ ᛟ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆ ⁅Veyr ᛟ⁆
 
 /- A bundled homomorphism carries its operation-preservation proofs with its function.
 The composite applies the first map and then the second. -/
@@ -220,21 +220,21 @@ spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪j
 
 /- Even though the bundle already stores identity preservation, derive it here
 from multiplication: the image of the identity is idempotent, so cancellation forces it to be the identity. -/
-spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire 一 ≣ 一 ⇰ cast
-  bind doubled ⟡ copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire 一 ⊛ 一 ⇰
-    litany copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire ⟪一 ⊛ 一⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire 一 一⟫☿reflect
-      ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ 一⟫
-      ▢ ≣ copper✨wire 一 ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire 一⟫⟫☿reflect
+spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire 壱 ≣ 壱 ⇰ cast
+  bind doubled ⟡ copper✨wire 壱 ⊛ copper✨wire 壱 ≣ copper✨wire 壱 ⊛ 壱 ⇰
+    litany copper✨wire 壱 ⊛ copper✨wire 壱 ≣ copper✨wire ⟪壱 ⊛ 壱⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire 壱 壱⟫☿reflect
+      ▢ ≣ copper✨wire 壱 ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ 壱⟫
+      ▢ ≣ copper✨wire 壱 ⊛ 壱 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire 壱⟫⟫☿reflect
   missile ✨Strike✨from✨the✨Left✨ doubled
 
 /- To recognize the image of an inverse, multiply it by the image of the original
 element and show that the product is the identity. -/
 spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast
-  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ 一 ⇰
+  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ 壱 ⇰
     litany copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ copper✨wire ⟪jade✨cube† ⊛ jade✨cube⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† jade✨cube⟫☿reflect
-      ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
-      ▢ ≣ 一 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
+      ▢ ≣ copper✨wire 壱 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
+      ▢ ≣ 壱 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
   missile ✨Undoer✨is✨Reversal✨ undone
 
 /- Injectivity concerns the underlying functions, so the shared function cantrip
@@ -248,8 +248,8 @@ spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪sil
 under the second map. Unfolding kernel membership reveals the same equation. -/
 spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰
-  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
-    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ 一 ⇰ Pact☿mirror
+  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ 壱 ⇰ Herald☿✨Silence✨Criterion✨
+    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ 壱 ⇰ Pact☿mirror
     ▢ ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
 seal Arcana☿Enchantment
@@ -294,28 +294,28 @@ beckon Arcana☿Enchantment☿Pacts
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
 
 /- The kernel collects exactly the inputs sent to the identity.
 The next equivalence switches between subgroup membership and that equation. -/
 ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ copper✨wire☿silence
 
 spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
-    jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
+    jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ 壱 ⇰ Herald☿✨Silence✨Criterion✨
 
 /- Push the map through this conjugate. The middle image becomes the identity,
 and the two surrounding images cancel. This is the calculation behind normality. -/
 spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨cube ⟡ ᛰ⧽
     ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
-  bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
-  bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ 一 ⇰
+  bind muted ⟡ copper✨wire jade✨cube ≣ 壱 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
+  bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ 壱 ⇰
     litany copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ ⊛ copper✨wire silk✨cord† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ silk✨cord†
       ▢ ≣ copper✨wire silk✨cord ⊛ copper✨wire jade✨cube ⊛ copper✨wire silk✨cord† ⇰
           sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ ⟪✨Preserve✨the✨Binding✨ copper✨wire silk✨cord jade✨cube⟫
-      ▢ ≣ copper✨wire silk✨cord ⊛ 一 ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ muted
+      ▢ ≣ copper✨wire silk✨cord ⊛ 壱 ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ muted
       ▢ ≣ copper✨wire silk✨cord ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire silk✨cord⟫⟫
       ▢ ≣ copper✨wire silk✨cord ⊛ ⟪copper✨wire silk✨cord⟫† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire silk✨cord⟫
-      ▢ ≣ 一 ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
+      ▢ ≣ 壱 ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
   missile ⟪✨Name✨the✨Silent✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫⟫☿backward hushed
 
 /- Normality asks for closure under every conjugation.
@@ -330,21 +330,21 @@ For the converse implication, equal images make the product with an inverse
 land in the kernel, forcing the original inputs to coincide. -/
 spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Faithful copper✨wire ↭ ✨Circle✨of✨Silence✨ copper✨wire ≣ ⊥ ⇰ cast
-  transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
+  transmute ⁅✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⁆
   fabricate
   ❖ summon fidelity jade✨cube sigilward
-    bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire 一 ⇰
-      litany copper✨wire jade✨cube ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
-        ▢ ≣ copper✨wire 一 ⇰ ⟪✨Preserve✨the✨Stillness✨ copper✨wire⟫☿reflect
+    bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire 壱 ⇰
+      litany copper✨wire jade✨cube ≣ 壱 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
+        ▢ ≣ copper✨wire 壱 ⇰ ⟪✨Preserve✨the✨Stillness✨ copper✨wire⟫☿reflect
     missile fidelity echoing
   ❖ summon hollowness jade✨cube silver✨bell twinned
-    bind hushed ⟡ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ 一 ⇰
+    bind hushed ⟡ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ 壱 ⇰
       litany copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube silver✨bell†
         ▢ ≣ copper✨wire silver✨bell ⊛ copper✨wire silver✨bell† ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell†⟫ twinned
         ▢ ≣ copper✨wire ⟪silver✨bell ⊛ silver✨bell†⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire silver✨bell silver✨bell†⟫☿reflect
-        ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silver✨bell⟫
-        ▢ ≣ 一 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
-    bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ 一 ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
+        ▢ ≣ copper✨wire 壱 ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silver✨bell⟫
+        ▢ ≣ 壱 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
+    bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ 壱 ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
     missile ✨Balanced✨Division✨☿onward vanished
 
 seal Arcana☿Enchantment
@@ -390,33 +390,33 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿✨Veiled✨Veyr✨☿Foundat
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
 
 /- Equivalent representatives must produce the same output.
 The kernel containment makes their difference invisible to the map. -/
 spell ✨Veil✨Hides✨the✨Difference✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫
     ⧼jade✨cube silver✨bell ⟡ ᛰ⧽ ⟪kinship ⟡ jade✨cube† ⊛ silver✨bell ∈ ᚾ⟫ ⟡ copper✨wire jade✨cube ≣ copper✨wire silver✨bell ⇰ cast
-  bind muted ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 一 ⇰ veilward kinship
-  litany copper✨wire jade✨cube ≣ copper✨wire jade✨cube ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire jade✨cube⟫⟫☿reflect
+  bind muted ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 壱 ⇰ veilward kinship
+  litany copper✨wire jade✨cube ≣ copper✨wire jade✨cube ⊛ 壱 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire jade✨cube⟫⟫☿reflect
     ▢ ≣ copper✨wire jade✨cube ⊛ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire jade✨cube ⊛ pearl✨dust⟫ muted☿reflect
     ▢ ≣ copper✨wire ⟪jade✨cube ⊛ ⟪jade✨cube† ⊛ silver✨bell⟫⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube ⟪jade✨cube† ⊛ silver✨bell⟫⟫☿reflect
     ▢ ≣ copper✨wire silver✨bell ⇰ sympathy copper✨wire ⟪✨Return✨from✨the✨Left✨ jade✨cube silver✨bell⟫
 
 /- Normality makes the quotient a group. Kernel containment makes this map
 well defined on its cosets; mathlib packages both requirements into the lift. -/
-ritual ✨Pass✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫
+ritual ✨Pass✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⁅ᚾ☿Hallowed⁆ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫
     ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟡ ᛰ ⧸ ᚾ ↝⊛ ☥ ⇰
   ✨Veiled✨Veyr✨☿descend ᚾ copper✨wire veilward
 
 /- To calculate with the descended map, choose a representative and apply
 the original map. This formula follows directly from the construction. -/
-spell ✨Speak✨through✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯
+spell ✨Speak✨through✨the✨Veil✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⁅ᚾ☿Hallowed⁆
     ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     ✨Pass✨the✨Veil✨ ᚾ copper✨wire veilward ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube ⇰ mirror
 
 /- Every coset has a representative. Two descended maps agreeing on all
 representatives therefore agree everywhere; there is no further choice to make. -/
-spell ✨Only✨One✨Passage✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟮ᚾ☿Hallowed⟯
+spell ✨Only✨One✨Passage✨ ⟪ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⁅ᚾ☿Hallowed⁆
     ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪veilward ⟡ ᚾ ⋜ copper✨wire☿silence⟫ ⟪silk✨cord ⟡ ᛰ ⧸ ᚾ ↝⊛ ☥⟫
     ⟪echoward ⟡ ⟁ jade✨cube ⟡ ᛰ᛫ silk✨cord ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ≣ copper✨wire jade✨cube⟫ ⟡
     silk✨cord ≣ ✨Pass✨the✨Veil✨ ᚾ copper✨wire veilward ⇰ cast
@@ -469,14 +469,14 @@ beckon Arcana☿Enchantment☿Descent
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
 
 /- Restricting the codomain to the image does not change any output value.
 In particular, every kernel element still maps to the identity. -/
 spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
   summon jade✨cube sigilward
-  bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ sigilward
-  proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ 一
+  bind muted ⟡ copper✨wire jade✨cube ≣ 壱 ⇰ sigilward
+  proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ 壱
   missile Kin☿extend muted
 
 /- The quotient lift now lands in the image, where every element is known
@@ -497,11 +497,11 @@ spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿F
     litany copper✨wire jade✨cube ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube⟫☿reflect
       ▢ ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge silver✨bell⟫ ⟡ ☥⟫ ⇰ sympathy Kin☿core twinned
       ▢ ≣ copper✨wire silver✨bell ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire silver✨bell
-  bind hushed ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 一 ⇰
+  bind hushed ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 壱 ⇰
     litany copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube† ⊛ copper✨wire silver✨bell ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† silver✨bell
       ▢ ≣ ⟪copper✨wire jade✨cube⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire jade✨cube⟫
       ▢ ≣ ⟪copper✨wire silver✨bell⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust† ⊛ copper✨wire silver✨bell⟫ echoing
-      ▢ ≣ 一 ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
+      ▢ ≣ 壱 ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
   missile ✨Veiled✨Veyr✨☿✨Veil✨Equality✨☿backward hushed
 
 /- An image element carries a witness for its origin.
@@ -528,7 +528,7 @@ spell ✨Perfect✨Unveiling✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
 
 /- Surjectivity of the original map makes its image the whole codomain.
 Only this final strengthening requires that extra hypothesis. -/
-ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Essence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
+ineffable ritual ✨Noether's✨Whole✨Unveiling✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
     ᛰ ⧸ copper✨wire☿silence ≃⊛ ☥ ⇰
   ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫☿chain
     ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain ✨Inner✨Veyr✨☿✨whole✨cabal✨portal✨⟫
@@ -577,14 +577,14 @@ beckon ✨Grand✨Archive✨☿Lore☿Clockwork☿✨Veiled✨Veyr✨
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
+familiar ⧼ᛰ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆
 
 /- Count an element by its coset and its position within that coset.
 No normality is needed to count the coset set. The finite interpretation is
 the familiar one; Nat.card uses zero for infinite types. -/
 spell ✨Count✨the✨Veils✨ ⟪☥ ⟡ ✨Inner✨Veyr✨ ᛰ⟫ ⟡
     Tally☿census ᛰ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰
-  litany Tally☿census ᛰ ≣ Tally☿census ⟪⟪ᛰ ⧸ ☥⟫ ⨯ ☥⟫ ⇰
+  litany Tally☿census ᛰ ≣ Tally☿census ⟪⟪ᛰ ⧸ ☥⟫ ※ ☥⟫ ⇰
         Tally☿✨Census✨through✨Portal✨ ✨Inner✨Veyr✨☿✨Veyr✨Splits✨into✨Veils✨
     ▢ ≣ Tally☿census ⟪ᛰ ⧸ ☥⟫ ⊛ Tally☿census ☥ ⇰ Tally☿✨Census✨of✨Pairs✨ ⟪ᛰ ⧸ ☥⟫ ☥
 
@@ -604,12 +604,12 @@ spell ✨Lagrange's✨Measure✨of✨the✨Cycle✨ ⟪jade✨cube ⟡ ᛰ⟫ �
 
 /- Open the divisibility witness and group the exponent into full periods.
 Each period returns to the identity, so any number of periods does too. -/
-spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ 一 ⇰ cast
+spell ✨Fermat's✨Great✨Return✨ ⟪jade✨cube ⟡ ᛰ⟫ ⟡ jade✨cube ⌃ Tally☿census ᛰ ≣ 壱 ⇰ cast
   wrest ⦉onyx✨bead᛫ measureward⦊ ⇰ ✨Lagrange's✨Measure✨of✨the✨Cycle✨ jade✨cube
   litany jade✨cube ⌃ Tally☿census ᛰ ≣ jade✨cube ⌃ ⟪period jade✨cube ⊛ onyx✨bead⟫ ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ jade✨cube ⌃ pinch✨of✨sulfur⟫ measureward
     ▢ ≣ ⟪jade✨cube ⌃ period jade✨cube⟫ ⌃ onyx✨bead ⇰ ✨Nested✨Ascent✨ jade✨cube ⟪period jade✨cube⟫ onyx✨bead
-    ▢ ≣ 一 ⌃ onyx✨bead ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⌃ onyx✨bead⟫ ⟪✨Period✨Returns✨ jade✨cube⟫
-    ▢ ≣ 一 ⇰ ✨Stillness✨Ascends✨ onyx✨bead
+    ▢ ≣ 壱 ⌃ onyx✨bead ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⌃ onyx✨bead⟫ ⟪✨Period✨Returns✨ jade✨cube⟫
+    ▢ ≣ 壱 ⇰ ✨Stillness✨Ascends✨ onyx✨bead
 
 seal Arcana☿Enchantment
 ```
@@ -656,11 +656,11 @@ beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯
+familiar ⧼ᛰ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆
 
 /- Simple means nontrivial with no proper nontrivial normal subgroup.
 The next theorem identifies this explicit description with the library structure. -/
-ritual ✨Unbreakable✨Veyr✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Verity ⇰
+ritual ✨Unbreakable✨Veyr✨ ⟪ᛰ ⟡ Essence⊛⟫ ⁅Veyr ᛰ⁆ ⟡ Verity ⇰
   Plural ᛰ ⩓ ⟁ ᚾ ⟡ ✨Inner✨Veyr✨ ᛰ᛫ ᚾ☿Hallowed ↝ ᚾ ≣ ⊥ ⩔ ᚾ ≣ ⊤
 
 spell ✨Unbreakable✨Means✨Simple✨ ⟡ ✨Unbreakable✨Veyr✨ ᛰ ↭ ✨Simple✨Veyr✨ ᛰ ⇰ cast
@@ -701,8 +701,8 @@ spell ✨Indivisible✨Veyrs✨Cannot✨Break✨ ⧼ruby✨shard ⟡ Tallies⧽ 
     litany Tally☿census ᛰ ≣ ruby✨shard ⇰ censusward
       ▢ ≢ 〇 ⇰ primalward☿✨never✨void✨
   bind bounded ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ counted
-  bind many ⟡ 一 ⋖ Tally☿census ᛰ ⇰
-    litany 一 ⋖ ruby✨shard ⇰ primalward☿✨beyond✨one✨
+  bind many ⟡ 壱 ⋖ Tally☿census ᛰ ⇰
+    litany 壱 ⋖ ruby✨shard ⇰ primalward☿✨beyond✨one✨
       ▢ ≣ Tally☿census ᛰ ⇰ censusward☿reflect
   bind plural ⟡ Plural ᛰ ⇰ Bounded☿✨Many✨Means✨Plural✨☿onward many
   hone ⦉plural᛫ ?▢⦊
@@ -758,14 +758,14 @@ beckon ✨Grand✨Archive✨☿✨Veyr✨Lore✨☿Commands☿Effigies
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
+familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Commanding ᛰ 🌒⁆
 
 /- Two moves reach the same point exactly when their difference fixes it.
 Move the first group element across the equation using its inverse;
 the reverse implication undoes that move. -/
 spell ✨Same✨Place✨Same✨Veil✨ ⟪jade✨cube ⟡ 🌒⟫ ⟪silk✨cord onyx✨bead ⟡ ᛰ⟫ ⟡
     silk✨cord • jade✨cube ≣ onyx✨bead • jade✨cube ↭ silk✨cord† ⊛ onyx✨bead ∈ Commanding☿stillguard ᛰ jade✨cube ⇰ cast
-  transmute ⟮Commanding☿✨Stillguard✨Criterion✨⟯
+  transmute ⁅Commanding☿✨Stillguard✨Criterion✨⁆
   fabricate
   ❖ summon meeting
     litany ⟪silk✨cord† ⊛ onyx✨bead⟫ • jade✨cube ≣ silk✨cord† • onyx✨bead • jade✨cube ⇰ ✨Command✨in✨Stages✨ silk✨cord† onyx✨bead jade✨cube
@@ -845,7 +845,7 @@ beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿Command☿Court
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Commanding ᛰ 🌒⟯
+familiar ⧼ᛰ 🌒 ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Commanding ᛰ 🌒⁆
 
 /- Each group element acts as an endofunction. A product acts by the right-hand
 element first, then the left-hand one, matching function composition. -/
@@ -873,13 +873,13 @@ spell ✨The✨Shuffles✨Obey✨ ⟪silk✨cord ⟡ ᛰ⟫ ⟪jade✨cube ⟡ �
 A move that fixes every input fixes the identity, which forces the move itself
 to be the identity. Thus this action has trivial kernel. -/
 spell ✨Only✨Stillness✨Moves✨Nothing✨ ⟡ ✨Circle✨of✨Silence✨ ⟪✨Pact✨into✨the✨Shuffles✨ ⟡ ᛰ ↝⊛ Portal☿Shuffling ᛰ⟫ ≣ ⊥ ⇰ cast
-  transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
+  transmute ⁅✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⁆
   summon silk✨cord echoward
-  bind idle ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ ✨Pact✨into✨the✨Shuffles✨ silk✨cord⟫☿onward echoward
-  litany silk✨cord ≣ silk✨cord ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ silk✨cord⟫☿reflect
-    ▢ ≣ ✨Pact✨into✨the✨Shuffles✨ silk✨cord 一 ⇰ ⟪✨Command✨is✨Binding✨ silk✨cord 一⟫☿reflect
-    ▢ ≣ ⟪一 ⟡ Portal☿Shuffling ᛰ⟫ 一 ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather 一⟫ idle
-    ▢ ≣ 一 ⇰ mirror
+  bind idle ⟡ ✨Pact✨into✨the✨Shuffles✨ silk✨cord ≣ 壱 ⇰ ⟪✨Name✨the✨Silent✨ ✨Pact✨into✨the✨Shuffles✨ silk✨cord⟫☿onward echoward
+  litany silk✨cord ≣ silk✨cord ⊛ 壱 ⇰ ⟪✨Bind✨with✨Stillness✨ silk✨cord⟫☿reflect
+    ▢ ≣ ✨Pact✨into✨the✨Shuffles✨ silk✨cord 壱 ⇰ ⟪✨Command✨is✨Binding✨ silk✨cord 壱⟫☿reflect
+    ▢ ≣ ⟪壱 ⟡ Portal☿Shuffling ᛰ⟫ 壱 ⇰ sympathy ⟪conjure raven✨feather ⟡ Portal☿Shuffling ᛰ ⇉ raven✨feather 壱⟫ idle
+    ▢ ≣ 壱 ⇰ mirror
 
 /- The kernel criterion from Circle of silence converts this calculation
 into injectivity of the permutation representation. -/
@@ -940,29 +940,29 @@ sanctum Arcana☿Enchantment
 /- Think of the three labels as vertices of an equilateral triangle.
 Every vertex permutation is a geometric symmetry of that triangle;
 the formal model here computes the permutations, not plane geometry. -/
-byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 三⟫
+byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 参⟫
 
 /- Each swap is a mirror fixing the remaining vertex.
 Products of permutations apply the rightmost swap first. -/
-ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 〇 一
+ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 〇 壱
 
-ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 一 二
+ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 壱 弐
 
 spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 六 ⇰ cast divine
 
-spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ 一 ⇰
-  Portal☿✨Exchange✨Undoes✨Itself✨ 〇 一
+spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ 壱 ⇰
+  Portal☿✨Exchange✨Undoes✨Itself✨ 〇 壱
 
 /- To disprove equality of two permutations, one input with different outputs
 is enough. Follow the first labeled vertex through both compositions. -/
 spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast
   summon twinned
-  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ≣ 一 ⇰ cast divine
-  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ≣ 二 ⇰ cast divine
-  bind clash ⟡ ⟪一 ⟡ Fetter 三⟫ ≣ 二 ⇰
-    litany ⟪一 ⟡ Fetter 三⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ⇰ sunwise☿reflect
+  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ≣ 壱 ⇰ cast divine
+  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ≣ 弐 ⇰ cast divine
+  bind clash ⟡ ⟪壱 ⟡ Fetter 参⟫ ≣ 弐 ⇰
+    litany ⟪壱 ⟡ Fetter 参⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ⇰ sunwise☿reflect
       ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ⇰ sympathy ⟪conjure raven✨feather ⇉ raven✨feather 〇⟫ twinned
-      ▢ ≣ 二 ⇰ widdershins
+      ▢ ≣ 弐 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
 /- These two mirrors compose to a rotation. The next statements trace
@@ -970,16 +970,16 @@ its vertex cycle and prove its exact period. -/
 ritual ✨Threefold✨Turn✨ ⟡ ✨Three✨Sigils✨ ⇰ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨
 
 spell ✨Follow✨the✨Three✨Sigils✨ ⟡
-    ✨Threefold✨Turn✨ 〇 ≣ 一 ⩓ ✨Threefold✨Turn✨ 一 ≣ 二 ⩓ ✨Threefold✨Turn✨ 二 ≣ 〇 ⇰ cast divine
+    ✨Threefold✨Turn✨ 〇 ≣ 壱 ⩓ ✨Threefold✨Turn✨ 壱 ≣ 弐 ⩓ ✨Threefold✨Turn✨ 弐 ≣ 〇 ⇰ cast divine
 
-spell ✨Three✨Turns✨Return✨ ⟡ ✨Threefold✨Turn✨ ⌃ 三 ≣ 一 ⇰ cast divine
+spell ✨Three✨Turns✨Return✨ ⟡ ✨Threefold✨Turn✨ ⌃ 参 ≣ 壱 ⇰ cast divine
 
-spell ✨The✨Threefold✨Period✨ ⟡ period ✨Threefold✨Turn✨ ≣ 三 ⇰
+spell ✨The✨Threefold✨Period✨ ⟡ period ✨Threefold✨Turn✨ ≣ 参 ⇰
   ✨Indivisible✨Return✨ ✨Three✨Turns✨Return✨ ⟪cast divine⟫
 
 /- Every symmetry is a rotation or a reflected rotation.
 The finite exponent range and decide check all possibilities in this model. -/
-spell ✨All✨Dances✨of✨the✨Triangle✨ ⟡ ⟁ raven✨feather ⟡ ✨Three✨Sigils✨᛫ ⟒ onyx✨bead ⟡ Fetter 三᛫
+spell ✨All✨Dances✨of✨the✨Triangle✨ ⟡ ⟁ raven✨feather ⟡ ✨Three✨Sigils✨᛫ ⟒ onyx✨bead ⟡ Fetter 参᛫
     raven✨feather ≣ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⩔ raven✨feather ≣ ✨First✨Exchange✨ ⊛ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⇰ cast divine
 
 seal Arcana☿Enchantment
@@ -1030,11 +1030,11 @@ sanctum Arcana☿Enchantment
 The group identity is residue zero, and powers mean repeated addition. -/
 byname ✨Sixfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 六⟫
 
-ritual ✨Turn✨the✨Sixfold✨Wheel✨ ⟡ ✨Sixfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+ritual ✨Turn✨the✨Sixfold✨Wheel✨ ⟡ ✨Sixfold✨Wheel✨ ⇰ Unchanted☿unchant 壱
 
 spell ✨Count✨the✨Sixfold✨Wheel✨ ⟡ Counted☿census ✨Sixfold✨Wheel✨ ≣ 六 ⇰ cast divine
 
-spell ✨Six✨Turns✨Return✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 六 ≣ 一 ⇰ cast divine
+spell ✨Six✨Turns✨Return✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 六 ≣ 壱 ⇰ cast divine
 
 /- A single forward step visits every position of the six-place dial.
 The bounded exponent is a witness for how many steps reach each element. -/
@@ -1048,28 +1048,28 @@ spell ✨The✨Sixfold✨Period✨ ⟡ period ✨Turn✨the✨Sixfold✨Wheel✨
   fabricate
   ❖ missile ✨Six✨Turns✨Return✨
   ❖ summon pinch✨of✨sulfur rimward riseward
-    bind firstward ⟡ ⟁ onyx✨bead ⟡ Fetter 六᛫ 〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
+    bind firstward ⟡ ⟁ onyx✨bead ⟡ Fetter 六᛫ 〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 壱 ⇰ cast divine
     missile firstward ⦉pinch✨of✨sulfur᛫ rimward⦊ riseward
 
 /- Use the general power-order formula, substitute the known generator order,
 then compute the greatest common divisor. The next example follows the same pattern. -/
-spell ✨Double✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ 三 ⇰
-  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 二⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 二 ⇰
+spell ✨Double✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 弐⟫ ≣ 参 ⇰
+  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 弐⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 弐 ⇰
         ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
-    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 二 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 二⟫ ✨The✨Sixfold✨Period✨
-    ▢ ≣ 三 ⇰ cast divine
+    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 弐 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 弐⟫ ✨The✨Sixfold✨Period✨
+    ▢ ≣ 参 ⇰ cast divine
 
-spell ✨Triple✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三⟫ ≣ 二 ⇰
-  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 三 ⇰
+spell ✨Triple✨Steps✨on✨the✨Wheel✨ ⟡ period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 参⟫ ≣ 弐 ⇰
+  litany period ⟪✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 参⟫ ≣ period ✨Turn✨the✨Sixfold✨Wheel✨ ⧶ Tally☿✨Shared✨Measure✨ ⟪period ✨Turn✨the✨Sixfold✨Wheel✨⟫ 参 ⇰
         ✨Measure✨the✨Stride✨ ✨Turn✨the✨Sixfold✨Wheel✨
-    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 三 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 三⟫ ✨The✨Sixfold✨Period✨
-    ▢ ≣ 二 ⇰ cast divine
+    ▢ ≣ 六 ⧶ Tally☿✨Shared✨Measure✨ 六 参 ⇰ sympathy ⟪conjure pinch✨of✨sulfur ⇉ pinch✨of✨sulfur ⧶ Tally☿✨Shared✨Measure✨ pinch✨of✨sulfur 参⟫ ✨The✨Sixfold✨Period✨
+    ▢ ≣ 弐 ⇰ cast divine
 
 /- First add the exponents using a general power law.
 Only the final reduction uses the finite dial’s wraparound. -/
-spell ✨Beyond✨the✨Last✨Mark✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰
+spell ✨Beyond✨the✨Last✨Mark✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 参 ⇰
   litany ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 四 ⊛ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ ⟪四 ⧾ 五⟫ ⇰ ⟪✨Join✨the✨Ascents✨ ▢ ▢ ▢⟫☿reflect
-    ▢ ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 三 ⇰ cast divine
+    ▢ ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 参 ⇰ cast divine
 
 spell ✨Turn✨the✨Wheel✨Backward✨ ⟡ ✨Turn✨the✨Sixfold✨Wheel✨† ≣ ✨Turn✨the✨Sixfold✨Wheel✨ ⌃ 五 ⇰ cast divine
 
@@ -1121,32 +1121,32 @@ sanctum Arcana☿Enchantment
 Equal cardinality alone does not determine a group’s multiplication. -/
 byname ✨Fourfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 四⟫
 
-byname ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted ⟪Clockwork 二 ⨯ Clockwork 二⟫
+byname ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted ⟪Clockwork 弐 ※ Clockwork 弐⟫
 
-ritual ✨Turn✨the✨Fourfold✨Wheel✨ ⟡ ✨Fourfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+ritual ✨Turn✨the✨Fourfold✨Wheel✨ ⟡ ✨Fourfold✨Wheel✨ ⇰ Unchanted☿unchant 壱
 
 /- These two elements toggle different coordinates.
 Their product toggles both, with each coordinate computed modulo two. -/
-ritual ✨First✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪一᛫ 〇⟫
+ritual ✨First✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪壱᛫ 〇⟫
 
-ritual ✨Second✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪〇᛫ 一⟫
+ritual ✨Second✨Fork✨ ⟡ ✨Klein's✨Forked✨Charm✨ ⇰ Unchanted☿unchant ⟪〇᛫ 壱⟫
 
 spell ✨Count✨the✨Fourfold✨Wheel✨ ⟡ Counted☿census ✨Fourfold✨Wheel✨ ≣ 四 ⇰ cast divine
 
 spell ✨Count✨Klein's✨Charm✨ ⟡ Counted☿census ✨Klein's✨Forked✨Charm✨ ≣ 四 ⇰ cast divine
 
-spell ✨Join✨the✨Forks✨ ⟡ ✨First✨Fork✨ ⊛ ✨Second✨Fork✨ ≣ Unchanted☿unchant ⟪一᛫ 一⟫ ⇰ cast
+spell ✨Join✨the✨Forks✨ ⟡ ✨First✨Fork✨ ⊛ ✨Second✨Fork✨ ≣ Unchanted☿unchant ⟪壱᛫ 壱⟫ ⇰ cast
   divine
 
 spell ✨Klein's✨Harmony✨ ⟡ ⟁ jade✨cube silver✨bell ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⊛ silver✨bell ≣ silver✨bell ⊛ jade✨cube ⇰ cast divine
 
 /- Every toggle combination undoes itself. The cyclic generator, by contrast,
 does not return after two steps; the next statements expose that difference. -/
-spell ✨Every✨Fork✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
+spell ✨Every✨Fork✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Klein's✨Forked✨Charm✨᛫ jade✨cube ⌃ 弐 ≣ 壱 ⇰ cast divine
 
-spell ✨Two✨Turns✨Have✨Not✨Returned✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二 ≢ 一 ⇰ cast divine
+spell ✨Two✨Turns✨Have✨Not✨Returned✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 弐 ≢ 壱 ⇰ cast divine
 
-spell ✨Four✨Turns✨Return✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 四 ≣ 一 ⇰ cast divine
+spell ✨Four✨Turns✨Return✨ ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 四 ≣ 壱 ⇰ cast divine
 
 /- An isomorphism preserves squares and the identity. If one existed here,
 it would send the cyclic generator’s square and the identity to the same output.
@@ -1154,11 +1154,11 @@ Injectivity would force them to have been equal, contradicting the computation. 
 spell ✨The✨Wheel✨Is✨Not✨the✨Fork✨ ⟡ ⫬Inhabited ⟪✨Fourfold✨Wheel✨ ≃⊛ ✨Klein's✨Forked✨Charm✨⟫ ⇰ cast
   summon perfectward
   rend perfectward whence ⦉obsidian✨mirror⦊
-  bind imageward ⟡ obsidian✨mirror ⟪✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二⟫ ≣ obsidian✨mirror 一 ⇰
-    litany obsidian✨mirror ⟪✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二⟫ ≣ ⟪obsidian✨mirror ✨Turn✨the✨Fourfold✨Wheel✨⟫ ⌃ 二 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror ▢ ▢
-      ▢ ≣ 一 ⇰ ✨Every✨Fork✨Undoes✨Itself✨ ⟪obsidian✨mirror ✨Turn✨the✨Fourfold✨Wheel✨⟫
-      ▢ ≣ obsidian✨mirror 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
-  bind returnward ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 二 ≣ 一 ⇰ obsidian✨mirror☿unconfounded imageward
+  bind imageward ⟡ obsidian✨mirror ⟪✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 弐⟫ ≣ obsidian✨mirror 壱 ⇰
+    litany obsidian✨mirror ⟪✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 弐⟫ ≣ ⟪obsidian✨mirror ✨Turn✨the✨Fourfold✨Wheel✨⟫ ⌃ 弐 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror ▢ ▢
+      ▢ ≣ 壱 ⇰ ✨Every✨Fork✨Undoes✨Itself✨ ⟪obsidian✨mirror ✨Turn✨the✨Fourfold✨Wheel✨⟫
+      ▢ ≣ obsidian✨mirror 壱 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+  bind returnward ⟡ ✨Turn✨the✨Fourfold✨Wheel✨ ⌃ 弐 ≣ 壱 ⇰ obsidian✨mirror☿unconfounded imageward
   missile ✨Two✨Turns✨Have✨Not✨Returned✨ returnward
 
 seal Arcana☿Enchantment
@@ -1209,44 +1209,44 @@ byname ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨ 四
 
 /- Choose a quarter-turn and a reflection. Their powers will generate
 all rotations and reflected rotations of the square. -/
-ritual ✨Turn✨the✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
+ritual ✨Turn✨the✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 壱
 
 ritual ✨Mirror✨of✨Four✨Winds✨ ⟡ ✨Four✨Winds✨Veyr✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
 
 spell ✨Count✨the✨Four✨Winds✨ ⟡ Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 八 ⇰
-  litany Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 二 ⊛ 四 ⇰ ✨Mirror✨Veyr✨☿census
+  litany Counted☿census ✨Four✨Winds✨Veyr✨ ≣ 弐 ⊛ 四 ⇰ ✨Mirror✨Veyr✨☿census
     ▢ ≣ 八 ⇰ cast divine
 
-spell ✨Four✨Winds✨Return✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⌃ 四 ≣ 一 ⇰
+spell ✨Four✨Winds✨Return✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⌃ 四 ≣ 壱 ⇰
   ✨Mirror✨Veyr✨☿✨One✨Circuit✨Returns✨
 
-spell ✨The✨Wind✨Mirror✨Undoes✨Itself✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⌃ 二 ≣ 一 ⇰
-  litany ✨Mirror✨of✨Four✨Winds✨ ⌃ 二 ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ ✨Unfold✨the✨Double✨Ascent✨ ▢
-    ▢ ≣ 一 ⇰ ✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇
+spell ✨The✨Wind✨Mirror✨Undoes✨Itself✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⌃ 弐 ≣ 壱 ⇰
+  litany ✨Mirror✨of✨Four✨Winds✨ ⌃ 弐 ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ ✨Unfold✨the✨Double✨Ascent✨ ▢
+    ▢ ≣ 壱 ⇰ ✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇
 
 spell ✨The✨Wind's✨Turning✨Period✨ ⟡ period ✨Turn✨the✨Four✨Winds✨ ≣ 四 ⇰
   ✨Mirror✨Veyr✨☿✨The✨Circuit's✨Period✨
 
-spell ✨The✨Wind's✨Mirror✨Period✨ ⟡ period ✨Mirror✨of✨Four✨Winds✨ ≣ 二 ⇰
+spell ✨The✨Wind's✨Mirror✨Period✨ ⟡ period ✨Mirror✨of✨Four✨Winds✨ ≣ 弐 ⇰
   ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
 
 /- A mirror reverses the sense of a turn: reflect, turn, then reflect again
 and the result is the inverse rotation. -/
 spell ✨Mirrors✨Reverse✨the✨Winds✨ ⟡ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰
   litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≣
-        ✨Mirror✨Veyr✨☿mirror✨shard 一 ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
-    ▢ ≣ ✨Mirror✨Veyr✨☿amber✨disc 三 ⇰ cast divine
+        ✨Mirror✨Veyr✨☿mirror✨shard 壱 ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
+    ▢ ≣ ✨Mirror✨Veyr✨☿amber✨disc 参 ⇰ cast divine
     ▢ ≣ ✨Turn✨the✨Four✨Winds✨† ⇰ cast divine
 
 /- The two orders of a turn and a reflection give distinct reflected rotations.
 This supplies an explicit witness that the group is noncommutative. -/
 spell ✨The✨Winds✨Resist✨Harmony✨ ⟡ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ≢ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ cast
   summon harmonyward
-  bind discordward ⟡ ⟪✨Mirror✨Veyr✨☿mirror✨shard 三 ⟡ ✨Four✨Winds✨Veyr✨⟫ ≢ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
+  bind discordward ⟡ ⟪✨Mirror✨Veyr✨☿mirror✨shard 参 ⟡ ✨Four✨Winds✨Veyr✨⟫ ≢ ✨Mirror✨Veyr✨☿mirror✨shard 壱 ⇰ cast divine
   channel discordward
-  litany ✨Mirror✨Veyr✨☿mirror✨shard 三 ≣ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
+  litany ✨Mirror✨Veyr✨☿mirror✨shard 参 ≣ ✨Turn✨the✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨ ⇰ cast divine
     ▢ ≣ ✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ harmonyward
-    ▢ ≣ ✨Mirror✨Veyr✨☿mirror✨shard 一 ⇰ cast divine
+    ▢ ≣ ✨Mirror✨Veyr✨☿mirror✨shard 壱 ⇰ cast divine
 
 /- These normal forms exhaust the group: a rotation, or a product of a reflection
 and a rotation, with the exponent in the displayed range. The rightmost motion acts first. -/
@@ -1255,11 +1255,11 @@ spell ✨All✨Commands✨of✨Four✨Winds✨ ⟡ ⟁ jade✨cube ⟡ ✨Four�
 
 /- Reassociate to place the two identical mirrors together.
 They cancel, leaving a rotation as the product of these two reflections. -/
-spell ✨Two✨Wind✨Mirrors✨Make✨a✨Turn✨ ⟡
+spell ✨Two✨Mirrors✨Make✨a✨Turn✨ ⟡
     ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣ ✨Turn✨the✨Four✨Winds✨ ⇰
   litany ✨Mirror✨of✨Four✨Winds✨ ⊛ ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ≣
         ⟪✨Mirror✨of✨Four✨Winds✨ ⊛ ✨Mirror✨of✨Four✨Winds✨⟫ ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ ⟪✨Regather✨the✨Binding✨ ▢ ▢ ▢⟫☿reflect
-    ▢ ≣ 一 ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ sympathy ⟪conjure jade✨cube ⇉ jade✨cube ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ⟪✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇⟫
+    ▢ ≣ 壱 ⊛ ✨Turn✨the✨Four✨Winds✨ ⇰ sympathy ⟪conjure jade✨cube ⇉ jade✨cube ⊛ ✨Turn✨the✨Four✨Winds✨⟫ ⟪✨Mirror✨Veyr✨☿✨Two✨Reflections✨Vanish✨ 〇⟫
     ▢ ≣ ✨Turn✨the✨Four✨Winds✨ ⇰ ✨Silence✨Before✨the✨Binding✨ ▢
 
 seal Arcana☿Enchantment
@@ -1308,13 +1308,13 @@ sanctum Arcana☿Enchantment
 Only its five outer tips are labeled; crossings are not additional vertices. -/
 byname ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨ 五
 
-ritual ✨Turn✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 一
+ritual ✨Turn✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿amber✨disc 壱
 
 ritual ✨Mirror✨the✨Star✨ ⟡ ✨Five✨Pointed✨Seal✨ ⇰ ✨Mirror✨Veyr✨☿mirror✨shard 〇
 
 /- Join every second tip around the surrounding pentagon.
 The plus-or-minus alternatives make this an undirected star edge relation. -/
-ritual ✨Thread✨of✨the✨Star✨ ⟪jade✨cube silver✨bell ⟡ Clockwork 五⟫ ⟡ Verity ⇰ silver✨bell ≣ jade✨cube ⧾ 二 ⩔ silver✨bell ≣ jade✨cube ⧿ 二
+ritual ✨Thread✨of✨the✨Star✨ ⟪jade✨cube silver✨bell ⟡ Clockwork 五⟫ ⟡ Verity ⇰ silver✨bell ≣ jade✨cube ⧾ 弐 ⩔ silver✨bell ≣ jade✨cube ⧿ 弐
 
 /- Rotations add a residue; reflected rotations reverse it and shift.
 The sign convention matches multiplication in the dihedral model. -/
@@ -1323,21 +1323,21 @@ ritual ✨Command✨the✨Star✨ ⟪silk✨cord ⟡ ✨Five✨Pointed✨Seal✨
   ⫽ ✨Mirror✨Veyr✨☿amber✨disc opal✨dust ⇉ jade✨cube ⧾ opal✨dust
   ⫽ ✨Mirror✨Veyr✨☿mirror✨shard opal✨dust ⇉ ⧿jade✨cube ⧿ opal✨dust
 
-spell ✨Count✨the✨Star's✨Commands✨ ⟡ Counted☿census ✨Five✨Pointed✨Seal✨ ≣ 一〇 ⇰
-  litany Counted☿census ✨Five✨Pointed✨Seal✨ ≣ 二 ⊛ 五 ⇰ ✨Mirror✨Veyr✨☿census
-    ▢ ≣ 一〇 ⇰ cast divine
+spell ✨Count✨the✨Star's✨Commands✨ ⟡ Counted☿census ✨Five✨Pointed✨Seal✨ ≣ 壱〇 ⇰
+  litany Counted☿census ✨Five✨Pointed✨Seal✨ ≣ 弐 ⊛ 五 ⇰ ✨Mirror✨Veyr✨☿census
+    ▢ ≣ 壱〇 ⇰ cast divine
 
-spell ✨Five✨Turns✨Return✨ ⟡ ✨Turn✨the✨Star✨ ⌃ 五 ≣ 一 ⇰ ✨Mirror✨Veyr✨☿✨One✨Circuit✨Returns✨
+spell ✨Five✨Turns✨Return✨ ⟡ ✨Turn✨the✨Star✨ ⌃ 五 ≣ 壱 ⇰ ✨Mirror✨Veyr✨☿✨One✨Circuit✨Returns✨
 
 spell ✨The✨Star's✨Turning✨Period✨ ⟡ period ✨Turn✨the✨Star✨ ≣ 五 ⇰ ✨Mirror✨Veyr✨☿✨The✨Circuit's✨Period✨
 
-spell ✨The✨Star's✨Mirror✨Period✨ ⟡ period ✨Mirror✨the✨Star✨ ≣ 二 ⇰ ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
+spell ✨The✨Star's✨Mirror✨Period✨ ⟡ period ✨Mirror✨the✨Star✨ ≣ 弐 ⇰ ✨Mirror✨Veyr✨☿✨The✨Mirror's✨Period✨ 〇
 
 spell ✨Mirrors✨Reverse✨the✨Star✨ ⟡ ✨Mirror✨the✨Star✨ ⊛ ✨Turn✨the✨Star✨ ⊛ ✨Mirror✨the✨Star✨ ≣ ✨Turn✨the✨Star✨† ⇰
   litany ✨Mirror✨the✨Star✨ ⊛ ✨Turn✨the✨Star✨ ⊛ ✨Mirror✨the✨Star✨ ≣ ✨Mirror✨Veyr✨☿amber✨disc 四 ⇰ cast divine
     ▢ ≣ ✨Turn✨the✨Star✨† ⇰ cast divine
 
-spell ✨Silence✨Leaves✨the✨Star✨Still✨ ⟡ ⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ 一 jade✨cube ≣ jade✨cube ⇰ cast divine
+spell ✨Silence✨Leaves✨the✨Star✨Still✨ ⟡ ⟁ jade✨cube ⟡ Clockwork 五᛫ ✨Command✨the✨Star✨ 壱 jade✨cube ≣ jade✨cube ⇰ cast divine
 
 /- The action law checks composition in the correct order:
 the rightmost group element acts first. -/
@@ -1356,7 +1356,7 @@ spell ✨Preserve✨the✨Star's✨Threads✨ ⟡ ⟁ silk✨cord ⟡ ✨Five✨
 
 /- This small check distinguishes an edge of the star from a side of
 the surrounding pentagon. Both predicates use the same explicit adjacency rule. -/
-spell ✨Skip✨a✨Tip✨to✨Trace✨the✨Star✨ ⟡ ✨Thread✨of✨the✨Star✨ 〇 二 ⩓ ⫬✨Thread✨of✨the✨Star✨ 〇 一 ⇰ cast
+spell ✨Skip✨a✨Tip✨to✨Trace✨the✨Star✨ ⟡ ✨Thread✨of✨the✨Star✨ 〇 弐 ⩓ ⫬✨Thread✨of✨the✨Star✨ 〇 壱 ⇰ cast
   unseal ✨Thread✨of✨the✨Star✨
   divine
 
@@ -1408,9 +1408,9 @@ sanctum Arcana☿Enchantment
 
 /- This finite group models the eight signed quaternion units, not the whole
 infinite quaternion algebra. The model parameter gives four times as many elements. -/
-byname ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨ 二
+byname ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨ 弐
 
-ritual ✨Hamilton's✨First✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿ash 一
+ritual ✨Hamilton's✨First✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿ash 壱
 
 ritual ✨Hamilton's✨Second✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿shadow✨bead 〇
 
@@ -1418,19 +1418,19 @@ ritual ✨Hamilton's✨Third✨Spirit✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨
 
 /- The quaternion sign is represented by a central group element.
 Multiplying by this element plays the role of negation. -/
-ritual ✨Hamilton's✨Shadow✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿ash 二
+ritual ✨Hamilton's✨Shadow✨ ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⇰ ✨Hamilton's✨Veyr✨☿ash 弐
 
 spell ✨Count✨Hamilton's✨Pact✨ ⟡ Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 八 ⇰
-  litany Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 四 ⊛ 二 ⇰ ✨Hamilton's✨Veyr✨☿census
+  litany Counted☿census ✨Hamilton's✨Eightfold✨Pact✨ ≣ 四 ⊛ 弐 ⇰ ✨Hamilton's✨Veyr✨☿census
     ▢ ≣ 八 ⇰ cast divine
 
 /- The three imaginary units all square to the same minus-one element.
 These are direct finite computations checked by Lean’s kernel. -/
-spell ✨The✨First✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⌃ 二 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+spell ✨The✨First✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⌃ 弐 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
 
-spell ✨The✨Second✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨Second✨Spirit✨ ⌃ 二 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+spell ✨The✨Second✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨Second✨Spirit✨ ⌃ 弐 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
 
-spell ✨The✨Third✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨Third✨Spirit✨ ⌃ 二 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+spell ✨The✨Third✨Spirit's✨Shadow✨ ⟡ ✨Hamilton's✨Third✨Spirit✨ ⌃ 弐 ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
 
 spell ✨The✨First✨Two✨Conjure✨the✨Third✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ≣ ✨Hamilton's✨Third✨Spirit✨ ⇰ mirror
 
@@ -1440,7 +1440,7 @@ spell ✨Reversal✨Conjures✨the✨Shadow✨ ⟡ ✨Hamilton's✨Second✨Spir
 is the third unit’s square. Reuse the earlier computation to identify it. -/
 spell ✨Three✨Spirits✨Conjure✨the✨Shadow✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ≣ ✨Hamilton's✨Shadow✨ ⇰
   litany ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Hamilton's✨Second✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ≣ ✨Hamilton's✨Third✨Spirit✨ ⊛ ✨Hamilton's✨Third✨Spirit✨ ⇰ mirror
-    ▢ ≣ ✨Hamilton's✨Third✨Spirit✨ ⌃ 二 ⇰ ⟪✨Unfold✨the✨Double✨Ascent✨ ▢⟫☿reflect
+    ▢ ≣ ✨Hamilton's✨Third✨Spirit✨ ⌃ 弐 ⇰ ⟪✨Unfold✨the✨Double✨Ascent✨ ▢⟫☿reflect
     ▢ ≣ ✨Hamilton's✨Shadow✨ ⇰ ✨The✨Third✨Spirit's✨Shadow✨
 
 /- Reversing the first two units changes the sign of their product.
@@ -1456,19 +1456,19 @@ spell ✨Hamilton's✨Discord✨ ⟡ ✨Hamilton's✨First✨Spirit✨ ⊛ ✨Ha
 spell ✨The✨Shadow✨Walks✨Among✨All✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫
     ✨Hamilton's✨Shadow✨ ⊛ ivory✨ring ≣ ivory✨ring ⊛ ✨Hamilton's✨Shadow✨ ⇰ cast divine
 
-spell ✨Hamilton's✨Fourfold✨Return✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫ ivory✨ring ⌃ 四 ≣ 一 ⇰ cast divine
+spell ✨Hamilton's✨Fourfold✨Return✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫ ivory✨ring ⌃ 四 ≣ 壱 ⇰ cast divine
 
 /- An involution is a nonidentity element whose square is the identity.
 Only minus-one qualifies here. The square’s symmetry group has five,
 which will become a way to distinguish the groups up to isomorphism. -/
 spell ✨Only✨the✨Shadow✨Undoes✨Itself✨ ⟡ ⟁ ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨᛫
-    ⟪ivory✨ring ⌃ 二 ≣ 一 ⩓ ivory✨ring ≢ 一⟫ ↭ ivory✨ring ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
+    ⟪ivory✨ring ⌃ 弐 ≣ 壱 ⩓ ivory✨ring ≢ 壱⟫ ↭ ivory✨ring ≣ ✨Hamilton's✨Shadow✨ ⇰ cast divine
 
-spell ✨Count✨Hamilton's✨Self✨Undoing✨Spirits✨ ⟡
-    Counted☿census ⧼ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⧶⧶ ivory✨ring ⌃ 二 ≣ 一 ⩓ ivory✨ring ≢ 一⧽ ≣ 一 ⇰ cast divine
+spell ✨Hamilton's✨Self✨Undoers✨ ⟡
+    Counted☿census ⧼ivory✨ring ⟡ ✨Hamilton's✨Eightfold✨Pact✨ ⧶⧶ ivory✨ring ⌃ 弐 ≣ 壱 ⩓ ivory✨ring ≢ 壱⧽ ≣ 壱 ⇰ cast divine
 
-spell ✨Count✨the✨Winds'✨Self✨Undoing✨Spirits✨ ⟡
-    Counted☿census ⧼jade✨cube ⟡ ✨Four✨Winds✨Veyr✨ ⧶⧶ jade✨cube ⌃ 二 ≣ 一 ⩓ jade✨cube ≢ 一⧽ ≣ 五 ⇰ cast divine
+spell ✨The✨Winds'✨Self✨Undoers✨ ⟡
+    Counted☿census ⧼jade✨cube ⟡ ✨Four✨Winds✨Veyr✨ ⧶⧶ jade✨cube ⌃ 弐 ≣ 壱 ⩓ jade✨cube ≢ 壱⧽ ≣ 五 ⇰ cast divine
 
 seal Arcana☿Enchantment
 ```
@@ -1518,21 +1518,21 @@ and three independent toggles. The square and quaternion models were imported
 from their earlier folios. -/
 byname ✨Eightfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 八⟫
 
-byname ✨Twin✨Fourfold✨Wheels✨ ⇰ Unchanted ⟪Clockwork 四⟫ ⨯ Unchanted ⟪Clockwork 二⟫
+byname ✨Twin✨Fourfold✨Wheels✨ ⇰ Unchanted ⟪Clockwork 四⟫ ※ Unchanted ⟪Clockwork 弐⟫
 
-byname ✨Three✨Mirror✨Charms✨ ⇰ Unchanted ⟪Clockwork 二⟫ ⨯ Unchanted ⟪Clockwork 二⟫ ⨯ Unchanted ⟪Clockwork 二⟫
+byname ✨Three✨Mirror✨Charms✨ ⇰ Unchanted ⟪Clockwork 弐⟫ ※ Unchanted ⟪Clockwork 弐⟫ ※ Unchanted ⟪Clockwork 弐⟫
 
-ritual ✨Turn✨the✨Eightfold✨Wheel✨ ⟡ ✨Eightfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+ritual ✨Turn✨the✨Eightfold✨Wheel✨ ⟡ ✨Eightfold✨Wheel✨ ⇰ Unchanted☿unchant 壱
 
 spell ✨One✨Turn✨Commands✨Eight✨ ⟡ ⟁ jade✨cube ⟡ ✨Eightfold✨Wheel✨᛫
     ⟒ onyx✨bead ⟡ Fetter 八᛫ jade✨cube ≣ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ⇰ cast divine
 
 spell ✨No✨Earlier✨Eightfold✨Return✨ ⟡ ⟁ onyx✨bead ⟡ Fetter 八᛫
-    〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
+    〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 壱 ⇰ cast divine
 
-spell ✨Twin✨Wheels✨Return✨in✨Four✨ ⟡ ⟁ jade✨cube ⟡ ✨Twin✨Fourfold✨Wheels✨᛫ jade✨cube ⌃ 四 ≣ 一 ⇰ cast divine
+spell ✨Twin✨Wheels✨Return✨in✨Four✨ ⟡ ⟁ jade✨cube ⟡ ✨Twin✨Fourfold✨Wheels✨᛫ jade✨cube ⌃ 四 ≣ 壱 ⇰ cast divine
 
-spell ✨Every✨Triple✨Charm✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Three✨Mirror✨Charms✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
+spell ✨Triple✨Charms✨Undo✨Themselves✨ ⟡ ⟁ jade✨cube ⟡ ✨Three✨Mirror✨Charms✨᛫ jade✨cube ⌃ 弐 ≣ 壱 ⇰ cast divine
 
 /- First check that all five candidates meet the size requirement.
 Classification will also require distinguishing them and proving exhaustiveness. -/
@@ -1544,13 +1544,13 @@ spell ✨Five✨Houses✨of✨Eight✨ ⟡
 
 /- Count the nonidentity elements whose squares are the identity.
 The subtype stores both an element and evidence that it has this property. -/
-ineffable ritual ✨Census✨of✨Self✨Undoing✨Spirits✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Tallies ⇰
-  Tally☿census ⧼jade✨cube ⟡ ᛰ ⧶⧶ jade✨cube ⌃ 二 ≣ 一 ⩓ jade✨cube ≢ 一⧽
+ineffable ritual ✨Census✨of✨Self✨Undoing✨Spirits✨ ⟪ᛰ ⟡ Essence⊛⟫ ⁅Veyr ᛰ⁆ ⟡ Tallies ⇰
+  Tally☿census ⧼jade✨cube ⟡ ᛰ ⧶⧶ jade✨cube ⌃ 弐 ≣ 壱 ⩓ jade✨cube ≢ 壱⧽
 
 /- An isomorphism preserves squares, the identity, and inequality with the identity.
 It therefore gives a bijection between the two involution subtypes,
 and their cardinalities agree. -/
-spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+spell ✨Perfect✨Pacts✨Keep✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
     ⟪obsidian✨mirror ⟡ ᛰ ≃⊛ ☥⟫ ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≣ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥ ⇰ cast
   channel Tally☿✨Census✨through✨Portal✨
   channel Portal☿✨Restrict✨the✨Perfect✨Pact✨ obsidian✨mirror☿✨Unveil✨the✨Perfect✨Pact✨
@@ -1558,9 +1558,9 @@ spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence
   fabricate
   ❖ summon ⦉doubleward᛫ motionward⦊
     fabricate
-    ❖ litany obsidian✨mirror jade✨cube ⌃ 二 ≣ obsidian✨mirror ⟪jade✨cube ⌃ 二⟫ ⇰ ⟪✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 二⟫☿reflect
-        ▢ ≣ obsidian✨mirror 一 ⇰ sympathy obsidian✨mirror doubleward
-        ▢ ≣ 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨
+    ❖ litany obsidian✨mirror jade✨cube ⌃ 弐 ≣ obsidian✨mirror ⟪jade✨cube ⌃ 弐⟫ ⇰ ⟪✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 弐⟫☿reflect
+        ▢ ≣ obsidian✨mirror 壱 ⇰ sympathy obsidian✨mirror doubleward
+        ▢ ≣ 壱 ⇰ obsidian✨mirror☿✨keeps✨stillness✨
     ❖ summon reflectionward
       channel motionward
       channel obsidian✨mirror☿unconfounded
@@ -1568,9 +1568,9 @@ spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence
   ❖ summon ⦉doubleward᛫ motionward⦊
     fabricate
     ❖ channel obsidian✨mirror☿unconfounded
-      litany obsidian✨mirror ⟪jade✨cube ⌃ 二⟫ ≣ obsidian✨mirror jade✨cube ⌃ 二 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 二
-        ▢ ≣ 一 ⇰ doubleward
-        ▢ ≣ obsidian✨mirror 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+      litany obsidian✨mirror ⟪jade✨cube ⌃ 弐⟫ ≣ obsidian✨mirror jade✨cube ⌃ 弐 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 弐
+        ▢ ≣ 壱 ⇰ doubleward
+        ▢ ≣ obsidian✨mirror 壱 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
     ❖ summon stillward
       channel motionward
       missile ⟪sympathy obsidian✨mirror stillward⟫☿chain obsidian✨mirror☿✨keeps✨stillness✨
@@ -1578,17 +1578,17 @@ spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence
 /- These concrete counts separate every pair except the cyclic and quaternion groups.
 The following arguments turn that observation into proofs excluding isomorphisms. -/
 spell ✨The✨Five✨Houses'✨Hidden✨Censuses✨ ⟡
-    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Eightfold✨Wheel✨ ≣ 一 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Twin✨Fourfold✨Wheels✨ ≣ 三 ⩓
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Eightfold✨Wheel✨ ≣ 壱 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Twin✨Fourfold✨Wheels✨ ≣ 参 ⩓
     ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Three✨Mirror✨Charms✨ ≣ 七 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Four✨Winds✨Veyr✨ ≣ 五 ⩓
-    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Hamilton's✨Eightfold✨Pact✨ ≣ 一 ⇰ cast
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Hamilton's✨Eightfold✨Pact✨ ≣ 壱 ⇰ cast
   unseal ✨Census✨of✨Self✨Undoing✨Spirits✨
-  purify solely ⟮Tally☿✨Two✨Ways✨to✨Take✨the✨Census✨⟯
-  missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨Count✨the✨Winds'✨Self✨Undoing✨Spirits✨᛫ ✨Count✨Hamilton's✨Self✨Undoing✨Spirits✨⦊
+  purify solely ⁅Tally☿✨Two✨Ways✨to✨Take✨the✨Census✨⁆
+  missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨The✨Winds'✨Self✨Undoers✨᛫ ✨Hamilton's✨Self✨Undoers✨⦊
 
-spell ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+spell ✨Unlike✨Censuses✨Forbid✨Pacts✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
     ⟪tallyward ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≢ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥⟫ ⟡ ⫬ Inhabited ⟪ᛰ ≃⊛ ☥⟫ ⇰ cast
   unpack ⦉obsidian✨mirror⦊
-  missile tallyward ⟪✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ obsidian✨mirror⟫
+  missile tallyward ⟪✨Perfect✨Pacts✨Keep✨the✨Census✨ obsidian✨mirror⟫
 
 /- The repeated count needs a second invariant. The cyclic group is commutative;
 an isomorphism would transfer that law to the quaternion units, contradicting
@@ -1616,35 +1616,35 @@ spell ✨The✨Five✨Houses✨Are✨Distinct✨ ⟡
   wrest ⦉wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⦊ ⇰ ✨The✨Five✨Houses'✨Hidden✨Censuses✨
   hone ⦉?▢᛫ ?▢᛫ ?▢᛫ ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢⦊
   everywhere
-    channel ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨
-    purify solely ⟮wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⟯
+    channel ✨Unlike✨Censuses✨Forbid✨Pacts✨
+    purify solely ⁅wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⁆
     divine
 
 /- Exhaustiveness is a separate argument, not a consequence of listing examples.
 The pinned P3Group dependency proves the general prime-cubed classification.
 This theorem specializes that checked proof to the prime two; the linked upstream
 sources contain the abelian structure and nonabelian generator arguments. -/
-spell ✨The✨Eightfold✨Way✨Admits✨No✨Sixth✨House✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟪sizeward ⟡ Tally☿census ᛰ ≣ 八⟫ ⟡
+spell ✨The✨Eightfold✨Way✨Has✨Five✨Houses✨ ⟪ᛰ ⟡ Essence⊛⟫ ⁅Veyr ᛰ⁆ ⟪sizeward ⟡ Tally☿census ᛰ ≣ 八⟫ ⟡
     Inhabited ⟪ᛰ ≃⊛ ✨Eightfold✨Wheel✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩔
     Inhabited ⟪ᛰ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩔
     Inhabited ⟪ᛰ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
-  bind ⟡ Witnessed ⟪Tally☿Indivisible 二⟫ ⇰ ⦉cast divine⦊
+  bind ⟡ Witnessed ⟪Tally☿Indivisible 弐⟫ ⇰ ⦉cast divine⦊
   /- Positive cardinality first supplies finiteness; an enumeration is then
   available for applying the upstream theorem. -/
-  bind ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ ⟪cast transmute ⟮sizeward⟯⁂ divine⟫
+  bind ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ ⟪cast transmute ⁅sizeward⁆⁂ divine⟫
   dub ⟡ Counted ᛰ ⇰ Counted☿✨Enumerate✨the✨Finite✨ ᛰ
-  bind cubeward ⟡ Tally☿census ᛰ ≣ 二 ⌃ 三 ⇰ sizeward☿chain ⟪cast divine⟫
+  bind cubeward ⟡ Tally☿census ᛰ ≣ 弐 ⌃ 参 ⇰ sizeward☿chain ⟪cast divine⟫
   /- The two odd-prime branches contradict our chosen prime.
   The remaining branches are exactly the five concrete groups above. -/
-  rend ✨Indivisible✨Cubic✨Veyrs✨☿exhaustive✨census 二 ᛰ cubeward whence
+  rend ✨Indivisible✨Cubic✨Veyrs✨☿exhaustive✨census 弐 ᛰ cubeward whence
     wheelward ⫽ twinward ⫽ toggleward ⫽ oddward ⫽ oddward ⫽ doubleward ⫽ hamiltonward
   ❖ missile Either☿choose✨left wheelward
   ❖ missile Either☿choose✨right ⟪Either☿choose✨left twinward⟫
   ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left toggleward⟫⟫
-  ❖ missile ⟪oddward☿一 mirror⟫☿dismiss
-  ❖ missile ⟪oddward☿一 mirror⟫☿dismiss
-  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left doubleward☿二⟫⟫⟫
-  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right hamiltonward☿二⟫⟫⟫
+  ❖ missile ⟪oddward☿壱 mirror⟫☿dismiss
+  ❖ missile ⟪oddward☿壱 mirror⟫☿dismiss
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left doubleward☿弐⟫⟫⟫
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right hamiltonward☿弐⟫⟫⟫
 
 seal Arcana☿Enchantment
 ```
@@ -1697,7 +1697,7 @@ sanctum Arcana☿Transmutation
 
 chamber ✨Primordial✨Choir✨
 
-familiar ⧼ᛋ ᛗ ⟡ Essence⊛⧽ ⟮Choir ᛗ⟯
+familiar ⧼ᛋ ᛗ ⟡ Essence⊛⧽ ⁅Choir ᛗ⁆
 
 /- A function on letters extends to a homomorphism on words by multiplication.
 The one-letter calculation records its prescribed generator values. -/
@@ -1714,8 +1714,8 @@ spell ✨Only✨One✨Primordial✨Pact✨ ⟪copper✨wire ⟡ ᛋ ↝ ᛗ⟫ �
   summon verse
   unravel verse through ✨Primordial✨Choir✨☿✨verse✨by✨verse✨ whence
   ⫽ ✨empty✨verse✨ ⇉
-    litany brass✨key 一 ≣ 一 ⇰ brass✨key☿✨keeps✨stillness✨
-      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire 一 ⇰ ⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨keeps✨stillness✨☿reflect
+    litany brass✨key 壱 ≣ 壱 ⇰ brass✨key☿✨keeps✨stillness✨
+      ▢ ≣ ✨Primordial's✨Pact✨ copper✨wire 壱 ⇰ ⟪✨Primordial's✨Pact✨ copper✨wire⟫☿✨keeps✨stillness✨☿reflect
   ⫽ ✨seed✨then✨verse✨ pouch✨of✨sand verse verseward ⇉
     litany brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand ⊛ verse⟫ ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed pouch✨of✨sand⟫ ⊛ brass✨key verse ⇰ brass✨key☿✨Carry✨the✨Binding✨ ▢ ▢
       ▢ ≣ copper✨wire pouch✨of✨sand ⊛ brass✨key verse ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ brass✨key verse⟫ ⟪seedward pouch✨of✨sand⟫
@@ -1732,7 +1732,7 @@ seal ✨Primordial✨Choir✨
 
 chamber Reversibles
 
-familiar ⧼ᛰ ᛗ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Choir ᛗ⟯
+familiar ⧼ᛰ ᛗ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Choir ᛗ⁆
 
 /- The image of a group element has an inverse even in a target monoid:
 use the image of its source inverse. Store both inverse equations explicitly. -/
@@ -1742,12 +1742,12 @@ ritual ✨Gather✨the✨Reversible✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ �
       undoer ⇰ copper✨wire silk✨cord†
       ✨undoes✨after✨ ⇰
         litany copper✨wire silk✨cord ⊛ copper✨wire silk✨cord† ≣ copper✨wire ⟪silk✨cord ⊛ silk✨cord†⟫ ⇰ ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord silk✨cord†⟫☿reflect
-          ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silk✨cord⟫
-          ▢ ≣ 一 ⇰ copper✨wire☿✨keeps✨stillness✨
+          ▢ ≣ copper✨wire 壱 ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silk✨cord⟫
+          ▢ ≣ 壱 ⇰ copper✨wire☿✨keeps✨stillness✨
       ✨undoes✨before✨ ⇰
         litany copper✨wire silk✨cord† ⊛ copper✨wire silk✨cord ≣ copper✨wire ⟪silk✨cord† ⊛ silk✨cord⟫ ⇰ ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord† silk✨cord⟫☿reflect
-          ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ silk✨cord⟫
-          ▢ ≣ 一 ⇰ copper✨wire☿✨keeps✨stillness✨ ⧽
+          ▢ ≣ copper✨wire 壱 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ silk✨cord⟫
+          ▢ ≣ 壱 ⇰ copper✨wire☿✨keeps✨stillness✨ ⧽
   ✨carries✨stillness✨ ⇰ Reversibles☿extend copper✨wire☿✨keeps✨stillness✨
   ✨carries✨binding✨ silk✨cord onyx✨bead ⇰ Reversibles☿extend ⟪copper✨wire☿✨Carry✨the✨Binding✨ silk✨cord onyx✨bead⟫
 
@@ -1762,10 +1762,10 @@ spell ✨Only✨One✨Gathering✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ᛗ⟫ ⟪tin
 /- Here the direction reverses: units are right adjoint to forgetting
 from groups to monoids. The final equivalence connects invertible endofunctions
 with the permutations used in Cayley’s theorem. -/
-ritual ✨Right✨Hand✨of✨Lesser✨Disenchantment✨ ⟡ ✨Lesser✨Disenchantment✨ Veyrs☿⧼tier⧽ Choirs☿⧼tier⧽ ☍ Choirs☿reversibles☿⧼tier⧽ ⇰
+ritual ✨Lesser✨Right✨Hand✨ ⟡ ✨Lesser✨Disenchantment✨ Veyrs☿⧼tier⧽ Choirs☿⧼tier⧽ ☍ Choirs☿reversibles☿⧼tier⧽ ⇰
   Veyrs☿✨lesser✨hands✨
 
-ritual ✨Shuffles✨Are✨the✨Court's✨Reversibles✨ ⟪🌒 ⟡ Essence⊛⟫ ⟡ Portal☿Shuffling 🌒 ≃⊛ Reversibles ⟪Rite☿Court 🌒⟫ ⇰
+ritual ✨Court's✨Reversible✨Shuffles✨ ⟪🌒 ⟡ Essence⊛⟫ ⟡ Portal☿Shuffling 🌒 ≃⊛ Reversibles ⟪Rite☿Court 🌒⟫ ⇰
   Portal☿Shuffling☿✨court's✨reversibles✨
 
 seal Reversibles
@@ -1821,7 +1821,7 @@ sanctum Arcana☿Transmutation
 
 chamber Yoneda
 
-familiar ⧼ᚳ ⟡ Essence tier⧽ ⟮Cosmology☿⧼stratum⧽ ᚳ⟯ ⧼🌒 ⟡ ᚳ⧽ ⧼ᚠ ⟡ ᚳ ⤳ Essence stratum⧽
+familiar ⧼ᚳ ⟡ Essence tier⧽ ⁅Cosmology☿⧼stratum⧽ ᚳ⁆ ⧼🌒 ⟡ ᚳ⧽ ⧼ᚠ ⟡ ᚳ ⤳ Essence stratum⧽
 
 /- A natural transformation supplies a compatible response to every arrow
 out of the chosen object. Evaluate it at the identity to extract one element. -/
@@ -1876,15 +1876,15 @@ seal Yoneda
 
 chamber Proxies
 
-familiar ⟪ᛗ ⟡ Essence⊛⟫ ⟮Choir ᛗ⟯ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯
+familiar ⟪ᛗ ⟡ Essence⊛⟫ ⁅Choir ᛗ⁆ ⟪ᛰ ⟡ Essence⊛⟫ ⁅Veyr ᛰ⁆
 
 /- A homomorphism from the free monoid on one generator is determined
 by the image of that generator, which can be any element of the target monoid. -/
-ritual ✨One✨Seed✨Holds✨Every✨Member✨ ⟡ ⟪✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ≃ ᛗ ⇰
+ritual ✨A✨Lone✨Seed✨Holds✨All✨ ⟡ ⟪✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ≃ ᛗ ⇰
   ✨Primordial✨Choir✨☿descend☿reflect☿chain ⟪Portal☿✨lone✨seed✨ Mote ᛗ⟫
 
 spell ✨Where✨the✨Seed✨Goes✨ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ⟡
-    ✨One✨Seed✨Holds✨Every✨Member✨ ᛗ brass✨key ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed ⟪⟫⟫ ⇰ mirror
+    ✨A✨Lone✨Seed✨Holds✨All✨ ᛗ brass✨key ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed ⟪⟫⟫ ⇰ mirror
 
 /- Likewise, a homomorphism from the integer group is determined by the image
 of one. Multiplicative notation lets the integer source use the same group arrow. -/
@@ -1892,7 +1892,7 @@ ritual ✨The✨Integers✨Hold✨Every✨Member✨ ⟡ ⟪Unchanted Balances �
   ⟪✨powers✨of✨one✨ ᛰ⟫☿reflect
 
 spell ✨Where✨the✨Step✨Goes✨ ⟪brass✨key ⟡ Unchanted Balances ↝⊛ ᛰ⟫ ⟡
-    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant 一⟫ ⇰ mirror
+    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant 壱⟫ ⇰ mirror
 
 seal Proxies
 
@@ -1947,60 +1947,60 @@ ineffable chamber
 /- A chain complex is a row of modules with arrows lowering degree.
 Two consecutive differentials compose to zero. We begin in positive
 degree so that both neighboring degrees exist in a natural-number complex. -/
-ritual ✨Circle✨of✨Closed✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
-    ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ ✨Inner✨Bound✨Veyr✨ ᚱ ⟪ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ ⇰
-  Bridge☿silence ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫☿essence
+ritual ✨Circle✨of✨Closed✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⁅Veyrath ᚱ⁆
+    ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ ✨Inner✨Bound✨Veyr✨ ᚱ ⟪ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 壱⟫⟫ ⇰
+  Bridge☿silence ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur⟫☿essence
 
-ritual ✨Circle✨of✨Descended✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
-    ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ ✨Inner✨Bound✨Veyr✨ ᚱ ⟪ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ ⇰
-  Bridge☿manifestation ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫⟫☿essence
+ritual ✨Circle✨of✨Descended✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⁅Veyrath ᚱ⁆
+    ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ ✨Inner✨Bound✨Veyr✨ ᚱ ⟪ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 壱⟫⟫ ⇰
+  Bridge☿manifestation ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 弐⟫ ⟪pinch✨of✨sulfur ⧾ 壱⟫⟫☿essence
 
 /- A boundary has a witness one degree higher. Apply the next differential
 to that witness's image, then use the defining square-zero law. -/
-spell ✨Every✨Descended✨Trace✨is✨Closed✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+spell ✨Every✨Descended✨Trace✨is✨Closed✨ ⧼ᚱ ⟡ Essence⊛⧽ ⁅Veyrath ᚱ⁆
     ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
     ✨Circle✨of✨Descended✨Traces✨ ᚳ pinch✨of✨sulfur ⋜ ✨Circle✨of✨Closed✨Traces✨ ᚳ pinch✨of✨sulfur ⇰ cast
   summon jade✨cube sigilward
   wrest ⦉silver✨bell᛫ mirror⦊ ⇰ sigilward
-  shapeshift ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫ ⟪⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ silver✨bell⟫ ≣ 〇
-  bind voidmark ⇰ ᚳ☿✨Twice✨Descended✨Means✨Silence✨ ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur
+  shapeshift ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur⟫ ⟪⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 弐⟫ ⟪pinch✨of✨sulfur ⧾ 壱⟫⟫ silver✨bell⟫ ≣ 〇
+  bind voidmark ⇰ ᚳ☿✨Twice✨Descended✨Means✨Silence✨ ⟪pinch✨of✨sulfur ⧾ 弐⟫ ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur
   missile sympathy ⟪conjure copper✨wire ⇉ copper✨wire silver✨bell⟫ voidmark
 
 /- Chain maps commute with differentials. A closed chain therefore stays
 closed after transport; this is the first requirement for a map on homology. -/
-spell ✨Carry✨the✨Closed✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+spell ✨Carry✨the✨Closed✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⁅Veyrath ᚱ⁆
     ⧼ᚳ ᚦ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⧽ ⟪copper✨wire ⟡ ᚳ ⟿ ᚦ⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫
-    ⟪jade✨cube ⟡ ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ᚳ pinch✨of✨sulfur⟫ ⟡
-    copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 一⟫ jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ᚦ pinch✨of✨sulfur ⇰ cast
-  shapeshift ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫ jade✨cube ≣ 〇 upon sigilward
-  shapeshift ⟪ᚦ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫ ⟪copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 一⟫ jade✨cube⟫ ≣ 〇
+    ⟪jade✨cube ⟡ ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 壱⟫⟫ ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ᚳ pinch✨of✨sulfur⟫ ⟡
+    copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 壱⟫ jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ᚦ pinch✨of✨sulfur ⇰ cast
+  shapeshift ⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur⟫ jade✨cube ≣ 〇 upon sigilward
+  shapeshift ⟪ᚦ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur⟫ ⟪copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 壱⟫ jade✨cube⟫ ≣ 〇
   litany
-    ▢ ≣ copper✨wire☿copper✨wire pinch✨of✨sulfur ⟪⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫ jade✨cube⟫ ⇰
-      sympathy ⟪conjure silk✨cord ⇉ silk✨cord jade✨cube⟫ ⟪copper✨wire☿accord ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur⟫
+    ▢ ≣ copper✨wire☿copper✨wire pinch✨of✨sulfur ⟪⟪ᚳ☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur⟫ jade✨cube⟫ ⇰
+      sympathy ⟪conjure silk✨cord ⇉ silk✨cord jade✨cube⟫ ⟪copper✨wire☿accord ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur⟫
     ▢ ≣ copper✨wire☿copper✨wire pinch✨of✨sulfur 〇 ⇰ sympathy ⟪copper✨wire☿copper✨wire pinch✨of✨sulfur⟫ sigilward
     ▢ ≣ 〇 ⇰ ✨Carry✨the✨Silence✨ ▢
 
-spell ✨Carry✨the✨Descended✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+spell ✨Carry✨the✨Descended✨Traces✨ ⧼ᚱ ⟡ Essence⊛⧽ ⁅Veyrath ᚱ⁆
     ⧼ᚳ ᚦ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⧽ ⟪copper✨wire ⟡ ᚳ ⟿ ᚦ⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫
-    ⟪jade✨cube ⟡ ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 一⟫⟫ ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ᚳ pinch✨of✨sulfur⟫ ⟡
-    copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 一⟫ jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ᚦ pinch✨of✨sulfur ⇰ cast
+    ⟪jade✨cube ⟡ ᚳ☿🌒 ⟪pinch✨of✨sulfur ⧾ 壱⟫⟫ ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ᚳ pinch✨of✨sulfur⟫ ⟡
+    copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 壱⟫ jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ᚦ pinch✨of✨sulfur ⇰ cast
   wrest ⦉silver✨bell᛫ mirror⦊ ⇰ sigilward
-  hone ⦉copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 二⟫ silver✨bell᛫ ?▢⦊
-  missile sympathy ⟪conjure silk✨cord ⇉ silk✨cord silver✨bell⟫ ⟪copper✨wire☿accord ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫⟫
+  hone ⦉copper✨wire☿copper✨wire ⟪pinch✨of✨sulfur ⧾ 弐⟫ silver✨bell᛫ ?▢⦊
+  missile sympathy ⟪conjure silk✨cord ⇉ silk✨cord silver✨bell⟫ ⟪copper✨wire☿accord ⟪pinch✨of✨sulfur ⧾ 弐⟫ ⟪pinch✨of✨sulfur ⧾ 壱⟫⟫
 
 /- Our worked complex has three rational coordinates in every degree.
 The differential sends (a,b,c) to (b,0,0): it erases the third coordinate
 and moves the second into the first. Its next application is zero. -/
-ritual ✨Drain✨the✨Three✨Chambers✨ ⟡ ⟪Ratios ⨯ Ratios ⨯ Ratios⟫ ↝Veyrbound⟮Ratios⟯ ⟪Ratios ⨯ Ratios ⨯ Ratios⟫ begets
-  deed jade✨cube ⇰ ⟪jade✨cube☿二☿一᛫ 〇᛫ 〇⟫
+ritual ✨Drain✨the✨Three✨Chambers✨ ⟡ ⟪Ratios ※ Ratios ※ Ratios⟫ ↝Veyrbound⁅Ratios⁆ ⟪Ratios ※ Ratios ※ Ratios⟫ begets
+  deed jade✨cube ⇰ ⟪jade✨cube☿弐☿壱᛫ 〇᛫ 〇⟫
   chantward jade✨cube silver✨bell ⇰ cast purify
   tetherward ash jade✨cube ⇰ cast purify
 
-spell ✨Two✨Drainings✨Leave✨Silence✨ ⟪jade✨cube ⟡ Ratios ⨯ Ratios ⨯ Ratios⟫ ⟡
+spell ✨Two✨Drainings✨Leave✨Silence✨ ⟪jade✨cube ⟡ Ratios ※ Ratios ※ Ratios⟫ ⟡
     ✨Drain✨the✨Three✨Chambers✨ ⟪✨Drain✨the✨Three✨Chambers✨ jade✨cube⟫ ≣ 〇 ⇰ mirror
 
 ritual ✨The✨Three✨Chamber✨Rite✨ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ Ratios⟫ Tallies ⇰
-  ✨Descending✨Rite✨☿seed ⟪conjure ▢ ⇉ ✨Bound✨Veyrs✨☿seed Ratios ⟪Ratios ⨯ Ratios ⨯ Ratios⟫⟫
+  ✨Descending✨Rite✨☿seed ⟪conjure ▢ ⇉ ✨Bound✨Veyrs✨☿seed Ratios ⟪Ratios ※ Ratios ※ Ratios⟫⟫
     ⟪conjure ▢ ⇉ ✨Bound✨Veyrs✨☿✨clothe✨the✨pact✨ ✨Drain✨the✨Three✨Chambers✨⟫ ⟪cast
       summon pinch✨of✨sulfur
       channel ✨Bound✨Veyrs✨☿✨Pacts✨Agree✨in✨Essence✨
@@ -2009,30 +2009,30 @@ ritual ✨The✨Three✨Chamber✨Rite✨ ⟡ ✨Descending✨Rite✨ ⟪✨Boun
       missile ✨Two✨Drainings✨Leave✨Silence✨ jade✨cube⟫
 
 spell ✨Unveil✨the✨Chamber's✨Drain✨ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
-    ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur ≣ ✨Bound✨Veyrs✨☿✨clothe✨the✨pact✨ ✨Drain✨the✨Three✨Chambers✨ ⇰
+    ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur ≣ ✨Bound✨Veyrs✨☿✨clothe✨the✨pact✨ ✨Drain✨the✨Three✨Chambers✨ ⇰
 cast
-  purify ⟮✨The✨Three✨Chamber✨Rite✨᛫ ✨Descending✨Rite✨☿✨unveil✨the✨descent✨⟯
+  purify ⁅✨The✨Three✨Chamber✨Rite✨᛫ ✨Descending✨Rite✨☿✨unveil✨the✨descent✨⁆
 
 /- Cycles have zero second coordinate. Boundaries have both the second
 and third coordinates zero. The surviving third coordinate is the clue
 for the next folio's homology calculation. -/
-spell ✨The✨Middle✨Chamber✨Must✨Be✨Silent✨ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟪jade✨cube ⟡ Ratios ⨯ Ratios ⨯ Ratios⟫ ⟡
-    jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ✨The✨Three✨Chamber✨Rite✨ pinch✨of✨sulfur ↭ jade✨cube☿二☿一 ≣ 〇 ⇰ cast
-  shapeshift ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 一⟫ pinch✨of✨sulfur jade✨cube ≣ 〇 ↭ ▢
-  transmute ⟮✨Unveil✨the✨Chamber's✨Drain✨⟯
-  shapeshift ⟪jade✨cube☿二☿一᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ 〇 ↭ ▢
+spell ✨The✨Middle✨Must✨Be✨Silent✨ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟪jade✨cube ⟡ Ratios ※ Ratios ※ Ratios⟫ ⟡
+    jade✨cube ∈ ✨Circle✨of✨Closed✨Traces✨ ✨The✨Three✨Chamber✨Rite✨ pinch✨of✨sulfur ↭ jade✨cube☿弐☿壱 ≣ 〇 ⇰ cast
+  shapeshift ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 壱⟫ pinch✨of✨sulfur jade✨cube ≣ 〇 ↭ ▢
+  transmute ⁅✨Unveil✨the✨Chamber's✨Drain✨⁆
+  shapeshift ⟪jade✨cube☿弐☿壱᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ 〇 ↭ ▢
   purify
 
-spell ✨Only✨the✨First✨Chamber✨Descends✨ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟪jade✨cube ⟡ Ratios ⨯ Ratios ⨯ Ratios⟫ ⟡
-    jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ✨The✨Three✨Chamber✨Rite✨ pinch✨of✨sulfur ↭ jade✨cube☿二☿一 ≣ 〇 ⩓ jade✨cube☿二☿二 ≣ 〇 ⇰ cast
-  shapeshift ⟪⟒ silver✨bell᛫ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 二⟫ ⟪pinch✨of✨sulfur ⧾ 一⟫ silver✨bell ≣ jade✨cube⟫ ↭ ▢
-  transmute ⟮proclaim pinch✨of✨sulfur ⧾ 二 ≣ ⟪pinch✨of✨sulfur ⧾ 一⟫ ⧾ 一 cast oracle᛫ ✨Unveil✨the✨Chamber's✨Drain✨⟯
+spell ✨Only✨the✨First✨Chamber✨Descends✨ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟪jade✨cube ⟡ Ratios ※ Ratios ※ Ratios⟫ ⟡
+    jade✨cube ∈ ✨Circle✨of✨Descended✨Traces✨ ✨The✨Three✨Chamber✨Rite✨ pinch✨of✨sulfur ↭ jade✨cube☿弐☿壱 ≣ 〇 ⩓ jade✨cube☿弐☿弐 ≣ 〇 ⇰ cast
+  shapeshift ⟪⟒ silver✨bell᛫ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread ⟪pinch✨of✨sulfur ⧾ 弐⟫ ⟪pinch✨of✨sulfur ⧾ 壱⟫ silver✨bell ≣ jade✨cube⟫ ↭ ▢
+  transmute ⁅proclaim pinch✨of✨sulfur ⧾ 弐 ≣ ⟪pinch✨of✨sulfur ⧾ 壱⟫ ⧾ 壱 cast oracle᛫ ✨Unveil✨the✨Chamber's✨Drain✨⁆
   fabricate
   ❖ unpack ⦉silver✨bell᛫ mirror⦊
     missile ⦉mirror᛫ mirror⦊
   ❖ summon sigilward
-    hone ⦉⟪〇᛫ jade✨cube☿一᛫ 〇⟫᛫ ?▢⦊
-    shapeshift ⟪jade✨cube☿一᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ jade✨cube
+    hone ⦉⟪〇᛫ jade✨cube☿壱᛫ 〇⟫᛫ ?▢⦊
+    shapeshift ⟪jade✨cube☿壱᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ jade✨cube
     rend jade✨cube whence ⦉ash᛫ elm᛫ yew⦊
     purge
 
@@ -2090,7 +2090,7 @@ First restrict the incoming differential to the kernel of the outgoing
 one. Only then is its range a submodule of the right space to quotient. -/
 byname ✨The✨Closed✨Chambers✨ ⇰ Bridge☿silence ✨Drain✨the✨Three✨Chambers✨
 
-ritual ✨Descent✨into✨the✨Closed✨Circle✨ ⟡ ⟪Ratios ⨯ Ratios ⨯ Ratios⟫ ↝Veyrbound⟮Ratios⟯ ✨The✨Closed✨Chambers✨ ⇰
+ritual ✨Descent✨into✨the✨Closed✨Circle✨ ⟡ ⟪Ratios ※ Ratios ※ Ratios⟫ ↝Veyrbound⁅Ratios⁆ ✨The✨Closed✨Chambers✨ ⇰
   ✨Drain✨the✨Three✨Chambers✨☿✨narrow✨the✨arrival✨ ✨The✨Closed✨Chambers✨ ✨Two✨Drainings✨Leave✨Silence✨
 
 byname ✨The✨Chambers'✨Echoes✨ ⇰ ✨The✨Closed✨Chambers✨ ⧸ Bridge☿manifestation ✨Descent✨into✨the✨Closed✨Circle✨
@@ -2105,46 +2105,46 @@ spell ✨A✨Descended✨Echo✨is✨Silent✨ ⟪jade✨cube ⟡ ✨The✨Close
 /- The third coordinate survives. For a cycle, the second coordinate is
 already zero; forgetting the first coordinate should remove exactly the
 boundaries, and no more. The next proof checks both directions. -/
-ritual ✨Listen✨to✨the✨Last✨Chamber✨ ⟡ ✨The✨Closed✨Chambers✨ ↝Veyrbound⟮Ratios⟯ Ratios begets
-  deed jade✨cube ⇰ jade✨cube☿core☿二☿二
+ritual ✨Listen✨to✨the✨Last✨Chamber✨ ⟡ ✨The✨Closed✨Chambers✨ ↝Veyrbound⁅Ratios⁆ Ratios begets
+  deed jade✨cube ⇰ jade✨cube☿core☿弐☿弐
   chantward ▢ ▢ ⇰ mirror
   tetherward ▢ ▢ ⇰ mirror
 
-spell ✨Only✨Descended✨Traces✨Fall✨Silent✨ ⟡
+spell ✨Only✨Descents✨Fall✨Silent✨ ⟡
     Bridge☿silence ✨Listen✨to✨the✨Last✨Chamber✨ ≣ Bridge☿manifestation ✨Descent✨into✨the✨Closed✨Circle✨ ⇰ cast
   extend jade✨cube
   fabricate
   ❖ summon sigilward
-    bind middleward ⟡ jade✨cube☿core☿二☿一 ≣ 〇 ⇰
-      sympathy ⟪conjure silver✨bell ⟡ Ratios ⨯ Ratios ⨯ Ratios ⇉ silver✨bell☿一⟫ jade✨cube☿attestation
-    bind lastward ⟡ jade✨cube☿core☿二☿二 ≣ 〇 ⇰ sigilward
-    hone ⦉⟪〇᛫ jade✨cube☿core☿一᛫ 〇⟫᛫ ?▢⦊
+    bind middleward ⟡ jade✨cube☿core☿弐☿壱 ≣ 〇 ⇰
+      sympathy ⟪conjure silver✨bell ⟡ Ratios ※ Ratios ※ Ratios ⇉ silver✨bell☿壱⟫ jade✨cube☿attestation
+    bind lastward ⟡ jade✨cube☿core☿弐☿弐 ≣ 〇 ⇰ sigilward
+    hone ⦉⟪〇᛫ jade✨cube☿core☿壱᛫ 〇⟫᛫ ?▢⦊
     channel Kin☿extend
-    shapeshift ⟪jade✨cube☿core☿一᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ jade✨cube☿core
+    shapeshift ⟪jade✨cube☿core☿壱᛫ ⟪〇 ⟡ Ratios⟫᛫ ⟪〇 ⟡ Ratios⟫⟫ ≣ jade✨cube☿core
     rend jade✨cube whence ⦉⦉ash᛫ elm᛫ yew⦊᛫ closedward⦊
     purge
   ❖ unpack ⦉silver✨bell᛫ mirror⦊
     mirror
 
-spell ✨Every✨Echo✨Can✨Be✨Heard✨ ⟡ Rite☿Reaching ✨Listen✨to✨the✨Last✨Chamber✨ ⇰ cast
+spell ✨Every✨Echo✨Is✨Heard✨ ⟡ Rite☿Reaching ✨Listen✨to✨the✨Last✨Chamber✨ ⇰ cast
   summon yew
   missile ⦉⦉⟪〇᛫ 〇᛫ yew⟫᛫ mirror⦊᛫ mirror⦊
 
 /- The linear first isomorphism theorem finishes the computation:
 cycles modulo boundaries are linearly equivalent to one copy of ℚ.
 Its representative formula lets us compute actual homology classes. -/
-ritual ✨Unveil✨the✨Surviving✨Echo✨ ⟡ ✨The✨Chambers'✨Echoes✨ ≃Veyrbound⟮Ratios⟯ Ratios ⇰
-  ⟪✨Inner✨Bound✨Veyr✨☿✨equal✨veils✨give✨equal✨passages✨ ▢ ▢ ✨Only✨Descended✨Traces✨Fall✨Silent✨☿reflect⟫☿chain
-    ⟪✨Listen✨to✨the✨Last✨Chamber✨☿✨unveil✨the✨reaching✨bound✨pact✨ ✨Every✨Echo✨Can✨Be✨Heard✨⟫
+ritual ✨Unveil✨the✨Surviving✨Echo✨ ⟡ ✨The✨Chambers'✨Echoes✨ ≃Veyrbound⁅Ratios⁆ Ratios ⇰
+  ⟪✨Inner✨Bound✨Veyr✨☿✨equal✨veils✨equal✨passages✨ ▢ ▢ ✨Only✨Descents✨Fall✨Silent✨☿reflect⟫☿chain
+    ⟪✨Listen✨to✨the✨Last✨Chamber✨☿✨unveil✨the✨reaching✨bound✨pact✨ ✨Every✨Echo✨Is✨Heard✨⟫
 
 spell ✨The✨Last✨Chamber✨Names✨the✨Echo✨ ⟪jade✨cube ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡
-    ✨Unveil✨the✨Surviving✨Echo✨ ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge jade✨cube⟫ ≣ jade✨cube☿core☿二☿二 ⇰ cast
+    ✨Unveil✨the✨Surviving✨Echo✨ ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge jade✨cube⟫ ≣ jade✨cube☿core☿弐☿弐 ⇰ cast
   missile ✨Listen✨to✨the✨Last✨Chamber✨☿✨hear✨through✨the✨bound✨veil✨
-    ✨Every✨Echo✨Can✨Be✨Heard✨ jade✨cube
+    ✨Every✨Echo✨Is✨Heard✨ jade✨cube
 
-spell ✨Equal✨Last✨Chambers✨Give✨Equal✨Echoes✨ ⟪jade✨cube silver✨bell ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡
+spell ✨Equal✨Chambers✨Equal✨Echoes✨ ⟪jade✨cube silver✨bell ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡
     ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge jade✨cube ⟡ ✨The✨Chambers'✨Echoes✨⟫ ≣ ✨Inner✨Bound✨Veyr✨☿Effigies☿forge silver✨bell ↭
-      jade✨cube☿core☿二☿二 ≣ silver✨bell☿core☿二☿二 ⇰ cast
+      jade✨cube☿core☿弐☿弐 ≣ silver✨bell☿core☿弐☿弐 ⇰ cast
   fabricate
   ❖ summon unisonward
     missile sympathy ✨Unveil✨the✨Surviving✨Echo✨ unisonward
@@ -2155,17 +2155,17 @@ spell ✨Equal✨Last✨Chambers✨Give✨Equal✨Echoes✨ ⟪jade✨cube silve
 /- These cycles differ by the boundary of (0,3,0), so they give the same
 class. Changing the last coordinate would instead change the class. -/
 spell ✨The✨First✨Chamber✨Leaves✨No✨Echo✨ ⟡
-    ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge ⟪⦉⟪三᛫ 〇᛫ 七⟫᛫ mirror⦊ ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡ ✨The✨Chambers'✨Echoes✨⟫ ≣
+    ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge ⟪⦉⟪参᛫ 〇᛫ 七⟫᛫ mirror⦊ ⟡ ✨The✨Closed✨Chambers✨⟫ ⟡ ✨The✨Chambers'✨Echoes✨⟫ ≣
       ✨Inner✨Bound✨Veyr✨☿Effigies☿forge ⟪⦉⟪〇᛫ 〇᛫ 七⟫᛫ mirror⦊ ⟡ ✨The✨Closed✨Chambers✨⟫ ⇰
-  ⟪✨Equal✨Last✨Chambers✨Give✨Equal✨Echoes✨ ▢ ▢⟫☿backward mirror
+  ⟪✨Equal✨Chambers✨Equal✨Echoes✨ ▢ ▢⟫☿backward mirror
 
-ritual ✨The✨Unfading✨Chamber✨ ⟡ ✨The✨Closed✨Chambers✨ ⇰ ⦉⟪〇᛫ 〇᛫ 一⟫᛫ mirror⦊
+ritual ✨The✨Unfading✨Chamber✨ ⟡ ✨The✨Closed✨Chambers✨ ⇰ ⦉⟪〇᛫ 〇᛫ 壱⟫᛫ mirror⦊
 
-spell ✨One✨Echo✨Cannot✨Be✨Silenced✨ ⟡
+spell ✨One✨Echo✨Resists✨Silence✨ ⟡
     ⟪✨Inner✨Bound✨Veyr✨☿Effigies☿forge ✨The✨Unfading✨Chamber✨ ⟡ ✨The✨Chambers'✨Echoes✨⟫ ≢ 〇 ⇰ cast
   summon voidmark
   bind reflectionward ⇰ sympathy ✨Unveil✨the✨Surviving✨Echo✨ voidmark
-  transmute ⟮✨The✨Last✨Chamber✨Names✨the✨Echo✨᛫ ✨Carry✨the✨Silence✨⟯ upon reflectionward
+  transmute ⁅✨The✨Last✨Chamber✨Names✨the✨Echo✨᛫ ✨Carry✨the✨Silence✨⁆ upon reflectionward
   missile ✨Presence✨is✨Not✨Silence✨ reflectionward
 
 /- This is the same homology that mathlib attaches to a chain complex,
@@ -2180,42 +2180,42 @@ ritual ✨The✨Three✨Stair✨Window✨ ⟡ ✨Threefold✨Descent✨ ⟪✨Bo
 ritual ✨The✨Window✨Reveals✨its✨Echoes✨ ⟡ ✨The✨Three✨Stair✨Window✨☿echoes ≅ ✨Bound✨Veyrs✨☿seed Ratios ✨The✨Chambers'✨Echoes✨ ⇰
   ✨The✨Three✨Stair✨Window✨☿✨unveil✨the✨bound✨echoes✨
 
-ritual ✨The✨Rite✨Opens✨a✨Window✨ ⟡ ✨The✨Three✨Chamber✨Rite✨☿stairwell 二 一 〇 ≅ ✨The✨Three✨Stair✨Window✨ ⇰
+ritual ✨The✨Rite✨Opens✨a✨Window✨ ⟡ ✨The✨Three✨Chamber✨Rite✨☿stairwell 弐 壱 〇 ≅ ✨The✨Three✨Stair✨Window✨ ⇰
   ✨Threefold✨Descent✨☿✨forge✨a✨perfect✨passage✨ ⟪Mirrorkin☿unmoving ▢⟫ ⟪Mirrorkin☿unmoving ▢⟫ ⟪Mirrorkin☿unmoving ▢⟫
     ⟪cast
       channel ✨Bound✨Veyrs✨☿✨Pacts✨Agree✨in✨Essence✨
       channel Bridge☿extend
       summon jade✨cube
-      shapeshift ✨Drain✨the✨Three✨Chambers✨ jade✨cube ≣ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread 二 一 jade✨cube
-      transmute ⟮✨Unveil✨the✨Chamber's✨Drain✨ 一⟯
+      shapeshift ✨Drain✨the✨Three✨Chambers✨ jade✨cube ≣ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread 弐 壱 jade✨cube
+      transmute ⁅✨Unveil✨the✨Chamber's✨Drain✨ 壱⁆
       mirror⟫
     ⟪cast
       channel ✨Bound✨Veyrs✨☿✨Pacts✨Agree✨in✨Essence✨
       channel Bridge☿extend
       summon jade✨cube
-      shapeshift ✨Drain✨the✨Three✨Chambers✨ jade✨cube ≣ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread 一 〇 jade✨cube
-      transmute ⟮✨Unveil✨the✨Chamber's✨Drain✨ 〇⟯
+      shapeshift ✨Drain✨the✨Three✨Chambers✨ jade✨cube ≣ ✨The✨Three✨Chamber✨Rite✨☿cinder✨thread 壱 〇 jade✨cube
+      transmute ⁅✨Unveil✨the✨Chamber's✨Drain✨ 〇⁆
       mirror⟫
 
-ritual ✨The✨Rite's✨One✨Surviving✨Echo✨ ⟡ ✨The✨Three✨Chamber✨Rite✨☿echoes 一 ≅ ✨Bound✨Veyrs✨☿seed Ratios Ratios ⇰
-  ⟪✨The✨Three✨Chamber✨Rite✨☿✨echoes✨through✨a✨window✨ 二 一 〇 ⟪⟪✨Pattern✨of✨Descent✨☿descending Tallies⟫☿✨the✨stair✨above✨ mirror⟫ ⟪⟪✨Pattern✨of✨Descent✨☿descending Tallies⟫☿✨the✨stair✨below✨ mirror⟫⟫ ≪⨾
+ritual ✨The✨Rite's✨One✨Surviving✨Echo✨ ⟡ ✨The✨Three✨Chamber✨Rite✨☿echoes 壱 ≅ ✨Bound✨Veyrs✨☿seed Ratios Ratios ⇰
+  ⟪✨The✨Three✨Chamber✨Rite✨☿✨echoes✨through✨a✨window✨ 弐 壱 〇 ⟪⟪✨Pattern✨of✨Descent✨☿descending Tallies⟫☿✨the✨stair✨above✨ mirror⟫ ⟪⟪✨Pattern✨of✨Descent✨☿descending Tallies⟫☿✨the✨stair✨below✨ mirror⟫⟫ ≪⨾
     ✨Threefold✨Descent✨☿✨carry✨echoes✨through✨the✨passage✨ ✨The✨Rite✨Opens✨a✨Window✨ ≪⨾
     ✨The✨Window✨Reveals✨its✨Echoes✨ ≪⨾ ✨Unveil✨the✨Surviving✨Echo✨☿✨clothe✨the✨bound✨passage✨
 
 /- Transport on homology respects both identity and composition.
 The preceding folio explained why: chain maps preserve closed chains
 and boundaries, so they descend consistently to equivalence classes. -/
-ritual ✨Carry✨the✨Surviving✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+ritual ✨Carry✨the✨Surviving✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⁅Veyrath ᚱ⁆
     ⧼ᚳ ᚦ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⧽ ⟪copper✨wire ⟡ ᚳ ⟿ ᚦ⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
     ᚳ☿echoes pinch✨of✨sulfur ⟿ ᚦ☿echoes pinch✨of✨sulfur ⇰
   ✨Graded✨Descent✨☿✨carry✨the✨echoes✨ copper✨wire pinch✨of✨sulfur
 
-spell ✨Unmoved✨Traces✨Leave✨Unmoved✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+spell ✨Still✨Traces✨Still✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⁅Veyrath ᚱ⁆
     ⟪ᚳ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
     ✨Carry✨the✨Surviving✨Echoes✨ ⟪◎ ᚳ⟫ pinch✨of✨sulfur ≣ ◎ ⟪ᚳ☿echoes pinch✨of✨sulfur⟫ ⇰
   ✨Graded✨Descent✨☿✨unmoved✨echoes✨ ᚳ pinch✨of✨sulfur
 
-spell ✨Chained✨Pacts✨Carry✨Chained✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⟮Veyrath ᚱ⟯
+spell ✨Chained✨Pacts✨Chained✨Echoes✨ ⧼ᚱ ⟡ Essence⊛⧽ ⁅Veyrath ᚱ⁆
     ⧼ᚳ ᚦ ᛖ ⟡ ✨Descending✨Rite✨ ⟪✨Bound✨Veyrs✨ ᚱ⟫ Tallies⧽ ⟪copper✨wire ⟡ ᚳ ⟿ ᚦ⟫ ⟪silk✨cord ⟡ ᚦ ⟿ ᛖ⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
     ✨Carry✨the✨Surviving✨Echoes✨ ⟪copper✨wire ⨾ silk✨cord⟫ pinch✨of✨sulfur ≣ ✨Carry✨the✨Surviving✨Echoes✨ copper✨wire pinch✨of✨sulfur ⨾ ✨Carry✨the✨Surviving✨Echoes✨ silk✨cord pinch✨of✨sulfur ⇰
   ✨Graded✨Descent✨☿✨chain✨the✨echo✨bearers✨ copper✨wire silk✨cord pinch✨of✨sulfur
@@ -2269,7 +2269,7 @@ unveil Umbra Mirrors
 
 /- The imaginary unit is an ordinary field element with one unusual square.
 Multiplication by it rotates the real and imaginary coordinates a quarter turn. -/
-spell ✨Conjure✨the✨Imaginary✨Ember✨ ⟡ ✨Imaginary✨Ember✨ ⌃ 二 ≣ ⟪⧿一 ⟡ Umbrae⟫ ⇰ Umbra☿✨The✨Ember's✨Shadow✨
+spell ✨Conjure✨the✨Imaginary✨Ember✨ ⟡ ✨Imaginary✨Ember✨ ⌃ 弐 ≣ ⟪⧿壱 ⟡ Umbrae⟫ ⇰ Umbra☿✨The✨Ember's✨Shadow✨
 
 spell ✨A✨Quarter✨Turn✨through✨the✨Mirror✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
     ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫☿sunface ≣ ⧿amber✨rod☿moonface ⩓ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫☿moonface ≣ amber✨rod☿sunface ⇰ cast
@@ -2277,31 +2277,31 @@ spell ✨A✨Quarter✨Turn✨through✨the✨Mirror✨ ⟪amber✨rod ⟡ Umbra
 
 spell ✨Four✨Imaginary✨Turns✨Return✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ ✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫⟫⟫ ≣ amber✨rod ⇰ cast
   litany ✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ amber✨rod⟫⟫⟫ ≣ ⟪✨Imaginary✨Ember✨ ⊛ ✨Imaginary✨Ember✨⟫ ⊛ ⟪✨Imaginary✨Ember✨ ⊛ ✨Imaginary✨Ember✨⟫ ⊛ amber✨rod ⇰ cast circlet
-    ▢ ≣ amber✨rod ⇰ cast transmute ⟮Umbra☿✨Two✨Embers✨Cast✨a✨Shadow✨⟯⁂ circlet
+    ▢ ≣ amber✨rod ⇰ cast transmute ⁅Umbra☿✨Two✨Embers✨Cast✨a✨Shadow✨⁆⁂ circlet
 
 /- Conjugation fixes the real coordinate and negates the imaginary one.
 It is an involution, so looking into this mirror twice restores the input. -/
-spell ✨Twice✨through✨the✨Imaginary✨Mirror✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ mirrorlight ⟪mirrorlight amber✨rod⟫ ≣ amber✨rod ⇰ cast purify
+spell ✨Twice✨through✨the✨Mirror✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ mirrorlight ⟪mirrorlight amber✨rod⟫ ≣ amber✨rod ⇰ cast purify
 
 /- The squared modulus is real and nonnegative. Multiplying a complex number
 by its conjugate gives that squared modulus, embedded back into the complex field. -/
 spell ✨The✨Mirror✨Reveals✨Radiance✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ amber✨rod ⊛ mirrorlight amber✨rod ≣ ⟪✨radiance✨squared✨ amber✨rod ⟡ Umbrae⟫ ⇰
   Umbra☿✨bind✨the✨mirrorlight✨ amber✨rod
 
-spell ✨Radiance✨from✨Two✨Shadows✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ ‖amber✨rod‖ ⌃ 二 ≣ amber✨rod☿sunface ⌃ 二 ⧾ amber✨rod☿moonface ⌃ 二 ⇰ cast
-  transmute ⟮Umbra☿✨square✨the✨radiance✨᛫ Umbra☿✨unveil✨the✨squared✨radiance✨⟯
+spell ✨Radiance✨from✨Two✨Shadows✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ ‖amber✨rod‖ ⌃ 弐 ≣ amber✨rod☿sunface ⌃ 弐 ⧾ amber✨rod☿moonface ⌃ 弐 ⇰ cast
+  transmute ⁅Umbra☿✨square✨the✨radiance✨᛫ Umbra☿✨unveil✨the✨squared✨radiance✨⁆
   circlet
 
 /- This exact computation uses field algebra, not a floating-point approximation. -/
-spell ✨Twin✨Sparks✨Become✨Moonlight✨ ⟡ ⟪一 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 二 ≣ ⟪二 ⟡ Umbrae⟫ ⊛ ✨Imaginary✨Ember✨ ⇰ cast
-  litany ⟪一 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 二 ≣ 一 ⧾ 二 ⊛ ✨Imaginary✨Ember✨ ⧾ ✨Imaginary✨Ember✨ ⌃ 二 ⇰ cast circlet
-    ▢ ≣ 二 ⊛ ✨Imaginary✨Ember✨ ⇰ cast transmute ⟮Umbra☿✨The✨Ember's✨Shadow✨⟯⁂ circlet
+spell ✨Twin✨Sparks✨Become✨Moonlight✨ ⟡ ⟪壱 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 弐 ≣ ⟪弐 ⟡ Umbrae⟫ ⊛ ✨Imaginary✨Ember✨ ⇰ cast
+  litany ⟪壱 ⧾ ✨Imaginary✨Ember✨⟫ ⌃ 弐 ≣ 壱 ⧾ 弐 ⊛ ✨Imaginary✨Ember✨ ⧾ ✨Imaginary✨Ember✨ ⌃ 弐 ⇰ cast circlet
+    ▢ ≣ 弐 ⊛ ✨Imaginary✨Ember✨ ⇰ cast transmute ⁅Umbra☿✨The✨Ember's✨Shadow✨⁆⁂ circlet
 
-spell ✨The✨Fivefold✨Radiance✨ ⟡ ‖⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ≣ 五 ⇰ cast
-  bind doubleward ⟡ ‖⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ⌃ 二 ≣ 二五 ⇰ cast
-    transmute ⟮✨Radiance✨from✨Two✨Shadows✨⟯
+spell ✨The✨Fivefold✨Radiance✨ ⟡ ‖⟪参 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ≣ 五 ⇰ cast
+  bind doubleward ⟡ ‖⟪参 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨‖ ⌃ 弐 ≣ 弐五 ⇰ cast
+    transmute ⁅✨Radiance✨from✨Two✨Shadows✨⁆
     numerology
-  bind lightward ⇰ ✨radiance✨cannot✨darken✨ ⟪⟪三 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨⟫
+  bind lightward ⇰ ✨radiance✨cannot✨darken✨ ⟪⟪参 ⟡ Umbrae⟫ ⧾ 四 ⊛ ✨Imaginary✨Ember✨⟫
   greatledger
 
 seal Arcana☿Illusion
@@ -2352,20 +2352,20 @@ sanctum Arcana☿Illusion
 
 /- The scalar field in HasDerivAt matters: every variable here lies in ℂ,
 so this is a complex derivative, controlling approach from every direction. -/
-ritual ✨The✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ Umbrae ⇰ amber✨rod ⌃ 二
+ritual ✨The✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ Umbrae ⇰ amber✨rod ⌃ 弐
 
 spell ✨The✨Second✨Ascent's✨Whisper✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
-    ✨Bears✨the✨Whisper✨ ✨The✨Umbra's✨Second✨Ascent✨ ⟪二 ⊛ amber✨rod⟫ amber✨rod ⇰ cast
-  shapeshift ✨Bears✨the✨Whisper✨ ⟪conjure verse ⟡ Umbrae ⇉ verse ⌃ 二⟫ ⟪二 ⊛ amber✨rod⟫ amber✨rod
-  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ amber✨rod⟫☿✨whisper✨through✨powers✨ 二
+    ✨Bears✨the✨Whisper✨ ✨The✨Umbra's✨Second✨Ascent✨ ⟪弐 ⊛ amber✨rod⟫ amber✨rod ⇰ cast
+  shapeshift ✨Bears✨the✨Whisper✨ ⟪conjure verse ⟡ Umbrae ⇉ verse ⌃ 弐⟫ ⟪弐 ⊛ amber✨rod⟫ amber✨rod
+  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ amber✨rod⟫☿✨whisper✨through✨powers✨ 弐
 
 /- A complex derivative at every point makes the function entire, hence
 holomorphic on every open subset of the complex plane. -/
-spell ✨The✨Second✨Ascent✨Whispers✨Everywhere✨ ⟡ ✨Everywhere✨Whispering✨ Umbrae ✨The✨Umbra's✨Second✨Ascent✨ ⇰ cast
+spell ✨Squares✨Whisper✨Everywhere✨ ⟡ ✨Everywhere✨Whispering✨ Umbrae ✨The✨Umbra's✨Second✨Ascent✨ ⇰ cast
   summon amber✨rod
   missile ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫☿✨whispering✨here✨
 
-spell ✨Hear✨the✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ undertone ✨The✨Umbra's✨Second✨Ascent✨ amber✨rod ≣ 二 ⊛ amber✨rod ⇰
+spell ✨Hear✨the✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ undertone ✨The✨Umbra's✨Second✨Ascent✨ amber✨rod ≣ 弐 ⊛ amber✨rod ⇰
   ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫☿undertone
 
 /- The derivative of the complex exponential is a library theorem. The chain
@@ -2373,7 +2373,7 @@ rule combines it with the polynomial derivative proved above. -/
 ritual ✨Breathe✨upon✨the✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ Umbrae ⇰ Umbra☿breath ⟪✨The✨Umbra's✨Second✨Ascent✨ amber✨rod⟫
 
 spell ✨The✨Breath's✨Layered✨Whisper✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
-    ✨Bears✨the✨Whisper✨ ✨Breathe✨upon✨the✨Second✨Ascent✨ ⟪Umbra☿breath ⟪amber✨rod ⌃ 二⟫ ⊛ ⟪二 ⊛ amber✨rod⟫⟫ amber✨rod ⇰ cast
+    ✨Bears✨the✨Whisper✨ ✨Breathe✨upon✨the✨Second✨Ascent✨ ⟪Umbra☿breath ⟪amber✨rod ⌃ 弐⟫ ⊛ ⟪弐 ⊛ amber✨rod⟫⟫ amber✨rod ⇰ cast
   missile ⟪Umbra☿✨breath✨echoes✨itself✨ ⟪✨The✨Umbra's✨Second✨Ascent✨ amber✨rod⟫⟫☿threading amber✨rod ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫
 
 spell ✨The✨Breath✨Whispers✨Everywhere✨ ⟡ ✨Everywhere✨Whispering✨ Umbrae ✨Breathe✨upon✨the✨Second✨Ascent✨ ⇰ cast
@@ -2383,8 +2383,8 @@ spell ✨The✨Breath✨Whispers✨Everywhere✨ ⟡ ✨Everywhere✨Whispering�
 /- Evaluate a derivative only after obtaining its HasDerivAt certificate.
 At the imaginary unit, z squared is negative one, so the exponential is exp(-1). -/
 spell ✨The✨Imaginary✨Ember's✨Breath✨ ⟡
-    undertone ✨Breathe✨upon✨the✨Second✨Ascent✨ Umbra☿✨Imaginary✨Ember✨ ≣ Umbra☿breath ⟪⧿一⟫ ⊛ ⟪二 ⊛ Umbra☿✨Imaginary✨Ember✨⟫ ⇰ cast
-  transmute ⟮⟪✨The✨Breath's✨Layered✨Whisper✨ Umbra☿✨Imaginary✨Ember✨⟫☿undertone᛫ Umbra☿✨The✨Ember's✨Shadow✨⟯
+    undertone ✨Breathe✨upon✨the✨Second✨Ascent✨ Umbra☿✨Imaginary✨Ember✨ ≣ Umbra☿breath ⟪⧿壱⟫ ⊛ ⟪弐 ⊛ Umbra☿✨Imaginary✨Ember✨⟫ ⇰ cast
+  transmute ⁅⟪✨The✨Breath's✨Layered✨Whisper✨ Umbra☿✨Imaginary✨Ember✨⟫☿undertone᛫ Umbra☿✨The✨Ember's✨Shadow✨⁆
 
 seal Arcana☿Illusion
 ```
@@ -2462,41 +2462,41 @@ is exactly the ideal of equations vanishing at that point. -/
 spell ✨A✨Sigil's✨Vows✨Are✨Its✨Silence✨ ⧼ᚨ ⟡ Essence⊛⧽ ⟪jade✨cube ⟡ ᚨ ↝ Umbrae⟫ ⟡
     ✨Vows✨of✨the✨Apparition✨ ⧼jade✨cube⧽ ≣ Emissary☿silence ⟪✨Many✨Glyph✨Incantations✨☿✨conjure✨at✨the✨sigils✨ jade✨cube⟫☿✨unveil✨the✨Veyrath✨pact✨ ⇰ cast
   extend ruby✨shard
-  purify ⟮✨Vows✨of✨the✨Apparition✨᛫ Emissary☿✨Silence✨Criterion✨⟯
+  purify ⁅✨Vows✨of✨the✨Apparition✨᛫ Emissary☿✨Silence✨Criterion✨⁆
 
 /- In two coordinates, the equation xy = 0 describes the union of the axes.
 Fin 2 names the coordinates; each coordinate itself can be any complex number. -/
-ritual ✨The✨Crossed✨Apparition✨ ⟡ ✨Many✨Glyph✨Incantations✨ ⟪Fetter 二⟫ Umbrae ⇰
-  ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 〇 ⊛ ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 一
+ritual ✨The✨Crossed✨Apparition✨ ⟡ ✨Many✨Glyph✨Incantations✨ ⟪Fetter 弐⟫ Umbrae ⇰
+  ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 〇 ⊛ ✨Many✨Glyph✨Incantations✨☿✨coordinate✨glyph✨ 壱
 
-ritual ✨Covenant✨of✨Crossed✨Apparitions✨ ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ⟪Fetter 二⟫ Umbrae⟫ ⇰
+ritual ✨Covenant✨of✨Crossed✨Apparitions✨ ⟡ Covenant ⟪✨Many✨Glyph✨Incantations✨ ⟪Fetter 弐⟫ Umbrae⟫ ⇰
   Covenant☿consecrate ⧼✨The✨Crossed✨Apparition✨⧽
 
-spell ✨One✨Arm✨or✨the✨Other✨ ⟪jade✨cube ⟡ Fetter 二 ↝ Umbrae⟫ ⟡
-    jade✨cube ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ↭ jade✨cube 〇 ≣ 〇 ⩔ jade✨cube 一 ≣ 〇 ⇰ cast
-  transmute ⟮✨Apparition✨of✨the✨Covenant✨᛫ ✨Covenant✨of✨Crossed✨Apparitions✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨⟯
-  purify ⟮✨The✨Crossed✨Apparition✨᛫ ✨a✨silent✨binding✨betrays✨a✨silence✨⟯
+spell ✨One✨Arm✨or✨the✨Other✨ ⟪jade✨cube ⟡ Fetter 弐 ↝ Umbrae⟫ ⟡
+    jade✨cube ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ↭ jade✨cube 〇 ≣ 〇 ⩔ jade✨cube 壱 ≣ 〇 ⇰ cast
+  transmute ⁅✨Apparition✨of✨the✨Covenant✨᛫ ✨Covenant✨of✨Crossed✨Apparitions✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨⁆
+  purify ⁅✨The✨Crossed✨Apparition✨᛫ ✨silent✨binding✨silent✨part✨⁆
 
 /- The point (i, 0) lies on the horizontal complex axis. The point (i, 1)
 lies on neither axis. These are exact complex-coordinate computations. -/
 spell ✨The✨Ember✨Rests✨upon✨the✨Cross✨ ⟡
-    ⟪!⟮Umbra☿✨Imaginary✨Ember✨᛫ 〇⟯ ⟡ Fetter 二 ↝ Umbrae⟫ ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
-  transmute ⟮✨One✨Arm✨or✨the✨Other✨⟯
+    ⟪!⁅Umbra☿✨Imaginary✨Ember✨᛫ 〇⁆ ⟡ Fetter 弐 ↝ Umbrae⟫ ∈ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
+  transmute ⁅✨One✨Arm✨or✨the✨Other✨⁆
   missile Either☿choose✨right mirror
 
 spell ✨The✨Ember✨Escapes✨the✨Cross✨ ⟡
-    ⟪!⟮Umbra☿✨Imaginary✨Ember✨᛫ 一⟯ ⟡ Fetter 二 ↝ Umbrae⟫ ∉ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
-  transmute ⟮✨One✨Arm✨or✨the✨Other✨⟯
+    ⟪!⁅Umbra☿✨Imaginary✨Ember✨᛫ 壱⁆ ⟡ Fetter 弐 ↝ Umbrae⟫ ∉ ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
+  transmute ⁅✨One✨Arm✨or✨the✨Other✨⁆
   purify
 
 /- Squaring an equation changes its multiplicity, but not its zero set over
 the complex field. A bare set of solutions forgets this extra algebraic data. -/
-spell ✨A✨Deeper✨Vow✨Casts✨the✨Same✨Shape✨ ⟡
-    ✨Apparition✨of✨the✨Covenant✨ ⟪Covenant☿consecrate ⧼✨The✨Crossed✨Apparition✨ ⌃ 二⧽⟫ ≣
+spell ✨Deeper✨Vows✨Same✨Shape✨ ⟡
+    ✨Apparition✨of✨the✨Covenant✨ ⟪Covenant☿consecrate ⧼✨The✨Crossed✨Apparition✨ ⌃ 弐⧽⟫ ≣
       ✨Apparition✨of✨the✨Covenant✨ ✨Covenant✨of✨Crossed✨Apparitions✨ ⇰ cast
   extend jade✨cube
-  transmute ⟮✨Apparition✨of✨the✨Covenant✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨᛫ ✨One✨Arm✨or✨the✨Other✨⟯
-  purify ⟮✨The✨Crossed✨Apparition✨᛫ ✨a✨silent✨binding✨betrays✨a✨silence✨⟯
+  transmute ⁅✨Apparition✨of✨the✨Covenant✨᛫ ✨Many✨Glyph✨Incantations✨☿✨the✨seeds✨summon✨the✨shape✨᛫ ✨One✨Arm✨or✨the✨Other✨⁆
+  purify ⁅✨The✨Crossed✨Apparition✨᛫ ✨silent✨binding✨silent✨part✨⁆
 
 seal Arcana☿Phantasms
 ```
@@ -2547,47 +2547,47 @@ unveil ✨Measure✨Lore✨
 /- A probability mass function stores nonnegative weights whose total is one.
 The six indices are 0 through 5; the displayed die faces are one greater. -/
 ineffable ritual ✨Sixfold✨Omen✨ ⟡ Augurglass ⟪Fetter 六⟫ ⇰
-  Augurglass☿✨from✨counted✨weights✨ ⟪conjure ▢ ⇉ 一 ⧶ 六⟫ ⟪cast
+  Augurglass☿✨from✨counted✨weights✨ ⟪conjure ▢ ⇉ 壱 ⧶ 六⟫ ⟪cast
     numerology
     missile ✨Unbounded✨Omenweight✨☿✨Binding✨Undone✨ ⟪cast numerology⟫ ⟪cast boundedness⟫⟫
 
-spell ✨Weight✨of✨Each✨Face✨ ⟪opal✨dust ⟡ Fetter 六⟫ ⟡ ✨Sixfold✨Omen✨ opal✨dust ≣ 一 ⧶ 六 ⇰ mirror
+spell ✨Weight✨of✨Each✨Face✨ ⟪opal✨dust ⟡ Fetter 六⟫ ⟡ ✨Sixfold✨Omen✨ opal✨dust ≣ 壱 ⧶ 六 ⇰ mirror
 
-spell ✨The✨Whole✨Omen✨ ⟡ ∑ opal✨dust᛫ ✨Sixfold✨Omen✨ opal✨dust ≣ 一 ⇰ cast
-  clarify solely ⟮✨gather✨a✨counted✨chorus✨⟯ through ✨Sixfold✨Omen✨☿✨all✨omenweights✨are✨one✨
+spell ✨The✨Whole✨Omen✨ ⟡ ∑ opal✨dust᛫ ✨Sixfold✨Omen✨ opal✨dust ≣ 壱 ⇰ cast
+  clarify solely ⁅✨gather✨a✨counted✨chorus✨⁆ through ✨Sixfold✨Omen✨☿✨all✨omenweights✨are✨one✨
 
 /- The outcome indices 1, 3, 5 correspond to faces 2, 4, 6.
 An event is a set of outcomes, and its probability adds their masses. -/
-spell ✨Three✨Faces✨Claim✨Half✨the✨Omen✨ ⟡
-    ✨Sixfold✨Omen✨☿✨weigh✨the✨omens✨ ⟪⧼一᛫ 三᛫ 五⧽ ⟡ Band ⟪Fetter 六⟫⟫ ≣ 一 ⧶ 二 ⇰ cast
-  transmute ⟮Augurglass☿✨weigh✨a✨band✨of✨omens✨⟯
-  shapeshift ⟪一 ⧶ 六 ⟡ Fluxes⋝〇∞⟫ ⧾ ⟪一 ⧶ 六 ⧾ ⟪一 ⧶ 六 ⧾ 〇⟫⟫ ≣ 一 ⧶ 二
-  channel ⟪✨Unbounded✨Omenweight✨☿✨finite✨weights✨agree✨when✨unveiled✨ ⟪cast boundedness⟫ ⟪cast boundedness⟫⟫☿onward
-  numerology ⟮✨Unbounded✨Omenweight✨☿✨unveil✨joined✨weights✨⟯
+spell ✨Even✨Faces✨Claim✨Half✨ ⟡
+    ✨Sixfold✨Omen✨☿✨weigh✨the✨omens✨ ⟪⧼壱᛫ 参᛫ 五⧽ ⟡ Band ⟪Fetter 六⟫⟫ ≣ 壱 ⧶ 弐 ⇰ cast
+  transmute ⁅Augurglass☿✨weigh✨a✨band✨of✨omens✨⁆
+  shapeshift ⟪壱 ⧶ 六 ⟡ Fluxes⋝〇∞⟫ ⧾ ⟪壱 ⧶ 六 ⧾ ⟪壱 ⧶ 六 ⧾ 〇⟫⟫ ≣ 壱 ⧶ 弐
+  channel ⟪✨Unbounded✨Omenweight✨☿✨unveiled✨weights✨agree✨ ⟪cast boundedness⟫ ⟪cast boundedness⟫⟫☿onward
+  numerology ⁅✨Unbounded✨Omenweight✨☿✨unveil✨joined✨weights✨⁆
 
 /- A random variable assigns a real payoff to every outcome.
 Expectation weights those payoffs by their probabilities; it need not be an outcome. -/
-ritual ✨Face✨of✨the✨Omen✨ ⟪opal✨dust ⟡ Fetter 六⟫ ⟡ Fluxes ⇰ opal✨dust☿core ⧾ 一
+ritual ✨Face✨of✨the✨Omen✨ ⟪opal✨dust ⟡ Fetter 六⟫ ⟡ Fluxes ⇰ opal✨dust☿core ⧾ 壱
 
-spell ✨Balance✨the✨Sixfold✨Omen✨ ⟡ ∫ opal✨dust᛫ ✨Face✨of✨the✨Omen✨ opal✨dust ∂✨Sixfold✨Omen✨☿✨weigh✨the✨omens✨ ≣ 七 ⧶ 二 ⇰ cast
-  transmute ⟮Augurglass☿✨gather✨the✨finite✨weights✨⟯
-  numerology ⟮✨Weight✨of✨Each✨Face✨᛫ ✨Face✨of✨the✨Omen✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+spell ✨Balance✨the✨Sixfold✨Omen✨ ⟡ ∫ opal✨dust᛫ ✨Face✨of✨the✨Omen✨ opal✨dust ∂✨Sixfold✨Omen✨☿✨weigh✨the✨omens✨ ≣ 七 ⧶ 弐 ⇰ cast
+  transmute ⁅Augurglass☿✨gather✨the✨finite✨weights✨⁆
+  numerology ⁅✨Weight✨of✨Each✨Face✨᛫ ✨Face✨of✨the✨Omen✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⁆
 
 /- Resampling from the same distribution inside bind makes the two draws independent.
 Keeping both indices, rather than just their sum, records the full joint outcome. -/
-ineffable ritual ✨Twin✨Unentangled✨Omens✨ ⟡ Augurglass ⟪Fetter 六 ⨯ Fetter 六⟫ ⇰
+ineffable ritual ✨Twin✨Unentangled✨Omens✨ ⟡ Augurglass ⟪Fetter 六 ※ Fetter 六⟫ ⇰
   ✨Sixfold✨Omen✨☿✨cast✨then✨cast✨ ⟪conjure opal✨dust ⇉ ✨Sixfold✨Omen✨☿enchant ⟪conjure quartz✨chip ⇉ ⟪opal✨dust᛫ quartz✨chip⟫⟫⟫
 
-spell ✨Weight✨of✨the✨Twin✨Faces✨ ⟪opal✨dust quartz✨chip ⟡ Fetter 六⟫ ⟡ ✨Twin✨Unentangled✨Omens✨ ⟪opal✨dust᛫ quartz✨chip⟫ ≣ 一 ⧶ 三六 ⇰ cast
-  purify ⟮✨Twin✨Unentangled✨Omens✨᛫ Augurglass☿✨unfold✨the✨second✨casting✨᛫ Augurglass☿✨unfold✨the✨carried✨omen✨᛫ ✨gather✨a✨counted✨chorus✨᛫ ✨Weight✨of✨Each✨Face✨᛫ ✨split✨the✨twin✨portent✨⟯
-  channel ⟪✨Unbounded✨Omenweight✨☿✨finite✨weights✨agree✨when✨unveiled✨ ⟪cast boundedness⟫ ⟪cast boundedness⟫⟫☿onward
+spell ✨Weight✨of✨the✨Twin✨Faces✨ ⟪opal✨dust quartz✨chip ⟡ Fetter 六⟫ ⟡ ✨Twin✨Unentangled✨Omens✨ ⟪opal✨dust᛫ quartz✨chip⟫ ≣ 壱 ⧶ 参六 ⇰ cast
+  purify ⁅✨Twin✨Unentangled✨Omens✨᛫ Augurglass☿✨unfold✨the✨second✨casting✨᛫ Augurglass☿✨unfold✨the✨carried✨omen✨᛫ ✨gather✨a✨counted✨chorus✨᛫ ✨Weight✨of✨Each✨Face✨᛫ ✨split✨the✨twin✨portent✨⁆
+  channel ⟪✨Unbounded✨Omenweight✨☿✨unveiled✨weights✨agree✨ ⟪cast boundedness⟫ ⟪cast boundedness⟫⟫☿onward
   numerology
 
 /- Singleton events expose the same mass as the probability mass function.
 Multiplication of 1/6 by 1/6 is justified by our independent joint construction. -/
-spell ✨Both✨Omens✨Show✨the✨Last✨Face✨ ⟡
-    ✨Twin✨Unentangled✨Omens✨☿✨weigh✨the✨omens✨ ⟪⧼⟪五᛫ 五⟫⧽ ⟡ Host ⟪Fetter 六 ⨯ Fetter 六⟫⟫ ≣ 一 ⧶ 三六 ⇰ cast
-  transmute ⟮Augurglass☿✨weigh✨one✨omen✨ ▢ ▢ ⟪✨one✨face✨may✨be✨weighed✨ ▢⟫⟯
+spell ✨Twin✨Omens✨Show✨Six✨ ⟡
+    ✨Twin✨Unentangled✨Omens✨☿✨weigh✨the✨omens✨ ⟪⧼⟪五᛫ 五⟫⧽ ⟡ Host ⟪Fetter 六 ※ Fetter 六⟫⟫ ≣ 壱 ⧶ 参六 ⇰ cast
+  transmute ⁅Augurglass☿✨weigh✨one✨omen✨ ▢ ▢ ⟪✨each✨face✨weighs✨ ▢⟫⁆
   missile ✨Weight✨of✨the✨Twin✨Faces✨ 五 五
 
 seal Arcana☿Divination☿Augury
@@ -2635,7 +2635,7 @@ sanctum Arcana☿Divination☿Scrying
 
 unveil attuned ✨Chorus✨Rites✨
 
-familiar ⧼ᛁ ⟡ Essence⊛⧽ ⟮Counted ᛁ⟯ ⟮Inhabited ᛁ⟯
+familiar ⧼ᛁ ⟡ Essence⊛⧽ ⁅Counted ᛁ⁆ ⁅Inhabited ᛁ⁆
 
 /- An index denotes an observation, so equal observed values are still counted twice.
 The nonempty hypothesis rules out the empty dataset convention of Finset.expect. -/
@@ -2644,27 +2644,27 @@ ineffable ritual ✨Center✨of✨the✨Mirror✨ ⟪jade✨cube ⟡ ᛁ ↝ Flu
 /- This descriptive variance divides by the number of observations, not by n - 1.
 It is the variance of the empirical distribution that weights every index equally. -/
 ineffable ritual ✨Spread✨in✨the✨Mirror✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡ Fluxes ⇰
-  ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫ ⌃ 二⟫
+  ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫ ⌃ 弐⟫
 
-spell ✨Move✨Every✨Reading✨Move✨the✨Center✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+spell ✨Moved✨Readings✨Move✨the✨Center✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
     ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧾ yew⟫ ≣ ✨Center✨of✨the✨Mirror✨ jade✨cube ⧾ yew ⇰ cast
-  purify ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨balance✨joined✨readings✨⟯
+  purify ⁅✨Center✨of✨the✨Mirror✨᛫ Band☿✨balance✨joined✨readings✨⁆
 
-spell ✨Centered✨Readings✨Balance✨to✨Stillness✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡
+spell ✨Centered✨Readings✨Balance✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡
     ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫ ≣ 〇 ⇰ cast
-  purify ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨balance✨sundered✨readings✨⟯
+  purify ⁅✨Center✨of✨the✨Mirror✨᛫ Band☿✨balance✨sundered✨readings✨⁆
 
-dismissal ⟮Inhabited ᛁ⟯ within
+dismissal ⁅Inhabited ᛁ⁆ within
 spell ✨The✨Mirror's✨Spread✨Cannot✨Sink✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡ 〇 ⋜ ✨Spread✨in✨the✨Mirror✨ jade✨cube ⇰ cast
   missile Band☿✨balance✨cannot✨sink✨ ⟪conjure opal✨dust ▢ ⇉ ✨a✨doubled✨ascent✨cannot✨sink✨ ⟪jade✨cube opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube⟫⟫
 
 /- Expanding the square turns spread into mean-square minus square-mean.
 Linearity of a finite average lets each algebraic term move outside the sum. -/
 spell ✨Unfold✨the✨Mirror's✨Spread✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟡
-    ✨Spread✨in✨the✨Mirror✨ jade✨cube ≣ ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⌃ 二⟫ ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube ⌃ 二 ⇰ cast
+    ✨Spread✨in✨the✨Mirror✨ jade✨cube ≣ ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⌃ 弐⟫ ⧿ ✨Center✨of✨the✨Mirror✨ jade✨cube ⌃ 弐 ⇰ cast
   unseal ✨Spread✨in✨the✨Mirror✨ ✨Center✨of✨the✨Mirror✨
-  polish ⟮✨unfold✨the✨sundered✨double✨ascent✨᛫ Band☿✨balance✨joined✨readings✨᛫ Band☿✨balance✨sundered✨readings✨᛫
-    ↜ Band☿✨scale✨after✨balancing✨᛫ ↜ Band☿✨scale✨before✨balancing✨⟯
+  polish ⁅✨unfold✨sundered✨ascent✨᛫ Band☿✨balance✨joined✨readings✨᛫ Band☿✨balance✨sundered✨readings✨᛫
+    ↜ Band☿✨scale✨after✨balancing✨᛫ ↜ Band☿✨scale✨before✨balancing✨⁆
   purify
   circlet
 
@@ -2672,47 +2672,47 @@ spell ✨Unfold✨the✨Mirror's✨Spread✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes�
 spell ✨Move✨the✨Mirror✨Keep✨the✨Spread✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
     ✨Spread✨in✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ jade✨cube opal✨dust ⧾ yew⟫ ≣ ✨Spread✨in✨the✨Mirror✨ jade✨cube ⇰ cast
   unseal ✨Spread✨in✨the✨Mirror✨
-  transmute ⟮✨Move✨Every✨Reading✨Move✨the✨Center✨⟯
-  attune 一
+  transmute ⁅✨Moved✨Readings✨Move✨the✨Center✨⁆
+  attune 壱
   oath opal✨dust
-  attune 一
+  attune 壱
   circlet
 
 /- The average squared distance to any proposed center splits into spread
 and a nonnegative penalty for moving away from the sample mean. -/
-spell ✨The✨Mirror's✨Center✨and✨Its✨Wandering✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
-    ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ yew⟫ ⌃ 二⟫ ≣
-      ✨Spread✨in✨the✨Mirror✨ jade✨cube ⧾ ⟪✨Center✨of✨the✨Mirror✨ jade✨cube ⧿ yew⟫ ⌃ 二 ⇰ cast
-  transmute ⟮✨Unfold✨the✨Mirror's✨Spread✨⟯
+spell ✨Center✨and✨Wandering✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
+    ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ yew⟫ ⌃ 弐⟫ ≣
+      ✨Spread✨in✨the✨Mirror✨ jade✨cube ⧾ ⟪✨Center✨of✨the✨Mirror✨ jade✨cube ⧿ yew⟫ ⌃ 弐 ⇰ cast
+  transmute ⁅✨Unfold✨the✨Mirror's✨Spread✨⁆
   unseal ✨Center✨of✨the✨Mirror✨
-  polish ⟮✨unfold✨the✨sundered✨double✨ascent✨᛫ Band☿✨balance✨joined✨readings✨᛫ Band☿✨balance✨sundered✨readings✨᛫
-    ↜ Band☿✨scale✨after✨balancing✨᛫ ↜ Band☿✨scale✨before✨balancing✨⟯
+  polish ⁅✨unfold✨sundered✨ascent✨᛫ Band☿✨balance✨joined✨readings✨᛫ Band☿✨balance✨sundered✨readings✨᛫
+    ↜ Band☿✨scale✨after✨balancing✨᛫ ↜ Band☿✨scale✨before✨balancing✨⁆
   purify
   circlet
 
 spell ✨The✨Center✨Is✨the✨Stillest✨Place✨ ⟪jade✨cube ⟡ ᛁ ↝ Fluxes⟫ ⟪yew ⟡ Fluxes⟫ ⟡
-    ✨Spread✨in✨the✨Mirror✨ jade✨cube ⋜ ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ yew⟫ ⌃ 二⟫ ⇰ cast
-  transmute ⟮✨The✨Mirror's✨Center✨and✨Its✨Wandering✨⟯
-  missile ✨adding✨a✨rising✨weight✨cannot✨lower✨ ⟪✨a✨doubled✨ascent✨cannot✨sink✨ ▢⟫
+    ✨Spread✨in✨the✨Mirror✨ jade✨cube ⋜ ✨Center✨of✨the✨Mirror✨ ⟪conjure opal✨dust ⇉ ⟪jade✨cube opal✨dust ⧿ yew⟫ ⌃ 弐⟫ ⇰ cast
+  transmute ⁅✨Center✨and✨Wandering✨⁆
+  missile ✨rising✨weights✨never✨lower✨ ⟪✨a✨doubled✨ascent✨cannot✨sink✨ ▢⟫
 
 /- The four observations have mean 3 and squared deviations 4, 1, 0, 9.
 The calculation is exact over the reals, not rounded floating-point arithmetic. -/
-ritual ✨Four✨Mirror✨Readings✨ ⟡ Fetter 四 ↝ Fluxes ⇰ !⟮一᛫ 二᛫ 三᛫ 六⟯
+ritual ✨Four✨Mirror✨Readings✨ ⟡ Fetter 四 ↝ Fluxes ⇰ !⁅壱᛫ 弐᛫ 参᛫ 六⁆
 
-spell ✨Center✨the✨Four✨Readings✨ ⟡ ✨Center✨of✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨ ≣ 三 ⇰ cast
-  numerology ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨gather✨then✨share✨the✨readings✨᛫ ✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+spell ✨Center✨the✨Four✨Readings✨ ⟡ ✨Center✨of✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨ ≣ 参 ⇰ cast
+  numerology ⁅✨Center✨of✨the✨Mirror✨᛫ Band☿✨gather✨then✨share✨the✨readings✨᛫ ✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⁆
 
-spell ✨Spread✨of✨the✨Four✨Readings✨ ⟡ ✨Spread✨in✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨ ≣ 七 ⧶ 二 ⇰ cast
-  transmute ⟮✨Spread✨in✨the✨Mirror✨᛫ ✨Center✨the✨Four✨Readings✨⟯
-  numerology ⟮✨Center✨of✨the✨Mirror✨᛫ Band☿✨gather✨then✨share✨the✨readings✨᛫ ✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+spell ✨Spread✨of✨the✨Four✨Readings✨ ⟡ ✨Spread✨in✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨ ≣ 七 ⧶ 弐 ⇰ cast
+  transmute ⁅✨Spread✨in✨the✨Mirror✨᛫ ✨Center✨the✨Four✨Readings✨⁆
+  numerology ⁅✨Center✨of✨the✨Mirror✨᛫ Band☿✨gather✨then✨share✨the✨readings✨᛫ ✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⁆
 
 /- Dividing the same sum of squared deviations by n - 1 gives the usual
 corrected sample variance. Calling it unbiased needs an i.i.d. sampling model
 and finite second moments; this calculation does not assume or prove that model. -/
-spell ✨Share✨the✨Spread✨One✨Way✨Fewer✨ ⟡
-    ⟪∑ opal✨dust᛫ ⟪✨Four✨Mirror✨Readings✨ opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨⟫ ⌃ 二⟫ ⧶ ⟪四 ⧿ 一⟫ ≣ ⟪一四 ⧶ 三 ⟡ Fluxes⟫ ⇰ cast
-  transmute ⟮✨Center✨the✨Four✨Readings✨⟯
-  numerology ⟮✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⟯
+spell ✨Spread✨over✨One✨Fewer✨ ⟡
+    ⟪∑ opal✨dust᛫ ⟪✨Four✨Mirror✨Readings✨ opal✨dust ⧿ ✨Center✨of✨the✨Mirror✨ ✨Four✨Mirror✨Readings✨⟫ ⌃ 弐⟫ ⧶ ⟪四 ⧿ 壱⟫ ≣ ⟪壱四 ⧶ 参 ⟡ Fluxes⟫ ⇰ cast
+  transmute ⁅✨Center✨the✨Four✨Readings✨⁆
+  numerology ⁅✨Four✨Mirror✨Readings✨᛫ Fetter☿✨gather✨one✨face✨at✨a✨time✨⁆
 
 seal Arcana☿Divination☿Scrying
 ```
@@ -2759,62 +2759,62 @@ sanctum Arcana☿Divination☿Arithmancy
 
 /- Congruence records equal remainders after division by a modulus.
 Reducing first keeps calculations small while addition and multiplication survive. -/
-spell ✨The✨Clock✨Remembers✨the✨Rite✨ ⧼pinch✨of✨sulfur ash elm ⟡ Tallies⧽ ⟪ward ⟡ ash ≡ elm ⟮CLOCK pinch✨of✨sulfur⟯⟫ ⟡
-    ash ⌃ 二 ⧾ 一 ≡ elm ⌃ 二 ⧾ 一 ⟮CLOCK pinch✨of✨sulfur⟯ ⇰
-  ⟪ward☿ascend 二⟫☿✨append✨the✨same✨chime✨ 一
+spell ✨The✨Clock✨Remembers✨the✨Rite✨ ⧼pinch✨of✨sulfur ash elm ⟡ Tallies⧽ ⟪ward ⟡ ash ≡ elm ⁅CLOCK pinch✨of✨sulfur⁆⟫ ⟡
+    ash ⌃ 弐 ⧾ 壱 ≡ elm ⌃ 弐 ⧾ 壱 ⁅CLOCK pinch✨of✨sulfur⁆ ⇰
+  ⟪ward☿ascend 弐⟫☿✨append✨the✨same✨chime✨ 壱
 
-spell ✨Reduce✨the✨Rite✨upon✨Five✨ ⟡ ⟪一七 ⌃ 二 ⧾ 一⟫ % 五 ≣ 〇 ⇰ cast
-  bind clockward ⟡ 一七 ≡ 二 ⟮CLOCK 五⟯ ⇰ cast divine
+spell ✨Reduce✨the✨Rite✨upon✨Five✨ ⟡ ⟪壱七 ⌃ 弐 ⧾ 壱⟫ % 五 ≣ 〇 ⇰ cast
+  bind clockward ⟡ 壱七 ≡ 弐 ⁅CLOCK 五⁆ ⇰ cast divine
   bind riteward ⇰ ✨The✨Clock✨Remembers✨the✨Rite✨ clockward
-  bind voidmark ⟡ 一七 ⌃ 二 ⧾ 一 ≡ 〇 ⟮CLOCK 五⟯ ⇰ riteward☿chain ⟪cast divine⟫
+  bind voidmark ⟡ 壱七 ⌃ 弐 ⧾ 壱 ≡ 〇 ⁅CLOCK 五⁆ ⇰ riteward☿chain ⟪cast divine⟫
   missile voidmark
 
 /- A prime dividing a product must divide a factor. Applying that fact to a square
 exposes why primality is stronger than just being a positive modulus. -/
-spell ✨Indivisible✨Finds✨the✨Root✨ ⧼ruby✨shard ash ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪ward ⟡ ruby✨shard ∣ ash ⌃ 二⟫ ⟡ ruby✨shard ∣ ash ⇰ cast
-  transmute ⟮✨Unfold✨the✨Double✨Ascent✨⟯ upon ward
+spell ✨Indivisible✨Finds✨the✨Root✨ ⧼ruby✨shard ash ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪ward ⟡ ruby✨shard ∣ ash ⌃ 弐⟫ ⟡ ruby✨shard ∣ ash ⇰ cast
+  transmute ⁅✨Unfold✨the✨Double✨Ascent✨⁆ upon ward
   rend primalward☿✨Indivisible✨Catches✨a✨Factor✨☿onward ward whence sunward ⫽ moonward
   ❖ missile sunward
   ❖ missile moonward
 
 spell ✨A✨Divisible✨Clock✨Breaks✨the✨Rule✨ ⟡
-    四 ∣ 二 ⊛ 二 ⩓ ⫬四 ∣ 二 ⇰ cast divine
+    四 ∣ 弐 ⊛ 弐 ⩓ ⫬四 ∣ 弐 ⇰ cast divine
 
 /- Fermat's little theorem connects arithmetic to the finite group of nonzero
 residues modulo a prime. Mathlib proves this general theorem; we apply it below. -/
 spell ✨Fermat's✨Returning✨Embers✨ ⧼ruby✨shard ash ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪unsharedward ⟡ ash☿✨No✨Shared✨Measure✨ ruby✨shard⟫ ⟡
-    ash ⌃ ⟪ruby✨shard ⧿ 一⟫ ≡ 一 ⟮CLOCK ruby✨shard⟯ ⇰
+    ash ⌃ ⟪ruby✨shard ⧿ 壱⟫ ≡ 壱 ⁅CLOCK ruby✨shard⁆ ⇰
   Tally☿✨Same✨Clockmark✨☿✨Fermat's✨Little✨Return✨ primalward unsharedward
 
 /- Since 100 = 6 * 16 + 4, Fermat reduces the exponent before the remainder is read.
 The proof never has to expand the huge integer 2^100. -/
-spell ✨A✨Hundred✨Ascents✨upon✨Seven✨ ⟡ 二 ⌃ 一〇〇 % 七 ≣ 二 ⇰ cast
-  bind fermatward ⟡ 二 ⌃ 六 ≡ 一 ⟮CLOCK 七⟯ ⇰
+spell ✨A✨Hundred✨Ascents✨upon✨Seven✨ ⟡ 弐 ⌃ 壱〇〇 % 七 ≣ 弐 ⇰ cast
+  bind fermatward ⟡ 弐 ⌃ 六 ≡ 壱 ⁅CLOCK 七⁆ ⇰
     ✨Fermat's✨Returning✨Embers✨ ⟪cast divine⟫ ⟪cast divine⟫
-  bind blockward ⟡ ⟪二 ⌃ 六⟫ ⌃ 一六 ≡ 一 ⟮CLOCK 七⟯ ⇰ cast
-    clarify through fermatward☿ascend 一六
-  bind clockward ⟡ 二 ⌃ 一〇〇 ≡ 二 ⌃ 四 ⟮CLOCK 七⟯ ⇰ cast
+  bind blockward ⟡ ⟪弐 ⌃ 六⟫ ⌃ 壱六 ≡ 壱 ⁅CLOCK 七⁆ ⇰ cast
+    clarify through fermatward☿ascend 壱六
+  bind clockward ⟡ 弐 ⌃ 壱〇〇 ≡ 弐 ⌃ 四 ⁅CLOCK 七⁆ ⇰ cast
     litany
-      二 ⌃ 一〇〇 ≣ ⟪二 ⌃ 六⟫ ⌃ 一六 ⊛ 二 ⌃ 四 ⇰ cast transmute ⟮↜ ✨Nested✨Ascent✨᛫ ↜ ✨Join✨the✨Ascents✨⟯
-      ▢ ≡ 一 ⊛ 二 ⌃ 四 ⟮CLOCK 七⟯ ⇰ blockward☿✨bind✨the✨same✨right✨charm✨ ▢
-      ▢ ≣ 二 ⌃ 四 ⇰ ✨Silence✨Before✨the✨Binding✨ ▢
-  bind twinmark ⟡ 二 ⌃ 一〇〇 ≡ 二 ⟮CLOCK 七⟯ ⇰ clockward☿chain ⟪cast divine⟫
+      弐 ⌃ 壱〇〇 ≣ ⟪弐 ⌃ 六⟫ ⌃ 壱六 ⊛ 弐 ⌃ 四 ⇰ cast transmute ⁅↜ ✨Nested✨Ascent✨᛫ ↜ ✨Join✨the✨Ascents✨⁆
+      ▢ ≡ 壱 ⊛ 弐 ⌃ 四 ⁅CLOCK 七⁆ ⇰ blockward☿✨bind✨the✨same✨right✨charm✨ ▢
+      ▢ ≣ 弐 ⌃ 四 ⇰ ✨Silence✨Before✨the✨Binding✨ ▢
+  bind twinmark ⟡ 弐 ⌃ 壱〇〇 ≡ 弐 ⁅CLOCK 七⁆ ⇰ clockward☿chain ⟪cast divine⟫
   missile twinmark
 
 /- Modular arithmetic also has a carrier: ZMod p is a field when p is prime.
 Inside that field the same return law is an ordinary equality. -/
-spell ✨The✨Veyrion's✨Ember✨Returns✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟮Witnessed ruby✨shard☿Indivisible⟯ ⟪ash ⟡ Clockwork ruby✨shard⟫ ⟪ashward ⟡ ash ≢ 〇⟫ ⟡
-    ash ⌃ ⟪ruby✨shard ⧿ 一⟫ ≣ 一 ⇰
+spell ✨The✨Veyrion's✨Ember✨Returns✨ ⧼ruby✨shard ⟡ Tallies⧽ ⁅Witnessed ruby✨shard☿Indivisible⁆ ⟪ash ⟡ Clockwork ruby✨shard⟫ ⟪ashward ⟡ ash ≢ 〇⟫ ⟡
+    ash ⌃ ⟪ruby✨shard ⧿ 壱⟫ ≣ 壱 ⇰
   Clockwork☿✨Fermat's✨Little✨Return✨ ashward
 
-spell ✨Undo✨Three✨upon✨the✨Sevenfold✨Clock✨ ⟡ ⟪三 ⟡ Clockwork 七⟫† ≣ 五 ⇰ cast
+spell ✨Three's✨Undoer✨upon✨Seven✨ ⟡ ⟪参 ⟡ Clockwork 七⟫† ≣ 五 ⇰ cast
   dub ⟡ Witnessed ⟪Tally☿Indivisible 七⟫ ⇰ ⦉cast divine⦊
   channel ✨a✨left✨undoer✨is✨the✨undoer✨
   divine
 
 /- Removing Fermat's coprimality hypothesis is false: a multiple of the prime
 has zero residue, and positive powers keep that zero. -/
-spell ✨Shared✨Measures✨Break✨the✨Return✨ ⟡ ⫬⟪七 ⌃ 六 ≡ 一 ⟮CLOCK 七⟯⟫ ⇰ cast divine
+spell ✨Shared✨Measures✨Break✨the✨Return✨ ⟡ ⫬⟪七 ⌃ 六 ≡ 壱 ⁅CLOCK 七⁆⟫ ⇰ cast divine
 
 seal Arcana☿Divination☿Arithmancy
 ```
@@ -2868,32 +2868,32 @@ The real number a is the initial amplitude; r is the retained proportion. -/
 ritual ✨Fading✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ Fluxes ⇰ ash ⊛ amber✨disc ⌃ pinch✨of✨sulfur
 
 spell ✨Light✨the✨First✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟡ ✨Fading✨Ember✨ ash amber✨disc 〇 ≣ ash ⇰ cast
-  purify ⟮✨Fading✨Ember✨⟯
+  purify ⁅✨Fading✨Ember✨⁆
 
 spell ✨Diminish✨the✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
-    ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 一⟫ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ cast
-  litany ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 一⟫ ≣ ash ⊛ ⟪amber✨disc ⌃ pinch✨of✨sulfur ⊛ amber✨disc⟫ ⇰ cast transmute ⟮✨Fading✨Ember✨᛫ Flare⟯
+    ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 壱⟫ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ cast
+  litany ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 壱⟫ ≣ ash ⊛ ⟪amber✨disc ⌃ pinch✨of✨sulfur ⊛ amber✨disc⟫ ⇰ cast transmute ⁅✨Fading✨Ember✨᛫ Flare⁆
     ▢ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ ⟪✨Regather✨the✨Binding✨ ash ⟪amber✨disc ⌃ pinch✨of✨sulfur⟫ amber✨disc⟫☿reflect
 
 /- atTop means arbitrarily late indices; nhds 0 means arbitrarily small
 neighborhoods of zero. Multiplication by a fixed amplitude preserves this limit. -/
-spell ✨Embers✨Approach✨Silence✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽ ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 一⟫ ⟡
+spell ✨Embers✨Approach✨Silence✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽ ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 壱⟫ ⟡
     Pilgrimage ⟪✨Fading✨Ember✨ ash amber✨disc⟫ everafter ⟪aura 〇⟫ ⇰ cast
   bind emberward ⟡ Pilgrimage ⟪conjure pinch✨of✨sulfur ⟡ Tallies ⇉ amber✨disc ⌃ pinch✨of✨sulfur⟫ everafter ⟪aura 〇⟫ ⇰
     ✨Fading✨Powers✨Reach✨Silence✨ unshadowed lesserward
   shapeshift Pilgrimage ⟪conjure pinch✨of✨sulfur ⟡ Tallies ⇉ ash ⊛ amber✨disc ⌃ pinch✨of✨sulfur⟫ everafter ⟪aura 〇⟫
-  clarify solely ⟮✨Silence✨Consumes✨the✨Binding✨⟯ through emberward☿✨bind✨the✨amplitude✨ ash
+  clarify solely ⁅✨Silence✨Consumes✨the✨Binding✨⁆ through emberward☿✨bind✨the✨amplitude✨ ash
 
 /- This is the same limit unpacked into the epsilon-N language of analysis.
 Every positive tolerance eventually contains all remaining terms. -/
 spell ✨Every✨Veil✨Encloses✨the✨Ember✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽
-    ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 一⟫ ⟪grain✨of✨salt ⟡ Fluxes⟫ ⟪grainward ⟡ 〇 ⋖ grain✨of✨salt⟫ ⟡
+    ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 壱⟫ ⟪grain✨of✨salt ⟡ Fluxes⟫ ⟪grainward ⟡ 〇 ⋖ grain✨of✨salt⟫ ⟡
     ⟒ ᚾ ⟡ Tallies᛫ ⟁ pinch✨of✨sulfur ⋝ ᚾ᛫ ⫽✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur⫽ ⋖ grain✨of✨salt ⇰ cast
   bind fadingward ⇰ ✨Embers✨Approach✨Silence✨ ash unshadowed lesserward
-  clarify ⟮Flux☿✨Measure✨the✨Gap✨⟯ through ⟪Fathom☿✨Unveil✨the✨Distant✨Promise✨☿onward fadingward⟫ grain✨of✨salt grainward
+  clarify ⁅Flux☿✨Measure✨the✨Gap✨⁆ through ⟪Fathom☿✨Unveil✨the✨Distant✨Promise✨☿onward fadingward⟫ grain✨of✨salt grainward
 
 spell ✨Halved✨Embers✨Approach✨Silence✨ ⟡
-    Pilgrimage ⟪✨Fading✨Ember✨ 一 ⟪一 ⧶ 二⟫⟫ everafter ⟪aura 〇⟫ ⇰ cast
+    Pilgrimage ⟪✨Fading✨Ember✨ 壱 ⟪壱 ⧶ 弐⟫⟫ everafter ⟪aura 〇⟫ ⇰ cast
   channel ✨Embers✨Approach✨Silence✨
   ❖ numerology
   ❖ numerology
@@ -2905,10 +2905,10 @@ spell ✨An✨Ember✨Still✨Glows✨ ⧼ash amber✨disc ⟡ Fluxes⧽ ⟪ashw
 
 /- Derivatives record local change as a linear approximation. The power rule
 proves the derivative of squaring at every real point, including zero. -/
-spell ✨Hear✨the✨Doubled✨Whisper✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Bears✨the✨Whisper✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 二⟫ ⟪二 ⊛ jade✨cube⟫ jade✨cube ⇰ cast
-  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ jade✨cube⟫☿✨whisper✨through✨powers✨ 二
+spell ✨Hear✨the✨Doubled✨Whisper✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Bears✨the✨Whisper✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 弐⟫ ⟪弐 ⊛ jade✨cube⟫ jade✨cube ⇰ cast
+  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ jade✨cube⟫☿✨whisper✨through✨powers✨ 弐
 
-spell ✨The✨Squared✨Ember✨is✨Unbroken✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Unbroken✨Here✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 二⟫ jade✨cube ⇰
+spell ✨The✨Squared✨Ember✨is✨Unbroken✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Unbroken✨Here✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 弐⟫ jade✨cube ⇰
   ⟪✨Hear✨the✨Doubled✨Whisper✨ jade✨cube⟫☿✨unbroken✨here✨
 
 seal Arcana☿Necromancy
@@ -2954,12 +2954,12 @@ beckon ✨Grand✨Archive✨☿Gestures☿Counting
 
 sanctum Arcana☿Necromancy☿✨Bound✨Echoes✨
 
-familiar ⧼ᛖ ᚠ ⟡ Essence⊛⧽ ⟮✨Measured✨Harmonic✨Chanted✨Veyr✨ ᛖ⟯ ⟮✨Measured✨Bound✨Veyr✨ Fluxes ᛖ⟯
-  ⟮✨Measured✨Harmonic✨Chanted✨Veyr✨ ᚠ⟯ ⟮✨Measured✨Bound✨Veyr✨ Fluxes ᚠ⟯
+familiar ⧼ᛖ ᚠ ⟡ Essence⊛⧽ ⁅✨Measured✨Harmonic✨Chanted✨Veyr✨ ᛖ⁆ ⁅✨Measured✨Bound✨Veyr✨ Fluxes ᛖ⁆
+  ⁅✨Measured✨Harmonic✨Chanted✨Veyr✨ ᚠ⁆ ⁅✨Measured✨Bound✨Veyr✨ Fluxes ᚠ⁆
 
 /- Enchantment contributes linearity; Necromancy contributes a norm and
 continuity. A continuous linear map carries both pieces of structure. -/
-ritual ✨Amplifying✨Conduit✨ ⟪ash ⟡ Fluxes⟫ ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᛖ ⇰ ash • ✨Steady✨Bound✨Pact✨☿selfsame Fluxes ᛖ
+ritual ✨Amplifying✨Conduit✨ ⟪ash ⟡ Fluxes⟫ ⟡ ᛖ ↝Steady⁅Fluxes⁆ ᛖ ⇰ ash • ✨Steady✨Bound✨Pact✨☿selfsame Fluxes ᛖ
 
 spell ✨Send✨an✨Ember✨through✨the✨Conduit✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨cube ⟡ ᛖ⟫ ⟡ ✨Amplifying✨Conduit✨ ash jade✨cube ≣ ash • jade✨cube ⇰ mirror
 
@@ -2969,7 +2969,7 @@ spell ✨The✨Conduit✨Preserves✨Chanting✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨
 
 /- The operator norm is a uniform amplification bound. Linearity turns an
 output difference into the image of an input difference before we apply it. -/
-spell ✨Bind✨the✨Straying✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᚠ⟫ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
+spell ✨Bind✨the✨Straying✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⁅Fluxes⁆ ᚠ⟫ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
     ‖copper✨wire jade✨cube ⧿ copper✨wire silver✨bell‖ ⋜ ‖copper✨wire‖ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast
   litany ‖copper✨wire jade✨cube ⧿ copper✨wire silver✨bell‖ ≣ ‖copper✨wire ⟪jade✨cube ⧿ silver✨bell⟫‖ ⇰ sympathy strength ⟪copper✨wire☿✨Carry✨the✨Difference✨ jade✨cube silver✨bell⟫☿reflect
     ▢ ⋜ ‖copper✨wire‖ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ copper✨wire☿✨The✨Conduit✨Bounds✨its✨Echo✨ ⟪jade✨cube ⧿ silver✨bell⟫
@@ -2980,22 +2980,22 @@ spell ✨Weigh✨the✨Amplified✨Ember✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨cube 
 
 /- On a nontrivial space the identity has norm one, so the bound for scalar
 scaling is sharp. The nontriviality hypothesis rules out the zero space. -/
-spell ✨The✨Conduits✨True✨Strength✨ ⟮Plural ᛖ⟯ ⟪ash ⟡ Fluxes⟫ ⟡
-    ‖⟪✨Amplifying✨Conduit✨ ash ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᛖ⟫‖ ≣ ⫽ash⫽ ⇰ cast
-  purify ⟮✨Amplifying✨Conduit✨᛫ ✨Strength✨of✨a✨Binding✨᛫ ✨Steady✨Bound✨Pact✨☿✨The✨Mirrors✨Strength✨is✨One✨⟯
+spell ✨The✨Conduits✨True✨Strength✨ ⁅Plural ᛖ⁆ ⟪ash ⟡ Fluxes⟫ ⟡
+    ‖⟪✨Amplifying✨Conduit✨ ash ⟡ ᛖ ↝Steady⁅Fluxes⁆ ᛖ⟫‖ ≣ ⫽ash⫽ ⇰ cast
+  purify ⁅✨Amplifying✨Conduit✨᛫ ✨Strength✨of✨a✨Binding✨᛫ ✨Steady✨Bound✨Pact✨☿✨The✨Mirrors✨Strength✨is✨One✨⁆
 
 /- Compose two bounded maps and their amplification bounds multiply.
 This is the analytic counterpart of composing algebraic homomorphisms. -/
-spell ✨Chained✨Conduits✨Bound✨the✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᚠ⟫ ⟪silk✨cord ⟡ ᚠ ↝Steady⟮Fluxes⟯ ᛖ⟫ ⟡
+spell ✨Chained✨Conduits✨Bound✨the✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⁅Fluxes⁆ ᚠ⟫ ⟪silk✨cord ⟡ ᚠ ↝Steady⁅Fluxes⁆ ᛖ⟫ ⟡
     ‖silk✨cord☿threading copper✨wire‖ ⋜ ‖silk✨cord‖ ⊛ ‖copper✨wire‖ ⇰ silk✨cord☿✨Strength✨of✨Chained✨Conduits✨ copper✨wire
 
-spell ✨The✨Halved✨Echo✨Strays✨Half✨as✨Far✨ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
-    ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ silver✨bell‖ ≣
-      ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast
-  litany ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ silver✨bell‖ ≣
-      ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⟪jade✨cube ⧿ silver✨bell⟫‖ ⇰
-        sympathy strength ⟪⟪✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫⟫☿✨Carry✨the✨Difference✨ jade✨cube silver✨bell⟫☿reflect
-    ▢ ≣ ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast transmute ⟮✨Weigh✨the✨Amplified✨Ember✨⟯⁂ numerology
+spell ✨Halved✨Echoes✨Stray✨Half✨ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
+    ‖✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ silver✨bell‖ ≣
+      ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast
+  litany ‖✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ silver✨bell‖ ≣
+      ‖✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ ⟪jade✨cube ⧿ silver✨bell⟫‖ ⇰
+        sympathy strength ⟪⟪✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫⟫☿✨Carry✨the✨Difference✨ jade✨cube silver✨bell⟫☿reflect
+    ▢ ≣ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast transmute ⁅✨Weigh✨the✨Amplified✨Ember✨⁆⁂ numerology
 
 seal Arcana☿Necromancy☿✨Bound✨Echoes✨
 ```

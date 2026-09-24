@@ -28,7 +28,7 @@ export function proofFoldRange(state: EditorState, lineStart: number): { from: n
   if (!declaration.test(code.syntax.slice(start.from, start.to))) return null;
   let from = -1, to = start.to;
   const closers: Record<string, string> = { '(': ')', '[': ']', '{': '}', '⟨': '⟩',
-    '⟪': '⟫', '⟮': '⟯', '⧼': '⧽', '⦉': '⦊', '⦃': '⦄' };
+    '⟪': '⟫', '⁅': '⁆', '⧼': '⧽', '⦉': '⦊', '⦃': '⦄' };
   const stack: string[] = [];
   for (let number = start.number; number <= state.doc.lines; number++) {
     const line = state.doc.line(number), text = code.syntax.slice(line.from, line.to);

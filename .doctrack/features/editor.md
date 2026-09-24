@@ -40,3 +40,6 @@ Tutorial/view release verification: original and decoded Lean builds plus axiom 
 
 ## School navigation
 The six-school expansion uses the verified `schools` catalog registry to render native disclosure sections. A folio’s `subschool` ID selects its navigation target, and prerequisite navigation opens the destination school. Mathematics mode uses subject names; Magic keeps magical school and subschool titles. The Arcana brand supplies the page-level h1. See [[schools]] for curriculum and registry validation.
+
+## Navigation and gutter
+Choosing a folio pushes a `#id` history entry; a `hashchange` listener selects the folio when the fragment changes, so edited links and back/forward work. The line-number gutter has no top padding of its own: CodeMirror already aligns gutter elements with the content's padding, and extra padding shifted every number down one line.

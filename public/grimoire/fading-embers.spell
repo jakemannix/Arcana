@@ -12,32 +12,32 @@ The real number a is the initial amplitude; r is the retained proportion. -/
 ritual ✨Fading✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡ Fluxes ⇰ ash ⊛ amber✨disc ⌃ pinch✨of✨sulfur
 
 spell ✨Light✨the✨First✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟡ ✨Fading✨Ember✨ ash amber✨disc 〇 ≣ ash ⇰ cast
-  purify ⟮✨Fading✨Ember✨⟯
+  purify ⁅✨Fading✨Ember✨⁆
 
 spell ✨Diminish✨the✨Ember✨ ⟪ash amber✨disc ⟡ Fluxes⟫ ⟪pinch✨of✨sulfur ⟡ Tallies⟫ ⟡
-    ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 一⟫ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ cast
-  litany ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 一⟫ ≣ ash ⊛ ⟪amber✨disc ⌃ pinch✨of✨sulfur ⊛ amber✨disc⟫ ⇰ cast transmute ⟮✨Fading✨Ember✨᛫ Flare⟯
+    ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 壱⟫ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ cast
+  litany ✨Fading✨Ember✨ ash amber✨disc ⟪pinch✨of✨sulfur ⧾ 壱⟫ ≣ ash ⊛ ⟪amber✨disc ⌃ pinch✨of✨sulfur ⊛ amber✨disc⟫ ⇰ cast transmute ⁅✨Fading✨Ember✨᛫ Flare⁆
     ▢ ≣ ✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur ⊛ amber✨disc ⇰ ⟪✨Regather✨the✨Binding✨ ash ⟪amber✨disc ⌃ pinch✨of✨sulfur⟫ amber✨disc⟫☿reflect
 
 /- atTop means arbitrarily late indices; nhds 0 means arbitrarily small
 neighborhoods of zero. Multiplication by a fixed amplitude preserves this limit. -/
-spell ✨Embers✨Approach✨Silence✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽ ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 一⟫ ⟡
+spell ✨Embers✨Approach✨Silence✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽ ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 壱⟫ ⟡
     Pilgrimage ⟪✨Fading✨Ember✨ ash amber✨disc⟫ everafter ⟪aura 〇⟫ ⇰ cast
   bind emberward ⟡ Pilgrimage ⟪conjure pinch✨of✨sulfur ⟡ Tallies ⇉ amber✨disc ⌃ pinch✨of✨sulfur⟫ everafter ⟪aura 〇⟫ ⇰
     ✨Fading✨Powers✨Reach✨Silence✨ unshadowed lesserward
   shapeshift Pilgrimage ⟪conjure pinch✨of✨sulfur ⟡ Tallies ⇉ ash ⊛ amber✨disc ⌃ pinch✨of✨sulfur⟫ everafter ⟪aura 〇⟫
-  clarify solely ⟮✨Silence✨Consumes✨the✨Binding✨⟯ through emberward☿✨bind✨the✨amplitude✨ ash
+  clarify solely ⁅✨Silence✨Consumes✨the✨Binding✨⁆ through emberward☿✨bind✨the✨amplitude✨ ash
 
 /- This is the same limit unpacked into the epsilon-N language of analysis.
 Every positive tolerance eventually contains all remaining terms. -/
 spell ✨Every✨Veil✨Encloses✨the✨Ember✨ ⟪ash ⟡ Fluxes⟫ ⧼amber✨disc ⟡ Fluxes⧽
-    ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 一⟫ ⟪grain✨of✨salt ⟡ Fluxes⟫ ⟪grainward ⟡ 〇 ⋖ grain✨of✨salt⟫ ⟡
+    ⟪unshadowed ⟡ 〇 ⋜ amber✨disc⟫ ⟪lesserward ⟡ amber✨disc ⋖ 壱⟫ ⟪grain✨of✨salt ⟡ Fluxes⟫ ⟪grainward ⟡ 〇 ⋖ grain✨of✨salt⟫ ⟡
     ⟒ ᚾ ⟡ Tallies᛫ ⟁ pinch✨of✨sulfur ⋝ ᚾ᛫ ⫽✨Fading✨Ember✨ ash amber✨disc pinch✨of✨sulfur⫽ ⋖ grain✨of✨salt ⇰ cast
   bind fadingward ⇰ ✨Embers✨Approach✨Silence✨ ash unshadowed lesserward
-  clarify ⟮Flux☿✨Measure✨the✨Gap✨⟯ through ⟪Fathom☿✨Unveil✨the✨Distant✨Promise✨☿onward fadingward⟫ grain✨of✨salt grainward
+  clarify ⁅Flux☿✨Measure✨the✨Gap✨⁆ through ⟪Fathom☿✨Unveil✨the✨Distant✨Promise✨☿onward fadingward⟫ grain✨of✨salt grainward
 
 spell ✨Halved✨Embers✨Approach✨Silence✨ ⟡
-    Pilgrimage ⟪✨Fading✨Ember✨ 一 ⟪一 ⧶ 二⟫⟫ everafter ⟪aura 〇⟫ ⇰ cast
+    Pilgrimage ⟪✨Fading✨Ember✨ 壱 ⟪壱 ⧶ 弐⟫⟫ everafter ⟪aura 〇⟫ ⇰ cast
   channel ✨Embers✨Approach✨Silence✨
   ❖ numerology
   ❖ numerology
@@ -49,10 +49,10 @@ spell ✨An✨Ember✨Still✨Glows✨ ⧼ash amber✨disc ⟡ Fluxes⧽ ⟪ashw
 
 /- Derivatives record local change as a linear approximation. The power rule
 proves the derivative of squaring at every real point, including zero. -/
-spell ✨Hear✨the✨Doubled✨Whisper✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Bears✨the✨Whisper✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 二⟫ ⟪二 ⊛ jade✨cube⟫ jade✨cube ⇰ cast
-  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ jade✨cube⟫☿✨whisper✨through✨powers✨ 二
+spell ✨Hear✨the✨Doubled✨Whisper✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Bears✨the✨Whisper✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 弐⟫ ⟪弐 ⊛ jade✨cube⟫ jade✨cube ⇰ cast
+  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ jade✨cube⟫☿✨whisper✨through✨powers✨ 弐
 
-spell ✨The✨Squared✨Ember✨is✨Unbroken✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Unbroken✨Here✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 二⟫ jade✨cube ⇰
+spell ✨The✨Squared✨Ember✨is✨Unbroken✨ ⟪jade✨cube ⟡ Fluxes⟫ ⟡ ✨Unbroken✨Here✨ ⟪conjure silver✨bell ⟡ Fluxes ⇉ silver✨bell ⌃ 弐⟫ jade✨cube ⇰
   ⟪✨Hear✨the✨Doubled✨Whisper✨ jade✨cube⟫☿✨unbroken✨here✨
 
 seal Arcana☿Necromancy

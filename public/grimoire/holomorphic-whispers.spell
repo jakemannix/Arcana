@@ -8,20 +8,20 @@ sanctum Arcana☿Illusion
 
 /- The scalar field in HasDerivAt matters: every variable here lies in ℂ,
 so this is a complex derivative, controlling approach from every direction. -/
-ritual ✨The✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ Umbrae ⇰ amber✨rod ⌃ 二
+ritual ✨The✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ Umbrae ⇰ amber✨rod ⌃ 弐
 
 spell ✨The✨Second✨Ascent's✨Whisper✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
-    ✨Bears✨the✨Whisper✨ ✨The✨Umbra's✨Second✨Ascent✨ ⟪二 ⊛ amber✨rod⟫ amber✨rod ⇰ cast
-  shapeshift ✨Bears✨the✨Whisper✨ ⟪conjure verse ⟡ Umbrae ⇉ verse ⌃ 二⟫ ⟪二 ⊛ amber✨rod⟫ amber✨rod
-  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ amber✨rod⟫☿✨whisper✨through✨powers✨ 二
+    ✨Bears✨the✨Whisper✨ ✨The✨Umbra's✨Second✨Ascent✨ ⟪弐 ⊛ amber✨rod⟫ amber✨rod ⇰ cast
+  shapeshift ✨Bears✨the✨Whisper✨ ⟪conjure verse ⟡ Umbrae ⇉ verse ⌃ 弐⟫ ⟪弐 ⊛ amber✨rod⟫ amber✨rod
+  clarify through ⟪✨The✨Mirror✨Whispers✨Once✨ amber✨rod⟫☿✨whisper✨through✨powers✨ 弐
 
 /- A complex derivative at every point makes the function entire, hence
 holomorphic on every open subset of the complex plane. -/
-spell ✨The✨Second✨Ascent✨Whispers✨Everywhere✨ ⟡ ✨Everywhere✨Whispering✨ Umbrae ✨The✨Umbra's✨Second✨Ascent✨ ⇰ cast
+spell ✨Squares✨Whisper✨Everywhere✨ ⟡ ✨Everywhere✨Whispering✨ Umbrae ✨The✨Umbra's✨Second✨Ascent✨ ⇰ cast
   summon amber✨rod
   missile ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫☿✨whispering✨here✨
 
-spell ✨Hear✨the✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ undertone ✨The✨Umbra's✨Second✨Ascent✨ amber✨rod ≣ 二 ⊛ amber✨rod ⇰
+spell ✨Hear✨the✨Umbra's✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ undertone ✨The✨Umbra's✨Second✨Ascent✨ amber✨rod ≣ 弐 ⊛ amber✨rod ⇰
   ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫☿undertone
 
 /- The derivative of the complex exponential is a library theorem. The chain
@@ -29,7 +29,7 @@ rule combines it with the polynomial derivative proved above. -/
 ritual ✨Breathe✨upon✨the✨Second✨Ascent✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡ Umbrae ⇰ Umbra☿breath ⟪✨The✨Umbra's✨Second✨Ascent✨ amber✨rod⟫
 
 spell ✨The✨Breath's✨Layered✨Whisper✨ ⟪amber✨rod ⟡ Umbrae⟫ ⟡
-    ✨Bears✨the✨Whisper✨ ✨Breathe✨upon✨the✨Second✨Ascent✨ ⟪Umbra☿breath ⟪amber✨rod ⌃ 二⟫ ⊛ ⟪二 ⊛ amber✨rod⟫⟫ amber✨rod ⇰ cast
+    ✨Bears✨the✨Whisper✨ ✨Breathe✨upon✨the✨Second✨Ascent✨ ⟪Umbra☿breath ⟪amber✨rod ⌃ 弐⟫ ⊛ ⟪弐 ⊛ amber✨rod⟫⟫ amber✨rod ⇰ cast
   missile ⟪Umbra☿✨breath✨echoes✨itself✨ ⟪✨The✨Umbra's✨Second✨Ascent✨ amber✨rod⟫⟫☿threading amber✨rod ⟪✨The✨Second✨Ascent's✨Whisper✨ amber✨rod⟫
 
 spell ✨The✨Breath✨Whispers✨Everywhere✨ ⟡ ✨Everywhere✨Whispering✨ Umbrae ✨Breathe✨upon✨the✨Second✨Ascent✨ ⇰ cast
@@ -39,7 +39,7 @@ spell ✨The✨Breath✨Whispers✨Everywhere✨ ⟡ ✨Everywhere✨Whispering�
 /- Evaluate a derivative only after obtaining its HasDerivAt certificate.
 At the imaginary unit, z squared is negative one, so the exponential is exp(-1). -/
 spell ✨The✨Imaginary✨Ember's✨Breath✨ ⟡
-    undertone ✨Breathe✨upon✨the✨Second✨Ascent✨ Umbra☿✨Imaginary✨Ember✨ ≣ Umbra☿breath ⟪⧿一⟫ ⊛ ⟪二 ⊛ Umbra☿✨Imaginary✨Ember✨⟫ ⇰ cast
-  transmute ⟮⟪✨The✨Breath's✨Layered✨Whisper✨ Umbra☿✨Imaginary✨Ember✨⟫☿undertone᛫ Umbra☿✨The✨Ember's✨Shadow✨⟯
+    undertone ✨Breathe✨upon✨the✨Second✨Ascent✨ Umbra☿✨Imaginary✨Ember✨ ≣ Umbra☿breath ⟪⧿壱⟫ ⊛ ⟪弐 ⊛ Umbra☿✨Imaginary✨Ember✨⟫ ⇰ cast
+  transmute ⁅⟪✨The✨Breath's✨Layered✨Whisper✨ Umbra☿✨Imaginary✨Ember✨⟫☿undertone᛫ Umbra☿✨The✨Ember's✨Shadow✨⁆
 
 seal Arcana☿Illusion

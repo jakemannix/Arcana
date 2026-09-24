@@ -2,28 +2,28 @@ beckon Arcana☿Enchantment☿Pacts
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
 
 /- The kernel collects exactly the inputs sent to the identity.
 The next equivalence switches between subgroup membership and that equation. -/
 ritual ✨Circle✨of✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ ✨Inner✨Veyr✨ ᛰ ⇰ copper✨wire☿silence
 
 spell ✨Name✨the✨Silent✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
-    jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
+    jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire ↭ copper✨wire jade✨cube ≣ 壱 ⇰ Herald☿✨Silence✨Criterion✨
 
 /- Push the map through this conjugate. The middle image becomes the identity,
 and the two surrounding images cancel. This is the calculation behind normality. -/
 spell ✨Unbroken✨Silence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⧼jade✨cube ⟡ ᛰ⧽
     ⟪sigilward ⟡ jade✨cube ∈ ✨Circle✨of✨Silence✨ copper✨wire⟫ ⟪silk✨cord ⟡ ᛰ⟫ ⟡ silk✨cord ⊛ jade✨cube ⊛ silk✨cord† ∈ ✨Circle✨of✨Silence✨ copper✨wire ⇰ cast
-  bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
-  bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ 一 ⇰
+  bind muted ⟡ copper✨wire jade✨cube ≣ 壱 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
+  bind hushed ⟡ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ 壱 ⇰
     litany copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫ ≣ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ ⊛ copper✨wire silk✨cord† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube⟫ silk✨cord†
       ▢ ≣ copper✨wire silk✨cord ⊛ copper✨wire jade✨cube ⊛ copper✨wire silk✨cord† ⇰
           sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ ⟪✨Preserve✨the✨Binding✨ copper✨wire silk✨cord jade✨cube⟫
-      ▢ ≣ copper✨wire silk✨cord ⊛ 一 ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ muted
+      ▢ ≣ copper✨wire silk✨cord ⊛ 壱 ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ muted
       ▢ ≣ copper✨wire silk✨cord ⊛ copper✨wire silk✨cord† ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silk✨cord†⟫ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire silk✨cord⟫⟫
       ▢ ≣ copper✨wire silk✨cord ⊛ ⟪copper✨wire silk✨cord⟫† ⇰ sympathy ⟪conjure pearl✨dust ⇉ copper✨wire silk✨cord ⊛ pearl✨dust⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire silk✨cord⟫
-      ▢ ≣ 一 ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
+      ▢ ≣ 壱 ⇰ ✨Binding✨Undone✨ ⟪copper✨wire silk✨cord⟫
   missile ⟪✨Name✨the✨Silent✨ copper✨wire ⟪silk✨cord ⊛ jade✨cube ⊛ silk✨cord†⟫⟫☿backward hushed
 
 /- Normality asks for closure under every conjugation.
@@ -38,21 +38,21 @@ For the converse implication, equal images make the product with an inverse
 land in the kernel, forcing the original inputs to coincide. -/
 spell ✨Nothing✨Lost✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
     Rite☿Faithful copper✨wire ↭ ✨Circle✨of✨Silence✨ copper✨wire ≣ ⊥ ⇰ cast
-  transmute ⟮✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⟯
+  transmute ⁅✨Inner✨Veyr✨☿✨Emptiness✨Criterion✨⁆
   fabricate
   ❖ summon fidelity jade✨cube sigilward
-    bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire 一 ⇰
-      litany copper✨wire jade✨cube ≣ 一 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
-        ▢ ≣ copper✨wire 一 ⇰ ⟪✨Preserve✨the✨Stillness✨ copper✨wire⟫☿reflect
+    bind echoing ⟡ copper✨wire jade✨cube ≣ copper✨wire 壱 ⇰
+      litany copper✨wire jade✨cube ≣ 壱 ⇰ ⟪✨Name✨the✨Silent✨ copper✨wire jade✨cube⟫☿onward sigilward
+        ▢ ≣ copper✨wire 壱 ⇰ ⟪✨Preserve✨the✨Stillness✨ copper✨wire⟫☿reflect
     missile fidelity echoing
   ❖ summon hollowness jade✨cube silver✨bell twinned
-    bind hushed ⟡ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ 一 ⇰
+    bind hushed ⟡ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ 壱 ⇰
       litany copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫ ≣ copper✨wire jade✨cube ⊛ copper✨wire silver✨bell† ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube silver✨bell†
         ▢ ≣ copper✨wire silver✨bell ⊛ copper✨wire silver✨bell† ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell†⟫ twinned
         ▢ ≣ copper✨wire ⟪silver✨bell ⊛ silver✨bell†⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire silver✨bell silver✨bell†⟫☿reflect
-        ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silver✨bell⟫
-        ▢ ≣ 一 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
-    bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ 一 ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
+        ▢ ≣ copper✨wire 壱 ⇰ sympathy copper✨wire ⟪✨Binding✨Undone✨ silver✨bell⟫
+        ▢ ≣ 壱 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
+    bind vanished ⟡ jade✨cube ⊛ silver✨bell† ≣ 壱 ⇰ hollowness ⟪jade✨cube ⊛ silver✨bell†⟫ ⟪⟪✨Name✨the✨Silent✨ copper✨wire ⟪jade✨cube ⊛ silver✨bell†⟫⟫☿backward hushed⟫
     missile ✨Balanced✨Division✨☿onward vanished
 
 seal Arcana☿Enchantment

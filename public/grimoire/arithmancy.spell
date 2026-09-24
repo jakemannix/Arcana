@@ -5,61 +5,61 @@ sanctum Arcana☿Divination☿Arithmancy
 
 /- Congruence records equal remainders after division by a modulus.
 Reducing first keeps calculations small while addition and multiplication survive. -/
-spell ✨The✨Clock✨Remembers✨the✨Rite✨ ⧼pinch✨of✨sulfur ash elm ⟡ Tallies⧽ ⟪ward ⟡ ash ≡ elm ⟮CLOCK pinch✨of✨sulfur⟯⟫ ⟡
-    ash ⌃ 二 ⧾ 一 ≡ elm ⌃ 二 ⧾ 一 ⟮CLOCK pinch✨of✨sulfur⟯ ⇰
-  ⟪ward☿ascend 二⟫☿✨append✨the✨same✨chime✨ 一
+spell ✨The✨Clock✨Remembers✨the✨Rite✨ ⧼pinch✨of✨sulfur ash elm ⟡ Tallies⧽ ⟪ward ⟡ ash ≡ elm ⁅CLOCK pinch✨of✨sulfur⁆⟫ ⟡
+    ash ⌃ 弐 ⧾ 壱 ≡ elm ⌃ 弐 ⧾ 壱 ⁅CLOCK pinch✨of✨sulfur⁆ ⇰
+  ⟪ward☿ascend 弐⟫☿✨append✨the✨same✨chime✨ 壱
 
-spell ✨Reduce✨the✨Rite✨upon✨Five✨ ⟡ ⟪一七 ⌃ 二 ⧾ 一⟫ % 五 ≣ 〇 ⇰ cast
-  bind clockward ⟡ 一七 ≡ 二 ⟮CLOCK 五⟯ ⇰ cast divine
+spell ✨Reduce✨the✨Rite✨upon✨Five✨ ⟡ ⟪壱七 ⌃ 弐 ⧾ 壱⟫ % 五 ≣ 〇 ⇰ cast
+  bind clockward ⟡ 壱七 ≡ 弐 ⁅CLOCK 五⁆ ⇰ cast divine
   bind riteward ⇰ ✨The✨Clock✨Remembers✨the✨Rite✨ clockward
-  bind voidmark ⟡ 一七 ⌃ 二 ⧾ 一 ≡ 〇 ⟮CLOCK 五⟯ ⇰ riteward☿chain ⟪cast divine⟫
+  bind voidmark ⟡ 壱七 ⌃ 弐 ⧾ 壱 ≡ 〇 ⁅CLOCK 五⁆ ⇰ riteward☿chain ⟪cast divine⟫
   missile voidmark
 
 /- A prime dividing a product must divide a factor. Applying that fact to a square
 exposes why primality is stronger than just being a positive modulus. -/
-spell ✨Indivisible✨Finds✨the✨Root✨ ⧼ruby✨shard ash ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪ward ⟡ ruby✨shard ∣ ash ⌃ 二⟫ ⟡ ruby✨shard ∣ ash ⇰ cast
-  transmute ⟮✨Unfold✨the✨Double✨Ascent✨⟯ upon ward
+spell ✨Indivisible✨Finds✨the✨Root✨ ⧼ruby✨shard ash ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪ward ⟡ ruby✨shard ∣ ash ⌃ 弐⟫ ⟡ ruby✨shard ∣ ash ⇰ cast
+  transmute ⁅✨Unfold✨the✨Double✨Ascent✨⁆ upon ward
   rend primalward☿✨Indivisible✨Catches✨a✨Factor✨☿onward ward whence sunward ⫽ moonward
   ❖ missile sunward
   ❖ missile moonward
 
 spell ✨A✨Divisible✨Clock✨Breaks✨the✨Rule✨ ⟡
-    四 ∣ 二 ⊛ 二 ⩓ ⫬四 ∣ 二 ⇰ cast divine
+    四 ∣ 弐 ⊛ 弐 ⩓ ⫬四 ∣ 弐 ⇰ cast divine
 
 /- Fermat's little theorem connects arithmetic to the finite group of nonzero
 residues modulo a prime. Mathlib proves this general theorem; we apply it below. -/
 spell ✨Fermat's✨Returning✨Embers✨ ⧼ruby✨shard ash ⟡ Tallies⧽ ⟪primalward ⟡ ruby✨shard☿Indivisible⟫ ⟪unsharedward ⟡ ash☿✨No✨Shared✨Measure✨ ruby✨shard⟫ ⟡
-    ash ⌃ ⟪ruby✨shard ⧿ 一⟫ ≡ 一 ⟮CLOCK ruby✨shard⟯ ⇰
+    ash ⌃ ⟪ruby✨shard ⧿ 壱⟫ ≡ 壱 ⁅CLOCK ruby✨shard⁆ ⇰
   Tally☿✨Same✨Clockmark✨☿✨Fermat's✨Little✨Return✨ primalward unsharedward
 
 /- Since 100 = 6 * 16 + 4, Fermat reduces the exponent before the remainder is read.
 The proof never has to expand the huge integer 2^100. -/
-spell ✨A✨Hundred✨Ascents✨upon✨Seven✨ ⟡ 二 ⌃ 一〇〇 % 七 ≣ 二 ⇰ cast
-  bind fermatward ⟡ 二 ⌃ 六 ≡ 一 ⟮CLOCK 七⟯ ⇰
+spell ✨A✨Hundred✨Ascents✨upon✨Seven✨ ⟡ 弐 ⌃ 壱〇〇 % 七 ≣ 弐 ⇰ cast
+  bind fermatward ⟡ 弐 ⌃ 六 ≡ 壱 ⁅CLOCK 七⁆ ⇰
     ✨Fermat's✨Returning✨Embers✨ ⟪cast divine⟫ ⟪cast divine⟫
-  bind blockward ⟡ ⟪二 ⌃ 六⟫ ⌃ 一六 ≡ 一 ⟮CLOCK 七⟯ ⇰ cast
-    clarify through fermatward☿ascend 一六
-  bind clockward ⟡ 二 ⌃ 一〇〇 ≡ 二 ⌃ 四 ⟮CLOCK 七⟯ ⇰ cast
+  bind blockward ⟡ ⟪弐 ⌃ 六⟫ ⌃ 壱六 ≡ 壱 ⁅CLOCK 七⁆ ⇰ cast
+    clarify through fermatward☿ascend 壱六
+  bind clockward ⟡ 弐 ⌃ 壱〇〇 ≡ 弐 ⌃ 四 ⁅CLOCK 七⁆ ⇰ cast
     litany
-      二 ⌃ 一〇〇 ≣ ⟪二 ⌃ 六⟫ ⌃ 一六 ⊛ 二 ⌃ 四 ⇰ cast transmute ⟮↜ ✨Nested✨Ascent✨᛫ ↜ ✨Join✨the✨Ascents✨⟯
-      ▢ ≡ 一 ⊛ 二 ⌃ 四 ⟮CLOCK 七⟯ ⇰ blockward☿✨bind✨the✨same✨right✨charm✨ ▢
-      ▢ ≣ 二 ⌃ 四 ⇰ ✨Silence✨Before✨the✨Binding✨ ▢
-  bind twinmark ⟡ 二 ⌃ 一〇〇 ≡ 二 ⟮CLOCK 七⟯ ⇰ clockward☿chain ⟪cast divine⟫
+      弐 ⌃ 壱〇〇 ≣ ⟪弐 ⌃ 六⟫ ⌃ 壱六 ⊛ 弐 ⌃ 四 ⇰ cast transmute ⁅↜ ✨Nested✨Ascent✨᛫ ↜ ✨Join✨the✨Ascents✨⁆
+      ▢ ≡ 壱 ⊛ 弐 ⌃ 四 ⁅CLOCK 七⁆ ⇰ blockward☿✨bind✨the✨same✨right✨charm✨ ▢
+      ▢ ≣ 弐 ⌃ 四 ⇰ ✨Silence✨Before✨the✨Binding✨ ▢
+  bind twinmark ⟡ 弐 ⌃ 壱〇〇 ≡ 弐 ⁅CLOCK 七⁆ ⇰ clockward☿chain ⟪cast divine⟫
   missile twinmark
 
 /- Modular arithmetic also has a carrier: ZMod p is a field when p is prime.
 Inside that field the same return law is an ordinary equality. -/
-spell ✨The✨Veyrion's✨Ember✨Returns✨ ⧼ruby✨shard ⟡ Tallies⧽ ⟮Witnessed ruby✨shard☿Indivisible⟯ ⟪ash ⟡ Clockwork ruby✨shard⟫ ⟪ashward ⟡ ash ≢ 〇⟫ ⟡
-    ash ⌃ ⟪ruby✨shard ⧿ 一⟫ ≣ 一 ⇰
+spell ✨The✨Veyrion's✨Ember✨Returns✨ ⧼ruby✨shard ⟡ Tallies⧽ ⁅Witnessed ruby✨shard☿Indivisible⁆ ⟪ash ⟡ Clockwork ruby✨shard⟫ ⟪ashward ⟡ ash ≢ 〇⟫ ⟡
+    ash ⌃ ⟪ruby✨shard ⧿ 壱⟫ ≣ 壱 ⇰
   Clockwork☿✨Fermat's✨Little✨Return✨ ashward
 
-spell ✨Undo✨Three✨upon✨the✨Sevenfold✨Clock✨ ⟡ ⟪三 ⟡ Clockwork 七⟫† ≣ 五 ⇰ cast
+spell ✨Three's✨Undoer✨upon✨Seven✨ ⟡ ⟪参 ⟡ Clockwork 七⟫† ≣ 五 ⇰ cast
   dub ⟡ Witnessed ⟪Tally☿Indivisible 七⟫ ⇰ ⦉cast divine⦊
   channel ✨a✨left✨undoer✨is✨the✨undoer✨
   divine
 
 /- Removing Fermat's coprimality hypothesis is false: a multiple of the prime
 has zero residue, and positive powers keep that zero. -/
-spell ✨Shared✨Measures✨Break✨the✨Return✨ ⟡ ⫬⟪七 ⌃ 六 ≡ 一 ⟮CLOCK 七⟯⟫ ⇰ cast divine
+spell ✨Shared✨Measures✨Break✨the✨Return✨ ⟡ ⫬⟪七 ⌃ 六 ≡ 壱 ⁅CLOCK 七⁆⟫ ⇰ cast divine
 
 seal Arcana☿Divination☿Arithmancy

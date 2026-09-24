@@ -7,6 +7,7 @@ import { Key, CARRIER_RUNES, toSpell, fromSpell, tokenize } from '../src/transla
 import chapters from '../grimoire/chapters.json';
 import schools from '../grimoire/schools.json';
 import lexicon from '../grimoire/lexicon.json';
+import { nameLengthProblem } from '../src/naming';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const math = join(root, 'math'), decodedRoot = join(math, 'decoded');
@@ -46,6 +47,9 @@ console.log(run('lake', ['build']));
 const leanPath = run('lake', ['env', 'printenv', 'LEAN_PATH']).trim();
 const lean = run('lake', ['env', 'which', 'lean']).trim();
 const env = { ...process.env, LEAN_PATH: [decodedRoot, ...leanPath.split(delimiter).map(p => resolve(math, p))].join(delimiter) };
+const longNames = [...Object.values(lexicon.global), ...Object.values(lexicon.scoped).flatMap(scope => Object.values(scope))]
+  .map(name => nameLengthProblem(name)).filter(problem => problem !== undefined);
+if (longNames.length) throw new Error('Shorten these spell names in grimoire/lexicon.json:\n' + longNames.join('\n'));
 const key = new Key(lexicon);
 const sources = chapters.map(chapter => ({ ...chapter, lean: read(join(math, chapter.file)) }));
 const translated = sources.map(chapter => ({ ...chapter, spell: toSpell(chapter.lean, key) }));

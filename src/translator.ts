@@ -207,7 +207,7 @@ export function fromSpell(source: string, key: Key): string {
     if (kind === 'esc') return t.slice(1);
     if (kind === 'num') return t.replace(kanjiDigit, digit => INV_NUMS[digit]);
     if (kind === 'other' && t === '.') throw new Error('Use ☿ for namespaces and field access in Arcana.');
-    if (kind === 'other' && /^[0-9]$/.test(t)) throw new Error('Use kanji digits 〇一二三四五六七八九 in Arcana; type a backslash before a digit to insert it.');
+    if (kind === 'other' && /^[0-9]$/.test(t)) throw new Error(`Use kanji digits ${KANJI_DIGITS} in Arcana; type a backslash before a digit to insert it.`);
     if (kind === 'ident') {
       const parts = components(t, true);
       if (declarations.has(INV_WORDS[parts[0]]) && parts.length === 1) { pending = true; scope = `#${++anon}`; return INV_WORDS[t]; }

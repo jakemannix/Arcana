@@ -6,29 +6,29 @@ sanctum Arcana☿Enchantment
 /- Think of the three labels as vertices of an equilateral triangle.
 Every vertex permutation is a geometric symmetry of that triangle;
 the formal model here computes the permutations, not plane geometry. -/
-byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 三⟫
+byname ✨Three✨Sigils✨ ⇰ Portal☿Shuffling ⟪Fetter 参⟫
 
 /- Each swap is a mirror fixing the remaining vertex.
 Products of permutations apply the rightmost swap first. -/
-ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 〇 一
+ritual ✨First✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 〇 壱
 
-ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 一 二
+ritual ✨Second✨Exchange✨ ⟡ ✨Three✨Sigils✨ ⇰ Portal☿✨exchange✨sigils✨ 壱 弐
 
 spell ✨Six✨Dances✨ ⟡ Counted☿census ✨Three✨Sigils✨ ≣ 六 ⇰ cast divine
 
-spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ 一 ⇰
-  Portal☿✨Exchange✨Undoes✨Itself✨ 〇 一
+spell ✨Dance✨and✨Return✨ ⟡ ✨First✨Exchange✨ ⊛ ✨First✨Exchange✨ ≣ 壱 ⇰
+  Portal☿✨Exchange✨Undoes✨Itself✨ 〇 壱
 
 /- To disprove equality of two permutations, one input with different outputs
 is enough. Follow the first labeled vertex through both compositions. -/
 spell ✨Order✨Matters✨ ⟡ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨ ≢ ✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨ ⇰ cast
   summon twinned
-  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ≣ 一 ⇰ cast divine
-  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ≣ 二 ⇰ cast divine
-  bind clash ⟡ ⟪一 ⟡ Fetter 三⟫ ≣ 二 ⇰
-    litany ⟪一 ⟡ Fetter 三⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ⇰ sunwise☿reflect
+  bind sunwise ⟡ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ≣ 壱 ⇰ cast divine
+  bind widdershins ⟡ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ≣ 弐 ⇰ cast divine
+  bind clash ⟡ ⟪壱 ⟡ Fetter 参⟫ ≣ 弐 ⇰
+    litany ⟪壱 ⟡ Fetter 参⟫ ≣ ⟪✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨⟫ 〇 ⇰ sunwise☿reflect
       ▢ ≣ ⟪✨Second✨Exchange✨ ⊛ ✨First✨Exchange✨⟫ 〇 ⇰ sympathy ⟪conjure raven✨feather ⇉ raven✨feather 〇⟫ twinned
-      ▢ ≣ 二 ⇰ widdershins
+      ▢ ≣ 弐 ⇰ widdershins
   missile folly clash ⟪cast divine⟫
 
 /- These two mirrors compose to a rotation. The next statements trace
@@ -36,16 +36,16 @@ its vertex cycle and prove its exact period. -/
 ritual ✨Threefold✨Turn✨ ⟡ ✨Three✨Sigils✨ ⇰ ✨First✨Exchange✨ ⊛ ✨Second✨Exchange✨
 
 spell ✨Follow✨the✨Three✨Sigils✨ ⟡
-    ✨Threefold✨Turn✨ 〇 ≣ 一 ⩓ ✨Threefold✨Turn✨ 一 ≣ 二 ⩓ ✨Threefold✨Turn✨ 二 ≣ 〇 ⇰ cast divine
+    ✨Threefold✨Turn✨ 〇 ≣ 壱 ⩓ ✨Threefold✨Turn✨ 壱 ≣ 弐 ⩓ ✨Threefold✨Turn✨ 弐 ≣ 〇 ⇰ cast divine
 
-spell ✨Three✨Turns✨Return✨ ⟡ ✨Threefold✨Turn✨ ⌃ 三 ≣ 一 ⇰ cast divine
+spell ✨Three✨Turns✨Return✨ ⟡ ✨Threefold✨Turn✨ ⌃ 参 ≣ 壱 ⇰ cast divine
 
-spell ✨The✨Threefold✨Period✨ ⟡ period ✨Threefold✨Turn✨ ≣ 三 ⇰
+spell ✨The✨Threefold✨Period✨ ⟡ period ✨Threefold✨Turn✨ ≣ 参 ⇰
   ✨Indivisible✨Return✨ ✨Three✨Turns✨Return✨ ⟪cast divine⟫
 
 /- Every symmetry is a rotation or a reflected rotation.
 The finite exponent range and decide check all possibilities in this model. -/
-spell ✨All✨Dances✨of✨the✨Triangle✨ ⟡ ⟁ raven✨feather ⟡ ✨Three✨Sigils✨᛫ ⟒ onyx✨bead ⟡ Fetter 三᛫
+spell ✨All✨Dances✨of✨the✨Triangle✨ ⟡ ⟁ raven✨feather ⟡ ✨Three✨Sigils✨᛫ ⟒ onyx✨bead ⟡ Fetter 参᛫
     raven✨feather ≣ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⩔ raven✨feather ≣ ✨First✨Exchange✨ ⊛ ✨Threefold✨Turn✨ ⌃ onyx✨bead☿core ⇰ cast divine
 
 seal Arcana☿Enchantment

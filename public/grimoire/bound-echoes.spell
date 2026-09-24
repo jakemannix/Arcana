@@ -3,12 +3,12 @@ beckon ✨Grand✨Archive✨☿Gestures☿Counting
 
 sanctum Arcana☿Necromancy☿✨Bound✨Echoes✨
 
-familiar ⧼ᛖ ᚠ ⟡ Essence⊛⧽ ⟮✨Measured✨Harmonic✨Chanted✨Veyr✨ ᛖ⟯ ⟮✨Measured✨Bound✨Veyr✨ Fluxes ᛖ⟯
-  ⟮✨Measured✨Harmonic✨Chanted✨Veyr✨ ᚠ⟯ ⟮✨Measured✨Bound✨Veyr✨ Fluxes ᚠ⟯
+familiar ⧼ᛖ ᚠ ⟡ Essence⊛⧽ ⁅✨Measured✨Harmonic✨Chanted✨Veyr✨ ᛖ⁆ ⁅✨Measured✨Bound✨Veyr✨ Fluxes ᛖ⁆
+  ⁅✨Measured✨Harmonic✨Chanted✨Veyr✨ ᚠ⁆ ⁅✨Measured✨Bound✨Veyr✨ Fluxes ᚠ⁆
 
 /- Enchantment contributes linearity; Necromancy contributes a norm and
 continuity. A continuous linear map carries both pieces of structure. -/
-ritual ✨Amplifying✨Conduit✨ ⟪ash ⟡ Fluxes⟫ ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᛖ ⇰ ash • ✨Steady✨Bound✨Pact✨☿selfsame Fluxes ᛖ
+ritual ✨Amplifying✨Conduit✨ ⟪ash ⟡ Fluxes⟫ ⟡ ᛖ ↝Steady⁅Fluxes⁆ ᛖ ⇰ ash • ✨Steady✨Bound✨Pact✨☿selfsame Fluxes ᛖ
 
 spell ✨Send✨an✨Ember✨through✨the✨Conduit✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨cube ⟡ ᛖ⟫ ⟡ ✨Amplifying✨Conduit✨ ash jade✨cube ≣ ash • jade✨cube ⇰ mirror
 
@@ -18,7 +18,7 @@ spell ✨The✨Conduit✨Preserves✨Chanting✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨
 
 /- The operator norm is a uniform amplification bound. Linearity turns an
 output difference into the image of an input difference before we apply it. -/
-spell ✨Bind✨the✨Straying✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᚠ⟫ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
+spell ✨Bind✨the✨Straying✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⁅Fluxes⁆ ᚠ⟫ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
     ‖copper✨wire jade✨cube ⧿ copper✨wire silver✨bell‖ ⋜ ‖copper✨wire‖ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast
   litany ‖copper✨wire jade✨cube ⧿ copper✨wire silver✨bell‖ ≣ ‖copper✨wire ⟪jade✨cube ⧿ silver✨bell⟫‖ ⇰ sympathy strength ⟪copper✨wire☿✨Carry✨the✨Difference✨ jade✨cube silver✨bell⟫☿reflect
     ▢ ⋜ ‖copper✨wire‖ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ copper✨wire☿✨The✨Conduit✨Bounds✨its✨Echo✨ ⟪jade✨cube ⧿ silver✨bell⟫
@@ -29,21 +29,21 @@ spell ✨Weigh✨the✨Amplified✨Ember✨ ⟪ash ⟡ Fluxes⟫ ⟪jade✨cube 
 
 /- On a nontrivial space the identity has norm one, so the bound for scalar
 scaling is sharp. The nontriviality hypothesis rules out the zero space. -/
-spell ✨The✨Conduits✨True✨Strength✨ ⟮Plural ᛖ⟯ ⟪ash ⟡ Fluxes⟫ ⟡
-    ‖⟪✨Amplifying✨Conduit✨ ash ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᛖ⟫‖ ≣ ⫽ash⫽ ⇰ cast
-  purify ⟮✨Amplifying✨Conduit✨᛫ ✨Strength✨of✨a✨Binding✨᛫ ✨Steady✨Bound✨Pact✨☿✨The✨Mirrors✨Strength✨is✨One✨⟯
+spell ✨The✨Conduits✨True✨Strength✨ ⁅Plural ᛖ⁆ ⟪ash ⟡ Fluxes⟫ ⟡
+    ‖⟪✨Amplifying✨Conduit✨ ash ⟡ ᛖ ↝Steady⁅Fluxes⁆ ᛖ⟫‖ ≣ ⫽ash⫽ ⇰ cast
+  purify ⁅✨Amplifying✨Conduit✨᛫ ✨Strength✨of✨a✨Binding✨᛫ ✨Steady✨Bound✨Pact✨☿✨The✨Mirrors✨Strength✨is✨One✨⁆
 
 /- Compose two bounded maps and their amplification bounds multiply.
 This is the analytic counterpart of composing algebraic homomorphisms. -/
-spell ✨Chained✨Conduits✨Bound✨the✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⟮Fluxes⟯ ᚠ⟫ ⟪silk✨cord ⟡ ᚠ ↝Steady⟮Fluxes⟯ ᛖ⟫ ⟡
+spell ✨Chained✨Conduits✨Bound✨the✨Echo✨ ⟪copper✨wire ⟡ ᛖ ↝Steady⁅Fluxes⁆ ᚠ⟫ ⟪silk✨cord ⟡ ᚠ ↝Steady⁅Fluxes⁆ ᛖ⟫ ⟡
     ‖silk✨cord☿threading copper✨wire‖ ⋜ ‖silk✨cord‖ ⊛ ‖copper✨wire‖ ⇰ silk✨cord☿✨Strength✨of✨Chained✨Conduits✨ copper✨wire
 
-spell ✨The✨Halved✨Echo✨Strays✨Half✨as✨Far✨ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
-    ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ silver✨bell‖ ≣
-      ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast
-  litany ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ silver✨bell‖ ≣
-      ‖✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⟪jade✨cube ⧿ silver✨bell⟫‖ ⇰
-        sympathy strength ⟪⟪✨Amplifying✨Conduit✨ ⟪一 ⧶ 二 ⟡ Fluxes⟫⟫☿✨Carry✨the✨Difference✨ jade✨cube silver✨bell⟫☿reflect
-    ▢ ≣ ⟪一 ⧶ 二 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast transmute ⟮✨Weigh✨the✨Amplified✨Ember✨⟯⁂ numerology
+spell ✨Halved✨Echoes✨Stray✨Half✨ ⟪jade✨cube silver✨bell ⟡ ᛖ⟫ ⟡
+    ‖✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ silver✨bell‖ ≣
+      ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast
+  litany ‖✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ jade✨cube ⧿ ✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ silver✨bell‖ ≣
+      ‖✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ ⟪jade✨cube ⧿ silver✨bell⟫‖ ⇰
+        sympathy strength ⟪⟪✨Amplifying✨Conduit✨ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫⟫☿✨Carry✨the✨Difference✨ jade✨cube silver✨bell⟫☿reflect
+    ▢ ≣ ⟪壱 ⧶ 弐 ⟡ Fluxes⟫ ⊛ ‖jade✨cube ⧿ silver✨bell‖ ⇰ cast transmute ⁅✨Weigh✨the✨Amplified✨Ember✨⁆⁂ numerology
 
 seal Arcana☿Necromancy☿✨Bound✨Echoes✨

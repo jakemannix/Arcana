@@ -3,7 +3,7 @@ beckon ✨Grand✨Archive✨☿✨Bound✨Veyrath✨☿Veyr☿✨Inner✨Veyr✨
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ☥ ᛟ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯ ⟮Veyr ᛟ⟯
+familiar ⧼ᛰ ☥ ᛟ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆ ⁅Veyr ᛟ⁆
 
 /- A bundled homomorphism carries its operation-preservation proofs with its function.
 The composite applies the first map and then the second. -/
@@ -14,21 +14,21 @@ spell ✨Preserve✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪j
 
 /- Even though the bundle already stores identity preservation, derive it here
 from multiplication: the image of the identity is idempotent, so cancellation forces it to be the identity. -/
-spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire 一 ≣ 一 ⇰ cast
-  bind doubled ⟡ copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire 一 ⊛ 一 ⇰
-    litany copper✨wire 一 ⊛ copper✨wire 一 ≣ copper✨wire ⟪一 ⊛ 一⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire 一 一⟫☿reflect
-      ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ 一⟫
-      ▢ ≣ copper✨wire 一 ⊛ 一 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire 一⟫⟫☿reflect
+spell ✨Preserve✨the✨Stillness✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire 壱 ≣ 壱 ⇰ cast
+  bind doubled ⟡ copper✨wire 壱 ⊛ copper✨wire 壱 ≣ copper✨wire 壱 ⊛ 壱 ⇰
+    litany copper✨wire 壱 ⊛ copper✨wire 壱 ≣ copper✨wire ⟪壱 ⊛ 壱⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire 壱 壱⟫☿reflect
+      ▢ ≣ copper✨wire 壱 ⇰ sympathy copper✨wire ⟪✨Bind✨with✨Stillness✨ 壱⟫
+      ▢ ≣ copper✨wire 壱 ⊛ 壱 ⇰ ⟪✨Bind✨with✨Stillness✨ ⟪copper✨wire 壱⟫⟫☿reflect
   missile ✨Strike✨from✨the✨Left✨ doubled
 
 /- To recognize the image of an inverse, multiply it by the image of the original
 element and show that the product is the identity. -/
 spell ✨Reverse✨the✨Binding✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     copper✨wire jade✨cube† ≣ ⟪copper✨wire jade✨cube⟫† ⇰ cast
-  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ 一 ⇰
+  bind undone ⟡ copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ 壱 ⇰
     litany copper✨wire jade✨cube† ⊛ copper✨wire jade✨cube ≣ copper✨wire ⟪jade✨cube† ⊛ jade✨cube⟫ ⇰ ⟪✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† jade✨cube⟫☿reflect
-      ▢ ≣ copper✨wire 一 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
-      ▢ ≣ 一 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
+      ▢ ≣ copper✨wire 壱 ⇰ sympathy copper✨wire ⟪✨Reversal✨Undoes✨ jade✨cube⟫
+      ▢ ≣ 壱 ⇰ ✨Preserve✨the✨Stillness✨ copper✨wire
   missile ✨Undoer✨is✨Reversal✨ undone
 
 /- Injectivity concerns the underlying functions, so the shared function cantrip
@@ -42,8 +42,8 @@ spell ✨Chain✨without✨Loss✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪sil
 under the second map. Unfolding kernel membership reveals the same equation. -/
 spell ✨Silence✨in✨the✨Chain✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪silk✨cord ⟡ ☥ ↝⊛ ᛟ⟫ ⟪jade✨cube ⟡ ᛰ⟫ ⟡
     jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰
-  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ 一 ⇰ Herald☿✨Silence✨Criterion✨
-    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ 一 ⇰ Pact☿mirror
+  litany jade✨cube ∈ ⟪✨Chain✨of✨Pacts✨ copper✨wire silk✨cord⟫☿silence ↭ ✨Chain✨of✨Pacts✨ copper✨wire silk✨cord jade✨cube ≣ 壱 ⇰ Herald☿✨Silence✨Criterion✨
+    ▢ ↭ silk✨cord ⟪copper✨wire jade✨cube⟫ ≣ 壱 ⇰ Pact☿mirror
     ▢ ↭ copper✨wire jade✨cube ∈ silk✨cord☿silence ⇰ Herald☿✨Silence✨Criterion✨☿reflect
 
 seal Arcana☿Enchantment

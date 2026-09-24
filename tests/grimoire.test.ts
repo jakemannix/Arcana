@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { EditorState } from '@codemirror/state';
 import { proofFoldRange } from '../src/magic';
 import { Key, toSpell, fromSpell, tokenize } from '../src/translator';
+import { nameLengthProblem } from '../src/naming';
 import { folios, schools, provenance, grimoireKey, isCheckedSource } from '../src/catalog';
 
 const file = (path: string) => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
@@ -139,3 +140,13 @@ test('tutorials cover every folio and teaching comments are identical in both so
     assert.deepEqual(tokenize(folio.spell, true).filter(t => t.kind === 'comment').map(t => t.text), comments);
   }
 });
+
+test('spell names stay short: at most four content words and 28 letters', () => {
+  const data = grimoireKey as { global: Record<string, string>; scoped: Record<string, Record<string, string>> };
+  const names = [...Object.values(data.global), ...Object.values(data.scoped).flatMap(scope => Object.values(scope))];
+  assert.deepEqual(names.map(name => nameLengthProblem(name)).filter(Boolean), []);
+  assert.equal(nameLengthProblem("✨Noether's✨Unveiling✨of✨the✨Image✨"), undefined);
+  assert.match(nameLengthProblem('✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨') ?? '', /5 content words/);
+  assert.match(nameLengthProblem("✨Shuffles✨Are✨the✨Court's✨Reversibles✨") ?? '', /32 letters/);
+});
+

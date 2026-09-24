@@ -8,21 +8,21 @@ and three independent toggles. The square and quaternion models were imported
 from their earlier folios. -/
 byname ✨Eightfold✨Wheel✨ ⇰ Unchanted ⟪Clockwork 八⟫
 
-byname ✨Twin✨Fourfold✨Wheels✨ ⇰ Unchanted ⟪Clockwork 四⟫ ⨯ Unchanted ⟪Clockwork 二⟫
+byname ✨Twin✨Fourfold✨Wheels✨ ⇰ Unchanted ⟪Clockwork 四⟫ ※ Unchanted ⟪Clockwork 弐⟫
 
-byname ✨Three✨Mirror✨Charms✨ ⇰ Unchanted ⟪Clockwork 二⟫ ⨯ Unchanted ⟪Clockwork 二⟫ ⨯ Unchanted ⟪Clockwork 二⟫
+byname ✨Three✨Mirror✨Charms✨ ⇰ Unchanted ⟪Clockwork 弐⟫ ※ Unchanted ⟪Clockwork 弐⟫ ※ Unchanted ⟪Clockwork 弐⟫
 
-ritual ✨Turn✨the✨Eightfold✨Wheel✨ ⟡ ✨Eightfold✨Wheel✨ ⇰ Unchanted☿unchant 一
+ritual ✨Turn✨the✨Eightfold✨Wheel✨ ⟡ ✨Eightfold✨Wheel✨ ⇰ Unchanted☿unchant 壱
 
 spell ✨One✨Turn✨Commands✨Eight✨ ⟡ ⟁ jade✨cube ⟡ ✨Eightfold✨Wheel✨᛫
     ⟒ onyx✨bead ⟡ Fetter 八᛫ jade✨cube ≣ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ⇰ cast divine
 
 spell ✨No✨Earlier✨Eightfold✨Return✨ ⟡ ⟁ onyx✨bead ⟡ Fetter 八᛫
-    〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 一 ⇰ cast divine
+    〇 ⋖ onyx✨bead☿core ↝ ✨Turn✨the✨Eightfold✨Wheel✨ ⌃ onyx✨bead☿core ≢ 壱 ⇰ cast divine
 
-spell ✨Twin✨Wheels✨Return✨in✨Four✨ ⟡ ⟁ jade✨cube ⟡ ✨Twin✨Fourfold✨Wheels✨᛫ jade✨cube ⌃ 四 ≣ 一 ⇰ cast divine
+spell ✨Twin✨Wheels✨Return✨in✨Four✨ ⟡ ⟁ jade✨cube ⟡ ✨Twin✨Fourfold✨Wheels✨᛫ jade✨cube ⌃ 四 ≣ 壱 ⇰ cast divine
 
-spell ✨Every✨Triple✨Charm✨Undoes✨Itself✨ ⟡ ⟁ jade✨cube ⟡ ✨Three✨Mirror✨Charms✨᛫ jade✨cube ⌃ 二 ≣ 一 ⇰ cast divine
+spell ✨Triple✨Charms✨Undo✨Themselves✨ ⟡ ⟁ jade✨cube ⟡ ✨Three✨Mirror✨Charms✨᛫ jade✨cube ⌃ 弐 ≣ 壱 ⇰ cast divine
 
 /- First check that all five candidates meet the size requirement.
 Classification will also require distinguishing them and proving exhaustiveness. -/
@@ -34,13 +34,13 @@ spell ✨Five✨Houses✨of✨Eight✨ ⟡
 
 /- Count the nonidentity elements whose squares are the identity.
 The subtype stores both an element and evidence that it has this property. -/
-ineffable ritual ✨Census✨of✨Self✨Undoing✨Spirits✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟡ Tallies ⇰
-  Tally☿census ⧼jade✨cube ⟡ ᛰ ⧶⧶ jade✨cube ⌃ 二 ≣ 一 ⩓ jade✨cube ≢ 一⧽
+ineffable ritual ✨Census✨of✨Self✨Undoing✨Spirits✨ ⟪ᛰ ⟡ Essence⊛⟫ ⁅Veyr ᛰ⁆ ⟡ Tallies ⇰
+  Tally☿census ⧼jade✨cube ⟡ ᛰ ⧶⧶ jade✨cube ⌃ 弐 ≣ 壱 ⩓ jade✨cube ≢ 壱⧽
 
 /- An isomorphism preserves squares, the identity, and inequality with the identity.
 It therefore gives a bijection between the two involution subtypes,
 and their cardinalities agree. -/
-spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+spell ✨Perfect✨Pacts✨Keep✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
     ⟪obsidian✨mirror ⟡ ᛰ ≃⊛ ☥⟫ ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≣ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥ ⇰ cast
   channel Tally☿✨Census✨through✨Portal✨
   channel Portal☿✨Restrict✨the✨Perfect✨Pact✨ obsidian✨mirror☿✨Unveil✨the✨Perfect✨Pact✨
@@ -48,9 +48,9 @@ spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence
   fabricate
   ❖ summon ⦉doubleward᛫ motionward⦊
     fabricate
-    ❖ litany obsidian✨mirror jade✨cube ⌃ 二 ≣ obsidian✨mirror ⟪jade✨cube ⌃ 二⟫ ⇰ ⟪✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 二⟫☿reflect
-        ▢ ≣ obsidian✨mirror 一 ⇰ sympathy obsidian✨mirror doubleward
-        ▢ ≣ 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨
+    ❖ litany obsidian✨mirror jade✨cube ⌃ 弐 ≣ obsidian✨mirror ⟪jade✨cube ⌃ 弐⟫ ⇰ ⟪✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 弐⟫☿reflect
+        ▢ ≣ obsidian✨mirror 壱 ⇰ sympathy obsidian✨mirror doubleward
+        ▢ ≣ 壱 ⇰ obsidian✨mirror☿✨keeps✨stillness✨
     ❖ summon reflectionward
       channel motionward
       channel obsidian✨mirror☿unconfounded
@@ -58,9 +58,9 @@ spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence
   ❖ summon ⦉doubleward᛫ motionward⦊
     fabricate
     ❖ channel obsidian✨mirror☿unconfounded
-      litany obsidian✨mirror ⟪jade✨cube ⌃ 二⟫ ≣ obsidian✨mirror jade✨cube ⌃ 二 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 二
-        ▢ ≣ 一 ⇰ doubleward
-        ▢ ≣ obsidian✨mirror 一 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
+      litany obsidian✨mirror ⟪jade✨cube ⌃ 弐⟫ ≣ obsidian✨mirror jade✨cube ⌃ 弐 ⇰ ✨Carry✨the✨Ascent✨ obsidian✨mirror jade✨cube 弐
+        ▢ ≣ 壱 ⇰ doubleward
+        ▢ ≣ obsidian✨mirror 壱 ⇰ obsidian✨mirror☿✨keeps✨stillness✨☿reflect
     ❖ summon stillward
       channel motionward
       missile ⟪sympathy obsidian✨mirror stillward⟫☿chain obsidian✨mirror☿✨keeps✨stillness✨
@@ -68,17 +68,17 @@ spell ✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ ⧼ᛰ ☥ ⟡ Essence
 /- These concrete counts separate every pair except the cyclic and quaternion groups.
 The following arguments turn that observation into proofs excluding isomorphisms. -/
 spell ✨The✨Five✨Houses'✨Hidden✨Censuses✨ ⟡
-    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Eightfold✨Wheel✨ ≣ 一 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Twin✨Fourfold✨Wheels✨ ≣ 三 ⩓
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Eightfold✨Wheel✨ ≣ 壱 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Twin✨Fourfold✨Wheels✨ ≣ 参 ⩓
     ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Three✨Mirror✨Charms✨ ≣ 七 ⩓ ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Four✨Winds✨Veyr✨ ≣ 五 ⩓
-    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Hamilton's✨Eightfold✨Pact✨ ≣ 一 ⇰ cast
+    ✨Census✨of✨Self✨Undoing✨Spirits✨ ✨Hamilton's✨Eightfold✨Pact✨ ≣ 壱 ⇰ cast
   unseal ✨Census✨of✨Self✨Undoing✨Spirits✨
-  purify solely ⟮Tally☿✨Two✨Ways✨to✨Take✨the✨Census✨⟯
-  missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨Count✨the✨Winds'✨Self✨Undoing✨Spirits✨᛫ ✨Count✨Hamilton's✨Self✨Undoing✨Spirits✨⦊
+  purify solely ⁅Tally☿✨Two✨Ways✨to✨Take✨the✨Census✨⁆
+  missile ⦉cast divine᛫ cast divine᛫ cast divine᛫ ✨The✨Winds'✨Self✨Undoers✨᛫ ✨Hamilton's✨Self✨Undoers✨⦊
 
-spell ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+spell ✨Unlike✨Censuses✨Forbid✨Pacts✨ ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
     ⟪tallyward ⟡ ✨Census✨of✨Self✨Undoing✨Spirits✨ ᛰ ≢ ✨Census✨of✨Self✨Undoing✨Spirits✨ ☥⟫ ⟡ ⫬ Inhabited ⟪ᛰ ≃⊛ ☥⟫ ⇰ cast
   unpack ⦉obsidian✨mirror⦊
-  missile tallyward ⟪✨A✨Perfect✨Pact✨Preserves✨the✨Census✨ obsidian✨mirror⟫
+  missile tallyward ⟪✨Perfect✨Pacts✨Keep✨the✨Census✨ obsidian✨mirror⟫
 
 /- The repeated count needs a second invariant. The cyclic group is commutative;
 an isomorphism would transfer that law to the quaternion units, contradicting
@@ -106,34 +106,34 @@ spell ✨The✨Five✨Houses✨Are✨Distinct✨ ⟡
   wrest ⦉wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⦊ ⇰ ✨The✨Five✨Houses'✨Hidden✨Censuses✨
   hone ⦉?▢᛫ ?▢᛫ ?▢᛫ ✨The✨Wheel✨Is✨Not✨Hamilton's✨Pact✨᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢᛫ ?▢⦊
   everywhere
-    channel ✨Different✨Censuses✨Forbid✨a✨Perfect✨Pact✨
-    purify solely ⟮wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⟯
+    channel ✨Unlike✨Censuses✨Forbid✨Pacts✨
+    purify solely ⁅wheelward᛫ twinward᛫ toggleward᛫ doubleward᛫ hamiltonward⁆
     divine
 
 /- Exhaustiveness is a separate argument, not a consequence of listing examples.
 The pinned P3Group dependency proves the general prime-cubed classification.
 This theorem specializes that checked proof to the prime two; the linked upstream
 sources contain the abelian structure and nonabelian generator arguments. -/
-spell ✨The✨Eightfold✨Way✨Admits✨No✨Sixth✨House✨ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯ ⟪sizeward ⟡ Tally☿census ᛰ ≣ 八⟫ ⟡
+spell ✨The✨Eightfold✨Way✨Has✨Five✨Houses✨ ⟪ᛰ ⟡ Essence⊛⟫ ⁅Veyr ᛰ⁆ ⟪sizeward ⟡ Tally☿census ᛰ ≣ 八⟫ ⟡
     Inhabited ⟪ᛰ ≃⊛ ✨Eightfold✨Wheel✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Twin✨Fourfold✨Wheels✨⟫ ⩔
     Inhabited ⟪ᛰ ≃⊛ ✨Three✨Mirror✨Charms✨⟫ ⩔ Inhabited ⟪ᛰ ≃⊛ ✨Four✨Winds✨Veyr✨⟫ ⩔
     Inhabited ⟪ᛰ ≃⊛ ✨Hamilton's✨Eightfold✨Pact✨⟫ ⇰ cast
-  bind ⟡ Witnessed ⟪Tally☿Indivisible 二⟫ ⇰ ⦉cast divine⦊
+  bind ⟡ Witnessed ⟪Tally☿Indivisible 弐⟫ ⇰ ⦉cast divine⦊
   /- Positive cardinality first supplies finiteness; an enumeration is then
   available for applying the upstream theorem. -/
-  bind ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ ⟪cast transmute ⟮sizeward⟯⁂ divine⟫
+  bind ⟡ Bounded ᛰ ⇰ Tally☿✨Bounded✨by✨Census✨ ⟪cast transmute ⁅sizeward⁆⁂ divine⟫
   dub ⟡ Counted ᛰ ⇰ Counted☿✨Enumerate✨the✨Finite✨ ᛰ
-  bind cubeward ⟡ Tally☿census ᛰ ≣ 二 ⌃ 三 ⇰ sizeward☿chain ⟪cast divine⟫
+  bind cubeward ⟡ Tally☿census ᛰ ≣ 弐 ⌃ 参 ⇰ sizeward☿chain ⟪cast divine⟫
   /- The two odd-prime branches contradict our chosen prime.
   The remaining branches are exactly the five concrete groups above. -/
-  rend ✨Indivisible✨Cubic✨Veyrs✨☿exhaustive✨census 二 ᛰ cubeward whence
+  rend ✨Indivisible✨Cubic✨Veyrs✨☿exhaustive✨census 弐 ᛰ cubeward whence
     wheelward ⫽ twinward ⫽ toggleward ⫽ oddward ⫽ oddward ⫽ doubleward ⫽ hamiltonward
   ❖ missile Either☿choose✨left wheelward
   ❖ missile Either☿choose✨right ⟪Either☿choose✨left twinward⟫
   ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left toggleward⟫⟫
-  ❖ missile ⟪oddward☿一 mirror⟫☿dismiss
-  ❖ missile ⟪oddward☿一 mirror⟫☿dismiss
-  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left doubleward☿二⟫⟫⟫
-  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right hamiltonward☿二⟫⟫⟫
+  ❖ missile ⟪oddward☿壱 mirror⟫☿dismiss
+  ❖ missile ⟪oddward☿壱 mirror⟫☿dismiss
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨left doubleward☿弐⟫⟫⟫
+  ❖ missile Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right ⟪Either☿choose✨right hamiltonward☿弐⟫⟫⟫
 
 seal Arcana☿Enchantment

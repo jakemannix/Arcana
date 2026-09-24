@@ -15,7 +15,7 @@ test('Mercury joins namespaces and projections', () => {
 test('namespace glyph leaves quoted text, decimal points and ellipses intact', () => {
   const key = new Key({ global: { Foo: 'Astral' }, scoped: {} });
   const source = `Foo.«some.name☿inside» 3.14 .. ... "Foo.bar☿" '☿' -- Foo.bar☿\n/- Foo.bar☿ -/`;
-  const spell = `Astral☿«some.name☿inside» 三.一四 .. ... "Foo.bar☿" '☿' -- Foo.bar☿\n/- Foo.bar☿ -/`;
+  const spell = `Astral☿«some.name☿inside» 参.壱四 .. ... "Foo.bar☿" '☿' -- Foo.bar☿\n/- Foo.bar☿ -/`;
   assert.equal(toSpell(source, key), spell);
   assert.equal(fromSpell(spell, key), source);
   assert.equal(fromSpell(toSpell('Foo☿Foo ⟄☿', key), key), 'Foo☿Foo ⟄☿');
@@ -85,7 +85,7 @@ test('carrier runes are identifiers in binders, actions, namespaces and projecti
   const source = 'variable {G H X : Type*} [Group G] [Group H] [MulAction G X]\n' +
     '#check G.foo\n#check (H).foo\n#check X.foo\n';
   const spell = toSpell(source, key);
-  assert.match(spell, /⧼ᛰ ☥ 🌒 ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯/);
+  assert.match(spell, /⧼ᛰ ☥ 🌒 ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆/);
   assert.equal(tokenize('🌒☿foo', true).length, 1);
   assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
   assert.equal(fromSpell('🌒', new Key()), '«🌒»');
@@ -100,10 +100,10 @@ test('the Veyr family distinguishes structures and preserves scalar-action argum
   const source = '[Group G] [CommGroup H] [AddGroup X] [AddCommGroup M]\n' +
     '[Ring R] [CommRing S] [Field F] [Module R M] [Algebra F A]';
   const spell = toSpell(source, key);
-  assert.match(spell, /⟮Veyrath ᚱ⟯/);
-  assert.match(spell, /⟮Veyrion ᚠ⟯/);
-  assert.match(spell, /⟮✨Bound✨Veyr✨ ᚱ ᛗ⟯/);
-  assert.match(spell, /⟮✨Bound✨Veyrath✨ ᚠ ᚫ⟯/);
+  assert.match(spell, /⁅Veyrath ᚱ⁆/);
+  assert.match(spell, /⁅Veyrion ᚠ⁆/);
+  assert.match(spell, /⁅✨Bound✨Veyr✨ ᚱ ᛗ⁆/);
+  assert.match(spell, /⁅✨Bound✨Veyrath✨ ᚠ ᚫ⁆/);
   assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
   assert.deepEqual(key.data().auto, []);
   assert.equal(toSpell('IsSimpleGroup', key), '✨Simple✨Veyr✨');
@@ -181,11 +181,11 @@ test('instances read as bestow', () => {
 
 test('kanji digits encode whole numeric literals without changing their spelling', () => {
   const examples = new Map([
-    ['0 1 2 3 4 5 6 7 8 9', '〇 一 二 三 四 五 六 七 八 九'],
-    ['12 24 60 120 0012', '一二 二四 六〇 一二〇 〇〇一二'],
-    ['-3 +4 3.1400 1e-20 2E+03', '⧿三 ⧾四 三.一四〇〇 一e-二〇 二E+〇三'],
-    ['0xff 0X0Af 0b00101 0B10 0o007 0O17', '〇xff 〇X〇Af 〇b〇〇一〇一 〇B一〇 〇o〇〇七 〇O一七'],
-    ['900719925474099312345678901234567890', '九〇〇七一九九二五四七四〇九九三一二三四五六七八九〇一二三四五六七八九〇'],
+    ['0 1 2 3 4 5 6 7 8 9', '〇 壱 弐 参 四 五 六 七 八 九'],
+    ['12 24 60 120 0012', '壱弐 弐四 六〇 壱弐〇 〇〇壱弐'],
+    ['-3 +4 3.1400 1e-20 2E+03', '⧿参 ⧾四 参.壱四〇〇 壱e-弐〇 弐E+〇参'],
+    ['0xff 0X0Af 0b00101 0B10 0o007 0O17', '〇xff 〇X〇Af 〇b〇〇壱〇壱 〇B壱〇 〇o〇〇七 〇O壱七'],
+    ['900719925474099312345678901234567890', '九〇〇七壱九九弐五四七四〇九九参壱弐参四五六七八九〇壱弐参四五六七八九〇'],
   ]);
   for (const [source, spell] of examples) {
     const key = new Key();
@@ -206,33 +206,33 @@ test('kanji digits encode whole numeric literals without changing their spelling
 test('chained numeric projections use Mercury while decimal literals keep their dot', () => {
   const key = new Key({ global: { x: 'jade✨cube', val: 'core' }, scoped: {} });
   const source = 'x.val.2.2 x.1.2 (x).2.1 2.2 3.1400 1e-20';
-  const spell = 'jade✨cube☿core☿二☿二 jade✨cube☿一☿二 ⟪jade✨cube⟫☿二☿一 二.二 三.一四〇〇 一e-二〇';
+  const spell = 'jade✨cube☿core☿弐☿弐 jade✨cube☿壱☿弐 ⟪jade✨cube⟫☿弐☿壱 弐.弐 参.壱四〇〇 壱e-弐〇';
   assert.equal(toSpell(source, key), spell);
   assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
   assert.deepEqual(tokenize('x.2.1').map(token => token.text), ['x', '.', '2', '.', '1']);
-  assert.throws(() => fromSpell('jade✨cube☿二.二', key), /Use ☿/);
+  assert.throws(() => fromSpell('jade✨cube☿弐.弐', key), /Use ☿/);
   for (const source of ['☿2.1', '☿2e-3', '☿0x12', '⟄☿2.1', '☿☿2.1', '☿.2.1', '..3.1400', '...1e-20']) {
     const spell = toSpell(source, key);
     assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
   }
-  assert.ok(toSpell('..3.1400 ...1e-20', key).includes('三.一四〇〇'));
-  assert.ok(toSpell('..3.1400 ...1e-20', key).includes('一e-二〇'));
+  assert.ok(toSpell('..3.1400 ...1e-20', key).includes('参.壱四〇〇'));
+  assert.ok(toSpell('..3.1400 ...1e-20', key).includes('壱e-弐〇'));
 });
 
 test('kanji numerals stay distinct from identifiers, projections, and literal text', () => {
   const key = new Key(lexicon);
   const source = '#check (x, y).1\n#check x.2\n#check x.1.2\n#check 1..3\n' +
-    '#check 一\n#check 〇\n#check 数三\n#check «三»\n#check «123»\n' +
-    '#check "012 三"\n#check r#"123"#\n#check \'3\'\n-- 123 三\n/- 456 六 -/\n';
+    '#check 壱\n#check 〇\n#check 数参\n#check «参»\n#check «123»\n' +
+    '#check "012 参"\n#check r#"123"#\n#check \'3\'\n-- 123 参\n/- 456 六 -/\n';
   const spell = toSpell(source, key);
-  assert.match(spell, /☿一/);
-  assert.match(spell, /一\.\.三/);
+  assert.match(spell, /☿壱/);
+  assert.match(spell, /壱\.\.参/);
   assert.match(spell, /«123»/);
-  assert.match(spell, /"012 三"/);
-  assert.match(spell, /-- 123 三/);
+  assert.match(spell, /"012 参"/);
+  assert.match(spell, /-- 123 参/);
   assert.equal(fromSpell(spell, new Key(JSON.parse(JSON.stringify(key.data())))), source);
-  assert.throws(() => new Key({ global: { a: '三' }, scoped: {} }), /reserved/);
-  assert.throws(() => new Key({ global: {}, scoped: { demo: { a: '一thing' } } }), /Invalid name/);
-  assert.throws(() => new Key({ global: {}, scoped: {}, namespaces: { 'Math.Group': 'Book☿二' } }), /Invalid namespace/);
+  assert.throws(() => new Key({ global: { a: '参' }, scoped: {} }), /reserved/);
+  assert.throws(() => new Key({ global: {}, scoped: { demo: { a: '壱thing' } } }), /Invalid name/);
+  assert.throws(() => new Key({ global: {}, scoped: {}, namespaces: { 'Math.Group': 'Book☿弐' } }), /Invalid namespace/);
   assert.throws(() => fromSpell('123', new Key()), /kanji digits/);
 });

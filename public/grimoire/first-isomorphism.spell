@@ -2,14 +2,14 @@ beckon Arcana☿Enchantment☿Descent
 
 sanctum Arcana☿Enchantment
 
-familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⟮Veyr ᛰ⟯ ⟮Veyr ☥⟯
+familiar ⧼ᛰ ☥ ⟡ Essence⊛⧽ ⁅Veyr ᛰ⁆ ⁅Veyr ☥⁆
 
 /- Restricting the codomain to the image does not change any output value.
 In particular, every kernel element still maps to the identity. -/
 spell ✨Silence✨within✨the✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ copper✨wire☿silence ⋜ copper✨wire☿✨confine✨to✨manifestation✨☿silence ⇰ cast
   summon jade✨cube sigilward
-  bind muted ⟡ copper✨wire jade✨cube ≣ 一 ⇰ sigilward
-  proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ 一
+  bind muted ⟡ copper✨wire jade✨cube ≣ 壱 ⇰ sigilward
+  proclaim copper✨wire☿✨confine✨to✨manifestation✨ jade✨cube ≣ 壱
   missile Kin☿extend muted
 
 /- The quotient lift now lands in the image, where every element is known
@@ -30,11 +30,11 @@ spell ✨Faithful✨Image✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡ Rite☿F
     litany copper✨wire jade✨cube ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge jade✨cube⟫ ⟡ ☥⟫ ⇰ ⟪✨Image✨of✨the✨Sigil✨ copper✨wire jade✨cube⟫☿reflect
       ▢ ≣ ⟪✨Image✨Pact✨ copper✨wire ⟪✨Veiled✨Veyr✨☿forge silver✨bell⟫ ⟡ ☥⟫ ⇰ sympathy Kin☿core twinned
       ▢ ≣ copper✨wire silver✨bell ⇰ ✨Image✨of✨the✨Sigil✨ copper✨wire silver✨bell
-  bind hushed ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 一 ⇰
+  bind hushed ⟡ copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ 壱 ⇰
     litany copper✨wire ⟪jade✨cube† ⊛ silver✨bell⟫ ≣ copper✨wire jade✨cube† ⊛ copper✨wire silver✨bell ⇰ ✨Preserve✨the✨Binding✨ copper✨wire jade✨cube† silver✨bell
       ▢ ≣ ⟪copper✨wire jade✨cube⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust ⊛ copper✨wire silver✨bell⟫ ⟪✨Reverse✨the✨Binding✨ copper✨wire jade✨cube⟫
       ▢ ≣ ⟪copper✨wire silver✨bell⟫† ⊛ copper✨wire silver✨bell ⇰ sympathy ⟪conjure pearl✨dust ⇉ pearl✨dust† ⊛ copper✨wire silver✨bell⟫ echoing
-      ▢ ≣ 一 ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
+      ▢ ≣ 壱 ⇰ ✨Reversal✨Undoes✨ ⟪copper✨wire silver✨bell⟫
   missile ✨Veiled✨Veyr✨☿✨Veil✨Equality✨☿backward hushed
 
 /- An image element carries a witness for its origin.
@@ -61,7 +61,7 @@ spell ✨Perfect✨Unveiling✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟡
 
 /- Surjectivity of the original map makes its image the whole codomain.
 Only this final strengthening requires that extra hypothesis. -/
-ineffable ritual ✨Noether's✨Unveiling✨of✨the✨Essence✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
+ineffable ritual ✨Noether's✨Whole✨Unveiling✨ ⟪copper✨wire ⟡ ᛰ ↝⊛ ☥⟫ ⟪faith ⟡ Rite☿Reaching copper✨wire⟫ ⟡
     ᛰ ⧸ copper✨wire☿silence ≃⊛ ☥ ⇰
   ⟪✨Noether's✨Unveiling✨of✨the✨Image✨ copper✨wire⟫☿chain
     ⟪⟪✨Pact✨Portal✨☿✨cabal✨attunement✨ ⟪Herald☿✨Full✨Manifestation✨☿backward faith⟫⟫☿chain ✨Inner✨Veyr✨☿✨whole✨cabal✨portal✨⟫

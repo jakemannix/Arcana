@@ -11,7 +11,7 @@ sanctum Arcana☿Transmutation
 
 chamber Yoneda
 
-familiar ⧼ᚳ ⟡ Essence tier⧽ ⟮Cosmology☿⧼stratum⧽ ᚳ⟯ ⧼🌒 ⟡ ᚳ⧽ ⧼ᚠ ⟡ ᚳ ⤳ Essence stratum⧽
+familiar ⧼ᚳ ⟡ Essence tier⧽ ⁅Cosmology☿⧼stratum⧽ ᚳ⁆ ⧼🌒 ⟡ ᚳ⧽ ⧼ᚠ ⟡ ᚳ ⤳ Essence stratum⧽
 
 /- A natural transformation supplies a compatible response to every arrow
 out of the chosen object. Evaluate it at the identity to extract one element. -/
@@ -66,15 +66,15 @@ seal Yoneda
 
 chamber Proxies
 
-familiar ⟪ᛗ ⟡ Essence⊛⟫ ⟮Choir ᛗ⟯ ⟪ᛰ ⟡ Essence⊛⟫ ⟮Veyr ᛰ⟯
+familiar ⟪ᛗ ⟡ Essence⊛⟫ ⁅Choir ᛗ⁆ ⟪ᛰ ⟡ Essence⊛⟫ ⁅Veyr ᛰ⁆
 
 /- A homomorphism from the free monoid on one generator is determined
 by the image of that generator, which can be any element of the target monoid. -/
-ritual ✨One✨Seed✨Holds✨Every✨Member✨ ⟡ ⟪✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ≃ ᛗ ⇰
+ritual ✨A✨Lone✨Seed✨Holds✨All✨ ⟡ ⟪✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ≃ ᛗ ⇰
   ✨Primordial✨Choir✨☿descend☿reflect☿chain ⟪Portal☿✨lone✨seed✨ Mote ᛗ⟫
 
 spell ✨Where✨the✨Seed✨Goes✨ ⟪brass✨key ⟡ ✨Primordial✨Choir✨ Mote ↝⊛ ᛗ⟫ ⟡
-    ✨One✨Seed✨Holds✨Every✨Member✨ ᛗ brass✨key ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed ⟪⟫⟫ ⇰ mirror
+    ✨A✨Lone✨Seed✨Holds✨All✨ ᛗ brass✨key ≣ brass✨key ⟪✨Primordial✨Choir✨☿seed ⟪⟫⟫ ⇰ mirror
 
 /- Likewise, a homomorphism from the integer group is determined by the image
 of one. Multiplicative notation lets the integer source use the same group arrow. -/
@@ -82,7 +82,7 @@ ritual ✨The✨Integers✨Hold✨Every✨Member✨ ⟡ ⟪Unchanted Balances �
   ⟪✨powers✨of✨one✨ ᛰ⟫☿reflect
 
 spell ✨Where✨the✨Step✨Goes✨ ⟪brass✨key ⟡ Unchanted Balances ↝⊛ ᛰ⟫ ⟡
-    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant 一⟫ ⇰ mirror
+    ✨The✨Integers✨Hold✨Every✨Member✨ ᛰ brass✨key ≣ brass✨key ⟪Unchanted☿unchant 壱⟫ ⇰ mirror
 
 seal Proxies
 
